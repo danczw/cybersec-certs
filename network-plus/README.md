@@ -24,16 +24,6 @@
 | 4 | Network Security | 14% |
 | 5 | Network Troubleshooting | 24% |
 
-## Study Plan
-
-- [ ] Review all objectives
-- [ ] Complete notes for each domain
-- [ ] Build flashcard sets
-- [ ] Practice questions per domain
-- [ ] Full practice exams
-- [ ] Review weak areas
-- [ ] Schedule exam
-
 ## Status
 
 Started: 2026-07-09
