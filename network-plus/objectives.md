@@ -2,168 +2,140 @@
 
 ## Domain 1: Networking Concepts (23%)
 
-### 1.1 Explain concepts related to the Open Systems Interconnection (OSI) reference model
-
-- OSI model layers and functions
+### 1.1 OSI Model
+- Layers: physical, data link, network, transport, session, presentation, application
 - Data encapsulation and decapsulation
 
-### 1.2 Compare and contrast networking appliances, applications, and functions
+### 1.2 Networking Appliances
+- Routers, switches, firewalls, IDS/IPS, load balancers, proxies
+- NAS, SAN, wireless devices
 
-- Network devices (routers, switches, firewalls, load balancers, etc.)
-- Network applications and services
+### 1.3 Cloud Concepts
+- NFV, VPC, network security groups, cloud gateways
+- Deployment models: public, private, hybrid
+- Service models: SaaS, IaaS, PaaS
 
-### 1.3 Summarize cloud concepts and connectivity options
+### 1.4 Ports and Protocols
+- FTP, SFTP, SSH, Telnet, SMTP, DNS, DHCP, HTTP, HTTPS, SNMP, LDAP, RDP, SIP
 
-- Cloud deployment models (public, private, hybrid, community)
-- Cloud service models (IaaS, PaaS, SaaS)
-- Cloud connectivity options
+### 1.5 Traffic Types
+- Unicast, multicast, anycast, broadcast
 
-### 1.4 Explain common networking protocols
+### 1.6 Transmission Media
+- Wireless: 802.11, cellular, satellite
+- Wired: fiber, coaxial, DAC
 
-- Protocol types and port numbers
-- Protocol operation and headers
+### 1.7 Transceivers and Connectors
+- SC, LC, ST, MPO, RJ11, RJ45, F-type, BNC
 
-### 1.5 Explain the use of IP addressing and subnetting
+### 1.8 Network Topologies
+- Mesh, hybrid, star/hub-and-spoke, spine-and-leaf, point-to-point
+- Three-tier, collapsed core
 
-- IPv4 and IPv6 addressing
-- Subnetting and CIDR notation
-- Public vs. private addressing
-
-### 1.6 Explain common network services
-
-- DNS, DHCP, NTP, SNMP
-- Authentication services (RADIUS, TACACS+, LDAP)
-
-### 1.7 Explain basic corporate and datacenter network architecture
-
-- Three-tier architecture
-- Spine-leaf architecture
-- Software-defined networking (SDN)
+### 1.9 IPv4 Addressing
+- Public vs. private, APIPA, RFC1918, loopback
+- Subnetting: VLSM, CIDR
+- Address classes: A, B, C, D, E
 
 ## Domain 2: Network Implementation (20%)
 
-### 2.1 Explain the characteristics and uses of common network media
+### 2.1 Routing Technologies
+- Static and dynamic routing: BGP, EIGRP, OSPF
+- Route selection, NAT, PAT, FHRP, VIP, subinterfaces
 
-- Copper cabling (Cat 5e, Cat 6, Cat 6a, Cat 8)
-- Fiber optic cabling (single-mode, multimode)
-- Wireless standards and frequencies
+### 2.2 Switching Technologies
+- VLANs, interface configuration, spanning tree
+- MTU, jumbo frames
 
-### 2.2 Determine the appropriate placement of networking devices on a network
+### 2.3 Wireless Technologies
+- Channels, frequency options, SSID, network types
+- Encryption, guest networks, authentication
+- Antennas, access points
 
-- Firewall placement
-- Switch and router placement
-- Wireless access point placement
-
-### 2.3 Determine the appropriate use of routing technologies and bandwidth management
-
-- Static vs. dynamic routing
-- Routing protocols (OSPF, EIGRP, BGP, RIP)
-- NAT/PAT
-
-### 2.4 Configure and deploy common Ethernet switching features
-
-- VLANs and trunking
-- Spanning Tree Protocol (STP)
-- Link aggregation (LACP)
-- Port mirroring
-
-### 2.5 Given a scenario, install and configure wireless technologies
-
-- Wireless encryption (WPA2, WPA3)
-- Channel selection and management
-- Antenna types and placement
+### 2.4 Physical Installations
+- Installation implications, power considerations, environmental factors
 
 ## Domain 3: Network Operations (19%)
 
-### 3.1 Explain the purpose of organizational processes and procedures
+### 3.1 Documentation
+- Physical vs. logical diagrams, rack diagrams, cable maps
+- Network diagrams, asset inventory, IPAM, SLA, wireless surveys
 
-- Change management
-- Configuration management
-- Incident response
+### 3.2 Life-Cycle Management
+- EOL, EOS, software management, decommissioning
 
-### 3.2 Use the appropriate statistics and sensors to ensure network health
+### 3.3 Change Management
+- Request process tracking
 
-- SNMP monitoring
-- Syslog and event management
-- Network performance metrics (bandwidth, latency, jitter)
+### 3.4 Configuration Management
+- Production, backup, baseline configurations
 
-### 3.3 Explain the purpose of organizational documents and policies
+### 3.5 Network Monitoring
+- SNMP, flow data, packet capture, baseline metrics
+- Log aggregation, API integration, port mirroring
 
-- Network diagrams and documentation
-- Baseline configurations
-- Standard operating procedures
+### 3.6 Disaster Recovery
+- RPO, RTO, MTTR, MTBF
+- Cold/warm/hot sites, active-active/passive, testing
 
-### 3.4 Explain high availability and disaster recovery concepts
+### 3.7 Network Services
+- DHCP, SLAAC, DNS, NTP, PTP, NTS
 
-- Load balancing
-- Redundancy (hardware, link, path)
-- Backup strategies and recovery objectives (RPO, RTO)
+### 3.8 Access and Management
+- VPNs, SSH, GUI, API, console
 
 ## Domain 4: Network Security (14%)
 
-### 4.1 Explain common security concepts
+### 4.1 Logical Security
+- Encryption: data in transit/at rest
+- PKI, IAM, MFA, SSO
+- RADIUS, LDAP, SAML, TACACS+
+- Time-based authentication, authorization, least privilege
+- Role-based access control, geofencing
 
-- CIA triad
-- Authentication, authorization, and accounting (AAA)
-- Zero trust architecture
+### 4.2 Physical Security
+- Cameras, locks
 
-### 4.2 Compare and contrast common types of attacks
+### 4.3 Deception Technologies
+- Honeypot, honeynet
 
-- DoS/DDoS attacks
-- Social engineering
-- On-path attacks (MITM)
-- VLAN hopping, ARP poisoning, DNS poisoning
+### 4.4 Security Terminology
+- Risk, vulnerability, exploit, threat, CIA triad
 
-### 4.3 Given a scenario, apply network hardening techniques
+### 4.5 Audits and Compliance
+- Data locality, PCI DSS, GDPR
 
-- Port security
-- Network segmentation
-- ACLs and firewall rules
-- Disabling unnecessary services
+### 4.6 Network Segmentation
+- IoT, IIoT, SCADA, ICS, OT, guest, BYOD
 
-### 4.4 Compare and contrast remote access methods and security implications
+### 4.7 Types of Attacks
+- DoS/DDoS, VLAN hopping, MAC flooding
+- ARP poisoning/spoofing, DNS poisoning/spoofing
+- Rogue devices/services, evil twin, on-path attack
+- Social engineering: phishing, dumpster diving, shoulder surfing, tailgating
 
-- VPN types (site-to-site, client-to-site, split tunnel)
-- Remote desktop protocols
-- Out-of-band management
-
-### 4.5 Explain the importance of physical security
-
-- Detection methods (cameras, motion detection)
-- Prevention methods (locks, mantraps, fencing)
+### 4.8 Security Features and Defense
+- Device hardening, NAC, key management, ACL
+- URL/content filtering, trusted vs. untrusted zones, screened subnet
 
 ## Domain 5: Network Troubleshooting (24%)
 
-### 5.1 Explain the network troubleshooting methodology
+### 5.1 Troubleshooting Methodology
+- Identify the problem, establish a theory, test the theory
+- Plan and implement a solution, verify functionality, document findings
 
-- Identify the problem
-- Establish a theory
-- Test the theory
-- Establish a plan of action
-- Implement and verify
-- Document findings
+### 5.2 Cabling and Physical Interface Issues
+- Cable issues: incorrect type, signal degradation, improper termination, TX/RX transposed
+- Interface issues: increasing counters, port status
+- Hardware issues: PoE, transceiver mismatch, signal strength
 
-### 5.2 Given a scenario, troubleshoot common cable connectivity issues
+### 5.3 Network Services Issues
+- Switching: STP, VLAN assignment, ACLs
+- Routing: routing table, default routes
+- Address pool exhaustion, incorrect gateway/IP/subnet mask
 
-- Cable testing tools (cable tester, TDR, OTDR)
-- Common issues (attenuation, crosstalk, interference)
+### 5.4 Performance Issues
+- Congestion, latency, packet loss, wireless interference
 
-### 5.3 Given a scenario, use the appropriate network software tools and commands
-
-- ping, traceroute/tracert, nslookup/dig
-- ipconfig/ifconfig/ip
-- netstat, arp, tcpdump
-- Wireshark, nmap
-
-### 5.4 Given a scenario, troubleshoot common wireless connectivity issues
-
-- Interference and signal degradation
-- Incorrect SSID/password
-- Channel overlap
-
-### 5.5 Given a scenario, troubleshoot general networking issues
-
-- IP addressing issues (duplicate IP, incorrect subnet)
-- Routing issues
-- DNS resolution failures
-- DHCP issues
+### 5.5 Tools and Protocols
+- Protocol analyzers, command line tools, cable testers, Wi-Fi analyzers
