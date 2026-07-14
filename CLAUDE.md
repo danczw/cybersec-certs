@@ -50,6 +50,14 @@ The user can request any of these modes:
 - Flashcards use `**Q:**` / `**A:**` format with `**Difficulty:**` and `**Tags:**`
 - Practice questions use `**Scenario:**` / `**Question:**` / `**Answer:**` / `**Explanation:**` format
 
+## Professor Messer Transcript Workflow
+
+When the user provides a Professor Messer video transcript:
+
+1. **Create notes file** — Write a markdown file under `network-plus/notes/prof-messer/` based solely on the transcript content. Use the standard YAML frontmatter format. Name files by topic (e.g., `1.2-network-topologies.md`).
+2. **Pause for review** — Ask the user to read through the file before proceeding.
+3. **Suggest additions** — After the user confirms they've read it, use web search and broader knowledge to suggest supplementary content (clarifications, real-world examples, edge cases, exam tips) that could strengthen the notes.
+
 ## Commits
 
 Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
