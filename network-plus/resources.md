@@ -7,6 +7,8 @@
 ## Video Courses
 
 - Professor Messer N10-009 (free) — 87 videos, 12h 55m, structured by exam domain. https://www.professormesser.com/network-plus/n10-009/n10-009-training-course/
+  - YouTube playlist: https://www.youtube.com/watch?v=k7IOn3TiUc8&list=PLG49S3nxzAnl_tQe3kvnmeMid0mjF8Le8
+  - Resource page: https://www.professormesser.com/get-n10-009-network-plus-certified/
 
 ## Labs / Hands-On
 
