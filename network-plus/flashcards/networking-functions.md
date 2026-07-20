@@ -158,3 +158,108 @@
 **A:** In IP, TTL = number of router hops. In DNS, TTL = number of seconds to cache a record.
 **Difficulty:** Hard
 **Tags:** ttl, ip, dns, functions, domain-1, prof-messer
+
+---
+
+**Q:** What does CDN stand for?
+**A:** Content Delivery Network
+**Difficulty:** Easy
+**Tags:** cdn, functions, domain-1, prof-messer
+
+---
+
+**Q:** A website like YouTube is accessible worldwide with low latency. What technology makes this possible?
+**A:** A CDN — content is cached at geographically distributed servers so users access the nearest one
+**Difficulty:** Easy
+**Tags:** cdn, functions, domain-1, prof-messer
+
+---
+
+**Q:** Why would a company use a VPN for remote workers?
+**A:** It allows employees to connect to the corporate network with all data encrypted, even across the insecure public internet
+**Difficulty:** Easy
+**Tags:** vpn, functions, domain-1, prof-messer
+
+---
+
+**Q:** Why does a VPN concentrator need purpose-built hardware?
+**A:** The encryption and decryption process requires high throughput to support hundreds or thousands of simultaneous users in real time
+**Difficulty:** Medium
+**Tags:** vpn, concentrator, functions, domain-1, prof-messer
+
+---
+
+**Q:** A network admin wants video calls to have priority over file downloads. What should they configure?
+**A:** QoS (Quality of Service) — also called traffic shaping or packet shaping
+**Difficulty:** Easy
+**Tags:** qos, functions, domain-1, prof-messer
+
+---
+
+**Q:** Can QoS devices identify specific applications?
+**A:** Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list
+**Difficulty:** Medium
+**Tags:** qos, functions, domain-1, prof-messer
+
+---
+
+**Q:** What two problems does TTL solve?
+**A:** Prevents infinite routing loops and clears stale cached data
+**Difficulty:** Medium
+**Tags:** ttl, functions, domain-1, prof-messer
+
+---
+
+**Q:** A packet has a TTL of 58. What does this mean?
+**A:** The packet can pass through 58 more routers before being discarded
+**Difficulty:** Easy
+**Tags:** ttl, ip, functions, domain-1, prof-messer
+
+---
+
+**Q:** Why is the default TTL (64 or 128) much higher than a typical internet path (12-16 hops)?
+**A:** It gives plenty of room to get data across the internet without accidentally dropping packets, while still catching routing loops
+**Difficulty:** Medium
+**Tags:** ttl, ip, functions, domain-1, prof-messer
+
+---
+
+**Q:** What command can you use to look up a domain's DNS TTL?
+**A:** nslookup or dig (e.g., dig www.professormesser.com)
+**Difficulty:** Medium
+**Tags:** ttl, dns, functions, domain-1, prof-messer
+
+---
+
+**Q:** What happens when a DNS cache entry's TTL expires?
+**A:** The local cache removes that resolution. The next lookup requires a fresh DNS query.
+**Difficulty:** Easy
+**Tags:** ttl, dns, functions, domain-1, prof-messer
+
+---
+
+**Q:** A website is cached locally but the admin changed the server IP 3 minutes ago. The DNS TTL is 300 seconds. Will you see the new IP?
+**A:** Not yet — 300 seconds (5 minutes) haven't elapsed, so your cache still has the old IP. After 5 minutes, the cache clears and a new query returns the updated IP.
+**Difficulty:** Hard
+**Tags:** ttl, dns, functions, domain-1, prof-messer
+
+---
+
+**Q:** What does VPN stand for?
+**A:** Virtual Private Network
+**Difficulty:** Easy
+**Tags:** vpn, functions, domain-1, prof-messer
+
+---
+
+**Q:** What does QoS stand for?
+**A:** Quality of Service
+**Difficulty:** Easy
+**Tags:** qos, functions, domain-1, prof-messer
+
+---
+
+**Q:** What does TTL stand for?
+**A:** Time to Live
+**Difficulty:** Easy
+**Tags:** ttl, functions, domain-1, prof-messer
