@@ -1,4 +1,4 @@
-# Network+ Abbreviations
+# Abbreviations
 
 | Abbreviation | Full Name                                |
 |--------------|------------------------------------------|
