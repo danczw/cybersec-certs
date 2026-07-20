@@ -50,7 +50,7 @@
 ---
 
 **Q:** Which OSI layer handles fragmentation and reassembly of packets?
-**A:** Layer 3 (Network) — splits packets into smaller pieces for transit across networks with smaller MTU, reassembles at destination
+**A:** Layer 3 (Network) — splitting frames/packets into smaller pieces for networks requiring smaller frame sizes, reassembling on the other side
 **Difficulty:** Medium
 **Tags:** osi, fragmentation, domain-1, prof-messer
 
@@ -78,7 +78,7 @@
 ---
 
 **Q:** What does the Presentation layer (L6) handle?
-**A:** Character encoding, application encryption/decryption (SSL/TLS), and data format translation between systems (e.g., EBCDIC to ASCII, compression, media formats)
+**A:** Character encoding, application encryption/decryption (SSL/TLS), and putting data into human-readable format
 **Difficulty:** Medium
 **Tags:** osi, presentation, domain-1, prof-messer
 
@@ -127,7 +127,7 @@
 ---
 
 **Q:** A user reports they cannot reach a website. The IP address pings fine but HTTPS fails. Which OSI layers are likely involved?
-**A:** Layers 4-7 — ping (ICMP) only proves L1-3 work. Issue could be TCP connection (L4), SSL/TLS handshake (L5-6), or application layer (L7)
+**A:** Layers 5-7 (Session/Presentation/Application) — physical connectivity works (L1-3), issue is likely SSL/TLS or application layer
 **Difficulty:** Hard
 **Tags:** osi, troubleshooting, domain-1, prof-messer
 
@@ -190,7 +190,7 @@
 ---
 
 **Q:** How is EUI-64 derived from EUI-48?
-**A:** Split EUI-48 in half, insert FF:FE in the middle, and flip the 7th bit (U/L bit) to create a 64-bit identifier used by IPv6
+**A:** The device takes its EUI-48 and inserts FF:FE in the middle to create a 64-bit identifier, used by IPv6. No manual configuration needed.
 **Difficulty:** Hard
 **Tags:** osi, mac, eui, ipv6, domain-1, prof-messer
 
