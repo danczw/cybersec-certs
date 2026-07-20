@@ -4,6 +4,7 @@
 |--------------|------------------------------------------|
 | AP           | Access Point                             |
 | ASIC         | Application-Specific Integrated Circuit  |
+| CDN          | Content Delivery Network                 |
 | DLC          | Data Link Control                        |
 | DNS          | Domain Name System                       |
 | EUI          | Extended Unique Identifier               |
@@ -31,6 +32,7 @@
 | SSL          | Secure Sockets Layer                     |
 | TCP          | Transmission Control Protocol            |
 | TLS          | Transport Layer Security                 |
+| TTL          | Time to Live                             |
 | UDP          | User Datagram Protocol                   |
 | UTM          | Unified Threat Management                |
 | VPN          | Virtual Private Network                  |
