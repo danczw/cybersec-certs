@@ -151,3 +151,129 @@
 **A:** No — they are typically proprietary and must match the AP manufacturer
 **Difficulty:** Easy
 **Tags:** wireless, wlc, devices, domain-1, prof-messer
+
+---
+
+**Q:** What does a router connect in terms of network types?
+**A:** Diverse network types — LAN to WAN, copper to fiber. May have many different interfaces for different connection types.
+**Difficulty:** Easy
+**Tags:** router, devices, domain-1, prof-messer
+
+---
+
+**Q:** Where does a firewall typically sit in the network?
+**A:** At the ingress/egress point — managing communication between inside (LAN) and outside (internet)
+**Difficulty:** Easy
+**Tags:** firewall, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is NAT?
+**A:** Network Address Translation — translates private internal IP addresses to public addresses (and vice versa) as traffic crosses the firewall
+**Difficulty:** Easy
+**Tags:** firewall, nat, devices, domain-1, prof-messer
+
+---
+
+**Q:** Where is IDS/IPS functionality commonly integrated in modern networks?
+**A:** Inside next-generation firewalls (NGFWs)
+**Difficulty:** Easy
+**Tags:** ids, ips, ngfw, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is application-centric load balancing?
+**A:** Routing specific pages or application paths to specific servers (e.g., /api goes to backend pool, /images goes to media pool)
+**Difficulty:** Hard
+**Tags:** load-balancer, devices, domain-1, prof-messer
+
+---
+
+**Q:** Why is a load balancer transparent to end users?
+**A:** It appears as a single server — users don't know their requests are being distributed across multiple physical servers
+**Difficulty:** Easy
+**Tags:** load-balancer, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is TCP offloading on a load balancer?
+**A:** The load balancer manages TCP connections (handshakes, acknowledgements, retransmissions) on behalf of backend servers, freeing their CPU for application work
+**Difficulty:** Medium
+**Tags:** load-balancer, tcp, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is caching on a load balancer?
+**A:** Answering requests immediately from stored responses without hitting backend servers
+**Difficulty:** Easy
+**Tags:** load-balancer, devices, domain-1, prof-messer
+
+---
+
+**Q:** Name three features of a proxy server.
+**A:** Caching (returns stored responses), access control (require authentication), URL filtering and content scanning
+**Difficulty:** Medium
+**Tags:** proxy, devices, domain-1, prof-messer
+
+---
+
+**Q:** How does a proxy server protect users?
+**A:** It receives responses from the internet, verifies no malicious content, then forwards the safe response to the user
+**Difficulty:** Easy
+**Tags:** proxy, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is the difference between file-level and block-level storage access?
+**A:** File-level (NAS): must transfer entire file to read/modify. Block-level (SAN): read/write only the changed blocks, like a local drive.
+**Difficulty:** Medium
+**Tags:** nas, san, storage, devices, domain-1, prof-messer
+
+---
+
+**Q:** What type of network are NAS and SAN commonly placed on?
+**A:** Commonly on an isolated high-bandwidth network
+**Difficulty:** Medium
+**Tags:** nas, san, storage, devices, domain-1, prof-messer
+
+---
+
+**Q:** What does an access point bridge?
+**A:** 802.11 (wireless) and 802.3 (wired ethernet) networks at Layer 2
+**Difficulty:** Easy
+**Tags:** wireless, ap, devices, domain-1, prof-messer
+
+---
+
+**Q:** Name four capabilities of a wireless LAN controller.
+**A:** Deploy new APs with full configuration, performance/security monitoring, push config changes to all APs simultaneously, usage reporting and capacity planning
+**Difficulty:** Hard
+**Tags:** wireless, wlc, devices, domain-1, prof-messer
+
+---
+
+**Q:** How does a WLC enable seamless roaming?
+**A:** Centralized management means all APs share configuration and session state, so clients can move between APs without dropping connection
+**Difficulty:** Medium
+**Tags:** wireless, wlc, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is the typical data flow order from a wireless client to a remote server (all devices inline)?
+**A:** Host → Access Point → Switch → Proxy → Router → Firewall/NGFW → WAN → Firewall/NGFW → Router → Load Balancer → Switch → Server
+**Difficulty:** Hard
+**Tags:** devices, data-flow, domain-1, prof-messer
+
+---
+
+**Q:** Why does a proxy sit on the client side and a load balancer on the server side?
+**A:** Proxy filters/caches outbound requests from clients. Load balancer distributes inbound requests across servers.
+**Difficulty:** Medium
+**Tags:** proxy, load-balancer, data-flow, devices, domain-1, prof-messer
+
+---
+
+**Q:** What is "single pane of glass" management in the context of wireless?
+**A:** A wireless LAN controller providing centralized management of all access points from one interface
+**Difficulty:** Easy
+**Tags:** wireless, wlc, devices, domain-1, prof-messer
