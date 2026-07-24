@@ -3,7 +3,6 @@ domain: {{DOMAIN_NUMBER}}
 topic: {{TOPIC_NAME}}
 objective: {{OBJECTIVE_REF}}
 date: {{DATE}}
-status: draft | review | complete
 ---
 
 # {{TOPIC_NAME}}

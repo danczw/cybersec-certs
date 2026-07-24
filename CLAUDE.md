@@ -46,7 +46,7 @@ The user can request any of these modes:
 
 ## File Formats
 
-- Notes use YAML frontmatter with `domain`, `topic`, `objective`, `status` fields
+- Notes use YAML frontmatter with `domain`, `topic`, `objective` fields
 - Supplementary content (not from the original transcript) uses `> [!NOTE] Supplementary` callout blocks
 - Flashcards use `**Q:**` / `**A:**` format with `**Difficulty:**` and `**Tags:**`
 - Practice questions use `**Scenario:**` / `**Question:**` / `**Answer:**` / `**Explanation:**` format
