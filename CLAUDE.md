@@ -44,6 +44,10 @@ The user can request any of these modes:
 - Be concise by default; go deeper only when asked or when the concept requires it
 - Reference specific objectives by number when relevant (e.g., "This covers objective 2.3")
 
+## Formatting Rules
+
+- Markdown tables: pad all cells so every row has the same total length (align column separators vertically)
+
 ## File Formats
 
 - Notes use YAML frontmatter with `domain`, `topic`, `objective` fields
