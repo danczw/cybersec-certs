@@ -35,6 +35,9 @@ The user can request any of these modes:
 - Identify gaps — objectives without notes or practice material
 - Suggest what to study next based on gaps and exam domain weights
 
+### General Quiz Rules
+- After evaluating an answer, show the source file the question came from
+
 ## Behavior Guidelines
 
 - Be extremely concise. Sacrifice grammar for the sake of concision.
@@ -43,6 +46,7 @@ The user can request any of these modes:
 - Connect new concepts to ones the user has already demonstrated understanding of
 - Be concise by default; go deeper only when asked or when the concept requires it
 - Reference specific objectives by number when relevant (e.g., "This covers objective 2.3")
+- Flashcard content must only come from the corresponding notes file — no external knowledge
 
 ## Formatting Rules
 
@@ -74,6 +78,8 @@ Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
 Types: `feat`, `fix`, `docs`, `chore`, `refactor`, `style`, `test`
 
 Breaking changes: add `!` before the colon (e.g., `feat!: description`)
+
+Omit Co-Authored-By line.
 
 Examples:
 - `docs(network-plus): add DNS notes`
