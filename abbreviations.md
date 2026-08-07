@@ -6,6 +6,7 @@
 | AP           | Access Point                                                 |
 | ASIC         | Application-Specific Integrated Circuit                      |
 | CDN          | Content Delivery Network                                     |
+| CDMA         | Code-Division Multiple Access                                |
 | CIFS         | Common Internet File System                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
@@ -15,21 +16,26 @@
 | FQDN         | Fully Qualified Domain Name                                  |
 | FTP          | File Transfer Protocol                                       |
 | GRE          | Generic Routing Encapsulation                                |
+| GSM          | Global System for Mobile Communications                      |
 | HaaS         | Hardware as a Service                                        |
 | HTTP         | Hypertext Transfer Protocol                                  |
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
 | IaaS         | Infrastructure as a Service                                  |
+| IEEE         | Institute of Electrical and Electronics Engineers            |
 | ICMP         | Internet Control Message Protocol                            |
 | ICV          | Integrity Check Value                                        |
 | IDS          | Intrusion Detection System                                   |
 | IKE          | Internet Key Exchange                                        |
 | IMAP         | Internet Message Access Protocol                             |
+| IoT          | Internet of Things                                           |
 | IP           | Internet Protocol                                            |
 | IPSec        | Internet Protocol Security                                   |
 | IPS          | Intrusion Prevention System                                  |
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
 | LAN          | Local Area Network                                           |
 | LDAP         | Lightweight Directory Access Protocol                        |
+| LTE          | Long-Term Evolution                                          |
+| LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
 | MS-SQL       | Microsoft Structured Query Language                          |
 | MTU          | Maximum Transmission Unit                                    |
@@ -50,7 +56,7 @@
 | SaaS         | Software as a Service                                        |
 | SAN          | Storage Area Network                                         |
 | SFTP         | Secure File Transfer Protocol                                |
-| SIEM         | Security Information and Event Manager                       |
+| SIEM         | Security Information and Event Management                    |
 | SIP          | Session Initiation Protocol                                  |
 | SMB          | Server Message Block                                         |
 | SMTP         | Simple Mail Transfer Protocol                                |
