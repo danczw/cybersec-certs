@@ -35,11 +35,14 @@
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
 | LAN          | Local Area Network                                           |
 | LDAP         | Lightweight Directory Access Protocol                        |
+| LC           | Local Connector (fiber)                                      |
 | LED          | Light-Emitting Diode                                         |
 | LTE          | Long-Term Evolution                                          |
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
+| MPO          | Multi-fiber Push On                                          |
 | MS-SQL       | Microsoft Structured Query Language                          |
+| MTP          | Multi-fiber Termination Push-on (Corning brand for MPO)      |
 | MTU          | Maximum Transmission Unit                                    |
 | NAS          | Network-Attached Storage                                     |
 | NAT          | Network Address Translation                                  |
@@ -61,6 +64,7 @@
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
 | SAN          | Storage Area Network                                         |
+| SC           | Subscriber Connector (fiber)                                 |
 | SFP          | Small Form-Factor Pluggable                                  |
 | SFP+         | Enhanced Small Form-Factor Pluggable                         |
 | SFTP         | Secure File Transfer Protocol                                |
@@ -73,6 +77,7 @@
 | SQL          | Structured Query Language                                    |
 | SSH          | Secure Shell                                                 |
 | SSL          | Secure Sockets Layer                                         |
+| ST           | Straight Tip (fiber connector)                               |
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
 | TLS          | Transport Layer Security                                     |
