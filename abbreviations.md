@@ -5,12 +5,15 @@
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
 | ASIC         | Application-Specific Integrated Circuit                      |
+| BNC          | Bayonet Neill-Concelman                                      |
 | CDN          | Content Delivery Network                                     |
 | CDMA         | Code-Division Multiple Access                                |
 | CIFS         | Common Internet File System                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
 | DNS          | Domain Name System                                           |
+| DOCSIS       | Data Over Cable Service Interface Specification              |
+| DSL          | Digital Subscriber Line                                      |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FQDN         | Fully Qualified Domain Name                                  |
@@ -60,6 +63,8 @@
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
 | RF           | Radio Frequency                                              |
+| RJ11         | Registered Jack type 11                                      |
+| RJ45         | Registered Jack type 45                                      |
 | RPC          | Remote Procedure Call                                        |
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
