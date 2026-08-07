@@ -52,6 +52,8 @@
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
 | PVC          | Polyvinyl Chloride                                           |
+| QSFP         | Quad Small Form-Factor Pluggable                             |
+| QSFP+        | Quad Enhanced Small Form-Factor Pluggable                    |
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
 | RF           | Radio Frequency                                              |
@@ -59,6 +61,7 @@
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
 | SAN          | Storage Area Network                                         |
+| SFP          | Small Form-Factor Pluggable                                  |
 | SFP+         | Enhanced Small Form-Factor Pluggable                         |
 | SFTP         | Secure File Transfer Protocol                                |
 | SIEM         | Security Information and Event Management                    |
