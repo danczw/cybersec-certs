@@ -14,6 +14,7 @@
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FQDN         | Fully Qualified Domain Name                                  |
+| FEP          | Fluorinated Ethylene Polymer                                 |
 | FTP          | File Transfer Protocol                                       |
 | GRE          | Generic Routing Encapsulation                                |
 | GSM          | Global System for Mobile Communications                      |
@@ -50,6 +51,7 @@
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
+| PVC          | Polyvinyl Chloride                                           |
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
 | RF           | Radio Frequency                                              |
@@ -57,6 +59,7 @@
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
 | SAN          | Storage Area Network                                         |
+| SFP+         | Enhanced Small Form-Factor Pluggable                         |
 | SFTP         | Secure File Transfer Protocol                                |
 | SIEM         | Security Information and Event Management                    |
 | SIP          | Session Initiation Protocol                                  |
