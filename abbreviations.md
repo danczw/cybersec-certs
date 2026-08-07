@@ -34,6 +34,7 @@
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
 | LAN          | Local Area Network                                           |
 | LDAP         | Lightweight Directory Access Protocol                        |
+| LED          | Light-Emitting Diode                                         |
 | LTE          | Long-Term Evolution                                          |
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
@@ -51,6 +52,7 @@
 | PPTP         | Point-to-Point Tunneling Protocol                            |
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
+| RF           | Radio Frequency                                              |
 | RPC          | Remote Procedure Call                                        |
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
