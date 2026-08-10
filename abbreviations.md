@@ -96,6 +96,7 @@
 | UTM          | Unified Threat Management                                    |
 | VIP          | Virtual IP Address                                           |
 | VNIC         | Virtual Network Interface Card                               |
+| VLSM         | Variable-Length Subnet Mask                                  |
 | VPC          | Virtual Private Cloud                                        |
 | VPN          | Virtual Private Network                                      |
 | WAN          | Wide Area Network                                            |
