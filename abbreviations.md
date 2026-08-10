@@ -4,10 +4,13 @@
 |--------------|--------------------------------------------------------------|
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
+| APIPA        | Automatic Private IP Addressing                              |
+| ARP          | Address Resolution Protocol                                  |
 | ASIC         | Application-Specific Integrated Circuit                      |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CDN          | Content Delivery Network                                     |
 | CDMA         | Code-Division Multiple Access                                |
+| CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
@@ -26,6 +29,7 @@
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
 | IaaS         | Infrastructure as a Service                                  |
 | IEEE         | Institute of Electrical and Electronics Engineers            |
+| IETF         | Internet Engineering Task Force                              |
 | ICMP         | Internet Control Message Protocol                            |
 | ICV          | Integrity Check Value                                        |
 | IDS          | Intrusion Detection System                                   |
@@ -62,6 +66,7 @@
 | QSFP+        | Quad Enhanced Small Form-Factor Pluggable                    |
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
+| RFC          | Request for Comments                                         |
 | RF           | Radio Frequency                                              |
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
@@ -89,6 +94,7 @@
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
 | UTM          | Unified Threat Management                                    |
+| VIP          | Virtual IP Address                                           |
 | VNIC         | Virtual Network Interface Card                               |
 | VPC          | Virtual Private Cloud                                        |
 | VPN          | Virtual Private Network                                      |
