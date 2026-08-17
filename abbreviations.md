@@ -79,6 +79,7 @@
 | RFC          | Request for Comments                                         |
 | RF           | Radio Frequency                                              |
 | RIP          | Routing Information Protocol                                 |
+| RSTP         | Rapid Spanning Tree Protocol                                 |
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
 | RPC          | Remote Procedure Call                                        |
@@ -100,6 +101,7 @@
 | SVI          | Switched Virtual Interface                                   |
 | SSL          | Secure Sockets Layer                                         |
 | ST           | Straight Tip (fiber connector)                               |
+| STP          | Spanning Tree Protocol                                       |
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
 | TLS          | Transport Layer Security                                     |
