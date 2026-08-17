@@ -23,6 +23,7 @@
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FQDN         | Fully Qualified Domain Name                                  |
+| FHRP         | First Hop Redundancy Protocol                                |
 | FEP          | Fluorinated Ethylene Polymer                                 |
 | FTP          | File Transfer Protocol                                       |
 | GRE          | Generic Routing Encapsulation                                |
@@ -72,6 +73,7 @@
 | RDP          | Remote Desktop Protocol                                      |
 | RFC          | Request for Comments                                         |
 | RF           | Radio Frequency                                              |
+| RIP          | Routing Information Protocol                                 |
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
 | RPC          | Remote Procedure Call                                        |
@@ -100,6 +102,7 @@
 | UTM          | Unified Threat Management                                    |
 | VIP          | Virtual IP Address                                           |
 | VNIC         | Virtual Network Interface Card                               |
+| VLAN         | Virtual Local Area Network                                   |
 | VLSM         | Variable-Length Subnet Mask                                  |
 | VPC          | Virtual Private Cloud                                        |
 | VPN          | Virtual Private Network                                      |
