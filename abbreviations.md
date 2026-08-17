@@ -6,7 +6,9 @@
 | AP           | Access Point                                                 |
 | APIPA        | Automatic Private IP Addressing                              |
 | ARP          | Address Resolution Protocol                                  |
+| AS           | Autonomous System                                            |
 | ASIC         | Application-Specific Integrated Circuit                      |
+| BGP          | Border Gateway Protocol                                      |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CDN          | Content Delivery Network                                     |
 | CDMA         | Code-Division Multiple Access                                |
@@ -17,6 +19,7 @@
 | DNS          | Domain Name System                                           |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
 | DSL          | Digital Subscriber Line                                      |
+| EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FQDN         | Fully Qualified Domain Name                                  |
@@ -57,6 +60,7 @@
 | NGFW         | Next-Generation Firewall                                     |
 | NTP          | Network Time Protocol                                        |
 | OSI          | Open Systems Interconnection                                 |
+| OSPF         | Open Shortest Path First                                     |
 | PaaS         | Platform as a Service                                        |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
