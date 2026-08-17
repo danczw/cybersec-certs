@@ -41,6 +41,7 @@
 | IMAP         | Internet Message Access Protocol                             |
 | IoT          | Internet of Things                                           |
 | IP           | Internet Protocol                                            |
+| ISL          | Inter-Switch Link                                            |
 | IPSec        | Internet Protocol Security                                   |
 | IPS          | Intrusion Prevention System                                  |
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
@@ -64,6 +65,7 @@
 | OSPF         | Open Shortest Path First                                     |
 | PaaS         | Platform as a Service                                        |
 | PAT          | Port Address Translation                                     |
+| PBX          | Private Branch Exchange                                      |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
@@ -93,6 +95,7 @@
 | SPI          | Security Parameters Index                                    |
 | SQL          | Structured Query Language                                    |
 | SSH          | Secure Shell                                                 |
+| SVI          | Switched Virtual Interface                                   |
 | SSL          | Secure Sockets Layer                                         |
 | ST           | Straight Tip (fiber connector)                               |
 | TCP          | Transmission Control Protocol                                |
@@ -106,6 +109,7 @@
 | VLAN         | Virtual Local Area Network                                   |
 | VLSM         | Variable-Length Subnet Mask                                  |
 | VPC          | Virtual Private Cloud                                        |
+| VoIP         | Voice over Internet Protocol                                 |
 | VPN          | Virtual Private Network                                      |
 | WAN          | Wide Area Network                                            |
 | WLC          | Wireless LAN Controller                                      |
