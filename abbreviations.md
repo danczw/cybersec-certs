@@ -63,6 +63,7 @@
 | OSI          | Open Systems Interconnection                                 |
 | OSPF         | Open Shortest Path First                                     |
 | PaaS         | Platform as a Service                                        |
+| PAT          | Port Address Translation                                     |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
