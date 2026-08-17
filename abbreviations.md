@@ -45,6 +45,8 @@
 | IPSec        | Internet Protocol Security                                   |
 | IPS          | Intrusion Prevention System                                  |
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
+| LACP         | Link Aggregation Control Protocol                            |
+| LAG          | Link Aggregation Group                                       |
 | LAN          | Local Area Network                                           |
 | LDAP         | Lightweight Directory Access Protocol                        |
 | LC           | Local Connector (fiber)                                      |
