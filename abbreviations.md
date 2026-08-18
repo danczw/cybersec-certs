@@ -40,11 +40,13 @@
 | GSM          | Global System for Mobile Communications                      |
 | HaaS         | Hardware as a Service                                        |
 | HTTP         | Hypertext Transfer Protocol                                  |
+| HVAC         | Heating, Ventilating, and Air Conditioning                   |
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
 | IaaS         | Infrastructure as a Service                                  |
 | IEEE         | Institute of Electrical and Electronics Engineers            |
 | IETF         | Internet Engineering Task Force                              |
 | IBSS         | Independent Basic Service Set                                |
+| IDF          | Intermediate Distribution Frame                              |
 | ICMP         | Internet Control Message Protocol                            |
 | ICV          | Integrity Check Value                                        |
 | IDS          | Intrusion Detection System                                   |
@@ -66,6 +68,7 @@
 | LTE          | Long-Term Evolution                                          |
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
+| MDF          | Main Distribution Frame                                      |
 | MPO          | Multi-fiber Push On                                          |
 | MS-SQL       | Microsoft Structured Query Language                          |
 | MTP          | Multi-fiber Termination Push-on (Corning brand for MPO)      |
