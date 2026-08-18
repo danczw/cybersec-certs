@@ -2,6 +2,7 @@
 
 | Abbreviation | Full Name                                                    |
 |--------------|--------------------------------------------------------------|
+| AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
 | APIPA        | Automatic Private IP Addressing                              |
@@ -12,7 +13,9 @@
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CDN          | Content Delivery Network                                     |
+| CBC-MAC      | Cipher Block Chaining Message Authentication Code            |
 | CAPWAP       | Control and Provisioning of Wireless Access Points           |
+| CCMP         | Counter Mode with CBC-MAC Protocol                           |
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
@@ -31,6 +34,8 @@
 | FHRP         | First Hop Redundancy Protocol                                |
 | FEP          | Fluorinated Ethylene Polymer                                 |
 | FTP          | File Transfer Protocol                                       |
+| GCMP         | Galois Counter Mode Protocol                                 |
+| GMAC         | Galois Message Authentication Code                           |
 | GRE          | Generic Routing Encapsulation                                |
 | GSM          | Global System for Mobile Communications                      |
 | HaaS         | Hardware as a Service                                        |
