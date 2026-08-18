@@ -9,8 +9,10 @@
 | AS           | Autonomous System                                            |
 | ASIC         | Application-Specific Integrated Circuit                      |
 | BGP          | Border Gateway Protocol                                      |
+| BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CDN          | Content Delivery Network                                     |
+| CAPWAP       | Control and Provisioning of Wireless Access Points           |
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
@@ -21,6 +23,7 @@
 | DOCSIS       | Data Over Cable Service Interface Specification              |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
+| ESSID        | Extended Service Set Identifier                              |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FCC          | Federal Communications Commission                            |
@@ -36,6 +39,7 @@
 | IaaS         | Infrastructure as a Service                                  |
 | IEEE         | Institute of Electrical and Electronics Engineers            |
 | IETF         | Internet Engineering Task Force                              |
+| IBSS         | Independent Basic Service Set                                |
 | ICMP         | Internet Control Message Protocol                            |
 | ICV          | Integrity Check Value                                        |
 | IDS          | Intrusion Detection System                                   |
@@ -68,9 +72,11 @@
 | NTP          | Network Time Protocol                                        |
 | OSI          | Open Systems Interconnection                                 |
 | OSPF         | Open Shortest Path First                                     |
+| OWE          | Opportunistic Wireless Encryption                            |
 | PaaS         | Platform as a Service                                        |
 | PAT          | Port Address Translation                                     |
 | PBX          | Private Branch Exchange                                      |
+| PSK          | Pre-Shared Key                                               |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
@@ -100,6 +106,7 @@
 | SNMP         | Simple Network Management Protocol                           |
 | SPI          | Security Parameters Index                                    |
 | SQL          | Structured Query Language                                    |
+| SSID         | Service Set Identifier                                       |
 | SSH          | Secure Shell                                                 |
 | SVI          | Switched Virtual Interface                                   |
 | SSL          | Secure Sockets Layer                                         |
@@ -120,5 +127,7 @@
 | VoIP         | Voice over Internet Protocol                                 |
 | VPN          | Virtual Private Network                                      |
 | WAN          | Wide Area Network                                            |
+| WEP          | Wired Equivalent Privacy                                     |
+| WPA          | Wi-Fi Protected Access                                       |
 | WLC          | Wireless LAN Controller                                      |
 | XSS          | Cross-Site Scripting                                         |
