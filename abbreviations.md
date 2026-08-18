@@ -14,6 +14,7 @@
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
+| DFS          | Dynamic Frequency Selection                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
 | DNS          | Domain Name System                                           |
@@ -22,6 +23,7 @@
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
+| FCC          | Federal Communications Commission                            |
 | FQDN         | Fully Qualified Domain Name                                  |
 | FHRP         | First Hop Redundancy Protocol                                |
 | FEP          | Fluorinated Ethylene Polymer                                 |
@@ -40,6 +42,7 @@
 | IKE          | Internet Key Exchange                                        |
 | IMAP         | Internet Message Access Protocol                             |
 | IoT          | Internet of Things                                           |
+| ITU          | International Telecommunications Union                       |
 | IP           | Internet Protocol                                            |
 | ISL          | Inter-Switch Link                                            |
 | IPSec        | Internet Protocol Security                                   |
@@ -105,6 +108,7 @@
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
 | TLS          | Transport Layer Security                                     |
+| TPC          | Transmit Power Control                                       |
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
 | UTM          | Unified Threat Management                                    |
