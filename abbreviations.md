@@ -2,6 +2,7 @@
 
 | Abbreviation | Full Name                                                    |
 |--------------|--------------------------------------------------------------|
+| AC           | Alternating Current                                          |
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
@@ -19,6 +20,7 @@
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
+| DC           | Direct Current                                               |
 | DFS          | Dynamic Frequency Selection                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
@@ -84,6 +86,7 @@
 | PaaS         | Platform as a Service                                        |
 | PAT          | Port Address Translation                                     |
 | PBX          | Private Branch Exchange                                      |
+| PDU          | Power Distribution Unit                                      |
 | PSK          | Pre-Shared Key                                               |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
@@ -126,6 +129,7 @@
 | TPC          | Transmit Power Control                                       |
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
+| UPS          | Uninterruptible Power Supply                                 |
 | UTM          | Unified Threat Management                                    |
 | VIP          | Virtual IP Address                                           |
 | VNIC         | Virtual Network Interface Card                               |
