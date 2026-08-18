@@ -58,6 +58,7 @@
 | ITU          | International Telecommunications Union                       |
 | IP           | Internet Protocol                                            |
 | ISL          | Inter-Switch Link                                            |
+| IPAM         | IP Address Management                                        |
 | IPSec        | Internet Protocol Security                                   |
 | IPS          | Intrusion Prevention System                                  |
 | ISAKMP       | Internet Security Association and Key Management Protocol    |
@@ -98,6 +99,7 @@
 | RDP          | Remote Desktop Protocol                                      |
 | RFC          | Request for Comments                                         |
 | RF           | Radio Frequency                                              |
+| RFID         | Radio-Frequency Identification                               |
 | RIP          | Routing Information Protocol                                 |
 | RSTP         | Rapid Spanning Tree Protocol                                 |
 | RJ11         | Registered Jack type 11                                      |
@@ -112,6 +114,7 @@
 | SFTP         | Secure File Transfer Protocol                                |
 | SIEM         | Security Information and Event Management                    |
 | SIP          | Session Initiation Protocol                                  |
+| SLA          | Service Level Agreement                                      |
 | SMB          | Server Message Block                                         |
 | SMTP         | Simple Mail Transfer Protocol                                |
 | SNMP         | Simple Network Management Protocol                           |
