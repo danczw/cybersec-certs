@@ -28,6 +28,8 @@
 | DOCSIS       | Data Over Cable Service Interface Specification              |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
+| EOL          | End of Life                                                  |
+| EOS          | End of Support                                               |
 | ESSID        | Extended Service Set Identifier                              |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
