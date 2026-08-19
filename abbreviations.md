@@ -12,6 +12,7 @@
 | AS           | Autonomous System                                            |
 | ASIC         | Application-Specific Integrated Circuit                      |
 | BGP          | Border Gateway Protocol                                      |
+| BOOTP        | Bootstrap Protocol                                           |
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CRC          | Cyclic Redundancy Check                                      |
@@ -29,6 +30,7 @@
 | DLC          | Data Link Control                                            |
 | DNS          | Domain Name System                                           |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
+| DORA         | Discover, Offer, Request, Acknowledge (DHCP)                 |
 | DRP          | Disaster Recovery Plan                                       |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
