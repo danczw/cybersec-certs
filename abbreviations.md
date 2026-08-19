@@ -13,6 +13,7 @@
 | BGP          | Border Gateway Protocol                                      |
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
+| CRC          | Cyclic Redundancy Check                                      |
 | CDN          | Content Delivery Network                                     |
 | CBC-MAC      | Cipher Block Chaining Message Authentication Code            |
 | CAPWAP       | Control and Provisioning of Wireless Access Points           |
@@ -74,6 +75,7 @@
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
 | MDF          | Main Distribution Frame                                      |
+| MIB          | Management Information Base                                  |
 | MPO          | Multi-fiber Push On                                          |
 | MS-SQL       | Microsoft Structured Query Language                          |
 | MTP          | Multi-fiber Termination Push-on (Corning brand for MPO)      |
@@ -83,6 +85,7 @@
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
 | NTP          | Network Time Protocol                                        |
+| OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
 | OSPF         | Open Shortest Path First                                     |
 | OWE          | Opportunistic Wireless Encryption                            |
