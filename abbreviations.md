@@ -29,6 +29,7 @@
 | DLC          | Data Link Control                                            |
 | DNS          | Domain Name System                                           |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
+| DRP          | Disaster Recovery Plan                                       |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
 | EOL          | End of Life                                                  |
@@ -82,6 +83,8 @@
 | MPO          | Multi-fiber Push On                                          |
 | MS-SQL       | Microsoft Structured Query Language                          |
 | MTP          | Multi-fiber Termination Push-on (Corning brand for MPO)      |
+| MTBF         | Mean Time Between Failures                                   |
+| MTTR         | Mean Time to Repair                                          |
 | MTU          | Maximum Transmission Unit                                    |
 | NAS          | Network-Attached Storage                                     |
 | NAT          | Network Address Translation                                  |
@@ -109,6 +112,8 @@
 | RF           | Radio Frequency                                              |
 | RFID         | Radio-Frequency Identification                               |
 | RIP          | Routing Information Protocol                                 |
+| RPO          | Recovery Point Objective                                     |
+| RTO          | Recovery Time Objective                                      |
 | RSTP         | Rapid Spanning Tree Protocol                                 |
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
