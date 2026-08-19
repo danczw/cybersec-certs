@@ -6,6 +6,7 @@
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
+| API          | Application Programming Interface                            |
 | APIPA        | Automatic Private IP Addressing                              |
 | ARP          | Address Resolution Protocol                                  |
 | AS           | Autonomous System                                            |
@@ -124,6 +125,7 @@
 | SMTP         | Simple Mail Transfer Protocol                                |
 | SNMP         | Simple Network Management Protocol                           |
 | SPI          | Security Parameters Index                                    |
+| SPAN         | Switched Port Analyzer                                       |
 | SQL          | Structured Query Language                                    |
 | SSID         | Service Set Identifier                                       |
 | SSH          | Secure Shell                                                 |
