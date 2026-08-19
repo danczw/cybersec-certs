@@ -15,6 +15,7 @@
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CRC          | Cyclic Redundancy Check                                      |
+| CDP          | Cisco Discovery Protocol                                     |
 | CDN          | Content Delivery Network                                     |
 | CBC-MAC      | Cipher Block Chaining Message Authentication Code            |
 | CAPWAP       | Control and Provisioning of Wireless Access Points           |
@@ -72,6 +73,7 @@
 | LDAP         | Lightweight Directory Access Protocol                        |
 | LC           | Local Connector (fiber)                                      |
 | LED          | Light-Emitting Diode                                         |
+| LLDP         | Link Layer Discovery Protocol                                |
 | LTE          | Long-Term Evolution                                          |
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
