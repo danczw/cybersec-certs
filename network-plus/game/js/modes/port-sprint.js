@@ -112,11 +112,22 @@ const PortSprint = (() => {
     showQuestion(mode);
   }
 
+  function renderModeBackButton() {
+    const btn = document.createElement('button');
+    btn.className = 'back-btn';
+    btn.innerHTML = '← BACK';
+    btn.addEventListener('click', () => {
+      if (questionTimer) { clearInterval(questionTimer); questionTimer = null; }
+      renderModeSelect();
+    });
+    return btn;
+  }
+
   function showQuestion(mode) {
     if (questionTimer) { clearInterval(questionTimer); questionTimer = null; }
     answered = false;
     container.innerHTML = '';
-    container.appendChild(UI.renderBackButton());
+    container.appendChild(renderModeBackButton());
 
     const statsEl = UI.renderSessionStats(sessionStats, { showStreak: false });
     container.appendChild(statsEl);
