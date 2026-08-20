@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-20T09:42:43.499Z"
+    "generated": "2026-08-20T13:50:47.999Z"
   },
   "domains": [
     {
@@ -16526,8 +16526,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does DHCPv6 compare to IPv4 DHCP?",
-              "answer": "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
+              "question": "What are resource records in DNS?",
+              "answer": "Individual entries in a DNS configuration file that provide different types of information (name-to-IP resolution, certificates, aliases, mail serv...",
               "difficulty": 1,
               "id": "3.4.1493",
               "distractors": [
@@ -16537,9 +16537,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is stateless addressing in IPv6?",
-              "answer": "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
-              "difficulty": 1,
+              "question": "What is an SOA record?",
+              "answer": "Start of Authority — the first record at the top of a DNS configuration file that provides an overview of the DNS zone",
+              "difficulty": 2,
               "id": "3.4.1494",
               "distractors": [
                 "A DHCPv6 mode where the server assigns addresses but does not track which devices hold which leases",
@@ -16548,9 +16548,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What three things are eliminated with IPv6 stateless addressing compared to DHCP?",
-              "answer": "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
-              "difficulty": 2,
+              "question": "What five pieces of information does an SOA record contain?",
+              "answer": "DNS zone details (which domain), serial number, retry information, expiration details, and how long information should be stored",
+              "difficulty": 3,
               "id": "3.4.1495",
               "distractors": [
                 "No broadcast addresses, no ARP requests, and no subnet mask configuration",
@@ -16559,9 +16559,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is there no lease time with IPv6 stateless addressing?",
-              "answer": "The address never needs to be given up — it is self-assigned and permanent as long as the device uses it",
-              "difficulty": 2,
+              "question": "Where is the SOA record located in a DNS configuration file?",
+              "answer": "At the very top — it is the first record",
+              "difficulty": 1,
               "id": "3.4.1496",
               "distractors": [
                 "Because the DHCPv6 server handles address expiration separately through periodic renewals",
@@ -16570,8 +16570,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the Neighbor Discovery Protocol (NDP)?",
-              "answer": "An IPv6 protocol that replaces ARP from IPv4, using multicast instead of broadcasts to find devices, identify routers, and detect duplicate addresses",
+              "question": "What does a DNS A record do?",
+              "answer": "Defines the IPv4 address of a host — the core record for name resolution",
               "difficulty": 1,
               "id": "3.4.1497",
               "distractors": [
@@ -16581,8 +16581,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What IPv4 protocol does NDP replace?",
-              "answer": "ARP (Address Resolution Protocol)",
+              "question": "What does a DNS AAAA record do?",
+              "answer": "Defines the IPv6 address of a host — same functionality as an A record but for IPv6",
               "difficulty": 1,
               "id": "3.4.1498",
               "distractors": [
@@ -16592,8 +16592,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is NDP more efficient than ARP?",
-              "answer": "ARP uses broadcasts (sent to all devices); NDP uses multicast (sent only to interested devices)",
+              "question": "What is the difference between an A record and an AAAA record?",
+              "answer": "A record is for IPv4 addresses; AAAA record is for IPv6 addresses. Same functionality, different IP version.",
               "difficulty": 2,
               "id": "3.4.1499",
               "distractors": [
@@ -16603,9 +16603,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the three functions of NDP?",
-              "answer": "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-              "difficulty": 2,
+              "question": "How many A's are in an IPv4 DNS address record vs an IPv6 DNS address record?",
+              "answer": "IPv4 has one A (A record); IPv6 has four A's (AAAA record)",
+              "difficulty": 1,
               "id": "3.4.1500",
               "distractors": [
                 "Assign IPv6 addresses via DHCPv6, resolve hostnames to addresses, and manage multicast group memberships",
@@ -16614,9 +16614,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a Router Solicitation (RS)?",
-              "answer": "A multicast message sent by a device asking any routers on the local subnet to respond",
-              "difficulty": 1,
+              "question": "What does a CNAME record do?",
+              "answer": "Creates an alias that points to another name — allows a single server to be referenced by multiple names",
+              "difficulty": 2,
               "id": "3.4.1501",
               "distractors": [
                 "A unicast reply from a neighbor confirming its Layer 2 (MAC) address in response to a Neighbor Solicitation",
@@ -16625,8 +16625,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does a router respond to a Router Solicitation?",
-              "answer": "It sends a Router Advertisement (RA) directly back to the device",
+              "question": "What does CNAME stand for?",
+              "answer": "Canonical Name",
               "difficulty": 1,
               "id": "3.4.1502",
               "distractors": [
@@ -16636,8 +16636,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a Router Advertisement (RA)?",
-              "answer": "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+              "question": "What is the use case for CNAME records?",
+              "answer": "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
               "difficulty": 2,
               "id": "3.4.1503",
               "distractors": [
@@ -16647,9 +16647,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is an unsolicited RA?",
-              "answer": "A Router Advertisement sent by a router without being queried, to a multicast address for all devices that might be interested in knowing where rou...",
-              "difficulty": 2,
+              "question": "Why might querying a CNAME require two DNS lookups?",
+              "answer": "First lookup returns the canonical name (target); if the target's IP is not cached, a second query resolves the target's IP address",
+              "difficulty": 3,
               "id": "3.4.1504",
               "distractors": [
                 "A Router Advertisement sent only in response to a device's Router Solicitation message",
@@ -16658,9 +16658,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How do unsolicited RAs differ from solicited RAs in terms of destination?",
-              "answer": "Unsolicited RAs are sent to a different multicast address than solicited ones",
-              "difficulty": 3,
+              "question": "What is an MX record?",
+              "answer": "Mail Exchanger record — specifies the mail server responsible for receiving email for the domain",
+              "difficulty": 1,
               "id": "3.4.1505",
               "distractors": [
                 "Unsolicited RAs are sent as unicast directly to each device, while solicited RAs use a multicast group",
@@ -16669,8 +16669,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What four pieces of information can a Router Advertisement provide?",
-              "answer": "Prefix value, prefix length, DNS server configuration, and other IPv6 configuration parameters",
+              "question": "Does an MX record return an IP address directly?",
+              "answer": "No — it returns a name (e.g., mail.example.com); a separate A record lookup is needed to get the IP",
               "difficulty": 2,
               "id": "3.4.1506",
               "distractors": [
@@ -16680,9 +16680,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is SLAAC?",
-              "answer": "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
-              "difficulty": 1,
+              "question": "What is a TXT record?",
+              "answer": "A DNS record that stores human-readable text information, used for multiple purposes including SPF and DKIM",
+              "difficulty": 2,
               "id": "3.4.1507",
               "distractors": [
                 "Secure Link-local Address Assignment Control — a method for authenticating IPv6 addresses before they join the network",
@@ -16691,8 +16691,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the first step of the SLAAC process?",
-              "answer": "The device sends a Router Solicitation via NDP to determine the local subnet",
+              "question": "What is SPF?",
+              "answer": "Sender Policy Framework — specifies which email servers are authorized to send mail on behalf of the domain, stored in a TXT record",
               "difficulty": 2,
               "id": "3.4.1508",
               "distractors": [
@@ -16702,8 +16702,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What does the router provide to a device during SLAAC?",
-              "answer": "A Router Advertisement containing the 64-bit subnet prefix",
+              "question": "How does SPF prevent email spoofing?",
+              "answer": "Receiving mail servers check the SPF record in DNS to verify the sending server is authorized to send mail for that domain",
               "difficulty": 2,
               "id": "3.4.1509",
               "distractors": [
@@ -16713,9 +16713,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How many bits does the subnet prefix occupy in an IPv6 address during SLAAC?",
-              "answer": "64 bits",
-              "difficulty": 1,
+              "question": "What is DKIM?",
+              "answer": "Domain Keys Identified Mail — digitally signs outgoing emails, with the public key stored in a DNS TXT record for verification",
+              "difficulty": 2,
               "id": "3.4.1510",
               "distractors": [
                 "48 bits",
@@ -16724,8 +16724,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the interface ID in an IPv6 address?",
-              "answer": "The last 64 bits of the address, generated by the device itself during SLAAC",
+              "question": "Where is the DKIM public key stored?",
+              "answer": "In a TXT record on the domain's DNS server",
               "difficulty": 2,
               "id": "3.4.1511",
               "distractors": [
@@ -16735,9 +16735,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the two methods a device can use to generate the 64-bit interface ID?",
-              "answer": "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value",
-              "difficulty": 2,
+              "question": "How do receiving servers verify a DKIM signature?",
+              "answer": "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
+              "difficulty": 3,
               "id": "3.4.1512",
               "distractors": [
                 "DHCPv6 server assignment (server picks the full 64-bit ID) or manual static configuration by the administrator",
@@ -16746,9 +16746,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does the modified MAC address method create a 64-bit interface ID?",
-              "answer": "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
-              "difficulty": 3,
+              "question": "What type of DNS record are both SPF and DKIM stored in?",
+              "answer": "TXT records",
+              "difficulty": 2,
               "id": "3.4.1513",
               "distractors": [
                 "It pads the 48-bit MAC address with 16 trailing zeros to reach 64 bits",
@@ -16757,9 +16757,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the final step of SLAAC before the address is usable?",
-              "answer": "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
-              "difficulty": 2,
+              "question": "What is an NS record?",
+              "answer": "Name Server record — specifies where the name servers for the domain are located",
+              "difficulty": 1,
               "id": "3.4.1514",
               "distractors": [
                 "The device sends a Router Solicitation to confirm the prefix is still valid on the network",
@@ -16768,9 +16768,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What does the device have after SLAAC completes?",
-              "answer": "A fully routable, unique IPv6 address",
-              "difficulty": 1,
+              "question": "Why are NS records critical?",
+              "answer": "Without NS records, the domain cannot be found — they are essential for name resolution",
+              "difficulty": 2,
               "id": "3.4.1515",
               "distractors": [
                 "A link-local address only usable within the local subnet, requiring DHCPv6 for external routing",
@@ -16779,9 +16779,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "List the five steps of the SLAAC process in order.",
-              "answer": "1) Send Router Solicitation via NDP, 2) Receive Router Advertisement with 64-bit prefix, 3) Generate 64-bit interface ID (modified MAC or random), ...",
-              "difficulty": 3,
+              "question": "Why might a domain have multiple NS records?",
+              "answer": "To provide redundancy (e.g., ns1.example.com and ns2.example.com)",
+              "difficulty": 2,
               "id": "3.4.1516",
               "distractors": [
                 "1) Send DHCPv6 Solicit, 2) Receive DHCPv6 Advertise with prefix, 3) Send DHCPv6 Request, 4) Receive DHCPv6 Reply with full address, 5) Verify with DAD",
@@ -16790,8 +16790,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is Duplicate Address Detection (DAD)?",
-              "answer": "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
+              "question": "What is a PTR record?",
+              "answer": "Pointer record — used for reverse DNS lookups, resolving an IP address to a name",
               "difficulty": 1,
               "id": "3.4.1517",
               "distractors": [
@@ -16801,8 +16801,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is DAD necessary in IPv6?",
-              "answer": "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
+              "question": "How are PTR records related to A records?",
+              "answer": "They are separate and independent — PTR records must be configured independently from forward A/AAAA records",
               "difficulty": 2,
               "id": "3.4.1518",
               "distractors": [
@@ -16812,9 +16812,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What protocol is DAD a part of?",
-              "answer": "Neighbor Discovery Protocol (NDP)",
-              "difficulty": 1,
+              "question": "How are IP addresses stored in PTR records within the DNS configuration?",
+              "answer": "In reverse order",
+              "difficulty": 3,
               "id": "3.4.1519",
               "distractors": [
                 "DHCPv6 (Dynamic Host Configuration Protocol for IPv6)",
@@ -16823,9 +16823,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the key difference between IPv4 and IPv6 regarding self-assigned addressing?",
-              "answer": "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement",
-              "difficulty": 2,
+              "question": "Which DNS record type would you look at to find the mail server for a domain?",
+              "answer": "MX (Mail Exchanger) record",
+              "difficulty": 1,
               "id": "3.4.1520",
               "distractors": [
                 "IPv4 supports autoconfiguration via APIPA for both local and routable addresses; IPv6 requires DHCPv6 for all address types",
@@ -16834,8 +16834,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the primary purpose of DNS?",
-              "answer": "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+              "question": "Which DNS record type would you use to create an alias for a hostname?",
+              "answer": "CNAME (Canonical Name) record",
               "difficulty": 1,
               "id": "3.4.1521",
               "distractors": [
@@ -16845,8 +16845,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How is the DNS database structured?",
-              "answer": "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+              "question": "Which DNS record type is used for reverse lookups?",
+              "answer": "PTR (Pointer) record",
               "difficulty": 1,
               "id": "3.4.1522",
               "distractors": [
@@ -16856,9 +16856,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is at the very top of the DNS hierarchy?",
-              "answer": "The root, represented by a single dot (`.`)",
-              "difficulty": 2,
+              "question": "Which DNS record type identifies the name servers for a domain?",
+              "answer": "NS (Name Server) record",
+              "difficulty": 1,
               "id": "3.4.1523",
               "distractors": [
                 "The top-level domains (TLDs) such as .com, .org, and .net",
@@ -16867,9 +16867,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are Top Level Domains (TLDs)?",
-              "answer": "The first level below the root in the DNS hierarchy — includes generic TLDs (.com, .org, .net) and country code TLDs (.us, .ca, .uk)",
-              "difficulty": 1,
+              "question": "Which DNS record type stores email authentication information like SPF and DKIM?",
+              "answer": "TXT record",
+              "difficulty": 2,
               "id": "3.4.1524",
               "distractors": [
                 "The authoritative name servers that store the actual DNS records (A, AAAA, MX) for a specific domain and respond to queries",
@@ -16878,9 +16878,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are examples of generic TLDs?",
-              "answer": ".com, .org, .net",
-              "difficulty": 1,
+              "question": "Which DNS record type provides zone overview information including serial number and expiration?",
+              "answer": "SOA (Start of Authority) record",
+              "difficulty": 2,
               "id": "3.4.1525",
               "distractors": [
                 ".us, .uk, .de",
@@ -16889,8 +16889,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are examples of country code TLDs?",
-              "answer": ".us (United States), .ca (Canada), .uk (United Kingdom)",
+              "question": "How does DHCPv6 compare to IPv4 DHCP?",
+              "answer": "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
               "difficulty": 1,
               "id": "3.4.1526",
               "distractors": [
@@ -16900,9 +16900,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a Fully Qualified Domain Name (FQDN)?",
-              "answer": "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)",
-              "difficulty": 2,
+              "question": "What is stateless addressing in IPv6?",
+              "answer": "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+              "difficulty": 1,
               "id": "3.4.1527",
               "distractors": [
                 "The top-level domain portion of a URL that identifies the country or category (e.g., .com, .org, .uk)",
@@ -16911,8 +16911,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the four levels of the DNS hierarchy from top to bottom?",
-              "answer": "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
+              "question": "What three things are eliminated with IPv6 stateless addressing compared to DHCP?",
+              "answer": "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
               "difficulty": 2,
               "id": "3.4.1528",
               "distractors": [
@@ -16922,8 +16922,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How many root DNS server clusters exist?",
-              "answer": "13 server clusters, comprising over 1,000 actual servers",
+              "question": "Why is there no lease time with IPv6 stateless addressing?",
+              "answer": "The address never needs to be given up — it is self-assigned and permanent as long as the device uses it",
               "difficulty": 2,
               "id": "3.4.1529",
               "distractors": [
@@ -16933,9 +16933,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What do root DNS servers manage?",
-              "answer": "The Top Level Domains (TLDs)",
-              "difficulty": 2,
+              "question": "What is the Neighbor Discovery Protocol (NDP)?",
+              "answer": "An IPv6 protocol that replaces ARP from IPv4, using multicast instead of broadcasts to find devices, identify routers, and detect duplicate addresses",
+              "difficulty": 1,
               "id": "3.4.1530",
               "distractors": [
                 "The individual host records (A and AAAA) for all registered domains on the internet",
@@ -16944,9 +16944,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the role of a primary DNS server?",
-              "answer": "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
-              "difficulty": 2,
+              "question": "What IPv4 protocol does NDP replace?",
+              "answer": "ARP (Address Resolution Protocol)",
+              "difficulty": 1,
               "id": "3.4.1531",
               "distractors": [
                 "Caches frequently requested records to reduce query time; does not store any authoritative zone data",
@@ -16955,8 +16955,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the role of a secondary DNS server?",
-              "answer": "Receives zone information from the primary server in read-only mode; provides redundancy",
+              "question": "Why is NDP more efficient than ARP?",
+              "answer": "ARP uses broadcasts (sent to all devices); NDP uses multicast (sent only to interested devices)",
               "difficulty": 2,
               "id": "3.4.1532",
               "distractors": [
@@ -16966,8 +16966,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does a secondary DNS server get its zone information?",
-              "answer": "It receives it from the primary DNS server (read-only copy)",
+              "question": "What are the three functions of NDP?",
+              "answer": "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
               "difficulty": 2,
               "id": "3.4.1533",
               "distractors": [
@@ -16977,9 +16977,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Can end users tell whether a response came from a primary or secondary DNS server?",
-              "answer": "No — the same information exists in both and the end user has no idea which answered",
-              "difficulty": 2,
+              "question": "What is a Router Solicitation (RS)?",
+              "answer": "A multicast message sent by a device asking any routers on the local subnet to respond",
+              "difficulty": 1,
               "id": "3.4.1534",
               "distractors": [
                 "Yes — responses from secondary servers include a flag indicating they are non-authoritative copies",
@@ -16988,8 +16988,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is local name resolution?",
-              "answer": "Resolving names locally on the machine without querying a DNS server, using the hosts file",
+              "question": "How does a router respond to a Router Solicitation?",
+              "answer": "It sends a Router Advertisement (RA) directly back to the device",
               "difficulty": 1,
               "id": "3.4.1535",
               "distractors": [
@@ -16999,8 +16999,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are two use cases for the hosts file?",
-              "answer": "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+              "question": "What is a Router Advertisement (RA)?",
+              "answer": "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
               "difficulty": 2,
               "id": "3.4.1536",
               "distractors": [
@@ -17010,8 +17010,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Where is the hosts file located on Windows?",
-              "answer": "windows/system32/drivers/etc/hosts",
+              "question": "What is an unsolicited RA?",
+              "answer": "A Router Advertisement sent by a router without being queried, to a multicast address for all devices that might be interested in knowing where rou...",
               "difficulty": 2,
               "id": "3.4.1537",
               "distractors": [
@@ -17021,9 +17021,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What format is the hosts file?",
-              "answer": "A simple text file mapping IP addresses to names",
-              "difficulty": 1,
+              "question": "How do unsolicited RAs differ from solicited RAs in terms of destination?",
+              "answer": "Unsolicited RAs are sent to a different multicast address than solicited ones",
+              "difficulty": 3,
               "id": "3.4.1538",
               "distractors": [
                 "An XML configuration file with DNS record entries and TTL values",
@@ -17032,8 +17032,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why might you need to change permissions before editing the hosts file?",
-              "answer": "It is stored as read-only by default",
+              "question": "What four pieces of information can a Router Advertisement provide?",
+              "answer": "Prefix value, prefix length, DNS server configuration, and other IPv6 configuration parameters",
               "difficulty": 2,
               "id": "3.4.1539",
               "distractors": [
@@ -17043,9 +17043,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Do all applications use the hosts file for name resolution?",
-              "answer": "No — some applications ignore the hosts file and query DNS directly; check application documentation",
-              "difficulty": 2,
+              "question": "What is SLAAC?",
+              "answer": "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
+              "difficulty": 1,
               "id": "3.4.1540",
               "distractors": [
                 "Yes — the hosts file is always checked by every application before any DNS query is sent",
@@ -17054,9 +17054,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a forward DNS lookup?",
-              "answer": "Provide a name → DNS returns an IP address; the most common DNS operation",
-              "difficulty": 1,
+              "question": "What is the first step of the SLAAC process?",
+              "answer": "The device sends a Router Solicitation via NDP to determine the local subnet",
+              "difficulty": 2,
               "id": "3.4.1541",
               "distractors": [
                 "Provide an IP address → DNS returns the associated hostname; used for verification",
@@ -17065,9 +17065,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a reverse DNS lookup?",
-              "answer": "Provide an IP address → DNS returns a name",
-              "difficulty": 1,
+              "question": "What does the router provide to a device during SLAAC?",
+              "answer": "A Router Advertisement containing the 64-bit subnet prefix",
+              "difficulty": 2,
               "id": "3.4.1542",
               "distractors": [
                 "Query a DNS server to find which name server is authoritative for a given zone",
@@ -17076,9 +17076,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Does a reverse lookup happen automatically if forward lookups are configured?",
-              "answer": "No — reverse lookups must be separately configured on the DNS server",
-              "difficulty": 2,
+              "question": "How many bits does the subnet prefix occupy in an IPv6 address during SLAAC?",
+              "answer": "64 bits",
+              "difficulty": 1,
               "id": "3.4.1543",
               "distractors": [
                 "Yes — the DNS server automatically creates PTR records whenever a new A record is added",
@@ -17087,9 +17087,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Can the forward lookup name and reverse lookup name differ for the same IP?",
-              "answer": "Yes — the forward name and reverse name may differ",
-              "difficulty": 3,
+              "question": "What is the interface ID in an IPv6 address?",
+              "answer": "The last 64 bits of the address, generated by the device itself during SLAAC",
+              "difficulty": 2,
               "id": "3.4.1544",
               "distractors": [
                 "No — RFC standards require forward and reverse entries to always match exactly",
@@ -17098,8 +17098,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is an authoritative DNS server?",
-              "answer": "The primary DNS server for a DNS zone — the authority for all records in that domain",
+              "question": "What are the two methods a device can use to generate the 64-bit interface ID?",
+              "answer": "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value",
               "difficulty": 2,
               "id": "3.4.1545",
               "distractors": [
@@ -17109,9 +17109,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a nonauthoritative DNS server?",
-              "answer": "A secondary server or caching server that returns cached information, not directly from the zone owner",
-              "difficulty": 2,
+              "question": "How does the modified MAC address method create a 64-bit interface ID?",
+              "answer": "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
+              "difficulty": 3,
               "id": "3.4.1546",
               "distractors": [
                 "A DNS server that only handles reverse lookups (IP to hostname) and cannot resolve forward queries",
@@ -17120,8 +17120,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the risk of relying on a nonauthoritative DNS server?",
-              "answer": "Cached information could be outdated if the authoritative server was recently changed",
+              "question": "What is the final step of SLAAC before the address is usable?",
+              "answer": "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
               "difficulty": 2,
               "id": "3.4.1547",
               "distractors": [
@@ -17131,9 +17131,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is TTL in DNS?",
-              "answer": "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
-              "difficulty": 2,
+              "question": "What does the device have after SLAAC completes?",
+              "answer": "A fully routable, unique IPv6 address",
+              "difficulty": 1,
               "id": "3.4.1548",
               "distractors": [
                 "Transport Tunnel Length — the maximum number of hops a DNS query can traverse before being dropped",
@@ -17142,9 +17142,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Where is the TTL configured?",
-              "answer": "On the authoritative DNS server",
-              "difficulty": 2,
+              "question": "List the five steps of the SLAAC process in order.",
+              "answer": "1) Send Router Solicitation via NDP, 2) Receive Router Advertisement with 64-bit prefix, 3) Generate 64-bit interface ID (modified MAC or random), ...",
+              "difficulty": 3,
               "id": "3.4.1549",
               "distractors": [
                 "On the client's local DNS resolver settings",
@@ -17153,9 +17153,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What happens after a DNS TTL expires?",
-              "answer": "Cached data is deleted and subsequent queries must go to the authoritative server to be cached again",
-              "difficulty": 2,
+              "question": "What is Duplicate Address Detection (DAD)?",
+              "answer": "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
+              "difficulty": 1,
               "id": "3.4.1550",
               "distractors": [
                 "The record is automatically renewed by the caching server without contacting the authoritative server",
@@ -17164,9 +17164,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "A DNS record has a TTL of 300. How long can it be cached?",
-              "answer": "300 seconds (5 minutes)",
-              "difficulty": 1,
+              "question": "Why is DAD necessary in IPv6?",
+              "answer": "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
+              "difficulty": 2,
               "id": "3.4.1551",
               "distractors": [
                 "300 minutes (5 hours)",
@@ -17175,9 +17175,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a recursive DNS query?",
-              "answer": "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes",
-              "difficulty": 2,
+              "question": "What protocol is DAD a part of?",
+              "answer": "Neighbor Discovery Protocol (NDP)",
+              "difficulty": 1,
               "id": "3.4.1552",
               "distractors": [
                 "A query where the client contacts each DNS server in the hierarchy directly, one at a time, until it finds the answer",
@@ -17186,8 +17186,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "In a recursive DNS query, what does the client (resolver) do?",
-              "answer": "It only contacts its local DNS server — the local server handles everything else",
+              "question": "What is the key difference between IPv4 and IPv6 regarding self-assigned addressing?",
+              "answer": "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement",
               "difficulty": 2,
               "id": "3.4.1553",
               "distractors": [
@@ -17197,9 +17197,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "List the five steps of the recursive DNS query process.",
-              "answer": "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
-              "difficulty": 3,
+              "question": "What is the primary purpose of DNS?",
+              "answer": "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+              "difficulty": 1,
               "id": "3.4.1554",
               "distractors": [
                 "1) Client queries root server directly, 2) Root returns final IP, 3) Client caches result, 4) Client connects to host, 5) TTL expires and cache clears",
@@ -17208,9 +17208,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What does the root server return during a recursive query?",
-              "answer": "The address of the appropriate TLD name server (e.g., the .com name server)",
-              "difficulty": 2,
+              "question": "How is the DNS database structured?",
+              "answer": "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+              "difficulty": 1,
               "id": "3.4.1555",
               "distractors": [
                 "The final resolved IP address for the requested domain name",
@@ -17219,9 +17219,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "After a recursive query completes, what happens with subsequent requests for the same name?",
-              "answer": "They are served from the local DNS server's cache",
-              "difficulty": 1,
+              "question": "What is at the very top of the DNS hierarchy?",
+              "answer": "The root, represented by a single dot (`.`)",
+              "difficulty": 2,
               "id": "3.4.1556",
               "distractors": [
                 "They are forwarded to the root servers again to verify the record has not changed",
@@ -17230,9 +17230,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the two security problems with traditional DNS?",
-              "answer": "Traffic is sent in the clear (anyone can see queried hostnames), and responses are not authenticated (could be spoofed)",
-              "difficulty": 2,
+              "question": "What are Top Level Domains (TLDs)?",
+              "answer": "The first level below the root in the DNS hierarchy — includes generic TLDs (.com, .org, .net) and country code TLDs (.us, .ca, .uk)",
+              "difficulty": 1,
               "id": "3.4.1557",
               "distractors": [
                 "DNS servers are limited to a single zone file and cannot handle recursive queries, making them vulnerable to cache overflow attacks",
@@ -17241,9 +17241,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is DNSSEC?",
-              "answer": "Domain Name Security Extensions — digitally signs DNS responses to verify they came from a trusted source and have not been modified in transit",
-              "difficulty": 2,
+              "question": "What are examples of generic TLDs?",
+              "answer": ".com, .org, .net",
+              "difficulty": 1,
               "id": "3.4.1558",
               "distractors": [
                 "DNS Network Security Extensions — encrypts all DNS queries and responses using AES-256 so no one can read the traffic in transit",
@@ -17252,9 +17252,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Does DNSSEC encrypt DNS traffic?",
-              "answer": "No — it only signs responses for integrity/authenticity; queries are still visible in the clear",
-              "difficulty": 3,
+              "question": "What are examples of country code TLDs?",
+              "answer": ".us (United States), .ca (Canada), .uk (United Kingdom)",
+              "difficulty": 1,
               "id": "3.4.1559",
               "distractors": [
                 "Yes — DNSSEC wraps all queries and responses in TLS, hiding them from network observers",
@@ -17263,8 +17263,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is DNS over TLS (DoT)?",
-              "answer": "A method of encrypting DNS traffic using TLS over TCP port 853",
+              "question": "What is a Fully Qualified Domain Name (FQDN)?",
+              "answer": "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)",
               "difficulty": 2,
               "id": "3.4.1560",
               "distractors": [
@@ -17274,8 +17274,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What port does DNS over TLS (DoT) use?",
-              "answer": "TCP port 853",
+              "question": "What are the four levels of the DNS hierarchy from top to bottom?",
+              "answer": "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
               "difficulty": 2,
               "id": "3.4.1561",
               "distractors": [
@@ -17285,8 +17285,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is DNS over HTTPS (DoH)?",
-              "answer": "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
+              "question": "How many root DNS server clusters exist?",
+              "answer": "13 server clusters, comprising over 1,000 actual servers",
               "difficulty": 2,
               "id": "3.4.1562",
               "distractors": [
@@ -17296,9 +17296,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What port does DNS over HTTPS (DoH) use?",
-              "answer": "TCP port 443",
-              "difficulty": 1,
+              "question": "What do root DNS servers manage?",
+              "answer": "The Top Level Domains (TLDs)",
+              "difficulty": 2,
               "id": "3.4.1563",
               "distractors": [
                 "TCP port 853",
@@ -17307,9 +17307,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does DoH traffic appear in a packet capture?",
-              "answer": "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS",
-              "difficulty": 3,
+              "question": "What is the role of a primary DNS server?",
+              "answer": "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
+              "difficulty": 2,
               "id": "3.4.1564",
               "distractors": [
                 "As plaintext DNS queries on port 443 — the domain names are visible but the responses are encrypted",
@@ -17318,8 +17318,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Which modern applications may already use DoH by default?",
-              "answer": "Some modern browsers use DoH by default",
+              "question": "What is the role of a secondary DNS server?",
+              "answer": "Receives zone information from the primary server in read-only mode; provides redundancy",
               "difficulty": 2,
               "id": "3.4.1565",
               "distractors": [
@@ -17329,9 +17329,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What problem does DNSSEC solve that DoT/DoH do not?",
-              "answer": "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
-              "difficulty": 3,
+              "question": "How does a secondary DNS server get its zone information?",
+              "answer": "It receives it from the primary DNS server (read-only copy)",
+              "difficulty": 2,
               "id": "3.4.1566",
               "distractors": [
                 "DNSSEC prevents DNS cache poisoning by encrypting the full query/response path end-to-end",
@@ -17340,14 +17340,1529 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What problem do DoT and DoH solve that DNSSEC does not?",
-              "answer": "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear",
-              "difficulty": 3,
+              "question": "Can end users tell whether a response came from a primary or secondary DNS server?",
+              "answer": "No — the same information exists in both and the end user has no idea which answered",
+              "difficulty": 2,
               "id": "3.4.1567",
               "distractors": [
                 "They verify the DNS server's identity to prevent connections to spoofed resolvers; DNSSEC only validates the record data itself",
                 "They prevent man-in-the-middle modification of DNS responses; DNSSEC only provides encryption without authentication",
                 "They ensure queries reach the correct authoritative server; DNSSEC only protects the last hop from resolver to client"
+              ]
+            },
+            {
+              "question": "What is local name resolution?",
+              "answer": "Resolving names locally on the machine without querying a DNS server, using the hosts file",
+              "difficulty": 1,
+              "id": "3.4.1568",
+              "distractors": [
+                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+                "Configurable — devices can update daily, hourly, or on other schedules (automatic process)"
+              ]
+            },
+            {
+              "question": "What are two use cases for the hosts file?",
+              "answer": "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+              "difficulty": 2,
+              "id": "3.4.1569",
+              "distractors": [
+                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
+                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+              ]
+            },
+            {
+              "question": "Where is the hosts file located on Windows?",
+              "answer": "windows/system32/drivers/etc/hosts",
+              "difficulty": 2,
+              "id": "3.4.1570",
+              "distractors": [
+                "ARP (Address Resolution Protocol)",
+                "The IP address of the DHCP server",
+                "An NTS Key Exchange (NTS-KE) server"
+              ]
+            },
+            {
+              "question": "What format is the hosts file?",
+              "answer": "A simple text file mapping IP addresses to names",
+              "difficulty": 1,
+              "id": "3.4.1571",
+              "distractors": [
+                "MAC address, reserved IP address, and device name",
+                "NTP sends information in the clear (unencrypted)",
+                "All four are sent as broadcasts (255.255.255.255)"
+              ]
+            },
+            {
+              "question": "Why might you need to change permissions before editing the hosts file?",
+              "answer": "It is stored as read-only by default",
+              "difficulty": 2,
+              "id": "3.4.1572",
+              "distractors": [
+                "An NTS Key Exchange (NTS-KE) server",
+                "In the DHCP RFC (Request for Comments)",
+                "A fully routable, unique IPv6 address"
+              ]
+            },
+            {
+              "question": "Do all applications use the hosts file for name resolution?",
+              "answer": "No — some applications ignore the hosts file and query DNS directly; check application documentation",
+              "difficulty": 2,
+              "id": "3.4.1573",
+              "distractors": [
+                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
+                "Yes — the server responds to time requests while the client queries upstream servers for updates",
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+              ]
+            },
+            {
+              "question": "What is a forward DNS lookup?",
+              "answer": "Provide a name → DNS returns an IP address; the most common DNS operation",
+              "difficulty": 1,
+              "id": "3.4.1574",
+              "distractors": [
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+                "Reaches out to any available DHCP server on the network to renew the lease",
+                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits"
+              ]
+            },
+            {
+              "question": "What is a reverse DNS lookup?",
+              "answer": "Provide an IP address → DNS returns a name",
+              "difficulty": 1,
+              "id": "3.4.1575",
+              "distractors": [
+                "The root, represented by a single dot (`.`)",
+                "At the very top — it is the first record",
+                "In a TXT record on the domain's DNS server"
+              ]
+            },
+            {
+              "question": "Does a reverse lookup happen automatically if forward lookups are configured?",
+              "answer": "No — reverse lookups must be separately configured on the DNS server",
+              "difficulty": 2,
+              "id": "3.4.1576",
+              "distractors": [
+                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form",
+                "Yes — you can use copper or fiber transceivers depending on your needs",
+                "Yes — just remove the copper transceiver and slide in a fiber transceiver"
+              ]
+            },
+            {
+              "question": "Can the forward lookup name and reverse lookup name differ for the same IP?",
+              "answer": "Yes — the forward name and reverse name may differ",
+              "difficulty": 3,
+              "id": "3.4.1577",
+              "distractors": [
+                "No — spine switches do NOT connect directly to each other",
+                "No dynamic routing updates that could be manipulated",
+                "No security, no authentication — anyone can communicate freely"
+              ]
+            },
+            {
+              "question": "What is an authoritative DNS server?",
+              "answer": "The primary DNS server for a DNS zone — the authority for all records in that domain",
+              "difficulty": 2,
+              "id": "3.4.1578",
+              "distractors": [
+                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
+                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)",
+                "No — the same information exists in both and the end user has no idea which answered"
+              ]
+            },
+            {
+              "question": "What is a nonauthoritative DNS server?",
+              "answer": "A secondary server or caching server that returns cached information, not directly from the zone owner",
+              "difficulty": 2,
+              "id": "3.4.1579",
+              "distractors": [
+                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address"
+              ]
+            },
+            {
+              "question": "What is the risk of relying on a nonauthoritative DNS server?",
+              "answer": "Cached information could be outdated if the authoritative server was recently changed",
+              "difficulty": 2,
+              "id": "3.4.1580",
+              "distractors": [
+                "A multicast message sent by a device asking any routers on the local subnet to respond",
+                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
+                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value"
+              ]
+            },
+            {
+              "question": "What is TTL in DNS?",
+              "answer": "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+              "difficulty": 2,
+              "id": "3.4.1581",
+              "distractors": [
+                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+                "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet"
+              ]
+            },
+            {
+              "question": "Where is the TTL configured?",
+              "answer": "On the authoritative DNS server",
+              "difficulty": 2,
+              "id": "3.4.1582",
+              "distractors": [
+                "SOA (Start of Authority) record",
+                "The IP address of the DHCP server",
+                "ARP (Address Resolution Protocol)"
+              ]
+            },
+            {
+              "question": "What happens after a DNS TTL expires?",
+              "answer": "Cached data is deleted and subsequent queries must go to the authoritative server to be cached again",
+              "difficulty": 2,
+              "id": "3.4.1583",
+              "distractors": [
+                "No — some applications ignore the hosts file and query DNS directly; check application documentation",
+                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses",
+                "No — it returns a name (e.g., mail.example.com); a separate A record lookup is needed to get the IP"
+              ]
+            },
+            {
+              "question": "A DNS record has a TTL of 300. How long can it be cached?",
+              "answer": "300 seconds (5 minutes)",
+              "difficulty": 1,
+              "id": "3.4.1584",
+              "distractors": [
+                "1 Gbps (Gigabit Ethernet)",
+                "4 Gbps (4 channels of 1 Gbps SFP)",
+                "1 Gbps (1000 Mbps)"
+              ]
+            },
+            {
+              "question": "What is a recursive DNS query?",
+              "answer": "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes",
+              "difficulty": 2,
+              "id": "3.4.1585",
+              "distractors": [
+                "It has its own OS and runs without delays from third-party processes, providing the most accurate timestamps possible",
+                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
+                "It uses a separate NTP client to query a different NTP server — it does not modify its own time from client requests"
+              ]
+            },
+            {
+              "question": "In a recursive DNS query, what does the client (resolver) do?",
+              "answer": "It only contacts its local DNS server — the local server handles everything else",
+              "difficulty": 2,
+              "id": "3.4.1586",
+              "distractors": [
+                "Name Server record — specifies where the name servers for the domain are located",
+                "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS",
+                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name"
+              ]
+            },
+            {
+              "question": "List the five steps of the recursive DNS query process.",
+              "answer": "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
+              "difficulty": 3,
+              "id": "3.4.1587",
+              "distractors": [
+                "Client-to-site: software on workstation connects to corporate concentrator. Site-to-site: firewalls at both locations create always-on tunnel betwe...",
+                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
+                "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number..."
+              ]
+            },
+            {
+              "question": "What does the root server return during a recursive query?",
+              "answer": "The address of the appropriate TLD name server (e.g., the .com name server)",
+              "difficulty": 2,
+              "id": "3.4.1588",
+              "distractors": [
+                "The last 64 bits of the address, generated by the device itself during SLAAC",
+                "The device sends a Router Solicitation via NDP to determine the local subnet",
+                "It can release the IP address back into the pool so other devices can use it"
+              ]
+            },
+            {
+              "question": "After a recursive query completes, what happens with subsequent requests for the same name?",
+              "answer": "They are served from the local DNS server's cache",
+              "difficulty": 1,
+              "id": "3.4.1589",
+              "distractors": [
+                "MAC address, reserved IP address, and device name",
+                "Yes — the forward name and reverse name may differ",
+                "All four are sent as broadcasts (255.255.255.255)"
+              ]
+            },
+            {
+              "question": "What are the two security problems with traditional DNS?",
+              "answer": "Traffic is sent in the clear (anyone can see queried hostnames), and responses are not authenticated (could be spoofed)",
+              "difficulty": 2,
+              "id": "3.4.1590",
+              "distractors": [
+                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
+                "Start of Authority — the first record at the top of a DNS configuration file that provides an overview of the DNS zone",
+                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server"
+              ]
+            },
+            {
+              "question": "What is DNSSEC?",
+              "answer": "Domain Name Security Extensions — digitally signs DNS responses to verify they came from a trusted source and have not been modified in transit",
+              "difficulty": 2,
+              "id": "3.4.1591",
+              "distractors": [
+                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
+                "NTP: basic time sync (milliseconds). NTS: authenticated time sync (secure NTP). PTP: hardware-based time sync (nanoseconds) for industrial use.",
+                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP"
+              ]
+            },
+            {
+              "question": "Does DNSSEC encrypt DNS traffic?",
+              "answer": "No — it only signs responses for integrity/authenticity; queries are still visible in the clear",
+              "difficulty": 3,
+              "id": "3.4.1592",
+              "distractors": [
+                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
+                "Yes — the server responds to time requests while the client queries upstream servers for updates",
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+              ]
+            },
+            {
+              "question": "What is DNS over TLS (DoT)?",
+              "answer": "A method of encrypting DNS traffic using TLS over TCP port 853",
+              "difficulty": 2,
+              "id": "3.4.1593",
+              "distractors": [
+                "Hardware-based time synchronization with nanosecond granularity",
+                "All four DORA phases — the relay process repeats for each step",
+                "Use external NTP servers or run their own internal NTP servers"
+              ]
+            },
+            {
+              "question": "What port does DNS over TLS (DoT) use?",
+              "answer": "TCP port 853",
+              "difficulty": 2,
+              "id": "3.4.1594",
+              "distractors": [
+                "TCP 1433",
+                "TCP 443",
+                "TCP 3389"
+              ]
+            },
+            {
+              "question": "What is DNS over HTTPS (DoH)?",
+              "answer": "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
+              "difficulty": 2,
+              "id": "3.4.1595",
+              "distractors": [
+                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields",
+                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network"
+              ]
+            },
+            {
+              "question": "What port does DNS over HTTPS (DoH) use?",
+              "answer": "TCP port 443",
+              "difficulty": 1,
+              "id": "3.4.1596",
+              "distractors": [
+                "TCP 443",
+                "TCP 3389",
+                "TCP 1433"
+              ]
+            },
+            {
+              "question": "How does DoH traffic appear in a packet capture?",
+              "answer": "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS",
+              "difficulty": 3,
+              "id": "3.4.1597",
+              "distractors": [
+                "Name Server record — specifies where the name servers for the domain are located",
+                "It only contacts its local DNS server — the local server handles everything else",
+                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name"
+              ]
+            },
+            {
+              "question": "Which modern applications may already use DoH by default?",
+              "answer": "Some modern browsers use DoH by default",
+              "difficulty": 2,
+              "id": "3.4.1598",
+              "distractors": [
+                "In the DHCP RFC (Request for Comments)",
+                "A fully routable, unique IPv6 address",
+                "At the very top — it is the first record"
+              ]
+            },
+            {
+              "question": "What problem does DNSSEC solve that DoT/DoH do not?",
+              "answer": "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
+              "difficulty": 3,
+              "id": "3.4.1599",
+              "distractors": [
+                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
+                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
+                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)"
+              ]
+            },
+            {
+              "question": "What problem do DoT and DoH solve that DNSSEC does not?",
+              "answer": "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear",
+              "difficulty": 3,
+              "id": "3.4.1600",
+              "distractors": [
+                "A record is for IPv4 addresses; AAAA record is for IPv6 addresses. Same functionality, different IP version.",
+                "A DNS record that stores human-readable text information, used for multiple purposes including SPF and DKIM",
+                "They are separate and independent — PTR records must be configured independently from forward A/AAAA records"
+              ]
+            },
+            {
+              "question": "What is the primary purpose of NTP?",
+              "answer": "Synchronizes clocks across all network devices (laptops, desktops, switches, routers, firewalls)",
+              "difficulty": 1,
+              "id": "3.4.1601",
+              "distractors": [
+                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options",
+                "Mail Exchanger record — specifies the mail server responsible for receiving email for the domain",
+                "Yes — the server responds to time requests while the client queries upstream servers for updates"
+              ]
+            },
+            {
+              "question": "Why is time synchronization critical on a network?",
+              "answer": "To compare log files and timestamps from multiple devices accurately",
+              "difficulty": 1,
+              "id": "3.4.1602",
+              "distractors": [
+                "Chooses one of the offers and sends a DHCP Request to that DHCP server",
+                "No — reverse lookups must be separately configured on the DNS server",
+                "The address returns to the pool and can be assigned to another device"
+              ]
+            },
+            {
+              "question": "What port and protocol does NTP use?",
+              "answer": "UDP port 123",
+              "difficulty": 1,
+              "id": "3.4.1603",
+              "distractors": [
+                "TCP 3389",
+                "TCP 1433",
+                "TCP 443"
+              ]
+            },
+            {
+              "question": "How accurate is NTP synchronization between devices?",
+              "answer": "Devices typically differ by only milliseconds (~10 ms on local servers)",
+              "difficulty": 2,
+              "id": "3.4.1604",
+              "distractors": [
+                "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
+                "Defines the IPv4 address of a host — the core record for name resolution",
+                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts"
+              ]
+            },
+            {
+              "question": "How does an NTP server update its own time?",
+              "answer": "It uses a separate NTP client to query a different NTP server — it does not modify its own time from client requests",
+              "difficulty": 2,
+              "id": "3.4.1605",
+              "distractors": [
+                "It has its own OS and runs without delays from third-party processes, providing the most accurate timestamps possible",
+                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
+                "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes"
+              ]
+            },
+            {
+              "question": "Can a single device run both an NTP client and NTP server simultaneously?",
+              "answer": "Yes — the server responds to time requests while the client queries upstream servers for updates",
+              "difficulty": 2,
+              "id": "3.4.1606",
+              "distractors": [
+                "No — it only signs responses for integrity/authenticity; queries are still visible in the clear",
+                "No — 100 in binary is 01100100, which has 0's between 1's (masks must be contiguous 1's then 0's)",
+                "No — the cable has no speed. The Ethernet standard determines the throughput over that cable type."
+              ]
+            },
+            {
+              "question": "What security weakness does NTP have by default?",
+              "answer": "NTP sends information in the clear (unencrypted)",
+              "difficulty": 1,
+              "id": "3.4.1607",
+              "distractors": [
+                "A simple text file mapping IP addresses to names",
+                "All four are sent as broadcasts (255.255.255.255)",
+                "MAC address, reserved IP address, and device name"
+              ]
+            },
+            {
+              "question": "What happens if Kerberos client and server timestamps differ by more than 5 minutes?",
+              "answer": "Kerberos authentication fails",
+              "difficulty": 2,
+              "id": "3.4.1608",
+              "distractors": [
+                "The Top Level Domains (TLDs)",
+                "Call server IP address (VoIP)",
+                "CNAME (Canonical Name) record"
+              ]
+            },
+            {
+              "question": "How could an attacker exploit NTP to cause a denial of service?",
+              "answer": "By providing wrong time to clients, causing Kerberos authentication (and other time-dependent services) to fail",
+              "difficulty": 2,
+              "id": "3.4.1609",
+              "distractors": [
+                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
+                "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
+                "A record is for IPv4 addresses; AAAA record is for IPv6 addresses. Same functionality, different IP version."
+              ]
+            },
+            {
+              "question": "What is NTS (Network Time Security)?",
+              "answer": "An extension that adds authentication to NTP so responses can be trusted",
+              "difficulty": 2,
+              "id": "3.4.1610",
+              "distractors": [
+                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
+                "Defines the IPv4 address of a host — the core record for name resolution",
+                "Client sends: Discover and Request. Server sends: Offer and Acknowledge."
+              ]
+            },
+            {
+              "question": "What additional server does NTS require on the network?",
+              "answer": "An NTS Key Exchange (NTS-KE) server",
+              "difficulty": 2,
+              "id": "3.4.1611",
+              "distractors": [
+                "It is stored as read-only by default",
+                "windows/system32/drivers/etc/hosts",
+                "A fully routable, unique IPv6 address"
+              ]
+            },
+            {
+              "question": "What are the two steps of the NTS authentication process?",
+              "answer": "1) Client performs TLS handshake with NTS-KE server and receives a cookie. 2) Client includes the cookie in the NTP request to prove authentication.",
+              "difficulty": 3,
+              "id": "3.4.1612",
+              "distractors": [
+                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
+                "An IPv6 protocol that replaces ARP from IPv4, using multicast instead of broadcasts to find devices, identify routers, and detect duplicate addresses",
+                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ..."
+              ]
+            },
+            {
+              "question": "What does the NTP server do after receiving a valid NTS cookie?",
+              "answer": "Responds with a trusted timestamp",
+              "difficulty": 2,
+              "id": "3.4.1613",
+              "distractors": [
+                "The IP address of the DHCP server",
+                "Neighbor Discovery Protocol (NDP)",
+                "ARP (Address Resolution Protocol)"
+              ]
+            },
+            {
+              "question": "What is PTP (Precision Time Protocol)?",
+              "answer": "Hardware-based time synchronization with nanosecond granularity",
+              "difficulty": 2,
+              "id": "3.4.1614",
+              "distractors": [
+                "It sends a Router Advertisement (RA) directly back to the device",
+                "A method of encrypting DNS traffic using TLS over TCP port 853",
+                "All four DORA phases — the relay process repeats for each step"
+              ]
+            },
+            {
+              "question": "How does PTP's precision compare to NTP?",
+              "answer": "PTP achieves nanosecond granularity vs. NTP's ~10 milliseconds on local servers",
+              "difficulty": 2,
+              "id": "3.4.1615",
+              "distractors": [
+                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name",
+                "It only contacts its local DNS server — the local server handles everything else",
+                "Name Server record — specifies where the name servers for the domain are located"
+              ]
+            },
+            {
+              "question": "What type of environments use PTP?",
+              "answer": "Industrial environments requiring very precise timestamps",
+              "difficulty": 1,
+              "id": "3.4.1616",
+              "distractors": [
+                "MAC-to-IP pairings — so it can recognize returning devices",
+                "The client can now configure all IP settings automatically",
+                "The lease resets and the timer restarts from the beginning"
+              ]
+            },
+            {
+              "question": "Why does PTP require separate dedicated hardware?",
+              "answer": "It has its own OS and runs without delays from third-party processes, providing the most accurate timestamps possible",
+              "difficulty": 3,
+              "id": "3.4.1617",
+              "distractors": [
+                "It uses a separate NTP client to query a different NTP server — it does not modify its own time from client requests",
+                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
+                "Start of Authority — the first record at the top of a DNS configuration file that provides an overview of the DNS zone"
+              ]
+            },
+            {
+              "question": "What is the time synchronization schedule for NTP clients?",
+              "answer": "Configurable — devices can update daily, hourly, or on other schedules (automatic process)",
+              "difficulty": 1,
+              "id": "3.4.1618",
+              "distractors": [
+                "Resolving names locally on the machine without querying a DNS server, using the hosts file",
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record"
+              ]
+            },
+            {
+              "question": "What are two options organizations have for NTP servers?",
+              "answer": "Use external NTP servers or run their own internal NTP servers",
+              "difficulty": 1,
+              "id": "3.4.1619",
+              "distractors": [
+                "A method of encrypting DNS traffic using TLS over TCP port 853",
+                "All four DORA phases — the relay process repeats for each step",
+                "Hardware-based time synchronization with nanosecond granularity"
+              ]
+            },
+            {
+              "question": "Compare NTP, NTS, and PTP in terms of purpose.",
+              "answer": "NTP: basic time sync (milliseconds). NTS: authenticated time sync (secure NTP). PTP: hardware-based time sync (nanoseconds) for industrial use.",
+              "difficulty": 3,
+              "id": "3.4.1620",
+              "distractors": [
+                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
+                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP",
+                "Domain Name Security Extensions — digitally signs DNS responses to verify they came from a trusted source and have not been modified in transit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.5",
+          "title": "Remote Access",
+          "concepts": [
+            {
+              "question": "What is SSH and what does it provide?",
+              "answer": "Secure Shell — provides encrypted terminal/console access to remote devices (switches, routers, firewalls)",
+              "difficulty": 1,
+              "id": "3.5.1621",
+              "distractors": [
+                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login",
+                "A server you dial into, from which you can then jump to other devices through that COM server connection",
+                "Connect and control devices using the language the device expects, automate processes, and handle errors"
+              ]
+            },
+            {
+              "question": "What port and protocol does SSH use?",
+              "answer": "TCP port 22",
+              "difficulty": 1,
+              "id": "3.5.1622",
+              "distractors": [
+                "TCP 3389",
+                "TCP 1433",
+                "TCP 443"
+              ]
+            },
+            {
+              "question": "What protocol does SSH replace, and why?",
+              "answer": "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
+              "difficulty": 1,
+              "id": "3.5.1623",
+              "distractors": [
+                "Text-based interface requiring knowledge of the device's command line interface (CLI)",
+                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
+                "A device that encrypts and decrypts VPN traffic — usually built into modern firewalls"
+              ]
+            },
+            {
+              "question": "What port and protocol does Telnet use?",
+              "answer": "TCP port 23",
+              "difficulty": 1,
+              "id": "3.5.1624",
+              "distractors": [
+                "TCP 3389",
+                "TCP 443",
+                "TCP 1433"
+              ]
+            },
+            {
+              "question": "Why is SSH the best practice over Telnet?",
+              "answer": "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
+              "difficulty": 1,
+              "id": "3.5.1625",
+              "distractors": [
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
+                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end"
+              ]
+            },
+            {
+              "question": "What is RDP?",
+              "answer": "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
+              "difficulty": 1,
+              "id": "3.5.1626",
+              "distractors": [
+                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
+                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
+                "Client → VPN tunnel → concentrator decrypts → redirects to internet → website responds → back through concentrator → VPN tunnel → client"
+              ]
+            },
+            {
+              "question": "Can RDP clients run on non-Windows operating systems?",
+              "answer": "Yes — RDP clients are available for nearly any operating system",
+              "difficulty": 1,
+              "id": "3.5.1627",
+              "distractors": [
+                "No — it identifies all APs including ones not under your control",
+                "No security, no authentication — anyone can communicate freely",
+                "No — only devices in the same VLAN can communicate with each other"
+              ]
+            },
+            {
+              "question": "What is VNC and what protocol does it use?",
+              "answer": "Virtual Network Computing — uses the RFB (Remote Frame Buffer) protocol",
+              "difficulty": 2,
+              "id": "3.5.1628",
+              "distractors": [
+                "Connect a modem to the console/COM port and dial in via a phone line",
+                "SSH (via internal SSH server) or web-based front end (via internal web server)",
+                "Management IP address, subnet mask, and other networking details"
+              ]
+            },
+            {
+              "question": "How does VNC differ from RDP?",
+              "answer": "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)",
+              "difficulty": 2,
+              "id": "3.5.1629",
+              "distractors": [
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+                "When network connectivity is lost — you cannot ping or SSH into the device, but can still directly connect via console cable",
+                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network"
+              ]
+            },
+            {
+              "question": "What two protocols are commonly used by help desk/support teams for remote desktop control?",
+              "answer": "RDP and VNC",
+              "difficulty": 1,
+              "id": "3.5.1630",
+              "distractors": [
+                "1,500 bytes",
+                "TCP port 22",
+                "TCP port 23"
+              ]
+            },
+            {
+              "question": "Why use an API instead of command-line scripts for managing many devices?",
+              "answer": "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control...",
+              "difficulty": 2,
+              "id": "3.5.1631",
+              "distractors": [
+                "SSH: encrypted text-based terminal (TCP 22). RDP: Microsoft graphical remote desktop. VNC: cross-platform graphical remote desktop using RFB protocol.",
+                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
+                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device"
+              ]
+            },
+            {
+              "question": "What does an API allow you to do with network devices?",
+              "answer": "Connect and control devices using the language the device expects, automate processes, and handle errors",
+              "difficulty": 2,
+              "id": "3.5.1632",
+              "distractors": [
+                "A server you dial into, from which you can then jump to other devices through that COM server connection",
+                "Secure Shell — provides encrypted terminal/console access to remote devices (switches, routers, firewalls)",
+                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+              ]
+            },
+            {
+              "question": "What is a console connection on a network device?",
+              "answer": "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
+              "difficulty": 2,
+              "id": "3.5.1633",
+              "distractors": [
+                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
+                "Text-based interface requiring knowledge of the device's command line interface (CLI)",
+                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser"
+              ]
+            },
+            {
+              "question": "What three serial connection types can be used for console access?",
+              "answer": "RJ45 serial, DB9 serial, or USB",
+              "difficulty": 2,
+              "id": "3.5.1634",
+              "distractors": [
+                "TCP = segments, UDP = datagrams",
+                "An HTML5-compliant browser",
+                "Via VPN tunnel or SSH connection"
+              ]
+            },
+            {
+              "question": "When is a console connection especially useful?",
+              "answer": "When network connectivity is lost — you cannot ping or SSH into the device, but can still directly connect via console cable",
+              "difficulty": 2,
+              "id": "3.5.1635",
+              "distractors": [
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)",
+                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network"
+              ]
+            },
+            {
+              "question": "What type of interface does a console connection provide?",
+              "answer": "Text-based interface requiring knowledge of the device's command line interface (CLI)",
+              "difficulty": 1,
+              "id": "3.5.1636",
+              "distractors": [
+                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
+                "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
+                "A device that encrypts and decrypts VPN traffic — usually built into modern firewalls"
+              ]
+            },
+            {
+              "question": "What hardware is needed to use a console connection?",
+              "answer": "A laptop/desktop with a serial port, or a USB-to-serial adapter",
+              "difficulty": 2,
+              "id": "3.5.1637",
+              "distractors": [
+                "Management IP address, subnet mask, and other networking details",
+                "Connect a modem to the console/COM port and dial in via a phone line",
+                "Yes — RDP clients are available for nearly any operating system"
+              ]
+            },
+            {
+              "question": "What is a jump server?",
+              "answer": "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device",
+              "difficulty": 2,
+              "id": "3.5.1638",
+              "distractors": [
+                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
+                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
+                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control..."
+              ]
+            },
+            {
+              "question": "How do you connect to a jump server from an external location?",
+              "answer": "Via VPN tunnel or SSH connection",
+              "difficulty": 2,
+              "id": "3.5.1639",
+              "distractors": [
+                "6 positions, 2 conductors (6P2C)",
+                "RJ45 serial, DB9 serial, or USB",
+                "An HTML5-compliant browser"
+              ]
+            },
+            {
+              "question": "Why must a jump server be highly hardened?",
+              "answer": "It is externally facing — anyone on the internet could potentially connect to it",
+              "difficulty": 2,
+              "id": "3.5.1640",
+              "distractors": [
+                "Yes — it can be a separate dedicated interface or built into existing interfaces",
+                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
+                "SSH (via internal SSH server) or web-based front end (via internal web server)"
+              ]
+            },
+            {
+              "question": "What security measures are required for a jump server?",
+              "answer": "Multi-factor authentication, always up to date with security patches, high level of authentication to prevent brute force attacks",
+              "difficulty": 3,
+              "id": "3.5.1641",
+              "distractors": [
+                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
+                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
+                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides"
+              ]
+            },
+            {
+              "question": "What is in-band management?",
+              "answer": "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end",
+              "difficulty": 2,
+              "id": "3.5.1642",
+              "distractors": [
+                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+              ]
+            },
+            {
+              "question": "What details must be configured on a device for in-band management?",
+              "answer": "Management IP address, subnet mask, and other networking details",
+              "difficulty": 2,
+              "id": "3.5.1643",
+              "distractors": [
+                "Connect a modem to the console/COM port and dial in via a phone line",
+                "Yes — RDP clients are available for nearly any operating system",
+                "A laptop/desktop with a serial port, or a USB-to-serial adapter"
+              ]
+            },
+            {
+              "question": "What two access methods does in-band management typically support?",
+              "answer": "SSH (via internal SSH server) or web-based front end (via internal web server)",
+              "difficulty": 2,
+              "id": "3.5.1644",
+              "distractors": [
+                "Yes — it can be a separate dedicated interface or built into existing interfaces",
+                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
+                "It is externally facing — anyone on the internet could potentially connect to it"
+              ]
+            },
+            {
+              "question": "Can the management interface be shared with other interfaces on a device?",
+              "answer": "Yes — it can be a separate dedicated interface or built into existing interfaces",
+              "difficulty": 2,
+              "id": "3.5.1645",
+              "distractors": [
+                "No — they require NAT to convert to a public address for internet communication",
+                "No — original traffic is unaffected; only a copy is sent to the monitoring device",
+                "No DHCP server responded — the device self-assigned an APIPA link-local address"
+              ]
+            },
+            {
+              "question": "What is out-of-band management?",
+              "answer": "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+              "difficulty": 2,
+              "id": "3.5.1646",
+              "distractors": [
+                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network",
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
+                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)"
+              ]
+            },
+            {
+              "question": "How can out-of-band management provide remote access when the network is down?",
+              "answer": "Connect a modem to the console/COM port and dial in via a phone line",
+              "difficulty": 3,
+              "id": "3.5.1647",
+              "distractors": [
+                "Virtual Network Computing — uses the RFB (Remote Frame Buffer) protocol",
+                "Yes — RDP clients are available for nearly any operating system",
+                "Management IP address, subnet mask, and other networking details"
+              ]
+            },
+            {
+              "question": "What is a COM server in the context of out-of-band management?",
+              "answer": "A server you dial into, from which you can then jump to other devices through that COM server connection",
+              "difficulty": 3,
+              "id": "3.5.1648",
+              "distractors": [
+                "Connect and control devices using the language the device expects, automate processes, and handle errors",
+                "Secure Shell — provides encrypted terminal/console access to remote devices (switches, routers, firewalls)",
+                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+              ]
+            },
+            {
+              "question": "What is the key difference between in-band and out-of-band management?",
+              "answer": "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
+              "difficulty": 2,
+              "id": "3.5.1649",
+              "distractors": [
+                "Multi-factor authentication, always up to date with security patches, high level of authentication to prevent brute force attacks",
+                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
+                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides"
+              ]
+            },
+            {
+              "question": "Compare SSH, RDP, and VNC as remote access methods.",
+              "answer": "SSH: encrypted text-based terminal (TCP 22). RDP: Microsoft graphical remote desktop. VNC: cross-platform graphical remote desktop using RFB protocol.",
+              "difficulty": 3,
+              "id": "3.5.1650",
+              "distractors": [
+                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control...",
+                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device",
+                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet"
+              ]
+            },
+            {
+              "question": "What is the primary purpose of a VPN?",
+              "answer": "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
+              "difficulty": 1,
+              "id": "3.5.1651",
+              "distractors": [
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
+                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end",
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB"
+              ]
+            },
+            {
+              "question": "What is a VPN concentrator?",
+              "answer": "A device that encrypts and decrypts VPN traffic — usually built into modern firewalls",
+              "difficulty": 1,
+              "id": "3.5.1652",
+              "distractors": [
+                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
+                "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
+                "Text-based interface requiring knowledge of the device's command line interface (CLI)"
+              ]
+            },
+            {
+              "question": "What are the two forms a VPN concentrator can take?",
+              "answer": "Dedicated hardware designed for encryption/decryption, or software installed on an existing server",
+              "difficulty": 2,
+              "id": "3.5.1653",
+              "distractors": [
+                "No — the concentrators handle encryption/decryption transparently; users have no idea it's occurring",
+                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
+                "Two: 1) VPN tunnel → concentrator → corporate network, and 2) direct internet → third-party websites"
+              ]
+            },
+            {
+              "question": "What is a client-to-site VPN?",
+              "answer": "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network",
+              "difficulty": 1,
+              "id": "3.5.1654",
+              "distractors": [
+                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
+                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)",
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+              ]
+            },
+            {
+              "question": "What are the two activation modes for a client-to-site VPN?",
+              "answer": "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login",
+              "difficulty": 2,
+              "id": "3.5.1655",
+              "distractors": [
+                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
+                "A server you dial into, from which you can then jump to other devices through that COM server connection",
+                "Connect and control devices using the language the device expects, automate processes, and handle errors"
+              ]
+            },
+            {
+              "question": "Describe the traffic flow for a client-to-site VPN (outbound).",
+              "answer": "Client encrypts → sends over internet → concentrator decrypts → forwards to internal network",
+              "difficulty": 2,
+              "id": "3.5.1656",
+              "distractors": [
+                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
+                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser",
+                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB"
+              ]
+            },
+            {
+              "question": "Describe the traffic flow for a client-to-site VPN (return).",
+              "answer": "Corporate network → concentrator encrypts → sends over internet → client decrypts",
+              "difficulty": 2,
+              "id": "3.5.1657",
+              "distractors": [
+                "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
+                "Yes — it can be a separate dedicated interface or built into existing interfaces",
+                "It is externally facing — anyone on the internet could potentially connect to it"
+              ]
+            },
+            {
+              "question": "What is a site-to-site VPN?",
+              "answer": "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
+              "difficulty": 1,
+              "id": "3.5.1658",
+              "distractors": [
+                "A server you dial into, from which you can then jump to other devices through that COM server connection",
+                "Connect and control devices using the language the device expects, automate processes, and handle errors",
+                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+              ]
+            },
+            {
+              "question": "How is a site-to-site VPN typically configured?",
+              "answer": "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides",
+              "difficulty": 2,
+              "id": "3.5.1659",
+              "distractors": [
+                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
+                "Multi-factor authentication, always up to date with security patches, high level of authentication to prevent brute force attacks",
+                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network."
+              ]
+            },
+            {
+              "question": "Are users at remote sites aware that a site-to-site VPN is encrypting their traffic?",
+              "answer": "No — the concentrators handle encryption/decryption transparently; users have no idea it's occurring",
+              "difficulty": 1,
+              "id": "3.5.1660",
+              "distractors": [
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
+                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
+                "Yes — the server responds to time requests while the client queries upstream servers for updates"
+              ]
+            },
+            {
+              "question": "What is a clientless VPN?",
+              "answer": "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
+              "difficulty": 2,
+              "id": "3.5.1661",
+              "distractors": [
+                "Client encrypts → sends over internet → concentrator decrypts → forwards to internal network",
+                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
+                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser"
+              ]
+            },
+            {
+              "question": "What technology enables clientless VPNs to work within a browser?",
+              "answer": "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser",
+              "difficulty": 2,
+              "id": "3.5.1662",
+              "distractors": [
+                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
+                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
+                "Client encrypts → sends over internet → concentrator decrypts → forwards to internal network"
+              ]
+            },
+            {
+              "question": "What is the only requirement for using a clientless VPN?",
+              "answer": "An HTML5-compliant browser",
+              "difficulty": 1,
+              "id": "3.5.1663",
+              "distractors": [
+                "Via VPN tunnel or SSH connection",
+                "RJ45 serial, DB9 serial, or USB",
+                "Using light (LED or laser)"
+              ]
+            },
+            {
+              "question": "What is a full VPN tunnel?",
+              "answer": "All traffic from the client traverses the VPN tunnel — no special forwarding decisions; everything goes through the VPN",
+              "difficulty": 2,
+              "id": "3.5.1664",
+              "distractors": [
+                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end",
+                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+              ]
+            },
+            {
+              "question": "In a full tunnel, how does third-party website traffic flow?",
+              "answer": "Client → VPN tunnel → concentrator decrypts → redirects to internet → website responds → back through concentrator → VPN tunnel → client",
+              "difficulty": 3,
+              "id": "3.5.1665",
+              "distractors": [
+                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
+                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
+                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet"
+              ]
+            },
+            {
+              "question": "What is a split tunnel VPN?",
+              "answer": "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
+              "difficulty": 2,
+              "id": "3.5.1666",
+              "distractors": [
+                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
+                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides",
+                "Client → VPN tunnel → concentrator decrypts → redirects to internet → website responds → back through concentrator → VPN tunnel → client"
+              ]
+            },
+            {
+              "question": "How many paths does a split tunnel client workstation have?",
+              "answer": "Two: 1) VPN tunnel → concentrator → corporate network, and 2) direct internet → third-party websites",
+              "difficulty": 2,
+              "id": "3.5.1667",
+              "distractors": [
+                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
+                "No — the concentrators handle encryption/decryption transparently; users have no idea it's occurring",
+                "Dedicated hardware designed for encryption/decryption, or software installed on an existing server"
+              ]
+            },
+            {
+              "question": "How does the VPN client decide where to route traffic in a split tunnel?",
+              "answer": "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
+              "difficulty": 2,
+              "id": "3.5.1668",
+              "distractors": [
+                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
+                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
+                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device"
+              ]
+            },
+            {
+              "question": "What is the main advantage of split tunnel over full tunnel?",
+              "answer": "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
+              "difficulty": 2,
+              "id": "3.5.1669",
+              "distractors": [
+                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device",
+                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
+                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet"
+              ]
+            },
+            {
+              "question": "Compare client-to-site, site-to-site, and clientless VPNs.",
+              "answer": "Client-to-site: software on workstation connects to corporate concentrator. Site-to-site: firewalls at both locations create always-on tunnel betwe...",
+              "difficulty": 3,
+              "id": "3.5.1670",
+              "distractors": [
+                "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actua...",
+                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
+                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control..."
+              ]
+            },
+            {
+              "question": "What is the disadvantage of a full tunnel when accessing third-party websites?",
+              "answer": "All traffic must traverse the VPN tunnel and concentrator even for non-corporate sites, requiring additional routing",
+              "difficulty": 2,
+              "id": "3.5.1671",
+              "distractors": [
+                "All traffic from the client traverses the VPN tunnel — no special forwarding decisions; everything goes through the VPN",
+                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
+                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Network Security",
+      "weight": 19,
+      "objectives": [
+        {
+          "id": "4.1",
+          "title": "Security Concepts",
+          "concepts": [
+            {
+              "question": "What is data in transit (data in-motion)?",
+              "answer": "Information transferred over a wired or wireless network",
+              "difficulty": 1,
+              "id": "4.1.1672",
+              "distractors": [
+                "Motion detection, license plate reading, and facial recognition",
+                "The process of managing permissions and access to data",
+                "Information saved to a hard drive, SSD, or any other storage device"
+              ]
+            },
+            {
+              "question": "What is the primary function of network infrastructure devices (switches, routers) regarding data?",
+              "answer": "Forward traffic to the next location — they are not designed to protect data",
+              "difficulty": 1,
+              "id": "4.1.1673",
+              "distractors": [
+                "The policies and control of all encryption keys and certificates for an organization",
+                "Allowing or disallowing access to information based on a user's physical location",
+                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+              ]
+            },
+            {
+              "question": "What devices provide security for data in transit?",
+              "answer": "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content",
+              "difficulty": 2,
+              "id": "4.1.1674",
+              "distractors": [
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
+                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner"
+              ]
+            },
+            {
+              "question": "What are two common encryption types for data in transit?",
+              "answer": "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)",
+              "difficulty": 2,
+              "id": "4.1.1675",
+              "distractors": [
+                "Motion detection, license plate reading, and facial recognition",
+                "Through groups — one group per role, users assigned to those groups",
+                "Information saved to a hard drive, SSD, or any other storage device"
+              ]
+            },
+            {
+              "question": "What is data at rest?",
+              "answer": "Information saved to a hard drive, SSD, or any other storage device",
+              "difficulty": 1,
+              "id": "4.1.1676",
+              "distractors": [
+                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)",
+                "Motion detection, license plate reading, and facial recognition",
+                "Through groups — one group per role, users assigned to those groups"
+              ]
+            },
+            {
+              "question": "What are three types of data at rest encryption?",
+              "answer": "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
+              "difficulty": 2,
+              "id": "4.1.1677",
+              "distractors": [
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+                "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)",
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+              ]
+            },
+            {
+              "question": "What are ACLs in the context of data at rest security?",
+              "answer": "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner",
+              "difficulty": 2,
+              "id": "4.1.1678",
+              "distractors": [
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
+                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content"
+              ]
+            },
+            {
+              "question": "What is PKI (Public Key Infrastructure)?",
+              "answer": "The policies and control of all encryption keys and certificates for an organization",
+              "difficulty": 2,
+              "id": "4.1.1679",
+              "distractors": [
+                "Allowing or disallowing access to information based on a user's physical location",
+                "Forward traffic to the next location — they are not designed to protect data",
+                "A public key, a digital signature, and details about the key holder (name, organization, etc.)"
+              ]
+            },
+            {
+              "question": "When do organizations typically begin building out their PKI?",
+              "answer": "When they start adding encryption keys to web servers or signing certificates to users or devices",
+              "difficulty": 2,
+              "id": "4.1.1680",
+              "distractors": [
+                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
+                "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
+                "They may get different permissions based on their connection location (e.g., different state or country)"
+              ]
+            },
+            {
+              "question": "What does a digital certificate do?",
+              "answer": "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+              "difficulty": 2,
+              "id": "4.1.1681",
+              "distractors": [
+                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
+                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+              ]
+            },
+            {
+              "question": "What information does a digital certificate bind together?",
+              "answer": "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
+              "difficulty": 2,
+              "id": "4.1.1682",
+              "distractors": [
+                "When they start adding encryption keys to web servers or signing certificates to users or devices",
+                "They may get different permissions based on their connection location (e.g., different state or country)",
+                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted"
+              ]
+            },
+            {
+              "question": "Who digitally signs certificates to add trust?",
+              "answer": "A central Certificate Authority (CA)",
+              "difficulty": 1,
+              "id": "4.1.1683",
+              "distractors": [
+                "One for transmit and one for receive",
+                "Analog telephone and DSL connections",
+                "Shared between customer and provider"
+              ]
+            },
+            {
+              "question": "What is a web of trust?",
+              "answer": "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+              "difficulty": 2,
+              "id": "4.1.1684",
+              "distractors": [
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location",
+                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied"
+              ]
+            },
+            {
+              "question": "What is a Certificate Authority (CA)?",
+              "answer": "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
+              "difficulty": 2,
+              "id": "4.1.1685",
+              "distractors": [
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner",
+                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content"
+              ]
+            },
+            {
+              "question": "What are the two options for deploying a Certificate Authority?",
+              "answer": "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)",
+              "difficulty": 2,
+              "id": "4.1.1686",
+              "distractors": [
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+              ]
+            },
+            {
+              "question": "How can anyone verify a digital certificate is trustworthy?",
+              "answer": "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
+              "difficulty": 2,
+              "id": "4.1.1687",
+              "distractors": [
+                "They may get different permissions based on their connection location (e.g., different state or country)",
+                "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
+                "When they start adding encryption keys to web servers or signing certificates to users or devices"
+              ]
+            },
+            {
+              "question": "When would you use a third-party CA vs. an internal CA?",
+              "answer": "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
+              "difficulty": 3,
+              "id": "4.1.1688",
+              "distractors": [
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
+                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)"
+              ]
+            },
+            {
+              "question": "What is IAM (Identity and Access Management)?",
+              "answer": "The process of managing permissions and access to data",
+              "difficulty": 1,
+              "id": "4.1.1689",
+              "distractors": [
+                "Motion detection, license plate reading, and facial recognition",
+                "Information transferred over a wired or wireless network",
+                "Information saved to a hard drive, SSD, or any other storage device"
+              ]
+            },
+            {
+              "question": "What are the four components of IAM?",
+              "answer": "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing...",
+              "difficulty": 3,
+              "id": "4.1.1690",
+              "distractors": [
+                "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
+                "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan),...",
+                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria..."
+              ]
+            },
+            {
+              "question": "What is the principle of least privilege?",
+              "answer": "Users only have the rights and permissions necessary for their job function — no additional access is granted",
+              "difficulty": 2,
+              "id": "4.1.1691",
+              "distractors": [
+                "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
+                "They may get different permissions based on their connection location (e.g., different state or country)",
+                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location"
+              ]
+            },
+            {
+              "question": "Why is administrator access not assigned to every system?",
+              "answer": "Least privilege — everyone having admin access would allow anyone to access any data at any time, creating a significant security concern",
+              "difficulty": 2,
+              "id": "4.1.1692",
+              "distractors": [
+                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content",
+                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
+                "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)"
+              ]
+            },
+            {
+              "question": "What is Role-Based Access Control (RBAC)?",
+              "answer": "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
+              "difficulty": 2,
+              "id": "4.1.1693",
+              "distractors": [
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+                "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing..."
+              ]
+            },
+            {
+              "question": "How is RBAC implemented in Windows?",
+              "answer": "Through groups — one group per role, users assigned to those groups",
+              "difficulty": 2,
+              "id": "4.1.1694",
+              "distractors": [
+                "Motion detection, license plate reading, and facial recognition",
+                "Information saved to a hard drive, SSD, or any other storage device",
+                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+              ]
+            },
+            {
+              "question": "What three methods can determine a user's geographic location?",
+              "answer": "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location",
+              "difficulty": 2,
+              "id": "4.1.1695",
+              "distractors": [
+                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied"
+              ]
+            },
+            {
+              "question": "What is geofencing?",
+              "answer": "Allowing or disallowing access to information based on a user's physical location",
+              "difficulty": 2,
+              "id": "4.1.1696",
+              "distractors": [
+                "The policies and control of all encryption keys and certificates for an organization",
+                "Forward traffic to the next location — they are not designed to protect data",
+                "A public key, a digital signature, and details about the key holder (name, organization, etc.)"
+              ]
+            },
+            {
+              "question": "Give an example of geofencing in practice.",
+              "answer": "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied",
+              "difficulty": 1,
+              "id": "4.1.1697",
+              "distractors": [
+                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location"
+              ]
+            },
+            {
+              "question": "How might VPN users experience geographic restrictions?",
+              "answer": "They may get different permissions based on their connection location (e.g., different state or country)",
+              "difficulty": 2,
+              "id": "4.1.1698",
+              "distractors": [
+                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
+                "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
+                "Users only have the rights and permissions necessary for their job function — no additional access is granted"
+              ]
+            },
+            {
+              "question": "What is CCTV?",
+              "answer": "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+              "difficulty": 1,
+              "id": "4.1.1699",
+              "distractors": [
+                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied",
+                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner"
+              ]
+            },
+            {
+              "question": "What modern features do CCTV cameras offer beyond basic video?",
+              "answer": "Motion detection, license plate reading, and facial recognition",
+              "difficulty": 2,
+              "id": "4.1.1700",
+              "distractors": [
+                "Through groups — one group per role, users assigned to those groups",
+                "Information saved to a hard drive, SSD, or any other storage device",
+                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+              ]
+            },
+            {
+              "question": "What are five types of door lock access methods?",
+              "answer": "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan),...",
+              "difficulty": 3,
+              "id": "4.1.1701",
+              "distractors": [
+                "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,..."
+              ]
+            },
+            {
+              "question": "What is an example of multi-factor authentication for physical access?",
+              "answer": "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
+              "difficulty": 2,
+              "id": "4.1.1702",
+              "distractors": [
+                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
+                "Users only have the rights and permissions necessary for their job function — no additional access is granted",
+                "They may get different permissions based on their connection location (e.g., different state or country)"
+              ]
+            },
+            {
+              "question": "Compare data in transit vs. data at rest.",
+              "answer": "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
+              "difficulty": 3,
+              "id": "4.1.1703",
+              "distractors": [
+                "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing...",
+                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
+                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,..."
               ]
             }
           ]
@@ -17361,6 +18876,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "AC",
     "full": "Alternating Current"
+  },
+  {
+    "abbrev": "ACL",
+    "full": "Access Control List"
   },
   {
     "abbrev": "AES",
@@ -17411,6 +18930,10 @@ const ABBREV_DATA = [
     "full": "Bayonet Neill-Concelman"
   },
   {
+    "abbrev": "CNAME",
+    "full": "Canonical Name (DNS record)"
+  },
+  {
     "abbrev": "CRC",
     "full": "Cyclic Redundancy Check"
   },
@@ -17427,8 +18950,16 @@ const ABBREV_DATA = [
     "full": "Cipher Block Chaining Message Authentication Code"
   },
   {
+    "abbrev": "CA",
+    "full": "Certificate Authority"
+  },
+  {
     "abbrev": "CAPWAP",
     "full": "Control and Provisioning of Wireless Access Points"
+  },
+  {
+    "abbrev": "CCTV",
+    "full": "Closed Circuit Television"
   },
   {
     "abbrev": "CCMP",
@@ -17477,6 +19008,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "DoH",
     "full": "DNS over HTTPS"
+  },
+  {
+    "abbrev": "DKIM",
+    "full": "Domain Keys Identified Mail"
   },
   {
     "abbrev": "DORA",
@@ -17555,12 +19090,20 @@ const ABBREV_DATA = [
     "full": "Generic Routing Encapsulation"
   },
   {
+    "abbrev": "GPS",
+    "full": "Global Positioning System"
+  },
+  {
     "abbrev": "GSM",
     "full": "Global System for Mobile Communications"
   },
   {
     "abbrev": "HaaS",
     "full": "Hardware as a Service"
+  },
+  {
+    "abbrev": "HTML",
+    "full": "Hypertext Markup Language"
   },
   {
     "abbrev": "HTTP",
@@ -17577,6 +19120,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "IaaS",
     "full": "Infrastructure as a Service"
+  },
+  {
+    "abbrev": "IAM",
+    "full": "Identity and Access Management"
   },
   {
     "abbrev": "IEEE",
@@ -17719,6 +19266,10 @@ const ABBREV_DATA = [
     "full": "Maximum Transmission Unit"
   },
   {
+    "abbrev": "MX",
+    "full": "Mail Exchanger (DNS record)"
+  },
+  {
     "abbrev": "NAS",
     "full": "Network-Attached Storage"
   },
@@ -17739,8 +19290,16 @@ const ABBREV_DATA = [
     "full": "Neighbor Discovery Protocol"
   },
   {
+    "abbrev": "NS",
+    "full": "Name Server (DNS record)"
+  },
+  {
     "abbrev": "NTP",
     "full": "Network Time Protocol"
+  },
+  {
+    "abbrev": "NTS",
+    "full": "Network Time Security"
   },
   {
     "abbrev": "OID",
@@ -17775,8 +19334,20 @@ const ABBREV_DATA = [
     "full": "Power Distribution Unit"
   },
   {
+    "abbrev": "PKI",
+    "full": "Public Key Infrastructure"
+  },
+  {
     "abbrev": "PSK",
     "full": "Pre-Shared Key"
+  },
+  {
+    "abbrev": "PTP",
+    "full": "Precision Time Protocol"
+  },
+  {
+    "abbrev": "PTR",
+    "full": "Pointer (DNS record)"
   },
   {
     "abbrev": "PoE",
@@ -17807,8 +19378,16 @@ const ABBREV_DATA = [
     "full": "Quality of Service"
   },
   {
+    "abbrev": "RBAC",
+    "full": "Role-Based Access Control"
+  },
+  {
     "abbrev": "RDP",
     "full": "Remote Desktop Protocol"
+  },
+  {
+    "abbrev": "RFB",
+    "full": "Remote Frame Buffer"
   },
   {
     "abbrev": "RFC",
@@ -17903,6 +19482,10 @@ const ABBREV_DATA = [
     "full": "Stateless Address Autoconfiguration"
   },
   {
+    "abbrev": "SOA",
+    "full": "Start of Authority (DNS record)"
+  },
+  {
     "abbrev": "SMB",
     "full": "Server Message Block"
   },
@@ -17921,6 +19504,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "SPAN",
     "full": "Switched Port Analyzer"
+  },
+  {
+    "abbrev": "SPF",
+    "full": "Sender Policy Framework"
   },
   {
     "abbrev": "SQL",
@@ -18009,6 +19596,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "VoIP",
     "full": "Voice over Internet Protocol"
+  },
+  {
+    "abbrev": "VNC",
+    "full": "Virtual Network Computing"
   },
   {
     "abbrev": "VPN",
