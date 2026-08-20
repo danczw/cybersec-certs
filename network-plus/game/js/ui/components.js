@@ -42,9 +42,13 @@ const UI = (() => {
   }
 
   function renderMasteryBars(container) {
+    const domainTotals = {};
+    for (const domain of GAME_DATA.domains) {
+      domainTotals[domain.id] = domain.objectives.reduce((s, o) => s + o.concepts.length, 0);
+    }
     let html = '<h3>// DOMAIN MASTERY</h3>';
     for (const d of Engine.DOMAINS) {
-      const mastery = Engine.getDomainMastery(d.id);
+      const mastery = Engine.getDomainMastery(d.id, domainTotals[d.id] || 0);
       html += `
         <div class="mastery-bar-container">
           <div class="mastery-label">

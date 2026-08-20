@@ -9,6 +9,7 @@ const Engine = (() => {
     { id: 1, name: 'Networking Concepts', weight: 23 },
     { id: 2, name: 'Network Implementation', weight: 20 },
     { id: 3, name: 'Network Operations', weight: 19 },
+    { id: 4, name: 'Network Security', weight: 19 },
   ];
 
   const DIFF_LABELS = { 1: 'easy', 2: 'medium', 3: 'hard' };
@@ -21,6 +22,7 @@ const Engine = (() => {
         1: { seen: 0, correct: 0 },
         2: { seen: 0, correct: 0 },
         3: { seen: 0, correct: 0 },
+        4: { seen: 0, correct: 0 },
       },
       concepts: {},
       sessions: []
@@ -30,7 +32,13 @@ const Engine = (() => {
   function load() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const s = JSON.parse(raw);
+        for (const d of DOMAINS) {
+          if (!s.domains[d.id]) s.domains[d.id] = { seen: 0, correct: 0 };
+        }
+        return s;
+      }
     } catch (e) {}
     return getDefaultState();
   }
@@ -114,10 +122,10 @@ const Engine = (() => {
     return { xp, streak: state.player.streak, multiplier: getStreakMultiplier(state.player.streak) };
   }
 
-  function getDomainMastery(domainId) {
+  function getDomainMastery(domainId, totalConcepts) {
     const d = state.domains[domainId];
-    if (!d || d.seen === 0) return 0;
-    return Math.round((d.correct / d.seen) * 100);
+    if (!d || d.correct === 0 || !totalConcepts) return 0;
+    return Math.round((d.correct / totalConcepts) * 100);
   }
 
   function getDueCount() {
