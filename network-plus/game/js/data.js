@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-20T07:39:15.256Z"
+    "generated": "2026-08-20T09:42:43.499Z"
   },
   "domains": [
     {
@@ -15852,11 +15852,11 @@ const GAME_DATA = {
         },
         {
           "id": "3.4",
-          "title": "Dhcp",
+          "title": "Configuring Dhcp",
           "concepts": [
             {
-              "question": "What did network administrators have to do before BOOTP/DHCP existed?",
-              "answer": "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+              "question": "What is a DHCP scope?",
+              "answer": "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
               "difficulty": 1,
               "id": "3.4.1432",
               "distractors": [
@@ -15866,9 +15866,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is BOOTP?",
-              "answer": "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
-              "difficulty": 1,
+              "question": "What five things are commonly included in a DHCP scope?",
+              "answer": "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
+              "difficulty": 2,
               "id": "3.4.1433",
               "distractors": [
                 "Border Topology Protocol — a routing protocol used to connect DHCP servers across subnets",
@@ -15877,8 +15877,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What were BOOTP's two limitations?",
-              "answer": "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
+              "question": "How are DHCP scopes organized relative to subnets?",
+              "answer": "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses",
               "difficulty": 2,
               "id": "3.4.1434",
               "distractors": [
@@ -15888,8 +15888,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is DHCP?",
-              "answer": "Dynamic Host Configuration Protocol — replaced BOOTP to provide full automatic address configuration for all devices on a network",
+              "question": "What is a contiguous pool in a DHCP scope?",
+              "answer": "A continuous range of IP addresses (e.g., .1 through .100) that the DHCP server can assign from",
               "difficulty": 1,
               "id": "3.4.1435",
               "distractors": [
@@ -15899,8 +15899,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What does DORA stand for in DHCP?",
-              "answer": "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
+              "question": "What are excluded addresses in a DHCP scope?",
+              "answer": "Addresses within the IP address range that should not be assigned to devices by the DHCP server",
               "difficulty": 1,
               "id": "3.4.1436",
               "distractors": [
@@ -15910,9 +15910,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "In the DHCP Discover step, what source IP does the client use and why?",
-              "answer": "0.0.0.0 — because the client does not have an IP address yet",
-              "difficulty": 2,
+              "question": "When a device requests an address, how does the DHCP server respond?",
+              "answer": "The server picks an address from the pool, assigns it to the device, and associates a lease period with it",
+              "difficulty": 1,
               "id": "3.4.1437",
               "distractors": [
                 "255.255.255.255 — because the client uses the broadcast address as both source and destination",
@@ -15921,9 +15921,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "In the DHCP Discover step, what is the destination IP and why?",
-              "answer": "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond",
-              "difficulty": 2,
+              "question": "What happens to a DHCP address if the lease is not renewed?",
+              "answer": "The address returns to the pool and can be assigned to another device",
+              "difficulty": 1,
               "id": "3.4.1438",
               "distractors": [
                 "0.0.0.0 (default route) — so the message is forwarded to the default gateway and routed to the DHCP server",
@@ -15932,8 +15932,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What UDP port does the DHCP client use as its source port?",
-              "answer": "UDP 68",
+              "question": "What does the DHCP server track about previous assignments?",
+              "answer": "MAC-to-IP pairings — so it can recognize returning devices",
               "difficulty": 2,
               "id": "3.4.1439",
               "distractors": [
@@ -15943,8 +15943,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What UDP port does the DHCP server use as its source port?",
-              "answer": "UDP 67",
+              "question": "What happens if a device returns to the network and its previous DHCP-assigned IP is still available?",
+              "answer": "The DHCP server reassigns the same IP address the device had on its original visit",
               "difficulty": 2,
               "id": "3.4.1440",
               "distractors": [
@@ -15954,9 +15954,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is the DHCP Offer sent as a broadcast?",
-              "answer": "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
-              "difficulty": 2,
+              "question": "What is a DHCP address reservation?",
+              "answer": "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP",
+              "difficulty": 1,
               "id": "3.4.1441",
               "distractors": [
                 "Because multiple DHCP servers may exist on the subnet and the client needs all of them to compete with simultaneous offers",
@@ -15965,8 +15965,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What happens if multiple DHCP servers exist on the network during the Offer phase?",
-              "answer": "The client may receive multiple offers from different DHCP servers",
+              "question": "What are three other names for DHCP address reservation?",
+              "answer": "Static DHCP assignment, static DHCP, or IP reservation",
               "difficulty": 2,
               "id": "3.4.1442",
               "distractors": [
@@ -15976,8 +15976,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "In the DHCP Request step, what does the client do?",
-              "answer": "Chooses one of the offers and sends a DHCP Request to that DHCP server",
+              "question": "What is the use case for DHCP address reservations?",
+              "answer": "Printers, servers, or any device that needs a consistent IP address without manual static configuration",
               "difficulty": 1,
               "id": "3.4.1443",
               "distractors": [
@@ -15987,8 +15987,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Does the client have an IP address during the Request step?",
-              "answer": "No — source IP is still 0.0.0.0 and the request is sent as a broadcast",
+              "question": "Why use DHCP reservations instead of manually configuring static IPs on devices?",
+              "answer": "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
               "difficulty": 2,
               "id": "3.4.1444",
               "distractors": [
@@ -15998,9 +15998,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What happens after the client receives the DHCP Acknowledgment?",
-              "answer": "The client can now configure all IP settings automatically",
-              "difficulty": 1,
+              "question": "What three pieces of information does a DHCP reservation table contain?",
+              "answer": "MAC address, reserved IP address, and device name",
+              "difficulty": 2,
               "id": "3.4.1445",
               "distractors": [
                 "The client must send another Discover message to confirm the lease",
@@ -16009,9 +16009,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Are all four DORA messages sent as broadcasts or unicasts?",
-              "answer": "All four are sent as broadcasts (255.255.255.255)",
-              "difficulty": 2,
+              "question": "What is the difference between a DHCP reservation (static DHCP) and a static IP configuration?",
+              "answer": "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i...",
+              "difficulty": 3,
               "id": "3.4.1446",
               "distractors": [
                 "Discover and Offer are broadcasts; Request and Acknowledge are unicasts",
@@ -16020,9 +16020,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the fundamental limitation of DHCP related to broadcasts?",
-              "answer": "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly",
-              "difficulty": 2,
+              "question": "Are DHCP-assigned IP addresses permanent?",
+              "answer": "No — they are leased for a configured duration and must be renewed or they return to the pool",
+              "difficulty": 1,
               "id": "3.4.1447",
               "distractors": [
                 "DHCP broadcasts consume too much bandwidth and slow down all network traffic on the subnet",
@@ -16031,9 +16031,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is the broadcast limitation a problem for enterprise networks?",
-              "answer": "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
-              "difficulty": 2,
+              "question": "What happens when a device shuts down regarding its DHCP lease?",
+              "answer": "It can release the IP address back into the pool so other devices can use it",
+              "difficulty": 1,
               "id": "3.4.1448",
               "distractors": [
                 "DHCP leases expire too quickly on large networks, forcing constant renewal traffic that overwhelms the server",
@@ -16042,9 +16042,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is DHCP Relay (DHCP Helper)?",
-              "answer": "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet",
-              "difficulty": 1,
+              "question": "What happens to a DHCP lease when a device restarts or reconnects to the network?",
+              "answer": "It reinitializes the DHCP process and may restart the lease",
+              "difficulty": 2,
               "id": "3.4.1449",
               "distractors": [
                 "A DHCP server feature that reserves specific IP addresses for devices based on their MAC address so they always receive the same lease",
@@ -16053,9 +16053,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What must be configured on the router to enable DHCP Relay?",
-              "answer": "The IP address of the DHCP server",
-              "difficulty": 1,
+              "question": "What is the T1 timer in DHCP leasing?",
+              "answer": "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
+              "difficulty": 2,
               "id": "3.4.1450",
               "distractors": [
                 "The MAC address of the DHCP server so the relay can forward at Layer 2",
@@ -16064,9 +16064,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does the router with DHCP Relay convert the client's broadcast into something routable?",
-              "answer": "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
-              "difficulty": 3,
+              "question": "What is the T2 timer in DHCP leasing?",
+              "answer": "A rebinding timer set at 87.5% (7/8) of the lease time, at which point the device attempts to renew with any available DHCP server",
+              "difficulty": 2,
               "id": "3.4.1451",
               "distractors": [
                 "It encapsulates the broadcast inside a new packet with a multicast destination address that all DHCP servers listen on",
@@ -16075,8 +16075,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How does the DHCP server's response get back to the client through DHCP Relay?",
-              "answer": "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
+              "question": "What is the key difference between T1 and T2 renewal behavior?",
+              "answer": "T1 contacts the original DHCP server only; T2 contacts any available DHCP server on the network",
               "difficulty": 3,
               "id": "3.4.1452",
               "distractors": [
@@ -16086,8 +16086,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Does DHCP Relay apply to just the Discover step or all four DORA phases?",
-              "answer": "All four DORA phases — the relay process repeats for each step",
+              "question": "What is the default T1 timer value as a percentage of lease time?",
+              "answer": "50%",
               "difficulty": 2,
               "id": "3.4.1453",
               "distractors": [
@@ -16097,9 +16097,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What does DHCP Relay allow in terms of network design?",
-              "answer": "Clients can receive IP addresses from a DHCP server on a completely different subnet",
-              "difficulty": 1,
+              "question": "What is the default T2 timer value as a percentage/fraction of lease time?",
+              "answer": "87.5% or 7/8",
+              "difficulty": 2,
               "id": "3.4.1454",
               "distractors": [
                 "Clients can use any DHCP server regardless of lease duration or scope configuration",
@@ -16108,14 +16108,1246 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "In DORA, which steps are sent by the client and which by the server?",
-              "answer": "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
+              "question": "In an 8-day DHCP lease, when does the T1 timer fire?",
+              "answer": "Day 4 (50% of 8 days)",
               "difficulty": 2,
               "id": "3.4.1455",
               "distractors": [
                 "Client sends: Discover and Acknowledge. Server sends: Offer and Request.",
                 "Client sends: Offer and Request. Server sends: Discover and Acknowledge.",
                 "Client sends: all four (Discover, Offer, Request, Acknowledge) as broadcast messages."
+              ]
+            },
+            {
+              "question": "In an 8-day DHCP lease, when does the T2 timer fire?",
+              "answer": "Day 7 (7/8 of 8 days)",
+              "difficulty": 2,
+              "id": "3.4.1456",
+              "distractors": [
+                "Day 4 (50% of 8 days)",
+                "300 seconds (5 minutes)",
+                "Vendor extensions"
+              ]
+            },
+            {
+              "question": "What happens if the original DHCP server successfully responds during the T1 renewal period?",
+              "answer": "The lease resets and the timer restarts from the beginning",
+              "difficulty": 2,
+              "id": "3.4.1457",
+              "distractors": [
+                "The client can now configure all IP settings automatically",
+                "MAC-to-IP pairings — so it can recognize returning devices",
+                "A Router Advertisement containing the 64-bit subnet prefix"
+              ]
+            },
+            {
+              "question": "What triggers the T2 rebinding period?",
+              "answer": "The original DHCP server is unavailable and did not respond during the T1 renewal period",
+              "difficulty": 3,
+              "id": "3.4.1458",
+              "distractors": [
+                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
+                "Receives zone information from the primary server in read-only mode; provides redundancy"
+              ]
+            },
+            {
+              "question": "During the T2 rebinding period, what does the device do?",
+              "answer": "Reaches out to any available DHCP server on the network to renew the lease",
+              "difficulty": 2,
+              "id": "3.4.1459",
+              "distractors": [
+                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
+                "The address of the appropriate TLD name server (e.g., the .com name server)",
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses"
+              ]
+            },
+            {
+              "question": "What are DHCP options?",
+              "answer": "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields",
+              "difficulty": 2,
+              "id": "3.4.1460",
+              "distractors": [
+                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
+                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
+                "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly"
+              ]
+            },
+            {
+              "question": "How many usable DHCP options are available?",
+              "answer": "254",
+              "difficulty": 2,
+              "id": "3.4.1461",
+              "distractors": [
+                "50%",
+                "255",
+                "110"
+              ]
+            },
+            {
+              "question": "Where are DHCP options defined?",
+              "answer": "In the DHCP RFC (Request for Comments)",
+              "difficulty": 2,
+              "id": "3.4.1462",
+              "distractors": [
+                "It is stored as read-only by default",
+                "Some modern browsers use DoH by default",
+                "A fully routable, unique IPv6 address"
+              ]
+            },
+            {
+              "question": "What were DHCP options originally called in the BOOTP era?",
+              "answer": "Vendor extensions",
+              "difficulty": 3,
+              "id": "3.4.1463",
+              "distractors": [
+                ".com, .org, .net",
+                "Day 7 (7/8 of 8 days)",
+                "Day 4 (50% of 8 days)"
+              ]
+            },
+            {
+              "question": "What is DHCP option 129?",
+              "answer": "Call server IP address (VoIP)",
+              "difficulty": 3,
+              "id": "3.4.1464",
+              "distractors": [
+                "The Top Level Domains (TLDs)",
+                "The IP address of the DHCP server",
+                "On the authoritative DNS server"
+              ]
+            },
+            {
+              "question": "What is DHCP option 135?",
+              "answer": "HTTP proxy",
+              "difficulty": 3,
+              "id": "3.4.1465",
+              "distractors": [
+                "87.5% or 7/8",
+                "TCP port 443",
+                "TCP port 853"
+              ]
+            },
+            {
+              "question": "What should you verify before trying to use a specific DHCP option?",
+              "answer": "That the DHCP server supports that specific option — not all DHCP servers support all 254 options",
+              "difficulty": 2,
+              "id": "3.4.1466",
+              "distractors": [
+                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
+                "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
+                "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond"
+              ]
+            },
+            {
+              "question": "Where are DHCP options configured on Windows Server?",
+              "answer": "Under Server Options within the DHCP scope settings",
+              "difficulty": 2,
+              "id": "3.4.1467",
+              "distractors": [
+                "Yes — the forward name and reverse name may differ",
+                "MAC address, reserved IP address, and device name",
+                "All four are sent as broadcasts (255.255.255.255)"
+              ]
+            },
+            {
+              "question": "When a client connects to a network with DHCP options configured, what does it receive?",
+              "answer": "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options",
+              "difficulty": 2,
+              "id": "3.4.1468",
+              "distractors": [
+                "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement",
+                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
+                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server"
+              ]
+            },
+            {
+              "question": "What did network administrators have to do before BOOTP/DHCP existed?",
+              "answer": "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+              "difficulty": 1,
+              "id": "3.4.1469",
+              "distractors": [
+                "Resolving names locally on the machine without querying a DNS server, using the hosts file",
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time"
+              ]
+            },
+            {
+              "question": "What is BOOTP?",
+              "answer": "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
+              "difficulty": 1,
+              "id": "3.4.1470",
+              "distractors": [
+                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it",
+                "Printers, servers, or any device that needs a consistent IP address without manual static configuration",
+                "The address never needs to be given up — it is self-assigned and permanent as long as the device uses it"
+              ]
+            },
+            {
+              "question": "What were BOOTP's two limitations?",
+              "answer": "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
+              "difficulty": 2,
+              "id": "3.4.1471",
+              "distractors": [
+                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
+                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+              ]
+            },
+            {
+              "question": "What is DHCP?",
+              "answer": "Dynamic Host Configuration Protocol — replaced BOOTP to provide full automatic address configuration for all devices on a network",
+              "difficulty": 1,
+              "id": "3.4.1472",
+              "distractors": [
+                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
+                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+                "A rebinding timer set at 87.5% (7/8) of the lease time, at which point the device attempts to renew with any available DHCP server"
+              ]
+            },
+            {
+              "question": "What does DORA stand for in DHCP?",
+              "answer": "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
+              "difficulty": 1,
+              "id": "3.4.1473",
+              "distractors": [
+                "Local Connector (also: Lucent connector, little connector)",
+                "Institute of Electrical and Electronics Engineers",
+                "Control and Provisioning of Wireless Access Points"
+              ]
+            },
+            {
+              "question": "In the DHCP Discover step, what source IP does the client use and why?",
+              "answer": "0.0.0.0 — because the client does not have an IP address yet",
+              "difficulty": 2,
+              "id": "3.4.1474",
+              "distractors": [
+                "It reinitializes the DHCP process and may restart the lease",
+                "It receives it from the primary DNS server (read-only copy)",
+                "All four DORA phases — the relay process repeats for each step"
+              ]
+            },
+            {
+              "question": "In the DHCP Discover step, what is the destination IP and why?",
+              "answer": "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond",
+              "difficulty": 2,
+              "id": "3.4.1475",
+              "distractors": [
+                "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
+                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options",
+                "Contains all zone information for the DNS domain; all configuration changes and updates happen here"
+              ]
+            },
+            {
+              "question": "What UDP port does the DHCP client use as its source port?",
+              "answer": "UDP 68",
+              "difficulty": 2,
+              "id": "3.4.1476",
+              "distractors": [
+                "TCP 23",
+                "TCP 22",
+                "UDP 69"
+              ]
+            },
+            {
+              "question": "What UDP port does the DHCP server use as its source port?",
+              "answer": "UDP 67",
+              "difficulty": 2,
+              "id": "3.4.1477",
+              "distractors": [
+                "TCP 23",
+                "TCP 22",
+                "UDP 69"
+              ]
+            },
+            {
+              "question": "Why is the DHCP Offer sent as a broadcast?",
+              "answer": "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
+              "difficulty": 2,
+              "id": "3.4.1478",
+              "distractors": [
+                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP",
+                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
+                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)"
+              ]
+            },
+            {
+              "question": "What happens if multiple DHCP servers exist on the network during the Offer phase?",
+              "answer": "The client may receive multiple offers from different DHCP servers",
+              "difficulty": 2,
+              "id": "3.4.1479",
+              "distractors": [
+                "The address returns to the pool and can be assigned to another device",
+                "It sends a Router Advertisement (RA) directly back to the device",
+                "No — reverse lookups must be separately configured on the DNS server"
+              ]
+            },
+            {
+              "question": "In the DHCP Request step, what does the client do?",
+              "answer": "Chooses one of the offers and sends a DHCP Request to that DHCP server",
+              "difficulty": 1,
+              "id": "3.4.1480",
+              "distractors": [
+                "The address returns to the pool and can be assigned to another device",
+                "No — source IP is still 0.0.0.0 and the request is sent as a broadcast",
+                "Client sends: Discover and Request. Server sends: Offer and Acknowledge."
+              ]
+            },
+            {
+              "question": "Does the client have an IP address during the Request step?",
+              "answer": "No — source IP is still 0.0.0.0 and the request is sent as a broadcast",
+              "difficulty": 2,
+              "id": "3.4.1481",
+              "distractors": [
+                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form",
+                "Yes — you can use copper or fiber transceivers depending on your needs",
+                "Yes — just remove the copper transceiver and slide in a fiber transceiver"
+              ]
+            },
+            {
+              "question": "What happens after the client receives the DHCP Acknowledgment?",
+              "answer": "The client can now configure all IP settings automatically",
+              "difficulty": 1,
+              "id": "3.4.1482",
+              "distractors": [
+                "The lease resets and the timer restarts from the beginning",
+                "A Router Advertisement containing the 64-bit subnet prefix",
+                "MAC-to-IP pairings — so it can recognize returning devices"
+              ]
+            },
+            {
+              "question": "Are all four DORA messages sent as broadcasts or unicasts?",
+              "answer": "All four are sent as broadcasts (255.255.255.255)",
+              "difficulty": 2,
+              "id": "3.4.1483",
+              "distractors": [
+                "Yes — the forward name and reverse name may differ",
+                "MAC address, reserved IP address, and device name",
+                "They are served from the local DNS server's cache"
+              ]
+            },
+            {
+              "question": "What is the fundamental limitation of DHCP related to broadcasts?",
+              "answer": "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly",
+              "difficulty": 2,
+              "id": "3.4.1484",
+              "distractors": [
+                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
+                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
+                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+              ]
+            },
+            {
+              "question": "Why is the broadcast limitation a problem for enterprise networks?",
+              "answer": "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
+              "difficulty": 2,
+              "id": "3.4.1485",
+              "distractors": [
+                "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes",
+                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
+                "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear"
+              ]
+            },
+            {
+              "question": "What is DHCP Relay (DHCP Helper)?",
+              "answer": "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet",
+              "difficulty": 1,
+              "id": "3.4.1486",
+              "distractors": [
+                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
+                "No — they are leased for a configured duration and must be renewed or they return to the pool"
+              ]
+            },
+            {
+              "question": "What must be configured on the router to enable DHCP Relay?",
+              "answer": "The IP address of the DHCP server",
+              "difficulty": 1,
+              "id": "3.4.1487",
+              "distractors": [
+                "windows/system32/drivers/etc/hosts",
+                "ARP (Address Resolution Protocol)",
+                "Neighbor Discovery Protocol (NDP)"
+              ]
+            },
+            {
+              "question": "How does the router with DHCP Relay convert the client's broadcast into something routable?",
+              "answer": "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
+              "difficulty": 3,
+              "id": "3.4.1488",
+              "distractors": [
+                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
+                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator"
+              ]
+            },
+            {
+              "question": "How does the DHCP server's response get back to the client through DHCP Relay?",
+              "answer": "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
+              "difficulty": 3,
+              "id": "3.4.1489",
+              "distractors": [
+                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
+                "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement"
+              ]
+            },
+            {
+              "question": "Does DHCP Relay apply to just the Discover step or all four DORA phases?",
+              "answer": "All four DORA phases — the relay process repeats for each step",
+              "difficulty": 2,
+              "id": "3.4.1490",
+              "distractors": [
+                "It sends a Router Advertisement (RA) directly back to the device",
+                "A method of encrypting DNS traffic using TLS over TCP port 853",
+                "0.0.0.0 — because the client does not have an IP address yet"
+              ]
+            },
+            {
+              "question": "What does DHCP Relay allow in terms of network design?",
+              "answer": "Clients can receive IP addresses from a DHCP server on a completely different subnet",
+              "difficulty": 1,
+              "id": "3.4.1491",
+              "distractors": [
+                "The primary DNS server for a DNS zone — the authority for all records in that domain",
+                "No — the same information exists in both and the end user has no idea which answered",
+                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)"
+              ]
+            },
+            {
+              "question": "In DORA, which steps are sent by the client and which by the server?",
+              "answer": "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
+              "difficulty": 2,
+              "id": "3.4.1492",
+              "distractors": [
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
+                "Provide a name → DNS returns an IP address; the most common DNS operation"
+              ]
+            },
+            {
+              "question": "How does DHCPv6 compare to IPv4 DHCP?",
+              "answer": "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
+              "difficulty": 1,
+              "id": "3.4.1493",
+              "distractors": [
+                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
+                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+                "Dynamic Host Configuration Protocol — replaced BOOTP to provide full automatic address configuration for all devices on a network"
+              ]
+            },
+            {
+              "question": "What is stateless addressing in IPv6?",
+              "answer": "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+              "difficulty": 1,
+              "id": "3.4.1494",
+              "distractors": [
+                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
+                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
+                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast"
+              ]
+            },
+            {
+              "question": "What three things are eliminated with IPv6 stateless addressing compared to DHCP?",
+              "answer": "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
+              "difficulty": 2,
+              "id": "3.4.1495",
+              "distractors": [
+                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
+                "Yes — each interface can have a different transceiver and therefore a different media type",
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+              ]
+            },
+            {
+              "question": "Why is there no lease time with IPv6 stateless addressing?",
+              "answer": "The address never needs to be given up — it is self-assigned and permanent as long as the device uses it",
+              "difficulty": 2,
+              "id": "3.4.1496",
+              "distractors": [
+                "Printers, servers, or any device that needs a consistent IP address without manual static configuration",
+                "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
+                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it"
+              ]
+            },
+            {
+              "question": "What is the Neighbor Discovery Protocol (NDP)?",
+              "answer": "An IPv6 protocol that replaces ARP from IPv4, using multicast instead of broadcasts to find devices, identify routers, and detect duplicate addresses",
+              "difficulty": 1,
+              "id": "3.4.1497",
+              "distractors": [
+                "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i...",
+                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
+                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ..."
+              ]
+            },
+            {
+              "question": "What IPv4 protocol does NDP replace?",
+              "answer": "ARP (Address Resolution Protocol)",
+              "difficulty": 1,
+              "id": "3.4.1498",
+              "distractors": [
+                "windows/system32/drivers/etc/hosts",
+                "Neighbor Discovery Protocol (NDP)",
+                "The IP address of the DHCP server"
+              ]
+            },
+            {
+              "question": "Why is NDP more efficient than ARP?",
+              "answer": "ARP uses broadcasts (sent to all devices); NDP uses multicast (sent only to interested devices)",
+              "difficulty": 2,
+              "id": "3.4.1499",
+              "distractors": [
+                "T1 contacts the original DHCP server only; T2 contacts any available DHCP server on the network",
+                "Addresses within the IP address range that should not be assigned to devices by the DHCP server",
+                "A continuous range of IP addresses (e.g., .1 through .100) that the DHCP server can assign from"
+              ]
+            },
+            {
+              "question": "What are the three functions of NDP?",
+              "answer": "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+              "difficulty": 2,
+              "id": "3.4.1500",
+              "distractors": [
+                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
+                "A secondary server or caching server that returns cached information, not directly from the zone owner",
+                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information"
+              ]
+            },
+            {
+              "question": "What is a Router Solicitation (RS)?",
+              "answer": "A multicast message sent by a device asking any routers on the local subnet to respond",
+              "difficulty": 1,
+              "id": "3.4.1501",
+              "distractors": [
+                "The original DHCP server is unavailable and did not respond during the T1 renewal period",
+                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value",
+                "Cached information could be outdated if the authoritative server was recently changed"
+              ]
+            },
+            {
+              "question": "How does a router respond to a Router Solicitation?",
+              "answer": "It sends a Router Advertisement (RA) directly back to the device",
+              "difficulty": 1,
+              "id": "3.4.1502",
+              "distractors": [
+                "All four DORA phases — the relay process repeats for each step",
+                "A method of encrypting DNS traffic using TLS over TCP port 853",
+                "The client may receive multiple offers from different DHCP servers"
+              ]
+            },
+            {
+              "question": "What is a Router Advertisement (RA)?",
+              "answer": "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+              "difficulty": 2,
+              "id": "3.4.1503",
+              "distractors": [
+                "The first level below the root in the DNS hierarchy — includes generic TLDs (.com, .org, .net) and country code TLDs (.us, .ca, .uk)",
+                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
+                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic"
+              ]
+            },
+            {
+              "question": "What is an unsolicited RA?",
+              "answer": "A Router Advertisement sent by a router without being queried, to a multicast address for all devices that might be interested in knowing where rou...",
+              "difficulty": 2,
+              "id": "3.4.1504",
+              "distractors": [
+                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
+                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
+                "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i..."
+              ]
+            },
+            {
+              "question": "How do unsolicited RAs differ from solicited RAs in terms of destination?",
+              "answer": "Unsolicited RAs are sent to a different multicast address than solicited ones",
+              "difficulty": 3,
+              "id": "3.4.1505",
+              "distractors": [
+                "The device sends a Router Solicitation via NDP to determine the local subnet",
+                "It can release the IP address back into the pool so other devices can use it",
+                "The last 64 bits of the address, generated by the device itself during SLAAC"
+              ]
+            },
+            {
+              "question": "What four pieces of information can a Router Advertisement provide?",
+              "answer": "Prefix value, prefix length, DNS server configuration, and other IPv6 configuration parameters",
+              "difficulty": 2,
+              "id": "3.4.1506",
+              "distractors": [
+                "T1 contacts the original DHCP server only; T2 contacts any available DHCP server on the network",
+                "Addresses within the IP address range that should not be assigned to devices by the DHCP server",
+                "A continuous range of IP addresses (e.g., .1 through .100) that the DHCP server can assign from"
+              ]
+            },
+            {
+              "question": "What is SLAAC?",
+              "answer": "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
+              "difficulty": 1,
+              "id": "3.4.1507",
+              "distractors": [
+                "Traffic is sent in the clear (anyone can see queried hostnames), and responses are not authenticated (could be spoofed)",
+                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
+                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options"
+              ]
+            },
+            {
+              "question": "What is the first step of the SLAAC process?",
+              "answer": "The device sends a Router Solicitation via NDP to determine the local subnet",
+              "difficulty": 2,
+              "id": "3.4.1508",
+              "distractors": [
+                "Unsolicited RAs are sent to a different multicast address than solicited ones",
+                "It can release the IP address back into the pool so other devices can use it",
+                "The last 64 bits of the address, generated by the device itself during SLAAC"
+              ]
+            },
+            {
+              "question": "What does the router provide to a device during SLAAC?",
+              "answer": "A Router Advertisement containing the 64-bit subnet prefix",
+              "difficulty": 2,
+              "id": "3.4.1509",
+              "distractors": [
+                "MAC-to-IP pairings — so it can recognize returning devices",
+                "The lease resets and the timer restarts from the beginning",
+                "The client can now configure all IP settings automatically"
+              ]
+            },
+            {
+              "question": "How many bits does the subnet prefix occupy in an IPv6 address during SLAAC?",
+              "answer": "64 bits",
+              "difficulty": 1,
+              "id": "3.4.1510",
+              "distractors": [
+                "UDP 67",
+                "UDP 68",
+                "HTTP proxy"
+              ]
+            },
+            {
+              "question": "What is the interface ID in an IPv6 address?",
+              "answer": "The last 64 bits of the address, generated by the device itself during SLAAC",
+              "difficulty": 2,
+              "id": "3.4.1511",
+              "distractors": [
+                "Unsolicited RAs are sent to a different multicast address than solicited ones",
+                "It can release the IP address back into the pool so other devices can use it",
+                "The device sends a Router Solicitation via NDP to determine the local subnet"
+              ]
+            },
+            {
+              "question": "What are the two methods a device can use to generate the 64-bit interface ID?",
+              "answer": "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value",
+              "difficulty": 2,
+              "id": "3.4.1512",
+              "distractors": [
+                "Cached information could be outdated if the authoritative server was recently changed",
+                "The original DHCP server is unavailable and did not respond during the T1 renewal period",
+                "A multicast message sent by a device asking any routers on the local subnet to respond"
+              ]
+            },
+            {
+              "question": "How does the modified MAC address method create a 64-bit interface ID?",
+              "answer": "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
+              "difficulty": 3,
+              "id": "3.4.1513",
+              "distractors": [
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+                "The address of the appropriate TLD name server (e.g., the .com name server)",
+                "Reaches out to any available DHCP server on the network to renew the lease"
+              ]
+            },
+            {
+              "question": "What is the final step of SLAAC before the address is usable?",
+              "answer": "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
+              "difficulty": 2,
+              "id": "3.4.1514",
+              "distractors": [
+                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+              ]
+            },
+            {
+              "question": "What does the device have after SLAAC completes?",
+              "answer": "A fully routable, unique IPv6 address",
+              "difficulty": 1,
+              "id": "3.4.1515",
+              "distractors": [
+                "Some modern browsers use DoH by default",
+                "It is stored as read-only by default",
+                "In the DHCP RFC (Request for Comments)"
+              ]
+            },
+            {
+              "question": "List the five steps of the SLAAC process in order.",
+              "answer": "1) Send Router Solicitation via NDP, 2) Receive Router Advertisement with 64-bit prefix, 3) Generate 64-bit interface ID (modified MAC or random), ...",
+              "difficulty": 3,
+              "id": "3.4.1516",
+              "distractors": [
+                "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
+                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
+                "HVAC sends cold air under raised floor → vents let cold air into cold aisle → servers pull in cold air from front → heated air exits back into hot ..."
+              ]
+            },
+            {
+              "question": "What is Duplicate Address Detection (DAD)?",
+              "answer": "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
+              "difficulty": 1,
+              "id": "3.4.1517",
+              "distractors": [
+                "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond",
+                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
+                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options"
+              ]
+            },
+            {
+              "question": "Why is DAD necessary in IPv6?",
+              "answer": "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
+              "difficulty": 2,
+              "id": "3.4.1518",
+              "distractors": [
+                "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear",
+                "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
+                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it"
+              ]
+            },
+            {
+              "question": "What protocol is DAD a part of?",
+              "answer": "Neighbor Discovery Protocol (NDP)",
+              "difficulty": 1,
+              "id": "3.4.1519",
+              "distractors": [
+                "windows/system32/drivers/etc/hosts",
+                "ARP (Address Resolution Protocol)",
+                "The IP address of the DHCP server"
+              ]
+            },
+            {
+              "question": "What is the key difference between IPv4 and IPv6 regarding self-assigned addressing?",
+              "answer": "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement",
+              "difficulty": 2,
+              "id": "3.4.1520",
+              "distractors": [
+                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options",
+                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
+                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet"
+              ]
+            },
+            {
+              "question": "What is the primary purpose of DNS?",
+              "answer": "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+              "difficulty": 1,
+              "id": "3.4.1521",
+              "distractors": [
+                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
+                "Reaches out to any available DHCP server on the network to renew the lease",
+                "Provide a name → DNS returns an IP address; the most common DNS operation"
+              ]
+            },
+            {
+              "question": "How is the DNS database structured?",
+              "answer": "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+              "difficulty": 1,
+              "id": "3.4.1522",
+              "distractors": [
+                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+                "Resolving names locally on the machine without querying a DNS server, using the hosts file"
+              ]
+            },
+            {
+              "question": "What is at the very top of the DNS hierarchy?",
+              "answer": "The root, represented by a single dot (`.`)",
+              "difficulty": 2,
+              "id": "3.4.1523",
+              "distractors": [
+                "Some modern browsers use DoH by default",
+                "Provide an IP address → DNS returns a name",
+                "A simple text file mapping IP addresses to names"
+              ]
+            },
+            {
+              "question": "What are Top Level Domains (TLDs)?",
+              "answer": "The first level below the root in the DNS hierarchy — includes generic TLDs (.com, .org, .net) and country code TLDs (.us, .ca, .uk)",
+              "difficulty": 1,
+              "id": "3.4.1524",
+              "distractors": [
+                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
+                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network"
+              ]
+            },
+            {
+              "question": "What are examples of generic TLDs?",
+              "answer": ".com, .org, .net",
+              "difficulty": 1,
+              "id": "3.4.1525",
+              "distractors": [
+                "Day 4 (50% of 8 days)",
+                "Vendor extensions",
+                "Day 7 (7/8 of 8 days)"
+              ]
+            },
+            {
+              "question": "What are examples of country code TLDs?",
+              "answer": ".us (United States), .ca (Canada), .uk (United Kingdom)",
+              "difficulty": 1,
+              "id": "3.4.1526",
+              "distractors": [
+                "13 server clusters, comprising over 1,000 actual servers",
+                "MAC-to-IP pairings — so it can recognize returning devices",
+                "Static DHCP assignment, static DHCP, or IP reservation"
+              ]
+            },
+            {
+              "question": "What is a Fully Qualified Domain Name (FQDN)?",
+              "answer": "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)",
+              "difficulty": 2,
+              "id": "3.4.1527",
+              "distractors": [
+                "The primary DNS server for a DNS zone — the authority for all records in that domain",
+                "No — the same information exists in both and the end user has no idea which answered",
+                "Clients can receive IP addresses from a DHCP server on a completely different subnet"
+              ]
+            },
+            {
+              "question": "What are the four levels of the DNS hierarchy from top to bottom?",
+              "answer": "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
+              "difficulty": 2,
+              "id": "3.4.1528",
+              "distractors": [
+                "Provide a name → DNS returns an IP address; the most common DNS operation",
+                "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses"
+              ]
+            },
+            {
+              "question": "How many root DNS server clusters exist?",
+              "answer": "13 server clusters, comprising over 1,000 actual servers",
+              "difficulty": 2,
+              "id": "3.4.1529",
+              "distractors": [
+                "The lease resets and the timer restarts from the beginning",
+                ".us (United States), .ca (Canada), .uk (United Kingdom)",
+                "MAC-to-IP pairings — so it can recognize returning devices"
+              ]
+            },
+            {
+              "question": "What do root DNS servers manage?",
+              "answer": "The Top Level Domains (TLDs)",
+              "difficulty": 2,
+              "id": "3.4.1530",
+              "distractors": [
+                "The IP address of the DHCP server",
+                "On the authoritative DNS server",
+                "Call server IP address (VoIP)"
+              ]
+            },
+            {
+              "question": "What is the role of a primary DNS server?",
+              "answer": "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
+              "difficulty": 2,
+              "id": "3.4.1531",
+              "distractors": [
+                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses",
+                "Cached data is deleted and subsequent queries must go to the authoritative server to be cached again",
+                "No — some applications ignore the hosts file and query DNS directly; check application documentation"
+              ]
+            },
+            {
+              "question": "What is the role of a secondary DNS server?",
+              "answer": "Receives zone information from the primary server in read-only mode; provides redundancy",
+              "difficulty": 2,
+              "id": "3.4.1532",
+              "distractors": [
+                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
+                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+                "The original DHCP server is unavailable and did not respond during the T1 renewal period"
+              ]
+            },
+            {
+              "question": "How does a secondary DNS server get its zone information?",
+              "answer": "It receives it from the primary DNS server (read-only copy)",
+              "difficulty": 2,
+              "id": "3.4.1533",
+              "distractors": [
+                "0.0.0.0 — because the client does not have an IP address yet",
+                "MAC-to-IP pairings — so it can recognize returning devices",
+                "It reinitializes the DHCP process and may restart the lease"
+              ]
+            },
+            {
+              "question": "Can end users tell whether a response came from a primary or secondary DNS server?",
+              "answer": "No — the same information exists in both and the end user has no idea which answered",
+              "difficulty": 2,
+              "id": "3.4.1534",
+              "distractors": [
+                "Yes — each interface can have a different transceiver and therefore a different media type",
+                "Yes — just remove the copper transceiver and slide in a fiber transceiver",
+                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule"
+              ]
+            },
+            {
+              "question": "What is local name resolution?",
+              "answer": "Resolving names locally on the machine without querying a DNS server, using the hosts file",
+              "difficulty": 1,
+              "id": "3.4.1535",
+              "distractors": [
+                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
+                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts"
+              ]
+            },
+            {
+              "question": "What are two use cases for the hosts file?",
+              "answer": "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+              "difficulty": 2,
+              "id": "3.4.1536",
+              "distractors": [
+                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
+                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+              ]
+            },
+            {
+              "question": "Where is the hosts file located on Windows?",
+              "answer": "windows/system32/drivers/etc/hosts",
+              "difficulty": 2,
+              "id": "3.4.1537",
+              "distractors": [
+                "The IP address of the DHCP server",
+                "ARP (Address Resolution Protocol)",
+                "Neighbor Discovery Protocol (NDP)"
+              ]
+            },
+            {
+              "question": "What format is the hosts file?",
+              "answer": "A simple text file mapping IP addresses to names",
+              "difficulty": 1,
+              "id": "3.4.1538",
+              "distractors": [
+                "They are served from the local DNS server's cache",
+                "MAC address, reserved IP address, and device name",
+                "All four are sent as broadcasts (255.255.255.255)"
+              ]
+            },
+            {
+              "question": "Why might you need to change permissions before editing the hosts file?",
+              "answer": "It is stored as read-only by default",
+              "difficulty": 2,
+              "id": "3.4.1539",
+              "distractors": [
+                "A fully routable, unique IPv6 address",
+                "windows/system32/drivers/etc/hosts",
+                "In the DHCP RFC (Request for Comments)"
+              ]
+            },
+            {
+              "question": "Do all applications use the hosts file for name resolution?",
+              "answer": "No — some applications ignore the hosts file and query DNS directly; check application documentation",
+              "difficulty": 2,
+              "id": "3.4.1540",
+              "distractors": [
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
+                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
+                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list"
+              ]
+            },
+            {
+              "question": "What is a forward DNS lookup?",
+              "answer": "Provide a name → DNS returns an IP address; the most common DNS operation",
+              "difficulty": 1,
+              "id": "3.4.1541",
+              "distractors": [
+                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
+                "Reaches out to any available DHCP server on the network to renew the lease",
+                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits"
+              ]
+            },
+            {
+              "question": "What is a reverse DNS lookup?",
+              "answer": "Provide an IP address → DNS returns a name",
+              "difficulty": 1,
+              "id": "3.4.1542",
+              "distractors": [
+                "Some modern browsers use DoH by default",
+                "The root, represented by a single dot (`.`)",
+                "In the DHCP RFC (Request for Comments)"
+              ]
+            },
+            {
+              "question": "Does a reverse lookup happen automatically if forward lookups are configured?",
+              "answer": "No — reverse lookups must be separately configured on the DNS server",
+              "difficulty": 2,
+              "id": "3.4.1543",
+              "distractors": [
+                "Yes — just remove the copper transceiver and slide in a fiber transceiver",
+                "Yes — you can use copper or fiber transceivers depending on your needs",
+                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form"
+              ]
+            },
+            {
+              "question": "Can the forward lookup name and reverse lookup name differ for the same IP?",
+              "answer": "Yes — the forward name and reverse name may differ",
+              "difficulty": 3,
+              "id": "3.4.1544",
+              "distractors": [
+                "No dynamic routing updates that could be manipulated",
+                "No — spine switches do NOT connect directly to each other",
+                "No security, no authentication — anyone can communicate freely"
+              ]
+            },
+            {
+              "question": "What is an authoritative DNS server?",
+              "answer": "The primary DNS server for a DNS zone — the authority for all records in that domain",
+              "difficulty": 2,
+              "id": "3.4.1545",
+              "distractors": [
+                "No — the same information exists in both and the end user has no idea which answered",
+                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
+                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)"
+              ]
+            },
+            {
+              "question": "What is a nonauthoritative DNS server?",
+              "answer": "A secondary server or caching server that returns cached information, not directly from the zone owner",
+              "difficulty": 2,
+              "id": "3.4.1546",
+              "distractors": [
+                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
+                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
+                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address"
+              ]
+            },
+            {
+              "question": "What is the risk of relying on a nonauthoritative DNS server?",
+              "answer": "Cached information could be outdated if the authoritative server was recently changed",
+              "difficulty": 2,
+              "id": "3.4.1547",
+              "distractors": [
+                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
+                "A multicast message sent by a device asking any routers on the local subnet to respond",
+                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value"
+              ]
+            },
+            {
+              "question": "What is TTL in DNS?",
+              "answer": "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
+              "difficulty": 2,
+              "id": "3.4.1548",
+              "distractors": [
+                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
+                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
+                "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet"
+              ]
+            },
+            {
+              "question": "Where is the TTL configured?",
+              "answer": "On the authoritative DNS server",
+              "difficulty": 2,
+              "id": "3.4.1549",
+              "distractors": [
+                "The IP address of the DHCP server",
+                "ARP (Address Resolution Protocol)",
+                "Neighbor Discovery Protocol (NDP)"
+              ]
+            },
+            {
+              "question": "What happens after a DNS TTL expires?",
+              "answer": "Cached data is deleted and subsequent queries must go to the authoritative server to be cached again",
+              "difficulty": 2,
+              "id": "3.4.1550",
+              "distractors": [
+                "No — some applications ignore the hosts file and query DNS directly; check application documentation",
+                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
+                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses"
+              ]
+            },
+            {
+              "question": "A DNS record has a TTL of 300. How long can it be cached?",
+              "answer": "300 seconds (5 minutes)",
+              "difficulty": 1,
+              "id": "3.4.1551",
+              "distractors": [
+                "1 Gbps (1000 Mbps)",
+                "1 Gbps (Gigabit Ethernet)",
+                "4 Gbps (4 channels of 1 Gbps SFP)"
+              ]
+            },
+            {
+              "question": "What is a recursive DNS query?",
+              "answer": "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes",
+              "difficulty": 2,
+              "id": "3.4.1552",
+              "distractors": [
+                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
+                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
+                "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them"
+              ]
+            },
+            {
+              "question": "In a recursive DNS query, what does the client (resolver) do?",
+              "answer": "It only contacts its local DNS server — the local server handles everything else",
+              "difficulty": 2,
+              "id": "3.4.1553",
+              "distractors": [
+                "The DHCP server reassigns the same IP address the device had on its original visit",
+                "Unsolicited RAs are sent to a different multicast address than solicited ones",
+                "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS"
+              ]
+            },
+            {
+              "question": "List the five steps of the recursive DNS query process.",
+              "answer": "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
+              "difficulty": 3,
+              "id": "3.4.1554",
+              "distractors": [
+                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
+                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
+                "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number..."
+              ]
+            },
+            {
+              "question": "What does the root server return during a recursive query?",
+              "answer": "The address of the appropriate TLD name server (e.g., the .com name server)",
+              "difficulty": 2,
+              "id": "3.4.1555",
+              "distractors": [
+                "It can release the IP address back into the pool so other devices can use it",
+                "The device sends a Router Solicitation via NDP to determine the local subnet",
+                "The last 64 bits of the address, generated by the device itself during SLAAC"
+              ]
+            },
+            {
+              "question": "After a recursive query completes, what happens with subsequent requests for the same name?",
+              "answer": "They are served from the local DNS server's cache",
+              "difficulty": 1,
+              "id": "3.4.1556",
+              "distractors": [
+                "Yes — the forward name and reverse name may differ",
+                "MAC address, reserved IP address, and device name",
+                "All four are sent as broadcasts (255.255.255.255)"
+              ]
+            },
+            {
+              "question": "What are the two security problems with traditional DNS?",
+              "answer": "Traffic is sent in the clear (anyone can see queried hostnames), and responses are not authenticated (could be spoofed)",
+              "difficulty": 2,
+              "id": "3.4.1557",
+              "distractors": [
+                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options",
+                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
+                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server"
+              ]
+            },
+            {
+              "question": "What is DNSSEC?",
+              "answer": "Domain Name Security Extensions — digitally signs DNS responses to verify they came from a trusted source and have not been modified in transit",
+              "difficulty": 2,
+              "id": "3.4.1558",
+              "distractors": [
+                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
+                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
+                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP"
+              ]
+            },
+            {
+              "question": "Does DNSSEC encrypt DNS traffic?",
+              "answer": "No — it only signs responses for integrity/authenticity; queries are still visible in the clear",
+              "difficulty": 3,
+              "id": "3.4.1559",
+              "distractors": [
+                "Yes — each interface can have a different transceiver and therefore a different media type",
+                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
+                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule"
+              ]
+            },
+            {
+              "question": "What is DNS over TLS (DoT)?",
+              "answer": "A method of encrypting DNS traffic using TLS over TCP port 853",
+              "difficulty": 2,
+              "id": "3.4.1560",
+              "distractors": [
+                "It sends a Router Advertisement (RA) directly back to the device",
+                "All four DORA phases — the relay process repeats for each step",
+                "0.0.0.0 — because the client does not have an IP address yet"
+              ]
+            },
+            {
+              "question": "What port does DNS over TLS (DoT) use?",
+              "answer": "TCP port 853",
+              "difficulty": 2,
+              "id": "3.4.1561",
+              "distractors": [
+                "TCP 1433",
+                "TCP 443",
+                "TCP 3389"
+              ]
+            },
+            {
+              "question": "What is DNS over HTTPS (DoH)?",
+              "answer": "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
+              "difficulty": 2,
+              "id": "3.4.1562",
+              "distractors": [
+                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
+                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
+                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+              ]
+            },
+            {
+              "question": "What port does DNS over HTTPS (DoH) use?",
+              "answer": "TCP port 443",
+              "difficulty": 1,
+              "id": "3.4.1563",
+              "distractors": [
+                "TCP 1433",
+                "TCP 443",
+                "TCP 3389"
+              ]
+            },
+            {
+              "question": "How does DoH traffic appear in a packet capture?",
+              "answer": "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS",
+              "difficulty": 3,
+              "id": "3.4.1564",
+              "distractors": [
+                "The DHCP server reassigns the same IP address the device had on its original visit",
+                "Unsolicited RAs are sent to a different multicast address than solicited ones",
+                "It only contacts its local DNS server — the local server handles everything else"
+              ]
+            },
+            {
+              "question": "Which modern applications may already use DoH by default?",
+              "answer": "Some modern browsers use DoH by default",
+              "difficulty": 2,
+              "id": "3.4.1565",
+              "distractors": [
+                "In the DHCP RFC (Request for Comments)",
+                "A fully routable, unique IPv6 address",
+                "Provide an IP address → DNS returns a name"
+              ]
+            },
+            {
+              "question": "What problem does DNSSEC solve that DoT/DoH do not?",
+              "answer": "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
+              "difficulty": 3,
+              "id": "3.4.1566",
+              "distractors": [
+                "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly",
+                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
+                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet"
+              ]
+            },
+            {
+              "question": "What problem do DoT and DoH solve that DNSSEC does not?",
+              "answer": "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear",
+              "difficulty": 3,
+              "id": "3.4.1567",
+              "distractors": [
+                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it",
+                "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
+                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network"
               ]
             }
           ]
@@ -16235,12 +17467,28 @@ const ABBREV_DATA = [
     "full": "Domain Name System"
   },
   {
+    "abbrev": "DNSSEC",
+    "full": "Domain Name Security Extensions"
+  },
+  {
     "abbrev": "DOCSIS",
     "full": "Data Over Cable Service Interface Specification"
   },
   {
+    "abbrev": "DoH",
+    "full": "DNS over HTTPS"
+  },
+  {
     "abbrev": "DORA",
     "full": "Discover, Offer, Request, Acknowledge (DHCP)"
+  },
+  {
+    "abbrev": "DoT",
+    "full": "DNS over TLS"
+  },
+  {
+    "abbrev": "DAD",
+    "full": "Duplicate Address Detection"
   },
   {
     "abbrev": "DRP",
@@ -16487,6 +17735,10 @@ const ABBREV_DATA = [
     "full": "Next-Generation Firewall"
   },
   {
+    "abbrev": "NDP",
+    "full": "Neighbor Discovery Protocol"
+  },
+  {
     "abbrev": "NTP",
     "full": "Network Time Protocol"
   },
@@ -16595,8 +17847,16 @@ const ABBREV_DATA = [
     "full": "Registered Jack type 45"
   },
   {
+    "abbrev": "RA",
+    "full": "Router Advertisement"
+  },
+  {
     "abbrev": "RPC",
     "full": "Remote Procedure Call"
+  },
+  {
+    "abbrev": "RS",
+    "full": "Router Solicitation"
   },
   {
     "abbrev": "SA",
@@ -16637,6 +17897,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "SLA",
     "full": "Service Level Agreement"
+  },
+  {
+    "abbrev": "SLAAC",
+    "full": "Stateless Address Autoconfiguration"
   },
   {
     "abbrev": "SMB",
@@ -16693,6 +17957,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "TFTP",
     "full": "Trivial File Transfer Protocol"
+  },
+  {
+    "abbrev": "TLD",
+    "full": "Top Level Domain"
   },
   {
     "abbrev": "TLS",
