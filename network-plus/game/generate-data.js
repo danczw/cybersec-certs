@@ -237,12 +237,12 @@ function buildData() {
         const objAnswers = obj.concepts.map(c => c.answer);
         concept.distractors = generateDistractors(concept.answer, pool, objAnswers, concept.question);
         // Truncate long answers for multiple choice viability
-        if (concept.answer.length > 150) {
-          concept.answer = concept.answer.substring(0, 147) + '...';
+        if (concept.answer.length > 200) {
+          concept.answer = concept.answer.substring(0, 197) + '...';
         }
         for (let i = 0; i < concept.distractors.length; i++) {
-          if (concept.distractors[i].length > 150) {
-            concept.distractors[i] = concept.distractors[i].substring(0, 147) + '...';
+          if (concept.distractors[i].length > 200) {
+            concept.distractors[i] = concept.distractors[i].substring(0, 197) + '...';
           }
         }
       }
