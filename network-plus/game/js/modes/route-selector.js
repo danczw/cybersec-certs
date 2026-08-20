@@ -76,30 +76,34 @@ const RouteSelector = (() => {
 
     const dest = `${a}.${b}.${c}.${d}`;
 
-    // Routes that DO match the destination
+    // Compute subnet for /28: network address containing d
+    const subnetBlock = Math.floor(d / 16) * 16;
+
+    // Routes that DO match the destination (varying specificity)
     const matching = [
       { network: `${a}.0.0.0`, prefix: 8 },
       { network: `${a}.${b}.0.0`, prefix: 16 },
       { network: `${a}.${b}.${c}.0`, prefix: 24 },
+      { network: `${a}.${b}.${c}.${subnetBlock}`, prefix: 28 },
     ];
 
-    // Routes that do NOT match (different second or third octet)
+    // Near-miss routes: same network, different prefix (tricky!)
+    // Or same prefix, off-by-one in an octet
     const otherB = b === 254 ? b - 1 : b + 1;
     const otherC = c === 254 ? c - 1 : c + 1;
+    const wrongSubnet = subnetBlock >= 240 ? subnetBlock - 16 : subnetBlock + 16;
     const nonMatching = [
       { network: `${a}.${otherB}.0.0`, prefix: 16 },
-      { network: `${a}.${otherB}.${randInt(1,254)}.0`, prefix: 24 },
       { network: `${a}.${b}.${otherC}.0`, prefix: 24 },
-      { network: `${randInt(10,192)}.${randInt(1,254)}.${randInt(1,254)}.0`, prefix: 24 },
+      { network: `${a}.${b}.${c}.${wrongSubnet}`, prefix: 28 },
+      { network: `${a}.${otherB}.${c}.0`, prefix: 24 },
     ];
 
-    // Pick 1-2 matching and 1-2 non-matching (total 3-4 routes)
-    const numMatching = randInt(1, 2);
-    const numNon = 4 - numMatching;
-    const pickedMatching = UI.shuffleArray(matching).slice(0, numMatching);
-    const pickedNon = UI.shuffleArray(nonMatching).slice(0, numNon);
+    // Pick 2 matching and 2 non-matching (total 4 routes)
+    const pickedMatching = UI.shuffleArray(matching).slice(0, 2);
+    const pickedNon = UI.shuffleArray(nonMatching).slice(0, 2);
 
-    const bestRoute = pickedMatching.reduce((a, b) => a.prefix > b.prefix ? a : b);
+    const bestRoute = pickedMatching.reduce((prev, cur) => cur.prefix > prev.prefix ? cur : prev);
 
     const allRoutes = [...pickedMatching, ...pickedNon].map(r => {
       const code = randChoice(Object.keys(ROUTE_CODES));
@@ -111,7 +115,7 @@ const RouteSelector = (() => {
       };
     });
 
-    return { routes: UI.shuffleArray(allRoutes), destination: dest, reason: `Longest matching prefix: /${bestRoute.prefix} (non-matching routes are ignored regardless of prefix length)` };
+    return { routes: UI.shuffleArray(allRoutes), destination: dest, reason: `Longest matching prefix: /${bestRoute.prefix} (non-matching routes ignored regardless of prefix length)` };
   }
 
   function generateADProblem() {
