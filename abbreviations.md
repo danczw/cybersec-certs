@@ -29,8 +29,12 @@
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
 | DNS          | Domain Name System                                           |
+| DNSSEC       | Domain Name Security Extensions                              |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
+| DoH          | DNS over HTTPS                                               |
 | DORA         | Discover, Offer, Request, Acknowledge (DHCP)                 |
+| DoT          | DNS over TLS                                                 |
+| DAD          | Duplicate Address Detection                                  |
 | DRP          | Disaster Recovery Plan                                       |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
@@ -92,6 +96,7 @@
 | NAT          | Network Address Translation                                  |
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
+| NDP          | Neighbor Discovery Protocol                                  |
 | NTP          | Network Time Protocol                                        |
 | OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
@@ -119,7 +124,9 @@
 | RSTP         | Rapid Spanning Tree Protocol                                 |
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
+| RA           | Router Advertisement                                         |
 | RPC          | Remote Procedure Call                                        |
+| RS           | Router Solicitation                                          |
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
 | SAN          | Storage Area Network                                         |
@@ -130,6 +137,7 @@
 | SIEM         | Security Information and Event Management                    |
 | SIP          | Session Initiation Protocol                                  |
 | SLA          | Service Level Agreement                                      |
+| SLAAC        | Stateless Address Autoconfiguration                          |
 | SMB          | Server Message Block                                         |
 | SMTP         | Simple Mail Transfer Protocol                                |
 | SNMP         | Simple Network Management Protocol                           |
@@ -144,6 +152,7 @@
 | STP          | Spanning Tree Protocol                                       |
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
+| TLD          | Top Level Domain                                             |
 | TLS          | Transport Layer Security                                     |
 | TPC          | Transmit Power Control                                       |
 | TTL          | Time to Live                                                 |
