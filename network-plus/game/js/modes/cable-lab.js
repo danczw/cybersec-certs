@@ -210,7 +210,7 @@ const CableLab = (() => {
   function padOptions(options, answer) {
     const unique = [...new Set(options)];
     if (unique.length >= 4) {
-      const others = unique.filter(o => o !== answer).sort(() => Math.random() - 0.5).slice(0, 3);
+      const others = UI.shuffleArray(unique.filter(o => o !== answer)).slice(0, 3);
       return UI.shuffleArray([answer, ...others]);
     }
     // Pull distractors from relevant pool based on answer content
