@@ -72,9 +72,17 @@ const CableLab = (() => {
 
   function randChoice(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 
+  function renderModeBackButton() {
+    const btn = document.createElement('button');
+    btn.className = 'back-btn';
+    btn.innerHTML = '← BACK';
+    btn.addEventListener('click', renderDifficultySelect);
+    return btn;
+  }
+
   function showProblem() {
     container.innerHTML = '';
-    container.appendChild(UI.renderBackButton());
+    container.appendChild(renderModeBackButton());
     container.appendChild(UI.renderSessionStats(sessionStats));
 
     if (currentDifficulty === 1) showConnectorProblem();
