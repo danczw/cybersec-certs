@@ -123,6 +123,7 @@
 | QSFP+        | Quad Enhanced Small Form-Factor Pluggable                    |
 | QoS          | Quality of Service                                           |
 | RDP          | Remote Desktop Protocol                                      |
+| RFB          | Remote Frame Buffer                                          |
 | RFC          | Request for Comments                                         |
 | RF           | Radio Frequency                                              |
 | RFID         | Radio-Frequency Identification                               |
@@ -175,6 +176,7 @@
 | VLSM         | Variable-Length Subnet Mask                                  |
 | VPC          | Virtual Private Cloud                                        |
 | VoIP         | Voice over Internet Protocol                                 |
+| VNC          | Virtual Network Computing                                    |
 | VPN          | Virtual Private Network                                      |
 | WAN          | Wide Area Network                                            |
 | WEP          | Wired Equivalent Privacy                                     |
