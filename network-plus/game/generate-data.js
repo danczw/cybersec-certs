@@ -7,6 +7,7 @@ const path = require('path');
 
 const FLASH_DIR = path.join(__dirname, '..', 'flashcards');
 const ABBREV_FILE = path.join(__dirname, '..', '..', 'abbreviations.md');
+const OVERRIDES_FILE = path.join(__dirname, 'distractor-overrides.json');
 const OUTPUT = path.join(__dirname, 'js', 'data.js');
 
 const DOMAIN_META = [
@@ -46,6 +47,11 @@ function getTitleFromFilename(filename) {
     .replace(/\.md$/, '')
     .replace(/-/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function loadOverrides() {
+  if (!fs.existsSync(OVERRIDES_FILE)) return {};
+  return JSON.parse(fs.readFileSync(OVERRIDES_FILE, 'utf8'));
 }
 
 function classifyQuestion(question, answer) {
@@ -241,6 +247,25 @@ function buildData() {
       }
     }
   }
+
+  // Apply curated distractor overrides (preserves hand-crafted distractors across regeneration)
+  const overrides = loadOverrides();
+  let overrideCount = 0;
+  let newCount = 0;
+  for (const domain of domains) {
+    for (const obj of domain.objectives) {
+      for (const concept of obj.concepts) {
+        if (overrides[concept.id]) {
+          concept.distractors = overrides[concept.id];
+          overrideCount++;
+        } else {
+          newCount++;
+        }
+      }
+    }
+  }
+  if (overrideCount > 0) console.log(`  Applied ${overrideCount} curated distractors`);
+  if (newCount > 0) console.log(`  ${newCount} new questions using auto-generated distractors`);
 
   return { meta: { version: '1.0.0', examCode: 'N10-009', generated: new Date().toISOString() }, domains };
 }
