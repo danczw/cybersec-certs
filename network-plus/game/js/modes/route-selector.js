@@ -35,6 +35,7 @@ const RouteSelector = (() => {
   }
 
   function renderDifficultySelect() {
+    currentDifficulty = null;
     container.innerHTML = '';
     container.appendChild(UI.renderBackButton());
 
