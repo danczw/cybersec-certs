@@ -489,9 +489,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.43",
               "distractors": [
-                "The load balancer handles encryption/decryption instead of the backend servers, reducing server workload",
-                "Cache the DNS resolution for 300 seconds (5 minutes). After that, query DNS again for a fresh resolution.",
-                "Application-Specific Integrated Circuit — the hardware inside switches that enables high-speed forwarding"
+                "A switch that operates at the physical layer and regenerates signals between ports — essentially a multiport repeater",
+                "A switch that uses MAC address tables to forward frames within a single VLAN — standard layer 2 forwarding only",
+                "A switch that performs deep packet inspection at the application layer to filter traffic based on content and protocol"
               ]
             },
             {
@@ -665,9 +665,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.2.59",
               "distractors": [
-                "VPN, layer 3 routing, NAT (Network Address Translation), dynamic routing protocols",
-                "TCP offload, SSL offload, caching, QoS (Quality of Service) prioritization",
-                "Layer 2 (Data Link) — bridges 802.11 wireless and 802.3 ethernet networks"
+                "SAN uses dedicated high-speed fiber channel network, so storage traffic never competes with regular LAN traffic",
+                "SAN supports file-level locking across multiple clients, allowing concurrent access without data corruption",
+                "SAN presents storage as a shared folder using SMB/NFS protocols, making access simpler for applications"
               ]
             },
             {
@@ -676,9 +676,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.60",
               "distractors": [
-                "Layer 4 (Transport) — shows source and destination port numbers",
-                "Layer 6 (Presentation)",
-                "Layer 3 (Network) — shows source and destination IP addresses"
+                "Layer 1 (Physical) — converts data into radio frequency signals for transmission",
+                "Layer 3 (Network) — routes packets between wireless clients and the wired network",
+                "Layer 4 (Transport) — manages session state for each wireless client connection"
               ]
             },
             {
@@ -742,9 +742,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.66",
               "distractors": [
-                "Centralized management means all APs share configuration and session state, so clients can move between APs without dropping connection",
-                "Virtual Private Network — connects to a remote network with all data encrypted, secure even across insecure networks like the public internet",
-                "A centralized management device for all access points — deploy configs, monitor, push changes, and enable seamless roaming from one location"
+                "Network Access Control — verifies device health and security posture before allowing connection to the network",
+                "Network Attached Topology — defines how devices are logically arranged and communicate within a subnet",
+                "Network Authentication Token — a credential exchanged between client and server to verify identity on the network"
               ]
             },
             {
@@ -775,9 +775,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.69",
               "distractors": [
-                "The number of seconds a DNS resolution should be cached locally. After TTL expires, the client must query DNS again.",
-                "Explicit proxy requires OS/application configuration to use; transparent proxy works invisibly with no client changes",
-                "Diverse network types — LAN to WAN, copper to fiber. May have many different interfaces for different connection types."
+                "It encrypts all traffic so users cannot inspect headers to discover intermediate devices in the path",
+                "It operates at Layer 1, so no IP address is assigned and it cannot be detected by traceroute",
+                "It uses NAT to rewrite source addresses, hiding the backend topology but users see the NAT device"
               ]
             },
             {
@@ -852,9 +852,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.76",
               "distractors": [
-                "Real-time audio/video gets higher priority than file transfers",
-                "Layer 2 (Data Link) — forwards traffic based on MAC addresses",
-                "The packet can pass through 58 more routers before being discarded"
+                "Layer 3 networks by routing packets between different IP subnets using OSPF or RIP",
+                "5 GHz and 6 GHz radio bands, allowing dual-band clients to use either frequency",
+                "WAN and LAN interfaces at Layer 3, translating between public and private IP addressing"
               ]
             },
             {
@@ -1226,9 +1226,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.2.110",
               "distractors": [
-                "No. It's a conceptual framework. Most protocols today are TCP/IP-based, but the OSI model can describe them all.",
-                "No granularity — once defined, rules automatically apply to all virtual cloud networks, even where not needed",
-                "No — GRE only provides encapsulation/tunneling. You need additional protocols (like IPSec) for encryption."
+                "No — QoS only classifies traffic by port number and protocol; it cannot identify specific applications within the same port",
+                "Yes — but only at Layer 3 by examining source and destination IP addresses, not the actual application payload",
+                "No — QoS relies entirely on DSCP markings set by the sending device; the QoS device itself cannot inspect traffic content"
               ]
             },
             {
@@ -1452,9 +1452,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.3.130",
               "distractors": [
-                "Virtual Network Interface Card",
-                "Network Address Translation",
-                "Infrastructure as a Service"
+                "Platform as a Service (PaaS)",
+                "Software as a Service (SaaS)",
+                "Desktop as a Service (DaaS)"
               ]
             },
             {
@@ -1683,9 +1683,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.3.151",
               "distractors": [
-                "Data Over Cable Service Interface Specification",
-                "Transmitter + receiver combined in one component",
-                "Open Systems Interconnection Reference Model"
+                "Hosting as a Service — web hosting managed by a cloud provider",
+                "Hybrid as a Service — a mix of public and private cloud resources",
+                "High-availability as a Service — redundant infrastructure managed by a provider"
               ]
             },
             {
@@ -1749,9 +1749,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.3.157",
               "distractors": [
-                "On-demand software accessed via browser — someone else writes, manages, and upgrades the application; your data is stored on their platform",
-                "Middle ground — more control than SaaS (you build the app) but less infrastructure responsibility than IaaS (provider manages the platform)",
-                "Firewall rules applied at the VPC level that control inbound and outbound traffic based on port numbers, protocols, and IP addresses"
+                "Using software-defined networking controllers to centrally manage the forwarding plane of physical switches and routers across the data center",
+                "Creating isolated virtual networks within a hypervisor so multiple tenants can share the same physical infrastructure without seeing each other's t...",
+                "Abstracting storage resources into pools that can be dynamically allocated to virtual machines regardless of the underlying physical disk hardware"
               ]
             },
             {
@@ -1760,9 +1760,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.3.158",
               "distractors": [
-                "Extended Service Set Identifier",
-                "Quad Small Form-factor Pluggable",
-                "Intermediate Distribution Frame"
+                "Network Fabric Visualization",
+                "Node Forwarding Virtualization",
+                "Network Frame Verification"
               ]
             },
             {
@@ -2261,9 +2261,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "1.4.203",
               "distractors": [
-                "AH (Authentication Header) provides integrity/authentication only — no encryption. ESP (Encapsulation Security Payload) provides both encryption AN...",
-                "Each application uses a different port number, so the client opens three connections with different ephemeral source ports to different destination...",
-                "A socket on a server that waits for incoming connections on a well-known port; when a client connects, the server spawns a new socket for that spec..."
+                "FTP: uses UDP for fast bulk transfers with no error checking. TFTP: uses TCP for reliable file delivery with acknowledgment of each block",
+                "FTP: transfers files only within the local subnet. TFTP: supports routed transfers across multiple networks using port 69",
+                "FTP: encrypts all data in transit using TLS on port 990. TFTP: transfers in cleartext but authenticates users with a username and password"
               ]
             },
             {
@@ -2327,9 +2327,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.209",
               "distractors": [
-                "Sending email from clients to mail servers and transferring email between mail servers",
-                "The room within the house — which application on the device should receive the data",
-                "Internet Security Association and Key Management Protocol — the Phase 1 process of IKE"
+                "Translating private IP addresses to public addresses for internet-bound traffic",
+                "Resolving hostnames to IP addresses so devices can locate each other on the network",
+                "Monitoring network device status and sending alerts when thresholds are exceeded"
               ]
             },
             {
@@ -2470,9 +2470,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.222",
               "distractors": [
-                "Anycast DNS — a DNS query is routed to the nearest data center that can respond",
-                "Both: unicast, multicast, anycast. IPv4 only: broadcast. IPv6 has no broadcast.",
-                "Internet Protocol (IP) — does the heavy lifting of moving data across the network"
+                "Monitoring network bandwidth utilization and generating alerts when thresholds are exceeded",
+                "Querying device configuration parameters using GET and SET requests over UDP",
+                "Resolving fully qualified domain names to IP addresses for network hosts"
               ]
             },
             {
@@ -2536,9 +2536,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.4.228",
               "distractors": [
-                "TCP 25 (plain text) and TCP 587 (with TLS encryption)",
-                "TCP 5060 (unencrypted) and TCP 5061 (encrypted)",
-                "TCP 20 (data transfer) and TCP 21 (control/commands)"
+                "Telnet or RCP — both use TCP 22 for remote terminal access",
+                "SCP or HTTPS — both use TCP 22 for encrypted file transfer",
+                "SNMP or Syslog — both use TCP 22 for network management"
               ]
             },
             {
@@ -2580,9 +2580,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.232",
               "distractors": [
-                "UDP 161 (queries) and UDP 162 (traps)",
-                "UDP 67 (server) and UDP 68 (client)",
-                "TCP 5060 (unencrypted) and TCP 5061 (encrypted)"
+                "SSH — Secure Shell",
+                "SMB — Server Message Block",
+                "VNC — Virtual Network Computing"
               ]
             },
             {
@@ -2624,9 +2624,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.236",
               "distractors": [
-                "UDP 67 (server) and UDP 68 (client)",
-                "TCP 5060 (unencrypted) and TCP 5061 (encrypted)",
-                "UDP 161 (queries) and UDP 162 (traps)"
+                "SNMP — network device monitoring",
+                "TFTP — trivial file transfers",
+                "DNS — name resolution"
               ]
             },
             {
@@ -2745,9 +2745,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.247",
               "distractors": [
-                "TCP 20 (data transfer) and TCP 21 (control/commands)",
-                "TCP 5060 (unencrypted) and TCP 5061 (encrypted)",
-                "The house address — which device to deliver to"
+                "The transport protocol (TCP or UDP) — how the data gets delivered",
+                "The IP address — identifying which network path to take",
+                "The physical cable or medium carrying the electrical signals"
               ]
             },
             {
@@ -2767,9 +2767,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.249",
               "distractors": [
-                "SMB (Server Message Block) — Microsoft file/printer sharing",
-                "Destination network unreachable; Time exceeded (TTL expired)",
-                "The local broadcast domain — broadcasts cannot cross routers"
+                "IP addresses — they label each box with source and destination so the truck knows where to deliver",
+                "The network interface cards — they physically load and unload data onto the truck",
+                "Ethernet frames — they are the outer containers holding everything together during transit"
               ]
             },
             {
@@ -3185,9 +3185,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.4.287",
               "distractors": [
-                "SIP — VoIP session initiation (unencrypted)",
-                "IMAP or POP3 (not SMTP — SMTP is for sending)",
-                "~1 millisecond difference between devices"
+                "All devices on the subnet automatically receive every multicast packet by default",
+                "The router broadcasts the traffic to every interface in the network",
+                "Devices receive it based on their MAC address matching the multicast destination"
               ]
             },
             {
@@ -3427,9 +3427,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.309",
               "distractors": [
-                "Negotiates ciphers and key sizes, negotiates inbound and outbound Security Associations, then encrypted data is sent over the ESP tunnel",
-                "Inserts an IPSec header between the original IP header and data; encrypts only the data portion. Original IP header remains in the clear.",
-                "No — both protocols use the same network with the same probability of successful delivery; the difference is only in feedback mechanisms"
+                "A VPN where individual remote users install client software to connect back to the corporate network from any location",
+                "A VPN built into the web browser using HTML5 and TLS, requiring no additional client software on the endpoint",
+                "A split-tunnel configuration where only corporate-destined traffic goes through the VPN while internet traffic goes directly out"
               ]
             },
             {
@@ -3592,9 +3592,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.4.324",
               "distractors": [
-                "The receiving station tells the sender to speed up or slow down transmission based on how well traffic is being received",
-                "Fully Qualified Domain Name — the complete domain name (e.g., www.professormesser.com) that DNS translates to an IP address",
-                "Port 161: management station queries a device. Port 162: device proactively sends alerts (traps) to the management station."
+                "Transport mode — it encrypts only the payload while preserving the original IP header for faster routing",
+                "Aggressive mode — it completes the IKE handshake in fewer exchanges, reducing connection setup time",
+                "Main mode — it encrypts the entire packet including headers, providing maximum identity protection during negotiation"
               ]
             },
             {
@@ -3603,9 +3603,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "1.4.325",
               "distractors": [
-                "So clients know where to send initial requests — without a predictable port, clients wouldn't know where to connect",
-                "A combination of IP address + protocol (TCP/UDP) + port number that identifies one endpoint of a network connection",
-                "Next header, payload length, SPI (Security Parameters Index), sequence number, and ICV (Integrity Check Value) hash"
+                "The final destination host's IP address, so the packet routes directly to the target without additional decapsulation",
+                "The default gateway's address of the sending host, so return traffic follows the same encrypted path",
+                "A multicast group address that all VPN endpoints share, allowing simultaneous delivery to all tunnel members"
               ]
             },
             {
@@ -3763,9 +3763,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.339",
               "distractors": [
-                "Yes — each interface can have a different transceiver and therefore a different media type",
-                "Coaxial cable modem connections — connects cable television infrastructure to a cable modem",
-                "Because the larger core allows multiple modes (paths) of light to bounce through the fiber"
+                "Two copper conductors twisted around each other to reduce electromagnetic interference",
+                "A cable with a single solid copper core surrounded by a braided copper shield for grounding",
+                "A fiber optic design where two glass strands run parallel for full-duplex communication"
               ]
             },
             {
@@ -3829,9 +3829,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.345",
               "distractors": [
-                "Additional cost",
-                "Wi-Fi 6 and 6E",
-                "Inexpensive LED"
+                "QSFP+ interface",
+                "GBIC interface",
+                "RJ45 interface"
               ]
             },
             {
@@ -3983,9 +3983,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.359",
               "distractors": [
-                "Enhanced Small Form-factor Pluggable",
-                "Square connector, standard connector",
-                "One for transmit and one for receive"
+                "Ethernet LAN connections up to 1 Gbps",
+                "Serial console management port connections",
+                "Fiber optic patch panel terminations"
               ]
             },
             {
@@ -4005,9 +4005,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.361",
               "distractors": [
-                "4 Gbps (4 channels of 1 Gbps SFP)",
-                "6 positions, 2 conductors (6P2C)",
-                "Quad Small Form-factor Pluggable"
+                "6 positions, 6 conductors (6P6C)",
+                "8 positions, 4 conductors (8P4C)",
+                "6 positions, 4 conductors (6P4C)"
               ]
             },
             {
@@ -4027,9 +4027,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.363",
               "distractors": [
-                "FEP (Fluorinated Ethylene Polymer) or low-smoke PVC",
-                "Push-in with snap lock — pull to unlock and remove",
-                "Protective cover at the connector end of the fiber"
+                "RJ11 and RJ45 are the same physical size but use different wiring standards",
+                "RJ45 is smaller; RJ11 is wider to accommodate more conductor positions",
+                "Both are identical in size — the difference is only in the number of active pins used"
               ]
             },
             {
@@ -4060,9 +4060,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.366",
               "distractors": [
-                "F-connector (used for cable modem connections)",
-                "More efficient use of space — 12 fibers in a single connector instead of individual connections",
-                "SC (Subscriber Connector) — MPO also uses a similar mechanism"
+                "Fiber optic patch panels — connects single-mode fiber runs between distribution frames",
+                "DSL telephone connections — connects twisted-pair wiring from the demarc to the modem",
+                "Serial WAN links — connects routers to CSU/DSU equipment for leased-line connections"
               ]
             },
             {
@@ -4214,9 +4214,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.380",
               "distractors": [
-                "Using a single frequency to transmit data over the network",
-                "10 Gbps, baseband (single frequency), twisted-pair copper",
-                "Less flexible — harder to install around twists and turns"
+                "DSL signals are analog just like voice, so the same connector carries both without conversion",
+                "The RJ11 connector was redesigned for DSL with additional pins to carry digital data",
+                "DSL requires the phone line's voice signal as a carrier wave, so it must share the same jack"
               ]
             },
             {
@@ -4258,9 +4258,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.384",
               "distractors": [
-                "Baseband = single frequency for data. Broadband = multiple frequencies for data.",
-                "A coaxial-style cable with two conductors inside, associated with 10 Gbps Ethernet",
-                "Longer distances, not susceptible to RF interference, difficult to tap (more secure)"
+                "1000 = wavelength in nm, BASE = baseband signaling, T = TIA/EIA standard revision",
+                "1000 = cable length in meters, BASE = single-mode fiber, T = terminated connector",
+                "1000 = speed in Mbps (1 Gbps), BASE = broadband signaling, T = TIA certification category"
               ]
             },
             {
@@ -4577,9 +4577,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.413",
               "distractors": [
-                "Long-Term Evolution",
-                "Media Access Control",
-                "Subscriber Connector"
+                "Multiple Path Optical",
+                "Modular Plug Optical",
+                "Multi-Purpose Optic"
               ]
             },
             {
@@ -4599,9 +4599,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.415",
               "distractors": [
-                "SC (Subscriber Connector) — MPO also uses a similar mechanism",
-                "F-connector (used for cable modem connections)",
-                "Coaxial cable modem connections — connects cable television infrastructure to a cable modem"
+                "Lower signal loss over long distances — MPO uses angled physical contact (APC) polish for reduced reflection",
+                "Tool-less termination in the field — MPO connectors can be crimped without fusion splicing equipment",
+                "Backward compatibility — MPO connectors plug directly into existing SC and LC port receptacles"
               ]
             },
             {
@@ -4665,9 +4665,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.421",
               "distractors": [
-                "ST (Straight Tip)",
-                "F-connector on a coaxial cable",
-                "LC (Local Connector)"
+                "SC (the \"standard connector\" — its square shape is more compact)",
+                "ST (Straight Tip — the bayonet design makes it the smallest profile)",
+                "All three are the same physical size — only the locking mechanism differs"
               ]
             },
             {
@@ -4676,9 +4676,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.422",
               "distractors": [
-                "Single-mode (intense LED or laser vs inexpensive LED for multimode)",
-                "Baseband — a single frequency is used to send data over the network",
-                "The IEEE 802.3 standards specify the minimum cable category required"
+                "To maintain precise alignment of the fiber cores for a proper optical connection",
+                "To provide strain relief so the cable jacket doesn't pull on the glass fiber",
+                "To seal the connection from dust and moisture that could degrade the signal"
               ]
             },
             {
@@ -4731,9 +4731,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.427",
               "distractors": [
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
-                "Yes — long-term when two devices are permanently connected, or temporary for tasks like IoT device configuration",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+                "Yes — SFP form factors are universal, so any transceiver fits any SFP slot regardless of network type",
+                "No — Fibre Channel transceivers use a different physical form factor that won't fit Ethernet SFP slots",
+                "Yes — the switch auto-negotiates the protocol and converts Fibre Channel frames to Ethernet frames"
               ]
             },
             {
@@ -4753,9 +4753,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.429",
               "distractors": [
-                "Network Address Translation",
-                "Infrastructure as a Service",
-                "Variable-Length Subnet Mask"
+                "Structured Fiber Protocol",
+                "Serial Framing Pluggable",
+                "Switched Fabric Port"
               ]
             },
             {
@@ -5193,9 +5193,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.469",
               "distractors": [
-                "Push-in with snap lock — pull to unlock and remove",
-                "RJ11 is smaller; RJ45 is slightly larger and wider",
-                "Institute of Electrical and Electronics Engineers"
+                "Multimode (the larger core allows signal to travel further with less attenuation)",
+                "Both are equal in distance — the difference is only bandwidth capacity",
+                "Multimode (multiple light paths provide redundancy allowing longer runs)"
               ]
             },
             {
@@ -5281,9 +5281,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.477",
               "distractors": [
-                "Additional cost",
-                "SFP+ interface",
-                "Inexpensive LED"
+                "Wi-Fi 5",
+                "Wi-Fi 4",
+                "Wi-Fi 7"
               ]
             },
             {
@@ -5369,9 +5369,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "1.5.485",
               "distractors": [
-                "Up to 10 Gbps",
-                "SFP+ interface",
-                "Up to 16 Gbps"
+                "600 Mbps–9.6 Gbps",
+                "54 Mbps–6.9 Gbps",
+                "433 Mbps–6.93 Gbps"
               ]
             },
             {
@@ -5402,9 +5402,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.488",
               "distractors": [
-                "802.11",
-                "RJ11",
-                "1 Gbps"
+                "2.4 GHz",
+                "2.4 GHz and 5 GHz",
+                "6 GHz"
               ]
             },
             {
@@ -5435,9 +5435,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.491",
               "distractors": [
-                "Square connector, standard connector",
-                "Analog telephone and DSL connections",
-                "One for transmit and one for receive"
+                "Wi-Fi and cellular into a single radio that handles both data types simultaneously",
+                "Voice and data networks into separate dedicated channels with guaranteed bandwidth for each",
+                "2.4 GHz and 5 GHz frequency bands into one combined wireless broadband standard"
               ]
             },
             {
@@ -5479,9 +5479,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.495",
               "distractors": [
-                "Up to 16 Gbps",
-                "1.4–46.1 Gbps",
-                "SFP+ interface"
+                "Up to 1 Gbps",
+                "Up to 100 Gbps",
+                "Up to 600 Mbps"
               ]
             },
             {
@@ -5738,9 +5738,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.6.518",
               "distractors": [
-                "Star (hub-and-spoke)",
-                "Core, Distribution, Access",
-                "Traffic uses an alternate path"
+                "In each building's main distribution frame (MDF)",
+                "At the network edge closest to end users",
+                "Distributed across all building distribution switches"
               ]
             },
             {
@@ -5804,9 +5804,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.6.524",
               "distractors": [
-                "No — spine switches do NOT connect directly to each other",
-                "Highways — connecting homes (access) to downtown (core)",
-                "Each device/location connects via multiple network paths"
+                "Higher cost — requires more switches and routers than a three-tier design",
+                "More complex configuration — combining layers makes troubleshooting harder",
+                "Lower throughput — the combined layer creates a bottleneck for inter-VLAN traffic"
               ]
             },
             {
@@ -5925,9 +5925,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.6.535",
               "distractors": [
-                "Layer 6 (Presentation)",
-                "Layer 2 (Data Link)",
-                "Layer 4 (Transport)"
+                "Distribution layer",
+                "Core layer",
+                "Aggregation layer"
               ]
             },
             {
@@ -5969,9 +5969,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.6.539",
               "distractors": [
-                "Layer 6 (Presentation)",
-                "Layer 4 (Transport)",
-                "Layer 2 (Data Link)"
+                "Distribution layer",
+                "Core layer",
+                "Aggregation layer"
               ]
             },
             {
@@ -6090,9 +6090,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.6.550",
               "distractors": [
-                "Point-to-point",
-                "Core routers",
-                "Access layer"
+                "Mesh",
+                "Bus",
+                "Ring"
               ]
             },
             {
@@ -6481,9 +6481,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.585",
               "distractors": [
-                "10 bits (2^10 − 2 = 1,022) — 9 bits only gives 510, but you'd use /22 mask (32 − 10 = 22)",
-                "Subnet bits: 28 − 24 = 4 → 2^4 = 16 subnets | Host bits: 32 − 28 = 4 → 2^4 − 2 = 14 hosts",
-                "After the first 8 bits (first octet) — first octet is network, last three octets are host"
+                "Start with 128 on the right, halve each position moving left (128, 64, 32, 16, 8, 4, 2, 1)",
+                "Start with 256 on the left, subtract 1 from each position moving right (256, 255, 254, ...)",
+                "Start with 0 on the left, add the previous two values together moving right (0, 1, 1, 2, 3, 5, 8, ...)"
               ]
             },
             {
@@ -6591,9 +6591,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.595",
               "distractors": [
-                "2^n (where n = number of bits)",
-                "Copy the subnet ID octet down",
-                "The last address in the subnet"
+                "11000000 (128 + 64)",
+                "11111000 (128 + 64 + 32 + 16 + 8)",
+                "11100000 (128 + 64 + 32)"
               ]
             },
             {
@@ -6668,9 +6668,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.602",
               "distractors": [
-                "A bit",
-                "Octet",
-                "1110"
+                "512",
+                "2048",
+                "256"
               ]
             },
             {
@@ -6745,9 +6745,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.609",
               "distractors": [
-                "255.255.255.224",
-                "/17 through /24",
-                "/25 through /30"
+                "2^(host bits) − 2",
+                "2^(network bits)",
+                "2^(subnet bits) − 2"
               ]
             },
             {
@@ -6833,9 +6833,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.617",
               "distractors": [
-                "16 (Class A default is /8, so 24 − 8 = 16)",
-                "5 (Class B default is /16, so 21 − 16 = 5)",
-                "Class A (first octet 17 is in range 0–127)"
+                "6 (Class C default is /24, so 30 − 24 = 6)",
+                "10 (Class C default is /16, so 26 − 16 = 10)",
+                "4 (Class C default is /24, but 2 bits reserved for broadcast = 4 usable)"
               ]
             },
             {
@@ -6899,9 +6899,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "1.7.623",
               "distractors": [
-                "Start with 1 on the right, double each position moving left (1, 2, 4, 8, 16, 32, 64, 128)",
-                "After the first 8 bits (first octet) — first octet is network, last three octets are host",
-                "10 bits (2^10 − 2 = 1,022) — 9 bits only gives 510, but you'd use /22 mask (32 − 10 = 22)"
+                "Subnet bits: 28 − 24 = 4 → 2^4 = 16 subnets | Host bits: 32 − 28 = 4 → 2^4 − 2 = 16 hosts",
+                "Subnet bits: 28 − 24 = 4 → 2^4 − 2 = 14 subnets | Host bits: 32 − 28 = 4 → 2^4 = 16 hosts",
+                "Subnet bits: 28 − 16 = 12 → 2^12 = 4,096 subnets | Host bits: 32 − 28 = 4 → 2^4 − 2 = 14 hosts"
               ]
             },
             {
@@ -6976,9 +6976,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.630",
               "distractors": [
-                "12",
-                "90",
-                "10"
+                "16",
+                "64",
+                "24"
               ]
             },
             {
@@ -6998,9 +6998,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.632",
               "distractors": [
-                "128–191",
-                "4 (2^2)",
-                "0 and 1"
+                "32,768",
+                "131,072",
+                "16,384"
               ]
             },
             {
@@ -7086,9 +7086,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.640",
               "distractors": [
-                "A bit",
-                "2,048",
-                "Octet"
+                "128–191",
+                "192–223",
+                "1–126"
               ]
             },
             {
@@ -7196,9 +7196,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.650",
               "distractors": [
-                "The network portion of the address",
-                "169.254.0.1 through 169.254.255.254",
-                "Subnet ID value + magic number − 1"
+                "Multicast group communication",
+                "Private addressing for internal networks",
+                "Experimental research and testing by IANA"
               ]
             },
             {
@@ -7218,9 +7218,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.652",
               "distractors": [
-                "5 (Class B default is /16, so 21 − 16 = 5)",
-                "2 (Class C default is /24, so 26 − 24 = 2)",
-                "16 (Class A default is /8, so 24 − 8 = 16)"
+                "Class B (first octet 17 is in range 0–191)",
+                "Class C (first octet 17 is in range 1–126)",
+                "Class B (first octet 17 is in range 16–31)"
               ]
             },
             {
@@ -7416,9 +7416,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.670",
               "distractors": [
-                "10 bits (2^10 − 2 = 1,022) — 9 bits only gives 510, but you'd use /22 mask (32 − 10 = 22)",
-                "Subnet bits: 28 − 24 = 4 → 2^4 = 16 subnets | Host bits: 32 − 28 = 4 → 2^4 − 2 = 14 hosts",
-                "Start with 1 on the right, double each position moving left (1, 2, 4, 8, 16, 32, 64, 128)"
+                "After the first 16 bits (first two octets) — first two octets are network, last two octets are host",
+                "After the first 24 bits (first three octets) — first three octets are network, last octet is host",
+                "After the first 12 bits (first octet plus nibble) — variable boundary based on subnet mask applied"
               ]
             },
             {
@@ -7691,9 +7691,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.695",
               "distractors": [
-                "Classless Inter-Domain Routing (CIDR) — allows subnet masks of any length",
-                "10.183.255.255 — interesting octet: 176 + 8 − 1 = 183; mask 0 octets → 255",
-                "1993 — still referenced colloquially but no longer used for subnet masking"
+                "Contacts the DHCP server to verify the address is not already leased to another client",
+                "Generates a cryptographic hash of the MAC address to guarantee a unique IP assignment",
+                "Checks a locally stored database of previously assigned addresses on the subnet"
               ]
             },
             {
@@ -7889,9 +7889,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.713",
               "distractors": [
-                "Bring down the IP address octet",
-                "The first address in the subnet",
-                "2^n (where n = number of bits)"
+                "The network portion of the address",
+                "The subnet identifier bits",
+                "Unused or reserved bits in the address"
               ]
             },
             {
@@ -8021,9 +8021,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "1.7.725",
               "distractors": [
-                "255.255.240.0 (8+8+4 = 20 network bits, 12 host bits)",
-                "255.255.224.0 (8+8+3 = 19 network bits, 13 host bits)",
-                "172.16.242.159 — interesting octet: 128 + 32 − 1 = 159"
+                "255.255.248.0 (8+8+5 = 21 network bits, 11 host bits)",
+                "255.255.254.0 (8+8+7 = 23 network bits, 9 host bits)",
+                "255.255.192.0 (8+8+2 = 18 network bits, 14 host bits)"
               ]
             },
             {
@@ -8054,9 +8054,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.7.728",
               "distractors": [
-                "6 (32 − 26 = 6 host bits)",
-                "255 (128+64+32+16+8+4+2+1)",
-                "/19 (8+8+3 = 19 one-bits)"
+                "/22 (8+8+6 = 22 one-bits)",
+                "/18 (8+8+2 = 18 one-bits)",
+                "/24 (8+8+8 = 24 one-bits)"
               ]
             },
             {
@@ -8098,9 +8098,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.732",
               "distractors": [
-                "/19 (8+8+3 = 19 one-bits)",
-                "255 (128+64+32+16+8+4+2+1)",
-                "/20 (8+8+4 = 20 one-bits)"
+                "8 (32 − 26 = 8 host bits, minus 2 for network and broadcast)",
+                "26 (the prefix length equals the number of available host bits)",
+                "4 (the last octet has 4 usable bits after the subnet portion)"
               ]
             },
             {
@@ -8164,9 +8164,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.738",
               "distractors": [
-                "Subnet bits: 20 − 16 = 4 → 2^4 = 16 subnets | Host bits: 32 − 20 = 12 → 2^12 − 2 = 4,094 hosts",
-                "Automatically assigns IP address, subnet mask, and default gateway to devices on the network",
-                "A unique identifier every device on the network must have to communicate using the IP protocol"
+                "1) Subnet mask 2) Default gateway 3) Number of subnets 4) Number of hosts per subnet",
+                "1) Network class 2) Subnet bits 3) Host bits 4) CIDR notation",
+                "1) Magic number 2) Block size 3) Wildcard mask 4) Number of subnets"
               ]
             },
             {
@@ -8230,9 +8230,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.744",
               "distractors": [
-                "65,536 (2^16)",
-                "254 (2^8 − 2)",
-                "130 (128 + 2)"
+                "Broadcast address − 1",
+                "Subnet ID + subnet mask",
+                "Network address + network bits"
               ]
             },
             {
@@ -8527,9 +8527,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.771",
               "distractors": [
-                "Start at 2, double down (2, 4, 8, 16, 32, 64, 128, 256)",
-                "255.255.255.224 (8+8+8+3 = 27 network bits, 5 host bits)",
-                "255.255.255.192 (8+8+8+2 = 26 network bits, 6 host bits)"
+                "Subtracting the subnet mask from 256 to find the magic number",
+                "Dividing the number of hosts by 2 to find the midpoint of each subnet",
+                "Multiplying the number of subnet bits by the block size"
               ]
             },
             {
@@ -9057,9 +9057,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.1.818",
               "distractors": [
-                "All routers automatically learn the new routes",
-                "All routers automatically remove those routes",
-                "The source IP address (from private to public)"
+                "A routing protocol that exchanges topology information between directly connected routers",
+                "A group of routers that share the same routing table through automatic synchronization",
+                "A collection of subnets advertised as a single summarized route to external networks"
               ]
             },
             {
@@ -9068,9 +9068,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.1.819",
               "distractors": [
-                "No automatic rerouting — administrator must manually reconfigure routes",
-                "Port numbers increment for each new session — same public IP, different port",
-                "No — metrics are internal to each protocol (BGP metrics ≠ EIGRP metrics)"
+                "Between Autonomous Systems — connecting different organizations across the internet backbone",
+                "Only on edge routers that peer with external ISPs and exchange routes between organizations",
+                "Exclusively on WAN links between geographically separated sites owned by different companies"
               ]
             },
             {
@@ -9112,9 +9112,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.1.823",
               "distractors": [
-                "Registered Jack type 45",
-                "Virtual Private Network",
-                "Registered Jack type 11"
+                "Bridge Gateway Protocol",
+                "Border Graph Protocol",
+                "Broadband Gateway Protocol"
               ]
             },
             {
@@ -9420,9 +9420,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.1.851",
               "distractors": [
-                "A network under single administrative control",
-                "All routers automatically remove those routes",
-                "All routers automatically learn the new routes"
+                "The destination IP address (from public to private)",
+                "The TTL value (decrements by one at each hop)",
+                "The source and destination MAC addresses"
               ]
             },
             {
@@ -9772,9 +9772,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.1.883",
               "distractors": [
-                "A remote site with a single connection — all traffic uses one path",
-                "The destination network (with subnet mask) and the next hop IP address",
-                "The IP address of the next router that should receive the packet"
+                "Separate physical ports on a switch configured with different VLAN assignments",
+                "Logical tunnel endpoints that encapsulate traffic between two remote sites",
+                "Virtual routing instances that maintain independent routing tables on a single router"
               ]
             },
             {
@@ -9893,9 +9893,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.1.894",
               "distractors": [
-                "1) Routing decisions — link state vs. hop count vs. link speed 2) Convergence time — seconds vs. minutes 3) Router compatibility — cross-manufactur...",
-                "1) Challenging on larger networks (hundreds/thousands of routers) 2) Misconfiguration can create routing loops 3) Routes don't change automatically...",
-                "1) Router listens for routing updates on local subnet (sent directly or via multicast) 2) Builds its own routing table from received updates 3) Sen..."
+                "1) Automatically adapts to topology changes 2) Scales easily to large networks 3) Discovers new routes without manual intervention 4) Reduces admin...",
+                "1) Uses bandwidth for routing updates 2) Requires CPU/memory for route calculations 3) More complex initial configuration 4) Potential security ris...",
+                "1) Provides load balancing across equal-cost paths 2) Supports route summarization 3) Exchanges topology information with neighbors 4) Converges au..."
               ]
             },
             {
@@ -9915,9 +9915,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.1.896",
               "distractors": [
-                "Yes — long-term when two devices are permanently connected, or temporary for tasks like IoT device configuration",
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+                "Static routes use less bandwidth because they compress routing table entries before forwarding",
+                "Static routes bypass the switching fabric and forward packets directly at the hardware level",
+                "Static routes are cached in the interface buffer so the CPU never processes them"
               ]
             },
             {
@@ -9948,9 +9948,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.1.899",
               "distractors": [
-                "1) Most specific prefix length 2) Lowest administrative distance 3) Lowest routing metric",
-                "No — they are not routable on the public internet; used internally in homes and businesses",
-                "Cisco — it has proprietary aspects, but may be available on other manufacturers' routers"
+                "A condition where a router's table exceeds its memory capacity, causing it to drop the longest-prefix routes first",
+                "A split-horizon violation where a router advertises a learned route back to the interface it was received on",
+                "A default gateway configuration that forwards all unknown traffic to a next-hop router outside the autonomous system"
               ]
             },
             {
@@ -10119,9 +10119,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.914",
               "distractors": [
-                "After the source MAC address",
-                "Maximum Transmission Unit",
-                "Rapid Spanning Tree Protocol"
+                "Simplex or duplex",
+                "Auto duplex or manual duplex",
+                "Single duplex or dual duplex"
               ]
             },
             {
@@ -10361,9 +10361,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.2.936",
               "distractors": [
-                "Clears existing tables and restarts the process",
-                "Connection will not work at all — no link light",
-                "Root port (RP), Designated port, Blocked port"
+                "It fragments the frames into standard 1500-byte MTU sizes and reassembles at the destination",
+                "It automatically negotiates down to the standard 1500-byte frame size for that segment",
+                "It buffers the oversized frames and sends them during the next available transmission window"
               ]
             },
             {
@@ -10471,9 +10471,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.946",
               "distractors": [
-                "Cannot connect to other IP devices on the network",
-                "Works very similarly — just operates much faster",
-                "Not forwarding any traffic — used to prevent loops"
+                "The port is sending BPDUs to neighboring switches but not passing user data",
+                "The port is transitioning from blocking to active and populating its MAC table",
+                "The port is designated as the backup path and only activates during failover"
               ]
             },
             {
@@ -10526,9 +10526,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.951",
               "distractors": [
-                "Error messages appear in the switch log",
-                "Based on shortest path to the root bridge",
-                "By number (VLAN 1, VLAN 2, VLAN 3, etc.)"
+                "A port administratively shut down by an engineer for security purposes",
+                "A port that is listening for BPDUs but not yet forwarding traffic",
+                "A port where traffic is filtered by an access control list"
               ]
             },
             {
@@ -10548,9 +10548,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.2.953",
               "distractors": [
-                "A port disabled by STP to prevent a loop",
-                "By number (VLAN 1, VLAN 2, VLAN 3, etc.)",
-                "Route between VLANs within the same switch"
+                "Based on the lowest port number connected to the root bridge",
+                "Based on which port has the highest bandwidth to any neighboring switch",
+                "Based on the MAC address of the directly connected upstream switch"
               ]
             },
             {
@@ -10680,9 +10680,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.965",
               "distractors": [
-                "Switched Virtual Interfaces — the inter-VLAN routing interfaces on a layer 3 switch",
-                "An automated standard (IEEE 802.1D) that recognizes and prevents loops on a network",
-                "STP recognizes the loop and causes one of the interfaces to be in a blocking state"
+                "A Virtual Private Network — an encrypted tunnel between two endpoints over the public internet",
+                "A trunk port configuration — a single link carrying traffic for multiple networks between switches",
+                "A port aggregation group — multiple physical links combined into one logical high-bandwidth connection"
               ]
             },
             {
@@ -10878,9 +10878,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.2.983",
               "distractors": [
-                "10 Mbps, 100 Mbps, 1000 Mbps (1 Gbps), 10 Gbps, or faster",
-                "Ethernet connections, VLAN configs, management interfaces",
-                "LACP traffic is visible between switches in packet captures"
+                "A VLAN that is automatically assigned to all new switch ports before any configuration",
+                "A VLAN reserved for management traffic between switches in the same spanning tree domain",
+                "A VLAN that only carries traffic from devices physically connected to the same switch"
               ]
             },
             {
@@ -11010,9 +11010,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.2.995",
               "distractors": [
-                "The interface on a switch connected ultimately to the root bridge",
-                "All devices connected to a switch are in the same broadcast domain",
-                "No — only devices in the same VLAN can communicate with each other"
+                "Must support 802.1Q trunking so voice and data travel on separate physical links",
+                "Must support PoE so the phone can power itself, but only one VLAN per port is allowed",
+                "Must support link aggregation to dedicate one channel to voice and another to data"
               ]
             }
           ]
@@ -11181,9 +11181,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.3.1010",
               "distractors": [
-                "Independent Basic Service Set (IBSS)",
-                "Focuses signal in a single direction",
-                "Yes — for coverage across large areas"
+                "Directly between devices using peer-to-peer wireless links (ad hoc)",
+                "Through a mesh relay where each device forwards traffic to the next closest node",
+                "Via a dedicated wireless bridge that connects two separate network segments"
               ]
             },
             {
@@ -11434,9 +11434,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "2.3.1033",
               "distractors": [
-                "Basic Service Set Identifier",
-                "Uninterruptible Power Supply",
-                "Rapid Spanning Tree Protocol"
+                "Galois/Counter Mode Protocol",
+                "Generic Cipher Mode Protocol",
+                "Group Cipher Management Protocol"
               ]
             },
             {
@@ -11621,9 +11621,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1050",
               "distractors": [
-                "Progressively stronger wireless security standards",
-                "Control and Provisioning of Wireless Access Points",
-                "Username, password, or multi-factor authentication"
+                "The network name (SSID) broadcast by an access point to identify the wireless network",
+                "The MAC address of the wireless client device connecting to the network",
+                "A unique identifier assigned to an extended service set spanning multiple access points"
               ]
             },
             {
@@ -11698,9 +11698,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1057",
               "distractors": [
-                "2.4 GHz, 5 GHz, and 6 GHz",
-                "Consumer/home access points",
-                "Home and office environments"
+                "The DHCP lease table on the local router",
+                "The MAC address filter list configured on the access point",
+                "A RADIUS server authentication log"
               ]
             },
             {
@@ -11720,9 +11720,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1059",
               "distractors": [
-                "10 Mbps, 100 Mbps, 1000 Mbps (1 Gbps), 10 Gbps, or faster",
-                "10 Gbps, baseband (single frequency), twisted-pair copper",
-                "Copper: ~100 meters. Fiber: up to kilometers (up to 100 km for single-mode)."
+                "Permanently — once authenticated, the device is added to an allow list and never needs to reauthenticate",
+                "Until the user manually disconnects — the session persists as long as the device remains associated to the AP",
+                "Only during the initial connection — after authentication the device switches to WPA2 and the portal session ends"
               ]
             },
             {
@@ -11731,9 +11731,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.3.1060",
               "distractors": [
-                "Yes — usually paired with APs from the same manufacturer",
-                "Yes — can run alongside original STP on mixed-device networks",
-                "Yes — they look identical in size but support different speeds"
+                "Basic encryption using a shared pre-shared key (PSK) that all users enter to connect",
+                "Authentication via username and password verified against a RADIUS server before granting access",
+                "Encryption of management frames to prevent eavesdropping while leaving data frames unencrypted"
               ]
             },
             {
@@ -11775,9 +11775,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.3.1064",
               "distractors": [
-                "Quality of Service",
-                "Straight Tip",
-                "Time to Live"
+                "Phase Shift Keying",
+                "Protected Session Key",
+                "Public Signing Key"
               ]
             },
             {
@@ -11907,9 +11907,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1076",
               "distractors": [
-                "No security, no authentication — anyone can communicate freely",
-                "Differentiates between access points that share the same SSID",
-                "Direct device-to-device communication without an access point"
+                "An omnidirectional antenna that radiates signal equally in all directions with low gain",
+                "A parabolic dish antenna used for satellite uplinks with narrow beamwidth",
+                "A dipole antenna with adjustable polarization for indoor access point coverage"
               ]
             },
             {
@@ -11962,9 +11962,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "2.3.1081",
               "distractors": [
-                "Allow wireless device-to-device communication, or isolate devices to only communicate with the AP and networks beyond it",
-                "A feature that puts transmit power control in the hands of the access point — the AP tells clients what power level to use",
-                "A feature that allows APs to automatically select channels that won't conflict with other access points already operating"
+                "Lightweight AP operates on 5 GHz only for higher throughput; autonomous AP supports both 2.4 GHz and 5 GHz simultaneously",
+                "Lightweight AP uses mesh networking to communicate with other APs; autonomous AP requires a wired uplink to the network",
+                "Lightweight AP supports only WPA3 for security; autonomous AP is backward-compatible with WEP, WPA, and WPA2"
               ]
             },
             {
@@ -12017,9 +12017,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "2.3.1086",
               "distractors": [
-                "Traditionally, clients set their own transmit power; with TPC, the AP controls client transmit power",
-                "CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol / Counter/CBC-MAC)",
-                "A named grouping of frequencies — an easy reference instead of specifying exact frequency numbers"
+                "Authenticate wireless clients, encrypt traffic with AES, assign VLAN membership, enforce bandwidth limits per user",
+                "Select optimal channels, adjust transmit power, detect rogue APs, perform spectrum analysis",
+                "Bridge wireless to wired networks, translate 802.11 to 802.3 frames, buffer client traffic during sleep, respond to probe requests"
               ]
             },
             {
@@ -12171,9 +12171,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1100",
               "distractors": [
-                "0",
-                "8",
-                "1"
+                "11",
+                "5",
+                "14"
               ]
             },
             {
@@ -12204,9 +12204,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1103",
               "distractors": [
-                "Home environments",
-                "Ad hoc connection",
-                "Wi-Fi 6 / Wi-Fi 6E"
+                "20 MHz to 40 MHz",
+                "20 MHz to 320 MHz",
+                "5 MHz to 80 MHz"
               ]
             },
             {
@@ -12259,9 +12259,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.3.1108",
               "distractors": [
-                "Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (Counter/CBC-MAC)",
-                "Wireless mesh — it detects when a device leaves and maintains connectivity for remaining devices",
-                "A named grouping of frequencies — an easy reference instead of specifying exact frequency numbers"
+                "A client connected to a congested channel is automatically moved to a less-utilized channel on the same band",
+                "A dual-band AP broadcasts different SSIDs on each frequency so clients manually choose the faster band",
+                "An AP detects interference on 5 GHz and forces all clients down to 2.4 GHz for better range"
               ]
             },
             {
@@ -12292,9 +12292,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1111",
               "distractors": [
-                "Many devices can communicate at optimal power levels without conflicting with other services",
-                "Individual username/password authentication; disabling an account removes wireless access",
-                "A standalone AP that operates independently with no additional hardware or software required"
+                "Radio signals don't stop at borders, so uncoordinated use causes cross-border interference",
+                "International standards require a single global frequency plan so devices work in any country",
+                "Satellite communications occupy the same bands, so ground-based use must be globally synchronized"
               ]
             },
             {
@@ -12303,9 +12303,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "2.3.1112",
               "distractors": [
-                "The access point administrator — band steering is configured on the AP, not the client",
-                "Configuring IoT devices (door locks, lights) before connecting them to the main network",
-                "The shared network name used across multiple access points to enable seamless roaming"
+                "Quality of Service (QoS) prioritization for multimedia traffic on wireless networks",
+                "Enhanced security through stronger encryption (AES-CCMP) replacing the older WEP and TKIP standards",
+                "Higher throughput using wider channel bonding and MIMO antenna technology"
               ]
             },
             {
@@ -12336,9 +12336,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1115",
               "distractors": [
-                "A standard for managing wireless access points from one central station",
-                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form",
-                "Additional antennas, power output changes, and appropriate frequencies"
+                "The AP shuts down its radio and waits for the radar signal to stop before resuming on the same channel",
+                "The AP notifies the wireless controller, which reassigns all clients to nearby APs until the channel is clear",
+                "The AP reduces its transmit power to avoid the interference and remains on the current channel"
               ]
             },
             {
@@ -12749,9 +12749,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.4.1152",
               "distractors": [
-                "Multimode",
-                "64–81°F",
-                "40%–60%"
+                "24 inches",
+                "42 inches",
+                "23 inches"
               ]
             },
             {
@@ -12793,9 +12793,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.4.1156",
               "distractors": [
-                "To avoid contact with voltage — never put yourself in a position to contact any energized component",
-                "A panel that brings in fiber runs from other buildings or floors and provides access to those connections",
-                "Users on a floor connect to a switch in the IDF, which connects back to the core switch in the MDF"
+                "Because rack-mounted equipment uses hot/cold aisle airflow — stacking allows proper ventilation and cooling efficiency",
+                "Because equipment uses standard RJ-45 patch panels — vertical stacking keeps cable runs short and organized",
+                "Because data center power distribution uses top-of-rack PDUs — stacking keeps all devices within cable reach of power"
               ]
             },
             {
@@ -12870,9 +12870,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.4.1163",
               "distractors": [
-                "Patch cables from the RJ45 connectors on the patch panel to switch ports",
-                "Fire detection shuts down HVAC to prevent oxygen from feeding the fire",
-                "It has an ethernet connection with an IP address and built-in web server"
+                "Intake (front) faces the hot aisle; exhaust (back) faces the cold aisle",
+                "All equipment faces the same direction so airflow moves uniformly from front to back of the room",
+                "Equipment is mounted sideways so air flows across the rack horizontally from aisle to aisle"
               ]
             },
             {
@@ -13068,9 +13068,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.4.1181",
               "distractors": [
-                "Yes — may cause damage but prevents fire from spreading",
-                "It shuts down to prevent oxygen from feeding the fire",
-                "The pressure of electricity flowing through a wire"
+                "The pressure or force pushing electrons through a conductor (measured in volts)",
+                "The opposition to current flow in a circuit (measured in ohms)",
+                "The total energy consumed by a device over time (measured in watt-hours)"
               ]
             },
             {
@@ -13466,9 +13466,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.1.1216",
               "distractors": [
-                "Over the network or by physically connecting to the device",
-                "Both IPv4 and IPv6 addressing from one central console",
-                "Make a backup of the system before making any change"
+                "To comply with licensing requirements that mandate version reporting to the vendor",
+                "To ensure all devices automatically update to the newest firmware simultaneously",
+                "To calculate bandwidth requirements since newer versions consume more network resources"
               ]
             },
             {
@@ -13587,9 +13587,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1227",
               "distractors": [
-                "A document created by walking around with a mobile device to show how wireless signal propagates throughout a building",
-                "Reference in trouble tickets, financial tracking (depreciation), purchase date/warranty tracking, owner identification",
-                "How often changes can be made, the window for changes, the process for installing changes, and the process for rolling back"
+                "Automated backups of configuration files that run on a scheduled basis to prevent data loss",
+                "Hash-based verification of firmware images to ensure downloaded updates haven't been tampered with",
+                "Audits of user access permissions to confirm only authorized personnel can modify device configs"
               ]
             },
             {
@@ -13653,9 +13653,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1233",
               "distractors": [
-                "Not every possible scenario can be tested in the lab — need a plan to revert if something goes wrong in production",
-                "A managed process for tracking, monitoring, and modifying changes to software, configurations, and other systems",
-                "The standard configuration used when a device (switch, router, firewall) is working perfectly after initial setup"
+                "EOS means no more hardware replacements — the vendor has no spare parts; EOL only stops new feature development",
+                "EOS means the device is removed from the network immediately; EOL allows continued operation with reduced support",
+                "EOS means no technical support of any kind — cannot even open a ticket; EOL still provides full phone and email support"
               ]
             },
             {
@@ -13708,9 +13708,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.1.1238",
               "distractors": [
-                "Support team, accounting, and finance",
-                "On the wall in the IDF or MDF",
-                "Visio, OmniGraffle, Gliffy.com"
+                "Apache, Nginx, IIS, Tomcat",
+                "VMware, Hyper-V, KVM, Xen",
+                "Cisco IOS, Junos, FortiOS, pfSense"
               ]
             },
             {
@@ -13895,9 +13895,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1255",
               "distractors": [
-                "No — extensive testing is done behind the scenes before deploying to production",
-                "Everyone must understand and follow the centralized change management process",
-                "Tracks software on devices — determines how many licenses need to be purchased"
+                "Documenting the root cause of recurring issues in a knowledge base for future reference",
+                "Escalating all tickets to Tier 2 support so the help desk can focus on new incoming calls",
+                "Categorizing tickets by device type and adding relevant troubleshooting notes before resolution"
               ]
             },
             {
@@ -13928,9 +13928,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.1.1258",
               "distractors": [
-                "It leads you from initial installation through all changes made — essential for rebuilding a system quickly",
                 "The physical layout of equipment, cabling, and connections — can track cables back to equipment in the room",
-                "When planning additional locations — view the existing WAN layout and decide where to add new installations"
+                "A chronological change log showing every modification made to the network since initial deployment",
+                "The exact port assignments on each switch — which device is plugged into which interface"
               ]
             },
             {
@@ -14236,9 +14236,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1286",
               "distractors": [
-                "Yes — you can use copper or fiber transceivers depending on your needs",
-                "Yes — they look identical in size but support different speeds",
-                "Yes — can run alongside original STP on mixed-device networks"
+                "No — it only identifies rogue or unauthorized access points, not your own managed ones",
+                "Yes — a site survey only measures signal strength and coverage of your own deployed access points",
+                "Yes — third-party access points are filtered out automatically by the survey software"
               ]
             },
             {
@@ -14407,9 +14407,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1301",
               "distractors": [
-                "UDP (port 161 for polling, port 162 for traps)",
-                "Network utilization statistics and error overview",
-                "A value indicating the importance of a log entry"
+                "Only provides aggregate totals across the entire network as a whole",
+                "Limited to protocol-level summaries without per-device breakdown",
+                "Restricted to bandwidth metrics and cannot track latency or errors"
               ]
             },
             {
@@ -14550,9 +14550,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.2.1314",
               "distractors": [
-                "Advanced reporting — compare and contrast statistics across multiple devices over time",
-                "A picture of what a normal day on the network looks like, built from collected data",
-                "SNMP v3 — most secure with encryption, message integrity, and hashed authentication"
+                "Correlate real-time alerts across devices to trigger automated firewall rule changes",
+                "Generate compliance reports that prove adherence to regulatory standards like PCI-DSS",
+                "Monitor bandwidth utilization and generate capacity planning forecasts from flow data"
               ]
             },
             {
@@ -14649,9 +14649,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.2.1323",
               "distractors": [
-                "IDS/IPS, performance monitoring, and NetFlow collection",
-                "Alert staff or run remediation scripts automatically",
-                "For generating reports and performing forensic analysis"
+                "Only the uplink port between switches and the core router",
+                "Only inbound traffic on a single physical interface",
+                "Only traffic matching a specific IP address or MAC filter"
               ]
             },
             {
@@ -14847,9 +14847,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1341",
               "distractors": [
-                "A proactive alarm sent from the device to the management station without the management station needing to poll first",
-                "Link Layer Discovery Protocol — a standard (non-proprietary) protocol used on switches to discover devices on the network",
-                "Real-time shows current device status (up/down); historical data is collected over time to produce availability reports"
+                "A baseline comparison showing current performance metrics versus historical averages to detect anomalies",
+                "A bandwidth utilization report showing percentage of link capacity used over time on each interface",
+                "A log aggregation system that collects syslog messages from all devices and correlates events by timestamp"
               ]
             },
             {
@@ -14935,9 +14935,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.2.1349",
               "distractors": [
-                "To only capture warning/urgent information and exclude informational details, reducing the volume of stored data",
-                "Timestamp, protocol (TCP/UDP), port numbers, client IP, server IP, host names (via DNS), and bytes transferred",
-                "Management Information Base — a central database of parameters stored on each managed device that SNMP queries"
+                "By automatically backing up configurations on a scheduled basis independent of any approval process",
+                "Through real-time SNMP polling that detects unauthorized changes and reverts them immediately",
+                "By restricting configuration access to a single administrator account with no documentation required"
               ]
             },
             {
@@ -14979,9 +14979,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1353",
               "distractors": [
-                "Through a standardized method for modifying configurations — all changes go through the change control process",
-                "Timestamp, protocol (TCP/UDP), port numbers, client IP, server IP, host names (via DNS), and bytes transferred",
-                "To only capture warning/urgent information and exclude informational details, reducing the volume of stored data"
+                "Management Interface Board — a dedicated hardware module in switches for out-of-band management access",
+                "Managed Information Broadcast — a multicast notification sent by SNMP agents when a threshold is exceeded",
+                "Monitoring Integration Bus — a software layer that connects multiple NMS platforms to share device data"
               ]
             },
             {
@@ -15056,9 +15056,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1360",
               "distractors": [
-                "UDP 123",
-                "TCP 389",
-                "TCP 443"
+                "UDP 161",
+                "TCP 514",
+                "UDP 514"
               ]
             },
             {
@@ -15155,9 +15155,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1369",
               "distractors": [
-                "SNMP v3 — most secure with encryption, message integrity, and hashed authentication",
-                "Identify anomalies by comparing current activity against the established baseline",
-                "A picture of what a normal day on the network looks like, built from collected data"
+                "A group of SNMP-managed devices organized into a single monitoring zone for trap forwarding",
+                "The MIB object identifier that defines which data fields are available for polling on a device",
+                "An encrypted certificate exchange used in SNMPv3 to authenticate the management station to the agent"
               ]
             },
             {
@@ -15337,9 +15337,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.3.1385",
               "distractors": [
-                "No need to install hardware, install applications, or recover data from backups — everything is already in place and replicated",
-                "So that if the secondary becomes active, it has exactly the same configuration as the primary did and can take over seamlessly",
-                "Active-active — requires understanding traffic flows, routing, and a mechanism to track which device handles which data flows"
+                "The maximum acceptable time to restore service after an outage — how long systems can remain down",
+                "The average time between system failures measured over the device's operational lifetime",
+                "The total time needed to detect, diagnose, repair, and verify a failed component or system"
               ]
             },
             {
@@ -15535,9 +15535,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.3.1403",
               "distractors": [
-                "Cost: cold < warm < hot. Recovery speed: cold (slowest) < warm < hot (fastest).",
-                "A lot of work when disaster is called — must bring all equipment, data, and people",
-                "Available resources for data recovery and the frequency of backups being performed"
+                "Ship the old equipment from the primary site to the hot site once it has been replaced with newer hardware",
+                "Configure the hot site with virtual machines that can replicate the primary hardware on demand during failover",
+                "Maintain a vendor service contract that guarantees same-day hardware delivery to the hot site when needed"
               ]
             },
             {
@@ -15612,9 +15612,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.3.1410",
               "distractors": [
-                "As close to zero as possible",
-                "Session tables and routing tables",
-                "Power supply failure or software crash"
+                "Every time a configuration change is made",
+                "Weekly during scheduled maintenance windows",
+                "Continuously in real time via automated monitoring"
               ]
             },
             {
@@ -15722,9 +15722,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.3.1420",
               "distractors": [
-                "Least expensive option for a backup location",
-                "Session tables and routing tables",
-                "Once or multiple times per year"
+                "Excessive bandwidth utilization or link saturation",
+                "Firmware upgrade requiring a scheduled reboot",
+                "Routing table convergence timeout or ARP cache overflow"
               ]
             },
             {
@@ -15733,9 +15733,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.3.1421",
               "distractors": [
-                "A plan covering every aspect and detail of handling outages or significant problems affecting organizational goals",
-                "Traffic flow directions, routing configuration, switch locations, and expected normal traffic flow patterns",
-                "The remaining device continues handling all the load — no failover process is needed because both were already active"
+                "It monitors upstream traffic volume and takes over when no packets are forwarded for a timeout period",
+                "The load balancer detects the failure and sends a VRRP advertisement to promote the passive unit",
+                "It receives an SNMP trap from the managed switch indicating the active firewall's port has gone down"
               ]
             },
             {
@@ -15904,9 +15904,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1436",
               "distractors": [
-                "Control and Provisioning of Wireless Access Points",
-                "Local Connector (also: Lucent connector, little connector)",
-                "Institute of Electrical and Electronics Engineers"
+                "Distribute, Obtain, Relay, Assign — the four steps a DHCP relay agent uses to forward requests across subnets",
+                "Detect, Organize, Register, Allocate — the process of adding a new device to the DHCP scope",
+                "Deny, Override, Reassign, Accept — the four steps for releasing and renewing an expired DHCP lease"
               ]
             },
             {
