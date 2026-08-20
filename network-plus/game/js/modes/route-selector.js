@@ -15,8 +15,8 @@ const RouteSelector = (() => {
   ];
 
   const AD_REFERENCE = `
-    <details style="margin-top:1.5rem">
-      <summary class="subnet-reference-toggle">AD REFERENCE</summary>
+    <details style="margin-top:1rem">
+      <summary class="subnet-reference-toggle">ADMINISTRATIVE DISTANCE REFERENCE</summary>
       <table class="binary-ref-table" style="margin-top:0.5rem">
         <thead><tr><th>Source</th><th>AD</th><th>Code</th></tr></thead>
         <tbody>
@@ -206,6 +206,7 @@ const RouteSelector = (() => {
         <div class="route-prompt" style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-secondary)">Which route wins?</div>
         <div class="route-table" id="route-choices"></div>
         <div id="route-feedback"></div>
+        ${AD_REFERENCE}
       </div>
     `;
 
@@ -218,7 +219,6 @@ const RouteSelector = (() => {
       choicesEl.appendChild(btn);
     });
 
-    div.insertAdjacentHTML('beforeend', AD_REFERENCE);
     container.appendChild(div);
   }
 
@@ -300,6 +300,7 @@ const RouteSelector = (() => {
         <div class="route-label-grid" id="label-grid"></div>
         <button class="subnet-submit" id="label-submit">CHECK</button>
         <div id="label-feedback"></div>
+        ${AD_REFERENCE}
       </div>
     `;
 
@@ -317,8 +318,6 @@ const RouteSelector = (() => {
       `;
       grid.appendChild(row);
     });
-
-    div.insertAdjacentHTML('beforeend', AD_REFERENCE);
 
     div.querySelector('#label-submit').addEventListener('click', () => {
       const selects = div.querySelectorAll('.route-label-select');
