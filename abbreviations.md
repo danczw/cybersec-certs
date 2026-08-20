@@ -15,6 +15,7 @@
 | BOOTP        | Bootstrap Protocol                                           |
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
+| CNAME        | Canonical Name (DNS record)                                  |
 | CRC          | Cyclic Redundancy Check                                      |
 | CDP          | Cisco Discovery Protocol                                     |
 | CDN          | Content Delivery Network                                     |
@@ -32,6 +33,7 @@
 | DNSSEC       | Domain Name Security Extensions                              |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
 | DoH          | DNS over HTTPS                                               |
+| DKIM         | Domain Keys Identified Mail                                  |
 | DORA         | Discover, Offer, Request, Acknowledge (DHCP)                 |
 | DoT          | DNS over TLS                                                 |
 | DAD          | Duplicate Address Detection                                  |
@@ -92,11 +94,13 @@
 | MTBF         | Mean Time Between Failures                                   |
 | MTTR         | Mean Time to Repair                                          |
 | MTU          | Maximum Transmission Unit                                    |
+| MX           | Mail Exchanger (DNS record)                                  |
 | NAS          | Network-Attached Storage                                     |
 | NAT          | Network Address Translation                                  |
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
 | NDP          | Neighbor Discovery Protocol                                  |
+| NS           | Name Server (DNS record)                                     |
 | NTP          | Network Time Protocol                                        |
 | OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
@@ -107,6 +111,7 @@
 | PBX          | Private Branch Exchange                                      |
 | PDU          | Power Distribution Unit                                      |
 | PSK          | Pre-Shared Key                                               |
+| PTR          | Pointer (DNS record)                                         |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
 | PPTP         | Point-to-Point Tunneling Protocol                            |
@@ -138,11 +143,13 @@
 | SIP          | Session Initiation Protocol                                  |
 | SLA          | Service Level Agreement                                      |
 | SLAAC        | Stateless Address Autoconfiguration                          |
+| SOA          | Start of Authority (DNS record)                              |
 | SMB          | Server Message Block                                         |
 | SMTP         | Simple Mail Transfer Protocol                                |
 | SNMP         | Simple Network Management Protocol                           |
 | SPI          | Security Parameters Index                                    |
 | SPAN         | Switched Port Analyzer                                       |
+| SPF          | Sender Policy Framework                                      |
 | SQL          | Structured Query Language                                    |
 | SSID         | Service Set Identifier                                       |
 | SSH          | Secure Shell                                                 |
