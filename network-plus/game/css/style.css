@@ -1106,7 +1106,12 @@ body {
 
 .route-label-select.invalid {
   border-color: var(--danger);
-  background: rgba(255, 71, 87, 0.05);
+  background: var(--bg-primary);
+}
+
+.route-label-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
 }
 
 /* Cable Lab */
