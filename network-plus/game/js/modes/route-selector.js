@@ -14,6 +14,21 @@ const RouteSelector = (() => {
     { level: 4, name: 'Label the Entry' },
   ];
 
+  const AD_REFERENCE = `
+    <details style="margin-top:1.5rem">
+      <summary class="subnet-reference-toggle">AD REFERENCE</summary>
+      <table class="binary-ref-table" style="margin-top:0.5rem">
+        <thead><tr><th>Source</th><th>AD</th><th>Code</th></tr></thead>
+        <tbody>
+          <tr><td>Directly connected</td><td>0</td><td>C</td></tr>
+          <tr><td>Static</td><td>1</td><td>S</td></tr>
+          <tr><td>EIGRP</td><td>90</td><td>D</td></tr>
+          <tr><td>OSPF</td><td>110</td><td>O</td></tr>
+          <tr><td>RIP</td><td>120</td><td>R</td></tr>
+        </tbody>
+      </table>
+    </details>`;
+
   function start(main) {
     container = main;
     sessionStats = { answered: 0, correct: 0, xpEarned: 0 };
@@ -31,21 +46,6 @@ const RouteSelector = (() => {
       <h2 class="route-title">ROUTE SELECTOR</h2>
       <p class="route-subtitle">Pick the winning route. Think like a router.</p>
       <div class="route-difficulty-select"></div>
-      <div class="route-reference">
-        <details>
-          <summary class="subnet-reference-toggle">AD REFERENCE</summary>
-          <table class="binary-ref-table" style="margin-top:0.5rem">
-            <thead><tr><th>Source</th><th>AD</th></tr></thead>
-            <tbody>
-              <tr><td>Directly connected</td><td>0</td></tr>
-              <tr><td>Static</td><td>1</td></tr>
-              <tr><td>EIGRP</td><td>90</td></tr>
-              <tr><td>OSPF</td><td>110</td></tr>
-              <tr><td>RIP</td><td>120</td></tr>
-            </tbody>
-          </table>
-        </details>
-      </div>
     `;
 
     const btnContainer = div.querySelector('.route-difficulty-select');
@@ -206,6 +206,7 @@ const RouteSelector = (() => {
       choicesEl.appendChild(btn);
     });
 
+    div.insertAdjacentHTML('beforeend', AD_REFERENCE);
     container.appendChild(div);
   }
 
@@ -304,6 +305,8 @@ const RouteSelector = (() => {
       `;
       grid.appendChild(row);
     });
+
+    div.insertAdjacentHTML('beforeend', AD_REFERENCE);
 
     div.querySelector('#label-submit').addEventListener('click', () => {
       const selects = div.querySelectorAll('.route-label-select');
