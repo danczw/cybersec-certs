@@ -119,22 +119,69 @@ const RouteSelector = (() => {
   }
 
   function generateADProblem() {
-    const network = `${randInt(10, 192)}.${randInt(0, 255)}.${randInt(0, 255)}.0`;
+    const variant = randInt(1, 4);
+    const a = randInt(10, 192);
+    const b = randInt(1, 254);
+    const c = randInt(1, 254);
+    const d = randInt(1, 254);
+    const dest = `${a}.${b}.${c}.${d}`;
     const prefix = 24;
-    const codes = Object.keys(ROUTE_CODES).sort(() => Math.random() - 0.5).slice(0, 3);
+    const network = `${a}.${b}.${c}.0`;
+    const otherC = c === 254 ? c - 1 : c + 1;
 
-    const routes = codes.map(code => ({
-      code, network, prefix,
-      ad: AD_VALUES[code], metric: randInt(1, 10),
-      nextHop: randIP(), iface: randChoice(INTERFACES),
-      best: false
-    }));
+    const routes = [];
 
-    const bestIdx = routes.reduce((best, r, i) => r.ad < routes[best].ad ? i : best, 0);
-    routes[bestIdx].best = true;
+    if (variant === 1) {
+      // Pure AD — all match, different sources
+      const codes = Object.keys(ROUTE_CODES).sort(() => Math.random() - 0.5).slice(0, 4);
+      codes.forEach(code => {
+        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      });
+      const bestIdx = routes.reduce((b, r, i) => r.ad < routes[b].ad ? i : b, 0);
+      routes[bestIdx].best = true;
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Lowest AD: ${routes[bestIdx].ad} (${ROUTE_CODES[routes[bestIdx].code]})` };
+    }
 
-    const dest = `${network.split('.').slice(0, 3).join('.')}.${randInt(1, 254)}`;
-    return { routes, destination: dest, reason: `Lowest AD: ${routes[bestIdx].ad} (${ROUTE_CODES[routes[bestIdx].code]})` };
+    if (variant === 2) {
+      // Non-matching trap — lowest AD doesn't match destination
+      const codes = Object.keys(ROUTE_CODES).filter(c => c !== 'C').sort(() => Math.random() - 0.5).slice(0, 3);
+      codes.forEach(code => {
+        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      });
+      routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      const matching = routes.filter(r => r.network === network);
+      const bestIdx = matching.reduce((b, r, i) => r.ad < matching[b].ad ? i : b, 0);
+      matching[bestIdx].best = true;
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Lowest AD among matching routes: ${matching[bestIdx].ad} (${ROUTE_CODES[matching[bestIdx].code]}) — directly connected route to .${otherC}.0 doesn't match` };
+    }
+
+    if (variant === 3) {
+      // Same AD, metric decides
+      const code = randChoice(['O', 'R', 'D']);
+      const metrics = [randInt(1, 5), randInt(6, 15), randInt(16, 30)];
+      metrics.forEach(m => {
+        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: m, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      });
+      const bestIdx = routes.reduce((b, r, i) => r.metric < routes[b].metric ? i : b, 0);
+      routes[bestIdx].best = true;
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Same AD (${AD_VALUES[code]}) — lowest metric wins: ${routes[bestIdx].metric}` };
+    }
+
+    // Variant 4: Combined — trap + metric tiebreaker
+    const code = randChoice(['O', 'R', 'D']);
+    const metrics = [randInt(1, 5), randInt(6, 15)];
+    metrics.forEach(m => {
+      routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: m, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    });
+    routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    const otherCode = randChoice(Object.keys(ROUTE_CODES).filter(x => AD_VALUES[x] > AD_VALUES[code]));
+    routes.push({ code: otherCode, network, prefix, ad: AD_VALUES[otherCode], metric: randInt(1, 5), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    const matching = routes.filter(r => r.network === network);
+    const lowestAD = Math.min(...matching.map(r => r.ad));
+    const adTied = matching.filter(r => r.ad === lowestAD);
+    const best = adTied.reduce((b, r) => r.metric < b.metric ? r : b);
+    best.best = true;
+    return { routes: UI.shuffleArray(routes), destination: dest, reason: `Non-matching trap ignored → lowest AD (${lowestAD}) → lowest metric (${best.metric}) breaks tie` };
   }
 
   function generateCombinedProblem() {
