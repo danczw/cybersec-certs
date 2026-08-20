@@ -48,14 +48,115 @@ function getTitleFromFilename(filename) {
     .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-function generateDistractors(correctAnswer, allAnswers, count = 3) {
-  const candidates = allAnswers.filter(a => a !== correctAnswer && a.length > 0);
-  const shuffled = candidates.sort(() => Math.random() - 0.5);
-  const selected = shuffled.slice(0, count);
+function classifyQuestion(question, answer) {
+  const q = question.toLowerCase();
+  const a = answer;
+  if (q.match(/what does .+ stand for|what is .+ short for|what does .+ mean.*abbreviat/)) return 'acronym';
+  if (q.match(/which.*layer|at which.*osi|what layer|what osi layer/) || a.match(/^Layer \d/)) return 'layer';
+  if (a.match(/^(Yes|No)[.,: —–-]/)) return 'yesno';
+  if (q.match(/what port|which port|port does|on (tcp|udp) \d+|you see traffic on/i)) return 'port';
+  if (q.match(/what (type|kind) of (cable|connector|fiber)|what.*connector|which.*connector/)) return 'connector';
+  if (q.match(/what speed|what.*maximum (distance|speed|length)|how (far|fast|long)/)) return 'numeric';
+  return 'general';
+}
 
-  // If not enough real distractors, generate generic ones
+function extractKey(answer, questionType) {
+  if (questionType === 'layer') {
+    const m = answer.match(/Layer (\d)/i);
+    return m ? `layer${m[1]}` : null;
+  }
+  if (questionType === 'port') {
+    const m = answer.match(/\b(TCP|UDP)\s+(\d+)/i);
+    return m ? `${m[1].toUpperCase()}${m[2]}` : null;
+  }
+  // For any question type, prevent duplicate layer references in distractors
+  const layerM = answer.match(/^Layer (\d)/i);
+  if (layerM) return `layer${layerM[1]}`;
+  return null;
+}
+
+function scoreCandidateRelevance(candidate, correctAnswer, questionType) {
+  let score = 0;
+  const lenRatio = Math.min(candidate.length, correctAnswer.length) / Math.max(candidate.length, correctAnswer.length);
+  score += lenRatio * 50;
+
+  if (questionType === 'acronym') {
+    // Prefer other acronym-style expansions (capitalized words, no long sentences)
+    if (candidate.match(/^[A-Z]/) && !candidate.includes(' — ') && candidate.length < 60) score += 40;
+    else if (candidate.match(/^[A-Z]/) && candidate.length < 80) score += 20;
+    // Penalize answers that are clearly explanations/sentences
+    if (candidate.includes('because') || candidate.includes('used for') || candidate.includes('allows')) score -= 20;
+  } else if (questionType === 'layer') {
+    if (candidate.match(/^Layer \d/i)) score += 50;
+    else if (candidate.match(/layer \d/i)) score += 20;
+  } else if (questionType === 'yesno') {
+    const correctStarts = correctAnswer.match(/^(Yes|No)/i)?.[1]?.toLowerCase();
+    const candidateStarts = candidate.match(/^(Yes|No)/i)?.[1]?.toLowerCase();
+    if (candidateStarts) score += 20;
+    if (candidateStarts && candidateStarts !== correctStarts) score += 20;
+  } else if (questionType === 'port') {
+    if (candidate.match(/^(TCP|UDP)\s+\d+/i)) score += 50;
+    else if (candidate.match(/\b(TCP|UDP)\s+\d+/i)) score += 30;
+  } else if (questionType === 'connector') {
+    if (candidate.match(/^(RJ\d+|BNC|F-connector|LC|SC|ST)/i)) score += 40;
+    else if (candidate.match(/RJ\d+|BNC|F-connector|LC|SC|ST|SFP|fiber|copper|twist/i)) score += 20;
+  } else if (questionType === 'numeric') {
+    if (candidate.match(/^\d|meters|gbps|mbps|km|feet/i)) score += 30;
+  }
+
+  if (lenRatio < 0.3) score -= 30;
+
+  return score;
+}
+
+function generateDistractors(correctAnswer, pool, objectiveAnswers, question, count = 3) {
+  const questionType = classifyQuestion(question, correctAnswer);
+  const correctKey = extractKey(correctAnswer, questionType);
+
+  // For general questions, prefer same-objective answers first
+  let candidates;
+  if (questionType === 'general') {
+    const objCandidates = objectiveAnswers.filter(a => a !== correctAnswer && a.length > 0);
+    const poolCandidates = pool.filter(a => a !== correctAnswer && a.length > 0);
+    // Score objective-local answers with a bonus
+    const objSet = new Set(objCandidates);
+    candidates = [...new Set([...objCandidates, ...poolCandidates])].map(c => ({
+      answer: c,
+      localBonus: objSet.has(c) ? 15 : 0
+    }));
+  } else {
+    candidates = pool.filter(a => a !== correctAnswer && a.length > 0).map(c => ({
+      answer: c,
+      localBonus: 0
+    }));
+  }
+
+  const scored = candidates.map(c => ({
+    answer: c.answer,
+    score: scoreCandidateRelevance(c.answer, correctAnswer, questionType) + c.localBonus,
+    key: extractKey(c.answer, questionType)
+  }));
+  scored.sort((a, b) => b.score - a.score);
+
+  const selected = [];
+  const usedKeys = new Set();
+  if (correctKey) usedKeys.add(correctKey);
+
+  for (const s of scored) {
+    if (selected.length >= count) break;
+    if (selected.includes(s.answer)) continue;
+    if (s.key && usedKeys.has(s.key)) continue;
+    selected.push(s.answer);
+    if (s.key) usedKeys.add(s.key);
+  }
+
   while (selected.length < count) {
     selected.push(`Incorrect option ${selected.length + 1}`);
+  }
+
+  for (let i = selected.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [selected[i], selected[j]] = [selected[j], selected[i]];
   }
   return selected;
 }
@@ -101,20 +202,33 @@ function buildData() {
     });
   }
 
-  // Build global answer pool for distractors
+  // Build typed pools for distractor selection
   const globalAnswers = Object.values(allAnswersByDomain).flat();
+  const typedPools = { acronym: [], layer: [], port: [], yesno: [], connector: [], numeric: [], general: [] };
+
+  for (const domain of domains) {
+    for (const obj of domain.objectives) {
+      for (const concept of obj.concepts) {
+        const type = classifyQuestion(concept.question, concept.answer);
+        typedPools[type].push(concept.answer);
+      }
+    }
+  }
 
   // Assign IDs and generate distractors
   let conceptCounter = 0;
   for (const domain of domains) {
     const domainAnswers = allAnswersByDomain[domain.id] || globalAnswers;
-    const pool = domainAnswers.length > 20 ? domainAnswers : globalAnswers;
+    const fallbackPool = domainAnswers.length > 20 ? domainAnswers : globalAnswers;
 
     for (const obj of domain.objectives) {
       for (const concept of obj.concepts) {
         conceptCounter++;
         concept.id = `${obj.id}.${conceptCounter}`;
-        concept.distractors = generateDistractors(concept.answer, pool);
+        const type = classifyQuestion(concept.question, concept.answer);
+        const pool = typedPools[type].length > 10 ? typedPools[type] : fallbackPool;
+        const objAnswers = obj.concepts.map(c => c.answer);
+        concept.distractors = generateDistractors(concept.answer, pool, objAnswers, concept.question);
         // Truncate long answers for multiple choice viability
         if (concept.answer.length > 150) {
           concept.answer = concept.answer.substring(0, 147) + '...';
