@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-20T13:50:47.999Z"
+    "generated": "2026-08-20T14:02:30.791Z"
   },
   "domains": [
     {
@@ -43,9 +43,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.1.3",
               "distractors": [
-                "Yes — long-term when two devices are permanently connected, or temporary for tasks like IoT device configuration",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list"
+                "Yes — it defines specific protocols at each layer such as OSI Transport Protocol and OSI Session Protocol",
+                "Yes — it was the original internet protocol suite before TCP/IP replaced it in the 1990s",
+                "Partially — layers 1 through 4 are a protocol suite while layers 5 through 7 are conceptual only"
               ]
             },
             {
@@ -292,7 +292,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between segmentation (L4) and fragmentation (L3)?",
-              "answer": "Segmentation (L4) breaks application data into segments/datagrams for transport. Fragmentation (L3) splits packets too large for the next network's...",
+              "answer": "Segmentation (L4) breaks application data into segments/datagrams for transport. Fragmentation (L3) splits packets too large for the next network's MTU.",
               "difficulty": 3,
               "id": "1.1.26",
               "distractors": [
@@ -369,7 +369,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between SSL and TLS?",
-              "answer": "SSL (Secure Sockets Layer) is the older protocol; TLS (Transport Layer Security) is the modern successor. TLS is the current standard, but \"SSL\" is...",
+              "answer": "SSL (Secure Sockets Layer) is the older protocol; TLS (Transport Layer Security) is the modern successor. TLS is the current standard, but \"SSL\" is still used colloquially.",
               "difficulty": 1,
               "id": "1.1.33",
               "distractors": [
@@ -529,7 +529,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between a traditional firewall and an NGFW?",
-              "answer": "Traditional firewalls filter by TCP/UDP port number; NGFWs (Next-Generation Firewalls) identify and control specific applications traversing the ne...",
+              "answer": "Traditional firewalls filter by TCP/UDP port number; NGFWs (Next-Generation Firewalls) identify and control specific applications traversing the network",
               "difficulty": 2,
               "id": "1.2.47",
               "distractors": [
@@ -782,7 +782,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is TCP offloading on a load balancer?",
-              "answer": "The load balancer manages TCP connections (handshakes, acknowledgements, retransmissions) on behalf of backend servers, freeing their CPU for appli...",
+              "answer": "The load balancer manages TCP connections (handshakes, acknowledgements, retransmissions) on behalf of backend servers, freeing their CPU for application work",
               "difficulty": 2,
               "id": "1.2.70",
               "distractors": [
@@ -859,7 +859,7 @@ const GAME_DATA = {
             },
             {
               "question": "Name four capabilities of a wireless LAN controller.",
-              "answer": "Deploy new APs with full configuration, performance/security monitoring, push config changes to all APs simultaneously, usage reporting and capacit...",
+              "answer": "Deploy new APs with full configuration, performance/security monitoring, push config changes to all APs simultaneously, usage reporting and capacity planning",
               "difficulty": 3,
               "id": "1.2.77",
               "distractors": [
@@ -969,7 +969,7 @@ const GAME_DATA = {
             },
             {
               "question": "Can VPN concentrators run as software?",
-              "answer": "Yes — smaller networks can use software-based VPN concentrators on an existing OS. Windows, macOS, and Linux also ship with built-in VPN client sof...",
+              "answer": "Yes — smaller networks can use software-based VPN concentrators on an existing OS. Windows, macOS, and Linux also ship with built-in VPN client software.",
               "difficulty": 1,
               "id": "1.2.87",
               "distractors": [
@@ -1288,7 +1288,7 @@ const GAME_DATA = {
             },
             {
               "question": "A website is cached locally but the admin changed the server IP 3 minutes ago. The DNS TTL is 300 seconds. Will you see the new IP?",
-              "answer": "Not yet — 300 seconds (5 minutes) haven't elapsed, so your cache still has the old IP. After 5 minutes, the cache clears and a new query returns th...",
+              "answer": "Not yet — 300 seconds (5 minutes) haven't elapsed, so your cache still has the old IP. After 5 minutes, the cache clears and a new query returns the updated IP.",
               "difficulty": 3,
               "id": "1.2.116",
               "distractors": [
@@ -1353,9 +1353,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.3.121",
               "distractors": [
-                "Identity and Directory Infrastructure, Applications, Network Controls",
-                "Information and Data, Devices (Mobile and PCs), Accounts and Identities",
-                "It decreases — the provider takes on more responsibility at each step"
+                "When sensitive data must remain on-premises due to regulatory compliance requirements",
+                "When you need full control over the physical hardware and security of the underlying infrastructure",
+                "When only employees within the corporate network should access the application — no external users"
               ]
             },
             {
@@ -1789,7 +1789,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is a VPC?",
-              "answer": "Virtual Private Cloud — an isolated virtual network containing application instances (web servers, databases, load balancers, virtual networking de...",
+              "answer": "Virtual Private Cloud — an isolated virtual network containing application instances (web servers, databases, load balancers, virtual networking devices)",
               "difficulty": 1,
               "id": "1.3.161",
               "distractors": [
@@ -2042,7 +2042,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between a VPC internet gateway and a VPC NAT gateway?",
-              "answer": "Internet gateway allows inbound access from the internet to public resources. NAT gateway only allows outbound from private resources to the intern...",
+              "answer": "Internet gateway allows inbound access from the internet to public resources. NAT gateway only allows outbound from private resources to the internet — no unsolicited inbound.",
               "difficulty": 3,
               "id": "1.3.184",
               "distractors": [
@@ -2257,7 +2257,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between FTP and TFTP?",
-              "answer": "FTP: full-featured (authentication, directory listing, file management) over TCP 20/21. TFTP: bare minimum (no auth, no file management, just trans...",
+              "answer": "FTP: full-featured (authentication, directory listing, file management) over TCP 20/21. TFTP: bare minimum (no auth, no file management, just transfer) over UDP 69.",
               "difficulty": 3,
               "id": "1.4.203",
               "distractors": [
@@ -2866,20 +2866,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.4.258",
               "distractors": [
-                "Data is encrypted end-to-end without needing a certificate exchange",
-                "The sender waits for an acknowledgment before sending the next segment",
-                "A three-way handshake establishes session parameters before data transfer begins"
+                "The protocol can only send data to broadcast addresses, not to specific unicast destinations",
+                "The sender waits for an acknowledgment before transmitting the next segment",
+                "A three-way handshake establishes session parameters before any data transfer begins"
               ]
             },
             {
               "question": "Why is UDP called \"unreliable\"?",
-              "answer": "Not because it's more likely to fail — it has the same delivery probability as TCP — but because no acknowledgments are sent, so delivery can't be ...",
+              "answer": "Not because it's more likely to fail — it has the same delivery probability as TCP — but because no acknowledgments are sent, so delivery can't be confirmed",
               "difficulty": 3,
               "id": "1.4.259",
               "distractors": [
-                "Because UDP packets are more likely to be dropped by routers due to their lower priority in QoS queuing mechanisms",
-                "Because UDP uses a smaller header with no error-checking fields, so corrupted packets are delivered without detection",
-                "Because UDP does not retransmit lost segments — if a packet is dropped in transit, the application never receives it"
+                "Because UDP packets are more likely to be dropped by routers due to their lower priority in QoS queuing",
+                "Because UDP uses a smaller header with no error-checking fields, so corrupted packets go undetected",
+                "Because UDP has no flow control — the sender can overwhelm the receiver faster than it can process"
               ]
             },
             {
@@ -2888,7 +2888,7 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.4.260",
               "distractors": [
-                "No — UDP can detect errors via checksum but cannot retransmit; the application must handle recovery if needed",
+                "No — UDP has no header fields at all for error detection, so corrupted packets are delivered without any indication",
                 "Yes — UDP includes a sequence number field that allows the receiver to request retransmission of missing datagrams",
                 "Yes — UDP uses negative acknowledgments (NAKs) to signal the sender when a datagram arrives corrupted"
               ]
@@ -3049,7 +3049,7 @@ const GAME_DATA = {
             },
             {
               "question": "In a practical example, a server runs web (TCP 80), VoIP (UDP 5004), and email (TCP 143). How can a client use all three simultaneously?",
-              "answer": "Each application uses a different port number, so the client opens three connections with different ephemeral source ports to different destination...",
+              "answer": "Each application uses a different port number, so the client opens three connections with different ephemeral source ports to different destination ports — multiplexing",
               "difficulty": 2,
               "id": "1.4.275",
               "distractors": [
@@ -3104,7 +3104,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is a listening socket?",
-              "answer": "A socket on a server that waits for incoming connections on a well-known port; when a client connects, the server spawns a new socket for that spec...",
+              "answer": "A socket on a server that waits for incoming connections on a well-known port; when a client connects, the server spawns a new socket for that specific conversation",
               "difficulty": 3,
               "id": "1.4.280",
               "distractors": [
@@ -3445,7 +3445,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between IPSec AH and ESP?",
-              "answer": "AH (Authentication Header) provides integrity/authentication only — no encryption. ESP (Encapsulation Security Payload) provides both encryption AN...",
+              "answer": "AH (Authentication Header) provides integrity/authentication only — no encryption. ESP (Encapsulation Security Payload) provides both encryption AND authentication.",
               "difficulty": 3,
               "id": "1.4.311",
               "distractors": [
@@ -3566,7 +3566,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is IPSec Tunnel Mode?",
-              "answer": "Encrypts the original IP header AND data, then adds a new IP header with the VPN concentrator as destination. Attacker cannot see the original dest...",
+              "answer": "Encrypts the original IP header AND data, then adds a new IP header with the VPN concentrator as destination. Attacker cannot see the original destination.",
               "difficulty": 3,
               "id": "1.4.322",
               "distractors": [
@@ -3577,7 +3577,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the key difference between IPSec transport mode and tunnel mode?",
-              "answer": "Transport mode encrypts only the data (original IP header visible). Tunnel mode encrypts both the original IP header and data, hiding the true dest...",
+              "answer": "Transport mode encrypts only the data (original IP header visible). Tunnel mode encrypts both the original IP header and data, hiding the true destination.",
               "difficulty": 3,
               "id": "1.4.323",
               "distractors": [
@@ -3614,14 +3614,14 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.4.326",
               "distractors": [
-                "UDP port 500",
-                "SFP+ interface",
-                "Wi-Fi 6 and 6E"
+                "RSA key exchange",
+                "AES-256 key wrapping",
+                "Elliptic Curve Digital Signature Algorithm (ECDSA)"
               ]
             },
             {
               "question": "What is a WebSocket?",
-              "answer": "A persistent, full-duplex TCP connection between client and server — stays open so either side can send data at any time without re-establishing th...",
+              "answer": "A persistent, full-duplex TCP connection between client and server — stays open so either side can send data at any time without re-establishing the connection",
               "difficulty": 2,
               "id": "1.4.327",
               "distractors": [
@@ -3963,7 +3963,7 @@ const GAME_DATA = {
               "distractors": [
                 "Bayonet Neill-Concelman",
                 "Registered Jack type 45",
-                "Virtual Private Network"
+                "Ruggedized Junction standard 11 — designed for outdoor weatherproof installations"
               ]
             },
             {
@@ -4698,9 +4698,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.424",
               "distractors": [
-                "Fiber with a larger core that allows multiple modes (paths) of light to propagate — used for short-range communication",
-                "To detect and correct interference — the receiver compares both signals and cancels out noise that affected both equally",
-                "Fiber with a smaller core that allows only one mode of light to propagate — used for long-range communication"
+                "A device that converts electrical signals to optical signals at the boundary between copper and fiber cabling",
+                "A network switch port that can operate at multiple speeds (10/100/1000) and auto-negotiate with connected devices",
+                "A passive device that splits a single network connection into multiple ports without any signal processing"
               ]
             },
             {
@@ -5512,9 +5512,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.498",
               "distractors": [
-                "Much faster — 5G always exceeds wired speeds by a factor of 10 or more",
-                "Much slower — 5G is limited to basic web browsing speeds only",
-                "Incomparable — 5G uses different measurement units than wired connections"
+                "Much faster — 5G consistently exceeds wired speeds by a factor of 10 or more",
+                "Much slower — 5G is limited to basic web browsing speeds around 10-25 Mbps",
+                "Half the speed — 5G typically delivers around 50 Mbps while wired averages 100 Mbps or higher"
               ]
             },
             {
@@ -5871,7 +5871,7 @@ const GAME_DATA = {
               "id": "1.6.530",
               "distractors": [
                 "East-west — traffic between internal servers crosses trust boundaries within the data center",
-                "East-west — lateral movement between internal hosts is harder to monitor and filter",
+                "Broadcast — one-to-all traffic is unfiltered by default and can expose sensitive data to every host",
                 "Multicast — one-to-many flows are difficult to inspect because they replicate across segments"
               ]
             },
@@ -6123,7 +6123,7 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.6.553",
               "distractors": [
-                "Redundancy — if one link fails, traffic automatically reroutes through alternate paths",
+                "Quality of Service — multiple links allow prioritization by assigning each link to a traffic class",
                 "Security isolation — each connection handles a separate VLAN for segmentation",
                 "Collision avoidance — multiple paths prevent frame collisions on shared segments"
               ]
@@ -6554,7 +6554,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the process for converting decimal to binary?",
-              "answer": "Starting from the leftmost (largest) chart value, ask: is running total + this value ≤ target? Yes → place 1 and add to running total. No → place 0...",
+              "answer": "Starting from the leftmost (largest) chart value, ask: is running total + this value ≤ target? Yes → place 1 and add to running total. No → place 0. Repeat for each column.",
               "difficulty": 2,
               "id": "1.7.592",
               "distractors": [
@@ -7515,9 +7515,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.679",
               "distractors": [
-                "01100100 (64 + 32 + 4)",
-                "154 (128 + 16 + 8 + 2)",
-                "170 (128 + 32 + 8 + 2)"
+                "64 (8 octets x 8 bits)",
+                "128 (16 octets x 8 bits)",
+                "48 (6 octets x 8 bits)"
               ]
             },
             {
@@ -8193,7 +8193,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the 7 steps of the magic number method?",
-              "answer": "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number...",
+              "answer": "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number) 5) Find which range the IP falls into 6) Network...",
               "difficulty": 3,
               "id": "1.7.741",
               "distractors": [
@@ -8534,7 +8534,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the four steps of seven second subnetting?",
-              "answer": "1) Convert CIDR to decimal subnet mask (use chart) 2) Determine subnet/network address 3) Determine broadcast address 4) Calculate first IP (subnet...",
+              "answer": "1) Convert CIDR to decimal subnet mask (use chart) 2) Determine subnet/network address 3) Determine broadcast address 4) Calculate first IP (subnet + 1) and last IP (broadcast − 1)",
               "difficulty": 2,
               "id": "1.7.772",
               "distractors": [
@@ -8835,9 +8835,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.799",
               "distractors": [
-                "No — 10.x.x.x is a private range and cannot be routed on the public internet",
-                "After the first 24 bits — first three octets are network, last octet is host",
-                "Network bits (default class) | Subnet bits (borrowed) | Host bits (remaining)"
+                "A printed subnet cheat sheet (laminated reference card with all CIDR ranges)",
+                "A basic four-function calculator (provided by the testing center upon request)",
+                "A pencil and blank scratch paper (standard #2 pencil with eraser)"
               ]
             },
             {
@@ -8943,7 +8943,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the five steps of how dynamic routing works?",
-              "answer": "1) Router listens for routing updates on local subnet (sent directly or via multicast) 2) Builds its own routing table from received updates 3) Sen...",
+              "answer": "1) Router listens for updates via multicast 2) Builds routing table from updates 3) Sends own routes to nearby routers 4) Evaluates if updates are better routes 5) Informs others of network changes",
               "difficulty": 3,
               "id": "2.1.808",
               "distractors": [
@@ -8976,7 +8976,7 @@ const GAME_DATA = {
             },
             {
               "question": "What three factors should you consider when choosing a dynamic routing protocol?",
-              "answer": "1) Routing decisions — link state vs. hop count vs. link speed 2) Convergence time — seconds vs. minutes 3) Router compatibility — cross-manufactur...",
+              "answer": "1) Routing decisions — link state vs. hop count vs. link speed 2) Convergence time — seconds vs. minutes 3) Router compatibility — cross-manufacturer vs. vendor-specific",
               "difficulty": 2,
               "id": "2.1.811",
               "distractors": [
@@ -9020,7 +9020,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the characteristics of EIGRP?",
-              "answer": "1) Cisco-centric 2) Relatively easy to set up 3) Converges relatively quickly 4) Identifies and prevents routing loops 5) Efficiently discovers oth...",
+              "answer": "1) Cisco-centric 2) Relatively easy to set up 3) Converges relatively quickly 4) Identifies and prevents routing loops 5) Efficiently discovers other EIGRP routers with minimum network traffic",
               "difficulty": 3,
               "id": "2.1.815",
               "distractors": [
@@ -9295,7 +9295,7 @@ const GAME_DATA = {
             },
             {
               "question": "How does standard NAT work (7 steps)?",
-              "answer": "1) Internal device sends packet with private source IP 2) NAT router receives packet, recognizes private source 3) Router translates source to avai...",
+              "answer": "1) Internal device sends packet with private source IP 2) NAT router receives packet, recognizes private source 3) Router translates source to available public IP from its pool 4) Packet goes to de...",
               "difficulty": 3,
               "id": "2.1.840",
               "distractors": [
@@ -9746,13 +9746,13 @@ const GAME_DATA = {
             },
             {
               "question": "How does FHRP failover work?",
-              "answer": "1) Active router holds VIP 2) Standby router always communicates with active 3) If standby detects failure → becomes active and takes over VIP 4) F...",
+              "answer": "1) Active router holds VIP 2) Standby router always communicates with active 3) If standby detects failure → becomes active and takes over VIP 4) Failover is seamless to end users",
               "difficulty": 3,
               "id": "2.1.881",
               "distractors": [
-                "1) Router listens for routing updates on local subnet (sent directly or via multicast) 2) Builds its own routing table from received updates 3) Sen...",
-                "1) Quick to configure on small networks 2) No overhead (no CPU cycles, no memory usage from dynamic protocols) 3) Common for stub networks 4) Relat...",
-                "1) Routing decisions — link state vs. hop count vs. link speed 2) Convergence time — seconds vs. minutes 3) Router compatibility — cross-manufactur..."
+                "1) Both routers actively forward traffic simultaneously 2) If one fails, the other absorbs its load without state change 3) No virtual IP is used",
+                "1) Load balancer monitors both routers 2) On failure it updates its table 3) Clients must release and renew their default gateway via DHCP",
+                "1) Active router sends gratuitous ARPs to clients 2) On failure clients detect timeout 3) Clients ARP for a new gateway and first responder wins"
               ]
             },
             {
@@ -9834,7 +9834,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the steps a router performs when forwarding traffic?",
-              "answer": "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
+              "answer": "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to next hop 5) Next router repeats until destination r...",
               "difficulty": 2,
               "id": "2.1.889",
               "distractors": [
@@ -9889,7 +9889,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the advantages of static routing?",
-              "answer": "1) Quick to configure on small networks 2) No overhead (no CPU cycles, no memory usage from dynamic protocols) 3) Common for stub networks 4) Relat...",
+              "answer": "1) Quick to configure on small networks 2) No overhead (no CPU cycles, no memory usage from dynamic protocols) 3) Common for stub networks 4) Relatively secure — no dynamic routing updates to manip...",
               "difficulty": 2,
               "id": "2.1.894",
               "distractors": [
@@ -9900,7 +9900,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the disadvantages of static routing?",
-              "answer": "1) Challenging on larger networks (hundreds/thousands of routers) 2) Misconfiguration can create routing loops 3) Routes don't change automatically...",
+              "answer": "1) Challenging on larger networks (hundreds/thousands of routers) 2) Misconfiguration can create routing loops 3) Routes don't change automatically with network changes 4) No automatic rerouting if...",
               "difficulty": 2,
               "id": "2.1.895",
               "distractors": [
@@ -10174,9 +10174,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.919",
               "distractors": [
-                "LACP traffic is visible between switches in packet captures",
-                "10 Mbps, 100 Mbps, 1000 Mbps (1 Gbps), 10 Gbps, or faster",
-                "A VLAN whose traffic traverses a trunk WITHOUT a VLAN tag"
+                "Only physical interfaces — virtual and loopback interfaces use auto-assigned link-local addresses",
+                "Trunk ports and access ports — management interfaces use the chassis serial number instead",
+                "WAN interfaces only — LAN interfaces operate at Layer 2 and do not require IP addresses"
               ]
             },
             {
@@ -10207,9 +10207,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.922",
               "distractors": [
-                "NIC teaming",
                 "Port mirroring",
-                "Port forwarding"
+                "Port forwarding",
+                "Link steering"
               ]
             },
             {
@@ -10368,7 +10368,7 @@ const GAME_DATA = {
             },
             {
               "question": "What causes a loop on a switched network?",
-              "answer": "Two cables connected between two switches — frames loop endlessly with no mechanism at the MAC address level to count how many times a frame has be...",
+              "answer": "Two cables connected between two switches — frames loop endlessly with no mechanism at the MAC address level to count how many times a frame has been seen",
               "difficulty": 2,
               "id": "2.2.937",
               "distractors": [
@@ -10383,8 +10383,8 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.2.938",
               "distractors": [
-                "The switch drops all frames on the looped port and sends an SNMP trap to the management station",
-                "Broadcast storms flood the network with duplicate frames, consuming all available bandwidth and crashing switches",
+                "The switch detects the loop via TTL expiration and automatically disables the redundant port",
+                "Frames are delivered out of order but the switch reassembles them correctly using sequence numbers",
                 "Affected ports auto-negotiate to half duplex, reducing speed but preventing total network failure"
               ]
             },
@@ -10555,13 +10555,13 @@ const GAME_DATA = {
             },
             {
               "question": "What happens during an STP topology change (recovery)?",
-              "answer": "1) Link failure detected 2) STP clears existing configuration and relearns topology 3) Blocked ports may become forwarding; root ports may shift 4)...",
+              "answer": "1) Link failure detected 2) STP clears existing configuration and relearns topology 3) Blocked ports may become forwarding; root ports may shift 4) Network recovers without creating a loop",
               "difficulty": 3,
               "id": "2.2.954",
               "distractors": [
-                "1) Device sends normal ethernet frame to the switch 2) Switch adds VLAN tag before sending across trunk 3) Receiving switch reads tag, removes it, ...",
-                "Connecting VLANs across multiple switches would require one cable per VLAN; a trunk uses a single physical connection for all VLANs",
-                "Two cables connected between two switches — frames loop endlessly with no mechanism at the MAC address level to count how many times a frame has be..."
+                "1) Loop detected 2) Switch immediately disables all trunk ports 3) Ports re-enable after a fixed 30-second timer",
+                "1) Root bridge broadcasts an all-clear 2) All switches simultaneously transition blocked ports to forwarding",
+                "1) Switches exchange BPDUs faster (every 2 sec) 2) Ports skip learning states and go directly to forwarding"
               ]
             },
             {
@@ -10742,7 +10742,7 @@ const GAME_DATA = {
             },
             {
               "question": "How does 802.1Q trunking work (3 steps)?",
-              "answer": "1) Device sends normal ethernet frame to the switch 2) Switch adds VLAN tag before sending across trunk 3) Receiving switch reads tag, removes it, ...",
+              "answer": "1) Device sends normal ethernet frame to the switch 2) Switch adds VLAN tag before sending across trunk 3) Receiving switch reads tag, removes it, delivers frame to correct VLAN",
               "difficulty": 2,
               "id": "2.2.971",
               "distractors": [
@@ -11027,9 +11027,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.996",
               "distractors": [
-                "Use the highest level of security available on APs and client devices; upgrade all devices to the most capable security method",
-                "Hardware mounted in ceiling with configuration/intelligence maintained on the switch; less expensive to deploy and managed centrally",
-                "A different frequency band may offer better throughput even if its signal is weaker — signal strength and throughput are not the same"
+                "A single AP broadcasting multiple SSIDs to segment traffic into different VLANs for security purposes",
+                "A network where all APs connect directly to a wireless LAN controller that handles all client traffic",
+                "An ad-hoc wireless network where client devices connect directly to each other without any access point"
               ]
             },
             {
@@ -11100,7 +11100,7 @@ const GAME_DATA = {
             },
             {
               "question": "Describe the common temporary use of an ad hoc connection with IoT devices.",
-              "answer": "Connect to the IoT device via ad hoc, transfer configuration (SSID, security settings), then disable the ad hoc connection so the IoT device joins ...",
+              "answer": "Connect to the IoT device via ad hoc, transfer configuration (SSID, security settings), then disable the ad hoc connection so the IoT device joins the main network",
               "difficulty": 3,
               "id": "2.3.1003",
               "distractors": [
@@ -11335,9 +11335,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1024",
               "distractors": [
-                "Viewing the entire wireless infrastructure from one single screen (the WLC)",
-                "Wireless networks can be tapped into and listened to by any device nearby",
-                "No — requires both software support and hardware capable of extended distance"
+                "New dedicated hardware with AES processors — existing WEP devices could not support WPA at all",
+                "Enterprise-grade access points only — consumer routers required a separate WPA hardware adapter",
+                "Any 802.11a/b hardware with a firmware update — but only if the device had at least 64 MB of RAM"
               ]
             },
             {
@@ -12006,9 +12006,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1085",
               "distractors": [
-                "The same hardware as WEP — it was designed to work on existing WEP hardware",
-                "Wireless networks can be tapped into and listened to by any device nearby",
-                "No — requires both software support and hardware capable of extended distance"
+                "Using a single SSID broadcast across all access points so clients only see one network name",
+                "A single wireless channel shared by all access points to reduce interference and simplify roaming",
+                "One physical controller appliance per building that each AP must be directly wired to for management"
               ]
             },
             {
@@ -12226,9 +12226,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1105",
               "distractors": [
-                "The most common wireless connection type — a centralized access point that all wireless devices connect to",
-                "Users authenticate with their own corporate credentials — disabling an account immediately removes access",
-                "If one device leaves the network, the mesh detects it and maintains connectivity for remaining devices"
+                "A feature that automatically selects the least-congested channel for the access point to broadcast on",
+                "A technique that focuses the wireless signal directionally toward connected clients using multiple antennas",
+                "A setting that limits the maximum transmit power of the AP to reduce interference with neighboring networks"
               ]
             },
             {
@@ -12325,9 +12325,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.3.1114",
               "distractors": [
-                "A feature that puts transmit power control in the hands of the access point — the AP tells clients what power level to use",
-                "Allow wireless device-to-device communication, or isolate devices to only communicate with the AP and networks beyond it",
-                "Lightweight AP hardware is separate from its configuration (maintained on the switch); autonomous AP is fully standalone"
+                "A regulatory requirement that prevents APs from using certain 5 GHz channels shared with radar and satellite systems",
+                "A feature that automatically switches between 2.4 GHz and 5 GHz bands based on client signal strength",
+                "A protocol that coordinates channel width bonding between adjacent access points to maximize throughput"
               ]
             },
             {
@@ -12877,7 +12877,7 @@ const GAME_DATA = {
             },
             {
               "question": "Describe the airflow cycle in a raised floor data center.",
-              "answer": "HVAC sends cold air under raised floor → vents let cold air into cold aisle → servers pull in cold air from front → heated air exits back into hot ...",
+              "answer": "HVAC sends cold air under raised floor → vents let cold air into cold aisle → servers pull in cold air from front → heated air exits back into hot aisle → hot air rises to ceiling → HVAC pulls it b...",
               "difficulty": 3,
               "id": "2.4.1164",
               "distractors": [
@@ -12888,7 +12888,7 @@ const GAME_DATA = {
             },
             {
               "question": "How do data centers without raised floors handle cooling?",
-              "answer": "Cold air blown directly into cold aisle from above; cold aisles may be covered with plastic to contain cold air; hot air returns to ceiling and bac...",
+              "answer": "Cold air blown directly into cold aisle from above; cold aisles may be covered with plastic to contain cold air; hot air returns to ceiling and back to HVAC",
               "difficulty": 3,
               "id": "2.4.1165",
               "distractors": [
@@ -13715,7 +13715,7 @@ const GAME_DATA = {
             },
             {
               "question": "Besides bug fixes and security patches, what internal changes might be deployed to operating systems?",
-              "answer": "User account modifications, password length/complexity changes, access method changes, firewall configurations (IP/URL), anti-malware/antivirus upd...",
+              "answer": "User account modifications, password length/complexity changes, access method changes, firewall configurations (IP/URL), anti-malware/antivirus updates",
               "difficulty": 3,
               "id": "3.1.1239",
               "distractors": [
@@ -13807,9 +13807,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1247",
               "distractors": [
-                "Update production to match the golden config, OR update the baseline to match the new production configuration",
-                "A documented configuration that certifies an application will work properly if all configurations are in place",
-                "Software running on a purpose-built appliance/hardware (printers, cable modems, etc.) with its own embedded OS"
+                "The equipment is under an active lease or service contract that requires return to the vendor instead of destruction",
+                "Hazardous materials in the hardware (lead, mercury) require special environmental disposal procedures",
+                "The manufacturer requires a formal RMA process and will not honor warranties on destroyed equipment"
               ]
             },
             {
@@ -14282,7 +14282,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the three components of a NetFlow architecture?",
-              "answer": "Probe (captures raw packets and compiles statistics), Collector (central destination storing summaries from all probes), Report generator (often bu...",
+              "answer": "Probe (captures raw packets and compiles statistics), Collector (central destination storing summaries from all probes), Report generator (often built into collector; provides real-time and long-te...",
               "difficulty": 2,
               "id": "3.2.1290",
               "distractors": [
@@ -14484,9 +14484,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.2.1308",
               "distractors": [
-                "No need to go to separate probes — all reports are generated from one central place, and data is stored over time",
-                "Through a standardized method for modifying configurations — all changes go through the change control process",
-                "Timestamp, protocol (TCP/UDP), port numbers, client IP, server IP, host names (via DNS), and bytes transferred"
+                "To encrypt syslog messages before they leave the source device, ensuring confidentiality during transport to the SIEM",
+                "To change the syslog transport protocol from UDP to TCP so that no log messages are lost due to dropped packets",
+                "To redirect syslog output from the network to local storage on each device for compliance with data residency laws"
               ]
             },
             {
@@ -14605,9 +14605,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1319",
               "distractors": [
-                "Compare current values to what's normal to determine if something is better or worse than expected",
-                "Software that cycles through every possible MIB value on a device and retrieves all available data",
-                "Performance graphs and visualizations built from MIB values (e.g., bytes into a particular interface)"
+                "Configuring two switch ports with identical settings so either can serve as a failover for the other",
+                "Duplicating a port's configuration (speed, duplex, VLAN) across multiple interfaces using a template",
+                "Reflecting traffic back to the sender for testing — used to verify packets are being transmitted correctly"
               ]
             },
             {
@@ -14678,7 +14678,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between a network tap and port mirroring?",
-              "answer": "A tap is a physical device placed inline between two devices; port mirroring uses a switch to copy traffic to a monitoring port — both gather raw p...",
+              "answer": "A tap is a physical device placed inline between two devices; port mirroring uses a switch to copy traffic to a monitoring port — both gather raw packets",
               "difficulty": 2,
               "id": "3.2.1326",
               "distractors": [
@@ -14810,7 +14810,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is performance monitoring used for?",
-              "answer": "Gathering overall performance data from devices — network utilization statistics and error overviews — to determine if the network is highly utiliz...",
+              "answer": "Gathering overall performance data from devices — network utilization statistics and error overviews — to determine if the network is highly utilized or experiencing errors",
               "difficulty": 1,
               "id": "3.2.1338",
               "distractors": [
@@ -15078,14 +15078,14 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.2.1362",
               "distractors": [
-                "Link Layer Discovery Protocol — a standard (non-proprietary) protocol used on switches to discover devices on the network",
-                "Real-time shows current device status (up/down); historical data is collected over time to produce availability reports",
-                "A simple metric showing whether a device is up (green) or down (red), providing instant visibility into device status"
+                "A scheduled query sent from the management station to each device at regular polling intervals",
+                "A community string configured on each device that authenticates read/write access to the MIB",
+                "A one-time discovery scan that maps all SNMP-capable devices and their OIDs on the network"
               ]
             },
             {
               "question": "How are SNMP traps configured?",
-              "answer": "Threshold conditions are set on the device (e.g., CRC error count increases by 5), and when triggered, the device sends a trap to the management st...",
+              "answer": "Threshold conditions are set on the device (e.g., CRC error count increases by 5), and when triggered, the device sends a trap to the management station",
               "difficulty": 2,
               "id": "3.2.1363",
               "distractors": [
@@ -15366,7 +15366,7 @@ const GAME_DATA = {
             },
             {
               "question": "Why would banking transactions have a shorter RPO than internal documents?",
-              "answer": "Banking transactions / patient info cannot tolerate much data loss (RPO < 1 hour), while website updates / internal documents may only be backed up...",
+              "answer": "Banking transactions / patient info cannot tolerate much data loss (RPO < 1 hour), while website updates / internal documents may only be backed up every 1–2 hours (longer RPO)",
               "difficulty": 2,
               "id": "3.3.1388",
               "distractors": [
@@ -15432,7 +15432,7 @@ const GAME_DATA = {
             },
             {
               "question": "A firewall has an MTBF of 20 years. How does this help disaster recovery planning?",
-              "answer": "You can plan around the long expected lifetime — e.g., only needing one backup unit instead of multiples because the device is expected to last a l...",
+              "answer": "You can plan around the long expected lifetime — e.g., only needing one backup unit instead of multiples because the device is expected to last a long time",
               "difficulty": 2,
               "id": "3.3.1394",
               "distractors": [
@@ -15454,7 +15454,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are the four steps of site resiliency?",
-              "answer": "1) Prepare the DR site (power, hardware, data), 2) Move from primary to backup facility, 3) Work from backup facility until resolved, 4) Move asset...",
+              "answer": "1) Prepare the DR site (power, hardware, data), 2) Move from primary to backup facility, 3) Work from backup facility until resolved, 4) Move assets and data back to original location",
               "difficulty": 3,
               "id": "3.3.1396",
               "distractors": [
@@ -15542,7 +15542,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is a warm site?",
-              "answer": "Between a cold site and hot site — has some infrastructure (power, racks, possibly some hardware) but you still need to bring data and recover from...",
+              "answer": "Between a cold site and hot site — has some infrastructure (power, racks, possibly some hardware) but you still need to bring data and recover from backup tapes",
               "difficulty": 1,
               "id": "3.3.1404",
               "distractors": [
@@ -15564,7 +15564,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is a tabletop exercise?",
-              "answer": "A meeting where everyone sits around a conference table and steps through simulated disaster scenarios, describing what each person/department woul...",
+              "answer": "A meeting where everyone sits around a conference table and steps through simulated disaster scenarios, describing what each person/department would do — no physical movement of backups or equipment",
               "difficulty": 1,
               "id": "3.3.1406",
               "distractors": [
@@ -15597,7 +15597,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is a validation test in disaster recovery?",
-              "answer": "A full-blown disaster-recovery site test that follows a specific scenario (e.g., fire, evacuation), going through the same DR process without actua...",
+              "answer": "A full-blown disaster-recovery site test that follows a specific scenario (e.g., fire, evacuation), going through the same DR process without actually moving production",
               "difficulty": 2,
               "id": "3.3.1409",
               "distractors": [
@@ -15641,7 +15641,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between a tabletop exercise and a validation test?",
-              "answer": "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actua...",
+              "answer": "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actual process without moving production (more costly, ...",
               "difficulty": 3,
               "id": "3.3.1413",
               "distractors": [
@@ -15667,9 +15667,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.3.1415",
               "distractors": [
-                "Both devices are used simultaneously rather than one being on standby",
-                "The secondary device takes over as the primary device on the network",
-                "The configuration must be copied to the secondary device"
+                "Synchronize their routing tables by exchanging full configuration backups every 30 seconds",
+                "Load-balance traffic equally between both units using round-robin distribution",
+                "Monitor external bandwidth utilization to determine when failover thresholds are exceeded"
               ]
             },
             {
@@ -15856,7 +15856,7 @@ const GAME_DATA = {
           "concepts": [
             {
               "question": "What is a DHCP scope?",
-              "answer": "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
+              "answer": "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and optional settings",
               "difficulty": 1,
               "id": "3.4.1432",
               "distractors": [
@@ -15926,9 +15926,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1438",
               "distractors": [
-                "0.0.0.0 (default route) — so the message is forwarded to the default gateway and routed to the DHCP server",
-                "224.0.0.1 (multicast) — so only devices listening on the DHCP multicast group receive the request",
-                "192.168.1.1 (gateway) — so the router can relay the request to the correct DHCP server on the network"
+                "The address remains permanently assigned to that device's MAC address for future reconnection",
+                "The DHCP server marks the address as reserved and requires admin approval before reassignment",
+                "The device keeps the address indefinitely but is flagged as non-compliant in the DHCP log"
               ]
             },
             {
@@ -15988,7 +15988,7 @@ const GAME_DATA = {
             },
             {
               "question": "Why use DHCP reservations instead of manually configuring static IPs on devices?",
-              "answer": "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
+              "answer": "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalability)",
               "difficulty": 2,
               "id": "3.4.1444",
               "distractors": [
@@ -16010,7 +16010,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is the difference between a DHCP reservation (static DHCP) and a static IP configuration?",
-              "answer": "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i...",
+              "answer": "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP involvement",
               "difficulty": 3,
               "id": "3.4.1446",
               "distractors": [
@@ -16036,9 +16036,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1448",
               "distractors": [
-                "DHCP leases expire too quickly on large networks, forcing constant renewal traffic that overwhelms the server",
-                "Clients on the same subnet compete for addresses, causing IP conflicts when two devices receive the same lease",
-                "DHCP uses TCP which adds handshake overhead, making address assignment too slow for networks with many clients"
+                "The lease remains active until it expires naturally — the server has no way to detect the device went offline",
+                "The DHCP server detects the shutdown via ARP and immediately reassigns the address to the next requesting client",
+                "The device's IP address is permanently reserved in the pool and cannot be assigned to any other device"
               ]
             },
             {
@@ -16527,7 +16527,7 @@ const GAME_DATA = {
             },
             {
               "question": "What are resource records in DNS?",
-              "answer": "Individual entries in a DNS configuration file that provide different types of information (name-to-IP resolution, certificates, aliases, mail serv...",
+              "answer": "Individual entries in a DNS configuration file that provide different types of information (name-to-IP resolution, certificates, aliases, mail server locations, etc.)",
               "difficulty": 1,
               "id": "3.4.1493",
               "distractors": [
@@ -16674,9 +16674,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1506",
               "distractors": [
-                "MAC address of the gateway, link MTU, VLAN ID, and authentication credentials for the network",
-                "Default gateway IP, lease duration, NTP server address, and DHCP server identifier",
-                "Interface speed, duplex setting, IPv4-mapped address, and SSID of the wireless network"
+                "Yes — the MX record contains both the mail server name and its resolved IPv4 address in a single response",
+                "Yes — MX records store the IP address directly to avoid additional DNS lookups and reduce mail delivery latency",
+                "No — it returns a priority number only; the sending server must already know the destination IP from its local cache"
               ]
             },
             {
@@ -16696,9 +16696,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1508",
               "distractors": [
-                "The device generates a random 128-bit address and immediately begins using it on the network",
-                "The device broadcasts a DHCPv6 Solicit message to locate available address servers on the subnet",
-                "The device queries the local DNS server to determine which IPv6 prefix is assigned to the subnet"
+                "Secure Protocol Framework — encrypts SMTP connections between mail servers using TLS certificates",
+                "Spam Prevention Filter — a server-side rule engine that scores incoming email and quarantines likely spam",
+                "Simple Protection Forwarding — a routing protocol that validates the source IP of email relay servers"
               ]
             },
             {
@@ -16718,9 +16718,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1510",
               "distractors": [
-                "48 bits",
-                "128 bits",
-                "32 bits"
+                "DNS Key Infrastructure Management — a system for rotating DNSSEC encryption keys on a scheduled basis",
+                "Sender Policy Framework — a DNS TXT record listing which mail servers are authorized to send email for a domain",
+                "DomainKeys Integrity Monitor — a service that scans inbound emails and flags messages with spoofed sender addresses"
               ]
             },
             {
@@ -16740,9 +16740,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1512",
               "distractors": [
-                "DHCPv6 server assignment (server picks the full 64-bit ID) or manual static configuration by the administrator",
-                "Hash of the device hostname (SHA-256 truncated to 64 bits) or the device serial number encoded in hexadecimal",
-                "Router-assigned value (included in the Router Advertisement) or a sequentially incremented counter starting from 1"
+                "They compare the email's hash against a centralized DKIM revocation list maintained by the sender's CA",
+                "They decrypt the email body using the sender's private key stored in the email headers",
+                "They contact the sender's mail server directly via SMTP to confirm the message was actually sent"
               ]
             },
             {
@@ -16971,9 +16971,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1533",
               "distractors": [
-                "It queries root servers independently and builds its own zone database from the responses",
-                "It downloads zone files directly from a shared network storage location configured by the administrator",
-                "It receives updates from clients who report their DNS records via dynamic registration"
+                "ARP resolution, default gateway discovery, and DHCP relay forwarding",
+                "MAC address learning, broadcast domain segmentation, and loop prevention",
+                "DNS resolution, reverse path forwarding, and fragmentation reassembly"
               ]
             },
             {
@@ -17011,7 +17011,7 @@ const GAME_DATA = {
             },
             {
               "question": "What is an unsolicited RA?",
-              "answer": "A Router Advertisement sent by a router without being queried, to a multicast address for all devices that might be interested in knowing where rou...",
+              "answer": "A Router Advertisement sent by a router without being queried, to a multicast address for all devices that might be interested in knowing where routers exist",
               "difficulty": 2,
               "id": "3.4.1537",
               "distractors": [
@@ -17125,9 +17125,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1547",
               "distractors": [
-                "The server may return records from a different domain if its cache becomes corrupted or poisoned",
-                "Nonauthoritative responses cannot include MX or SRV records — only A and AAAA records are cached",
-                "The TTL on cached records is always extended by the caching server, masking expiration from the client"
+                "The device sends a DHCPv6 Confirm message to verify the address is not already leased to another host",
+                "The device registers its new address with the local DNS server via dynamic DNS update",
+                "The router responds with a Neighbor Advertisement confirming the prefix is valid for the link"
               ]
             },
             {
@@ -17143,13 +17143,13 @@ const GAME_DATA = {
             },
             {
               "question": "List the five steps of the SLAAC process in order.",
-              "answer": "1) Send Router Solicitation via NDP, 2) Receive Router Advertisement with 64-bit prefix, 3) Generate 64-bit interface ID (modified MAC or random), ...",
+              "answer": "1) Send Router Solicitation via NDP, 2) Receive Router Advertisement with 64-bit prefix, 3) Generate 64-bit interface ID (modified MAC or random), 4) Run DAD to check for duplicates, 5) Address is ...",
               "difficulty": 3,
               "id": "3.4.1549",
               "distractors": [
-                "On the client's local DNS resolver settings",
-                "On the recursive DNS server that caches the record",
-                "In the domain registrar's control panel under zone transfer settings"
+                "1) DHCPv6 Solicit, 2) DHCPv6 Advertise, 3) DHCPv6 Request, 4) DHCPv6 Reply, 5) DAD confirmation",
+                "1) ARP Request, 2) ARP Reply, 3) Assign prefix, 4) Register with DNS, 5) Confirm with gateway",
+                "1) Link-local only, 2) Contact DHCP, 3) Receive full /128, 4) Set default route, 5) Verify with ping"
               ]
             },
             {
@@ -17202,9 +17202,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1554",
               "distractors": [
-                "1) Client queries root server directly, 2) Root returns final IP, 3) Client caches result, 4) Client connects to host, 5) TTL expires and cache clears",
-                "1) Client broadcasts DNS request, 2) All local servers respond, 3) Client picks fastest response, 4) Result is cached permanently, 5) No further qu...",
-                "1) Client queries local DNS, 2) Local server checks cache only, 3) If not cached returns NXDOMAIN, 4) Client retries after timeout, 5) Falls back t..."
+                "Assigns IP addresses dynamically to devices when they first connect to the network",
+                "Encrypts network traffic between clients and servers to prevent eavesdropping on data",
+                "Routes packets across different networks by determining the best path to each destination"
               ]
             },
             {
@@ -17235,9 +17235,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1557",
               "distractors": [
-                "DNS servers are limited to a single zone file and cannot handle recursive queries, making them vulnerable to cache overflow attacks",
-                "DNS uses only TCP which makes it susceptible to SYN floods, and responses are limited to 512 bytes forcing truncation of records",
-                "DNS requires static root server entries that expire annually, and zone transfers between servers are always sent uncompressed"
+                "The individual hostnames (like www or mail) that appear before the domain name in a fully qualified domain name",
+                "The second-level domain names registered by organizations directly below the root zone (e.g., google, amazon)",
+                "The authoritative DNS servers responsible for storing and serving records for a specific domain zone"
               ]
             },
             {
@@ -17257,9 +17257,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1559",
               "distractors": [
-                "Yes — DNSSEC wraps all queries and responses in TLS, hiding them from network observers",
-                "Yes — DNSSEC uses AES encryption to protect both the query and the response payload",
-                "No — DNSSEC only encrypts responses from authoritative servers, leaving recursive queries visible"
+                ".com (commercial), .org (organization), .net (network)",
+                ".gov (government), .edu (education), .mil (military)",
+                ".info (information), .biz (business), .name (personal)"
               ]
             },
             {
@@ -17356,9 +17356,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1568",
               "distractors": [
-                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
-                "Configurable — devices can update daily, hourly, or on other schedules (automatic process)"
+                "Querying the authoritative DNS server directly instead of using a recursive resolver",
+                "Broadcasting a name query to all devices on the local subnet to find the matching IP",
+                "Using mDNS to resolve names only within the same VLAN without any manual configuration"
               ]
             },
             {
@@ -17367,9 +17367,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1569",
               "distractors": [
-                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
-                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+                "Blocking specific websites by redirecting their domain names to 127.0.0.1 and caching DNS responses for faster lookups",
+                "Configuring dynamic DNS updates so the hosts file automatically syncs with the DHCP server's lease table",
+                "Replacing the need for a DNS server entirely on enterprise networks by distributing the hosts file via Group Policy"
               ]
             },
             {
@@ -17378,9 +17378,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1570",
               "distractors": [
-                "ARP (Address Resolution Protocol)",
-                "The IP address of the DHCP server",
-                "An NTS Key Exchange (NTS-KE) server"
+                "windows/system32/config/hosts",
+                "program files/common files/hosts",
+                "/etc/hosts (same path on all operating systems including Windows)"
               ]
             },
             {
@@ -17389,9 +17389,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1571",
               "distractors": [
-                "MAC address, reserved IP address, and device name",
-                "NTP sends information in the clear (unencrypted)",
-                "All four are sent as broadcasts (255.255.255.255)"
+                "An XML database with records for hostname, IP, MAC address, and TTL values",
+                "A binary file compiled from DNS zone records during system startup",
+                "A JSON-formatted configuration file with nested objects for each domain entry"
               ]
             },
             {
@@ -17400,9 +17400,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1572",
               "distractors": [
-                "An NTS Key Exchange (NTS-KE) server",
-                "In the DHCP RFC (Request for Comments)",
-                "A fully routable, unique IPv6 address"
+                "It requires a digital certificate before any edits can be saved",
+                "It is encrypted with the user's login credentials and must be decrypted first",
+                "It is locked by the DNS client service and cannot be modified while the service is running"
               ]
             },
             {
@@ -17411,9 +17411,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1573",
               "distractors": [
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
-                "Yes — the server responds to time requests while the client queries upstream servers for updates",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+                "Yes — the hosts file is checked by the OS TCP/IP stack before any application code runs, so all apps use it automatically",
+                "Yes — but only if DNS is unavailable; the hosts file serves as a universal fallback for all network applications",
+                "No — only applications using TCP check the hosts file; UDP-based applications always query DNS directly"
               ]
             },
             {
@@ -17422,9 +17422,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1574",
               "distractors": [
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
-                "Reaches out to any available DHCP server on the network to renew the lease",
-                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits"
+                "Provide an IP address -> DNS returns the associated hostname (reverse lookup)",
+                "Query a DNS server to find which mail server handles email for a domain (MX lookup)",
+                "Request a list of all name servers authoritative for a particular domain (NS lookup)"
               ]
             },
             {
@@ -17433,9 +17433,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1575",
               "distractors": [
-                "The root, represented by a single dot (`.`)",
-                "At the very top — it is the first record",
-                "In a TXT record on the domain's DNS server"
+                "Provide a name → DNS returns all associated MX and CNAME records instead of just the A record",
+                "Query a secondary DNS server instead of the primary to verify record consistency",
+                "Trace the full DNS resolution path backward from authoritative server to the client's resolver"
               ]
             },
             {
@@ -17444,9 +17444,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1576",
               "distractors": [
-                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form",
-                "Yes — you can use copper or fiber transceivers depending on your needs",
-                "Yes — just remove the copper transceiver and slide in a fiber transceiver"
+                "Yes — creating an A record automatically generates the corresponding PTR record in the reverse zone",
+                "Yes — the DNS server infers reverse mappings from existing forward records during zone replication",
+                "Only for AAAA records — IPv6 reverse zones are auto-populated, but IPv4 requires manual PTR entries"
               ]
             },
             {
@@ -17455,9 +17455,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1577",
               "distractors": [
-                "No — spine switches do NOT connect directly to each other",
-                "No dynamic routing updates that could be manipulated",
-                "No security, no authentication — anyone can communicate freely"
+                "No — RFC 1035 requires forward and reverse records to always match for any given IP address",
+                "No — DNS servers automatically synchronize PTR records with A records to ensure consistency",
+                "Only if the IP is using DHCP — static IPs must always have matching forward and reverse entries"
               ]
             },
             {
@@ -17466,9 +17466,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1578",
               "distractors": [
-                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
-                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)",
-                "No — the same information exists in both and the end user has no idea which answered"
+                "A DNS server that caches responses from other servers and replays them to local clients on request",
+                "A DNS server that only handles recursive queries by walking the hierarchy on behalf of clients",
+                "A DNS server designated as a backup that receives zone transfers but cannot modify records directly"
               ]
             },
             {
@@ -17477,9 +17477,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1579",
               "distractors": [
-                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
-                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address"
+                "A DNS server that has not been registered with ICANN and cannot resolve public domain names",
+                "A DNS server running without DNSSEC validation, so its responses cannot be trusted or verified",
+                "A rogue DNS server on the network that provides incorrect name resolution to redirect traffic"
               ]
             },
             {
@@ -17488,9 +17488,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1580",
               "distractors": [
-                "A multicast message sent by a device asking any routers on the local subnet to respond",
-                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
-                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value"
+                "Nonauthoritative servers cannot resolve recursive queries and will return SERVFAIL errors",
+                "Nonauthoritative servers use unencrypted connections, exposing all queries to eavesdropping",
+                "Nonauthoritative servers lack DNSSEC signing, so responses cannot be validated against tampering"
               ]
             },
             {
@@ -17499,9 +17499,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1581",
               "distractors": [
-                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
-                "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet"
+                "Transfer Tag Label — identifies which DNS zone a record belongs to during zone transfers between servers",
+                "Transaction Tracking Log — a record of all DNS queries and responses stored on the authoritative server",
+                "Trusted Top Level — a flag indicating that a domain's TLD has been validated by a root server"
               ]
             },
             {
@@ -17510,9 +17510,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1582",
               "distractors": [
-                "SOA (Start of Authority) record",
-                "The IP address of the DHCP server",
-                "ARP (Address Resolution Protocol)"
+                "On the local DNS resolver/cache that stores temporary records",
+                "In the client device's hosts file or network adapter configuration",
+                "On the recursive DNS server that forwards queries on behalf of clients"
               ]
             },
             {
@@ -17521,9 +17521,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1583",
               "distractors": [
-                "No — some applications ignore the hosts file and query DNS directly; check application documentation",
-                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses",
-                "No — it returns a name (e.g., mail.example.com); a separate A record lookup is needed to get the IP"
+                "The local DNS server automatically refreshes the record in the background without waiting for a new query",
+                "The cached record is marked stale but continues to be served to clients indefinitely until manually flushed",
+                "The DNS server sends a notification to all clients that previously resolved that record to update their local cache"
               ]
             },
             {
@@ -17532,9 +17532,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1584",
               "distractors": [
-                "1 Gbps (Gigabit Ethernet)",
-                "4 Gbps (4 channels of 1 Gbps SFP)",
-                "1 Gbps (1000 Mbps)"
+                "300 minutes (5 hours)",
+                "300 milliseconds (less than 1 second)",
+                "Indefinitely — TTL only affects the authoritative server, not caching resolvers"
               ]
             },
             {
@@ -17543,9 +17543,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1585",
               "distractors": [
-                "It has its own OS and runs without delays from third-party processes, providing the most accurate timestamps possible",
-                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
-                "It uses a separate NTP client to query a different NTP server — it does not modify its own time from client requests"
+                "A query where the DNS server returns only the next server to ask, requiring the client to follow the chain itself",
+                "A query that simultaneously contacts all 13 root servers and uses whichever response arrives first",
+                "A query where the client bypasses the local DNS server and contacts the authoritative server directly"
               ]
             },
             {
@@ -17554,20 +17554,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1586",
               "distractors": [
-                "Name Server record — specifies where the name servers for the domain are located",
-                "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS",
-                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name"
+                "It queries the root servers, then TLD servers, then authoritative servers itself step by step",
+                "It broadcasts a DNS request to all servers on the local subnet and uses the first response received",
+                "It sends parallel queries to every DNS server in its configuration and accepts the fastest answer"
               ]
             },
             {
               "question": "List the five steps of the recursive DNS query process.",
-              "answer": "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
+              "answer": "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.com NS address, 4) Local server queries professorme...",
               "difficulty": 3,
               "id": "3.4.1587",
               "distractors": [
-                "Client-to-site: software on workstation connects to corporate concentrator. Site-to-site: firewalls at both locations create always-on tunnel betwe...",
-                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
-                "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number..."
+                "1) Client queries root server directly 2) Root returns final IP 3) Client connects — only three steps needed for iterative resolution",
+                "1) Check hosts file 2) Query local DNS cache 3) Broadcast DNS request on local subnet 4) Nearest DNS server responds 5) Cache result",
+                "1) Client sends query to ISP DNS 2) ISP forwards to root 3) Root resolves full name 4) Root returns IP to ISP 5) ISP returns IP to client"
               ]
             },
             {
@@ -17576,9 +17576,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1588",
               "distractors": [
-                "The last 64 bits of the address, generated by the device itself during SLAAC",
-                "The device sends a Router Solicitation via NDP to determine the local subnet",
-                "It can release the IP address back into the pool so other devices can use it"
+                "The final resolved IP address of the requested domain name",
+                "The address of the authoritative name server for the specific domain",
+                "A cached copy of the DNS record if it has been recently queried"
               ]
             },
             {
@@ -17587,9 +17587,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1589",
               "distractors": [
-                "MAC address, reserved IP address, and device name",
-                "Yes — the forward name and reverse name may differ",
-                "All four are sent as broadcasts (255.255.255.255)"
+                "A new recursive query is performed each time to ensure the most current information is returned",
+                "They are forwarded directly to the authoritative server since the resolution path is now known",
+                "They are queued until the original TTL expires, then a single batch query is sent upstream"
               ]
             },
             {
@@ -17598,9 +17598,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1590",
               "distractors": [
-                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
-                "Start of Authority — the first record at the top of a DNS configuration file that provides an overview of the DNS zone",
-                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server"
+                "DNS uses random port numbers making firewall rules unreliable, and zone transfers expose all records to unauthorized parties",
+                "DNS caches consume excessive memory on client devices, and recursive lookups create single points of failure",
+                "DNS servers cannot handle more than 1,000 concurrent queries, and UDP transport causes frequent packet loss"
               ]
             },
             {
@@ -17609,9 +17609,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1591",
               "distractors": [
-                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
-                "NTP: basic time sync (milliseconds). NTS: authenticated time sync (secure NTP). PTP: hardware-based time sync (nanoseconds) for industrial use.",
-                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP"
+                "DNS over TLS — encrypts all DNS queries between the client and recursive resolver to prevent eavesdropping on port 853",
+                "A DNS firewall service that blocks queries to known malicious domains before they resolve to an IP address",
+                "DNS over HTTPS — tunnels DNS queries inside HTTPS traffic on port 443 so ISPs cannot inspect or modify lookups"
               ]
             },
             {
@@ -17620,9 +17620,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1592",
               "distractors": [
-                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
-                "Yes — the server responds to time requests while the client queries upstream servers for updates",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+                "Yes — DNSSEC uses TLS to encrypt all queries between client and resolver",
+                "Yes — DNSSEC wraps DNS traffic in an IPsec tunnel between the client and the authoritative server",
+                "Partially — DNSSEC encrypts responses but leaves queries unencrypted for routing purposes"
               ]
             },
             {
@@ -17631,9 +17631,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1593",
               "distractors": [
-                "Hardware-based time synchronization with nanosecond granularity",
-                "All four DORA phases — the relay process repeats for each step",
-                "Use external NTP servers or run their own internal NTP servers"
+                "A method of encrypting DNS traffic by embedding queries inside HTTPS requests over TCP port 443",
+                "A method of signing DNS responses with digital certificates to verify they haven't been tampered with",
+                "A method of tunneling DNS queries through an IPsec VPN to prevent ISP inspection of lookups"
               ]
             },
             {
@@ -17642,9 +17642,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1594",
               "distractors": [
-                "TCP 1433",
-                "TCP 443",
-                "TCP 3389"
+                "UDP port 53",
+                "TCP port 443",
+                "TCP port 8853"
               ]
             },
             {
@@ -17653,9 +17653,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1595",
               "distractors": [
-                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
-                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields",
-                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network"
+                "A DNS extension that adds digital signatures to zone records to verify response authenticity (DNSSEC)",
+                "A method of encrypting DNS traffic using TLS over a dedicated TCP port 853, separate from web traffic",
+                "A protocol that tunnels DNS queries through an SSH connection to prevent ISP interception on port 53"
               ]
             },
             {
@@ -17664,9 +17664,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1596",
               "distractors": [
-                "TCP 443",
-                "TCP 3389",
-                "TCP 1433"
+                "UDP port 53",
+                "TCP port 853",
+                "UDP port 443"
               ]
             },
             {
@@ -17675,9 +17675,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1597",
               "distractors": [
-                "Name Server record — specifies where the name servers for the domain are located",
-                "It only contacts its local DNS server — the local server handles everything else",
-                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name"
+                "As plaintext DNS queries on port 443 — the DNS payload is visible but wrapped in an HTTPS header",
+                "As a distinct protocol type on port 853 — identifiable as encrypted DNS by its unique port number",
+                "As UDP traffic on port 53 with an encrypted payload — the DNS port is visible but content is not"
               ]
             },
             {
@@ -17686,9 +17686,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1598",
               "distractors": [
-                "In the DHCP RFC (Request for Comments)",
-                "A fully routable, unique IPv6 address",
-                "At the very top — it is the first record"
+                "VPN client applications use DoH to encrypt all tunnel negotiation traffic",
+                "Email clients like Outlook and Thunderbird use DoH for all address lookups by default",
+                "Operating system DNS resolver services (Windows DNS Client, systemd-resolved) enable DoH by default"
               ]
             },
             {
@@ -17697,9 +17697,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1599",
               "distractors": [
-                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
-                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
-                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)"
+                "DNSSEC encrypts DNS traffic end-to-end between all servers in the resolution chain; DoT/DoH only encrypt the last hop",
+                "DNSSEC prevents DNS queries from being intercepted by ISPs; DoT/DoH only hide the response but not the query destination",
+                "DNSSEC provides confidentiality by encrypting record data; DoT/DoH only authenticate the server via TLS certificates"
               ]
             },
             {
@@ -17708,9 +17708,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1600",
               "distractors": [
-                "A record is for IPv4 addresses; AAAA record is for IPv6 addresses. Same functionality, different IP version.",
-                "A DNS record that stores human-readable text information, used for multiple purposes including SPF and DKIM",
-                "They are separate and independent — PTR records must be configured independently from forward A/AAAA records"
+                "They validate that DNS responses have not been tampered with using digital signatures",
+                "They prevent DNS cache poisoning by verifying the chain of trust back to the root zone",
+                "They eliminate the need for recursive resolvers by sending queries directly to authoritative servers"
               ]
             },
             {
@@ -17719,9 +17719,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1601",
               "distractors": [
-                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options",
-                "Mail Exchanger record — specifies the mail server responsible for receiving email for the domain",
-                "Yes — the server responds to time requests while the client queries upstream servers for updates"
+                "Translates hostnames to IP addresses so devices can locate each other on the network",
+                "Monitors network device health and sends alerts when performance thresholds are exceeded",
+                "Encrypts management traffic between administrators and network infrastructure devices"
               ]
             },
             {
@@ -17730,9 +17730,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1602",
               "distractors": [
-                "Chooses one of the offers and sends a DHCP Request to that DHCP server",
-                "No — reverse lookups must be separately configured on the DNS server",
-                "The address returns to the pool and can be assigned to another device"
+                "To prevent unauthorized devices from joining the network by validating clock-based tokens",
+                "To increase bandwidth throughput by synchronizing frame transmission intervals across switches",
+                "To ensure routing protocol updates are processed in the correct sequence by neighboring routers"
               ]
             },
             {
@@ -17741,9 +17741,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1603",
               "distractors": [
-                "TCP 3389",
-                "TCP 1433",
-                "TCP 443"
+                "TCP port 123",
+                "UDP port 161",
+                "UDP port 514"
               ]
             },
             {
@@ -17752,9 +17752,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1604",
               "distractors": [
-                "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
-                "Defines the IPv4 address of a host — the core record for name resolution",
-                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts"
+                "Devices are synchronized to within 1 second, sufficient for most logging and authentication",
+                "NTP guarantees sub-microsecond accuracy between any two devices on the same network",
+                "Accuracy depends entirely on the stratum level — stratum 1 is exact, stratum 2+ is only approximate"
               ]
             },
             {
@@ -17763,9 +17763,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1605",
               "distractors": [
-                "It has its own OS and runs without delays from third-party processes, providing the most accurate timestamps possible",
-                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
-                "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes"
+                "It averages the timestamps from all client requests it receives and adjusts its clock based on consensus",
+                "It synchronizes from its own internal hardware clock only — NTP servers never query external time sources",
+                "It receives drift corrections from the clients it serves — clients report offsets and the server adjusts accordingly"
               ]
             },
             {
@@ -17774,9 +17774,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1606",
               "distractors": [
-                "No — it only signs responses for integrity/authenticity; queries are still visible in the clear",
-                "No — 100 in binary is 01100100, which has 0's between 1's (masks must be contiguous 1's then 0's)",
-                "No — the cable has no speed. The Ethernet standard determines the throughput over that cable type."
+                "No — a device must be designated as either client or server during configuration and cannot change roles dynamically",
+                "No — NTP uses a strict hierarchy where each device can only occupy one stratum level at a time",
+                "Yes — but only if the device has two separate network interfaces, one dedicated to each role"
               ]
             },
             {
@@ -17785,9 +17785,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1607",
               "distractors": [
-                "A simple text file mapping IP addresses to names",
-                "All four are sent as broadcasts (255.255.255.255)",
-                "MAC address, reserved IP address, and device name"
+                "NTP uses a single static port (UDP 123) that cannot be changed, making it easy to block or target with DDoS attacks",
+                "NTP only supports symmetric key authentication, which requires pre-sharing keys with every client manually",
+                "NTP servers have no built-in access control, allowing any device on the internet to query or modify the time source"
               ]
             },
             {
@@ -17796,9 +17796,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1608",
               "distractors": [
-                "The Top Level Domains (TLDs)",
-                "Call server IP address (VoIP)",
-                "CNAME (Canonical Name) record"
+                "The server automatically adjusts its clock to match the client and reissues the ticket",
+                "The ticket is issued with a reduced validity period proportional to the time difference",
+                "The client falls back to NTLM authentication until the clocks are synchronized"
               ]
             },
             {
@@ -17807,9 +17807,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1609",
               "distractors": [
-                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
-                "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
-                "A record is for IPv4 addresses; AAAA record is for IPv6 addresses. Same functionality, different IP version."
+                "By flooding the NTP server with monlist requests to amplify traffic and overwhelm the target with responses",
+                "By intercepting NTP packets and injecting malware payloads into the time synchronization updates",
+                "By exhausting the NTP server's connection table with spoofed source addresses preventing legitimate queries"
               ]
             },
             {
@@ -17818,9 +17818,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1610",
               "distractors": [
-                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
-                "Defines the IPv4 address of a host — the core record for name resolution",
-                "Client sends: Discover and Request. Server sends: Offer and Acknowledge."
+                "A standalone time protocol that replaces NTP entirely with encrypted timestamps over TCP 443",
+                "A firewall feature that blocks NTP traffic from untrusted external sources on the network perimeter",
+                "A GPS-based time source that provides stratum 0 accuracy without needing any network connectivity"
               ]
             },
             {
@@ -17829,9 +17829,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1611",
               "distractors": [
-                "It is stored as read-only by default",
-                "windows/system32/drivers/etc/hosts",
-                "A fully routable, unique IPv6 address"
+                "A RADIUS authentication server to validate NTP client credentials before synchronization",
+                "A dedicated certificate authority (CA) server to issue per-session TLS certificates for each NTP client",
+                "A Kerberos Key Distribution Center (KDC) to issue time-stamped authentication tickets"
               ]
             },
             {
@@ -17840,9 +17840,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1612",
               "distractors": [
-                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
-                "An IPv6 protocol that replaces ARP from IPv4, using multicast instead of broadcasts to find devices, identify routers, and detect duplicate addresses",
-                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ..."
+                "1) Client sends its public key to the NTP server. 2) Server encrypts the time response with the client's key to prove authenticity.",
+                "1) Client and server exchange pre-shared symmetric keys. 2) Each NTP packet is encrypted with AES using those keys.",
+                "1) Client authenticates via Kerberos ticket. 2) Server issues a signed timestamp that the client verifies against a trusted CA."
               ]
             },
             {
@@ -17851,9 +17851,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1613",
               "distractors": [
-                "The IP address of the DHCP server",
-                "Neighbor Discovery Protocol (NDP)",
-                "ARP (Address Resolution Protocol)"
+                "Initiates a new TLS handshake to re-verify the client's identity before sending any time data",
+                "Forwards the cookie to an upstream stratum server for validation before responding to the client",
+                "Stores the cookie for future session resumption and requests a fresh cookie from the client"
               ]
             },
             {
@@ -17862,9 +17862,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1614",
               "distractors": [
-                "It sends a Router Advertisement (RA) directly back to the device",
-                "A method of encrypting DNS traffic using TLS over TCP port 853",
-                "All four DORA phases — the relay process repeats for each step"
+                "Software-based time synchronization providing millisecond accuracy using NTP over TCP",
+                "A GPS-only time distribution system requiring satellite receivers on every synchronized device",
+                "An authentication protocol that validates time sources using digital certificates before allowing sync"
               ]
             },
             {
@@ -17873,9 +17873,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1615",
               "distractors": [
-                "Pointer record — used for reverse DNS lookups, resolving an IP address to a name",
-                "It only contacts its local DNS server — the local server handles everything else",
-                "Name Server record — specifies where the name servers for the domain are located"
+                "PTP and NTP achieve the same microsecond precision, but PTP uses less bandwidth by syncing only once per hour",
+                "PTP achieves ~1 millisecond accuracy, roughly 10 times better than NTP's ~10 millisecond accuracy",
+                "PTP is less precise than NTP but compensates with hardware timestamps that reduce CPU overhead on clients"
               ]
             },
             {
@@ -17884,9 +17884,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1616",
               "distractors": [
-                "MAC-to-IP pairings — so it can recognize returning devices",
-                "The client can now configure all IP settings automatically",
-                "The lease resets and the timer restarts from the beginning"
+                "Home networks where devices need basic time synchronization for file timestamps",
+                "Standard office environments that use NTP for email and calendar scheduling",
+                "Cloud data centers where virtual machines need approximate time for log correlation"
               ]
             },
             {
@@ -17895,9 +17895,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1617",
               "distractors": [
-                "It uses a separate NTP client to query a different NTP server — it does not modify its own time from client requests",
-                "They retrieve the public key from the sender's DNS TXT record and use it to verify the digital signature on the email",
-                "Start of Authority — the first record at the top of a DNS configuration file that provides an overview of the DNS zone"
+                "Because PTP operates at Layer 1 and requires optical signaling hardware that standard NICs cannot generate",
+                "Because software-based timestamping introduces variable delays from CPU scheduling and OS interrupts",
+                "Because PTP uses a proprietary protocol stack that is incompatible with standard TCP/IP network interfaces"
               ]
             },
             {
@@ -17906,9 +17906,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1618",
               "distractors": [
-                "Resolving names locally on the machine without querying a DNS server, using the hosts file",
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
-                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record"
+                "Fixed at exactly once every 64 seconds as defined in the NTP RFC specification",
+                "Only at boot time — devices synchronize once during startup and never update again until restarted",
+                "Every 30 minutes mandatory — NTP clients poll at a fixed interval that cannot be changed"
               ]
             },
             {
@@ -17917,9 +17917,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1619",
               "distractors": [
-                "A method of encrypting DNS traffic using TLS over TCP port 853",
-                "All four DORA phases — the relay process repeats for each step",
-                "Hardware-based time synchronization with nanosecond granularity"
+                "Use GPS-synchronized clocks on every endpoint or rely on the CPU's built-in real-time clock only",
+                "Purchase a commercial NTP license or use the free PTP (Precision Time Protocol) instead",
+                "Synchronize manually via scheduled scripts or embed timestamps from email server headers"
               ]
             },
             {
@@ -17928,9 +17928,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1620",
               "distractors": [
-                "A single server with one IP address that needs to be referenced by multiple names (e.g., chat, ftp, and www all pointing to mail.example.com)",
-                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP",
-                "Domain Name Security Extensions — digitally signs DNS responses to verify they came from a trusted source and have not been modified in transit"
+                "NTP: encrypted time sync. NTS: basic time sync without authentication. PTP: software-based sync for general computing.",
+                "NTP: nanosecond accuracy for data centers. NTS: adds GPS validation. PTP: millisecond sync for standard networks.",
+                "NTP: unicast only. NTS: multicast time distribution. PTP: broadcast-based sync requiring dedicated VLAN."
               ]
             }
           ]
@@ -17945,9 +17945,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1621",
               "distractors": [
-                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login",
-                "A server you dial into, from which you can then jump to other devices through that COM server connection",
-                "Connect and control devices using the language the device expects, automate processes, and handle errors"
+                "Secure Socket Handler — provides encrypted file transfer between servers using port 443 and TLS certificates",
+                "System Shell Host — provides local command-line access to network devices through a serial console connection",
+                "Secure Session Hypervisor — provides encrypted virtual machine management through a web-based interface on port 8443"
               ]
             },
             {
@@ -17956,9 +17956,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1622",
               "distractors": [
-                "TCP 3389",
-                "TCP 1433",
-                "TCP 443"
+                "TCP port 23",
+                "TCP port 3389",
+                "TCP port 443"
               ]
             },
             {
@@ -17967,9 +17967,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1623",
               "distractors": [
-                "Text-based interface requiring knowledge of the device's command line interface (CLI)",
-                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
-                "A device that encrypts and decrypts VPN traffic — usually built into modern firewalls"
+                "FTP (TCP port 21) — FTP transfers files in cleartext, so SSH was created to provide encrypted file transfers",
+                "RDP (TCP port 3389) — RDP only supports graphical sessions, so SSH was created for encrypted text-based access",
+                "SNMP (UDP port 161) — SNMP sends community strings in plaintext, so SSH was created for secure device management"
               ]
             },
             {
@@ -17978,9 +17978,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1624",
               "distractors": [
-                "TCP 3389",
-                "TCP 443",
-                "TCP 1433"
+                "TCP port 22",
+                "TCP port 3389",
+                "UDP port 69"
               ]
             },
             {
@@ -17989,9 +17989,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1625",
               "distractors": [
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
-                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
-                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end"
+                "SSH uses less bandwidth than Telnet, making it faster for remote management over slow WAN links",
+                "SSH supports graphical remote desktop sessions while Telnet is limited to text-only command line access",
+                "SSH authenticates the server to the client preventing man-in-the-middle attacks, but both encrypt the session data"
               ]
             },
             {
@@ -18000,9 +18000,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1626",
               "distractors": [
-                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
-                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
-                "Client → VPN tunnel → concentrator decrypts → redirects to internet → website responds → back through concentrator → VPN tunnel → client"
+                "Resilient Desktop Protocol — a fault-tolerant file transfer service for backing up remote systems over TCP 443",
+                "A Linux-only command-line remote shell that provides encrypted terminal access similar to SSH on port 3389",
+                "A cross-platform screen-sharing protocol that uses the RFB framework for view-only remote monitoring"
               ]
             },
             {
@@ -18011,9 +18011,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1627",
               "distractors": [
-                "No — it identifies all APs including ones not under your control",
-                "No security, no authentication — anyone can communicate freely",
-                "No — only devices in the same VLAN can communicate with each other"
+                "No — RDP is a Microsoft proprietary protocol that requires a Windows client to initiate connections",
+                "Only on macOS — Microsoft provides a native client for Mac but not for Linux or mobile platforms",
+                "Yes, but only for viewing — non-Windows clients can see the desktop but cannot send input or control it"
               ]
             },
             {
@@ -18022,9 +18022,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1628",
               "distractors": [
-                "Connect a modem to the console/COM port and dial in via a phone line",
-                "SSH (via internal SSH server) or web-based front end (via internal web server)",
-                "Management IP address, subnet mask, and other networking details"
+                "Virtual Network Client — uses the RDP (Remote Desktop Protocol) for encrypted graphical sessions",
+                "Visual Network Console — uses SSH tunneling to transmit screen data securely between hosts",
+                "Virtual Network Channel — uses the X11 forwarding protocol to render remote applications locally"
               ]
             },
             {
@@ -18033,9 +18033,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1629",
               "distractors": [
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
-                "When network connectivity is lost — you cannot ping or SSH into the device, but can still directly connect via console cable",
-                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network"
+                "VNC encrypts all traffic by default using TLS, while RDP requires additional configuration to enable encryption",
+                "VNC transmits only keyboard and mouse input while RDP streams the entire desktop framebuffer to the client",
+                "VNC operates at the application layer sharing individual windows, while RDP shares the entire desktop session"
               ]
             },
             {
@@ -18044,20 +18044,20 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1630",
               "distractors": [
-                "1,500 bytes",
-                "TCP port 22",
-                "TCP port 23"
+                "SSH and Telnet",
+                "SNMP and Syslog",
+                "FTP and TFTP"
               ]
             },
             {
               "question": "Why use an API instead of command-line scripts for managing many devices?",
-              "answer": "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control...",
+              "answer": "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control at the command line",
               "difficulty": 2,
               "id": "3.5.1631",
               "distractors": [
-                "SSH: encrypted text-based terminal (TCP 22). RDP: Microsoft graphical remote desktop. VNC: cross-platform graphical remote desktop using RFB protocol.",
-                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
-                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device"
+                "APIs provide a graphical interface that is easier for junior technicians to use than memorizing CLI commands",
+                "APIs use less network bandwidth than CLI sessions because they compress all configuration data before transmission",
+                "APIs are required by most vendors for warranty compliance — CLI changes may void the device support agreement"
               ]
             },
             {
@@ -18066,9 +18066,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1632",
               "distractors": [
-                "A server you dial into, from which you can then jump to other devices through that COM server connection",
-                "Secure Shell — provides encrypted terminal/console access to remote devices (switches, routers, firewalls)",
-                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+                "Monitor device temperature and fan speed only — APIs provide read-only hardware telemetry",
+                "Access the device's graphical interface remotely through a web browser session",
+                "Physically reboot unresponsive devices via out-of-band power cycling over the management plane"
               ]
             },
             {
@@ -18077,9 +18077,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1633",
               "distractors": [
-                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
-                "Text-based interface requiring knowledge of the device's command line interface (CLI)",
-                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser"
+                "A remote connection over the network using the device's management IP address via SSH or HTTPS",
+                "A virtual terminal session established through a dedicated management VLAN on the switch",
+                "A wireless management interface using Bluetooth Low Energy for short-range device configuration"
               ]
             },
             {
@@ -18088,9 +18088,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1634",
               "distractors": [
-                "TCP = segments, UDP = datagrams",
-                "An HTML5-compliant browser",
-                "Via VPN tunnel or SSH connection"
+                "RJ45 Ethernet, fiber LC, or coaxial BNC",
+                "HDMI, DisplayPort, or Thunderbolt",
+                "Wi-Fi, Bluetooth, or infrared"
               ]
             },
             {
@@ -18099,9 +18099,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1635",
               "distractors": [
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
-                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)",
-                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network"
+                "When you need to transfer large configuration files — console provides higher throughput than SSH",
+                "When multiple administrators need simultaneous access — console supports up to four concurrent sessions",
+                "When encrypting management traffic is not required — console bypasses the need for SSH key setup"
               ]
             },
             {
@@ -18112,7 +18112,7 @@ const GAME_DATA = {
               "distractors": [
                 "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
                 "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
-                "A device that encrypts and decrypts VPN traffic — usually built into modern firewalls"
+                "A graphical web-based dashboard that displays device status with point-and-click configuration"
               ]
             },
             {
@@ -18121,9 +18121,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1637",
               "distractors": [
-                "Management IP address, subnet mask, and other networking details",
-                "Connect a modem to the console/COM port and dial in via a phone line",
-                "Yes — RDP clients are available for nearly any operating system"
+                "A network interface card and an Ethernet cable connected to the device's dedicated management port",
+                "A wireless adapter configured to connect to the device's built-in management Wi-Fi radio",
+                "A KVM switch connected between the device's video output and a dedicated management monitor"
               ]
             },
             {
@@ -18132,9 +18132,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1638",
               "distractors": [
-                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet",
-                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
-                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control..."
+                "A load balancer that distributes incoming connections across multiple backend servers to prevent overload",
+                "A firewall appliance that inspects and filters traffic between the internal network and the internet",
+                "A proxy server that caches frequently accessed web content to reduce bandwidth and improve performance"
               ]
             },
             {
@@ -18143,9 +18143,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1639",
               "distractors": [
-                "6 positions, 2 conductors (6P2C)",
-                "RJ45 serial, DB9 serial, or USB",
-                "An HTML5-compliant browser"
+                "Through a dedicated MPLS circuit provisioned between the remote site and the jump server's subnet",
+                "By dialing in to a modem attached to the jump server's serial console port over a phone line",
+                "Using a clientless HTML5 browser directly to the jump server's public IP on port 443"
               ]
             },
             {
@@ -18154,9 +18154,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1640",
               "distractors": [
-                "Yes — it can be a separate dedicated interface or built into existing interfaces",
-                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
-                "SSH (via internal SSH server) or web-based front end (via internal web server)"
+                "It stores all network device credentials in plaintext for quick administrative access",
+                "It runs multiple services simultaneously, increasing the attack surface beyond typical servers",
+                "It sits inside the DMZ and handles routing between internal VLANs with elevated privileges"
               ]
             },
             {
@@ -18165,9 +18165,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.5.1641",
               "distractors": [
-                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
-                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
-                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides"
+                "Network segmentation via VLANs, port security with MAC filtering, and disabling unused switch ports",
+                "Encrypted hard drives, biometric physical access controls, and air-gapped network connections",
+                "Load balancing across multiple servers, geographic redundancy, and automated failover clustering"
               ]
             },
             {
@@ -18176,9 +18176,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1642",
               "distractors": [
-                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+                "Managing a device through a dedicated serial console port that is isolated from production network traffic",
+                "Connecting to a device only when it is offline or powered down, using a maintenance mode boot sequence",
+                "Accessing a device via a cellular modem fallback link that activates when the primary WAN connection fails"
               ]
             },
             {
@@ -18187,9 +18187,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1643",
               "distractors": [
-                "Connect a modem to the console/COM port and dial in via a phone line",
-                "Yes — RDP clients are available for nearly any operating system",
-                "A laptop/desktop with a serial port, or a USB-to-serial adapter"
+                "Console port baud rate, data bits, parity, and flow control settings",
+                "SNMP community string, syslog server address, and trap receiver configuration",
+                "Serial cable pinout, terminal emulator type, and COM port speed"
               ]
             },
             {
@@ -18198,9 +18198,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1644",
               "distractors": [
-                "Yes — it can be a separate dedicated interface or built into existing interfaces",
-                "Corporate network → concentrator encrypts → sends over internet → client decrypts",
-                "It is externally facing — anyone on the internet could potentially connect to it"
+                "Console cable (via serial port) or modem dial-up (via phone line connection)",
+                "SNMP polling (via management station) or syslog forwarding (via UDP port 514)",
+                "Telnet (via unencrypted TCP connection) or TFTP (via file transfer on UDP port 69)"
               ]
             },
             {
@@ -18209,9 +18209,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1645",
               "distractors": [
-                "No — they require NAT to convert to a public address for internet communication",
-                "No — original traffic is unaffected; only a copy is sent to the monitoring device",
-                "No DHCP server responded — the device self-assigned an APIPA link-local address"
+                "No — management interfaces must always use a physically separate port to isolate management traffic from data traffic",
+                "No — sharing creates a security vulnerability because management traffic requires dedicated hardware isolation",
+                "Only on Layer 2 switches — routers and firewalls always require a dedicated out-of-band management port"
               ]
             },
             {
@@ -18220,9 +18220,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1646",
               "distractors": [
-                "VPN client software installed on a user's workstation that communicates back to a VPN concentrator at a corporate network",
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
-                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)"
+                "Managing devices remotely through the production network using SSH or a web-based GUI over standard IP",
+                "A cloud-hosted management platform that monitors network devices via SNMP over the internet",
+                "Using a VPN tunnel to access device management interfaces from outside the corporate network"
               ]
             },
             {
@@ -18231,9 +18231,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.5.1647",
               "distractors": [
-                "Virtual Network Computing — uses the RFB (Remote Frame Buffer) protocol",
-                "Yes — RDP clients are available for nearly any operating system",
-                "Management IP address, subnet mask, and other networking details"
+                "Send SNMP commands over a dedicated management VLAN that operates independently of production traffic",
+                "Use a secondary Ethernet interface on a separate physical network reserved only for management traffic",
+                "Access the device's embedded web server through a cellular hotspot bridged to the management subnet"
               ]
             },
             {
@@ -18242,9 +18242,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.5.1648",
               "distractors": [
-                "Connect and control devices using the language the device expects, automate processes, and handle errors",
-                "Secure Shell — provides encrypted terminal/console access to remote devices (switches, routers, firewalls)",
-                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+                "A dedicated management VLAN switch that provides in-band SSH access to all network devices",
+                "A centralized syslog collector that aggregates console output from all managed infrastructure",
+                "A physical KVM switch that shares keyboard, video, and mouse across multiple rack-mounted servers"
               ]
             },
             {
@@ -18253,9 +18253,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1649",
               "distractors": [
-                "Multi-factor authentication, always up to date with security patches, high level of authentication to prevent brute force attacks",
-                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
-                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides"
+                "In-band uses encrypted protocols (SSH/HTTPS) while out-of-band uses unencrypted protocols (Telnet/HTTP)",
+                "In-band provides read-only monitoring while out-of-band allows full configuration changes to the device",
+                "In-band requires physical presence at the device while out-of-band allows remote access from anywhere"
               ]
             },
             {
@@ -18264,9 +18264,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.5.1650",
               "distractors": [
-                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control...",
-                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device",
-                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet"
+                "SSH: unencrypted text terminal (TCP 23). RDP: Linux graphical desktop. VNC: Windows-only remote access using RFB.",
+                "SSH: encrypted file transfer only (TCP 22). RDP: cross-platform graphical. VNC: text-only terminal for Unix systems.",
+                "SSH: encrypted terminal (TCP 22). RDP: any OS graphical desktop (TCP 3389). VNC: encrypted tunnel protocol replacing both."
               ]
             },
             {
@@ -18275,9 +18275,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1651",
               "distractors": [
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
-                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end",
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB"
+                "Increases connection speed by compressing traffic and routing it through optimized private backbone links",
+                "Hides the user's physical location by masking their MAC address from remote servers and websites",
+                "Creates a dedicated physical circuit between two sites to guarantee bandwidth and eliminate packet loss"
               ]
             },
             {
@@ -18286,9 +18286,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1652",
               "distractors": [
-                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
-                "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
-                "Text-based interface requiring knowledge of the device's command line interface (CLI)"
+                "A server that assigns IP addresses to VPN clients — similar to a DHCP server but for tunnel endpoints",
+                "A switch that aggregates multiple WAN links into a single logical connection for load balancing",
+                "A proxy that inspects and filters VPN traffic content — typically deployed as a standalone appliance"
               ]
             },
             {
@@ -18297,9 +18297,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1653",
               "distractors": [
-                "No — the concentrators handle encryption/decryption transparently; users have no idea it's occurring",
-                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
-                "Two: 1) VPN tunnel → concentrator → corporate network, and 2) direct internet → third-party websites"
+                "Site-to-site tunnel and remote-access tunnel — the two connection modes a concentrator operates in",
+                "Split tunnel configuration and full tunnel configuration — the two routing modes it switches between",
+                "Client-side encryption endpoint and server-side decryption endpoint — the two roles in any VPN connection"
               ]
             },
             {
@@ -18308,9 +18308,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1654",
               "distractors": [
-                "Using a serial interface that does not use the existing network — separate management/console interface via serial or USB",
-                "VNC provides similar remote desktop functionality but can run on many different operating systems (not Microsoft-specific)",
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+                "A permanent encrypted tunnel between two office firewalls that stays connected at all times without user intervention",
+                "A browser-based VPN that requires no software installation and uses HTML5 for encrypted access to internal resources",
+                "A network-to-network connection where all traffic between branch offices is encrypted at the router level automatically"
               ]
             },
             {
@@ -18319,9 +18319,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1655",
               "distractors": [
-                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
-                "A server you dial into, from which you can then jump to other devices through that COM server connection",
-                "Connect and control devices using the language the device expects, automate processes, and handle errors"
+                "Full tunnel mode where all traffic is encrypted, or split tunnel mode where only corporate traffic uses the VPN",
+                "Layer 2 mode using L2TP for full network access, or Layer 3 mode using IPsec for application-specific access",
+                "Certificate-based activation using a smart card, or token-based activation using a one-time password from an app"
               ]
             },
             {
@@ -18330,9 +18330,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1656",
               "distractors": [
-                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
-                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser",
-                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB"
+                "Client sends unencrypted → ISP encrypts at the edge → concentrator receives encrypted → decrypts for internal use",
+                "Concentrator encrypts → sends to client → client decrypts → forwards to the internet",
+                "Client sends to local gateway → gateway encapsulates in GRE → concentrator strips GRE header → forwards unencrypted"
               ]
             },
             {
@@ -18341,9 +18341,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1657",
               "distractors": [
-                "Telnet (TCP port 23) — Telnet provides the same console-based view but no encryption",
-                "Yes — it can be a separate dedicated interface or built into existing interfaces",
-                "It is externally facing — anyone on the internet could potentially connect to it"
+                "Client encrypts → sends over internet → concentrator decrypts → corporate network processes request",
+                "Corporate network → internet (unencrypted) → client firewall decrypts → application receives data",
+                "Concentrator encrypts → sends to client ISP → ISP decrypts and re-encrypts → client receives"
               ]
             },
             {
@@ -18352,9 +18352,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1658",
               "distractors": [
-                "A server you dial into, from which you can then jump to other devices through that COM server connection",
-                "Connect and control devices using the language the device expects, automate processes, and handle errors",
-                "Manually enabled/disabled by the user, or configured as an always-on connection that activates at login"
+                "A VPN connection from a single remote user's device to the corporate network concentrator for individual access",
+                "An encrypted tunnel that only activates on demand when specific traffic patterns are detected by the firewall",
+                "A Layer 2 bridge connecting two network segments at the same site to extend a VLAN across physical distance"
               ]
             },
             {
@@ -18363,9 +18363,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1659",
               "distractors": [
-                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet",
-                "Multi-factor authentication, always up to date with security patches, high level of authentication to prevent brute force attacks",
-                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network."
+                "A split tunnel configuration where corporate traffic uses the VPN but internet traffic goes directly out",
+                "A client-initiated connection where users at each site manually launch VPN software to establish the tunnel",
+                "Using dedicated leased lines with VPN software installed on every endpoint workstation at both locations"
               ]
             },
             {
@@ -18374,9 +18374,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1660",
               "distractors": [
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list",
-                "Yes — the server responds to time requests while the client queries upstream servers for updates"
+                "Yes — users must install a VPN client and manually connect before accessing remote site resources",
+                "Yes — users see a VPN indicator icon in their system tray whenever encrypted traffic is active",
+                "No — but only if split tunneling is enabled; without it, users notice slower speeds due to encryption overhead"
               ]
             },
             {
@@ -18385,9 +18385,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1661",
               "distractors": [
-                "Client encrypts → sends over internet → concentrator decrypts → forwards to internal network",
-                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
-                "HTML5's Web Cryptography API — provides encrypted tunnel functionality within the browser"
+                "A VPN where the server pushes a temporary lightweight agent to the client that removes itself after disconnection",
+                "A site-to-site VPN between two concentrators that requires no end-user interaction or authentication",
+                "A VPN using IPsec transport mode instead of tunnel mode, eliminating the need for client encapsulation software"
               ]
             },
             {
@@ -18396,9 +18396,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1662",
               "distractors": [
-                "A direct physical connection via a separate console port using serial (RJ45, DB9) or USB",
-                "A VPN that runs inside a browser using HTML5 without requiring separate VPN client software",
-                "Client encrypts → sends over internet → concentrator decrypts → forwards to internal network"
+                "Java applets downloaded from the VPN gateway that establish an IPSec tunnel within the browser session",
+                "SSL/TLS certificates pre-installed in the operating system's trusted root certificate store",
+                "Flash-based ActiveX controls that create encrypted PPTP connections through the browser plug-in"
               ]
             },
             {
@@ -18407,9 +18407,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.5.1663",
               "distractors": [
-                "Via VPN tunnel or SSH connection",
-                "RJ45 serial, DB9 serial, or USB",
-                "Using light (LED or laser)"
+                "A vendor-specific VPN client application installed on the endpoint device",
+                "A valid digital certificate pre-installed in the operating system's trusted store",
+                "A Java Runtime Environment (JRE) plugin enabled in the browser settings"
               ]
             },
             {
@@ -18418,9 +18418,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1664",
               "distractors": [
-                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end",
-                "Encrypts data that would normally be sent in the clear so it can be sent securely over public networks like the internet",
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption"
+                "Only traffic destined for the corporate network goes through the VPN; internet traffic uses the local connection directly",
+                "A VPN that encrypts only application-layer data while leaving network headers unencrypted for routing",
+                "A tunnel that connects two site gateways permanently, carrying traffic between offices without client software"
               ]
             },
             {
@@ -18429,9 +18429,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.5.1665",
               "distractors": [
-                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
-                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
-                "A configuration where corporate-bound traffic goes through the VPN tunnel, but non-corporate traffic is sent directly to the internet"
+                "Client → internet directly → website responds → back to client (VPN tunnel not used for non-corporate traffic)",
+                "Client → VPN tunnel → concentrator decrypts → stores in cache → client retrieves from local cache later",
+                "Client → split between VPN tunnel and direct internet simultaneously → responses merged at the client"
               ]
             },
             {
@@ -18440,9 +18440,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1666",
               "distractors": [
-                "In-band uses the existing network (IP address, SSH/web). Out-of-band uses a serial interface that does not use the existing network.",
-                "As an always-on connection built into existing firewalls at each location with the VPN concentrator function enabled on both sides",
-                "Client → VPN tunnel → concentrator decrypts → redirects to internet → website responds → back through concentrator → VPN tunnel → client"
+                "A full tunnel configuration where ALL traffic (corporate and internet) is routed through the VPN concentrator",
+                "A VPN that uses two simultaneous encrypted tunnels for redundancy — if one fails, traffic shifts to the other",
+                "A configuration that splits bandwidth equally between upload and download channels within the VPN tunnel"
               ]
             },
             {
@@ -18451,9 +18451,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1667",
               "distractors": [
-                "A VPN that encrypts all communication between two sites over a tunnel, with concentrators on both ends",
-                "No — the concentrators handle encryption/decryption transparently; users have no idea it's occurring",
-                "Dedicated hardware designed for encryption/decryption, or software installed on an existing server"
+                "One — all traffic goes through the VPN concentrator regardless of destination, then out to the internet",
+                "Three — corporate traffic, internet traffic, and a separate management channel for VPN keepalives",
+                "Four — inbound corporate, outbound corporate, inbound internet, and outbound internet use separate tunnels"
               ]
             },
             {
@@ -18462,9 +18462,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1668",
               "distractors": [
-                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
-                "More efficient for third-party website communication — avoids the extra hop through the concentrator while maintaining secure corporate access",
-                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device"
+                "It routes all traffic through the tunnel first, then the concentrator decides what to forward to the internet",
+                "It uses DNS responses to classify traffic — internal DNS results go through the tunnel, external results go direct",
+                "It checks the packet size — large transfers go through the tunnel for encryption while small requests go direct"
               ]
             },
             {
@@ -18473,20 +18473,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1669",
               "distractors": [
-                "A single device you connect to first, then jump to other devices within the organization — eliminates needing separate connections to each device",
-                "Microsoft Remote Desktop Protocol — allows graphical remote control of Windows machines as if sitting in front of the monitor and keyboard",
-                "It recognizes the destination — corporate destinations go through the VPN tunnel; non-corporate destinations are sent directly to the internet"
+                "Stronger encryption — split tunnel uses AES-256 for corporate traffic while full tunnel is limited to AES-128",
+                "Better security — corporate traffic is isolated from personal browsing, reducing the attack surface on the VPN",
+                "Simpler configuration — split tunnel requires no routing table changes on the client device"
               ]
             },
             {
               "question": "Compare client-to-site, site-to-site, and clientless VPNs.",
-              "answer": "Client-to-site: software on workstation connects to corporate concentrator. Site-to-site: firewalls at both locations create always-on tunnel betwe...",
+              "answer": "Client-to-site: software on workstation to corporate concentrator. Site-to-site: always-on tunnel between firewalls at both locations. Clientless: browser-based via HTML5 Web Cryptography API.",
               "difficulty": 3,
               "id": "3.5.1670",
               "distractors": [
-                "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actua...",
-                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
-                "APIs allow automation with error handling capabilities and more control when problems occur, versus scripts/batch files which offer limited control..."
+                "Client-to-site: always-on tunnel between routers. Site-to-site: user installs software. Clientless: hardware appliance only",
+                "Client-to-site: browser-based, no software needed. Site-to-site: single user to office. Clientless: dedicated hardware between sites",
+                "Client-to-site: IPSec only. Site-to-site: SSL only. Clientless: combines IPSec and SSL simultaneously for dual encryption"
               ]
             },
             {
@@ -18495,9 +18495,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.5.1671",
               "distractors": [
-                "All traffic from the client traverses the VPN tunnel — no special forwarding decisions; everything goes through the VPN",
-                "SSH encrypts all traffic (username, password, all data) so no one can capture and read it; Telnet provides no encryption",
-                "Connecting to a device over the existing network using an assigned management IP address, via SSH or web-based front end"
+                "Third-party websites are completely blocked because the VPN firewall only permits traffic to corporate destinations",
+                "DNS queries for external sites fail because the corporate DNS server cannot resolve public domain names",
+                "The VPN client drops the connection when it detects traffic destined for non-corporate IP ranges"
               ]
             }
           ]
@@ -18519,8 +18519,8 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1672",
               "distractors": [
-                "Motion detection, license plate reading, and facial recognition",
-                "The process of managing permissions and access to data",
+                "Data currently being processed by a CPU or loaded in RAM during active computation",
+                "The process of managing permissions and access to data based on classification levels",
                 "Information saved to a hard drive, SSD, or any other storage device"
               ]
             },
@@ -18530,9 +18530,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1673",
               "distractors": [
-                "The policies and control of all encryption keys and certificates for an organization",
-                "Allowing or disallowing access to information based on a user's physical location",
-                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+                "Inspect and filter all packets for malicious content before forwarding to the destination",
+                "Encrypt all data in transit between source and destination to prevent eavesdropping",
+                "Authenticate users before allowing their traffic to pass through to the next network segment"
               ]
             },
             {
@@ -18541,9 +18541,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1674",
               "distractors": [
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
-                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner"
+                "Switches and routers — they forward traffic using routing tables and MAC address lookups",
+                "Load balancers and proxy servers — they distribute connections and cache content for performance",
+                "VPN concentrators and DNS servers — they encrypt tunnels and resolve domain names"
               ]
             },
             {
@@ -18552,9 +18552,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1675",
               "distractors": [
-                "Motion detection, license plate reading, and facial recognition",
-                "Through groups — one group per role, users assigned to those groups",
-                "Information saved to a hard drive, SSD, or any other storage device"
+                "AES (Advanced Encryption Standard) and BitLocker (full-disk encryption)",
+                "WPA3 (Wi-Fi Protected Access) and RADIUS (Remote Authentication Dial-In User Service)",
+                "SHA-256 (Secure Hash Algorithm) and MD5 (Message Digest 5)"
               ]
             },
             {
@@ -18563,9 +18563,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1676",
               "distractors": [
-                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)",
-                "Motion detection, license plate reading, and facial recognition",
-                "Through groups — one group per role, users assigned to those groups"
+                "Data actively being transmitted across a network between two endpoints",
+                "Data currently being processed in a system's RAM or CPU cache",
+                "Data stored in temporary buffers during an active network session"
               ]
             },
             {
@@ -18574,9 +18574,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1677",
               "distractors": [
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
-                "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)",
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+                "TLS encryption (web traffic), IPsec encryption (VPN tunnels), and SSH encryption (remote terminal sessions)",
+                "Symmetric encryption (AES), asymmetric encryption (RSA), and hashing algorithms (SHA-256)",
+                "WPA3 encryption (wireless), MACsec encryption (wired LAN), and HTTPS encryption (application layer)"
               ]
             },
             {
@@ -18585,9 +18585,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1678",
               "distractors": [
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
-                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content"
+                "Role-Based Access Control — assigns permissions based on user job title and department membership",
+                "Full disk encryption — scrambles all data on the storage drive so stolen media is unreadable",
+                "Data Loss Prevention policies — scan outbound traffic for sensitive patterns like credit card numbers"
               ]
             },
             {
@@ -18596,9 +18596,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1679",
               "distractors": [
-                "Allowing or disallowing access to information based on a user's physical location",
-                "Forward traffic to the next location — they are not designed to protect data",
-                "A public key, a digital signature, and details about the key holder (name, organization, etc.)"
+                "A specific encryption algorithm that generates public and private key pairs using prime number factorization",
+                "A hardware device such as a smart card or USB token that stores private keys for user authentication",
+                "A protocol that exchanges symmetric encryption keys between two parties at the start of a TLS session"
               ]
             },
             {
@@ -18607,20 +18607,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1680",
               "distractors": [
-                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
-                "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
-                "They may get different permissions based on their connection location (e.g., different state or country)"
+                "When they first purchase a firewall and need to configure NAT rules for inbound traffic",
+                "When their network reaches more than 500 devices and static IP management becomes impractical",
+                "When they deploy their first RADIUS server for 802.1X port-based authentication"
               ]
             },
             {
               "question": "What does a digital certificate do?",
-              "answer": "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
+              "answer": "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization, etc.)",
               "difficulty": 2,
               "id": "4.1.1681",
               "distractors": [
-                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
-                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+                "Encrypts data at rest on a storage device so only authorized users with the decryption key can read it",
+                "Creates a secure VPN tunnel between two endpoints by negotiating encryption parameters automatically",
+                "Hashes a file to produce a fixed-length fingerprint that verifies the file has not been modified"
               ]
             },
             {
@@ -18629,9 +18629,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1682",
               "distractors": [
-                "When they start adding encryption keys to web servers or signing certificates to users or devices",
-                "They may get different permissions based on their connection location (e.g., different state or country)",
-                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted"
+                "A private key, a session token, and the certificate authority's physical mailing address",
+                "A MAC address, an IP address, and the device's hostname on the local network",
+                "An encryption algorithm, a firewall rule set, and the authorized ports for that service"
               ]
             },
             {
@@ -18640,9 +18640,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1683",
               "distractors": [
-                "One for transmit and one for receive",
-                "Analog telephone and DSL connections",
-                "Shared between customer and provider"
+                "The web server administrator who generates the certificate using OpenSSL on the hosting device",
+                "The domain registrar who issued the domain name and verifies website ownership during registration",
+                "The end user's browser, which validates and countersigns certificates during the TLS handshake"
               ]
             },
             {
@@ -18651,9 +18651,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1684",
               "distractors": [
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location",
-                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied"
+                "A chain of certificates linking a server's certificate back to a trusted root certificate authority",
+                "A network of HTTPS-secured websites verified by a single global certificate authority",
+                "A mutual authentication system where both client and server present certificates before establishing a TLS session"
               ]
             },
             {
@@ -18662,9 +18662,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1685",
               "distractors": [
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner",
-                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content"
+                "A hardware security module that stores private keys and performs cryptographic operations in a tamper-resistant enclosure",
+                "A protocol that negotiates encryption parameters between two endpoints before establishing a secure session",
+                "A public repository where revoked certificates are published so relying parties can verify validity before connecting"
               ]
             },
             {
@@ -18673,9 +18673,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1686",
               "distractors": [
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
-                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz..."
+                "Public CA (free, shared by all organizations) or private CA (paid subscription managed by a third-party security vendor)",
+                "Hardware CA (dedicated physical security appliance) or software CA (virtual machine running certificate services)",
+                "Root CA (issues certificates directly to end users) or subordinate CA (only issues certificates to other CAs in the chain)"
               ]
             },
             {
@@ -18684,20 +18684,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1687",
               "distractors": [
-                "They may get different permissions based on their connection location (e.g., different state or country)",
-                "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
-                "When they start adding encryption keys to web servers or signing certificates to users or devices"
+                "Check that the certificate uses at least 2048-bit RSA encryption, which guarantees it was issued by a legitimate authority",
+                "Verify the certificate's serial number against the issuer's public online database of all valid certificates",
+                "Confirm the certificate was downloaded over HTTPS, which proves the source server is trustworthy"
               ]
             },
             {
               "question": "When would you use a third-party CA vs. an internal CA?",
-              "answer": "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
+              "answer": "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organization.",
               "difficulty": 3,
               "id": "4.1.1688",
               "distractors": [
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
-                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
-                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)"
+                "Third-party CA only for email encryption; internal CA for all web server and VPN certificates",
+                "Internal CA for any production environment; third-party CA only for testing and development",
+                "Third-party CA when certificates must expire in under 90 days; internal CA for long-lived certificates"
               ]
             },
             {
@@ -18706,20 +18706,20 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1689",
               "distractors": [
-                "Motion detection, license plate reading, and facial recognition",
-                "Information transferred over a wired or wireless network",
-                "Information saved to a hard drive, SSD, or any other storage device"
+                "A firewall technology that inspects packets at Layers 3-7 and blocks unauthorized network traffic",
+                "An encryption framework that manages symmetric and asymmetric keys for securing data in transit",
+                "A monitoring system that detects and alerts on suspicious network behavior using signature-based analysis"
               ]
             },
             {
               "question": "What are the four components of IAM?",
-              "answer": "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing...",
+              "answer": "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing (track who accessed data and when)",
               "difficulty": 3,
               "id": "4.1.1690",
               "distractors": [
-                "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
-                "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan),...",
-                "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria..."
+                "Encryption, hashing, certificates, and key management",
+                "Firewalls, IDS, IPS, and VPN concentrators",
+                "Identification, remediation, documentation, and escalation"
               ]
             },
             {
@@ -18728,9 +18728,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1691",
               "distractors": [
-                "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
-                "They may get different permissions based on their connection location (e.g., different state or country)",
-                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location"
+                "Requiring multiple approval levels before granting administrative access — separation of duties across roles",
+                "Ensuring every user has at minimum read-only access to all shared resources unless explicitly blocked",
+                "Rotating user credentials on a fixed schedule to reduce the window of exposure if compromised"
               ]
             },
             {
@@ -18739,20 +18739,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1692",
               "distractors": [
-                "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content",
-                "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
-                "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)"
+                "Performance — administrator accounts consume more system resources due to elevated monitoring and logging overhead",
+                "Licensing — most operating systems charge per administrator seat, making universal admin access cost-prohibitive",
+                "Compatibility — administrator-level processes conflict with standard applications, causing crashes on shared systems"
               ]
             },
             {
               "question": "What is Role-Based Access Control (RBAC)?",
-              "answer": "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropria...",
+              "answer": "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropriate roles",
               "difficulty": 2,
               "id": "4.1.1693",
               "distractors": [
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,...",
-                "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing..."
+                "Access control based on data sensitivity labels (Top Secret, Secret, Confidential) assigned to both resources and user clearances",
+                "A system where each resource owner individually decides who can access their data by setting per-user permission entries",
+                "Access control using time-of-day and location rules — users access resources only during business hours from approved sites"
               ]
             },
             {
@@ -18761,9 +18761,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1694",
               "distractors": [
-                "Motion detection, license plate reading, and facial recognition",
-                "Information saved to a hard drive, SSD, or any other storage device",
-                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+                "Through individual user permissions — each user's access rights are configured separately in their account profile",
+                "Through mandatory access labels — Windows assigns security clearance levels to both users and resources automatically",
+                "Through per-resource ACLs — administrators manually set file-level permissions for every user individually without grouping"
               ]
             },
             {
@@ -18772,9 +18772,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1695",
               "distractors": [
-                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied"
+                "MAC address lookup, reverse DNS query, and traceroute hop count to the nearest data center",
+                "DHCP lease scope, subnet mask analysis, and SNMP polling of the nearest switch port",
+                "Browser user-agent string, system time zone setting, and keyboard language configuration"
               ]
             },
             {
@@ -18783,9 +18783,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1696",
               "distractors": [
-                "The policies and control of all encryption keys and certificates for an organization",
-                "Forward traffic to the next location — they are not designed to protect data",
-                "A public key, a digital signature, and details about the key holder (name, organization, etc.)"
+                "Restricting network access based on the time of day and day of the week",
+                "Encrypting data at rest using location-derived keys tied to specific hardware",
+                "Segmenting a network into zones using VLANs to isolate departments from each other"
               ]
             },
             {
@@ -18794,9 +18794,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1697",
               "distractors": [
-                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
-                "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-                "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location"
+                "Requiring a smart card badge tap plus a PIN code before granting access to the server room",
+                "Encrypting all laptop hard drives so data remains protected if the device is lost or stolen",
+                "Limiting database queries to 1000 rows per request to prevent unauthorized bulk data extraction"
               ]
             },
             {
@@ -18805,9 +18805,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1698",
               "distractors": [
-                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
-                "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
-                "Users only have the rights and permissions necessary for their job function — no additional access is granted"
+                "Their VPN connection automatically selects the fastest tunnel endpoint regardless of policy restrictions",
+                "Their traffic is encrypted twice — once by the VPN and once by the destination server's TLS certificate",
+                "Their connection bypasses all corporate firewall rules since traffic originates from outside the network"
               ]
             },
             {
@@ -18816,9 +18816,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "4.1.1699",
               "distractors": [
-                "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied",
-                "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
-                "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner"
+                "Central Command Threat Vector — a security operations center dashboard for monitoring intrusion alerts",
+                "Continuous Circuit Trace Verification — an automated system that tests cable integrity in a building",
+                "Certified Cybersecurity Threat Validator — a role that reviews security logs and confirms incidents"
               ]
             },
             {
@@ -18827,20 +18827,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1700",
               "distractors": [
-                "Through groups — one group per role, users assigned to those groups",
-                "Information saved to a hard drive, SSD, or any other storage device",
-                "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)"
+                "Wi-Fi signal triangulation, Bluetooth device tracking, and network intrusion detection",
+                "Automatic firmware updates, cloud-based storage encryption, and remote power cycling",
+                "Packet inspection, bandwidth monitoring, and network topology mapping"
               ]
             },
             {
               "question": "What are five types of door lock access methods?",
-              "answer": "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan),...",
+              "answer": "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan), and multi-factor (combining methods)",
               "difficulty": 3,
               "id": "4.1.1701",
               "distractors": [
-                "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,..."
+                "Deadbolt, padlock, combination lock, chain lock, and electronic strike — five physical lock hardware categories",
+                "Card swipe, key fob, mobile app, voice recognition, and iris scan — five electronic authentication factors",
+                "Mantrap, turnstile, security gate, bollard, and perimeter fence — five physical access control barriers"
               ]
             },
             {
@@ -18849,20 +18849,20 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "4.1.1702",
               "distractors": [
-                "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
-                "Users only have the rights and permissions necessary for their job function — no additional access is granted",
-                "They may get different permissions based on their connection location (e.g., different state or country)"
+                "Using a fingerprint scanner alone — biometric data provides multiple factors within a single scan",
+                "Entering a username and password on a keypad mounted next to the door",
+                "Swiping two different badges — a company badge and a government-issued photo ID card"
               ]
             },
             {
               "question": "Compare data in transit vs. data at rest.",
-              "answer": "Data in transit: information moving over the network, secured by firewalls/IPS and encryption (TLS, IPsec). Data at rest: information stored on dri...",
+              "answer": "In transit: data moving over network, secured by firewalls/IPS and TLS/IPsec. At rest: data on storage, secured by disk/database/file encryption and ACLs.",
               "difficulty": 3,
               "id": "4.1.1703",
               "distractors": [
-                "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing...",
-                "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organiz...",
-                "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization,..."
+                "Data in transit: encrypted data on USB drives being physically transported. Data at rest: unencrypted data flowing over internal LANs",
+                "Data in transit: temporary data in RAM during active processing. Data at rest: permanent data written to non-volatile storage",
+                "Data in transit: data being actively modified by applications. Data at rest: data in a read-only archive that cannot be changed"
               ]
             }
           ]
