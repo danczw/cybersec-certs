@@ -26,6 +26,10 @@ const CableLab = (() => {
     { name: '1000BASE-SX', speed: '1 Gbps', media: 'Multimode fiber (short wavelength)', connector: 'LC or SC', distance: '550m' },
   ];
 
+  const DISTRACTOR_MEDIA = ['Single-mode fiber', 'Coaxial (RG-6)', 'Twinaxial', 'Multimode fiber (short wavelength)', 'Twisted-pair copper'];
+  const DISTRACTOR_SPEEDS = ['100 Mbps', '1 Gbps', '10 Gbps', '40 Gbps', '100 Gbps'];
+  const DISTRACTOR_DISTANCES = ['5m', '100m', '550m', '2 km', '100 km'];
+
   const FIBER_TYPES = [
     { name: 'Multimode', range: 'Up to ~2 km', source: 'LED (inexpensive)', core: 'Larger core', modes: 'Multiple light paths' },
     { name: 'Single-mode', range: 'Up to 100 km', source: 'Laser or intense LED', core: 'Smaller core', modes: 'One light path' },
@@ -46,6 +50,7 @@ const CableLab = (() => {
   }
 
   function renderDifficultySelect() {
+    currentDifficulty = null;
     container.innerHTML = '';
     container.appendChild(UI.renderBackButton());
 
@@ -202,17 +207,31 @@ const CableLab = (() => {
     renderScenario(prob);
   }
 
+  function padOptions(options, answer) {
+    const unique = [...new Set(options)];
+    if (unique.length >= 4) {
+      const final = unique.includes(answer) ? unique.slice(0, 4) : [answer, ...unique.filter(o => o !== answer).slice(0, 3)];
+      return UI.shuffleArray(final);
+    }
+    // Pull distractors from relevant pool based on answer content
+    let pool = DISTRACTOR_MEDIA;
+    if (answer.match(/gbps|mbps/i)) pool = DISTRACTOR_SPEEDS;
+    else if (answer.match(/\dm|km/i)) pool = DISTRACTOR_DISTANCES;
+    const fillers = pool.filter(x => !unique.includes(x) && x !== answer);
+    const padded = [...unique];
+    if (!padded.includes(answer)) padded.push(answer);
+    while (padded.length < 4 && fillers.length > 0) {
+      padded.push(fillers.splice(Math.floor(Math.random() * fillers.length), 1)[0]);
+    }
+    return UI.shuffleArray(padded.slice(0, 4));
+  }
+
   function renderMultipleChoice(prob) {
     const div = document.createElement('div');
     div.className = 'cable-container';
     div.style.animation = 'fadeIn 0.3s ease';
 
-    const uniqueOptions = [...new Set(prob.options)];
-    while (uniqueOptions.length < 4 && uniqueOptions.length < prob.options.length + 2) {
-      uniqueOptions.push(`Option ${uniqueOptions.length + 1}`);
-    }
-    const shuffled = UI.shuffleArray(uniqueOptions.slice(0, 4).includes(prob.answer) ? uniqueOptions.slice(0, 4) : [prob.answer, ...uniqueOptions.filter(o => o !== prob.answer).slice(0, 3)]);
-    const finalOptions = UI.shuffleArray(shuffled);
+    const finalOptions = padOptions(prob.options, prob.answer);
 
     div.innerHTML = `
       <div class="route-problem">
