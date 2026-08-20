@@ -102,6 +102,7 @@
 | NDP          | Neighbor Discovery Protocol                                  |
 | NS           | Name Server (DNS record)                                     |
 | NTP          | Network Time Protocol                                        |
+| NTS          | Network Time Security                                        |
 | OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
 | OSPF         | Open Shortest Path First                                     |
@@ -111,6 +112,7 @@
 | PBX          | Private Branch Exchange                                      |
 | PDU          | Power Distribution Unit                                      |
 | PSK          | Pre-Shared Key                                               |
+| PTP          | Precision Time Protocol                                      |
 | PTR          | Pointer (DNS record)                                         |
 | PoE          | Power over Ethernet                                          |
 | POP3         | Post Office Protocol v3                                      |
