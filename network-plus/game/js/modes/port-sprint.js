@@ -3,6 +3,7 @@ const PortSprint = (() => {
   let sessionStats;
   let combo = 0;
   let questionTimer = null;
+  let nextTimer = null;
   let questionStart = 0;
   let currentAnswer = null;
   let answered = false;
@@ -118,6 +119,7 @@ const PortSprint = (() => {
     btn.innerHTML = '← BACK';
     btn.addEventListener('click', () => {
       if (questionTimer) { clearInterval(questionTimer); questionTimer = null; }
+      if (nextTimer) { clearTimeout(nextTimer); nextTimer = null; }
       renderModeSelect();
     });
     return btn;
@@ -237,7 +239,7 @@ const PortSprint = (() => {
       UI.updateHeader();
       input.disabled = true;
 
-      setTimeout(() => showQuestion(mode), correct ? 1200 : 2500);
+      nextTimer = setTimeout(() => showQuestion(mode), correct ? 1200 : 2500);
     }
 
     function skip() {
@@ -251,7 +253,7 @@ const PortSprint = (() => {
       feedback.innerHTML = `<span class="port-skipped">SKIPPED</span> <span class="port-answer">${UI.escapeHtml(currentAnswer.display)}</span>`;
       input.disabled = true;
 
-      setTimeout(() => showQuestion(mode), 2000);
+      nextTimer = setTimeout(() => showQuestion(mode), 2000);
     }
 
     input.addEventListener('keydown', (e) => {
