@@ -407,8 +407,8 @@ const GAME_DATA = {
               "id": "1.1.36",
               "distractors": [
                 "Layer 3 (Network) — shows source and destination IP addresses",
-                "Layer 2 (Data Link) — they use MAC addresses to forward frames",
-                "Layer 6 (Presentation)"
+                "Layer 2 (Data Link) — shows source and destination MAC addresses",
+                "Layer 5 (Session) — shows connection establishment and session management"
               ]
             },
             {
@@ -577,9 +577,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.2.51",
               "distractors": [
-                "DHCP exhaustion, duplicate IP addresses, and DNS cache poisoning (any 3)",
+                "Duplex mismatches, MTU black holes, and routing table convergence delays (any 3)",
                 "Cable attenuation, crosstalk interference, and fiber optic signal loss (any 3)",
-                "Port scanning, brute-force login attempts, and SQL injection attacks (any 3)"
+                "DHCP scope exhaustion, duplicate IP conflicts, and spanning tree topology changes (any 3)"
               ]
             },
             {
@@ -1193,9 +1193,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.2.107",
               "distractors": [
-                "Diverse network types — LAN to WAN, copper to fiber. May have many different interfaces for different connection types.",
-                "It appears as a single server — users don't know their requests are being distributed across multiple physical servers",
-                "Quality of Service — prioritizes certain applications over others on the network, controlling bandwidth usage and data rates"
+                "It increases internet speed for remote workers by routing traffic through optimized corporate network paths",
+                "It replaces the need for authentication — once connected to the VPN, users can access all resources without logging in",
+                "It provides remote workers with a dedicated physical connection to the corporate office, bypassing the public internet entirely"
               ]
             },
             {
@@ -1771,9 +1771,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.3.159",
               "distractors": [
-                "To keep different application instances or departments separated while managing each as individual virtual appliances",
-                "Firewall rules assigned to individual Virtual Network Interface Cards (VNICs), providing per-interface granularity",
-                "Cloud provides computing resources (hardware); you install, manage, and upgrade your own software and data on top"
+                "A virtual network interface that connects VMs to physical switches, handling VLAN tagging and traffic isolation between tenants",
+                "A management console that monitors VM performance metrics and generates alerts when resource thresholds are exceeded",
+                "A storage abstraction layer that pools physical disks into shared volumes accessible by multiple physical servers simultaneously"
               ]
             },
             {
@@ -1848,9 +1848,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.3.166",
               "distractors": [
-                "Variable-Length Subnet Mask",
-                "Infrastructure as a Service",
-                "Small Form-factor Pluggable"
+                "Network Access Terminal",
+                "Node Authentication Table",
+                "Network Allocation Technology"
               ]
             },
             {
@@ -3862,9 +3862,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.5.348",
               "distractors": [
-                "No dynamic routing updates that could be manipulated",
-                "Yes — for coverage across large areas",
-                "No — spine switches do NOT connect directly to each other"
+                "No — half duplex only, requiring CSMA/CD for collision avoidance",
+                "Yes — but only when using active optical transceivers at both ends",
+                "No — it uses time-division multiplexing to alternate between send and receive"
               ]
             },
             {
@@ -4566,9 +4566,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.5.412",
               "distractors": [
-                "F-connector (used for cable modem connections)",
-                "F-connector on a coaxial cable",
-                "LC (the \"little connector\")"
+                "A spring-loaded dust cap that covers the fiber tip when disconnected",
+                "A rubber boot crimped around the outer cable jacket",
+                "An epoxy resin coating applied directly to the exposed glass core"
               ]
             },
             {
@@ -5760,9 +5760,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.6.520",
               "distractors": [
-                "We don't know where outbound traffic is going once it leaves the data center, and inbound traffic could come from potentially anywhere",
-                "Greater redundancy and resilience — multiple links and paths at each layer ensure the network stays up if components fail",
-                "Each building has access switches per floor, connected to distribution switches, which connect to the core in a central data center"
+                "A three-tier design with separate core, distribution, and access layers each performing distinct routing and switching functions",
+                "A flat network design where all devices connect to a single switch layer with no hierarchical separation",
+                "A design that merges the access and distribution layers while keeping the core as a dedicated high-speed backbone"
               ]
             },
             {
@@ -6112,9 +6112,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.6.552",
               "distractors": [
-                "Core, Distribution, Access",
-                "Point-to-point T1 or T3 connections",
-                "Connecting buildings on a campus"
+                "The entire network segment goes down until the link is restored",
+                "All connected devices must renegotiate their connections from scratch",
+                "The switch disables the failed port and isolates the affected device from the network"
               ]
             },
             {
@@ -6712,9 +6712,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.606",
               "distractors": [
-                "Multiple routing protocols to share routes between autonomous systems using redistribution",
-                "Automatic assignment of IP addresses to hosts without manual configuration on a central server",
-                "Supernetting of multiple classful networks into a single summarized route for smaller routing tables"
+                "Different subnet sizes within the same classful network — but only in powers of two from the default mask",
+                "Using a single subnet mask across all subnets in an organization to simplify routing table entries",
+                "Borrowing bits only from the host portion of the default mask — always in full-octet increments (/8, /16, /24)"
               ]
             },
             {
@@ -8340,9 +8340,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "1.7.754",
               "distractors": [
-                "Network address + 1",
-                "224–239 (multicast)",
-                "11000000 (128 + 64)"
+                "64 (256 − 192 = 64)",
+                "16 (256 − 240 = 16)",
+                "128 (256 − 128 = 128)"
               ]
             },
             {
@@ -9838,9 +9838,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "2.1.889",
               "distractors": [
-                "1) Quick to configure on small networks 2) No overhead (no CPU cycles, no memory usage from dynamic protocols) 3) Common for stub networks 4) Relat...",
-                "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actua...",
-                "1) Challenging on larger networks (hundreds/thousands of routers) 2) Misconfiguration can create routing loops 3) Routes don't change automatically..."
+                "1) Receive frame 2) Strip Layer 2 header 3) Decrement TTL 4) Recalculate checksum 5) Add new Layer 2 header 6) Forward out the exit interface",
+                "1) Buffer the entire packet 2) Perform NAT translation on source IP 3) Apply ACL rules 4) Encrypt with IPsec 5) Send to destination interface",
+                "1) Read destination MAC 2) Look up MAC in CAM table 3) Forward out the matching port 4) Update MAC aging timer 5) Log the forwarding decision"
               ]
             },
             {
@@ -10570,9 +10570,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.2.955",
               "distractors": [
-                "Uninterruptible Power Supply",
-                "Galois Counter Mode Protocol",
-                "Basic Service Set Identifier"
+                "Redundant Switching Trunk Protocol",
+                "Routed Segment Transfer Protocol",
+                "Resilient Spanning Topology Protocol"
               ]
             },
             {
@@ -11522,9 +11522,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.3.1041",
               "distractors": [
-                "Wired Equivalent Privacy",
-                "Encryption and integrity",
-                "Wi-Fi Protected Access"
+                "WPA → WEP → WPA2 → WPA3",
+                "WEP → WPA → WPA3 → WPA2",
+                "WPA → WPA2 → WEP → WPA3"
               ]
             },
             {
@@ -12804,9 +12804,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.4.1157",
               "distractors": [
-                "Connect to the device, manage each interface, and power off/on devices from a remote location",
-                "Medium to large environments with many remote rooms connecting back to a central data center",
-                "Outdoor temperature changes (add load to cooling) and increased system load (creates more heat)"
+                "Temperature regulation through built-in airflow management and integrated cooling fans at each rack unit",
+                "Cable management with structured pathways that eliminate the need for separate patch panels or cable trays",
+                "Power redundancy by housing dual independent UPS systems within the rack enclosure itself"
               ]
             },
             {
@@ -13455,9 +13455,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.1.1215",
               "distractors": [
-                "Changes are inevitable — need to know when they occur, plan for them, and inform everyone",
-                "Files, configuration, and everything associated with the VM at that point in time",
-                "Software upgrades on a switch, firewall configuration changes, router table modifications"
+                "Only the running configuration file — hardware and firmware are tracked separately in an asset inventory system",
+                "Only Layer 2 and Layer 3 settings — physical hardware details are excluded from production configurations",
+                "Only the IP addressing scheme and VLAN assignments — software versions are tracked in a separate change log"
               ]
             },
             {
@@ -15023,9 +15023,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.2.1357",
               "distractors": [
-                "Polling: management station → device (request/response on UDP 161). Traps: device → management station (proactive alert on UDP 162)",
-                "A detailed frame-by-frame / packet-by-packet description of traffic flowing across the network, often summarized into simplified views",
-                "Scripts and programs can send commands, make configuration changes, or query information on many devices automatically with one action"
+                "The SNMP agent automatically translates them into standard OIDs before reporting to the management station",
+                "They are registered in a global IANA database that all management stations can query in real time",
+                "The management station uses SNMPv3 encryption to decode proprietary OID values embedded in trap messages"
               ]
             },
             {
@@ -15915,9 +15915,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1437",
               "distractors": [
-                "255.255.255.255 — because the client uses the broadcast address as both source and destination",
-                "169.254.x.x — because the client assigns itself an APIPA address before contacting the server",
-                "127.0.0.1 — because the client uses its loopback address until it receives a real assignment"
+                "The server broadcasts all available addresses and lets the client choose one from the list",
+                "The server forwards the request to a DNS server which assigns both a hostname and IP address simultaneously",
+                "The server checks with neighboring DHCP servers to avoid conflicts, then reserves an address without assigning it"
               ]
             },
             {
@@ -16124,9 +16124,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1456",
               "distractors": [
-                "Day 4 (50% of 8 days)",
-                "300 seconds (5 minutes)",
-                "Vendor extensions"
+                "Day 4 (4/8 or 50% of the lease duration)",
+                "Day 6 (6/8 or 75% of the lease duration)",
+                "Day 2 (2/8 or 25% of the lease duration)"
               ]
             },
             {
@@ -16135,9 +16135,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1457",
               "distractors": [
-                "The client can now configure all IP settings automatically",
-                "MAC-to-IP pairings — so it can recognize returning devices",
-                "A Router Advertisement containing the 64-bit subnet prefix"
+                "The client receives a new IP address and must update its ARP cache and notify connected services",
+                "The lease is extended by half its original duration and the T2 timer is disabled",
+                "The client sends a gratuitous ARP and the server removes the reservation from its pool"
               ]
             },
             {
@@ -16146,9 +16146,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1458",
               "distractors": [
-                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
-                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
-                "Receives zone information from the primary server in read-only mode; provides redundancy"
+                "The client's lease has completely expired and the device must start the full DORA process again",
+                "The client has moved to a new subnet and the current IP address is no longer valid",
+                "The DHCP server sends a NACK message indicating the current lease is no longer available"
               ]
             },
             {
@@ -16157,9 +16157,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1459",
               "distractors": [
-                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
-                "The address of the appropriate TLD name server (e.g., the .com name server)",
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses"
+                "Sends a unicast renewal request directly to the original DHCP server that issued the lease",
+                "Releases the current IP address and begins the full DORA process from scratch",
+                "Switches to an APIPA address (169.254.x.x) while continuing to search for a DHCP server"
               ]
             },
             {
@@ -16168,9 +16168,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1460",
               "distractors": [
-                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
-                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
-                "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly"
+                "The four-step process (Discover, Offer, Request, Acknowledge) that clients use to negotiate an IP address with the server",
+                "Configurable lease duration settings that determine how long a client can keep its assigned IP address before renewal",
+                "The list of excluded IP addresses within a scope that are reserved for static assignment and not handed out dynamically"
               ]
             },
             {
@@ -16179,9 +16179,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1461",
               "distractors": [
-                "50%",
-                "255",
-                "110"
+                "128",
+                "64",
+                "512"
               ]
             },
             {
@@ -16190,9 +16190,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1462",
               "distractors": [
-                "It is stored as read-only by default",
-                "Some modern browsers use DoH by default",
-                "A fully routable, unique IPv6 address"
+                "In the vendor's proprietary configuration guide for each DHCP server product",
+                "In the IEEE 802.3 standard alongside Ethernet frame specifications",
+                "In the operating system's local registry or configuration database"
               ]
             },
             {
@@ -16201,9 +16201,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1463",
               "distractors": [
-                ".com, .org, .net",
-                "Day 7 (7/8 of 8 days)",
-                "Day 4 (50% of 8 days)"
+                "Configuration parameters",
+                "Host extensions",
+                "Bootstrap fields"
               ]
             },
             {
@@ -16212,9 +16212,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1464",
               "distractors": [
-                "The Top Level Domains (TLDs)",
-                "The IP address of the DHCP server",
-                "On the authoritative DNS server"
+                "DNS server address",
+                "Default gateway IP address",
+                "TFTP server name"
               ]
             },
             {
@@ -16223,9 +16223,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1465",
               "distractors": [
-                "87.5% or 7/8",
-                "TCP port 443",
-                "TCP port 853"
+                "DNS server address",
+                "Default gateway",
+                "NTP server address"
               ]
             },
             {
@@ -16234,9 +16234,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1466",
               "distractors": [
-                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
-                "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
-                "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond"
+                "That the client device firmware is new enough to interpret the option field in the DHCP response",
+                "That the network switch supports the VLAN tag embedded in the DHCP option header",
+                "That all devices on the subnet are using the same DHCP option version number"
               ]
             },
             {
@@ -16245,9 +16245,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1467",
               "distractors": [
-                "Yes — the forward name and reverse name may differ",
-                "MAC address, reserved IP address, and device name",
-                "All four are sent as broadcasts (255.255.255.255)"
+                "In the DNS Manager console under Conditional Forwarders for each zone",
+                "Under Network Adapter Properties in the TCP/IPv4 Advanced Settings dialog",
+                "In Group Policy under Computer Configuration > Network Settings > DHCP Options"
               ]
             },
             {
@@ -16256,9 +16256,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1468",
               "distractors": [
-                "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement",
-                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
-                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server"
+                "Only an IP address and subnet mask — additional settings like DNS and gateway must be manually configured on the client",
+                "A temporary 169.254.x.x link-local address that must be renewed before the client can access the internet",
+                "Only the default gateway and DNS server addresses — the IP address and subnet mask are assigned separately by the router"
               ]
             },
             {
@@ -16267,9 +16267,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1469",
               "distractors": [
-                "Resolving names locally on the machine without querying a DNS server, using the hosts file",
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
-                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time"
+                "Use RARP to broadcast a request and wait for a server to reply with an available address",
+                "Assign addresses alphabetically by hostname from a shared spreadsheet updated weekly",
+                "Connect each device to a dedicated port on the router pre-configured with a fixed address"
               ]
             },
             {
@@ -16278,9 +16278,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1470",
               "distractors": [
-                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it",
-                "Printers, servers, or any device that needs a consistent IP address without manual static configuration",
-                "The address never needs to be given up — it is self-assigned and permanent as long as the device uses it"
+                "Boot Order Transfer Protocol — a method for PXE clients to download OS images over the network during startup",
+                "Basic Object Orientation Transport Protocol — a Layer 4 protocol that preceded TCP for connection-oriented transfers",
+                "Broadcast Optimization Token Protocol — a mechanism to reduce broadcast traffic on large Layer 2 networks"
               ]
             },
             {
@@ -16289,9 +16289,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1471",
               "distractors": [
-                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
-                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
-                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+                "Required manual subnet mask assignment on each client, and could not provide DNS server information automatically",
+                "Only supported wired connections, and could not assign addresses to devices connecting over wireless networks",
+                "Limited to assigning Class C addresses only, and could not handle networks with more than 254 devices"
               ]
             },
             {
@@ -16300,9 +16300,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1472",
               "distractors": [
-                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
-                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
-                "A rebinding timer set at 87.5% (7/8) of the lease time, at which point the device attempts to renew with any available DHCP server"
+                "Domain Host Control Protocol — manages DNS records and automatically updates hostname-to-IP mappings for all network devices",
+                "Distributed Host Configuration Platform — a peer-to-peer system where devices negotiate IP addresses directly with each other",
+                "Dynamic Hostname Configuration Protocol — assigns and manages hostnames for devices joining the network based on their MAC address"
               ]
             },
             {
@@ -16311,9 +16311,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1473",
               "distractors": [
-                "Local Connector (also: Lucent connector, little connector)",
-                "Institute of Electrical and Electronics Engineers",
-                "Control and Provisioning of Wireless Access Points"
+                "Deny, Offer, Renew, Assign — the four steps for a server to reject or grant lease extensions",
+                "Distribute, Obtain, Release, Allocate — the process of returning and reassigning IP addresses",
+                "Detect, Organize, Respond, Authenticate — the four steps for verifying client identity before lease assignment"
               ]
             },
             {
@@ -16322,9 +16322,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1474",
               "distractors": [
-                "It reinitializes the DHCP process and may restart the lease",
-                "It receives it from the primary DNS server (read-only copy)",
-                "All four DORA phases — the relay process repeats for each step"
+                "255.255.255.255 — because the client broadcasts its own MAC address as a source identifier",
+                "127.0.0.1 — because the client uses its loopback as a placeholder until it receives a real address",
+                "169.254.x.x — because the client auto-assigns an APIPA address before contacting the server"
               ]
             },
             {
@@ -16333,9 +16333,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1475",
               "distractors": [
-                "A feature of NDP that checks the network to ensure no other device is using the same IPv6 address",
-                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options",
-                "Contains all zone information for the DNS domain; all configuration changes and updates happen here"
+                "0.0.0.0 (unspecified) — so the server knows the client has no current address assignment",
+                "192.168.1.1 (default gateway) — so the router can forward the request to the correct DHCP server",
+                "224.0.0.1 (multicast) — so only DHCP servers listening on that group address will respond"
               ]
             },
             {
@@ -16344,9 +16344,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1476",
               "distractors": [
-                "TCP 23",
-                "TCP 22",
-                "UDP 69"
+                "UDP 67",
+                "UDP 546",
+                "UDP 53"
               ]
             },
             {
@@ -16355,9 +16355,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1477",
               "distractors": [
-                "TCP 23",
-                "TCP 22",
-                "UDP 69"
+                "UDP 68",
+                "UDP 53",
+                "UDP 546"
               ]
             },
             {
@@ -16366,9 +16366,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1478",
               "distractors": [
-                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP",
-                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
-                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)"
+                "Because broadcasting allows all DHCP servers on the subnet to see which server was chosen by the client",
+                "Because the DHCP standard requires all messages in the DORA process to use multicast addressing",
+                "Because the server does not yet know the client's MAC address until the Request phase"
               ]
             },
             {
@@ -16377,9 +16377,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1479",
               "distractors": [
-                "The address returns to the pool and can be assigned to another device",
-                "It sends a Router Advertisement (RA) directly back to the device",
-                "No — reverse lookups must be separately configured on the DNS server"
+                "The servers negotiate among themselves and only the one with the lowest IP sends an offer to the client",
+                "The client's request is rejected until all but one server drops out of the election process",
+                "Only the server with the longest lease time is allowed to respond to the client's Discover message"
               ]
             },
             {
@@ -16388,9 +16388,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1480",
               "distractors": [
-                "The address returns to the pool and can be assigned to another device",
-                "No — source IP is still 0.0.0.0 and the request is sent as a broadcast",
-                "Client sends: Discover and Request. Server sends: Offer and Acknowledge."
+                "Sends a broadcast DHCP Discover message to locate available DHCP servers on the network",
+                "Begins using the IP address immediately and sends an ARP probe to check for conflicts",
+                "Contacts the server directly via unicast to renew its existing lease before it expires"
               ]
             },
             {
@@ -16399,9 +16399,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1481",
               "distractors": [
-                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form",
-                "Yes — you can use copper or fiber transceivers depending on your needs",
-                "Yes — just remove the copper transceiver and slide in a fiber transceiver"
+                "Yes — the client uses the offered IP address as its source since the server already allocated it",
+                "Yes — the client uses its previously cached address from the last successful lease",
+                "Partially — the client uses 169.254.x.x as a temporary source until the Acknowledge confirms the address"
               ]
             },
             {
@@ -16410,9 +16410,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1482",
               "distractors": [
-                "The lease resets and the timer restarts from the beginning",
-                "A Router Advertisement containing the 64-bit subnet prefix",
-                "MAC-to-IP pairings — so it can recognize returning devices"
+                "The client sends a unicast confirmation back to the server to verify the lease",
+                "The client broadcasts its new IP to all other devices on the subnet to announce its presence",
+                "The client must restart its network interface before the new settings take effect"
               ]
             },
             {
@@ -16421,9 +16421,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1483",
               "distractors": [
-                "Yes — the forward name and reverse name may differ",
-                "MAC address, reserved IP address, and device name",
-                "They are served from the local DNS server's cache"
+                "Discover and Offer are broadcasts; Request and Acknowledge are unicasts",
+                "Only Discover is broadcast; Offer, Request, and Acknowledge are unicasts",
+                "Discover and Request are broadcasts; Offer and Acknowledge are unicasts to the client's MAC"
               ]
             },
             {
@@ -16432,9 +16432,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1484",
               "distractors": [
-                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
-                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
-                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+                "Broadcasts consume excessive bandwidth on large subnets — networks with more than 254 hosts experience DHCP storms that degrade performance",
+                "Broadcasts are dropped by switches in different VLANs — so each VLAN requires its own dedicated physical DHCP server",
+                "Broadcasts are limited to a single collision domain — hubs forward them but switches filter them at each port"
               ]
             },
             {
@@ -16443,9 +16443,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1485",
               "distractors": [
-                "A process by which a local DNS server resolves a name on behalf of the client, doing all the work behind the scenes",
-                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network",
-                "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear"
+                "Broadcasts consume too much bandwidth on high-speed backbone links, causing congestion for production traffic",
+                "Broadcast-based DHCP only supports a single subnet per server, preventing address assignment to multiple VLANs",
+                "Broadcasts are blocked by firewalls, so clients in secure zones cannot receive any DHCP offers from any server"
               ]
             },
             {
@@ -16454,9 +16454,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1486",
               "distractors": [
-                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
-                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
-                "No — they are leased for a configured duration and must be renewed or they return to the pool"
+                "A protocol that automatically distributes IP addresses to devices on the same subnet as the DHCP server",
+                "A security feature that validates DHCP messages to prevent rogue servers from assigning addresses",
+                "A backup DHCP server that takes over address assignment when the primary server fails"
               ]
             },
             {
@@ -16465,9 +16465,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1487",
               "distractors": [
-                "windows/system32/drivers/etc/hosts",
-                "ARP (Address Resolution Protocol)",
-                "Neighbor Discovery Protocol (NDP)"
+                "The MAC address of the DHCP server",
+                "The VLAN ID of the client subnet",
+                "The lease duration for client addresses"
               ]
             },
             {
@@ -16476,9 +16476,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1488",
               "distractors": [
-                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
-                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
-                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator"
+                "It encapsulates the broadcast inside a GRE tunnel to the DHCP server, preserving the original source and destination addresses",
+                "It floods the DHCP Discover on all interfaces simultaneously, allowing the server to respond directly to the client's MAC address",
+                "It caches a pool of pre-assigned addresses locally and hands one to the client without contacting the DHCP server at all"
               ]
             },
             {
@@ -16487,9 +16487,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1489",
               "distractors": [
-                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
-                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
-                "IPv4 requires DHCP or manual configuration; IPv6 can assign itself a routable address via SLAAC with no server involvement"
+                "The server sends a broadcast response that all routers in the path forward hop-by-hop until it reaches the client's subnet",
+                "The server encapsulates the response in a GRE tunnel directly to the client's MAC address, bypassing the relay agent",
+                "The server responds directly to the client's IP address using the giaddr field as the next-hop gateway"
               ]
             },
             {
@@ -16498,9 +16498,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1490",
               "distractors": [
-                "It sends a Router Advertisement (RA) directly back to the device",
-                "A method of encrypting DNS traffic using TLS over TCP port 853",
-                "0.0.0.0 — because the client does not have an IP address yet"
+                "Only the Discover and Request steps — the Offer and Acknowledge are sent directly to the client's MAC",
+                "Only the Discover step — once the server knows the client's address, it communicates directly",
+                "Only the first three phases (Discover, Offer, Request) — the final Acknowledge is sent unicast to the client"
               ]
             },
             {
@@ -16509,9 +16509,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1491",
               "distractors": [
-                "The primary DNS server for a DNS zone — the authority for all records in that domain",
-                "No — the same information exists in both and the end user has no idea which answered",
-                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)"
+                "Multiple DHCP servers can share a single address pool without conflicting lease assignments",
+                "Clients can request specific IP addresses by hostname rather than relying on pool assignments",
+                "DHCP servers can assign addresses from overlapping scopes to devices on the same subnet"
               ]
             },
             {
@@ -16520,9 +16520,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1492",
               "distractors": [
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
-                "Root → Top-Level Domains (TLDs) → Second-Level Domain → Subdomains/Hosts",
-                "Provide a name → DNS returns an IP address; the most common DNS operation"
+                "Client sends: Discover and Acknowledge. Server sends: Offer and Request.",
+                "Client sends: Discover, Request, and Acknowledge. Server sends: Offer only.",
+                "Client sends: Request and Acknowledge. Server sends: Discover and Offer."
               ]
             },
             {
@@ -16531,9 +16531,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1493",
               "distractors": [
-                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast",
-                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
-                "Dynamic Host Configuration Protocol — replaced BOOTP to provide full automatic address configuration for all devices on a network"
+                "It eliminates the need for any server infrastructure — all IPv6 address management is handled entirely by the routers",
+                "It uses a completely different four-step process — Solicit, Reply, Confirm, Release — with no Offer or Acknowledge phase",
+                "It requires no administrator involvement — DHCPv6 servers automatically discover available address ranges from the network prefix"
               ]
             },
             {
@@ -16542,9 +16542,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1494",
               "distractors": [
-                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet",
-                "It uses a similar process to IPv4 DHCP, with redundant DHCP servers for enterprise readiness, managed by the DHCP administrator",
-                "It changes the source IP to its own interface IP and the destination to the DHCP server's IP — converting broadcast to unicast"
+                "A DHCPv6 mode where the server assigns addresses but does not track which devices hold which leases",
+                "A method where routers assign specific IPv6 addresses to each device based on their MAC address registration",
+                "An addressing scheme where IPv6 devices receive temporary addresses that change every 24 hours for privacy"
               ]
             },
             {
@@ -16553,9 +16553,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1495",
               "distractors": [
-                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
-                "Yes — each interface can have a different transceiver and therefore a different media type",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths"
+                "No broadcast addresses, no ARP requests, and no subnet mask configuration",
+                "No DNS servers, no default gateway assignment, and no network prefix distribution",
+                "No manual IP entry, no duplicate address conflicts, and no MAC address tables"
               ]
             },
             {
@@ -16564,9 +16564,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1496",
               "distractors": [
-                "Printers, servers, or any device that needs a consistent IP address without manual static configuration",
-                "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
-                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it"
+                "Because the DHCPv6 server handles address expiration separately through periodic renewals",
+                "Because IPv6 has such a large address space that reclaiming addresses is unnecessary",
+                "Because the router revokes the prefix via Router Advertisement when the address must change"
               ]
             },
             {
@@ -16575,9 +16575,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1497",
               "distractors": [
-                "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i...",
-                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
-                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ..."
+                "A Layer 2 protocol that maps IPv4 addresses to MAC addresses using broadcast requests on the local network segment",
+                "A routing protocol that discovers neighboring routers and exchanges link-state information to build a network topology map",
+                "A switch protocol that detects directly connected devices and shares information about device capabilities and VLAN assignments"
               ]
             },
             {
@@ -16586,9 +16586,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1498",
               "distractors": [
-                "windows/system32/drivers/etc/hosts",
-                "Neighbor Discovery Protocol (NDP)",
-                "The IP address of the DHCP server"
+                "ICMP (Internet Control Message Protocol)",
+                "IGMP (Internet Group Management Protocol)",
+                "RARP (Reverse Address Resolution Protocol)"
               ]
             },
             {
@@ -16597,9 +16597,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1499",
               "distractors": [
-                "T1 contacts the original DHCP server only; T2 contacts any available DHCP server on the network",
-                "Addresses within the IP address range that should not be assigned to devices by the DHCP server",
-                "A continuous range of IP addresses (e.g., .1 through .100) that the DHCP server can assign from"
+                "NDP uses smaller packet headers than ARP, reducing bandwidth consumption on the network",
+                "NDP caches entries permanently while ARP must re-query periodically, reducing repeat traffic",
+                "NDP operates at Layer 2 directly on the switch while ARP requires Layer 3 router processing"
               ]
             },
             {
@@ -16608,9 +16608,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1500",
               "distractors": [
-                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
-                "A secondary server or caching server that returns cached information, not directly from the zone owner",
-                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information"
+                "Assign IPv6 addresses via DHCPv6, resolve hostnames to addresses, and manage multicast group memberships",
+                "Encrypt neighbor communications, authenticate routers, and detect rogue DHCP servers on the network",
+                "Map IPv6 addresses to MAC addresses, perform traceroute at Layer 2, and monitor link-state changes"
               ]
             },
             {
@@ -16619,9 +16619,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1501",
               "distractors": [
-                "The original DHCP server is unavailable and did not respond during the T1 renewal period",
-                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value",
-                "Cached information could be outdated if the authoritative server was recently changed"
+                "A unicast reply from a neighbor confirming its Layer 2 (MAC) address in response to a Neighbor Solicitation",
+                "A periodic keepalive message sent between routers to verify that adjacency is still active on the link",
+                "A broadcast message sent by a device requesting an IPv6 address assignment from any available DHCPv6 server"
               ]
             },
             {
@@ -16630,9 +16630,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1502",
               "distractors": [
-                "All four DORA phases — the relay process repeats for each step",
-                "A method of encrypting DNS traffic using TLS over TCP port 853",
-                "The client may receive multiple offers from different DHCP servers"
+                "It assigns an IPv6 address from its local pool and sends a unicast confirmation to the device",
+                "It forwards the solicitation to a DHCPv6 server, which then responds to the device directly",
+                "It sends a Neighbor Advertisement containing the full 128-bit address for the device to use"
               ]
             },
             {
@@ -16641,9 +16641,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1503",
               "distractors": [
-                "The first level below the root in the DNS hierarchy — includes generic TLDs (.com, .org, .net) and country code TLDs (.us, .ca, .uk)",
-                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
-                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic"
+                "A unicast message sent by a device to verify that a specific IPv6 address is not already in use on the local network",
+                "A request from a client to a DHCPv6 server asking for a full IPv6 address assignment including prefix and gateway",
+                "A multicast message sent by a device to resolve an IPv6 address to a MAC address, similar to an ARP request in IPv4"
               ]
             },
             {
@@ -16652,9 +16652,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1504",
               "distractors": [
-                "Central management — all address assignments are managed in one place, and changes don't require visiting each device individually (better scalabil...",
-                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
-                "A reservation is configured on the DHCP server (device still uses DHCP); a static configuration is set manually on the device itself with no DHCP i..."
+                "A Router Advertisement sent only in response to a device's Router Solicitation message",
+                "A Neighbor Solicitation sent by a device to verify whether a specific IPv6 address is already in use",
+                "A DHCPv6 Advertise message sent by a server to all clients when their lease time is about to expire"
               ]
             },
             {
@@ -16663,9 +16663,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1505",
               "distractors": [
-                "The device sends a Router Solicitation via NDP to determine the local subnet",
-                "It can release the IP address back into the pool so other devices can use it",
-                "The last 64 bits of the address, generated by the device itself during SLAAC"
+                "Unsolicited RAs are sent as unicast directly to each device, while solicited RAs use a multicast group",
+                "Unsolicited RAs are sent only to link-local addresses, while solicited RAs are sent to global unicast addresses",
+                "Unsolicited RAs use broadcast to reach all devices, while solicited RAs use the requesting device's unicast address"
               ]
             },
             {
@@ -16674,9 +16674,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1506",
               "distractors": [
-                "T1 contacts the original DHCP server only; T2 contacts any available DHCP server on the network",
-                "Addresses within the IP address range that should not be assigned to devices by the DHCP server",
-                "A continuous range of IP addresses (e.g., .1 through .100) that the DHCP server can assign from"
+                "MAC address of the gateway, link MTU, VLAN ID, and authentication credentials for the network",
+                "Default gateway IP, lease duration, NTP server address, and DHCP server identifier",
+                "Interface speed, duplex setting, IPv4-mapped address, and SSID of the wireless network"
               ]
             },
             {
@@ -16685,9 +16685,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1507",
               "distractors": [
-                "Traffic is sent in the clear (anyone can see queried hostnames), and responses are not authenticated (could be spoofed)",
-                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
-                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options"
+                "Secure Link-local Address Assignment Control — a method for authenticating IPv6 addresses before they join the network",
+                "Stateful Address Autoconfiguration — a DHCPv6 mode where the server assigns and tracks all IPv6 addresses centrally",
+                "Subnet-Level Address Aggregation and Classification — a technique for summarizing IPv6 routes at the subnet boundary"
               ]
             },
             {
@@ -16696,9 +16696,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1508",
               "distractors": [
-                "Unsolicited RAs are sent to a different multicast address than solicited ones",
-                "It can release the IP address back into the pool so other devices can use it",
-                "The last 64 bits of the address, generated by the device itself during SLAAC"
+                "The device generates a random 128-bit address and immediately begins using it on the network",
+                "The device broadcasts a DHCPv6 Solicit message to locate available address servers on the subnet",
+                "The device queries the local DNS server to determine which IPv6 prefix is assigned to the subnet"
               ]
             },
             {
@@ -16707,9 +16707,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1509",
               "distractors": [
-                "MAC-to-IP pairings — so it can recognize returning devices",
-                "The lease resets and the timer restarts from the beginning",
-                "The client can now configure all IP settings automatically"
+                "A full 128-bit IPv6 address with both the prefix and interface identifier already assigned",
+                "A DHCPv6 Offer containing the IPv6 address, default gateway, and DNS server information",
+                "An ICMPv6 Redirect message containing the nearest DNS server address and lease duration"
               ]
             },
             {
@@ -16718,9 +16718,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1510",
               "distractors": [
-                "UDP 67",
-                "UDP 68",
-                "HTTP proxy"
+                "48 bits",
+                "128 bits",
+                "32 bits"
               ]
             },
             {
@@ -16729,9 +16729,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1511",
               "distractors": [
-                "Unsolicited RAs are sent to a different multicast address than solicited ones",
-                "It can release the IP address back into the pool so other devices can use it",
-                "The device sends a Router Solicitation via NDP to determine the local subnet"
+                "The first 64 bits of the address, assigned by the router via Router Advertisement",
+                "A 48-bit identifier derived from the device's MAC address without modification",
+                "The first 48 bits of the address that identify the global routing prefix assigned by the ISP"
               ]
             },
             {
@@ -16740,9 +16740,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1512",
               "distractors": [
-                "Cached information could be outdated if the authoritative server was recently changed",
-                "The original DHCP server is unavailable and did not respond during the T1 renewal period",
-                "A multicast message sent by a device asking any routers on the local subnet to respond"
+                "DHCPv6 server assignment (server picks the full 64-bit ID) or manual static configuration by the administrator",
+                "Hash of the device hostname (SHA-256 truncated to 64 bits) or the device serial number encoded in hexadecimal",
+                "Router-assigned value (included in the Router Advertisement) or a sequentially incremented counter starting from 1"
               ]
             },
             {
@@ -16751,9 +16751,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1513",
               "distractors": [
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
-                "The address of the appropriate TLD name server (e.g., the .com name server)",
-                "Reaches out to any available DHCP server on the network to renew the lease"
+                "It pads the 48-bit MAC address with 16 trailing zeros to reach 64 bits",
+                "It hashes the 48-bit MAC address using SHA-256 and truncates the result to 64 bits",
+                "It duplicates the last 16 bits of the MAC address and appends them to create 64 bits"
               ]
             },
             {
@@ -16762,9 +16762,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1514",
               "distractors": [
-                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
-                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+                "The device sends a Router Solicitation to confirm the prefix is still valid on the network",
+                "The device registers its new address with the local DHCPv6 server for record-keeping",
+                "The device broadcasts a gratuitous ARP to announce its new IPv6 address to all neighbors"
               ]
             },
             {
@@ -16773,9 +16773,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1515",
               "distractors": [
-                "Some modern browsers use DoH by default",
-                "It is stored as read-only by default",
-                "In the DHCP RFC (Request for Comments)"
+                "A link-local address only usable within the local subnet, requiring DHCPv6 for external routing",
+                "A temporary IPv6 address that expires after 30 seconds unless confirmed by a DHCP server",
+                "A globally unique MAC-based identifier that still requires a router to assign the network prefix separately"
               ]
             },
             {
@@ -16784,9 +16784,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1516",
               "distractors": [
-                "1) Resolver queries local DNS server, 2) Local server queries root → gets .com NS address, 3) Local server queries .com NS → gets professormesser.c...",
-                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
-                "HVAC sends cold air under raised floor → vents let cold air into cold aisle → servers pull in cold air from front → heated air exits back into hot ..."
+                "1) Send DHCPv6 Solicit, 2) Receive DHCPv6 Advertise with prefix, 3) Send DHCPv6 Request, 4) Receive DHCPv6 Reply with full address, 5) Verify with DAD",
+                "1) Receive RA with full 128-bit address, 2) Perform DAD, 3) Accept or reject address, 4) Send confirmation to router, 5) Begin using address",
+                "1) Generate interface ID from MAC, 2) Send Router Solicitation, 3) Receive prefix from RA, 4) Combine prefix and ID, 5) Register address with router"
               ]
             },
             {
@@ -16795,9 +16795,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1517",
               "distractors": [
-                "255.255.255.255 (broadcast) — so all devices on the subnet see it and any DHCP servers can respond",
-                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
-                "That the DHCP server supports that specific option — not all DHCP servers support all 254 options"
+                "A router feature that prevents two DHCP servers from issuing the same IPv6 address on the same subnet",
+                "A switch mechanism that blocks a port if it detects the same MAC address on multiple interfaces",
+                "A DNS validation step that ensures no two hostnames resolve to the same IPv6 address in a zone"
               ]
             },
             {
@@ -16817,9 +16817,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1519",
               "distractors": [
-                "windows/system32/drivers/etc/hosts",
-                "ARP (Address Resolution Protocol)",
-                "The IP address of the DHCP server"
+                "DHCPv6 (Dynamic Host Configuration Protocol for IPv6)",
+                "ICMPv4 (Internet Control Message Protocol version 4)",
+                "SLAAC (Stateless Address Autoconfiguration)"
               ]
             },
             {
@@ -16828,9 +16828,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1520",
               "distractors": [
-                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options",
-                "IPv6 devices can assign an IP address to themselves and communicate on the network without a DHCP server managing the process",
-                "The server responds with unicast to the router, then the router converts it back to a broadcast on the client's local subnet"
+                "IPv4 supports autoconfiguration via APIPA for both local and routable addresses; IPv6 requires DHCPv6 for all address types",
+                "IPv4 uses ARP to self-assign an address from the local pool; IPv6 requires router permission before generating any address",
+                "IPv4 devices can negotiate addresses directly with peers via link-local broadcast; IPv6 must always contact a central server first"
               ]
             },
             {
@@ -16839,9 +16839,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1521",
               "distractors": [
-                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits",
-                "Reaches out to any available DHCP server on the network to renew the lease",
-                "Provide a name → DNS returns an IP address; the most common DNS operation"
+                "Assigns IP addresses dynamically to devices when they connect to the network",
+                "Encrypts web traffic between a client and server to prevent eavesdropping",
+                "Routes packets between different networks using the shortest available path"
               ]
             },
             {
@@ -16850,9 +16850,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1522",
               "distractors": [
-                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
-                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
-                "Resolving names locally on the machine without querying a DNS server, using the hosts file"
+                "As a flat database — all records stored in a single table indexed by domain name",
+                "As a mesh — every DNS server holds a full copy and synchronizes with all others",
+                "As a ring — each server holds one zone and passes queries clockwise to the next server"
               ]
             },
             {
@@ -16861,9 +16861,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1523",
               "distractors": [
-                "Some modern browsers use DoH by default",
-                "Provide an IP address → DNS returns a name",
-                "A simple text file mapping IP addresses to names"
+                "The top-level domains (TLDs) such as .com, .org, and .net",
+                "The authoritative name servers that hold zone files for each domain",
+                "The ISP's recursive resolver, which handles all queries for its customers"
               ]
             },
             {
@@ -16872,9 +16872,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1524",
               "distractors": [
-                "A method of sending DNS queries over standard HTTPS on TCP port 443, making DNS traffic look identical to normal encrypted web traffic",
-                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
-                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network"
+                "The authoritative name servers that store the actual DNS records (A, AAAA, MX) for a specific domain and respond to queries",
+                "The root DNS servers at the very top of the hierarchy that direct queries to the appropriate regional DNS clusters",
+                "The fully qualified domain names (FQDNs) that include every label from host to root, such as www.example.com."
               ]
             },
             {
@@ -16883,9 +16883,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1525",
               "distractors": [
-                "Day 4 (50% of 8 days)",
-                "Vendor extensions",
-                "Day 7 (7/8 of 8 days)"
+                ".us, .uk, .de",
+                ".edu.au, .co.uk, .gov.us",
+                ".local, .internal, .lan"
               ]
             },
             {
@@ -16894,9 +16894,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1526",
               "distractors": [
-                "13 server clusters, comprising over 1,000 actual servers",
-                "MAC-to-IP pairings — so it can recognize returning devices",
-                "Static DHCP assignment, static DHCP, or IP reservation"
+                ".com (Commercial), .org (Organization), .net (Network)",
+                ".edu (Education), .gov (Government), .mil (Military)",
+                ".info (Information), .biz (Business), .name (Personal)"
               ]
             },
             {
@@ -16905,9 +16905,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1527",
               "distractors": [
-                "The primary DNS server for a DNS zone — the authority for all records in that domain",
-                "No — the same information exists in both and the end user has no idea which answered",
-                "Clients can receive IP addresses from a DHCP server on a completely different subnet"
+                "The top-level domain portion of a URL that identifies the country or category (e.g., .com, .org, .uk)",
+                "A shortened alias for an IP address stored in the local hosts file for quick lookups",
+                "The authoritative DNS server's hostname that holds the zone records for a domain"
               ]
             },
             {
@@ -16916,9 +16916,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1528",
               "distractors": [
-                "Provide a name → DNS returns an IP address; the most common DNS operation",
-                "Client sends: Discover and Request. Server sends: Offer and Acknowledge.",
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses"
+                "Root → Authoritative Servers → Recursive Resolvers → Client Cache",
+                "Registrar → Nameserver → Zone File → Resource Record",
+                "Primary DNS → Secondary DNS → Caching DNS → Local Hosts File"
               ]
             },
             {
@@ -16927,9 +16927,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1529",
               "distractors": [
-                "The lease resets and the timer restarts from the beginning",
-                ".us (United States), .ca (Canada), .uk (United Kingdom)",
-                "MAC-to-IP pairings — so it can recognize returning devices"
+                "7 server clusters, one for each continent",
+                "26 server clusters, one for each letter of the alphabet (A through Z)",
+                "53 server clusters, matching the DNS port number"
               ]
             },
             {
@@ -16938,9 +16938,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1530",
               "distractors": [
-                "The IP address of the DHCP server",
-                "On the authoritative DNS server",
-                "Call server IP address (VoIP)"
+                "The individual host records (A and AAAA) for all registered domains on the internet",
+                "The MX records that route email to the correct mail servers worldwide",
+                "The cached responses from recursive resolvers across all ISP networks"
               ]
             },
             {
@@ -16949,9 +16949,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1531",
               "distractors": [
-                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses",
-                "Cached data is deleted and subsequent queries must go to the authoritative server to be cached again",
-                "No — some applications ignore the hosts file and query DNS directly; check application documentation"
+                "Caches frequently requested records to reduce query time; does not store any authoritative zone data",
+                "Forwards all client queries to the root servers; stores no records locally",
+                "Holds a read-only copy of zone data received from another server; cannot accept direct changes"
               ]
             },
             {
@@ -16960,9 +16960,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1532",
               "distractors": [
-                "No DHCP server managing the process, no need to track IP/MAC addresses, and no lease time",
-                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
-                "The original DHCP server is unavailable and did not respond during the T1 renewal period"
+                "Handles all recursive queries while the primary server only processes iterative requests",
+                "Stores only cached records from external lookups and cannot serve authoritative zone data",
+                "Automatically becomes the primary server if the original primary goes offline permanently"
               ]
             },
             {
@@ -16971,9 +16971,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1533",
               "distractors": [
-                "0.0.0.0 — because the client does not have an IP address yet",
-                "MAC-to-IP pairings — so it can recognize returning devices",
-                "It reinitializes the DHCP process and may restart the lease"
+                "It queries root servers independently and builds its own zone database from the responses",
+                "It downloads zone files directly from a shared network storage location configured by the administrator",
+                "It receives updates from clients who report their DNS records via dynamic registration"
               ]
             },
             {
@@ -16982,9 +16982,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1534",
               "distractors": [
-                "Yes — each interface can have a different transceiver and therefore a different media type",
-                "Yes — just remove the copper transceiver and slide in a fiber transceiver",
-                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule"
+                "Yes — responses from secondary servers include a flag indicating they are non-authoritative copies",
+                "Yes — secondary servers add extra latency that is visible in the DNS response time",
+                "No — but administrators can identify which server responded by examining the TTL values returned"
               ]
             },
             {
@@ -16993,9 +16993,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1535",
               "distractors": [
-                "Manually configure all IPv4 settings (IP address, subnet mask, DNS, etc.) on every device",
-                "Time to Live — specifies how long (in seconds) a nonauthoritative server may cache a record",
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts"
+                "Querying the nearest recursive DNS server on the local subnet for name-to-IP mappings",
+                "Using mDNS to broadcast name queries to all devices on the same network segment",
+                "Checking the ARP cache for recently resolved hostnames before sending a DNS request"
               ]
             },
             {
@@ -17004,9 +17004,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1536",
               "distractors": [
-                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address",
-                "A secondary server or caching server that returns cached information, not directly from the zone owner"
+                "Storing authoritative DNS zone records locally and providing name resolution when the DNS server is offline",
+                "Configuring DHCP reservations for local devices and mapping MAC addresses to static IP assignments",
+                "Defining DNS forwarder addresses for the local resolver and specifying which upstream servers to query first"
               ]
             },
             {
@@ -17015,9 +17015,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1537",
               "distractors": [
-                "The IP address of the DHCP server",
-                "ARP (Address Resolution Protocol)",
-                "Neighbor Discovery Protocol (NDP)"
+                "windows/system32/config/hosts",
+                "windows/system/network/hosts",
+                "windows/system32/dns/etc/hosts"
               ]
             },
             {
@@ -17026,9 +17026,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1538",
               "distractors": [
-                "They are served from the local DNS server's cache",
-                "MAC address, reserved IP address, and device name",
-                "All four are sent as broadcasts (255.255.255.255)"
+                "An XML configuration file with DNS record entries and TTL values",
+                "A binary database file compiled from zone records by the operating system",
+                "A JSON file containing hostname-to-IP mappings with optional priority weights"
               ]
             },
             {
@@ -17037,9 +17037,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1539",
               "distractors": [
-                "A fully routable, unique IPv6 address",
-                "windows/system32/drivers/etc/hosts",
-                "In the DHCP RFC (Request for Comments)"
+                "It requires administrator/root privileges because it is owned by the system account",
+                "The file is encrypted by the OS and must be decrypted before any modifications can be saved",
+                "The DNS client service locks the file while running and must be stopped before editing"
               ]
             },
             {
@@ -17048,9 +17048,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1540",
               "distractors": [
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
-                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule",
-                "Yes — devices may have a pre-built list of applications and also allow adding custom applications to the list"
+                "Yes — the hosts file is always checked by every application before any DNS query is sent",
+                "No — the hosts file is only used on Linux systems; Windows applications always query DNS directly",
+                "Yes — the operating system forces all name resolution through the hosts file first regardless of application"
               ]
             },
             {
@@ -17059,9 +17059,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1541",
               "distractors": [
-                "Translates domain names (e.g., www.professormesser.com) into IP addresses",
-                "Reaches out to any available DHCP server on the network to renew the lease",
-                "It inserts ff:fe in the middle of the 48-bit MAC address to create 64 bits"
+                "Provide an IP address → DNS returns the associated hostname; used for verification",
+                "Query a root server directly → bypasses local cache and recursive resolvers",
+                "Send a zone transfer request → DNS returns all records for the entire domain"
               ]
             },
             {
@@ -17070,9 +17070,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1542",
               "distractors": [
-                "Some modern browsers use DoH by default",
-                "The root, represented by a single dot (`.`)",
-                "In the DHCP RFC (Request for Comments)"
+                "Query a DNS server to find which name server is authoritative for a given zone",
+                "Provide a domain name — DNS returns the associated IP address",
+                "Look up the MX record for a domain to find its mail server address"
               ]
             },
             {
@@ -17081,9 +17081,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1543",
               "distractors": [
-                "Yes — just remove the copper transceiver and slide in a fiber transceiver",
-                "Yes — you can use copper or fiber transceivers depending on your needs",
-                "Yes — non-AP devices can also mesh amongst each other in an ad hoc form"
+                "Yes — the DNS server automatically creates PTR records whenever a new A record is added",
+                "Yes — forward and reverse zones are always synchronized as part of the zone transfer process",
+                "No — reverse lookups are handled exclusively by a different protocol (rDNS) on a separate port"
               ]
             },
             {
@@ -17092,9 +17092,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1544",
               "distractors": [
-                "No dynamic routing updates that could be manipulated",
-                "No — spine switches do NOT connect directly to each other",
-                "No security, no authentication — anyone can communicate freely"
+                "No — RFC standards require forward and reverse entries to always match exactly",
+                "No — the DNS server rejects zone files where forward and reverse names do not agree",
+                "No — mismatched records cause resolution failures and are automatically corrected"
               ]
             },
             {
@@ -17103,9 +17103,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1545",
               "distractors": [
-                "No — the same information exists in both and the end user has no idea which answered",
-                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
-                "The full path from host to root in the DNS hierarchy (e.g., www.professormesser.com)"
+                "A DNS server that caches previously resolved queries to speed up subsequent lookups for the same domain",
+                "A DNS server that forwards all queries to an upstream resolver rather than resolving them itself",
+                "A DNS server that handles the initial client request and performs recursive lookups on behalf of the client"
               ]
             },
             {
@@ -17114,9 +17114,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1546",
               "distractors": [
-                "Find other devices on the network, identify routers (via RS/RA), and Duplicate Address Detection (DAD)",
-                "Testing servers (pointing to a test IP instead of production) and overriding incorrect DNS information",
-                "The device runs Duplicate Address Detection (DAD) via NDP to confirm no other device uses that address"
+                "A DNS server that only handles reverse lookups (IP to hostname) and cannot resolve forward queries",
+                "A DNS server that responds to queries but has not been registered with any top-level domain registrar",
+                "A DNS server located outside the organization's network that cannot access internal zone records"
               ]
             },
             {
@@ -17125,9 +17125,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1547",
               "distractors": [
-                "Clients can receive IP addresses from a DHCP server on a completely different subnet",
-                "A multicast message sent by a device asking any routers on the local subnet to respond",
-                "Modified MAC address (inserts ff:fe in the middle of the MAC) or a random 64-bit value"
+                "The server may return records from a different domain if its cache becomes corrupted or poisoned",
+                "Nonauthoritative responses cannot include MX or SRV records — only A and AAAA records are cached",
+                "The TTL on cached records is always extended by the caching server, masking expiration from the client"
               ]
             },
             {
@@ -17136,9 +17136,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1548",
               "distractors": [
-                "As a hierarchy — starting at the root, then TLDs, then domain names, then subdomains/hosts",
-                "Discover, Offer, Request, Acknowledge — the four steps to obtain an IP address automatically",
-                "A router feature that forwards DHCP broadcast traffic to a DHCP server on a different subnet"
+                "Transport Tunnel Length — the maximum number of hops a DNS query can traverse before being dropped",
+                "Transfer Timing Limit — the maximum duration allowed for a zone transfer between DNS servers",
+                "Trusted Token Label — a cryptographic tag that validates the DNS response has not been tampered with"
               ]
             },
             {
@@ -17147,9 +17147,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1549",
               "distractors": [
-                "The IP address of the DHCP server",
-                "ARP (Address Resolution Protocol)",
-                "Neighbor Discovery Protocol (NDP)"
+                "On the client's local DNS resolver settings",
+                "On the recursive DNS server that caches the record",
+                "In the domain registrar's control panel under zone transfer settings"
               ]
             },
             {
@@ -17158,9 +17158,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1550",
               "distractors": [
-                "No — some applications ignore the hosts file and query DNS directly; check application documentation",
-                "Contains all zone information for the DNS domain; all configuration changes and updates happen here",
-                "One scope per subnet — each scope is responsible for providing that particular subnet's IP addresses"
+                "The record is automatically renewed by the caching server without contacting the authoritative server",
+                "The TTL doubles and the cached entry remains until the server is manually flushed",
+                "The DNS server sends a notification to the client that its cached record is no longer valid"
               ]
             },
             {
@@ -17169,9 +17169,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1551",
               "distractors": [
-                "1 Gbps (1000 Mbps)",
-                "1 Gbps (Gigabit Ethernet)",
-                "4 Gbps (4 channels of 1 Gbps SFP)"
+                "300 minutes (5 hours)",
+                "300 milliseconds (0.3 seconds)",
+                "30 seconds (TTL is divided by 10 for caching)"
               ]
             },
             {
@@ -17180,9 +17180,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1552",
               "distractors": [
-                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server",
-                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
-                "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them"
+                "A query where the client contacts each DNS server in the hierarchy directly, one at a time, until it finds the answer",
+                "A query that only checks the local DNS cache and returns an error if the record is not already stored",
+                "A query sent directly to the authoritative server for a domain, bypassing all intermediate resolvers"
               ]
             },
             {
@@ -17191,9 +17191,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1553",
               "distractors": [
-                "The DHCP server reassigns the same IP address the device had on its original visit",
-                "Unsolicited RAs are sent to a different multicast address than solicited ones",
-                "Identical to normal encrypted web traffic — indistinguishable from regular HTTPS"
+                "It contacts each DNS server in the hierarchy itself — root, TLD, then authoritative — gathering referrals at each step",
+                "It sends parallel queries to all known DNS servers simultaneously and uses whichever response arrives first",
+                "It queries the root server directly, which returns the final answer without any additional referrals needed"
               ]
             },
             {
@@ -17202,9 +17202,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1554",
               "distractors": [
-                "A defined pool of addresses and settings on a DHCP server that includes the IP address range, excluded addresses, subnet mask, lease duration, and ...",
-                "1) Identify destination IP in packet 2) Examine routing table for best route 3) If directly connected, send to local subnet 4) If not, forward to n...",
-                "1) Convert mask to decimal 2) Identify interesting octet 3) Calculate magic number (256 − mask) 4) Determine host ranges (multiples of magic number..."
+                "1) Client queries root server directly, 2) Root returns final IP, 3) Client caches result, 4) Client connects to host, 5) TTL expires and cache clears",
+                "1) Client broadcasts DNS request, 2) All local servers respond, 3) Client picks fastest response, 4) Result is cached permanently, 5) No further qu...",
+                "1) Client queries local DNS, 2) Local server checks cache only, 3) If not cached returns NXDOMAIN, 4) Client retries after timeout, 5) Falls back t..."
               ]
             },
             {
@@ -17213,9 +17213,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1555",
               "distractors": [
-                "It can release the IP address back into the pool so other devices can use it",
-                "The device sends a Router Solicitation via NDP to determine the local subnet",
-                "The last 64 bits of the address, generated by the device itself during SLAAC"
+                "The final resolved IP address for the requested domain name",
+                "The cached record from a previous query for the same domain",
+                "The authoritative name server address for the specific second-level domain"
               ]
             },
             {
@@ -17224,9 +17224,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1556",
               "distractors": [
-                "Yes — the forward name and reverse name may differ",
-                "MAC address, reserved IP address, and device name",
-                "All four are sent as broadcasts (255.255.255.255)"
+                "They are forwarded to the root servers again to verify the record has not changed",
+                "They are sent directly to the authoritative server, bypassing the local DNS server entirely",
+                "They fail until the original TTL expires and a fresh lookup is performed"
               ]
             },
             {
@@ -17235,9 +17235,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1557",
               "distractors": [
-                "The IP address, subnet mask, default gateway, DNS settings, plus any additional configurations defined under DHCP Options",
-                "Stateless Address Autoconfiguration — allows an IPv6 device to create its own routable IP address without a DHCP server",
-                "A renewal timer set at 50% of the lease time, at which point the device attempts to renew with the original DHCP server"
+                "DNS servers are limited to a single zone file and cannot handle recursive queries, making them vulnerable to cache overflow attacks",
+                "DNS uses only TCP which makes it susceptible to SYN floods, and responses are limited to 512 bytes forcing truncation of records",
+                "DNS requires static root server entries that expire annually, and zone transfers between servers are always sent uncompressed"
               ]
             },
             {
@@ -17246,9 +17246,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1558",
               "distractors": [
-                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet",
-                "DNSSEC verifies authenticity and integrity of responses (digitally signed); DoT/DoH only encrypt the transport without verifying the source",
-                "A configuration that assigns a fixed IP address to a specific MAC address via the DHCP server, ensuring the device always receives the same IP"
+                "DNS Network Security Extensions — encrypts all DNS queries and responses using AES-256 so no one can read the traffic in transit",
+                "DNS Secure Exchange — a VPN tunnel between DNS client and server that hides both the query and the response from the network",
+                "DNS Security Extensions — replaces UDP-based DNS with TCP-only connections to prevent spoofing through sequence number validation"
               ]
             },
             {
@@ -17257,9 +17257,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1559",
               "distractors": [
-                "Yes — each interface can have a different transceiver and therefore a different media type",
-                "Yes — access switches typically connect to multiple distribution switches, providing alternate paths",
-                "Yes — non-ephemeral for servers and ephemeral for clients is a convention, not a hard rule"
+                "Yes — DNSSEC wraps all queries and responses in TLS, hiding them from network observers",
+                "Yes — DNSSEC uses AES encryption to protect both the query and the response payload",
+                "No — DNSSEC only encrypts responses from authoritative servers, leaving recursive queries visible"
               ]
             },
             {
@@ -17268,9 +17268,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1560",
               "distractors": [
-                "It sends a Router Advertisement (RA) directly back to the device",
-                "All four DORA phases — the relay process repeats for each step",
-                "0.0.0.0 — because the client does not have an IP address yet"
+                "A method of encrypting DNS queries by embedding them inside HTTPS traffic on TCP port 443, hiding DNS from network filters",
+                "A method of authenticating DNS responses using digital signatures to verify the response has not been tampered with",
+                "A method of routing DNS queries through a VPN tunnel on UDP port 500, ensuring privacy between client and resolver"
               ]
             },
             {
@@ -17279,9 +17279,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1561",
               "distractors": [
-                "TCP 1433",
-                "TCP 443",
-                "TCP 3389"
+                "TCP port 443",
+                "TCP port 53",
+                "UDP port 853"
               ]
             },
             {
@@ -17290,9 +17290,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1562",
               "distractors": [
-                "A message from a router providing local subnet information — sent in response to an RS, or unsolicited to all devices on the network",
-                "Didn't configure everything automatically, and could not recognize when an IP address became available after a device left the network",
-                "Additional TCP/IP settings (beyond IP/subnet/gateway) delivered to clients during the DHCP process, identified by numbered option fields"
+                "A method of encrypting DNS traffic using TLS over a dedicated TCP port 853, with a distinct protocol identifier visible to firewalls",
+                "A method of digitally signing DNS responses so the client can verify they came from an authorized server and were not modified",
+                "A method of tunneling DNS queries inside SSH sessions on TCP port 22, requiring key-based authentication between client and resolver"
               ]
             },
             {
@@ -17301,9 +17301,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1563",
               "distractors": [
-                "TCP 1433",
-                "TCP 443",
-                "TCP 3389"
+                "TCP port 853",
+                "TCP port 53",
+                "TCP port 8443"
               ]
             },
             {
@@ -17312,9 +17312,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1564",
               "distractors": [
-                "The DHCP server reassigns the same IP address the device had on its original visit",
-                "Unsolicited RAs are sent to a different multicast address than solicited ones",
-                "It only contacts its local DNS server — the local server handles everything else"
+                "As plaintext DNS queries on port 443 — the domain names are visible but the responses are encrypted",
+                "As a distinct TLS application type — packet inspectors can flag it as DNS-over-HTTPS specifically",
+                "As UDP packets on port 853 — encrypted but identifiable by its unique port assignment"
               ]
             },
             {
@@ -17323,9 +17323,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1565",
               "distractors": [
-                "In the DHCP RFC (Request for Comments)",
-                "A fully routable, unique IPv6 address",
-                "Provide an IP address → DNS returns a name"
+                "Most enterprise VPN clients use DoH by default",
+                "All major operating systems enable DoH in their system resolver by default",
+                "Email clients and FTP applications use DoH by default"
               ]
             },
             {
@@ -17334,9 +17334,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1566",
               "distractors": [
-                "Broadcasts only reach the local subnet — they do not traverse routers — so a DHCP server on a different subnet cannot be reached directly",
-                "IP address range, excluded addresses, subnet mask, lease duration, and optional settings (DNS servers, default gateway, VoIP server, etc.)",
-                "Because the client does not yet have an IP address — the only way the client can see the packet is if it's sent to all devices on the subnet"
+                "DNSSEC prevents DNS cache poisoning by encrypting the full query/response path end-to-end",
+                "DNSSEC hides the queried domain name from on-path observers; DoT/DoH reveal it in plaintext",
+                "DNSSEC provides confidentiality for DNS responses so third parties cannot read the resolved IP addresses"
               ]
             },
             {
@@ -17345,9 +17345,9 @@ const GAME_DATA = {
               "difficulty": 3,
               "id": "3.4.1567",
               "distractors": [
-                "The server picks an address from the pool, assigns it to the device, and associates a lease period with it",
-                "Bootstrap Protocol — an early protocol created to automate IP address configuration, predecessor to DHCP",
-                "Because self-assigned addresses (via SLAAC) could potentially conflict with existing addresses on the network"
+                "They verify the DNS server's identity to prevent connections to spoofed resolvers; DNSSEC only validates the record data itself",
+                "They prevent man-in-the-middle modification of DNS responses; DNSSEC only provides encryption without authentication",
+                "They ensure queries reach the correct authoritative server; DNSSEC only protects the last hop from resolver to client"
               ]
             }
           ]

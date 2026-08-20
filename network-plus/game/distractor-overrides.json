@@ -176,8 +176,8 @@
   ],
   "1.1.36": [
     "Layer 3 (Network) — shows source and destination IP addresses",
-    "Layer 2 (Data Link) — they use MAC addresses to forward frames",
-    "Layer 6 (Presentation)"
+    "Layer 2 (Data Link) — shows source and destination MAC addresses",
+    "Layer 5 (Session) — shows connection establishment and session management"
   ],
   "1.1.37": [
     "Layer 3 (Network) — splitting frames/packets into smaller pieces for networks requiring smaller frame sizes, reassembling on the other side",
@@ -250,9 +250,9 @@
     "IPS operates at Layer 7 for full application analysis, while IDS only inspects at Layers 3 and 4"
   ],
   "1.2.51": [
-    "DHCP exhaustion, duplicate IP addresses, and DNS cache poisoning (any 3)",
+    "Duplex mismatches, MTU black holes, and routing table convergence delays (any 3)",
     "Cable attenuation, crosstalk interference, and fiber optic signal loss (any 3)",
-    "Port scanning, brute-force login attempts, and SQL injection attacks (any 3)"
+    "DHCP scope exhaustion, duplicate IP conflicts, and spanning tree topology changes (any 3)"
   ],
   "1.2.52": [
     "Inspects traffic at the application layer and blocks malicious payloads using signature-based detection and heuristic analysis",
@@ -530,9 +530,9 @@
     "SD-WAN — intelligent path selection routes video traffic over the lowest-latency available link"
   ],
   "1.2.107": [
-    "Diverse network types — LAN to WAN, copper to fiber. May have many different interfaces for different connection types.",
-    "It appears as a single server — users don't know their requests are being distributed across multiple physical servers",
-    "Quality of Service — prioritizes certain applications over others on the network, controlling bandwidth usage and data rates"
+    "It increases internet speed for remote workers by routing traffic through optimized corporate network paths",
+    "It replaces the need for authentication — once connected to the VPN, users can access all resources without logging in",
+    "It provides remote workers with a dedicated physical connection to the corporate office, bypassing the public internet entirely"
   ],
   "1.2.108": [
     "It must store millions of user credentials locally rather than relying on external authentication servers",
@@ -790,9 +790,9 @@
     "Network Frame Verification"
   ],
   "1.3.159": [
-    "To keep different application instances or departments separated while managing each as individual virtual appliances",
-    "Firewall rules assigned to individual Virtual Network Interface Cards (VNICs), providing per-interface granularity",
-    "Cloud provides computing resources (hardware); you install, manage, and upgrade your own software and data on top"
+    "A virtual network interface that connects VMs to physical switches, handling VLAN tagging and traffic isolation between tenants",
+    "A management console that monitors VM performance metrics and generates alerts when resource thresholds are exceeded",
+    "A storage abstraction layer that pools physical disks into shared volumes accessible by multiple physical servers simultaneously"
   ],
   "1.3.160": [
     "It remains physical — virtual servers still require dedicated hardware switches, routers, and firewalls for connectivity",
@@ -825,9 +825,9 @@
     "A gateway that routes traffic between private subnets within the same VPC"
   ],
   "1.3.166": [
-    "Variable-Length Subnet Mask",
-    "Infrastructure as a Service",
-    "Small Form-factor Pluggable"
+    "Network Access Terminal",
+    "Node Authentication Table",
+    "Network Allocation Technology"
   ],
   "1.3.167": [
     "A virtual firewall that filters traffic between subnets within a VPC based on security group rules",
@@ -1735,9 +1735,9 @@
     "More flexible than fiber optics, supports PoE unlike standard coaxial cable"
   ],
   "1.5.348": [
-    "No dynamic routing updates that could be manipulated",
-    "Yes — for coverage across large areas",
-    "No — spine switches do NOT connect directly to each other"
+    "No — half duplex only, requiring CSMA/CD for collision avoidance",
+    "Yes — but only when using active optical transceivers at both ends",
+    "No — it uses time-division multiplexing to alternate between send and receive"
   ],
   "1.5.349": [
     "A fire-rated cable jacket designed to produce less smoke and toxic fumes when burned",
@@ -2055,9 +2055,9 @@
     "Spring-loaded tab — press the release lever and slide out, similar to an RJ45 plug"
   ],
   "1.5.412": [
-    "F-connector (used for cable modem connections)",
-    "F-connector on a coaxial cable",
-    "LC (the \"little connector\")"
+    "A spring-loaded dust cap that covers the fiber tip when disconnected",
+    "A rubber boot crimped around the outer cable jacket",
+    "An epoxy resin coating applied directly to the exposed glass core"
   ],
   "1.5.413": [
     "Multiple Path Optical",
@@ -2595,9 +2595,9 @@
     "All buildings share a flat Layer 2 network with one large switch stack in the main building handling all traffic"
   ],
   "1.6.520": [
-    "We don't know where outbound traffic is going once it leaves the data center, and inbound traffic could come from potentially anywhere",
-    "Greater redundancy and resilience — multiple links and paths at each layer ensure the network stays up if components fail",
-    "Each building has access switches per floor, connected to distribution switches, which connect to the core in a central data center"
+    "A three-tier design with separate core, distribution, and access layers each performing distinct routing and switching functions",
+    "A flat network design where all devices connect to a single switch layer with no hierarchical separation",
+    "A design that merges the access and distribution layers while keeping the core as a dedicated high-speed backbone"
   ],
   "1.6.521": [
     "Three — core, distribution, and access (same as the standard three-tier model)",
@@ -2755,9 +2755,9 @@
     "Every device connects to a single shared cable backbone segment"
   ],
   "1.6.552": [
-    "Core, Distribution, Access",
-    "Point-to-point T1 or T3 connections",
-    "Connecting buildings on a campus"
+    "The entire network segment goes down until the link is restored",
+    "All connected devices must renegotiate their connections from scratch",
+    "The switch disables the failed port and isolates the affected device from the network"
   ],
   "1.6.553": [
     "Redundancy — if one link fails, traffic automatically reroutes through alternate paths",
@@ -3025,9 +3025,9 @@
     "Virtual-Length Service Multiplexing"
   ],
   "1.7.606": [
-    "Multiple routing protocols to share routes between autonomous systems using redistribution",
-    "Automatic assignment of IP addresses to hosts without manual configuration on a central server",
-    "Supernetting of multiple classful networks into a single summarized route for smaller routing tables"
+    "Different subnet sizes within the same classful network — but only in powers of two from the default mask",
+    "Using a single subnet mask across all subnets in an organization to simplify routing table entries",
+    "Borrowing bits only from the host portion of the default mask — always in full-octet increments (/8, /16, /24)"
   ],
   "1.7.607": [
     "Source address | Destination address | Subnet mask",
@@ -3765,9 +3765,9 @@
     "32 (256 − 224 = 32)"
   ],
   "1.7.754": [
-    "Network address + 1",
-    "224–239 (multicast)",
-    "11000000 (128 + 64)"
+    "64 (256 − 192 = 64)",
+    "16 (256 − 240 = 16)",
+    "128 (256 − 128 = 128)"
   ],
   "1.7.755": [
     "128 (256 − 128 = 128)",
@@ -4440,9 +4440,9 @@
     "1) Most specific prefix length 2) Highest routing metric 3) Lowest administrative distance"
   ],
   "2.1.889": [
-    "1) Quick to configure on small networks 2) No overhead (no CPU cycles, no memory usage from dynamic protocols) 3) Common for stub networks 4) Relat...",
-    "Tabletop is discussion-only around a conference table (1–2 days, less costly). Validation test is a full-blown DR site test going through the actua...",
-    "1) Challenging on larger networks (hundreds/thousands of routers) 2) Misconfiguration can create routing loops 3) Routes don't change automatically..."
+    "1) Receive frame 2) Strip Layer 2 header 3) Decrement TTL 4) Recalculate checksum 5) Add new Layer 2 header 6) Forward out the exit interface",
+    "1) Buffer the entire packet 2) Perform NAT translation on source IP 3) Apply ACL rules 4) Encrypt with IPsec 5) Send to destination interface",
+    "1) Read destination MAC 2) Look up MAC in CAM table 3) Forward out the matching port 4) Update MAC aging timer 5) Log the forwarding decision"
   ],
   "2.1.890": [
     "The packet is forwarded to all connected interfaces via broadcast",
@@ -4770,9 +4770,9 @@
     "Two cables connected between two switches — frames loop endlessly with no mechanism at the MAC address level to count how many times a frame has be..."
   ],
   "2.2.955": [
-    "Uninterruptible Power Supply",
-    "Galois Counter Mode Protocol",
-    "Basic Service Set Identifier"
+    "Redundant Switching Trunk Protocol",
+    "Routed Segment Transfer Protocol",
+    "Resilient Spanning Topology Protocol"
   ],
   "2.2.956": [
     "802.1Q",
@@ -5200,9 +5200,9 @@
     "Reduce transmit power to the minimum level to limit signal leakage outside the building"
   ],
   "2.3.1041": [
-    "Wired Equivalent Privacy",
-    "Encryption and integrity",
-    "Wi-Fi Protected Access"
+    "WPA → WEP → WPA2 → WPA3",
+    "WEP → WPA → WPA3 → WPA2",
+    "WPA → WPA2 → WEP → WPA3"
   ],
   "2.3.1042": [
     "Wireless signals travel through walls and can be intercepted from a different building entirely",
@@ -5780,9 +5780,9 @@
     "Because data center power distribution uses top-of-rack PDUs — stacking keeps all devices within cable reach of power"
   ],
   "2.4.1157": [
-    "Connect to the device, manage each interface, and power off/on devices from a remote location",
-    "Medium to large environments with many remote rooms connecting back to a central data center",
-    "Outdoor temperature changes (add load to cooling) and increased system load (creates more heat)"
+    "Temperature regulation through built-in airflow management and integrated cooling fans at each rack unit",
+    "Cable management with structured pathways that eliminate the need for separate patch panels or cable trays",
+    "Power redundancy by housing dual independent UPS systems within the rack enclosure itself"
   ],
   "2.4.1158": [
     "Dedicated in-row cooling units that blow cold air directly into the sealed rack enclosure",
@@ -6070,9 +6070,9 @@
     "EOS means no future security updates ever — a significant security concern; EOL may still receive security patches"
   ],
   "3.1.1215": [
-    "Changes are inevitable — need to know when they occur, plan for them, and inform everyone",
-    "Files, configuration, and everything associated with the VM at that point in time",
-    "Software upgrades on a switch, firewall configuration changes, router table modifications"
+    "Only the running configuration file — hardware and firmware are tracked separately in an asset inventory system",
+    "Only Layer 2 and Layer 3 settings — physical hardware details are excluded from production configurations",
+    "Only the IP addressing scheme and VLAN assignments — software versions are tracked in a separate change log"
   ],
   "3.1.1216": [
     "To comply with licensing requirements that mandate version reporting to the vendor",
@@ -6780,9 +6780,9 @@
     "A polling interval configuration that determines how frequently the manager queries each agent"
   ],
   "3.2.1357": [
-    "Polling: management station → device (request/response on UDP 161). Traps: device → management station (proactive alert on UDP 162)",
-    "A detailed frame-by-frame / packet-by-packet description of traffic flowing across the network, often summarized into simplified views",
-    "Scripts and programs can send commands, make configuration changes, or query information on many devices automatically with one action"
+    "The SNMP agent automatically translates them into standard OIDs before reporting to the management station",
+    "They are registered in a global IANA database that all management stations can query in real time",
+    "The management station uses SNMPv3 encryption to decode proprietary OID values embedded in trap messages"
   ],
   "3.2.1358": [
     "Redirecting a copy of traffic from one switch port to another port connected to a monitoring device",
@@ -7180,9 +7180,9 @@
     "Deny, Override, Reassign, Accept — the four steps for releasing and renewing an expired DHCP lease"
   ],
   "3.4.1437": [
-    "255.255.255.255 — because the client uses the broadcast address as both source and destination",
-    "169.254.x.x — because the client assigns itself an APIPA address before contacting the server",
-    "127.0.0.1 — because the client uses its loopback address until it receives a real assignment"
+    "The server broadcasts all available addresses and lets the client choose one from the list",
+    "The server forwards the request to a DNS server which assigns both a hostname and IP address simultaneously",
+    "The server checks with neighboring DHCP servers to avoid conflicts, then reserves an address without assigning it"
   ],
   "3.4.1438": [
     "0.0.0.0 (default route) — so the message is forwarded to the default gateway and routed to the DHCP server",
@@ -7273,5 +7273,565 @@
     "Client sends: Discover and Acknowledge. Server sends: Offer and Request.",
     "Client sends: Offer and Request. Server sends: Discover and Acknowledge.",
     "Client sends: all four (Discover, Offer, Request, Acknowledge) as broadcast messages."
+  ],
+  "3.4.1456": [
+    "Day 4 (4/8 or 50% of the lease duration)",
+    "Day 6 (6/8 or 75% of the lease duration)",
+    "Day 2 (2/8 or 25% of the lease duration)"
+  ],
+  "3.4.1457": [
+    "The client receives a new IP address and must update its ARP cache and notify connected services",
+    "The lease is extended by half its original duration and the T2 timer is disabled",
+    "The client sends a gratuitous ARP and the server removes the reservation from its pool"
+  ],
+  "3.4.1458": [
+    "The client's lease has completely expired and the device must start the full DORA process again",
+    "The client has moved to a new subnet and the current IP address is no longer valid",
+    "The DHCP server sends a NACK message indicating the current lease is no longer available"
+  ],
+  "3.4.1459": [
+    "Sends a unicast renewal request directly to the original DHCP server that issued the lease",
+    "Releases the current IP address and begins the full DORA process from scratch",
+    "Switches to an APIPA address (169.254.x.x) while continuing to search for a DHCP server"
+  ],
+  "3.4.1460": [
+    "The four-step process (Discover, Offer, Request, Acknowledge) that clients use to negotiate an IP address with the server",
+    "Configurable lease duration settings that determine how long a client can keep its assigned IP address before renewal",
+    "The list of excluded IP addresses within a scope that are reserved for static assignment and not handed out dynamically"
+  ],
+  "3.4.1461": [
+    "128",
+    "64",
+    "512"
+  ],
+  "3.4.1462": [
+    "In the vendor's proprietary configuration guide for each DHCP server product",
+    "In the IEEE 802.3 standard alongside Ethernet frame specifications",
+    "In the operating system's local registry or configuration database"
+  ],
+  "3.4.1463": [
+    "Configuration parameters",
+    "Host extensions",
+    "Bootstrap fields"
+  ],
+  "3.4.1464": [
+    "DNS server address",
+    "Default gateway IP address",
+    "TFTP server name"
+  ],
+  "3.4.1465": [
+    "DNS server address",
+    "Default gateway",
+    "NTP server address"
+  ],
+  "3.4.1466": [
+    "That the client device firmware is new enough to interpret the option field in the DHCP response",
+    "That the network switch supports the VLAN tag embedded in the DHCP option header",
+    "That all devices on the subnet are using the same DHCP option version number"
+  ],
+  "3.4.1467": [
+    "In the DNS Manager console under Conditional Forwarders for each zone",
+    "Under Network Adapter Properties in the TCP/IPv4 Advanced Settings dialog",
+    "In Group Policy under Computer Configuration > Network Settings > DHCP Options"
+  ],
+  "3.4.1468": [
+    "Only an IP address and subnet mask — additional settings like DNS and gateway must be manually configured on the client",
+    "A temporary 169.254.x.x link-local address that must be renewed before the client can access the internet",
+    "Only the default gateway and DNS server addresses — the IP address and subnet mask are assigned separately by the router"
+  ],
+  "3.4.1469": [
+    "Use RARP to broadcast a request and wait for a server to reply with an available address",
+    "Assign addresses alphabetically by hostname from a shared spreadsheet updated weekly",
+    "Connect each device to a dedicated port on the router pre-configured with a fixed address"
+  ],
+  "3.4.1470": [
+    "Boot Order Transfer Protocol — a method for PXE clients to download OS images over the network during startup",
+    "Basic Object Orientation Transport Protocol — a Layer 4 protocol that preceded TCP for connection-oriented transfers",
+    "Broadcast Optimization Token Protocol — a mechanism to reduce broadcast traffic on large Layer 2 networks"
+  ],
+  "3.4.1471": [
+    "Required manual subnet mask assignment on each client, and could not provide DNS server information automatically",
+    "Only supported wired connections, and could not assign addresses to devices connecting over wireless networks",
+    "Limited to assigning Class C addresses only, and could not handle networks with more than 254 devices"
+  ],
+  "3.4.1472": [
+    "Domain Host Control Protocol — manages DNS records and automatically updates hostname-to-IP mappings for all network devices",
+    "Distributed Host Configuration Platform — a peer-to-peer system where devices negotiate IP addresses directly with each other",
+    "Dynamic Hostname Configuration Protocol — assigns and manages hostnames for devices joining the network based on their MAC address"
+  ],
+  "3.4.1473": [
+    "Deny, Offer, Renew, Assign — the four steps for a server to reject or grant lease extensions",
+    "Distribute, Obtain, Release, Allocate — the process of returning and reassigning IP addresses",
+    "Detect, Organize, Respond, Authenticate — the four steps for verifying client identity before lease assignment"
+  ],
+  "3.4.1474": [
+    "255.255.255.255 — because the client broadcasts its own MAC address as a source identifier",
+    "127.0.0.1 — because the client uses its loopback as a placeholder until it receives a real address",
+    "169.254.x.x — because the client auto-assigns an APIPA address before contacting the server"
+  ],
+  "3.4.1475": [
+    "0.0.0.0 (unspecified) — so the server knows the client has no current address assignment",
+    "192.168.1.1 (default gateway) — so the router can forward the request to the correct DHCP server",
+    "224.0.0.1 (multicast) — so only DHCP servers listening on that group address will respond"
+  ],
+  "3.4.1476": [
+    "UDP 67",
+    "UDP 546",
+    "UDP 53"
+  ],
+  "3.4.1477": [
+    "UDP 68",
+    "UDP 53",
+    "UDP 546"
+  ],
+  "3.4.1478": [
+    "Because broadcasting allows all DHCP servers on the subnet to see which server was chosen by the client",
+    "Because the DHCP standard requires all messages in the DORA process to use multicast addressing",
+    "Because the server does not yet know the client's MAC address until the Request phase"
+  ],
+  "3.4.1479": [
+    "The servers negotiate among themselves and only the one with the lowest IP sends an offer to the client",
+    "The client's request is rejected until all but one server drops out of the election process",
+    "Only the server with the longest lease time is allowed to respond to the client's Discover message"
+  ],
+  "3.4.1480": [
+    "Sends a broadcast DHCP Discover message to locate available DHCP servers on the network",
+    "Begins using the IP address immediately and sends an ARP probe to check for conflicts",
+    "Contacts the server directly via unicast to renew its existing lease before it expires"
+  ],
+  "3.4.1481": [
+    "Yes — the client uses the offered IP address as its source since the server already allocated it",
+    "Yes — the client uses its previously cached address from the last successful lease",
+    "Partially — the client uses 169.254.x.x as a temporary source until the Acknowledge confirms the address"
+  ],
+  "3.4.1482": [
+    "The client sends a unicast confirmation back to the server to verify the lease",
+    "The client broadcasts its new IP to all other devices on the subnet to announce its presence",
+    "The client must restart its network interface before the new settings take effect"
+  ],
+  "3.4.1483": [
+    "Discover and Offer are broadcasts; Request and Acknowledge are unicasts",
+    "Only Discover is broadcast; Offer, Request, and Acknowledge are unicasts",
+    "Discover and Request are broadcasts; Offer and Acknowledge are unicasts to the client's MAC"
+  ],
+  "3.4.1484": [
+    "Broadcasts consume excessive bandwidth on large subnets — networks with more than 254 hosts experience DHCP storms that degrade performance",
+    "Broadcasts are dropped by switches in different VLANs — so each VLAN requires its own dedicated physical DHCP server",
+    "Broadcasts are limited to a single collision domain — hubs forward them but switches filter them at each port"
+  ],
+  "3.4.1485": [
+    "Broadcasts consume too much bandwidth on high-speed backbone links, causing congestion for production traffic",
+    "Broadcast-based DHCP only supports a single subnet per server, preventing address assignment to multiple VLANs",
+    "Broadcasts are blocked by firewalls, so clients in secure zones cannot receive any DHCP offers from any server"
+  ],
+  "3.4.1486": [
+    "A protocol that automatically distributes IP addresses to devices on the same subnet as the DHCP server",
+    "A security feature that validates DHCP messages to prevent rogue servers from assigning addresses",
+    "A backup DHCP server that takes over address assignment when the primary server fails"
+  ],
+  "3.4.1487": [
+    "The MAC address of the DHCP server",
+    "The VLAN ID of the client subnet",
+    "The lease duration for client addresses"
+  ],
+  "3.4.1488": [
+    "It encapsulates the broadcast inside a GRE tunnel to the DHCP server, preserving the original source and destination addresses",
+    "It floods the DHCP Discover on all interfaces simultaneously, allowing the server to respond directly to the client's MAC address",
+    "It caches a pool of pre-assigned addresses locally and hands one to the client without contacting the DHCP server at all"
+  ],
+  "3.4.1489": [
+    "The server sends a broadcast response that all routers in the path forward hop-by-hop until it reaches the client's subnet",
+    "The server encapsulates the response in a GRE tunnel directly to the client's MAC address, bypassing the relay agent",
+    "The server responds directly to the client's IP address using the giaddr field as the next-hop gateway"
+  ],
+  "3.4.1490": [
+    "Only the Discover and Request steps — the Offer and Acknowledge are sent directly to the client's MAC",
+    "Only the Discover step — once the server knows the client's address, it communicates directly",
+    "Only the first three phases (Discover, Offer, Request) — the final Acknowledge is sent unicast to the client"
+  ],
+  "3.4.1491": [
+    "Multiple DHCP servers can share a single address pool without conflicting lease assignments",
+    "Clients can request specific IP addresses by hostname rather than relying on pool assignments",
+    "DHCP servers can assign addresses from overlapping scopes to devices on the same subnet"
+  ],
+  "3.4.1492": [
+    "Client sends: Discover and Acknowledge. Server sends: Offer and Request.",
+    "Client sends: Discover, Request, and Acknowledge. Server sends: Offer only.",
+    "Client sends: Request and Acknowledge. Server sends: Discover and Offer."
+  ],
+  "3.4.1493": [
+    "It eliminates the need for any server infrastructure — all IPv6 address management is handled entirely by the routers",
+    "It uses a completely different four-step process — Solicit, Reply, Confirm, Release — with no Offer or Acknowledge phase",
+    "It requires no administrator involvement — DHCPv6 servers automatically discover available address ranges from the network prefix"
+  ],
+  "3.4.1494": [
+    "A DHCPv6 mode where the server assigns addresses but does not track which devices hold which leases",
+    "A method where routers assign specific IPv6 addresses to each device based on their MAC address registration",
+    "An addressing scheme where IPv6 devices receive temporary addresses that change every 24 hours for privacy"
+  ],
+  "3.4.1495": [
+    "No broadcast addresses, no ARP requests, and no subnet mask configuration",
+    "No DNS servers, no default gateway assignment, and no network prefix distribution",
+    "No manual IP entry, no duplicate address conflicts, and no MAC address tables"
+  ],
+  "3.4.1496": [
+    "Because the DHCPv6 server handles address expiration separately through periodic renewals",
+    "Because IPv6 has such a large address space that reclaiming addresses is unnecessary",
+    "Because the router revokes the prefix via Router Advertisement when the address must change"
+  ],
+  "3.4.1497": [
+    "A Layer 2 protocol that maps IPv4 addresses to MAC addresses using broadcast requests on the local network segment",
+    "A routing protocol that discovers neighboring routers and exchanges link-state information to build a network topology map",
+    "A switch protocol that detects directly connected devices and shares information about device capabilities and VLAN assignments"
+  ],
+  "3.4.1498": [
+    "ICMP (Internet Control Message Protocol)",
+    "IGMP (Internet Group Management Protocol)",
+    "RARP (Reverse Address Resolution Protocol)"
+  ],
+  "3.4.1499": [
+    "NDP uses smaller packet headers than ARP, reducing bandwidth consumption on the network",
+    "NDP caches entries permanently while ARP must re-query periodically, reducing repeat traffic",
+    "NDP operates at Layer 2 directly on the switch while ARP requires Layer 3 router processing"
+  ],
+  "3.4.1500": [
+    "Assign IPv6 addresses via DHCPv6, resolve hostnames to addresses, and manage multicast group memberships",
+    "Encrypt neighbor communications, authenticate routers, and detect rogue DHCP servers on the network",
+    "Map IPv6 addresses to MAC addresses, perform traceroute at Layer 2, and monitor link-state changes"
+  ],
+  "3.4.1501": [
+    "A unicast reply from a neighbor confirming its Layer 2 (MAC) address in response to a Neighbor Solicitation",
+    "A periodic keepalive message sent between routers to verify that adjacency is still active on the link",
+    "A broadcast message sent by a device requesting an IPv6 address assignment from any available DHCPv6 server"
+  ],
+  "3.4.1502": [
+    "It assigns an IPv6 address from its local pool and sends a unicast confirmation to the device",
+    "It forwards the solicitation to a DHCPv6 server, which then responds to the device directly",
+    "It sends a Neighbor Advertisement containing the full 128-bit address for the device to use"
+  ],
+  "3.4.1503": [
+    "A unicast message sent by a device to verify that a specific IPv6 address is not already in use on the local network",
+    "A request from a client to a DHCPv6 server asking for a full IPv6 address assignment including prefix and gateway",
+    "A multicast message sent by a device to resolve an IPv6 address to a MAC address, similar to an ARP request in IPv4"
+  ],
+  "3.4.1504": [
+    "A Router Advertisement sent only in response to a device's Router Solicitation message",
+    "A Neighbor Solicitation sent by a device to verify whether a specific IPv6 address is already in use",
+    "A DHCPv6 Advertise message sent by a server to all clients when their lease time is about to expire"
+  ],
+  "3.4.1505": [
+    "Unsolicited RAs are sent as unicast directly to each device, while solicited RAs use a multicast group",
+    "Unsolicited RAs are sent only to link-local addresses, while solicited RAs are sent to global unicast addresses",
+    "Unsolicited RAs use broadcast to reach all devices, while solicited RAs use the requesting device's unicast address"
+  ],
+  "3.4.1506": [
+    "MAC address of the gateway, link MTU, VLAN ID, and authentication credentials for the network",
+    "Default gateway IP, lease duration, NTP server address, and DHCP server identifier",
+    "Interface speed, duplex setting, IPv4-mapped address, and SSID of the wireless network"
+  ],
+  "3.4.1507": [
+    "Secure Link-local Address Assignment Control — a method for authenticating IPv6 addresses before they join the network",
+    "Stateful Address Autoconfiguration — a DHCPv6 mode where the server assigns and tracks all IPv6 addresses centrally",
+    "Subnet-Level Address Aggregation and Classification — a technique for summarizing IPv6 routes at the subnet boundary"
+  ],
+  "3.4.1508": [
+    "The device generates a random 128-bit address and immediately begins using it on the network",
+    "The device broadcasts a DHCPv6 Solicit message to locate available address servers on the subnet",
+    "The device queries the local DNS server to determine which IPv6 prefix is assigned to the subnet"
+  ],
+  "3.4.1509": [
+    "A full 128-bit IPv6 address with both the prefix and interface identifier already assigned",
+    "A DHCPv6 Offer containing the IPv6 address, default gateway, and DNS server information",
+    "An ICMPv6 Redirect message containing the nearest DNS server address and lease duration"
+  ],
+  "3.4.1510": [
+    "48 bits",
+    "128 bits",
+    "32 bits"
+  ],
+  "3.4.1511": [
+    "The first 64 bits of the address, assigned by the router via Router Advertisement",
+    "A 48-bit identifier derived from the device's MAC address without modification",
+    "The first 48 bits of the address that identify the global routing prefix assigned by the ISP"
+  ],
+  "3.4.1512": [
+    "DHCPv6 server assignment (server picks the full 64-bit ID) or manual static configuration by the administrator",
+    "Hash of the device hostname (SHA-256 truncated to 64 bits) or the device serial number encoded in hexadecimal",
+    "Router-assigned value (included in the Router Advertisement) or a sequentially incremented counter starting from 1"
+  ],
+  "3.4.1513": [
+    "It pads the 48-bit MAC address with 16 trailing zeros to reach 64 bits",
+    "It hashes the 48-bit MAC address using SHA-256 and truncates the result to 64 bits",
+    "It duplicates the last 16 bits of the MAC address and appends them to create 64 bits"
+  ],
+  "3.4.1514": [
+    "The device sends a Router Solicitation to confirm the prefix is still valid on the network",
+    "The device registers its new address with the local DHCPv6 server for record-keeping",
+    "The device broadcasts a gratuitous ARP to announce its new IPv6 address to all neighbors"
+  ],
+  "3.4.1515": [
+    "A link-local address only usable within the local subnet, requiring DHCPv6 for external routing",
+    "A temporary IPv6 address that expires after 30 seconds unless confirmed by a DHCP server",
+    "A globally unique MAC-based identifier that still requires a router to assign the network prefix separately"
+  ],
+  "3.4.1516": [
+    "1) Send DHCPv6 Solicit, 2) Receive DHCPv6 Advertise with prefix, 3) Send DHCPv6 Request, 4) Receive DHCPv6 Reply with full address, 5) Verify with DAD",
+    "1) Receive RA with full 128-bit address, 2) Perform DAD, 3) Accept or reject address, 4) Send confirmation to router, 5) Begin using address",
+    "1) Generate interface ID from MAC, 2) Send Router Solicitation, 3) Receive prefix from RA, 4) Combine prefix and ID, 5) Register address with router"
+  ],
+  "3.4.1517": [
+    "A router feature that prevents two DHCP servers from issuing the same IPv6 address on the same subnet",
+    "A switch mechanism that blocks a port if it detects the same MAC address on multiple interfaces",
+    "A DNS validation step that ensures no two hostnames resolve to the same IPv6 address in a zone"
+  ],
+  "3.4.1518": [
+    "They encrypt DNS traffic so queries cannot be seen by anyone monitoring; DNSSEC leaves traffic in the clear",
+    "Enterprise networks want redundant or centralized DHCP servers, but broadcasts don't cross routers to reach them",
+    "The server picks an address from the pool, assigns it to the device, and associates a lease period with it"
+  ],
+  "3.4.1519": [
+    "DHCPv6 (Dynamic Host Configuration Protocol for IPv6)",
+    "ICMPv4 (Internet Control Message Protocol version 4)",
+    "SLAAC (Stateless Address Autoconfiguration)"
+  ],
+  "3.4.1520": [
+    "IPv4 supports autoconfiguration via APIPA for both local and routable addresses; IPv6 requires DHCPv6 for all address types",
+    "IPv4 uses ARP to self-assign an address from the local pool; IPv6 requires router permission before generating any address",
+    "IPv4 devices can negotiate addresses directly with peers via link-local broadcast; IPv6 must always contact a central server first"
+  ],
+  "3.4.1521": [
+    "Assigns IP addresses dynamically to devices when they connect to the network",
+    "Encrypts web traffic between a client and server to prevent eavesdropping",
+    "Routes packets between different networks using the shortest available path"
+  ],
+  "3.4.1522": [
+    "As a flat database — all records stored in a single table indexed by domain name",
+    "As a mesh — every DNS server holds a full copy and synchronizes with all others",
+    "As a ring — each server holds one zone and passes queries clockwise to the next server"
+  ],
+  "3.4.1523": [
+    "The top-level domains (TLDs) such as .com, .org, and .net",
+    "The authoritative name servers that hold zone files for each domain",
+    "The ISP's recursive resolver, which handles all queries for its customers"
+  ],
+  "3.4.1524": [
+    "The authoritative name servers that store the actual DNS records (A, AAAA, MX) for a specific domain and respond to queries",
+    "The root DNS servers at the very top of the hierarchy that direct queries to the appropriate regional DNS clusters",
+    "The fully qualified domain names (FQDNs) that include every label from host to root, such as www.example.com."
+  ],
+  "3.4.1525": [
+    ".us, .uk, .de",
+    ".edu.au, .co.uk, .gov.us",
+    ".local, .internal, .lan"
+  ],
+  "3.4.1526": [
+    ".com (Commercial), .org (Organization), .net (Network)",
+    ".edu (Education), .gov (Government), .mil (Military)",
+    ".info (Information), .biz (Business), .name (Personal)"
+  ],
+  "3.4.1527": [
+    "The top-level domain portion of a URL that identifies the country or category (e.g., .com, .org, .uk)",
+    "A shortened alias for an IP address stored in the local hosts file for quick lookups",
+    "The authoritative DNS server's hostname that holds the zone records for a domain"
+  ],
+  "3.4.1528": [
+    "Root → Authoritative Servers → Recursive Resolvers → Client Cache",
+    "Registrar → Nameserver → Zone File → Resource Record",
+    "Primary DNS → Secondary DNS → Caching DNS → Local Hosts File"
+  ],
+  "3.4.1529": [
+    "7 server clusters, one for each continent",
+    "26 server clusters, one for each letter of the alphabet (A through Z)",
+    "53 server clusters, matching the DNS port number"
+  ],
+  "3.4.1530": [
+    "The individual host records (A and AAAA) for all registered domains on the internet",
+    "The MX records that route email to the correct mail servers worldwide",
+    "The cached responses from recursive resolvers across all ISP networks"
+  ],
+  "3.4.1531": [
+    "Caches frequently requested records to reduce query time; does not store any authoritative zone data",
+    "Forwards all client queries to the root servers; stores no records locally",
+    "Holds a read-only copy of zone data received from another server; cannot accept direct changes"
+  ],
+  "3.4.1532": [
+    "Handles all recursive queries while the primary server only processes iterative requests",
+    "Stores only cached records from external lookups and cannot serve authoritative zone data",
+    "Automatically becomes the primary server if the original primary goes offline permanently"
+  ],
+  "3.4.1533": [
+    "It queries root servers independently and builds its own zone database from the responses",
+    "It downloads zone files directly from a shared network storage location configured by the administrator",
+    "It receives updates from clients who report their DNS records via dynamic registration"
+  ],
+  "3.4.1534": [
+    "Yes — responses from secondary servers include a flag indicating they are non-authoritative copies",
+    "Yes — secondary servers add extra latency that is visible in the DNS response time",
+    "No — but administrators can identify which server responded by examining the TTL values returned"
+  ],
+  "3.4.1535": [
+    "Querying the nearest recursive DNS server on the local subnet for name-to-IP mappings",
+    "Using mDNS to broadcast name queries to all devices on the same network segment",
+    "Checking the ARP cache for recently resolved hostnames before sending a DNS request"
+  ],
+  "3.4.1536": [
+    "Storing authoritative DNS zone records locally and providing name resolution when the DNS server is offline",
+    "Configuring DHCP reservations for local devices and mapping MAC addresses to static IP assignments",
+    "Defining DNS forwarder addresses for the local resolver and specifying which upstream servers to query first"
+  ],
+  "3.4.1537": [
+    "windows/system32/config/hosts",
+    "windows/system/network/hosts",
+    "windows/system32/dns/etc/hosts"
+  ],
+  "3.4.1538": [
+    "An XML configuration file with DNS record entries and TTL values",
+    "A binary database file compiled from zone records by the operating system",
+    "A JSON file containing hostname-to-IP mappings with optional priority weights"
+  ],
+  "3.4.1539": [
+    "It requires administrator/root privileges because it is owned by the system account",
+    "The file is encrypted by the OS and must be decrypted before any modifications can be saved",
+    "The DNS client service locks the file while running and must be stopped before editing"
+  ],
+  "3.4.1540": [
+    "Yes — the hosts file is always checked by every application before any DNS query is sent",
+    "No — the hosts file is only used on Linux systems; Windows applications always query DNS directly",
+    "Yes — the operating system forces all name resolution through the hosts file first regardless of application"
+  ],
+  "3.4.1541": [
+    "Provide an IP address → DNS returns the associated hostname; used for verification",
+    "Query a root server directly → bypasses local cache and recursive resolvers",
+    "Send a zone transfer request → DNS returns all records for the entire domain"
+  ],
+  "3.4.1542": [
+    "Query a DNS server to find which name server is authoritative for a given zone",
+    "Provide a domain name — DNS returns the associated IP address",
+    "Look up the MX record for a domain to find its mail server address"
+  ],
+  "3.4.1543": [
+    "Yes — the DNS server automatically creates PTR records whenever a new A record is added",
+    "Yes — forward and reverse zones are always synchronized as part of the zone transfer process",
+    "No — reverse lookups are handled exclusively by a different protocol (rDNS) on a separate port"
+  ],
+  "3.4.1544": [
+    "No — RFC standards require forward and reverse entries to always match exactly",
+    "No — the DNS server rejects zone files where forward and reverse names do not agree",
+    "No — mismatched records cause resolution failures and are automatically corrected"
+  ],
+  "3.4.1545": [
+    "A DNS server that caches previously resolved queries to speed up subsequent lookups for the same domain",
+    "A DNS server that forwards all queries to an upstream resolver rather than resolving them itself",
+    "A DNS server that handles the initial client request and performs recursive lookups on behalf of the client"
+  ],
+  "3.4.1546": [
+    "A DNS server that only handles reverse lookups (IP to hostname) and cannot resolve forward queries",
+    "A DNS server that responds to queries but has not been registered with any top-level domain registrar",
+    "A DNS server located outside the organization's network that cannot access internal zone records"
+  ],
+  "3.4.1547": [
+    "The server may return records from a different domain if its cache becomes corrupted or poisoned",
+    "Nonauthoritative responses cannot include MX or SRV records — only A and AAAA records are cached",
+    "The TTL on cached records is always extended by the caching server, masking expiration from the client"
+  ],
+  "3.4.1548": [
+    "Transport Tunnel Length — the maximum number of hops a DNS query can traverse before being dropped",
+    "Transfer Timing Limit — the maximum duration allowed for a zone transfer between DNS servers",
+    "Trusted Token Label — a cryptographic tag that validates the DNS response has not been tampered with"
+  ],
+  "3.4.1549": [
+    "On the client's local DNS resolver settings",
+    "On the recursive DNS server that caches the record",
+    "In the domain registrar's control panel under zone transfer settings"
+  ],
+  "3.4.1550": [
+    "The record is automatically renewed by the caching server without contacting the authoritative server",
+    "The TTL doubles and the cached entry remains until the server is manually flushed",
+    "The DNS server sends a notification to the client that its cached record is no longer valid"
+  ],
+  "3.4.1551": [
+    "300 minutes (5 hours)",
+    "300 milliseconds (0.3 seconds)",
+    "30 seconds (TTL is divided by 10 for caching)"
+  ],
+  "3.4.1552": [
+    "A query where the client contacts each DNS server in the hierarchy directly, one at a time, until it finds the answer",
+    "A query that only checks the local DNS cache and returns an error if the record is not already stored",
+    "A query sent directly to the authoritative server for a domain, bypassing all intermediate resolvers"
+  ],
+  "3.4.1553": [
+    "It contacts each DNS server in the hierarchy itself — root, TLD, then authoritative — gathering referrals at each step",
+    "It sends parallel queries to all known DNS servers simultaneously and uses whichever response arrives first",
+    "It queries the root server directly, which returns the final answer without any additional referrals needed"
+  ],
+  "3.4.1554": [
+    "1) Client queries root server directly, 2) Root returns final IP, 3) Client caches result, 4) Client connects to host, 5) TTL expires and cache clears",
+    "1) Client broadcasts DNS request, 2) All local servers respond, 3) Client picks fastest response, 4) Result is cached permanently, 5) No further qu...",
+    "1) Client queries local DNS, 2) Local server checks cache only, 3) If not cached returns NXDOMAIN, 4) Client retries after timeout, 5) Falls back t..."
+  ],
+  "3.4.1555": [
+    "The final resolved IP address for the requested domain name",
+    "The cached record from a previous query for the same domain",
+    "The authoritative name server address for the specific second-level domain"
+  ],
+  "3.4.1556": [
+    "They are forwarded to the root servers again to verify the record has not changed",
+    "They are sent directly to the authoritative server, bypassing the local DNS server entirely",
+    "They fail until the original TTL expires and a fresh lookup is performed"
+  ],
+  "3.4.1557": [
+    "DNS servers are limited to a single zone file and cannot handle recursive queries, making them vulnerable to cache overflow attacks",
+    "DNS uses only TCP which makes it susceptible to SYN floods, and responses are limited to 512 bytes forcing truncation of records",
+    "DNS requires static root server entries that expire annually, and zone transfers between servers are always sent uncompressed"
+  ],
+  "3.4.1558": [
+    "DNS Network Security Extensions — encrypts all DNS queries and responses using AES-256 so no one can read the traffic in transit",
+    "DNS Secure Exchange — a VPN tunnel between DNS client and server that hides both the query and the response from the network",
+    "DNS Security Extensions — replaces UDP-based DNS with TCP-only connections to prevent spoofing through sequence number validation"
+  ],
+  "3.4.1559": [
+    "Yes — DNSSEC wraps all queries and responses in TLS, hiding them from network observers",
+    "Yes — DNSSEC uses AES encryption to protect both the query and the response payload",
+    "No — DNSSEC only encrypts responses from authoritative servers, leaving recursive queries visible"
+  ],
+  "3.4.1560": [
+    "A method of encrypting DNS queries by embedding them inside HTTPS traffic on TCP port 443, hiding DNS from network filters",
+    "A method of authenticating DNS responses using digital signatures to verify the response has not been tampered with",
+    "A method of routing DNS queries through a VPN tunnel on UDP port 500, ensuring privacy between client and resolver"
+  ],
+  "3.4.1561": [
+    "TCP port 443",
+    "TCP port 53",
+    "UDP port 853"
+  ],
+  "3.4.1562": [
+    "A method of encrypting DNS traffic using TLS over a dedicated TCP port 853, with a distinct protocol identifier visible to firewalls",
+    "A method of digitally signing DNS responses so the client can verify they came from an authorized server and were not modified",
+    "A method of tunneling DNS queries inside SSH sessions on TCP port 22, requiring key-based authentication between client and resolver"
+  ],
+  "3.4.1563": [
+    "TCP port 853",
+    "TCP port 53",
+    "TCP port 8443"
+  ],
+  "3.4.1564": [
+    "As plaintext DNS queries on port 443 — the domain names are visible but the responses are encrypted",
+    "As a distinct TLS application type — packet inspectors can flag it as DNS-over-HTTPS specifically",
+    "As UDP packets on port 853 — encrypted but identifiable by its unique port assignment"
+  ],
+  "3.4.1565": [
+    "Most enterprise VPN clients use DoH by default",
+    "All major operating systems enable DoH in their system resolver by default",
+    "Email clients and FTP applications use DoH by default"
+  ],
+  "3.4.1566": [
+    "DNSSEC prevents DNS cache poisoning by encrypting the full query/response path end-to-end",
+    "DNSSEC hides the queried domain name from on-path observers; DoT/DoH reveal it in plaintext",
+    "DNSSEC provides confidentiality for DNS responses so third parties cannot read the resolved IP addresses"
+  ],
+  "3.4.1567": [
+    "They verify the DNS server's identity to prevent connections to spoofed resolvers; DNSSEC only validates the record data itself",
+    "They prevent man-in-the-middle modification of DNS responses; DNSSEC only provides encryption without authentication",
+    "They ensure queries reach the correct authoritative server; DNSSEC only protects the last hop from resolver to client"
   ]
 }
