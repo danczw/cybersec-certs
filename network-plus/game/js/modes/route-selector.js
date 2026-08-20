@@ -9,9 +9,8 @@ const RouteSelector = (() => {
 
   const DIFFICULTIES = [
     { level: 1, name: 'Longest Prefix Match' },
-    { level: 2, name: 'Administrative Distance' },
-    { level: 3, name: 'Combined Selection' },
-    { level: 4, name: 'Label the Entry' },
+    { level: 2, name: 'Route Selection' },
+    { level: 3, name: 'Label the Entry' },
   ];
 
   const AD_REFERENCE = `
@@ -118,99 +117,77 @@ const RouteSelector = (() => {
     return { routes: UI.shuffleArray(allRoutes), destination: dest, reason: `Longest matching prefix: /${bestRoute.prefix} (non-matching routes ignored regardless of prefix length)` };
   }
 
-  function generateADProblem() {
-    const variant = randInt(1, 4);
+  function generateRouteSelectionProblem() {
+    const variant = randInt(1, 5);
     const a = randInt(10, 192);
     const b = randInt(1, 254);
     const c = randInt(1, 254);
     const d = randInt(1, 254);
     const dest = `${a}.${b}.${c}.${d}`;
-    const prefix = 24;
-    const network = `${a}.${b}.${c}.0`;
     const otherC = c === 254 ? c - 1 : c + 1;
+    const otherB = b === 254 ? b - 1 : b + 1;
 
     const routes = [];
 
     if (variant === 1) {
-      // Pure AD — all match, different sources
+      // Pure AD — all match same prefix, lowest AD wins
+      const network = `${a}.${b}.${c}.0`;
       const codes = Object.keys(ROUTE_CODES).sort(() => Math.random() - 0.5).slice(0, 4);
       codes.forEach(code => {
-        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+        routes.push({ code, network, prefix: 24, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
       });
-      const bestIdx = routes.reduce((b, r, i) => r.ad < routes[b].ad ? i : b, 0);
+      const bestIdx = routes.reduce((bi, r, i) => r.ad < routes[bi].ad ? i : bi, 0);
       routes[bestIdx].best = true;
-      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Lowest AD: ${routes[bestIdx].ad} (${ROUTE_CODES[routes[bestIdx].code]})` };
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `All match same prefix — lowest AD wins: ${routes[bestIdx].ad} (${ROUTE_CODES[routes[bestIdx].code]})` };
     }
 
     if (variant === 2) {
-      // Non-matching trap — lowest AD doesn't match destination
-      const codes = Object.keys(ROUTE_CODES).filter(c => c !== 'C').sort(() => Math.random() - 0.5).slice(0, 3);
+      // Non-matching trap — lowest AD route doesn't match destination
+      const network = `${a}.${b}.${c}.0`;
+      const codes = Object.keys(ROUTE_CODES).filter(x => x !== 'C').sort(() => Math.random() - 0.5).slice(0, 3);
       codes.forEach(code => {
-        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+        routes.push({ code, network, prefix: 24, ad: AD_VALUES[code], metric: randInt(1, 10), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
       });
-      routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix: 24, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
       const matching = routes.filter(r => r.network === network);
-      const bestIdx = matching.reduce((b, r, i) => r.ad < matching[b].ad ? i : b, 0);
+      const bestIdx = matching.reduce((bi, r, i) => r.ad < matching[bi].ad ? i : bi, 0);
       matching[bestIdx].best = true;
-      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Lowest AD among matching routes: ${matching[bestIdx].ad} (${ROUTE_CODES[matching[bestIdx].code]}) — directly connected route to .${otherC}.0 doesn't match` };
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Directly connected route to .${otherC}.0 doesn't match → lowest AD among matching: ${matching[bestIdx].ad}` };
     }
 
     if (variant === 3) {
       // Same AD, metric decides
+      const network = `${a}.${b}.${c}.0`;
       const code = randChoice(['O', 'R', 'D']);
       const metrics = [randInt(1, 5), randInt(6, 15), randInt(16, 30)];
       metrics.forEach(m => {
-        routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: m, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+        routes.push({ code, network, prefix: 24, ad: AD_VALUES[code], metric: m, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
       });
-      const bestIdx = routes.reduce((b, r, i) => r.metric < routes[b].metric ? i : b, 0);
+      const bestIdx = routes.reduce((bi, r, i) => r.metric < routes[bi].metric ? i : bi, 0);
       routes[bestIdx].best = true;
       return { routes: UI.shuffleArray(routes), destination: dest, reason: `Same AD (${AD_VALUES[code]}) — lowest metric wins: ${routes[bestIdx].metric}` };
     }
 
-    // Variant 4: Combined — trap + metric tiebreaker
+    if (variant === 4) {
+      // Prefix + AD — different prefix lengths, longest matching prefix wins over lower AD
+      routes.push({ code: 'C', network: `${a}.${b}.0.0`, prefix: 16, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      const code = randChoice(['R', 'O', 'D']);
+      routes.push({ code, network: `${a}.${b}.${c}.0`, prefix: 24, ad: AD_VALUES[code], metric: randInt(1, 5), nextHop: randIP(), iface: randChoice(INTERFACES), best: true });
+      routes.push({ code: 'S', network: `${a}.${otherB}.0.0`, prefix: 16, ad: 1, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+      return { routes: UI.shuffleArray(routes), destination: dest, reason: `Longest matching prefix (/24) wins over lower AD — prefix is checked first` };
+    }
+
+    // Variant 5: Full combined — trap + prefix + AD + metric
     const code = randChoice(['O', 'R', 'D']);
-    const metrics = [randInt(1, 5), randInt(6, 15)];
-    metrics.forEach(m => {
-      routes.push({ code, network, prefix, ad: AD_VALUES[code], metric: m, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
-    });
-    routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
-    const otherCode = randChoice(Object.keys(ROUTE_CODES).filter(x => AD_VALUES[x] > AD_VALUES[code]));
-    routes.push({ code: otherCode, network, prefix, ad: AD_VALUES[otherCode], metric: randInt(1, 5), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
-    const matching = routes.filter(r => r.network === network);
-    const lowestAD = Math.min(...matching.map(r => r.ad));
-    const adTied = matching.filter(r => r.ad === lowestAD);
-    const best = adTied.reduce((b, r) => r.metric < b.metric ? r : b);
-    best.best = true;
-    return { routes: UI.shuffleArray(routes), destination: dest, reason: `Non-matching trap ignored → lowest AD (${lowestAD}) → lowest metric (${best.metric}) breaks tie` };
-  }
-
-  function generateCombinedProblem() {
-    const base = [randInt(10, 172), randInt(0, 255), randInt(0, 255)];
-    const routes = [];
-
-    const specificCode = randChoice(['R', 'O', 'D']);
-    routes.push({
-      code: specificCode, network: `${base[0]}.${base[1]}.${base[2]}.0`, prefix: 24,
-      ad: AD_VALUES[specificCode], metric: randInt(1, 5),
-      nextHop: randIP(), iface: randChoice(INTERFACES), best: true
-    });
-
-    const broadCode = 'C';
-    routes.push({
-      code: broadCode, network: `${base[0]}.${base[1]}.0.0`, prefix: 16,
-      ad: AD_VALUES[broadCode], metric: 0,
-      nextHop: randIP(), iface: randChoice(INTERFACES), best: false
-    });
-
-    const sameCode = randChoice(Object.keys(ROUTE_CODES).filter(c => c !== specificCode));
-    routes.push({
-      code: sameCode, network: `${base[0]}.0.0.0`, prefix: 8,
-      ad: AD_VALUES[sameCode], metric: randInt(1, 10),
-      nextHop: randIP(), iface: randChoice(INTERFACES), best: false
-    });
-
-    const dest = `${base[0]}.${base[1]}.${base[2]}.${randInt(1, 254)}`;
-    return { routes: UI.shuffleArray(routes), destination: dest, reason: `Longest prefix wins: /${routes[0].prefix} (AD only breaks ties at same prefix)` };
+    routes.push({ code, network: `${a}.${b}.${c}.0`, prefix: 24, ad: AD_VALUES[code], metric: randInt(1, 5), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    routes.push({ code, network: `${a}.${b}.${c}.0`, prefix: 24, ad: AD_VALUES[code], metric: randInt(6, 15), nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    routes.push({ code: 'C', network: `${a}.${b}.${otherC}.0`, prefix: 24, ad: 0, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    routes.push({ code: 'S', network: `${a}.${b}.0.0`, prefix: 16, ad: 1, metric: 0, nextHop: randIP(), iface: randChoice(INTERFACES), best: false });
+    // Best: among matching /24 routes with same AD, lowest metric wins
+    const matching24 = routes.filter(r => r.network === `${a}.${b}.${c}.0` && r.prefix === 24);
+    const bestRoute = matching24.reduce((br, r) => r.metric < br.metric ? r : br);
+    bestRoute.best = true;
+    return { routes: UI.shuffleArray(routes), destination: dest, reason: `Trap ignored → /24 beats /16 → same AD (${AD_VALUES[code]}) → lowest metric (${bestRoute.metric}) wins` };
   }
 
   function formatRouteEntry(r) {
@@ -230,15 +207,14 @@ const RouteSelector = (() => {
     container.appendChild(renderModeBackButton());
     container.appendChild(UI.renderSessionStats(sessionStats));
 
-    if (currentDifficulty === 4) {
+    if (currentDifficulty === 3) {
       showLabelProblem();
       return;
     }
 
     let problem;
     if (currentDifficulty === 1) problem = generatePrefixProblem();
-    else if (currentDifficulty === 2) problem = generateADProblem();
-    else problem = generateCombinedProblem();
+    else problem = generateRouteSelectionProblem();
 
     const div = document.createElement('div');
     div.className = 'route-container';
