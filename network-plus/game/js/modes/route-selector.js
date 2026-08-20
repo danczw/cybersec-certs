@@ -67,51 +67,35 @@ const RouteSelector = (() => {
   function randChoice(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
   function randIP() { return `${randInt(10, 192)}.${randInt(0, 255)}.${randInt(0, 255)}.${randInt(1, 254)}`; }
 
-  function generateDestination(routes) {
-    const best = routes.find(r => r.best);
-    const [a, b, c, d] = best.network.split('.').map(Number);
-    const hostBits = 32 - best.prefix;
-    const hostPart = randInt(1, Math.pow(2, Math.min(hostBits, 8)) - 2);
-    if (best.prefix >= 24) return `${a}.${b}.${c}.${hostPart}`;
-    if (best.prefix >= 16) return `${a}.${b}.${randInt(0, 255)}.${hostPart}`;
-    return `${a}.${randInt(0, 255)}.${randInt(0, 255)}.${hostPart}`;
-  }
-
-  function ipMatchesRoute(ip, network, prefix) {
-    const ipParts = ip.split('.').map(Number);
-    const netParts = network.split('.').map(Number);
-    const ipNum = (ipParts[0] << 24) | (ipParts[1] << 16) | (ipParts[2] << 8) | ipParts[3];
-    const netNum = (netParts[0] << 24) | (netParts[1] << 16) | (netParts[2] << 8) | netParts[3];
-    const mask = prefix === 0 ? 0 : (~0 << (32 - prefix)) >>> 0;
-    return ((ipNum >>> 0) & mask) === ((netNum >>> 0) & mask);
-  }
 
   function generatePrefixProblem() {
-    const baseOctets = [randInt(10, 192), randInt(0, 255), randInt(0, 255)];
-    const prefixes = [16, 24, 32].sort(() => Math.random() - 0.5).slice(0, 3);
-    prefixes.sort((a, b) => a - b);
+    const a = randInt(10, 192);
+    const b = randInt(1, 254);
+    const c = randInt(1, 254);
+    const d = randInt(1, 254);
 
-    const routes = prefixes.map((p, i) => {
-      let network;
-      if (p === 32) network = `${baseOctets[0]}.${baseOctets[1]}.${baseOctets[2]}.${randInt(1, 254)}`;
-      else if (p === 24) network = `${baseOctets[0]}.${baseOctets[1]}.${baseOctets[2]}.0`;
-      else network = `${baseOctets[0]}.${baseOctets[1]}.0.0`;
+    const dest = `${a}.${b}.${c}.${d}`;
 
+    const routes = [
+      { network: `${a}.0.0.0`, prefix: 8 },
+      { network: `${a}.${b}.0.0`, prefix: 16 },
+      { network: `${a}.${b}.${c}.0`, prefix: 24 },
+    ];
+
+    const selected = UI.shuffleArray(routes).slice(0, 3);
+    selected.sort((x, y) => x.prefix - y.prefix);
+
+    const result = selected.map((r, i) => {
       const code = randChoice(Object.keys(ROUTE_CODES));
       return {
-        code, network, prefix: p,
+        code, network: r.network, prefix: r.prefix,
         ad: AD_VALUES[code], metric: randInt(1, 10),
         nextHop: randIP(), iface: randChoice(INTERFACES),
-        best: i === prefixes.length - 1
+        best: i === selected.length - 1
       };
     });
 
-    const dest = generateDestination(routes);
-    while (!routes.every(r => ipMatchesRoute(dest, r.network, r.prefix))) {
-      return generatePrefixProblem();
-    }
-
-    return { routes: UI.shuffleArray(routes), destination: dest, reason: `Longest prefix: /${routes.find(r => r.best).prefix}` };
+    return { routes: UI.shuffleArray(result), destination: dest, reason: `Longest prefix: /${selected[selected.length - 1].prefix}` };
   }
 
   function generateADProblem() {
