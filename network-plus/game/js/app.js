@@ -53,6 +53,9 @@ const App = (() => {
       case '#/rapid-fire': loadMode(() => typeof RapidFire !== 'undefined' && RapidFire, 'js/modes/rapid-fire.js'); break;
       case '#/subnet': loadMode(() => typeof SubnetArchitect !== 'undefined' && SubnetArchitect, 'js/modes/subnet-architect.js'); break;
       case '#/abbreviations': loadMode(() => typeof Abbreviations !== 'undefined' && Abbreviations, 'js/modes/abbreviations.js'); break;
+      case '#/port-sprint': loadMode(() => typeof PortSprint !== 'undefined' && PortSprint, 'js/modes/port-sprint.js'); break;
+      case '#/route-selector': loadMode(() => typeof RouteSelector !== 'undefined' && RouteSelector, 'js/modes/route-selector.js'); break;
+      case '#/cable-lab': loadMode(() => typeof CableLab !== 'undefined' && CableLab, 'js/modes/cable-lab.js'); break;
       default: renderHome();
     }
   }
@@ -104,6 +107,33 @@ const App = (() => {
             <span class="mode-tag">ALL DOMAINS</span>
             <span class="mode-tag">RECALL</span>
             <span class="mode-tag">BIDIRECTIONAL</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/port-sprint'">
+          <h3>PORT SPRINT</h3>
+          <p>Speed-typing recall. Protocol flashes, you type the port — or vice versa. Combo multiplier rewards streaks.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 1.4</span>
+            <span class="mode-tag">SPEED</span>
+            <span class="mode-tag">RECALL</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/route-selector'">
+          <h3>ROUTE SELECTOR</h3>
+          <p>Given a routing table and destination, pick the winning route. Longest prefix, AD tiebreakers, field labeling.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 2.1</span>
+            <span class="mode-tag">INTERACTIVE</span>
+            <span class="mode-tag">PROGRESSIVE</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/cable-lab'">
+          <h3>CABLE LAB</h3>
+          <p>Match requirements to the right cable, connector, and standard. Escalates from simple picks to full scenarios.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 1.5</span>
+            <span class="mode-tag">SCENARIOS</span>
+            <span class="mode-tag">MATCHING</span>
           </div>
         </div>
       </div>
