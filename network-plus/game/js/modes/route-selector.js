@@ -76,26 +76,42 @@ const RouteSelector = (() => {
 
     const dest = `${a}.${b}.${c}.${d}`;
 
-    const routes = [
+    // Routes that DO match the destination
+    const matching = [
       { network: `${a}.0.0.0`, prefix: 8 },
       { network: `${a}.${b}.0.0`, prefix: 16 },
       { network: `${a}.${b}.${c}.0`, prefix: 24 },
     ];
 
-    const selected = UI.shuffleArray(routes).slice(0, 3);
-    selected.sort((x, y) => x.prefix - y.prefix);
+    // Routes that do NOT match (different second or third octet)
+    const otherB = b === 254 ? b - 1 : b + 1;
+    const otherC = c === 254 ? c - 1 : c + 1;
+    const nonMatching = [
+      { network: `${a}.${otherB}.0.0`, prefix: 16 },
+      { network: `${a}.${otherB}.${randInt(1,254)}.0`, prefix: 24 },
+      { network: `${a}.${b}.${otherC}.0`, prefix: 24 },
+      { network: `${randInt(10,192)}.${randInt(1,254)}.${randInt(1,254)}.0`, prefix: 24 },
+    ];
 
-    const result = selected.map((r, i) => {
+    // Pick 1-2 matching and 1-2 non-matching (total 3-4 routes)
+    const numMatching = randInt(1, 2);
+    const numNon = 4 - numMatching;
+    const pickedMatching = UI.shuffleArray(matching).slice(0, numMatching);
+    const pickedNon = UI.shuffleArray(nonMatching).slice(0, numNon);
+
+    const bestRoute = pickedMatching.reduce((a, b) => a.prefix > b.prefix ? a : b);
+
+    const allRoutes = [...pickedMatching, ...pickedNon].map(r => {
       const code = randChoice(Object.keys(ROUTE_CODES));
       return {
         code, network: r.network, prefix: r.prefix,
         ad: AD_VALUES[code], metric: randInt(1, 10),
         nextHop: randIP(), iface: randChoice(INTERFACES),
-        best: i === selected.length - 1
+        best: r === bestRoute
       };
     });
 
-    return { routes: UI.shuffleArray(result), destination: dest, reason: `Longest prefix: /${selected[selected.length - 1].prefix}` };
+    return { routes: UI.shuffleArray(allRoutes), destination: dest, reason: `Longest matching prefix: /${bestRoute.prefix} (non-matching routes are ignored regardless of prefix length)` };
   }
 
   function generateADProblem() {
