@@ -343,49 +343,66 @@ const RouteSelector = (() => {
       grid.appendChild(row);
     });
 
+    let attempted = false;
+    const feedbackEl = div.querySelector('#label-feedback');
+
     div.querySelector('#label-submit').addEventListener('click', () => {
       const selects = div.querySelectorAll('.route-label-select');
       let allCorrect = true;
       let correctCount = 0;
 
       selects.forEach((sel, i) => {
+        sel.classList.remove('valid', 'invalid');
         const expected = shuffled[i].id;
         if (sel.value === expected) {
           sel.classList.add('valid');
+          sel.disabled = true;
           correctCount++;
         } else {
           sel.classList.add('invalid');
           allCorrect = false;
         }
-        sel.disabled = true;
       });
 
-      sessionStats.answered++;
-      const feedbackEl = div.querySelector('#label-feedback');
-
       if (allCorrect) {
-        sessionStats.correct++;
-        const xp = 30;
-        sessionStats.xpEarned += xp;
-        const state = Engine.getState();
-        state.player.totalXP += xp;
-        state.player.level = Engine.getLevel(state.player.totalXP);
-        state.player.streak++;
-        if (state.player.streak > state.player.bestStreak) state.player.bestStreak = state.player.streak;
-        feedbackEl.innerHTML = `<div class="subnet-result correct">ALL CORRECT +${xp} XP</div>`;
+        if (!attempted) {
+          sessionStats.answered++;
+          sessionStats.correct++;
+          const xp = 30;
+          sessionStats.xpEarned += xp;
+          const state = Engine.getState();
+          state.player.totalXP += xp;
+          state.player.level = Engine.getLevel(state.player.totalXP);
+          state.player.streak++;
+          if (state.player.streak > state.player.bestStreak) state.player.bestStreak = state.player.streak;
+          feedbackEl.innerHTML = `<div class="subnet-result correct">ALL CORRECT +${xp} XP</div>`;
+        } else {
+          feedbackEl.innerHTML = `<div class="subnet-result correct">ALL CORRECT (no XP — retry)</div>`;
+        }
+        UI.updateHeader();
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'next-btn';
+        nextBtn.textContent = 'NEXT →';
+        nextBtn.addEventListener('click', showProblem);
+        feedbackEl.appendChild(nextBtn);
       } else {
-        const state = Engine.getState();
-        state.player.streak = 0;
-        feedbackEl.innerHTML = `<div class="subnet-result incorrect">${correctCount}/${fields.length} correct</div>`;
+        if (!attempted) {
+          attempted = true;
+          sessionStats.answered++;
+          const state = Engine.getState();
+          state.player.streak = 0;
+          UI.updateHeader();
+        }
+        feedbackEl.innerHTML = `<div class="subnet-result incorrect">${correctCount}/${fields.length} correct — fix the red ones and retry</div>`;
+        const skipBtn = document.createElement('button');
+        skipBtn.className = 'next-btn';
+        skipBtn.style.background = 'var(--bg-card)';
+        skipBtn.style.color = 'var(--text-secondary)';
+        skipBtn.style.border = '1px solid var(--border)';
+        skipBtn.textContent = 'SKIP →';
+        skipBtn.addEventListener('click', showProblem);
+        feedbackEl.appendChild(skipBtn);
       }
-
-      UI.updateHeader();
-
-      const nextBtn = document.createElement('button');
-      nextBtn.className = 'next-btn';
-      nextBtn.textContent = 'NEXT →';
-      nextBtn.addEventListener('click', showProblem);
-      feedbackEl.appendChild(nextBtn);
     });
 
     container.appendChild(div);
