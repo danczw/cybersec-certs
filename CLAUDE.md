@@ -52,6 +52,11 @@ The user can request any of these modes:
 
 - Markdown tables: pad all cells so every row has the same total length (align column separators vertically)
 
+## Abbreviations
+
+- Always add new abbreviations to `abbreviations.md` when creating or updating notes
+- Maintain alphabetical order in the table
+
 ## File Formats
 
 - Notes use YAML frontmatter with `domain`, `topic`, `objective` fields
