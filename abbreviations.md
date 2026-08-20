@@ -55,6 +55,7 @@
 | GRE          | Generic Routing Encapsulation                                |
 | GSM          | Global System for Mobile Communications                      |
 | HaaS         | Hardware as a Service                                        |
+| HTML         | Hypertext Markup Language                                    |
 | HTTP         | Hypertext Transfer Protocol                                  |
 | HVAC         | Heating, Ventilating, and Air Conditioning                   |
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
