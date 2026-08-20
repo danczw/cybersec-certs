@@ -3,6 +3,7 @@
 | Abbreviation | Full Name                                                    |
 |--------------|--------------------------------------------------------------|
 | AC           | Alternating Current                                          |
+| ACL          | Access Control List                                          |
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
@@ -20,7 +21,9 @@
 | CDP          | Cisco Discovery Protocol                                     |
 | CDN          | Content Delivery Network                                     |
 | CBC-MAC      | Cipher Block Chaining Message Authentication Code            |
+| CA           | Certificate Authority                                        |
 | CAPWAP       | Control and Provisioning of Wireless Access Points           |
+| CCTV         | Closed Circuit Television                                    |
 | CCMP         | Counter Mode with CBC-MAC Protocol                           |
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
@@ -53,6 +56,7 @@
 | GCMP         | Galois Counter Mode Protocol                                 |
 | GMAC         | Galois Message Authentication Code                           |
 | GRE          | Generic Routing Encapsulation                                |
+| GPS          | Global Positioning System                                    |
 | GSM          | Global System for Mobile Communications                      |
 | HaaS         | Hardware as a Service                                        |
 | HTML         | Hypertext Markup Language                                    |
@@ -60,6 +64,7 @@
 | HVAC         | Heating, Ventilating, and Air Conditioning                   |
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
 | IaaS         | Infrastructure as a Service                                  |
+| IAM          | Identity and Access Management                               |
 | IEEE         | Institute of Electrical and Electronics Engineers            |
 | IETF         | Internet Engineering Task Force                              |
 | IBSS         | Independent Basic Service Set                                |
@@ -112,6 +117,7 @@
 | PAT          | Port Address Translation                                     |
 | PBX          | Private Branch Exchange                                      |
 | PDU          | Power Distribution Unit                                      |
+| PKI          | Public Key Infrastructure                                    |
 | PSK          | Pre-Shared Key                                               |
 | PTP          | Precision Time Protocol                                      |
 | PTR          | Pointer (DNS record)                                         |
@@ -122,6 +128,7 @@
 | QSFP         | Quad Small Form-Factor Pluggable                             |
 | QSFP+        | Quad Enhanced Small Form-Factor Pluggable                    |
 | QoS          | Quality of Service                                           |
+| RBAC         | Role-Based Access Control                                    |
 | RDP          | Remote Desktop Protocol                                      |
 | RFB          | Remote Frame Buffer                                          |
 | RFC          | Request for Comments                                         |
