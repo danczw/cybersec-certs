@@ -16,6 +16,7 @@
 | AS           | Autonomous System                                            |
 | ASIC         | Application-Specific Integrated Circuit                      |
 | BGP          | Border Gateway Protocol                                      |
+| BYOD         | Bring Your Own Device                                        |
 | BOOTP        | Bootstrap Protocol                                           |
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
@@ -58,6 +59,7 @@
 | FHRP         | First Hop Redundancy Protocol                                |
 | FEP          | Fluorinated Ethylene Polymer                                 |
 | FTP          | File Transfer Protocol                                       |
+| GDPR         | General Data Protection Regulation                           |
 | GCMP         | Galois Counter Mode Protocol                                 |
 | GMAC         | Galois Message Authentication Code                           |
 | GRE          | Generic Routing Encapsulation                                |
@@ -74,9 +76,11 @@
 | IETF         | Internet Engineering Task Force                              |
 | IBSS         | Independent Basic Service Set                                |
 | IDF          | Intermediate Distribution Frame                              |
+| ICS          | Industrial Control Systems                                   |
 | ICMP         | Internet Control Message Protocol                            |
 | ICV          | Integrity Check Value                                        |
 | IDS          | Intrusion Detection System                                   |
+| IIoT         | Industrial Internet of Things                                |
 | IKE          | Internet Key Exchange                                        |
 | IMAP         | Internet Message Access Protocol                             |
 | IoT          | Internet of Things                                           |
@@ -117,11 +121,13 @@
 | NTS          | Network Time Security                                        |
 | OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
+| OT           | Operational Technology                                       |
 | OSPF         | Open Shortest Path First                                     |
 | OWE          | Opportunistic Wireless Encryption                            |
 | PaaS         | Platform as a Service                                        |
 | PAT          | Port Address Translation                                     |
 | PBX          | Private Branch Exchange                                      |
+| PCI DSS      | Payment Card Industry Data Security Standard                 |
 | PDU          | Power Distribution Unit                                      |
 | PKI          | Public Key Infrastructure                                    |
 | PSK          | Pre-Shared Key                                               |
@@ -154,6 +160,7 @@
 | SaaS         | Software as a Service                                        |
 | SAML         | Security Assertion Markup Language                           |
 | SAN          | Storage Area Network                                         |
+| SCADA        | Supervisory Control and Data Acquisition                     |
 | SC           | Subscriber Connector (fiber)                                 |
 | SFP          | Small Form-Factor Pluggable                                  |
 | SFP+         | Enhanced Small Form-Factor Pluggable                         |
@@ -177,8 +184,8 @@
 | SSL          | Secure Sockets Layer                                         |
 | ST           | Straight Tip (fiber connector)                               |
 | STP          | Spanning Tree Protocol                                       |
-| TACACS       | Terminal Access Control Access-Control System                 |
-| TACACS+      | Terminal Access Control Access-Control System Plus            |
+| TACACS       | Terminal Access Control Access-Control System                |
+| TACACS+      | Terminal Access Control Access-Control System Plus           |
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
 | TLD          | Top Level Domain                                             |
