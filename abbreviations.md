@@ -113,6 +113,7 @@
 | MTTR         | Mean Time to Repair                                          |
 | MTU          | Maximum Transmission Unit                                    |
 | MX           | Mail Exchanger (DNS record)                                  |
+| NAC          | Network Access Control                                       |
 | NAS          | Network-Attached Storage                                     |
 | NAT          | Network Address Translation                                  |
 | NFV          | Network Function Virtualization                              |
