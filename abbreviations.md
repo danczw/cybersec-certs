@@ -202,7 +202,10 @@
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
 | UPS          | Uninterruptible Power Supply                                 |
+| URI          | Uniform Resource Identifier                                  |
+| URL          | Uniform Resource Locator                                     |
 | UTM          | Unified Threat Management                                    |
+| UUID         | Universally Unique Identifier                                |
 | VIP          | Virtual IP Address                                           |
 | VNIC         | Virtual Network Interface Card                               |
 | VLAN         | Virtual Local Area Network                                   |
