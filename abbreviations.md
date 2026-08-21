@@ -8,6 +8,7 @@
 | ARPANET      | Advanced Research Projects Agency Network                    |
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
+| AIC          | Availability, Integrity, Confidentiality (alternate CIA)     |
 | AP           | Access Point                                                 |
 | API          | Application Programming Interface                            |
 | APIPA        | Automatic Private IP Addressing                              |
@@ -28,6 +29,7 @@
 | CCTV         | Closed Circuit Television                                    |
 | CCMP         | Counter Mode with CBC-MAC Protocol                           |
 | CDMA         | Code-Division Multiple Access                                |
+| CIA          | Confidentiality, Integrity, Availability (security triad)    |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
 | DAP          | Directory Access Protocol                                    |
