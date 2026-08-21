@@ -117,6 +117,7 @@
 | NAT          | Network Address Translation                                  |
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
+| NIC          | Network Interface Card                                       |
 | NDP          | Neighbor Discovery Protocol                                  |
 | NS           | Name Server (DNS record)                                     |
 | NTP          | Network Time Protocol                                        |
@@ -124,6 +125,7 @@
 | OID          | Object Identifier                                            |
 | OSI          | Open Systems Interconnection                                 |
 | OT           | Operational Technology                                       |
+| OUI          | Organizationally Unique Identifier                           |
 | OSPF         | Open Shortest Path First                                     |
 | OWE          | Opportunistic Wireless Encryption                            |
 | PaaS         | Platform as a Service                                        |
@@ -156,6 +158,7 @@
 | RJ11         | Registered Jack type 11                                      |
 | RJ45         | Registered Jack type 45                                      |
 | RA           | Router Advertisement                                         |
+| ROM          | Read-Only Memory                                             |
 | RPC          | Remote Procedure Call                                        |
 | RS           | Router Solicitation                                          |
 | SA           | Security Association                                         |
