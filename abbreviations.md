@@ -133,6 +133,7 @@
 | PBX          | Private Branch Exchange                                      |
 | PCI DSS      | Payment Card Industry Data Security Standard                 |
 | PDU          | Power Distribution Unit                                      |
+| PII          | Personally Identifiable Information                          |
 | PKI          | Public Key Infrastructure                                    |
 | PSK          | Pre-Shared Key                                               |
 | PTP          | Precision Time Protocol                                      |
