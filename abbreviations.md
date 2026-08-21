@@ -2,8 +2,10 @@
 
 | Abbreviation | Full Name                                                    |
 |--------------|--------------------------------------------------------------|
+| AAA          | Authentication, Authorization, and Accounting                |
 | AC           | Alternating Current                                          |
 | ACL          | Access Control List                                          |
+| ARPANET      | Advanced Research Projects Agency Network                    |
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AP           | Access Point                                                 |
@@ -28,6 +30,7 @@
 | CDMA         | Code-Division Multiple Access                                |
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
+| DAP          | Directory Access Protocol                                    |
 | DC           | Direct Current                                               |
 | DFS          | Dynamic Frequency Selection                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
@@ -93,6 +96,7 @@
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
 | MDF          | Main Distribution Frame                                      |
+| MFA          | Multifactor Authentication                                   |
 | MIB          | Management Information Base                                  |
 | MPO          | Multi-fiber Push On                                          |
 | MS-SQL       | Microsoft Structured Query Language                          |
@@ -128,6 +132,7 @@
 | QSFP         | Quad Small Form-Factor Pluggable                             |
 | QSFP+        | Quad Enhanced Small Form-Factor Pluggable                    |
 | QoS          | Quality of Service                                           |
+| RADIUS       | Remote Authentication Dial-In User Service                   |
 | RBAC         | Role-Based Access Control                                    |
 | RDP          | Remote Desktop Protocol                                      |
 | RFB          | Remote Frame Buffer                                          |
@@ -145,6 +150,7 @@
 | RS           | Router Solicitation                                          |
 | SA           | Security Association                                         |
 | SaaS         | Software as a Service                                        |
+| SAML         | Security Assertion Markup Language                           |
 | SAN          | Storage Area Network                                         |
 | SC           | Subscriber Connector (fiber)                                 |
 | SFP          | Small Form-Factor Pluggable                                  |
@@ -164,14 +170,18 @@
 | SQL          | Structured Query Language                                    |
 | SSID         | Service Set Identifier                                       |
 | SSH          | Secure Shell                                                 |
+| SSO          | Single Sign-On                                               |
 | SVI          | Switched Virtual Interface                                   |
 | SSL          | Secure Sockets Layer                                         |
 | ST           | Straight Tip (fiber connector)                               |
 | STP          | Spanning Tree Protocol                                       |
+| TACACS       | Terminal Access Control Access-Control System                 |
+| TACACS+      | Terminal Access Control Access-Control System Plus            |
 | TCP          | Transmission Control Protocol                                |
 | TFTP         | Trivial File Transfer Protocol                               |
 | TLD          | Top Level Domain                                             |
 | TLS          | Transport Layer Security                                     |
+| TOTP         | Time-based One-Time Password                                 |
 | TPC          | Transmit Power Control                                       |
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
