@@ -35,6 +35,7 @@
 | CIFS         | Common Internet File System                                  |
 | DAP          | Directory Access Protocol                                    |
 | DC           | Direct Current                                               |
+| DDoS         | Distributed Denial of Service                                |
 | DFS          | Dynamic Frequency Selection                                  |
 | DHCP         | Dynamic Host Configuration Protocol                          |
 | DLC          | Data Link Control                                            |
@@ -42,6 +43,7 @@
 | DNSSEC       | Domain Name Security Extensions                              |
 | DOCSIS       | Data Over Cable Service Interface Specification              |
 | DoH          | DNS over HTTPS                                               |
+| DoS          | Denial of Service                                            |
 | DKIM         | Domain Keys Identified Mail                                  |
 | DORA         | Discover, Offer, Request, Acknowledge (DHCP)                 |
 | DoT          | DNS over TLS                                                 |
