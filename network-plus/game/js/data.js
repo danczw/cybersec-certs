@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-25T14:17:24.929Z"
+    "generated": "2026-08-25T17:29:57.004Z"
   },
   "domains": [
     {
@@ -274,9 +274,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "1.1.24",
               "distractors": [
-                "Local Connector (also: Lucent connector, little connector)",
-                "Institute of Electrical and Electronics Engineers",
-                "Control and Provisioning of Wireless Access Points"
+                "Maximum Transfer Utilization — relevant at Layer 4 (Transport). Controls how much data a session can transfer before acknowledgement.",
+                "Minimum Transmission Unit — relevant at Layer 2 (Data Link). Frames smaller than the MTU are padded to meet the minimum size.",
+                "Maximum Throughput Unit — relevant at Layer 1 (Physical). Defines the maximum bitrate the physical medium can sustain."
               ]
             },
             {
@@ -26741,16 +26741,16 @@ const ABBREV_DATA = [
     "full": "Open Systems Interconnection"
   },
   {
+    "abbrev": "OSPF",
+    "full": "Open Shortest Path First"
+  },
+  {
     "abbrev": "OT",
     "full": "Operational Technology"
   },
   {
     "abbrev": "OUI",
     "full": "Organizationally Unique Identifier"
-  },
-  {
-    "abbrev": "OSPF",
-    "full": "Open Shortest Path First"
   },
   {
     "abbrev": "OWE",
