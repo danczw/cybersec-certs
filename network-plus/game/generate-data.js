@@ -15,6 +15,7 @@ const DOMAIN_META = [
   { id: 2, name: 'Network Implementation', weight: 20, dir: '2-network-implementation' },
   { id: 3, name: 'Network Operations', weight: 19, dir: '3-network-operations' },
   { id: 4, name: 'Network Security', weight: 19, dir: '4-network-security' },
+  { id: 5, name: 'Network Troubleshooting', weight: 19, dir: '5-network-troubleshooting' },
 ];
 
 function parseFlashcardFile(filePath) {
