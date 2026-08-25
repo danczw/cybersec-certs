@@ -142,6 +142,7 @@
 | OWE          | Opportunistic Wireless Encryption                            |
 | PaaS         | Platform as a Service                                        |
 | PAT          | Port Address Translation                                     |
+| pcap         | Packet Capture (file format)                                 |
 | PBX          | Private Branch Exchange                                      |
 | PCI DSS      | Payment Card Industry Data Security Standard                 |
 | PDU          | Power Distribution Unit                                      |
