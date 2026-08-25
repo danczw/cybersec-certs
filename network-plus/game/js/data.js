@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-20T14:02:30.791Z"
+    "generated": "2026-08-25T14:17:24.929Z"
   },
   "domains": [
     {
@@ -13387,9 +13387,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "2.4.1210",
               "distractors": [
-                "No — PDUs are always floor-standing units placed beside the rack",
-                "Only vertical-mount models designed for zero-U installation",
-                "No — PDUs mount on the wall behind the rack, not inside it"
+                "No",
+                "Only horizontal models",
+                "Only with adapters"
               ]
             },
             {
@@ -15937,9 +15937,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1439",
               "distractors": [
-                "UDP 67",
-                "UDP 53",
-                "UDP 546"
+                "Hostname-to-port mappings — so it can track switch connections",
+                "Lease duration history — so it can adjust future lease times",
+                "DNS query logs — so it can resolve local hostnames faster"
               ]
             },
             {
@@ -15948,9 +15948,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1440",
               "distractors": [
-                "UDP 69",
-                "TCP 23",
-                "TCP 22"
+                "The DHCP server assigns a completely new IP address from the available pool",
+                "The DHCP server requires the device to re-authenticate before assigning any address",
+                "The DHCP server places the device in a quarantine subnet until manually approved"
               ]
             },
             {
@@ -16091,9 +16091,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1453",
               "distractors": [
-                "Only the Discover and Request steps — Offer and Acknowledge go directly from server to client",
-                "Only the Discover step — once the server responds, the client communicates directly with the server",
-                "Only the first three steps (Discover, Offer, Request) — the Acknowledge is sent as a broadcast"
+                "25%",
+                "75%",
+                "87.5%"
               ]
             },
             {
@@ -16102,9 +16102,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1454",
               "distractors": [
-                "Clients can use any DHCP server regardless of lease duration or scope configuration",
-                "Multiple DHCP servers can share a single scope and load-balance address assignments",
-                "DHCP clients can retain their IP addresses permanently without renewing leases"
+                "50% or 1/2",
+                "75% or 3/4",
+                "93.75% or 15/16"
               ]
             },
             {
@@ -16630,9 +16630,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1502",
               "distractors": [
-                "It assigns an IPv6 address from its local pool and sends a unicast confirmation to the device",
-                "It forwards the solicitation to a DHCPv6 server, which then responds to the device directly",
-                "It sends a Neighbor Advertisement containing the full 128-bit address for the device to use"
+                "Certified Name",
+                "Common Name",
+                "Conditional Name"
               ]
             },
             {
@@ -16751,9 +16751,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1513",
               "distractors": [
-                "It pads the 48-bit MAC address with 16 trailing zeros to reach 64 bits",
-                "It hashes the 48-bit MAC address using SHA-256 and truncates the result to 64 bits",
-                "It duplicates the last 16 bits of the MAC address and appends them to create 64 bits"
+                "MX records",
+                "CNAME records",
+                "SRV records"
               ]
             },
             {
@@ -16828,9 +16828,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1520",
               "distractors": [
-                "IPv4 supports autoconfiguration via APIPA for both local and routable addresses; IPv6 requires DHCPv6 for all address types",
-                "IPv4 uses ARP to self-assign an address from the local pool; IPv6 requires router permission before generating any address",
-                "IPv4 devices can negotiate addresses directly with peers via link-local broadcast; IPv6 must always contact a central server first"
+                "CNAME (Canonical Name) record",
+                "PTR (Pointer) record",
+                "SRV (Service Locator) record"
               ]
             },
             {
@@ -16850,9 +16850,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1522",
               "distractors": [
-                "As a flat database — all records stored in a single table indexed by domain name",
-                "As a mesh — every DNS server holds a full copy and synchronizes with all others",
-                "As a ring — each server holds one zone and passes queries clockwise to the next server"
+                "MX (Mail Exchanger) record",
+                "CNAME (Canonical Name) record",
+                "SRV (Service Locator) record"
               ]
             },
             {
@@ -16872,9 +16872,9 @@ const GAME_DATA = {
               "difficulty": 2,
               "id": "3.4.1524",
               "distractors": [
-                "The authoritative name servers that store the actual DNS records (A, AAAA, MX) for a specific domain and respond to queries",
-                "The root DNS servers at the very top of the hierarchy that direct queries to the appropriate regional DNS clusters",
-                "The fully qualified domain names (FQDNs) that include every label from host to root, such as www.example.com."
+                "MX record",
+                "PTR record",
+                "SRV record"
               ]
             },
             {
@@ -17081,9 +17081,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1543",
               "distractors": [
-                "Yes — the DNS server automatically creates PTR records whenever a new A record is added",
-                "Yes — forward and reverse zones are always synchronized as part of the zone transfer process",
-                "No — reverse lookups are handled exclusively by a different protocol (rDNS) on a separate port"
+                "48 bits",
+                "128 bits",
+                "32 bits"
               ]
             },
             {
@@ -17246,9 +17246,9 @@ const GAME_DATA = {
               "difficulty": 1,
               "id": "3.4.1558",
               "distractors": [
-                "DNS Network Security Extensions — encrypts all DNS queries and responses using AES-256 so no one can read the traffic in transit",
-                "DNS Secure Exchange — a VPN tunnel between DNS client and server that hides both the query and the response from the network",
-                "DNS Security Extensions — replaces UDP-based DNS with TCP-only connections to prevent spoofing through sequence number validation"
+                ".us, .uk, .de",
+                ".edu, .gov, .mil",
+                ".local, .internal, .lan"
               ]
             },
             {
@@ -18511,11 +18511,11 @@ const GAME_DATA = {
       "objectives": [
         {
           "id": "4.1",
-          "title": "Security Concepts",
+          "title": "Authentication",
           "concepts": [
             {
-              "question": "What is data in transit (data in-motion)?",
-              "answer": "Information transferred over a wired or wireless network",
+              "question": "What does AAA stand for in the AAA framework?",
+              "answer": "Authentication, Authorization, and Accounting",
               "difficulty": 1,
               "id": "4.1.1672",
               "distractors": [
@@ -18525,8 +18525,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the primary function of network infrastructure devices (switches, routers) regarding data?",
-              "answer": "Forward traffic to the next location — they are not designed to protect data",
+              "question": "What is the difference between identification and authentication?",
+              "answer": "Identification is public information (username, email) that doesn't grant access; authentication is proving identity with private information (password, biometric, etc.)",
               "difficulty": 1,
               "id": "4.1.1673",
               "distractors": [
@@ -18536,9 +18536,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What devices provide security for data in transit?",
-              "answer": "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content",
-              "difficulty": 2,
+              "question": "What is the role of Authorization in the AAA framework?",
+              "answer": "Providing appropriate access to files, directories, or network areas based on the authenticated identity",
+              "difficulty": 1,
               "id": "4.1.1674",
               "distractors": [
                 "Switches and routers — they forward traffic using routing tables and MAC address lookups",
@@ -18547,9 +18547,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are two common encryption types for data in transit?",
-              "answer": "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)",
-              "difficulty": 2,
+              "question": "What is the role of Accounting in the AAA framework?",
+              "answer": "Tracking login/logout events, failed authentication attempts, and other session details",
+              "difficulty": 1,
               "id": "4.1.1675",
               "distractors": [
                 "AES (Advanced Encryption Standard) and BitLocker (full-disk encryption)",
@@ -18558,9 +18558,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is data at rest?",
-              "answer": "Information saved to a hard drive, SSD, or any other storage device",
-              "difficulty": 1,
+              "question": "In a typical AAA authentication flow, what happens after a VPN concentrator receives user credentials?",
+              "answer": "It forwards the credentials to a AAA server for validation",
+              "difficulty": 2,
               "id": "4.1.1676",
               "distractors": [
                 "Data actively being transmitted across a network between two endpoints",
@@ -18569,9 +18569,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are three types of data at rest encryption?",
-              "answer": "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
-              "difficulty": 2,
+              "question": "What is Single Sign-On (SSO)?",
+              "answer": "Authenticating once and gaining access to all authorized resources for the session without re-entering credentials",
+              "difficulty": 1,
               "id": "4.1.1677",
               "distractors": [
                 "TLS encryption (web traffic), IPsec encryption (VPN tunnels), and SSH encryption (remote terminal sessions)",
@@ -18580,20 +18580,20 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are ACLs in the context of data at rest security?",
-              "answer": "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner",
+              "question": "What is the typical time limit for an SSO session?",
+              "answer": "24 hours",
               "difficulty": 2,
               "id": "4.1.1678",
               "distractors": [
-                "Role-Based Access Control — assigns permissions based on user job title and department membership",
-                "Full disk encryption — scrambles all data on the storage drive so stolen media is unreadable",
-                "Data Loss Prevention policies — scan outbound traffic for sensitive patterns like credit card numbers"
+                "8 hours",
+                "72 hours",
+                "1 hour"
               ]
             },
             {
-              "question": "What is PKI (Public Key Infrastructure)?",
-              "answer": "The policies and control of all encryption keys and certificates for an organization",
-              "difficulty": 2,
+              "question": "Do all authentication methods support SSO?",
+              "answer": "No — SSO support varies by authentication method",
+              "difficulty": 1,
               "id": "4.1.1679",
               "distractors": [
                 "A specific encryption algorithm that generates public and private key pairs using prime number factorization",
@@ -18602,19 +18602,19 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "When do organizations typically begin building out their PKI?",
-              "answer": "When they start adding encryption keys to web servers or signing certificates to users or devices",
-              "difficulty": 2,
+              "question": "What does RADIUS stand for?",
+              "answer": "Remote Authentication Dial-In User Service",
+              "difficulty": 1,
               "id": "4.1.1680",
               "distractors": [
-                "When they first purchase a firewall and need to configure NAT rules for inbound traffic",
-                "When their network reaches more than 500 devices and static IP management becomes impractical",
-                "When they deploy their first RADIUS server for 802.1X port-based authentication"
+                "Remote Access Dynamic Internet User System",
+                "Remote Authorization Directory Integration User Service",
+                "Resilient Authentication Dial-In Unified Service"
               ]
             },
             {
-              "question": "What does a digital certificate do?",
-              "answer": "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization, etc.)",
+              "question": "Name three common use cases for RADIUS.",
+              "answer": "VPN concentrator authentication, server authentication, and 802.1X wireless authentication",
               "difficulty": 2,
               "id": "4.1.1681",
               "distractors": [
@@ -18624,9 +18624,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What information does a digital certificate bind together?",
-              "answer": "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
-              "difficulty": 2,
+              "question": "What does LDAP stand for?",
+              "answer": "Lightweight Directory Access Protocol",
+              "difficulty": 1,
               "id": "4.1.1682",
               "distractors": [
                 "A private key, a session token, and the certificate authority's physical mailing address",
@@ -18635,9 +18635,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Who digitally signs certificates to add trust?",
-              "answer": "A central Certificate Authority (CA)",
-              "difficulty": 1,
+              "question": "What advantage does LDAP provide over a simple username/password list?",
+              "answer": "It provides additional context about users and devices — departments, locations, organizational structure — via a centralized directory",
+              "difficulty": 2,
               "id": "4.1.1683",
               "distractors": [
                 "The web server administrator who generates the certificate using OpenSSL on the hosting device",
@@ -18646,8 +18646,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a web of trust?",
-              "answer": "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+              "question": "What standard is LDAP based on, and who created it?",
+              "answer": "X.500, created by the International Telecommunications Union (ITU)",
               "difficulty": 2,
               "id": "4.1.1684",
               "distractors": [
@@ -18657,8 +18657,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is a Certificate Authority (CA)?",
-              "answer": "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
+              "question": "Name three directory services that use LDAP.",
+              "answer": "Windows Active Directory, Apple OpenDirectory, Novell eDirectory",
               "difficulty": 2,
               "id": "4.1.1685",
               "distractors": [
@@ -18668,9 +18668,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the two options for deploying a Certificate Authority?",
-              "answer": "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)",
-              "difficulty": 2,
+              "question": "In X.500, what does CN stand for and what does it identify?",
+              "answer": "Common Name — identifies the person or object",
+              "difficulty": 1,
               "id": "4.1.1686",
               "distractors": [
                 "Public CA (free, shared by all organizations) or private CA (paid subscription managed by a third-party security vendor)",
@@ -18679,9 +18679,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How can anyone verify a digital certificate is trustworthy?",
-              "answer": "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
-              "difficulty": 2,
+              "question": "In X.500, what does OU stand for?",
+              "answer": "Organizational Unit — a unit or department within the organization",
+              "difficulty": 1,
               "id": "4.1.1687",
               "distractors": [
                 "Check that the certificate uses at least 2048-bit RSA encryption, which guarantees it was issued by a legitimate authority",
@@ -18690,9 +18690,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "When would you use a third-party CA vs. an internal CA?",
-              "answer": "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organization.",
-              "difficulty": 3,
+              "question": "In X.500, what does DC stand for?",
+              "answer": "Domain Component — components of the object's domain",
+              "difficulty": 1,
               "id": "4.1.1688",
               "distractors": [
                 "Third-party CA only for email encryption; internal CA for all web server and VPN certificates",
@@ -18701,9 +18701,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is IAM (Identity and Access Management)?",
-              "answer": "The process of managing permissions and access to data",
-              "difficulty": 1,
+              "question": "In X.500, what does the C attribute represent?",
+              "answer": "Country — the country's 2-character ISO code (e.g., c=US or c=GB)",
+              "difficulty": 2,
               "id": "4.1.1689",
               "distractors": [
                 "A firewall technology that inspects packets at Layers 3-7 and blocks unauthorized network traffic",
@@ -18712,9 +18712,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are the four components of IAM?",
-              "answer": "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing (track who accessed data and when)",
-              "difficulty": 3,
+              "question": "In X.500, what does the L attribute represent?",
+              "answer": "Locality — usually a city or area",
+              "difficulty": 2,
               "id": "4.1.1690",
               "distractors": [
                 "Encryption, hashing, certificates, and key management",
@@ -18723,8 +18723,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is the principle of least privilege?",
-              "answer": "Users only have the rights and permissions necessary for their job function — no additional access is granted",
+              "question": "In X.500, what does the ST attribute represent?",
+              "answer": "State — a state, province, or county within a country",
               "difficulty": 2,
               "id": "4.1.1691",
               "distractors": [
@@ -18734,8 +18734,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Why is administrator access not assigned to every system?",
-              "answer": "Least privilege — everyone having admin access would allow anyone to access any data at any time, creating a significant security concern",
+              "question": "What is the difference between containers and leaf objects in an LDAP directory tree?",
+              "answer": "Containers are higher-level grouping objects (countries, departments); leaf objects are individual users or devices at the bottom of the tree",
               "difficulty": 2,
               "id": "4.1.1692",
               "distractors": [
@@ -18745,9 +18745,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is Role-Based Access Control (RBAC)?",
-              "answer": "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropriate roles",
-              "difficulty": 2,
+              "question": "What does SAML stand for?",
+              "answer": "Security Assertion Markup Language",
+              "difficulty": 1,
               "id": "4.1.1693",
               "distractors": [
                 "Access control based on data sensitivity labels (Top Secret, Secret, Confidential) assigned to both resources and user clearances",
@@ -18756,8 +18756,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How is RBAC implemented in Windows?",
-              "answer": "Through groups — one group per role, users assigned to those groups",
+              "question": "What is SAML's primary purpose?",
+              "answer": "An open standard for authentication and authorization that can be applied to many different types of applications",
               "difficulty": 2,
               "id": "4.1.1694",
               "distractors": [
@@ -18767,8 +18767,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What three methods can determine a user's geographic location?",
-              "answer": "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location",
+              "question": "What is a key limitation of SAML?",
+              "answer": "It was not designed for mobile devices, making multi-device authentication challenging",
               "difficulty": 2,
               "id": "4.1.1695",
               "distractors": [
@@ -18778,8 +18778,8 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What is geofencing?",
-              "answer": "Allowing or disallowing access to information based on a user's physical location",
+              "question": "Name the three components in a SAML authentication flow.",
+              "answer": "Resource server (holds protected resource), Client (user's browser), Authorization server (validates credentials)",
               "difficulty": 2,
               "id": "4.1.1696",
               "distractors": [
@@ -18789,9 +18789,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "Give an example of geofencing in practice.",
-              "answer": "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied",
-              "difficulty": 1,
+              "question": "In SAML, what happens when a user tries to access a resource without authentication?",
+              "answer": "The resource server redirects the client to the authorization server via a signed/encrypted SAML request",
+              "difficulty": 3,
               "id": "4.1.1697",
               "distractors": [
                 "Requiring a smart card badge tap plus a PIN code before granting access to the server room",
@@ -18800,20 +18800,20 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "How might VPN users experience geographic restrictions?",
-              "answer": "They may get different permissions based on their connection location (e.g., different state or country)",
+              "question": "In SAML, what does the authorization server provide to the client after successful authentication?",
+              "answer": "A SAML token",
               "difficulty": 2,
               "id": "4.1.1698",
               "distractors": [
-                "Their VPN connection automatically selects the fastest tunnel endpoint regardless of policy restrictions",
-                "Their traffic is encrypted twice — once by the VPN and once by the destination server's TLS certificate",
-                "Their connection bypasses all corporate firewall rules since traffic originates from outside the network"
+                "An OAuth access token",
+                "A Kerberos ticket",
+                "A session cookie"
               ]
             },
             {
-              "question": "What is CCTV?",
-              "answer": "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
-              "difficulty": 1,
+              "question": "In SAML, how does the resource server confirm a client is authenticated?",
+              "answer": "The client presents the SAML token, and the resource server verifies its cryptographic signatures",
+              "difficulty": 3,
               "id": "4.1.1699",
               "distractors": [
                 "Central Command Threat Vector — a security operations center dashboard for monitoring intrusion alerts",
@@ -18822,9 +18822,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What modern features do CCTV cameras offer beyond basic video?",
-              "answer": "Motion detection, license plate reading, and facial recognition",
-              "difficulty": 2,
+              "question": "What does TACACS stand for?",
+              "answer": "Terminal Access Controller Access-Control System",
+              "difficulty": 1,
               "id": "4.1.1700",
               "distractors": [
                 "Wi-Fi signal triangulation, Bluetooth device tracking, and network intrusion detection",
@@ -18833,9 +18833,9 @@ const GAME_DATA = {
               ]
             },
             {
-              "question": "What are five types of door lock access methods?",
-              "answer": "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan), and multi-factor (combining methods)",
-              "difficulty": 3,
+              "question": "What was TACACS originally used for?",
+              "answer": "Controlling access to dial-up lines over modems at ARPANET",
+              "difficulty": 2,
               "id": "4.1.1701",
               "distractors": [
                 "Deadbolt, padlock, combination lock, chain lock, and electronic strike — five physical lock hardware categories",
@@ -18844,25 +18844,7356 @@ const GAME_DATA = {
               ]
             },
             {
+              "question": "Which vendor is TACACS+ historically associated with?",
+              "answer": "Cisco",
+              "difficulty": 1,
+              "id": "4.1.1702",
+              "distractors": [
+                "Juniper",
+                "Microsoft",
+                "Aruba"
+              ]
+            },
+            {
+              "question": "When was TACACS+ made public as an open standard?",
+              "answer": "1993",
+              "difficulty": 3,
+              "id": "4.1.1703",
+              "distractors": [
+                "1989",
+                "1997",
+                "2001"
+              ]
+            },
+            {
+              "question": "What does MFA stand for?",
+              "answer": "Multifactor Authentication",
+              "difficulty": 1,
+              "id": "4.1.1704",
+              "distractors": [
+                "Multi-Function Access",
+                "Managed Firewall Authentication",
+                "Multiple Factor Authorization"
+              ]
+            },
+            {
+              "question": "Name the four categories of authentication factors.",
+              "answer": "Something you know (password), something you have (phone/token), something you are (biometrics), somewhere you are (GPS location)",
+              "difficulty": 2,
+              "id": "4.1.1705",
+              "distractors": [
+                "Something you know (password), something you have (token), something you see (screen), something you do (behavior)",
+                "Username, password, PIN, and security question",
+                "Biometrics, tokens, certificates, and passphrases"
+              ]
+            },
+            {
+              "question": "A fingerprint scan is an example of which authentication factor category?",
+              "answer": "Something you are",
+              "difficulty": 1,
+              "id": "4.1.1706",
+              "distractors": [
+                "Something you have",
+                "Something you know",
+                "Somewhere you are"
+              ]
+            },
+            {
+              "question": "GPS location is an example of which authentication factor category?",
+              "answer": "Somewhere you are",
+              "difficulty": 1,
+              "id": "4.1.1707",
+              "distractors": [
+                "Something you are",
+                "Something you have",
+                "Something you know"
+              ]
+            },
+            {
+              "question": "What does TOTP stand for?",
+              "answer": "Time-based One-Time Password",
+              "difficulty": 1,
+              "id": "4.1.1708",
+              "distractors": [
+                "Token-based One-Time Protocol",
+                "Temporal One-Time Passkey",
+                "Trusted Online Token Password"
+              ]
+            },
+            {
+              "question": "What two inputs does TOTP use to generate codes?",
+              "answer": "A pre-shared secret key and the current time",
+              "difficulty": 2,
+              "id": "4.1.1709",
+              "distractors": [
+                "A username and password hash",
+                "A certificate and session token",
+                "A public key and a random seed number"
+              ]
+            },
+            {
+              "question": "How often do TOTP codes typically change?",
+              "answer": "Every 30 seconds",
+              "difficulty": 2,
+              "id": "4.1.1710",
+              "distractors": [
+                "Every 60 seconds",
+                "Every 10 seconds",
+                "Every 5 minutes"
+              ]
+            },
+            {
+              "question": "Why must client and server be time-synchronized for TOTP to work?",
+              "answer": "TOTP uses the current time as an input to generate codes — if clocks are out of sync, the codes won't match",
+              "difficulty": 3,
+              "id": "4.1.1711",
+              "distractors": [
+                "TOTP uses the session ID as a variable — mismatched sessions cause code rejection",
+                "TOTP requires identical hardware clocks — different hardware generates incompatible codes",
+                "TOTP hashes the server's IP address with the time — if the IP changes, codes fail"
+              ]
+            },
+            {
+              "question": "What protocol is commonly used to synchronize time between TOTP client and server?",
+              "answer": "NTP (Network Time Protocol)",
+              "difficulty": 2,
+              "id": "4.1.1712",
+              "distractors": [
+                "SNMP (Simple Network Management Protocol)",
+                "LDAP (Lightweight Directory Access Protocol)",
+                "SMTP (Simple Mail Transfer Protocol)"
+              ]
+            },
+            {
+              "question": "Which MFA factor category does a TOTP authenticator app fall under?",
+              "answer": "Something you have",
+              "difficulty": 2,
+              "id": "4.1.1713",
+              "distractors": [
+                "Something you know",
+                "Something you are",
+                "Somewhere you are"
+              ]
+            },
+            {
+              "question": "Are TOTP codes truly random?",
+              "answer": "No — they are pseudorandom; they only appear random but are predictable by both sides using the shared secret key and synchronized time",
+              "difficulty": 3,
+              "id": "4.1.1714",
+              "distractors": [
+                "Yes — each code is generated from a true random number generator on the device",
+                "Yes — the server generates a new random code each interval and transmits it to the client",
+                "No — they cycle through a fixed list of pre-generated codes stored during initial setup"
+              ]
+            },
+            {
+              "question": "What is compliance in IT?",
+              "answer": "Maintaining adherence to laws, policies, procedures, or other rules associated with a type of work",
+              "difficulty": 1,
+              "id": "4.1.1715",
+              "distractors": [
+                "The process of encrypting all data at rest within an organization's network",
+                "A security framework that defines how firewalls and IPS devices should be configured",
+                "The technical standard for securing network communications using TLS certificates"
+              ]
+            },
+            {
+              "question": "Name three possible consequences of non-compliance.",
+              "answer": "Fines, incarceration, or loss of employment",
+              "difficulty": 2,
+              "id": "4.1.1716",
+              "distractors": [
+                "Service outages, hardware failure, or data corruption",
+                "Loss of encryption keys, certificate expiration, or protocol downgrade",
+                "Bandwidth throttling, IP blacklisting, or DNS sinkholing"
+              ]
+            },
+            {
+              "question": "What are the possible scopes of compliance requirements?",
+              "answer": "National, territory, state, domestic, or international",
+              "difficulty": 2,
+              "id": "4.1.1717",
+              "distractors": [
+                "Application-level, transport-level, and network-level",
+                "Physical, logical, and administrative",
+                "Internal, external, and hybrid"
+              ]
+            },
+            {
+              "question": "What drives compliance requirements?",
+              "answer": "Some are driven by the type of business; others by state, local, or international laws",
+              "difficulty": 2,
+              "id": "4.1.1718",
+              "distractors": [
+                "They are exclusively determined by the organization's internal security team",
+                "They are always based on the number of employees in the organization",
+                "They are solely derived from industry-standard encryption algorithms"
+              ]
+            },
+            {
+              "question": "What is data localization?",
+              "answer": "The requirement that data collected by a country must stay inside that country",
+              "difficulty": 1,
+              "id": "4.1.1719",
+              "distractors": [
+                "The process of encrypting data based on the geographic region of the user accessing it",
+                "A method for routing network traffic through local servers to reduce latency",
+                "The practice of classifying data sensitivity levels by department location"
+              ]
+            },
+            {
+              "question": "What does GDPR stand for?",
+              "answer": "General Data Protection Regulation",
+              "difficulty": 1,
+              "id": "4.1.1720",
+              "distractors": [
+                "Global Data Privacy Regulation",
+                "General Digital Privacy Rules",
+                "Governing Data Protection Requirements"
+              ]
+            },
+            {
+              "question": "Which geographic region is the GDPR associated with?",
+              "answer": "The European Union",
+              "difficulty": 1,
+              "id": "4.1.1721",
+              "distractors": [
+                "The United States",
+                "The Asia-Pacific region (APAC)",
+                "The United Kingdom exclusively"
+              ]
+            },
+            {
+              "question": "What is the primary purpose of the GDPR?",
+              "answer": "Protecting the privacy of data associated with individuals residing in the European Union",
+              "difficulty": 1,
+              "id": "4.1.1722",
+              "distractors": [
+                "Regulating how internet service providers route traffic within EU member states",
+                "Establishing encryption standards for all commercial software sold in Europe",
+                "Defining network security requirements for EU government agencies"
+              ]
+            },
+            {
+              "question": "Name at least five types of data protected under the GDPR.",
+              "answer": "Name, address, photo, email address, bank information, websites visited",
+              "difficulty": 2,
+              "id": "4.1.1723",
+              "distractors": [
+                "IP addresses, MAC addresses, SSID names, VLAN configurations, firewall rules",
+                "Server hostnames, port numbers, protocol versions, cipher suites, certificate chains",
+                "CPU serial numbers, hard drive models, firmware versions, BIOS settings, driver versions"
+              ]
+            },
+            {
+              "question": "Where must data collected on EU citizens be stored according to GDPR?",
+              "answer": "In the European Union",
+              "difficulty": 1,
+              "id": "4.1.1724",
+              "distractors": [
+                "In the country where the organization's headquarters is located",
+                "On servers certified by the organization's internal CA",
+                "In any country that has a bilateral data sharing agreement"
+              ]
+            },
+            {
+              "question": "What rights do users have over their data under the GDPR?",
+              "answer": "They can decide where their data goes and can choose to have their data removed from sites",
+              "difficulty": 2,
+              "id": "4.1.1725",
+              "distractors": [
+                "They can audit the organization's firewall rules and network configurations",
+                "They can request access to the organization's encryption keys for verification",
+                "They can mandate which encryption algorithms the organization must use"
+              ]
+            },
+            {
+              "question": "The GDPR is often described as a \"right to be forgotten.\" What is a better description?",
+              "answer": "A way for individuals to protect and control data that they themselves own",
+              "difficulty": 2,
+              "id": "4.1.1726",
+              "distractors": [
+                "A requirement for organizations to delete all logs older than 30 days",
+                "A regulation requiring companies to anonymize all stored network traffic data",
+                "A mandate for ISPs to purge browsing history upon user request"
+              ]
+            },
+            {
+              "question": "What does PCI DSS stand for?",
+              "answer": "Payment Card Industry Data Security Standard",
+              "difficulty": 1,
+              "id": "4.1.1727",
+              "distractors": [
+                "Personal Computer Industry Data Security Standard",
+                "Payment Card Internet Data Safety Standard",
+                "Protected Communications Industry Data Security Standard"
+              ]
+            },
+            {
+              "question": "Is PCI DSS a law or a standard?",
+              "answer": "A standard — created by the payment card industry, not a government law",
+              "difficulty": 2,
+              "id": "4.1.1728",
+              "distractors": [
+                "A federal law — enacted by the U.S. Congress with criminal penalties",
+                "An international treaty — ratified by the United Nations for all member states",
+                "A government regulation — enforced by the Federal Trade Commission"
+              ]
+            },
+            {
+              "question": "What is PCI DSS designed to protect?",
+              "answer": "Credit card information",
+              "difficulty": 1,
+              "id": "4.1.1729",
+              "distractors": [
+                "Personal health information (PHI)",
+                "Personally identifiable information (PII) of employees",
+                "Intellectual property and trade secrets"
+              ]
+            },
+            {
+              "question": "What is the consequence for an organization that fails a PCI DSS audit?",
+              "answer": "They may lose the ability to process credit cards",
+              "difficulty": 2,
+              "id": "4.1.1730",
+              "distractors": [
+                "They receive a formal warning letter with a 90-day remediation window",
+                "They are required to pay higher transaction fees until compliant",
+                "Their network is disconnected from the internet by their ISP"
+              ]
+            },
+            {
+              "question": "How many areas of focus does PCI DSS have?",
+              "answer": "Six",
+              "difficulty": 1,
+              "id": "4.1.1731",
+              "distractors": [
+                "Twelve",
+                "Four",
+                "Eight"
+              ]
+            },
+            {
+              "question": "Name the six areas of focus in PCI DSS.",
+              "answer": "1) Build/maintain secure networks and systems, 2) Protect cardholder data, 3) Maintain a vulnerability management program, 4) Implement strong access control measures, 5) Regularly monitor and test...",
+              "difficulty": 3,
+              "id": "4.1.1732",
+              "distractors": [
+                "1) Encrypt all network traffic, 2) Deploy IPS on all segments, 3) Use only open-source software, 4) Require biometric auth, 5) Disable all wireless, 6) Replace passwords with certificates",
+                "1) Install antivirus on all endpoints, 2) Enable full-disk encryption, 3) Deploy SIEM, 4) Configure NAC, 5) Segment the network, 6) Implement zero trust",
+                "1) Establish a security perimeter, 2) Classify all data, 3) Train all employees annually, 4) Conduct weekly penetration tests, 5) Maintain incident response plans, 6) Audit third-party vendors"
+              ]
+            },
+            {
+              "question": "Which PCI DSS focus area ensures only authorized personnel can access credit card data?",
+              "answer": "Implement strong access control measures",
+              "difficulty": 2,
+              "id": "4.1.1733",
+              "distractors": [
+                "Build and maintain a secure network and systems",
+                "Regularly monitor and test networks",
+                "Maintain an information security policy"
+              ]
+            },
+            {
+              "question": "Which PCI DSS focus area ensures policies are working as expected?",
+              "answer": "Regularly monitor and test networks",
+              "difficulty": 2,
+              "id": "4.1.1734",
+              "distractors": [
+                "Maintain an information security policy",
+                "Implement strong access control measures",
+                "Protect cardholder data"
+              ]
+            },
+            {
+              "question": "Which PCI DSS focus area is especially critical for organizations storing credit card data?",
+              "answer": "Maintain a vulnerability management program",
+              "difficulty": 2,
+              "id": "4.1.1735",
+              "distractors": [
+                "Protect cardholder data",
+                "Build and maintain a secure network and systems",
+                "Implement strong access control measures"
+              ]
+            },
+            {
+              "question": "Which PCI DSS focus area provides the broadest scope of protection across all organizational data?",
+              "answer": "Maintain an information security policy",
+              "difficulty": 2,
+              "id": "4.1.1736",
+              "distractors": [
+                "Regularly monitor and test networks",
+                "Protect cardholder data",
+                "Build and maintain a secure network and systems"
+              ]
+            },
+            {
+              "question": "What is the difference between GDPR and PCI DSS in terms of enforcement?",
+              "answer": "GDPR is a government regulation (EU law) with legal penalties; PCI DSS is an industry standard enforced through audits with the penalty of losing credit card processing ability",
+              "difficulty": 3,
+              "id": "4.1.1737",
+              "distractors": [
+                "Both are government laws — GDPR applies to EU citizens while PCI DSS applies to US financial institutions",
+                "Both are industry standards — GDPR is enforced by ISPs while PCI DSS is enforced by banks",
+                "GDPR is an industry standard with voluntary compliance; PCI DSS is a US federal law with criminal penalties"
+              ]
+            },
+            {
+              "question": "What is data in transit (data in-motion)?",
+              "answer": "Information transferred over a wired or wireless network",
+              "difficulty": 1,
+              "id": "4.1.1738",
+              "distractors": [
+                "Data stored in RAM or CPU cache during active processing",
+                "Data saved to a hard drive or SSD that is not currently being accessed",
+                "Data that has been archived and moved to offline cold storage"
+              ]
+            },
+            {
+              "question": "What is the primary function of network infrastructure devices (switches, routers) regarding data?",
+              "answer": "Forward traffic to the next location — they are not designed to protect data",
+              "difficulty": 1,
+              "id": "4.1.1739",
+              "distractors": [
+                "Encrypt all traffic passing through them using built-in TLS capabilities",
+                "Inspect packet payloads for malicious content and block threats",
+                "Authenticate all devices before allowing traffic to pass through"
+              ]
+            },
+            {
+              "question": "What devices provide security for data in transit?",
+              "answer": "Firewalls and intrusion prevention systems — they monitor traffic, decide to forward or block, and inspect for malicious content",
+              "difficulty": 2,
+              "id": "4.1.1740",
+              "distractors": [
+                "Switches and routers — they use ACLs to filter traffic at each hop",
+                "Load balancers and DNS servers — they redirect malicious traffic away from targets",
+                "VPN concentrators and proxy servers — they encrypt and cache data for inspection"
+              ]
+            },
+            {
+              "question": "What are two common encryption types for data in transit?",
+              "answer": "TLS (Transport Layer Security) and IPsec (Internet Protocol Security)",
+              "difficulty": 2,
+              "id": "4.1.1741",
+              "distractors": [
+                "SSH (Secure Shell) and SFTP (Secure File Transfer Protocol)",
+                "AES (Advanced Encryption Standard) and RSA (Rivest-Shamir-Adleman)",
+                "WPA3 (Wi-Fi Protected Access 3) and BitLocker Drive Encryption"
+              ]
+            },
+            {
+              "question": "What is data at rest?",
+              "answer": "Information saved to a hard drive, SSD, or any other storage device",
+              "difficulty": 1,
+              "id": "4.1.1742",
+              "distractors": [
+                "Information currently being processed in memory (RAM)",
+                "Data actively being transmitted across a network connection",
+                "Temporary cache data stored in a CPU's L1/L2 registers"
+              ]
+            },
+            {
+              "question": "What are three types of data at rest encryption?",
+              "answer": "Full disk encryption (entire disk), database encryption (single part or entire database), and file/folder encryption (individual files or folders)",
+              "difficulty": 2,
+              "id": "4.1.1743",
+              "distractors": [
+                "Symmetric encryption, asymmetric encryption, and hashing",
+                "AES-128, AES-256, and RSA-4096",
+                "Transport encryption (TLS), tunnel encryption (IPsec), and session encryption (SSH)"
+              ]
+            },
+            {
+              "question": "What are ACLs in the context of data at rest security?",
+              "answer": "Access Control Lists — determine which users have access or no access to data; controlled by system administrator or data owner",
+              "difficulty": 2,
+              "id": "4.1.1744",
+              "distractors": [
+                "Access Control Lists — rules on routers/firewalls that filter network traffic based on IP addresses and ports",
+                "Access Control Lists — encryption key policies that determine which algorithms can be used for data protection",
+                "Access Control Lists — audit logs that record all access attempts to network devices"
+              ]
+            },
+            {
+              "question": "What is PKI (Public Key Infrastructure)?",
+              "answer": "The policies and control of all encryption keys and certificates for an organization",
+              "difficulty": 2,
+              "id": "4.1.1745",
+              "distractors": [
+                "A specific encryption algorithm used to secure data in transit over HTTPS connections",
+                "A hardware device that stores and manages cryptographic keys in a tamper-resistant module",
+                "A protocol for exchanging symmetric keys between two parties over an insecure channel"
+              ]
+            },
+            {
+              "question": "When do organizations typically begin building out their PKI?",
+              "answer": "When they start adding encryption keys to web servers or signing certificates to users or devices",
+              "difficulty": 2,
+              "id": "4.1.1746",
+              "distractors": [
+                "When they first deploy a firewall or intrusion prevention system on their network",
+                "When they begin onboarding their first remote employees who need VPN access",
+                "When they purchase their first enterprise antivirus or endpoint protection platform"
+              ]
+            },
+            {
+              "question": "What does a digital certificate do?",
+              "answer": "Assigns a level of trust to a user or device by binding a public key with a digital signature and details about the key holder (name, organization, etc.)",
+              "difficulty": 2,
+              "id": "4.1.1747",
+              "distractors": [
+                "Encrypts data at rest using a symmetric key stored on the certificate holder's device",
+                "Creates a secure VPN tunnel between two endpoints using pre-shared keys",
+                "Generates one-time passwords for multi-factor authentication systems"
+              ]
+            },
+            {
+              "question": "What information does a digital certificate bind together?",
+              "answer": "A public key, a digital signature, and details about the key holder (name, organization, etc.)",
+              "difficulty": 2,
+              "id": "4.1.1748",
+              "distractors": [
+                "A private key, a hash algorithm identifier, and the certificate expiration date",
+                "A symmetric encryption key, the issuer's IP address, and a revocation URL",
+                "A session token, the server's MAC address, and the certificate serial number"
+              ]
+            },
+            {
+              "question": "Who digitally signs certificates to add trust?",
+              "answer": "A central Certificate Authority (CA)",
+              "difficulty": 1,
+              "id": "4.1.1749",
+              "distractors": [
+                "The individual user who generates their own key pair",
+                "The network administrator who manages the organization's firewall",
+                "The registration authority (RA) that validates user credentials"
+              ]
+            },
+            {
+              "question": "What is a web of trust?",
+              "answer": "A distributed form of trust (alternative to a centralized CA) — if A trusts B and B trusts C, then A can also trust C",
+              "difficulty": 2,
+              "id": "4.1.1750",
+              "distractors": [
+                "A hierarchical chain of trust where each CA signs the certificate of the CA below it",
+                "A centralized key escrow system where all private keys are stored by a trusted third party",
+                "A single root CA that directly signs every certificate in the organization"
+              ]
+            },
+            {
+              "question": "What is a Certificate Authority (CA)?",
+              "answer": "A centralized authority that all certificates start from — anything signed by the CA can be trusted anywhere in the organization",
+              "difficulty": 2,
+              "id": "4.1.1751",
+              "distractors": [
+                "A device that generates and stores encryption keys in tamper-proof hardware",
+                "A protocol that negotiates cipher suites between client and server during TLS handshake",
+                "A registration authority that verifies user identity before issuing credentials"
+              ]
+            },
+            {
+              "question": "What are the two options for deploying a Certificate Authority?",
+              "answer": "Internal CA (organization builds and self-signs its own certificates) or third-party CA (independent authority, useful for internet-facing trust)",
+              "difficulty": 2,
+              "id": "4.1.1752",
+              "distractors": [
+                "Self-signed certificates or wildcard certificates",
+                "Hardware security module (HSM) or software-based key store",
+                "Public CA with online validation or private CA with offline validation"
+              ]
+            },
+            {
+              "question": "How can anyone verify a digital certificate is trustworthy?",
+              "answer": "Examine the certificate, see who signed it (the CA), and determine if that CA's signature is trusted",
+              "difficulty": 2,
+              "id": "4.1.1753",
+              "distractors": [
+                "Decrypt the certificate's contents using the sender's private key and compare the hash values",
+                "Check the certificate's expiration date and verify it matches the server's hostname",
+                "Send the certificate to a third-party validation service that confirms it against a CRL"
+              ]
+            },
+            {
+              "question": "When would you use a third-party CA vs. an internal CA?",
+              "answer": "Third-party CA for internet-facing trust (anyone in the world can reference it). Internal CA when all devices and users are within your own organization.",
+              "difficulty": 3,
+              "id": "4.1.1754",
+              "distractors": [
+                "Third-party CA for internal applications only. Internal CA for any public-facing website.",
+                "Third-party CA when certificates need to expire quickly. Internal CA for long-lived certificates.",
+                "Third-party CA for email encryption only. Internal CA for web server certificates."
+              ]
+            },
+            {
+              "question": "What is IAM (Identity and Access Management)?",
+              "answer": "The process of managing permissions and access to data",
+              "difficulty": 1,
+              "id": "4.1.1755",
+              "distractors": [
+                "The encryption protocol used to secure data transmitted between network devices",
+                "The process of configuring firewall rules to filter network traffic by user identity",
+                "A hardware device that generates and stores cryptographic keys securely"
+              ]
+            },
+            {
+              "question": "What are the four components of IAM?",
+              "answer": "Access control (users access only what they need), authentication (verify identity), authorization (grant permissions once authenticated), auditing (track who accessed data and when)",
+              "difficulty": 3,
+              "id": "4.1.1756",
+              "distractors": [
+                "Encryption (protect data), segmentation (isolate networks), monitoring (watch traffic), patching (fix vulnerabilities)",
+                "Identification (find users), classification (label data), remediation (fix issues), reporting (generate logs)",
+                "Prevention (block threats), detection (find attacks), response (contain incidents), recovery (restore systems)"
+              ]
+            },
+            {
+              "question": "What is the principle of least privilege?",
+              "answer": "Users only have the rights and permissions necessary for their job function — no additional access is granted",
+              "difficulty": 2,
+              "id": "4.1.1757",
+              "distractors": [
+                "Users are granted temporary elevated privileges whenever they request access to restricted resources",
+                "Users receive full administrative access initially, which is reduced over time based on usage patterns",
+                "Users are given read-only access to all systems by default and must request write permissions separately"
+              ]
+            },
+            {
+              "question": "Why is administrator access not assigned to every system?",
+              "answer": "Least privilege — everyone having admin access would allow anyone to access any data at any time, creating a significant security concern",
+              "difficulty": 2,
+              "id": "4.1.1758",
+              "distractors": [
+                "Cost savings — licensing administrator accounts for every user would be too expensive",
+                "Performance — too many admin accounts would slow down the authentication server",
+                "Compatibility — most applications only support a limited number of concurrent admin sessions"
+              ]
+            },
+            {
+              "question": "What is Role-Based Access Control (RBAC)?",
+              "answer": "Separating individuals into roles (e.g., staff, manager, VP), with the administrator defining permissions per role and assigning users to appropriate roles",
+              "difficulty": 2,
+              "id": "4.1.1759",
+              "distractors": [
+                "Assigning permissions directly to individual users based on their specific daily tasks and activities",
+                "Granting access based on the sensitivity classification level of the data being requested",
+                "Allowing or denying access based on the time of day and network location of the request"
+              ]
+            },
+            {
+              "question": "How is RBAC implemented in Windows?",
+              "answer": "Through groups — one group per role, users assigned to those groups",
+              "difficulty": 2,
+              "id": "4.1.1760",
+              "distractors": [
+                "Through organizational units (OUs) — one OU per department with inherited permissions",
+                "Through local user accounts — each machine has individual user accounts with specific rights",
+                "Through Group Policy Objects (GPOs) — policies applied at the domain level override local settings"
+              ]
+            },
+            {
+              "question": "What three methods can determine a user's geographic location?",
+              "answer": "IP address (not always accurate), GPS (Global Positioning System), and wireless network name / access point location",
+              "difficulty": 2,
+              "id": "4.1.1761",
+              "distractors": [
+                "MAC address lookup, DNS hostname resolution, and SNMP device polling",
+                "Browser cookies, session tokens, and user-agent string analysis",
+                "Certificate location field, RADIUS server logs, and DHCP lease records"
+              ]
+            },
+            {
+              "question": "What is geofencing?",
+              "answer": "Allowing or disallowing access to information based on a user's physical location",
+              "difficulty": 2,
+              "id": "4.1.1762",
+              "distractors": [
+                "Encrypting data differently depending on which geographic region the server is located in",
+                "Routing network traffic through the nearest data center based on the user's IP address",
+                "Restricting bandwidth allocation based on the physical distance between client and server"
+              ]
+            },
+            {
+              "question": "Give an example of geofencing in practice.",
+              "answer": "Sensitive data only viewable from within the corporate headquarters building — if outside the building, access is denied",
+              "difficulty": 1,
+              "id": "4.1.1763",
+              "distractors": [
+                "A VPN that only allows connections from users in the same country as the server",
+                "A firewall rule that blocks all traffic originating from foreign IP address ranges",
+                "An encryption policy that uses different key lengths based on the user's region"
+              ]
+            },
+            {
+              "question": "How might VPN users experience geographic restrictions?",
+              "answer": "They may get different permissions based on their connection location (e.g., different state or country)",
+              "difficulty": 2,
+              "id": "4.1.1764",
+              "distractors": [
+                "They may experience higher latency based on the physical distance to the VPN concentrator",
+                "They may receive different encryption levels depending on their ISP's security capabilities",
+                "They may be assigned different IP subnets based on the VPN client software version"
+              ]
+            },
+            {
+              "question": "What is CCTV?",
+              "answer": "Closed Circuit Television — cameras deployed around buildings/campus, networked to central storage for long-term retention",
+              "difficulty": 1,
+              "id": "4.1.1765",
+              "distractors": [
+                "Centralized Certificate Television — a system for displaying security certificate status on monitors",
+                "Continuous Circuit Tracking Verification — automated monitoring of network circuit integrity",
+                "Closed Channel Threat Vector — an isolated network segment used for malware analysis"
+              ]
+            },
+            {
+              "question": "What modern features do CCTV cameras offer beyond basic video?",
+              "answer": "Motion detection, license plate reading, and facial recognition",
+              "difficulty": 2,
+              "id": "4.1.1766",
+              "distractors": [
+                "End-to-end encryption of video streams and automatic certificate-based authentication",
+                "Automatic firmware updates, self-healing network connections, and load balancing",
+                "Built-in firewall capabilities, packet inspection, and intrusion prevention"
+              ]
+            },
+            {
+              "question": "What are five types of door lock access methods?",
+              "answer": "Physical key (conventional lock/deadbolt), PIN code (electronic reader), RFID badge (token-based), biometric (handprint, fingerprint, retina scan), and multi-factor (combining methods)",
+              "difficulty": 3,
+              "id": "4.1.1767",
+              "distractors": [
+                "Username/password (web portal), certificate (smart card), token (RSA key fob), VPN (remote access), and SSO (single sign-on)",
+                "Fingerprint, retina scan, voice recognition, facial recognition, and palm vein scan",
+                "WPA3 key, MAC address filtering, 802.1X authentication, RADIUS, and TACACS+"
+              ]
+            },
+            {
               "question": "What is an example of multi-factor authentication for physical access?",
               "answer": "Using a badge to badge in, plus entering a PIN — prevents unauthorized access if someone finds a lost badge",
               "difficulty": 2,
-              "id": "4.1.1702",
+              "id": "4.1.1768",
               "distractors": [
-                "Using a fingerprint scanner alone — biometric data provides multiple factors within a single scan",
-                "Entering a username and password on a keypad mounted next to the door",
-                "Swiping two different badges — a company badge and a government-issued photo ID card"
+                "Entering a password on a computer, then answering a security question — two knowledge factors combined",
+                "Scanning a fingerprint, then performing a retina scan — two biometric factors combined",
+                "Typing a PIN at a keypad, then entering a second PIN on a different keypad — two PINs on separate devices"
               ]
             },
             {
               "question": "Compare data in transit vs. data at rest.",
               "answer": "In transit: data moving over network, secured by firewalls/IPS and TLS/IPsec. At rest: data on storage, secured by disk/database/file encryption and ACLs.",
               "difficulty": 3,
-              "id": "4.1.1703",
+              "id": "4.1.1769",
               "distractors": [
-                "Data in transit: encrypted data on USB drives being physically transported. Data at rest: unencrypted data flowing over internal LANs",
-                "Data in transit: temporary data in RAM during active processing. Data at rest: permanent data written to non-volatile storage",
-                "Data in transit: data being actively modified by applications. Data at rest: data in a read-only archive that cannot be changed"
+                "In transit: data in CPU registers, secured by memory encryption. At rest: data in RAM, secured by process isolation.",
+                "In transit: data being processed by applications, secured by sandboxing. At rest: data in backup tapes, secured by physical locks.",
+                "In transit: data moving between VLANs, secured by NAC. At rest: data in cloud storage, secured by tenant isolation."
+              ]
+            },
+            {
+              "question": "What is a honeypot?",
+              "answer": "A virtual network with virtual servers/components designed to attract attackers so their behavior and techniques can be observed",
+              "difficulty": 1,
+              "id": "4.1.1770",
+              "distractors": [
+                "A physical device placed between network segments that logs all passing traffic for forensic analysis",
+                "A hardened production server configured with extra logging to detect real attacks against live services",
+                "A sandboxed environment where suspected malware samples are executed and analyzed safely"
+              ]
+            },
+            {
+              "question": "Are attacks on honeypots typically performed by humans interactively?",
+              "answer": "No — attacks are usually automated scripts/programs targeting many systems simultaneously",
+              "difficulty": 2,
+              "id": "4.1.1771",
+              "distractors": [
+                "Yes — most attacks require a human to manually interact with the honeypot to test its vulnerabilities",
+                "Yes — attackers must manually verify each target before deploying custom exploits",
+                "No — attacks typically come from insider threats who already know the network topology"
+              ]
+            },
+            {
+              "question": "What is the constant challenge with honeypots?",
+              "answer": "Attackers are good at detecting what's real vs. fake, so honeypots must be continually improved to remain convincing",
+              "difficulty": 2,
+              "id": "4.1.1772",
+              "distractors": [
+                "Keeping the honeypot patched with the latest security updates without revealing its true purpose",
+                "Preventing legitimate users from accidentally connecting to the honeypot and losing productivity",
+                "Managing the high bandwidth costs generated by the volume of attack traffic directed at honeypots"
+              ]
+            },
+            {
+              "question": "What is a honeynet?",
+              "answer": "A larger deception framework combining multiple honeypot components (servers, workstations, routers, firewalls, switches, proxy servers, NAS) to simulate a real network",
+              "difficulty": 1,
+              "id": "4.1.1773",
+              "distractors": [
+                "A single high-interaction honeypot that emulates an entire operating system with full services",
+                "A network monitoring tool that captures and analyzes all traffic crossing network boundaries",
+                "A threat intelligence feed that aggregates known malicious IP addresses and domains"
+              ]
+            },
+            {
+              "question": "What is the difference between a honeypot and a honeynet?",
+              "answer": "A honeypot is a single virtual device/server; a honeynet combines many components (servers, workstations, routers, firewalls, switches, NAS) into a larger deception framework",
+              "difficulty": 2,
+              "id": "4.1.1774",
+              "distractors": [
+                "A honeypot captures network traffic passively; a honeynet actively responds to attackers with fake data",
+                "A honeypot runs on physical hardware; a honeynet runs entirely in the cloud",
+                "A honeypot targets external attackers; a honeynet is designed to detect insider threats"
+              ]
+            },
+            {
+              "question": "Why does a honeynet include multiple types of devices?",
+              "answer": "To make the environment seem real enough for attackers to move laterally, increasing the chance they engage with the deception",
+              "difficulty": 2,
+              "id": "4.1.1775",
+              "distractors": [
+                "To increase storage capacity so more attack data can be captured over longer time periods",
+                "To distribute the processing load of logging across multiple systems for better performance",
+                "To provide redundancy so the deception environment stays online even if individual components fail"
+              ]
+            },
+            {
+              "question": "Are honeypots/honeynets typically physical or virtual devices?",
+              "answer": "Commonly virtual devices",
+              "difficulty": 1,
+              "id": "4.1.1776",
+              "distractors": [
+                "Always physical devices — virtual machines are too easy for attackers to detect",
+                "A mix of physical and virtual — physical for routers and virtual for servers",
+                "Always containerized microservices running in a Kubernetes cluster"
+              ]
+            },
+            {
+              "question": "What is risk in IT security?",
+              "answer": "Exposure to something harmful or dangerous; describes how possible it is for something bad to happen",
+              "difficulty": 1,
+              "id": "4.1.1777",
+              "distractors": [
+                "The process of transferring data between two systems using encrypted protocols",
+                "A specific type of malware that exploits known vulnerabilities in network devices",
+                "The measurement of network throughput degradation caused by security controls"
+              ]
+            },
+            {
+              "question": "Does risk increase or decrease as an organization grows?",
+              "answer": "Risk tends to increase as the organization grows larger",
+              "difficulty": 1,
+              "id": "4.1.1778",
+              "distractors": [
+                "Risk remains constant regardless of organization size due to proportional security scaling",
+                "Risk decreases as the organization grows because larger budgets allow for better security tools",
+                "Risk fluctuates cyclically based on the organization's fiscal quarter and audit schedule"
+              ]
+            },
+            {
+              "question": "Name four situations where risk should be considered.",
+              "answer": "Expanding the organization, adding new applications, making configuration changes, or anything that might open the organization to attack",
+              "difficulty": 2,
+              "id": "4.1.1779",
+              "distractors": [
+                "Only when a security breach has already occurred and damage needs to be assessed",
+                "Only during annual compliance audits required by industry regulations",
+                "Only when deploying new firewall rules or updating IPS signatures"
+              ]
+            },
+            {
+              "question": "What are the two business decisions that can be made after identifying risk?",
+              "answer": "Continue with the task as-is, or add additional security controls to help protect it",
+              "difficulty": 2,
+              "id": "4.1.1780",
+              "distractors": [
+                "Immediately report the risk to law enforcement and halt all operations until cleared",
+                "Transfer the risk entirely to a third-party insurance provider and proceed without changes",
+                "Eliminate the risk completely by removing the affected system from the network permanently"
+              ]
+            },
+            {
+              "question": "What is a vulnerability?",
+              "answer": "A weakness in a system (operating system, application) that could allow unauthorized access to systems or data if exploited",
+              "difficulty": 1,
+              "id": "4.1.1781",
+              "distractors": [
+                "A type of malware that actively exploits systems to gain unauthorized access",
+                "An attack method that uses social engineering to trick users into revealing credentials",
+                "A security tool that scans networks for open ports and misconfigured services"
+              ]
+            },
+            {
+              "question": "Can vulnerabilities exist without being discovered?",
+              "answer": "Yes — undiscovered vulnerabilities may have existed for months or years before being found",
+              "difficulty": 2,
+              "id": "4.1.1782",
+              "distractors": [
+                "No — vulnerabilities are only created when a patch is released that identifies the flaw",
+                "No — vulnerabilities require an active exploit to exist before they can be classified",
+                "No — a flaw only becomes a vulnerability once it is publicly disclosed in a CVE database"
+              ]
+            },
+            {
+              "question": "Name four types of vulnerabilities.",
+              "answer": "Data injection, authentication flaws, exposed data, security misconfiguration",
+              "difficulty": 2,
+              "id": "4.1.1783",
+              "distractors": [
+                "Phishing, ransomware, DDoS attacks, man-in-the-middle",
+                "Port scanning, packet sniffing, brute force, social engineering",
+                "Buffer overflow, privilege escalation, lateral movement, data exfiltration"
+              ]
+            },
+            {
+              "question": "What is an exploit?",
+              "answer": "When someone takes advantage of a vulnerability to gain access to a system or data",
+              "difficulty": 1,
+              "id": "4.1.1784",
+              "distractors": [
+                "A weakness in a system that could potentially allow unauthorized access if discovered",
+                "A security patch released by a vendor to address a known flaw in their software",
+                "A tool used by penetration testers to scan for open ports and running services"
+              ]
+            },
+            {
+              "question": "What is the difference between a vulnerability and an exploit?",
+              "answer": "A vulnerability is a weakness; an exploit is the act of using that weakness to gain unauthorized access",
+              "difficulty": 2,
+              "id": "4.1.1785",
+              "distractors": [
+                "A vulnerability is an external threat; an exploit is an internal threat",
+                "A vulnerability is discovered by attackers; an exploit is discovered by defenders",
+                "A vulnerability requires a patch to fix; an exploit requires a firewall rule to block"
+              ]
+            },
+            {
+              "question": "Can exploits vary in complexity?",
+              "answer": "Yes — can range from straightforward (e.g., embedded username in code) to complex multi-step attacks",
+              "difficulty": 2,
+              "id": "4.1.1786",
+              "distractors": [
+                "No — all exploits require advanced technical skills and custom-written code to execute",
+                "No — exploits are always automated and require no human interaction or decision-making",
+                "No — exploits must follow a standardized framework and always use the same attack vectors"
+              ]
+            },
+            {
+              "question": "What is a threat?",
+              "answer": "What is used by an attacker to exploit a vulnerability; can be intentional (attacker) or accidental (fire, flood)",
+              "difficulty": 1,
+              "id": "4.1.1787",
+              "distractors": [
+                "A weakness in a system or application that can be exploited by a threat agent",
+                "The likelihood that a vulnerability will be exploited multiplied by the impact of that exploitation",
+                "A countermeasure put in place to reduce the potential impact of a vulnerability"
+              ]
+            },
+            {
+              "question": "Can threats be accidental?",
+              "answer": "Yes — fire, flood, and other natural disasters are examples of accidental threats",
+              "difficulty": 1,
+              "id": "4.1.1788",
+              "distractors": [
+                "No — threats are always intentional actions carried out by malicious actors",
+                "Yes — but only insider threats, such as employees accidentally deleting data",
+                "No — accidental events are classified as vulnerabilities, not threats"
+              ]
+            },
+            {
+              "question": "Where do most internet-based threats originate?",
+              "answer": "Outside the organization",
+              "difficulty": 1,
+              "id": "4.1.1789",
+              "distractors": [
+                "Inside the organization from disgruntled employees",
+                "From compromised third-party vendors in the supply chain",
+                "From the DMZ between internal and external networks"
+              ]
+            },
+            {
+              "question": "Describe the four-step threat process from vulnerability to impact.",
+              "answer": "1) OS has a vulnerability → 2) Threat agent creates a threat action → 3) Threat action exploits the vulnerability → 4) Result: system unavailability, data breach, or data exposure",
+              "difficulty": 3,
+              "id": "4.1.1790",
+              "distractors": [
+                "1) Attacker scans for open ports → 2) Attacker gains initial access → 3) Attacker escalates privileges → 4) Result: lateral movement across the network",
+                "1) Vulnerability is discovered → 2) Patch is released by vendor → 3) Organization fails to apply patch → 4) Result: zero-day exploit is used",
+                "1) Threat is identified → 2) Risk assessment is performed → 3) Controls are implemented → 4) Result: residual risk is accepted or mitigated"
+              ]
+            },
+            {
+              "question": "What are the three possible results of a successful exploit?",
+              "answer": "System unavailability, data breach, or data exposure",
+              "difficulty": 2,
+              "id": "4.1.1791",
+              "distractors": [
+                "Privilege escalation, lateral movement, or persistence",
+                "Financial loss, reputation damage, or regulatory fines",
+                "Denial of service, man-in-the-middle, or session hijacking"
+              ]
+            },
+            {
+              "question": "What does the CIA triad stand for?",
+              "answer": "Confidentiality, Integrity, Availability",
+              "difficulty": 1,
+              "id": "4.1.1792",
+              "distractors": [
+                "Control, Identity, Authentication",
+                "Compliance, Infrastructure, Authorization",
+                "Classification, Identification, Accountability"
+              ]
+            },
+            {
+              "question": "Why is the CIA triad sometimes called the AIC triad?",
+              "answer": "To differentiate it from the CIA (Central Intelligence Agency) of the US federal government",
+              "difficulty": 2,
+              "id": "4.1.1793",
+              "distractors": [
+                "Because Availability is considered the most important security property and is listed first",
+                "To emphasize that Authentication, Integrity, and Confidentiality are prioritized in that order",
+                "Because the ISO 27001 standard uses AIC as the official ordering of the three properties"
+              ]
+            },
+            {
+              "question": "What does Confidentiality mean in the CIA triad?",
+              "answer": "Protecting data from unauthorized access — achieved by restricting access or encrypting data",
+              "difficulty": 1,
+              "id": "4.1.1794",
+              "distractors": [
+                "Ensuring data has not been modified or tampered with during storage or transmission",
+                "Guaranteeing that systems and services remain accessible to authorized users at all times",
+                "Verifying the identity of users before granting them access to network resources"
+              ]
+            },
+            {
+              "question": "Name two methods for achieving confidentiality.",
+              "answer": "Restricting access to data and encrypting data",
+              "difficulty": 1,
+              "id": "4.1.1795",
+              "distractors": [
+                "Hashing data and using digital signatures",
+                "Implementing redundancy and load balancing",
+                "Using intrusion detection systems and firewalls"
+              ]
+            },
+            {
+              "question": "What does Integrity mean in the CIA triad?",
+              "answer": "Data has not been modified by unauthorized third parties; messages across the network can't be modified without detection",
+              "difficulty": 1,
+              "id": "4.1.1796",
+              "distractors": [
+                "Data is only accessible by authorized users who have the correct credentials and permissions",
+                "Systems remain operational and responsive to legitimate requests at all times",
+                "Users can be held accountable for their actions through audit trails and logging"
+              ]
+            },
+            {
+              "question": "What security mechanism is commonly associated with integrity?",
+              "answer": "Digital signatures",
+              "difficulty": 2,
+              "id": "4.1.1797",
+              "distractors": [
+                "Access control lists (ACLs)",
+                "Load balancers and failover clusters",
+                "Symmetric encryption algorithms like AES"
+              ]
+            },
+            {
+              "question": "What does Availability mean in the CIA triad?",
+              "answer": "Systems and data remain accessible to authorized users; security measures must not impair overall system access",
+              "difficulty": 1,
+              "id": "4.1.1798",
+              "distractors": [
+                "Data is protected from unauthorized viewing or disclosure through encryption and access controls",
+                "Data can be verified as unaltered since its creation through hashing and digital signatures",
+                "Users must prove their identity before gaining access to any system resources"
+              ]
+            },
+            {
+              "question": "Which leg of the CIA triad is violated if an attacker encrypts your files with ransomware?",
+              "answer": "Availability — authorized users can no longer access their data",
+              "difficulty": 3,
+              "id": "4.1.1799",
+              "distractors": [
+                "Confidentiality — the attacker can now read all of the encrypted files",
+                "Integrity — the data has been modified without authorization",
+                "All three legs are equally violated in a ransomware attack"
+              ]
+            },
+            {
+              "question": "Which leg of the CIA triad is violated if an attacker intercepts and alters a message in transit?",
+              "answer": "Integrity — the data was modified by an unauthorized third party",
+              "difficulty": 3,
+              "id": "4.1.1800",
+              "distractors": [
+                "Confidentiality — the message was intercepted and read by an unauthorized party",
+                "Availability — the message was prevented from reaching its intended recipient",
+                "Authentication — the sender's identity could no longer be verified"
+              ]
+            },
+            {
+              "question": "Which leg of the CIA triad is violated if sensitive data is leaked to the public?",
+              "answer": "Confidentiality — unauthorized parties gained access to protected data",
+              "difficulty": 3,
+              "id": "4.1.1801",
+              "distractors": [
+                "Integrity — the data was altered when it was exposed to the public",
+                "Availability — the leaked data is no longer available to its rightful owners",
+                "Non-repudiation — the organization cannot deny that the data existed"
+              ]
+            },
+            {
+              "question": "What are the two types of network segmentation?",
+              "answer": "Physical separation of devices, or logical/virtual segmentation (e.g., VLANs)",
+              "difficulty": 1,
+              "id": "4.1.1802",
+              "distractors": [
+                "Perimeter-based segmentation using firewalls, or host-based segmentation using endpoint software",
+                "North-south segmentation for external traffic, or east-west segmentation for internal traffic",
+                "Static segmentation using fixed routes, or dynamic segmentation using routing protocols"
+              ]
+            },
+            {
+              "question": "Name three purposes of network segmentation.",
+              "answer": "Performance (isolate high-bandwidth apps), security (limit device communication), compliance (e.g., PCI DSS requires it for credit card data)",
+              "difficulty": 2,
+              "id": "4.1.1803",
+              "distractors": [
+                "Redundancy (failover paths), scalability (add devices easily), monitoring (simplify traffic analysis)",
+                "Authentication (verify user identity), encryption (protect data in transit), logging (track all access)",
+                "Cost reduction (fewer switches needed), simplicity (easier management), speed (faster routing tables)"
+              ]
+            },
+            {
+              "question": "How does segmentation improve network performance?",
+              "answer": "High-bandwidth applications can be placed on their own network to transfer data more efficiently",
+              "difficulty": 2,
+              "id": "4.1.1804",
+              "distractors": [
+                "It increases the total available bandwidth by adding more physical network links between segments",
+                "It enables full-duplex communication by separating send and receive traffic onto different segments",
+                "It reduces latency by shortening the physical cable distance between network devices"
+              ]
+            },
+            {
+              "question": "Which compliance standard requires network segmentation for storing credit card data?",
+              "answer": "PCI DSS (Payment Card Industry Data Security Standard)",
+              "difficulty": 2,
+              "id": "4.1.1805",
+              "distractors": [
+                "HIPAA (Health Insurance Portability and Accountability Act)",
+                "SOX (Sarbanes-Oxley Act)",
+                "GDPR (General Data Protection Regulation)"
+              ]
+            },
+            {
+              "question": "What are IoT devices?",
+              "answer": "Internet of Things devices — sensors (cooling, heating, lighting), smart devices (home automation, video doorbells, cameras), and wearables (smartwatch, health monitor)",
+              "difficulty": 1,
+              "id": "4.1.1806",
+              "distractors": [
+                "Industrial network controllers that manage SCADA systems and manufacturing automation equipment",
+                "Any device that connects to the internet using IPv6 addressing instead of IPv4",
+                "Virtualized network appliances that run as software instances in cloud environments"
+              ]
+            },
+            {
+              "question": "What is the security concern with IoT devices?",
+              "answer": "They may be ingenious in operation but poorly designed from a security perspective",
+              "difficulty": 1,
+              "id": "4.1.1807",
+              "distractors": [
+                "They consume too much bandwidth and create network congestion that degrades other services",
+                "They use proprietary protocols that are incompatible with standard network monitoring tools",
+                "They require frequent firmware updates that cause extended downtime during maintenance windows"
+              ]
+            },
+            {
+              "question": "What is the recommended segmentation strategy for IoT devices?",
+              "answer": "Place them on their own network, separate from production data",
+              "difficulty": 1,
+              "id": "4.1.1808",
+              "distractors": [
+                "Connect them directly to the firewall DMZ alongside public-facing servers",
+                "Assign each IoT device its own VLAN with individual access control lists",
+                "Place them on the same network as workstations but behind a proxy server"
+              ]
+            },
+            {
+              "question": "What does IIoT stand for?",
+              "answer": "Industrial Internet of Things",
+              "difficulty": 1,
+              "id": "4.1.1809",
+              "distractors": [
+                "Integrated Internet of Technology",
+                "Intelligent Infrastructure of Things",
+                "Internal Internet of Telecommunications"
+              ]
+            },
+            {
+              "question": "How does IIoT differ from consumer IoT?",
+              "answer": "IIoT involves machine-to-machine communication for industrial systems; the stakes are higher — entire manufacturing lines depend on proper communication",
+              "difficulty": 2,
+              "id": "4.1.1810",
+              "distractors": [
+                "IIoT uses wired Ethernet connections exclusively, while consumer IoT relies on wireless protocols like Wi-Fi and Bluetooth",
+                "IIoT devices are managed by cloud providers, while consumer IoT devices are managed locally by the end user",
+                "IIoT operates on private IPv6 networks, while consumer IoT uses public IPv4 addressing"
+              ]
+            },
+            {
+              "question": "Why should IIoT devices be segmented?",
+              "answer": "To prevent external devices from disrupting critical machine-to-machine communication",
+              "difficulty": 2,
+              "id": "4.1.1811",
+              "distractors": [
+                "To reduce the cost of licensing industrial network management software",
+                "To allow IIoT devices to use legacy protocols that are incompatible with modern switches",
+                "To increase the bandwidth available for consumer IoT devices on the main network"
+              ]
+            },
+            {
+              "question": "Name two use cases where IIoT segmentation is critical.",
+              "answer": "Oil and gas systems, medical devices in hospitals",
+              "difficulty": 2,
+              "id": "4.1.1812",
+              "distractors": [
+                "Home automation systems, retail point-of-sale terminals",
+                "Office printers, employee smartphones",
+                "Guest Wi-Fi networks, video conferencing systems"
+              ]
+            },
+            {
+              "question": "What does SCADA stand for?",
+              "answer": "Supervisory Control and Data Acquisition",
+              "difficulty": 1,
+              "id": "4.1.1813",
+              "distractors": [
+                "Secure Communications and Data Architecture",
+                "System Control and Device Authentication",
+                "Sequential Command and Data Allocation"
+              ]
+            },
+            {
+              "question": "What does ICS stand for?",
+              "answer": "Industrial Control Systems",
+              "difficulty": 1,
+              "id": "4.1.1814",
+              "distractors": [
+                "Internet Communication Services",
+                "Integrated Circuit Security",
+                "Infrastructure Configuration Standards"
+              ]
+            },
+            {
+              "question": "What types of environments use SCADA/ICS?",
+              "answer": "Manufacturing environments and power generation",
+              "difficulty": 2,
+              "id": "4.1.1815",
+              "distractors": [
+                "Corporate offices and retail stores",
+                "Data centers and cloud hosting facilities",
+                "University campuses and public libraries"
+              ]
+            },
+            {
+              "question": "What are two key requirements for SCADA/ICS systems?",
+              "answer": "Real-time monitoring and immediate network control",
+              "difficulty": 2,
+              "id": "4.1.1816",
+              "distractors": [
+                "High data throughput and large storage capacity",
+                "Public internet access and remote user authentication",
+                "Cross-platform compatibility and open-source licensing"
+              ]
+            },
+            {
+              "question": "How are SCADA systems segmented from the rest of the network?",
+              "answer": "Completely segmented — only people with the right access in the right location can access them",
+              "difficulty": 2,
+              "id": "4.1.1817",
+              "distractors": [
+                "Connected via a DMZ with web application firewalls filtering traffic between zones",
+                "Placed on the same network as other systems but protected by host-based firewalls",
+                "Accessible remotely through a VPN that any authenticated employee can use"
+              ]
+            },
+            {
+              "question": "What does OT stand for?",
+              "answer": "Operational Technology",
+              "difficulty": 1,
+              "id": "4.1.1818",
+              "distractors": [
+                "Open Telecommunications",
+                "Organized Topology",
+                "Output Transmission"
+              ]
+            },
+            {
+              "question": "Name three examples of systems that use Operational Technology.",
+              "answer": "Electric grid, traffic control, manufacturing plants",
+              "difficulty": 2,
+              "id": "4.1.1819",
+              "distractors": [
+                "Email servers, web applications, database management systems",
+                "Cloud computing platforms, virtual desktops, SaaS applications",
+                "Wireless access points, network switches, load balancers"
+              ]
+            },
+            {
+              "question": "What is the most important requirement for OT systems?",
+              "answer": "Uptime and availability",
+              "difficulty": 1,
+              "id": "4.1.1820",
+              "distractors": [
+                "Data encryption and confidentiality",
+                "User authentication and access logging",
+                "Bandwidth throughput and low latency"
+              ]
+            },
+            {
+              "question": "Name three possible consequences of an OT system failure.",
+              "answer": "Traffic lights malfunction or stop working, manufacturing plants shut down completely, power generation/distribution disrupted",
+              "difficulty": 3,
+              "id": "4.1.1821",
+              "distractors": [
+                "Email delivery delayed, website loads slowly, VPN connections time out",
+                "Customer data exposed, passwords compromised, financial records leaked",
+                "Backup jobs fail, storage capacity exceeded, log files corrupted"
+              ]
+            },
+            {
+              "question": "How does network segmentation benefit OT systems?",
+              "answer": "Creates a stronger security posture, helping keep critical systems up and running at all times",
+              "difficulty": 2,
+              "id": "4.1.1822",
+              "distractors": [
+                "Enables OT devices to use faster proprietary protocols that are incompatible with standard networks",
+                "Allows OT systems to be managed remotely from any location without authentication",
+                "Reduces the cost of OT hardware by sharing resources with IT systems"
+              ]
+            },
+            {
+              "question": "What is a guest network?",
+              "answer": "A separate wireless network for visitors that allows internet access but prevents access to internal services",
+              "difficulty": 1,
+              "id": "4.1.1823",
+              "distractors": [
+                "A backup network that activates when the primary network fails to provide redundancy",
+                "A temporary VLAN created for contractors that expires after a set number of days",
+                "A network segment specifically for IoT devices that need limited internet connectivity"
+              ]
+            },
+            {
+              "question": "How can access to a guest network be controlled?",
+              "answer": "By passphrase or login authentication",
+              "difficulty": 1,
+              "id": "4.1.1824",
+              "distractors": [
+                "By MAC address filtering and port-based authentication only",
+                "By requiring a VPN connection before any traffic is allowed",
+                "By issuing temporary digital certificates to each guest device"
+              ]
+            },
+            {
+              "question": "What does BYOD stand for?",
+              "answer": "Bring Your Own Device (also called \"bring your own technology\")",
+              "difficulty": 1,
+              "id": "4.1.1825",
+              "distractors": [
+                "Build Your Own Datacenter",
+                "Backup Your Own Data",
+                "Bridge Your Office Domain"
+              ]
+            },
+            {
+              "question": "What is BYOD?",
+              "answer": "When an employee brings a personal mobile device into the office to use for work purposes",
+              "difficulty": 1,
+              "id": "4.1.1826",
+              "distractors": [
+                "When an organization provides company-owned devices to employees for both work and personal use",
+                "When employees use virtual desktops to access work resources from any device",
+                "When a company requires all employees to use the same model of smartphone for uniformity"
+              ]
+            },
+            {
+              "question": "How is segmentation applied to BYOD devices?",
+              "answer": "Personal data stays in one area, company data is in a separate segmented area — both on the same device",
+              "difficulty": 2,
+              "id": "4.1.1827",
+              "distractors": [
+                "BYOD devices are placed on the guest network and access corporate resources through a web portal only",
+                "All BYOD traffic is routed through a VPN tunnel that encrypts everything regardless of destination",
+                "BYOD devices connect to a separate physical network with its own switches and cabling"
+              ]
+            },
+            {
+              "question": "What requirement must a BYOD device meet before connecting?",
+              "answer": "It must meet the organization's security requirements",
+              "difficulty": 2,
+              "id": "4.1.1828",
+              "distractors": [
+                "It must be purchased from an approved vendor within the last two years",
+                "It must have the company's MDM software pre-installed by the manufacturer",
+                "It must use the same operating system as the organization's standard-issue devices"
+              ]
+            },
+            {
+              "question": "What happens to company data on a BYOD device when an employee leaves the organization?",
+              "answer": "Company data can be removed while personal data remains on the device",
+              "difficulty": 2,
+              "id": "4.1.1829",
+              "distractors": [
+                "The entire device must be factory reset, erasing both personal and company data",
+                "The device is confiscated by the organization and added to their asset inventory",
+                "All data remains on the device but the corporate VPN credentials are revoked"
+              ]
+            },
+            {
+              "question": "Who manages the company data on a BYOD device?",
+              "answer": "The system administrator",
+              "difficulty": 1,
+              "id": "4.1.1830",
+              "distractors": [
+                "The employee who owns the device",
+                "The device manufacturer's cloud service",
+                "The mobile carrier's enterprise management team"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "title": "Arp Dns Poisoning",
+          "concepts": [
+            {
+              "question": "What is spoofing?",
+              "answer": "Pretending to be another person or device",
+              "difficulty": 1,
+              "id": "4.2.1831",
+              "distractors": [
+                "Intercepting network traffic between two devices without either party's knowledge",
+                "Flooding a network with excessive traffic to overwhelm system resources",
+                "Gaining unauthorized access to a system by exploiting a software vulnerability"
+              ]
+            },
+            {
+              "question": "Name four examples of spoofing.",
+              "answer": "Fake web server, fake DNS server, email address spoofing, caller ID spoofing",
+              "difficulty": 2,
+              "id": "4.2.1832",
+              "distractors": [
+                "Packet sniffing, port scanning, banner grabbing, vulnerability scanning",
+                "SQL injection, cross-site scripting, buffer overflow, directory traversal",
+                "Phishing emails, keyloggers, ransomware, trojan horses"
+              ]
+            },
+            {
+              "question": "What type of attack is spoofing commonly used for?",
+              "answer": "On-path attacks — sitting in the middle of a conversation to monitor or change its contents",
+              "difficulty": 2,
+              "id": "4.2.1833",
+              "distractors": [
+                "Brute force attacks — trying every possible password combination until finding the correct one",
+                "Social engineering — manipulating people into revealing confidential information",
+                "Denial of service — overwhelming a target with traffic until it becomes unavailable"
+              ]
+            },
+            {
+              "question": "What is ARP poisoning?",
+              "answer": "An attack where the attacker pretends to be an IP address they are not by sending spoofed ARP responses, also called IP spoofing",
+              "difficulty": 2,
+              "id": "4.2.1834",
+              "distractors": [
+                "An attack that floods the switch's MAC address table with fake entries until it fails open and broadcasts all traffic",
+                "An attack that intercepts DHCP requests and provides false IP configuration to connecting clients",
+                "An attack that corrupts routing tables by injecting false route advertisements into the network"
+              ]
+            },
+            {
+              "question": "What does ARP resolve?",
+              "answer": "IP addresses to MAC addresses on a local network",
+              "difficulty": 1,
+              "id": "4.2.1835",
+              "distractors": [
+                "Domain names to IP addresses using hierarchical name servers",
+                "MAC addresses to switch port numbers in the forwarding table",
+                "Hostnames to IPv6 addresses using neighbor discovery"
+              ]
+            },
+            {
+              "question": "Describe how ARP normally works in four steps.",
+              "answer": "1) Device needs MAC address of another device (only has IP), 2) ARP broadcasts \"Who has this IP?\", 3) Device with that IP responds with its MAC, 4) Requester caches the response in local ARP cache",
+              "difficulty": 2,
+              "id": "4.2.1836",
+              "distractors": [
+                "1) Device sends DNS query for hostname, 2) DNS server returns IP address, 3) Device opens TCP connection to IP, 4) Three-way handshake completes",
+                "1) Device requests IP from DHCP server, 2) DHCP offers an available address, 3) Device accepts the offer, 4) DHCP acknowledges and assigns the lease",
+                "1) Device checks routing table for destination, 2) Packet forwarded to default gateway, 3) Router decrements TTL and forwards, 4) Destination sends ACK"
+              ]
+            },
+            {
+              "question": "What are the two security weaknesses of ARP that make poisoning possible?",
+              "answer": "No authentication or security in the ARP process, and ARP accepts any response — even unsolicited ones",
+              "difficulty": 2,
+              "id": "4.2.1837",
+              "distractors": [
+                "ARP uses cleartext communication, and ARP tables have no size limit allowing overflow attacks",
+                "ARP broadcasts are visible to all devices on the subnet, and ARP entries never expire from cache",
+                "ARP has no encryption for responses, and ARP requests can only be sent by the default gateway"
+              ]
+            },
+            {
+              "question": "In an ARP poisoning attack, does the attacker need to wait for the victim to send an ARP request?",
+              "answer": "No — ARP accepts unsolicited responses, so the attacker can send a spoofed response at any time",
+              "difficulty": 2,
+              "id": "4.2.1838",
+              "distractors": [
+                "Yes — the attacker must intercept a legitimate ARP request before sending a faster response than the real host",
+                "Yes — ARP only updates its cache when a new request is broadcast, so the attacker must wait for one",
+                "No — but the attacker must first flood the switch with MAC addresses to force it into hub mode"
+              ]
+            },
+            {
+              "question": "Describe the five steps of an ARP poisoning attack.",
+              "answer": "1) Attacker sends unsolicited ARP response to victim, 2) Response spoofs the router's IP with attacker's MAC, 3) Victim's ARP cache updates with attacker's MAC for the router's IP, 4) All victim-to...",
+              "difficulty": 3,
+              "id": "4.2.1839",
+              "distractors": [
+                "1) Attacker scans for open ports, 2) Exploits a vulnerable service, 3) Installs rootkit, 4) Creates backdoor account, 5) Exfiltrates data",
+                "1) Attacker floods switch MAC table, 2) Switch enters fail-open mode, 3) All traffic is broadcast, 4) Attacker captures credentials, 5) Attacker accesses systems",
+                "1) Attacker sends DHCP discover flood, 2) Legitimate pool exhausted, 3) Rogue DHCP server set up, 4) Victims get attacker's gateway, 5) Traffic routed through attacker"
+              ]
+            },
+            {
+              "question": "What is the result of a successful ARP poisoning attack?",
+              "answer": "An on-path attack — attacker intercepts and forwards all traffic between victim and router, with neither side realizing there's an attacker in the middle",
+              "difficulty": 2,
+              "id": "4.2.1840",
+              "distractors": [
+                "A denial of service — the victim loses all network connectivity because ARP entries point to a nonexistent device",
+                "A privilege escalation — the attacker gains administrative access to the victim's operating system",
+                "A session hijack — the attacker takes over the victim's authenticated session and locks them out"
+              ]
+            },
+            {
+              "question": "What is DNS poisoning?",
+              "answer": "Modifying information on the DNS server itself, or modifying DNS responses in transit — also called DNS spoofing",
+              "difficulty": 1,
+              "id": "4.2.1841",
+              "distractors": [
+                "Overwhelming a DNS server with queries until it can no longer respond to legitimate name resolution requests",
+                "Registering domain names similar to legitimate ones to trick users into visiting malicious sites",
+                "Intercepting DNS zone transfer requests to obtain a complete copy of a domain's DNS records"
+              ]
+            },
+            {
+              "question": "Name three methods of DNS poisoning.",
+              "answer": "Modify the host file on the client, send fake responses to legitimate DNS requests (on-path), or hack into the DNS server and change its configuration",
+              "difficulty": 3,
+              "id": "4.2.1842",
+              "distractors": [
+                "Register a similar domain name, create a phishing site, send emails with the fake link",
+                "Flood DNS with queries, exhaust server resources, redirect overflow traffic to malicious server",
+                "Exploit DNS zone transfers, copy all records, set up an identical rogue DNS server"
+              ]
+            },
+            {
+              "question": "Why does modifying a client's host file effectively poison DNS?",
+              "answer": "The host file has higher priority than DNS responses — entries always take precedence over anything from a DNS server",
+              "difficulty": 2,
+              "id": "4.2.1843",
+              "distractors": [
+                "The host file stores the DNS server addresses, so changing it redirects all queries to a malicious resolver",
+                "The host file caches all previous DNS lookups, so modifying it corrupts the entire local DNS cache",
+                "The host file controls which DNS port is used, allowing the attacker to redirect traffic to a rogue service"
+              ]
+            },
+            {
+              "question": "What type of attack is required to send fake responses to legitimate DNS requests in transit?",
+              "answer": "An on-path attack — the attacker must intercept and modify information on the fly in real time",
+              "difficulty": 2,
+              "id": "4.2.1844",
+              "distractors": [
+                "A brute force attack — the attacker must guess the DNS transaction ID to inject a response before the real server",
+                "A social engineering attack — the attacker must convince the DNS administrator to change server settings",
+                "A privilege escalation attack — the attacker must gain root access to the DNS server to modify zone files"
+              ]
+            },
+            {
+              "question": "Describe the DNS poisoning attack flow in six steps.",
+              "answer": "1) DNS server has legitimate IP for a domain, 2) Attacker uses ARP poisoning or hacks DNS server, 3) Changes stored IP to attacker's IP, 4) Subsequent queries return poisoned address, 5) Victim's c...",
+              "difficulty": 3,
+              "id": "4.2.1845",
+              "distractors": [
+                "1) Attacker registers similar domain, 2) Sets up phishing page, 3) Sends spam emails, 4) Victim clicks link, 5) Credentials harvested, 6) Attacker accesses accounts",
+                "1) Attacker scans for open resolvers, 2) Sends queries with spoofed source, 3) Resolvers amplify response, 4) Victim flooded, 5) Services unavailable, 6) Ransom demanded",
+                "1) Attacker initiates zone transfer, 2) Copies all DNS records, 3) Creates rogue server, 4) Advertises via DHCP, 5) Clients use rogue server, 6) All lookups return malicious IPs"
+              ]
+            },
+            {
+              "question": "How can ARP poisoning enable DNS poisoning?",
+              "answer": "ARP poisoning lets the attacker sit between the victim and DNS server, allowing them to intercept and modify DNS responses in transit",
+              "difficulty": 3,
+              "id": "4.2.1846",
+              "distractors": [
+                "ARP poisoning crashes the DNS server, forcing clients to use the attacker's rogue DNS server as a fallback",
+                "ARP poisoning gives the attacker the DNS server's MAC address, allowing direct administrative login",
+                "ARP poisoning floods the DNS server's ARP cache, causing it to send responses to the wrong clients"
+              ]
+            },
+            {
+              "question": "What happens to a victim's DNS cache after a successful DNS poisoning attack?",
+              "answer": "It stores the spoofed IP address, so the victim communicates with the attacker's server instead of the legitimate one",
+              "difficulty": 2,
+              "id": "4.2.1847",
+              "distractors": [
+                "It becomes completely empty, forcing the victim to query the DNS server for every new connection",
+                "It overflows with fake entries, causing the operating system's DNS resolver service to crash",
+                "It stores the correct IP but routes traffic through the attacker's MAC address via ARP redirection"
+              ]
+            },
+            {
+              "question": "What is an on-path attack?",
+              "answer": "An attacker sits in the middle of a conversation between two devices to monitor or change the contents of that conversation",
+              "difficulty": 1,
+              "id": "4.2.1848",
+              "distractors": [
+                "An attacker floods a network path with traffic to prevent legitimate communication between endpoints",
+                "An attacker exploits a routing protocol vulnerability to redirect traffic through an unauthorized path",
+                "An attacker gains physical access to network cabling to tap into the communication medium directly"
+              ]
+            },
+            {
+              "question": "What is a denial of service (DoS)?",
+              "answer": "An action or series of actions that causes a service to fail, often by overloading a system so no resources are available to legitimate users",
+              "difficulty": 1,
+              "id": "4.2.1849",
+              "distractors": [
+                "An attack that intercepts and modifies data in transit between a client and server without detection",
+                "An attack that gains unauthorized access to a system by exploiting authentication weaknesses",
+                "An attack that exfiltrates sensitive data from a network by tunneling it through allowed protocols"
+              ]
+            },
+            {
+              "question": "Name two methods an attacker can use to cause a DoS.",
+              "answer": "Overwhelm server capabilities with traffic, or exploit a vulnerability in an OS/application to cause failure",
+              "difficulty": 2,
+              "id": "4.2.1850",
+              "distractors": [
+                "Spoof the server's IP address to redirect clients, or poison DNS to send users to a fake site",
+                "Brute force the administrator password, or install a rootkit to gain persistent access",
+                "Intercept authentication tokens in transit, or perform session hijacking to take over connections"
+              ]
+            },
+            {
+              "question": "Why might an attacker use a DoS as a distraction?",
+              "answer": "To keep troubleshooting resources busy on one server while attacking another part of the network",
+              "difficulty": 2,
+              "id": "4.2.1851",
+              "distractors": [
+                "To generate enough log entries that the SIEM system overflows and stops recording events",
+                "To force the organization to switch to a backup system that has weaker security controls",
+                "To create network congestion that makes it easier to intercept packets between other hosts"
+              ]
+            },
+            {
+              "question": "Why is keeping systems up to date with security patches important for preventing DoS?",
+              "answer": "Attackers can pinpoint vulnerabilities in unpatched systems and cause them to fail relatively easily",
+              "difficulty": 2,
+              "id": "4.2.1852",
+              "distractors": [
+                "Patches increase the total bandwidth available to the system, making it harder to overwhelm with traffic",
+                "Updates automatically configure rate limiting and traffic shaping to block excessive connections",
+                "Patched systems are removed from public vulnerability databases, making them invisible to scanners"
+              ]
+            },
+            {
+              "question": "Give an example of a physical denial of service.",
+              "answer": "Pulling the main power for an entire facility",
+              "difficulty": 1,
+              "id": "4.2.1853",
+              "distractors": [
+                "Sending a specially crafted packet that causes a buffer overflow in the target's network stack",
+                "Flooding a web server with HTTP requests from thousands of distributed sources",
+                "Exploiting a SYN flood vulnerability to exhaust all available TCP connection slots"
+              ]
+            },
+            {
+              "question": "How can connecting switches without spanning tree protocol cause a DoS?",
+              "answer": "It creates a network loop — traffic multiplies and overwhelms switch capacity",
+              "difficulty": 2,
+              "id": "4.2.1854",
+              "distractors": [
+                "It causes MAC address table overflow — switches broadcast all traffic when tables are full",
+                "It triggers VLAN hopping — traffic leaks between segments and floods unauthorized ports",
+                "It exhausts DHCP addresses — duplicate requests from each switch deplete the address pool"
+              ]
+            },
+            {
+              "question": "Name three ways a DoS can occur accidentally.",
+              "answer": "Network loop from switches without STP, downloading a large file on limited bandwidth, physical environment issue (water/roof leak in data center)",
+              "difficulty": 3,
+              "id": "4.2.1855",
+              "distractors": [
+                "Phishing email clicked by employee, malware spreading laterally, ransomware encrypting file server",
+                "Firewall misconfiguration blocking all traffic, expired SSL certificate, DNS server hardware failure",
+                "Botnet attack from compromised IoT devices, SYN flood from spoofed addresses, UDP amplification attack"
+              ]
+            },
+            {
+              "question": "What does DDoS stand for?",
+              "answer": "Distributed Denial of Service",
+              "difficulty": 1,
+              "id": "4.2.1856",
+              "distractors": [
+                "Dynamic Domain of Service",
+                "Direct Denial of Security",
+                "Dual-path Disruption of Service"
+              ]
+            },
+            {
+              "question": "What makes a DDoS different from a regular DoS?",
+              "answer": "Multiple devices act in unison from different locations to cause the denial of service, rather than a single source",
+              "difficulty": 1,
+              "id": "4.2.1857",
+              "distractors": [
+                "A DDoS targets multiple services simultaneously, while a DoS only targets one service at a time",
+                "A DDoS uses application-layer exploits, while a DoS only uses network-layer flooding",
+                "A DDoS is always intentional and malicious, while a DoS can be accidental"
+              ]
+            },
+            {
+              "question": "What is a botnet's role in a DDoS attack?",
+              "answer": "It takes over millions of personal computers and directs all their traffic at one target server",
+              "difficulty": 2,
+              "id": "4.2.1858",
+              "distractors": [
+                "It scans for vulnerabilities on the target server to find the most effective exploit to use",
+                "It encrypts the attacker's traffic to prevent the target from identifying the source of the attack",
+                "It acts as a proxy network to anonymize the attacker's identity during the command phase"
+              ]
+            },
+            {
+              "question": "What is an asymmetric threat?",
+              "answer": "When an attacker uses very few resources to bring down systems with many more resources",
+              "difficulty": 2,
+              "id": "4.2.1859",
+              "distractors": [
+                "When an attacker uses asymmetric encryption to intercept and decrypt protected communications",
+                "When the attacker has more resources than the target, overwhelming them through sheer volume",
+                "When an attack targets both sides of a network connection simultaneously from different vectors"
+              ]
+            },
+            {
+              "question": "Why is a DDoS considered an asymmetric threat?",
+              "answer": "Devices with very limited internet access can combine to overwhelm systems with much greater resources",
+              "difficulty": 2,
+              "id": "4.2.1860",
+              "distractors": [
+                "Because the attack uses asymmetric encryption to hide its traffic from intrusion detection systems",
+                "Because the cost of defending against a DDoS is always greater than the cost of launching one",
+                "Because DDoS attacks target both the network and application layers at the same time"
+              ]
+            },
+            {
+              "question": "What is DDoS reflection and amplification?",
+              "answer": "Attacker sends a small amount of information; internet protocols multiply it into much larger traffic directed at the victim",
+              "difficulty": 2,
+              "id": "4.2.1861",
+              "distractors": [
+                "Attacker mirrors the victim's own traffic back at them by spoofing the destination address in packet headers",
+                "Attacker uses the victim's outbound traffic patterns to predict and block legitimate incoming responses",
+                "Attacker redirects traffic from multiple victims toward each other, creating a cascading failure loop"
+              ]
+            },
+            {
+              "question": "Why is DDoS amplification popular with attackers?",
+              "answer": "It doesn't require many resources from the attacker to overwhelm a remote host",
+              "difficulty": 2,
+              "id": "4.2.1862",
+              "distractors": [
+                "It makes the attack impossible to trace back to the original source because of protocol encryption",
+                "It bypasses all common DDoS mitigation services by using legitimate protocol traffic",
+                "It allows the attacker to maintain persistent access to the victim's network after the attack ends"
+              ]
+            },
+            {
+              "question": "Name three protocols that can be used for DDoS amplification.",
+              "answer": "NTP (Network Time Protocol), DNS (Domain Name System), ICMP (Internet Control Message Protocol)",
+              "difficulty": 3,
+              "id": "4.2.1863",
+              "distractors": [
+                "SSH (Secure Shell), HTTPS (HTTP Secure), SFTP (Secure File Transfer Protocol)",
+                "TCP (Transmission Control Protocol), ARP (Address Resolution Protocol), STP (Spanning Tree Protocol)",
+                "SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol), IMAP (Internet Message Access Protocol)"
+              ]
+            },
+            {
+              "question": "In DNS amplification, what makes the response much larger than the query?",
+              "answer": "Using the ANY parameter returns extensive data (e.g., DNSSEC key information) rather than just an IP address",
+              "difficulty": 3,
+              "id": "4.2.1864",
+              "distractors": [
+                "DNS responses include the full zone file for the domain, which contains all records and their TTL values",
+                "DNS servers append their entire cache of recent queries to every response for redundancy purposes",
+                "DNS responses are padded to a minimum size of 4096 bytes by the EDNS0 extension regardless of content"
+              ]
+            },
+            {
+              "question": "In DNS amplification, what is the ratio of query size to response size?",
+              "answer": "A 28-byte query can produce a 1,300-byte response",
+              "difficulty": 3,
+              "id": "4.2.1865",
+              "distractors": [
+                "A 64-byte query can produce a 512-byte response",
+                "A 128-byte query can produce a 4,096-byte response",
+                "A 44-byte query can produce a 556-byte response"
+              ]
+            },
+            {
+              "question": "What are the five steps in a DNS amplification DDoS attack?",
+              "answer": "1) Command and control sends instructions to botnet, 2) Botnet sends small DNS queries to open resolvers, 3) Botnet spoofs the source address to the victim's IP, 4) Resolvers send amplified respons...",
+              "difficulty": 3,
+              "id": "4.2.1866",
+              "distractors": [
+                "1) Attacker compromises DNS server, 2) Modifies zone records, 3) Victims query poisoned DNS, 4) Redirected to malicious site, 5) Credentials harvested",
+                "1) Attacker scans for vulnerable servers, 2) Exploits buffer overflow, 3) Installs backdoor, 4) Exfiltrates DNS zone data, 5) Sells data on dark web",
+                "1) Attacker sends SYN packets to target, 2) Target allocates resources for half-open connections, 3) Never completes handshake, 4) Table fills up, 5) Legitimate connections refused"
+              ]
+            },
+            {
+              "question": "Why do botnet devices spoof the source address during DNS amplification?",
+              "answer": "So the amplified DNS responses are sent to the victim's IP address instead of back to the botnet",
+              "difficulty": 3,
+              "id": "4.2.1867",
+              "distractors": [
+                "To prevent the DNS resolvers from rate-limiting repeated queries from the same source address",
+                "To make it appear the victim is attacking the DNS resolvers, getting the victim's IP blacklisted",
+                "To encrypt the DNS queries so intrusion detection systems cannot identify them as malicious"
+              ]
+            },
+            {
+              "question": "What is the role of open DNS resolvers in a DDoS amplification attack?",
+              "answer": "They receive small queries from the botnet and return much larger responses, which are directed at the victim due to spoofed source addresses",
+              "difficulty": 3,
+              "id": "4.2.1868",
+              "distractors": [
+                "They act as command and control servers, coordinating the botnet's attack timing and target selection",
+                "They store the malware used to infect new devices and expand the botnet's size before the attack",
+                "They proxy the attacker's traffic to hide the true origin of the DDoS command instructions"
+              ]
+            },
+            {
+              "question": "Who has been identified as the source of some DoS attacks against businesses?",
+              "answer": "Competitors — seeking to make rival services unavailable",
+              "difficulty": 2,
+              "id": "4.2.1869",
+              "distractors": [
+                "Government intelligence agencies conducting cyber espionage operations",
+                "Disgruntled former employees seeking revenge after termination",
+                "Automated vulnerability scanners triggering unintentional service disruptions"
+              ]
+            },
+            {
+              "question": "What does MAC stand for?",
+              "answer": "Media Access Control",
+              "difficulty": 1,
+              "id": "4.2.1870",
+              "distractors": [
+                "Multiple Access Channel",
+                "Machine Address Code",
+                "Message Authentication Code"
+              ]
+            },
+            {
+              "question": "What is a MAC address?",
+              "answer": "The hardware address of an ethernet adapter — unique per device, allowing traffic to be sent specifically to one device",
+              "difficulty": 1,
+              "id": "4.2.1871",
+              "distractors": [
+                "The IP address assigned by DHCP to identify a device on a network segment",
+                "A logical address assigned by the operating system that changes each time the device connects",
+                "A software-defined identifier used by routers to forward packets between subnets"
+              ]
+            },
+            {
+              "question": "What is the format of a MAC address?",
+              "answer": "48 bits (6 bytes), displayed as hexadecimal with colon or period delimiters",
+              "difficulty": 1,
+              "id": "4.2.1872",
+              "distractors": [
+                "32 bits (4 bytes), displayed as decimal with dot delimiters",
+                "64 bits (8 bytes), displayed as hexadecimal with dash delimiters",
+                "128 bits (16 bytes), displayed as hexadecimal with colon delimiters"
+              ]
+            },
+            {
+              "question": "What are the first 3 bytes of a MAC address called, and what do they identify?",
+              "answer": "OUI (Organizationally Unique Identifier) — identifies the manufacturer of the network adapter",
+              "difficulty": 2,
+              "id": "4.2.1873",
+              "distractors": [
+                "NIC (Network Interface Code) — identifies the model number of the network adapter",
+                "BIA (Burned-In Address) — identifies the firmware version of the network adapter",
+                "IAB (Individual Address Block) — identifies the geographic region where the adapter was sold"
+              ]
+            },
+            {
+              "question": "What do the last 3 bytes of a MAC address represent?",
+              "answer": "The NIC-specific value — effectively the serial number of that particular adapter",
+              "difficulty": 2,
+              "id": "4.2.1874",
+              "distractors": [
+                "The subnet identifier — indicates which VLAN the device belongs to",
+                "The OUI extension — identifies the product line of the network adapter",
+                "The checksum value — used for error detection during frame transmission"
+              ]
+            },
+            {
+              "question": "Where is a MAC address stored on a network adapter?",
+              "answer": "In ROM (Read-Only Memory) — referred to as the burned-in address",
+              "difficulty": 2,
+              "id": "4.2.1875",
+              "distractors": [
+                "In RAM — regenerated each time the adapter powers on",
+                "In the operating system registry — assigned during driver installation",
+                "In flash memory — updated with each firmware upgrade"
+              ]
+            },
+            {
+              "question": "What is a MAC address table on a switch?",
+              "answer": "A table mapping MAC addresses to switch interfaces, so the switch knows which port to use to reach each device",
+              "difficulty": 1,
+              "id": "4.2.1876",
+              "distractors": [
+                "A table mapping IP addresses to MAC addresses used for ARP resolution on the local subnet",
+                "A list of allowed MAC addresses that determines which devices can connect to the network",
+                "A routing table that maps MAC addresses to destination networks for inter-VLAN forwarding"
+              ]
+            },
+            {
+              "question": "How does a switch build its MAC address table?",
+              "answer": "By examining the source MAC address of inbound frames and recording which interface they arrived on",
+              "difficulty": 2,
+              "id": "4.2.1877",
+              "distractors": [
+                "By sending ARP requests to all connected devices and recording their responses",
+                "By receiving MAC address advertisements from connected devices via CDP or LLDP",
+                "By querying the DHCP server for a list of all leased addresses and their associated ports"
+              ]
+            },
+            {
+              "question": "How long do entries remain in a switch's MAC address table?",
+              "answer": "Approximately 5 minutes — entries are temporary and must be relearned after expiring",
+              "difficulty": 2,
+              "id": "4.2.1878",
+              "distractors": [
+                "Permanently — entries remain until manually cleared by an administrator",
+                "Approximately 30 seconds — entries expire quickly to prevent stale data",
+                "Approximately 24 hours — entries reset daily during maintenance windows"
+              ]
+            },
+            {
+              "question": "What happens when a switch receives a frame with a destination MAC that IS in its table?",
+              "answer": "The switch forwards the frame only out the mapped interface — other devices do not receive it",
+              "difficulty": 2,
+              "id": "4.2.1879",
+              "distractors": [
+                "The switch floods the frame to all ports to ensure reliable delivery",
+                "The switch sends the frame to the default gateway for routing to the destination",
+                "The switch buffers the frame and sends an ARP request to verify the destination is still active"
+              ]
+            },
+            {
+              "question": "What happens when a switch receives a frame with a destination MAC that is NOT in its table?",
+              "answer": "The switch floods the frame to every interface (except the one it arrived on)",
+              "difficulty": 2,
+              "id": "4.2.1880",
+              "distractors": [
+                "The switch drops the frame and sends an ICMP destination unreachable message to the source",
+                "The switch holds the frame in a buffer and sends an ARP request to locate the destination",
+                "The switch forwards the frame to the default gateway for routing"
+              ]
+            },
+            {
+              "question": "Why does a switch flood frames with unknown destination MACs?",
+              "answer": "To guarantee traffic always reaches its destination, even if the switch hasn't yet learned where that MAC is located",
+              "difficulty": 2,
+              "id": "4.2.1881",
+              "distractors": [
+                "To allow network monitoring tools to capture and analyze all traffic on the network",
+                "To trigger ARP responses from all connected devices so the switch can rebuild its MAC table",
+                "To notify all devices on the network that a new host is attempting to communicate"
+              ]
+            },
+            {
+              "question": "What is a MAC flooding attack?",
+              "answer": "Attacker sends many frames with different random source MAC addresses to fill the switch's MAC address table, causing all traffic to be flooded to every port",
+              "difficulty": 2,
+              "id": "4.2.1882",
+              "distractors": [
+                "Attacker sends frames with the gateway's MAC address to redirect all traffic through their machine",
+                "Attacker sends gratuitous ARP replies to poison the ARP caches of all devices on the network",
+                "Attacker continuously sends DHCP requests with spoofed MACs to exhaust the DHCP address pool"
+              ]
+            },
+            {
+              "question": "What is the effect of a successful MAC flooding attack?",
+              "answer": "The switch effectively becomes a hub — all inbound frames are forwarded to every interface, allowing the attacker to capture all traffic",
+              "difficulty": 2,
+              "id": "4.2.1883",
+              "distractors": [
+                "The switch crashes and all connected devices lose network connectivity until it reboots",
+                "The switch resets all port security settings, allowing unauthorized devices to connect freely",
+                "The switch begins dropping all frames, causing a complete denial of service on the network"
+              ]
+            },
+            {
+              "question": "Why does filling the MAC address table cause the switch to flood all traffic?",
+              "answer": "With the table full of garbage entries, legitimate destination MACs can't be found, triggering the normal behavior of flooding to all interfaces",
+              "difficulty": 3,
+              "id": "4.2.1884",
+              "distractors": [
+                "The switch enters a failsafe mode that disables all port filtering when memory is exhausted",
+                "The switch's spanning tree protocol resets, causing all ports to enter a forwarding state simultaneously",
+                "The switch's firmware crashes under the memory load and defaults to hub-like behavior"
+              ]
+            },
+            {
+              "question": "What normal switch behavior does MAC flooding exploit?",
+              "answer": "The default behavior of forwarding frames to all interfaces when the destination MAC is not found in the table",
+              "difficulty": 2,
+              "id": "4.2.1885",
+              "distractors": [
+                "The automatic learning process that adds source MAC addresses from inbound frames to the table",
+                "The spanning tree protocol that opens blocked ports when topology changes are detected",
+                "The port mirroring feature that copies traffic from one port to another for monitoring"
+              ]
+            },
+            {
+              "question": "What is the mitigation for MAC flooding?",
+              "answer": "Port security — limits how many MAC addresses can be learned on a single interface, making it much harder to fill the table",
+              "difficulty": 2,
+              "id": "4.2.1886",
+              "distractors": [
+                "DHCP snooping — validates DHCP messages and blocks unauthorized server responses on the network",
+                "MAC address filtering — only allows pre-approved MAC addresses to connect to switch ports",
+                "Storm control — limits the amount of broadcast traffic allowed on each interface per second"
+              ]
+            },
+            {
+              "question": "What protocol uses MAC addresses to maintain network uptime and avoid loops?",
+              "answer": "STP (Spanning Tree Protocol)",
+              "difficulty": 1,
+              "id": "4.2.1887",
+              "distractors": [
+                "LACP (Link Aggregation Control Protocol)",
+                "ARP (Address Resolution Protocol)",
+                "LLDP (Link Layer Discovery Protocol)"
+              ]
+            },
+            {
+              "question": "What is the difference between a switch and a hub in terms of traffic forwarding?",
+              "answer": "A switch forwards frames only to the specific interface mapped to the destination MAC; a hub forwards all frames to every interface",
+              "difficulty": 1,
+              "id": "4.2.1888",
+              "distractors": [
+                "A switch operates at Layer 3 and routes packets; a hub operates at Layer 2 and switches frames",
+                "A switch supports full-duplex on all ports; a hub only supports simplex communication",
+                "A switch creates separate collision domains per port; a hub creates separate broadcast domains per port"
+              ]
+            },
+            {
+              "question": "What is malware?",
+              "answer": "A broad term for malicious software that can cause problems, steal data, and disrupt computers",
+              "difficulty": 1,
+              "id": "4.2.1889",
+              "distractors": [
+                "A specific type of virus that targets network infrastructure devices like routers and switches",
+                "Software vulnerabilities in operating systems that attackers can exploit to gain access",
+                "Hardware-based exploits that compromise the BIOS or firmware of a computing device"
+              ]
+            },
+            {
+              "question": "Name five capabilities of malware.",
+              "answer": "Capturing keystrokes, capturing webcam images, forming botnets, displaying advertising, replicating to other devices",
+              "difficulty": 2,
+              "id": "4.2.1890",
+              "distractors": [
+                "Encrypting hard drives, stealing bandwidth, corrupting BIOS, disabling firewalls, spoofing DNS",
+                "Port scanning, packet sniffing, ARP poisoning, DNS hijacking, certificate forging",
+                "Brute-forcing passwords, escalating privileges, disabling antivirus, modifying logs, creating backdoors"
+              ]
+            },
+            {
+              "question": "What is a virus in the context of malware?",
+              "answer": "Malware that uses humans to replicate and spread — requires human intervention to move from one machine to another",
+              "difficulty": 1,
+              "id": "4.2.1891",
+              "distractors": [
+                "Malware that self-replicates across networks without any user interaction",
+                "Malware that disguises itself as legitimate software to trick users into installing it",
+                "Malware that embeds itself in the OS kernel and hides from detection software"
+              ]
+            },
+            {
+              "question": "What is a worm?",
+              "answer": "Malware that replicates from computer to computer without any human intervention",
+              "difficulty": 1,
+              "id": "4.2.1892",
+              "distractors": [
+                "Malware that requires a user to open an attachment or click a link to spread",
+                "Malware that disguises itself as a useful program while performing harmful actions in the background",
+                "Malware that encrypts files and demands payment for the decryption key"
+              ]
+            },
+            {
+              "question": "Why are worms considered more dangerous than viruses?",
+              "answer": "Worms can replicate without human intervention — no click or action needed, unlike viruses which require a human to spread them",
+              "difficulty": 2,
+              "id": "4.2.1893",
+              "distractors": [
+                "Worms encrypt all data on a system making recovery impossible without paying a ransom",
+                "Worms embed in the OS kernel making them undetectable by antivirus software",
+                "Worms target network infrastructure devices rather than endpoints, disrupting entire networks"
+              ]
+            },
+            {
+              "question": "Are worms common?",
+              "answer": "No — worms are relatively rare",
+              "difficulty": 1,
+              "id": "4.2.1894",
+              "distractors": [
+                "Yes — worms are the most common type of malware found in the wild",
+                "Yes — worms account for over 60% of all network-based attacks",
+                "No — worms were common in the early 2000s but have been completely eliminated by modern patches"
+              ]
+            },
+            {
+              "question": "What is ransomware?",
+              "answer": "Malware that encrypts all personal data on a system; attacker provides the decryption key only after payment (usually cryptocurrency)",
+              "difficulty": 1,
+              "id": "4.2.1895",
+              "distractors": [
+                "Malware that locks the user's screen and demands payment to unlock it without encrypting any files",
+                "Malware that steals personal data and threatens to publish it unless a ransom is paid",
+                "Malware that deletes system files gradually until the victim pays to stop the process"
+              ]
+            },
+            {
+              "question": "What types of data might ransomware target in a workplace?",
+              "answer": "Planning documents, employee PII (Personally Identifiable Information), private information, and financial details",
+              "difficulty": 2,
+              "id": "4.2.1896",
+              "distractors": [
+                "Only executable files and system binaries that prevent the OS from booting",
+                "Network configuration files, router firmware, and switch access control lists",
+                "Only database files stored on SQL servers and shared network drives"
+              ]
+            },
+            {
+              "question": "What is a Trojan horse?",
+              "answer": "Malware that pretends to be something else (e.g., a game) — installs malware behind the scenes while appearing to function as expected",
+              "difficulty": 1,
+              "id": "4.2.1897",
+              "distractors": [
+                "Malware that self-replicates across networks by exploiting unpatched vulnerabilities",
+                "Malware that hides within the operating system kernel to avoid detection by antivirus tools",
+                "Malware that waits for a specific trigger event before activating its malicious payload"
+              ]
+            },
+            {
+              "question": "What is a rootkit?",
+              "answer": "Malware that hides within the operating system itself — very difficult to detect and eradicate",
+              "difficulty": 2,
+              "id": "4.2.1898",
+              "distractors": [
+                "Malware that gains administrative access by brute-forcing the root password on Linux systems",
+                "Malware that records all keystrokes and sends login credentials to a remote attacker",
+                "Malware that disguises itself as a legitimate application while installing backdoors"
+              ]
+            },
+            {
+              "question": "Why are rootkits especially difficult to deal with?",
+              "answer": "They are part of the operating system itself, making them very hard to detect and very hard to remove",
+              "difficulty": 2,
+              "id": "4.2.1899",
+              "distractors": [
+                "They use strong encryption that even forensic tools cannot break or analyze",
+                "They spread automatically across the network before any detection can occur",
+                "They disable all security software immediately upon installation, preventing any scanning"
+              ]
+            },
+            {
+              "question": "What is a keylogger?",
+              "answer": "Malware that records every key pressed — especially valuable for capturing usernames and passwords during login, then sends them to the attacker",
+              "difficulty": 1,
+              "id": "4.2.1900",
+              "distractors": [
+                "Malware that captures screenshots at regular intervals and transmits them to the attacker",
+                "Malware that intercepts encrypted network traffic and decrypts it using stolen certificates",
+                "Hardware that bypasses operating system security by directly monitoring USB device signals"
+              ]
+            },
+            {
+              "question": "What is adware/spyware?",
+              "answer": "Malware that presents advertisements on screen, making money for the malware author",
+              "difficulty": 1,
+              "id": "4.2.1901",
+              "distractors": [
+                "Malware that monitors browsing habits and sells data without displaying any visible signs",
+                "Malware that redirects all web searches through a malicious proxy server",
+                "Malware that replaces legitimate ads on web pages with the attacker's advertisements"
+              ]
+            },
+            {
+              "question": "What is bloatware?",
+              "answer": "Software preloaded on a system that is never used — not directly malicious but takes up storage space and runs processes in memory",
+              "difficulty": 1,
+              "id": "4.2.1902",
+              "distractors": [
+                "Malware that consumes all available disk space by continuously creating temporary files",
+                "Software that sends usage telemetry data back to the manufacturer without user consent",
+                "Applications that were once useful but have become vulnerable due to lack of security updates"
+              ]
+            },
+            {
+              "question": "Why should bloatware be removed?",
+              "answer": "It takes up storage space and runs active processes in memory — removing it frees resources for legitimate applications",
+              "difficulty": 1,
+              "id": "4.2.1903",
+              "distractors": [
+                "It contains known security vulnerabilities that attackers can exploit to gain system access",
+                "It sends sensitive user data back to the manufacturer, creating a privacy risk",
+                "It conflicts with enterprise security software and prevents proper endpoint protection"
+              ]
+            },
+            {
+              "question": "What is a logic bomb?",
+              "answer": "Malware that waits for a particular event (time of day, day of week) before executing — dormant until trigger condition is met",
+              "difficulty": 2,
+              "id": "4.2.1904",
+              "distractors": [
+                "Malware that overwhelms a system's CPU with complex mathematical calculations causing a crash",
+                "A denial-of-service technique that sends malformed packets designed to exploit parsing vulnerabilities",
+                "Malware that self-destructs after executing its payload, leaving no forensic evidence behind"
+              ]
+            },
+            {
+              "question": "Describe a combined malware attack using a worm, backdoor, and bot.",
+              "answer": "1) Worm exploits an unpatched vulnerability, 2) Installs a remote access backdoor, 3) Attacker installs a bot to view and control the computer remotely",
+              "difficulty": 3,
+              "id": "4.2.1905",
+              "distractors": [
+                "1) Phishing email delivers a Trojan, 2) Trojan encrypts files with ransomware, 3) Attacker demands cryptocurrency payment for decryption",
+                "1) Drive-by download installs a rootkit, 2) Rootkit disables antivirus, 3) Keylogger captures all credentials and exfiltrates them",
+                "1) Virus infects a shared file, 2) Users spread it by copying the file, 3) Logic bomb triggers on a specific date deleting all data"
+              ]
+            },
+            {
+              "question": "Name four ways malware can execute on a system.",
+              "answer": "Worms run automatically, clicking links in emails, pop-ups from websites enticing clicks, drive-by downloads that execute without clicking",
+              "difficulty": 2,
+              "id": "4.2.1906",
+              "distractors": [
+                "USB autorun, brute-force login, DNS poisoning, buffer overflow exploitation",
+                "BIOS infection, firmware modification, bootloader compromise, hardware implant activation",
+                "Social engineering calls, physical device theft, insider threats, supply chain tampering"
+              ]
+            },
+            {
+              "question": "What is a drive-by download?",
+              "answer": "An executable that downloads onto a system without the user clicking anything on the page",
+              "difficulty": 2,
+              "id": "4.2.1907",
+              "distractors": [
+                "A download that requires the user to click a disguised button or link on a web page",
+                "Malware distributed through USB drives left in public places for people to find and plug in",
+                "A technique where malware is downloaded by redirecting DNS queries to malicious servers"
+              ]
+            },
+            {
+              "question": "What is the primary prevention for worm infections?",
+              "answer": "Keep the OS and all applications up to date with the latest security patches — patching closes the vulnerabilities worms exploit",
+              "difficulty": 2,
+              "id": "4.2.1908",
+              "distractors": [
+                "Install and regularly update antivirus software to detect worm signatures before execution",
+                "Disable all inbound network connections using a host-based firewall on every endpoint",
+                "Train users to never open email attachments or click links from unknown senders"
+              ]
+            },
+            {
+              "question": "Name three best practices for preventing malware infection.",
+              "answer": "Never click links embedded in emails, keep OS up to date with security patches, keep all applications updated",
+              "difficulty": 2,
+              "id": "4.2.1909",
+              "distractors": [
+                "Use only wired connections, disable Bluetooth, enable MAC filtering on all access points",
+                "Install multiple antivirus programs, run full scans daily, disable Windows Defender",
+                "Change passwords monthly, use biometric authentication, enable two-factor on all accounts"
+              ]
+            },
+            {
+              "question": "What does PII stand for?",
+              "answer": "Personally Identifiable Information",
+              "difficulty": 1,
+              "id": "4.2.1910",
+              "distractors": [
+                "Private Internet Infrastructure",
+                "Protected Internal Identifier",
+                "Personal Information Index"
+              ]
+            },
+            {
+              "question": "What is a botnet?",
+              "answer": "Multiple computers infected with malware, all working together under an attacker's control",
+              "difficulty": 1,
+              "id": "4.2.1911",
+              "distractors": [
+                "A network of honeypots designed to attract and analyze attacker behavior",
+                "An automated script that scans the internet for vulnerable systems to exploit",
+                "A legitimate distributed computing network used for large-scale data processing"
+              ]
+            },
+            {
+              "question": "Why is DHCP vulnerable to rogue servers?",
+              "answer": "No security is built into the DHCP protocol — any device on the network can respond to DHCP requests",
+              "difficulty": 1,
+              "id": "4.2.1912",
+              "distractors": [
+                "DHCP uses unencrypted broadcast traffic that attackers can easily intercept and modify",
+                "DHCP servers don't verify client identities, allowing attackers to exhaust the address pool",
+                "DHCP leases are too short, forcing frequent renewals that create windows for attack"
+              ]
+            },
+            {
+              "question": "What damage can a rogue DHCP server cause?",
+              "answer": "Duplicate IP addresses, invalid IPs, loss of internet connectivity, and effective network shutdown",
+              "difficulty": 2,
+              "id": "4.2.1913",
+              "distractors": [
+                "DNS cache poisoning, SSL certificate theft, man-in-the-middle attacks on encrypted traffic",
+                "MAC address table overflow, switch port shutdown, spanning tree recalculation",
+                "VLAN hopping, trunk port exploitation, inter-VLAN routing bypass"
+              ]
+            },
+            {
+              "question": "What is DHCP snooping?",
+              "answer": "An enterprise switch feature that examines all DHCP requests and only allows responses from legitimate DHCP servers",
+              "difficulty": 2,
+              "id": "4.2.1914",
+              "distractors": [
+                "A network monitoring tool that captures and logs all DHCP traffic for forensic analysis",
+                "A DHCP server feature that validates client MAC addresses before assigning IP addresses",
+                "A firewall rule set that blocks DHCP traffic from crossing subnet boundaries"
+              ]
+            },
+            {
+              "question": "How does Microsoft Active Directory help prevent rogue DHCP servers?",
+              "answer": "AD determines which DHCP servers are authorized to hand out IP addresses and only allows those servers to respond",
+              "difficulty": 2,
+              "id": "4.2.1915",
+              "distractors": [
+                "AD encrypts all DHCP traffic with Kerberos authentication to prevent spoofed responses",
+                "AD assigns static IP addresses to all domain-joined computers, eliminating the need for DHCP",
+                "AD monitors network traffic and automatically disables switch ports serving unauthorized DHCP"
+              ]
+            },
+            {
+              "question": "What three steps should you take after finding a rogue DHCP server?",
+              "answer": "Remove it from the network, eliminate it from responding to DHCP requests, then renew all IP addresses to ensure everyone has a legitimate IP",
+              "difficulty": 2,
+              "id": "4.2.1916",
+              "distractors": [
+                "Block its MAC address at the switch, restart the legitimate DHCP server, flush all DNS caches",
+                "Isolate it in a quarantine VLAN, image the device for forensics, notify law enforcement",
+                "Disable the switch port, reset all client network adapters, reconfigure the DHCP scope"
+              ]
+            },
+            {
+              "question": "What is a rogue access point?",
+              "answer": "An unauthorized access point plugged into any ethernet connection on the network — may not be malicious (employee expanding coverage) but still creates security issues",
+              "difficulty": 1,
+              "id": "4.2.1917",
+              "distractors": [
+                "A legitimate access point that has been compromised by an attacker and is now intercepting traffic",
+                "An access point configured with a stronger signal to attract clients away from authorized APs",
+                "A misconfigured access point broadcasting on unauthorized channels causing interference"
+              ]
+            },
+            {
+              "question": "Besides a physical AP, how else can a rogue access point be created?",
+              "answer": "Using an OS wireless sharing feature that turns an entire computer into an access point",
+              "difficulty": 2,
+              "id": "4.2.1918",
+              "distractors": [
+                "By exploiting a vulnerability in the legitimate AP's firmware to create a secondary SSID",
+                "By configuring a Bluetooth adapter to bridge wireless and wired network connections",
+                "By using a network TAP device to mirror traffic from a wired port to a wireless interface"
+              ]
+            },
+            {
+              "question": "Name two methods for detecting rogue access points.",
+              "answer": "Periodic network scans, and physically walking the facility with a wireless analyzer",
+              "difficulty": 2,
+              "id": "4.2.1919",
+              "distractors": [
+                "Checking DHCP logs for unknown MACs, and reviewing firewall deny entries for unauthorized IPs",
+                "Monitoring bandwidth usage spikes, and checking switch port utilization reports",
+                "Running vulnerability scans on all endpoints, and reviewing Active Directory login events"
+              ]
+            },
+            {
+              "question": "How does 802.1X (Network Access Control) mitigate rogue access points?",
+              "answer": "It requires authentication before granting network access — even if a rogue AP is plugged in, users can't access the network without proper credentials",
+              "difficulty": 2,
+              "id": "4.2.1920",
+              "distractors": [
+                "It encrypts all wireless traffic with WPA3, preventing rogue APs from reading intercepted data",
+                "It detects unauthorized devices on switch ports and automatically shuts down those ports",
+                "It validates the certificate of every access point before allowing clients to connect"
+              ]
+            },
+            {
+              "question": "What is a wireless evil twin?",
+              "answer": "A malicious rogue access point designed to look exactly like legitimate APs at a location, combining phishing techniques with wireless networking",
+              "difficulty": 2,
+              "id": "4.2.1921",
+              "distractors": [
+                "A legitimate AP that has been compromised and is silently forwarding traffic copies to an attacker",
+                "Two access points on the same channel causing interference and degrading network performance",
+                "A backup access point that activates when the primary fails but has weaker security settings"
+              ]
+            },
+            {
+              "question": "Name four characteristics of a wireless evil twin.",
+              "answer": "Same or similar SSID, similar security settings, may duplicate captive portal configuration, increased radio output power to overpower legitimate APs",
+              "difficulty": 3,
+              "id": "4.2.1922",
+              "distractors": [
+                "Hidden SSID, WEP encryption only, default admin credentials, placed in physically hidden locations",
+                "Different channel, MAC address cloning, DNS redirection, lower power to avoid detection",
+                "Open authentication, bandwidth throttling, VLAN tagging, certificate-based encryption"
+              ]
+            },
+            {
+              "question": "Why do evil twins increase their radio output power?",
+              "answer": "To overpower legitimate access points in the area and become the primary AP that devices connect to",
+              "difficulty": 2,
+              "id": "4.2.1923",
+              "distractors": [
+                "To extend the attack range so they can capture traffic from devices further away",
+                "To cause radio frequency interference that forces legitimate APs to shut down",
+                "To penetrate walls and floors so they can reach devices in adjacent secured areas"
+              ]
+            },
+            {
+              "question": "What is the mitigation for a wireless evil twin even if you connect to one?",
+              "answer": "Always use encrypted traffic (VPN or HTTPS) — encrypted data can't be read even if the attacker intercepts it",
+              "difficulty": 2,
+              "id": "4.2.1924",
+              "distractors": [
+                "Verify the AP's MAC address matches your organization's documented hardware inventory list",
+                "Only connect to networks that require WPA3 Enterprise authentication with certificates",
+                "Use a wireless intrusion detection system to alert when connected to an unauthorized AP"
+              ]
+            },
+            {
+              "question": "What is an on-path attack?",
+              "answer": "An attacker sits in the middle of a conversation between two devices, receives and examines information, possibly changes it, then forwards it — also called man in the middle",
+              "difficulty": 1,
+              "id": "4.2.1925",
+              "distractors": [
+                "An attacker captures traffic passively by placing a tap on the network cable without modifying data",
+                "An attacker floods a network path with traffic to cause a denial of service between two endpoints",
+                "An attacker exploits routing protocols to redirect traffic through a longer, attacker-controlled path"
+              ]
+            },
+            {
+              "question": "In an on-path attack, do the source and destination know the attacker is there?",
+              "answer": "No — neither side has any idea the attacker is in the middle or that data was changed",
+              "difficulty": 1,
+              "id": "4.2.1926",
+              "distractors": [
+                "Yes — both sides receive certificate warnings that indicate a third party is intercepting traffic",
+                "Only the destination knows — it can detect modified packets through checksum validation",
+                "The source may detect latency increases but the destination has no visibility into the interception"
+              ]
+            },
+            {
+              "question": "Name five types of on-path attacks.",
+              "answer": "Wireless evil twin, ARP poisoning, session hijacking, HTTPS spoofing, Wi-Fi eavesdropping",
+              "difficulty": 3,
+              "id": "4.2.1927",
+              "distractors": [
+                "DDoS, SYN flood, ping of death, smurf attack, DNS amplification",
+                "SQL injection, XSS, CSRF, buffer overflow, privilege escalation",
+                "MAC flooding, VLAN hopping, switch spoofing, DHCP starvation, rogue DHCP"
+              ]
+            },
+            {
+              "question": "What is the general mitigation for on-path attacks?",
+              "answer": "Encrypt all data — even if the attacker is in the middle, they cannot read the information being transferred",
+              "difficulty": 2,
+              "id": "4.2.1928",
+              "distractors": [
+                "Use intrusion detection systems to identify and block the attacker's traffic in real time",
+                "Implement network segmentation with firewalls between every pair of communicating devices",
+                "Enable port security on all switches to prevent unauthorized devices from connecting"
+              ]
+            },
+            {
+              "question": "What is the difference between a rogue access point and a wireless evil twin?",
+              "answer": "A rogue AP is any unauthorized access point (may not be malicious); a wireless evil twin is specifically malicious and designed to impersonate legitimate APs",
+              "difficulty": 2,
+              "id": "4.2.1929",
+              "distractors": [
+                "A rogue AP uses the same SSID as legitimate APs; an evil twin uses a different but similar-sounding SSID",
+                "A rogue AP is connected to the wired network; an evil twin operates standalone with no wired connection",
+                "A rogue AP operates on a different channel; an evil twin operates on the same channel as the legitimate AP"
+              ]
+            },
+            {
+              "question": "What is phishing?",
+              "answer": "Social engineering with spoofing — pretending to be someone else to trick victims into giving up personal information",
+              "difficulty": 1,
+              "id": "4.2.1930",
+              "distractors": [
+                "A technical attack that exploits DNS vulnerabilities to redirect users to fake websites",
+                "Scanning a network for open ports and vulnerable services to find entry points",
+                "Intercepting unencrypted network traffic to capture credentials transmitted in plaintext"
+              ]
+            },
+            {
+              "question": "Name five indicators of a phishing email.",
+              "answer": "URL doesn't match expected domain, graphics slightly off, spelling/grammar errors, mismatched fonts, sender's email domain doesn't match the claimed organization",
+              "difficulty": 2,
+              "id": "4.2.1931",
+              "distractors": [
+                "Large attachment size, sent during off-hours, CC'd to many recipients, no subject line, missing email signature",
+                "Uses HTTPS links, has company logo, comes from a known contact, includes a phone number, has unsubscribe link",
+                "Flagged by spam filter, contains zip attachment, requests urgent action, has tracking pixel, uses URL shortener"
+              ]
+            },
+            {
+              "question": "What is the attacker's goal with a phishing page?",
+              "answer": "Trick the victim into entering credentials on a fake page, sending them directly to the attacker",
+              "difficulty": 1,
+              "id": "4.2.1932",
+              "distractors": [
+                "Install malware through a drive-by download when the victim views the page",
+                "Redirect the victim to a legitimate site after injecting malicious JavaScript",
+                "Collect the victim's IP address and browser fingerprint for future targeted attacks"
+              ]
+            },
+            {
+              "question": "What is the best practice regarding links in email messages?",
+              "answer": "Never click links inside email messages",
+              "difficulty": 1,
+              "id": "4.2.1933",
+              "distractors": [
+                "Hover over links to verify the URL before clicking them",
+                "Only click links from contacts in your address book",
+                "Right-click and scan links with antivirus before opening"
+              ]
+            },
+            {
+              "question": "What is shoulder surfing?",
+              "answer": "Viewing someone's screen in a public location such as an airport, restaurant, or coffee shop",
+              "difficulty": 1,
+              "id": "4.2.1934",
+              "distractors": [
+                "Installing a hidden camera near an ATM or point-of-sale terminal to capture PIN entries",
+                "Intercepting wireless keyboard signals from a nearby location to capture keystrokes",
+                "Standing behind someone at an ATM to observe their PIN as they enter it on the keypad"
+              ]
+            },
+            {
+              "question": "How can shoulder surfing be performed from a distance?",
+              "answer": "Using binoculars or a telescope from another building to read a screen",
+              "difficulty": 2,
+              "id": "4.2.1935",
+              "distractors": [
+                "By intercepting electromagnetic emissions from a monitor using Van Eck phreaking equipment",
+                "By connecting to the target's screen-sharing session through an unsecured remote desktop protocol",
+                "By using a high-powered directional antenna to capture wireless display signals"
+              ]
+            },
+            {
+              "question": "What is the advanced/remote version of shoulder surfing?",
+              "answer": "Malware that enables the victim's camera to watch them remotely",
+              "difficulty": 2,
+              "id": "4.2.1936",
+              "distractors": [
+                "Van Eck phreaking — intercepting electromagnetic emissions from a display to reconstruct the image",
+                "Deploying a hidden wireless camera in the target's workspace to record their screen activity",
+                "Using screen-capture malware that takes periodic screenshots and sends them to the attacker"
+              ]
+            },
+            {
+              "question": "Name four mitigations for shoulder surfing.",
+              "answer": "Be aware of surroundings (sit with back to wall), avoid viewing sensitive info in public, use privacy filters on LCD screens, position monitors away from windows",
+              "difficulty": 2,
+              "id": "4.2.1937",
+              "distractors": [
+                "Use full-disk encryption, enable screen timeout, require biometric login, install anti-keylogger software",
+                "Enable remote wipe, use VPN for all connections, disable Bluetooth, turn off NFC",
+                "Install security cameras, use badge access rooms, require escorts for visitors, implement clean desk policy"
+              ]
+            },
+            {
+              "question": "How do privacy filters prevent shoulder surfing?",
+              "answer": "They make the display appear black from side angles — only the person directly in front can see the screen content",
+              "difficulty": 1,
+              "id": "4.2.1938",
+              "distractors": [
+                "They reduce screen brightness to a level that cameras and binoculars cannot capture clearly",
+                "They overlay a scrambled pattern on the display that only resolves with special decoding glasses",
+                "They automatically detect nearby faces and blur sensitive content when multiple viewers are present"
+              ]
+            },
+            {
+              "question": "What is tailgating?",
+              "answer": "Following an authorized person through a secured door without their knowledge — e.g., catching a door before it closes after someone badges in",
+              "difficulty": 1,
+              "id": "4.2.1939",
+              "distractors": [
+                "Impersonating a delivery person or contractor to convince reception to grant building access",
+                "Using a cloned badge or stolen credentials to enter a secured area independently",
+                "Propping open a secured door with an object so it can be accessed later without authorization"
+              ]
+            },
+            {
+              "question": "What is piggybacking?",
+              "answer": "An authorized person knowingly lets an unauthorized person in — e.g., asking someone to hold the door while carrying donuts or lunch",
+              "difficulty": 1,
+              "id": "4.2.1940",
+              "distractors": [
+                "Following closely behind an authorized person through a secured door without their knowledge",
+                "Using someone else's VPN credentials to access a corporate network remotely",
+                "Connecting an unauthorized device to a legitimate user's already-authenticated network session"
+              ]
+            },
+            {
+              "question": "What is the difference between tailgating and piggybacking?",
+              "answer": "Tailgating: the authorized person doesn't know you're following them in. Piggybacking: the authorized person knowingly helps you get in.",
+              "difficulty": 2,
+              "id": "4.2.1941",
+              "distractors": [
+                "Tailgating uses physical force to enter; piggybacking uses social engineering to gain entry",
+                "Tailgating targets secured server rooms; piggybacking targets main building entrances",
+                "Tailgating involves cloning access badges; piggybacking involves borrowing someone's badge temporarily"
+              ]
+            },
+            {
+              "question": "Name four mitigations for tailgating and piggybacking.",
+              "answer": "Visitor badge policy, challenge people without badges, one-person-at-a-time badging, access control vestibule (airlock)",
+              "difficulty": 2,
+              "id": "4.2.1942",
+              "distractors": [
+                "Security cameras, alarm systems, motion sensors, biometric locks on all doors",
+                "Background checks, NDA agreements, escort requirements, quarterly security awareness training",
+                "Turnstiles, security guards at every entrance, facial recognition, weight-sensing floor pads"
+              ]
+            },
+            {
+              "question": "What is an access control vestibule?",
+              "answer": "A mechanical airlock that allows only one person into a building at a time — enforces one-person-at-a-time access physically rather than by policy",
+              "difficulty": 2,
+              "id": "4.2.1943",
+              "distractors": [
+                "A reception area where visitors must check in and receive a temporary badge before entering",
+                "A biometric scanning booth that verifies identity using fingerprint and facial recognition simultaneously",
+                "A security checkpoint with metal detectors and bag scanners at the building entrance"
+              ]
+            },
+            {
+              "question": "What is dumpster diving?",
+              "answer": "Going through an organization's trash to find sensitive information",
+              "difficulty": 1,
+              "id": "4.2.1944",
+              "distractors": [
+                "Searching through publicly available online records and social media to gather intelligence",
+                "Recovering deleted files from discarded hard drives and storage media",
+                "Scanning recycled IP address ranges for systems that still have active services running"
+              ]
+            },
+            {
+              "question": "What types of information can be found through dumpster diving?",
+              "answer": "Names (for impersonation/phishing), contact information, and project details",
+              "difficulty": 2,
+              "id": "4.2.1945",
+              "distractors": [
+                "Encryption keys, root passwords, and VPN connection certificates",
+                "Source code printouts, network diagrams, and firewall rule sets",
+                "Credit card numbers, Social Security numbers, and bank account credentials"
+              ]
+            },
+            {
+              "question": "When is the best timing for dumpster diving?",
+              "answer": "End of a quarter or end of a big project — when a lot of information may be thrown out",
+              "difficulty": 2,
+              "id": "4.2.1946",
+              "distractors": [
+                "Early morning before office staff arrives and before trash collection services come",
+                "During holidays when fewer security personnel are monitoring the premises",
+                "Immediately after a company layoff when employee files are being purged"
+              ]
+            },
+            {
+              "question": "Is dumpster diving legal in the United States?",
+              "answer": "Generally legal if trash has been thrown out, unless it's on private property with no-trespassing signs or local/state regulations prohibit it",
+              "difficulty": 2,
+              "id": "4.2.1947",
+              "distractors": [
+                "No — it is a federal offense under the Computer Fraud and Abuse Act regardless of location",
+                "Yes — it is always legal once materials are placed in a public dumpster with no exceptions",
+                "Only with written permission from the property owner or a valid law enforcement warrant"
+              ]
+            },
+            {
+              "question": "Name four mitigations for dumpster diving.",
+              "answer": "Lock up garbage bins, fence around the area, monitoring cameras, shred sensitive information",
+              "difficulty": 2,
+              "id": "4.2.1948",
+              "distractors": [
+                "Encrypt all documents, use digital-only workflows, ban paper printing, require secure email",
+                "Security guards patrolling trash areas, scheduled shredding services, locked offices, visitor escorts",
+                "Background checks on janitorial staff, clean desk policy, document classification labels, DLP software"
+              ]
+            },
+            {
+              "question": "What extreme method do governments use to prevent information recovery from trash?",
+              "answer": "Burning sensitive documents — once burned, no one can recover the information",
+              "difficulty": 1,
+              "id": "4.2.1949",
+              "distractors": [
+                "Dissolving documents in acid baths that completely break down paper fibers",
+                "Using industrial-grade cross-cut shredders that reduce paper to particles smaller than 1mm",
+                "Pulping documents in water and chemicals to create an unrecoverable slurry"
+              ]
+            },
+            {
+              "question": "What is VLAN hopping?",
+              "answer": "Bypassing VLAN separation to communicate with a different VLAN without a router",
+              "difficulty": 1,
+              "id": "4.2.1950",
+              "distractors": [
+                "Changing VLAN assignments on switch ports remotely using SNMP without authentication",
+                "Flooding a switch with traffic to make it forward frames to all VLANs simultaneously",
+                "Exploiting spanning tree protocol to gain access to trunk ports on a network switch"
+              ]
+            },
+            {
+              "question": "What are the two methods of VLAN hopping?",
+              "answer": "Switch spoofing and double tagging",
+              "difficulty": 1,
+              "id": "4.2.1951",
+              "distractors": [
+                "ARP poisoning and MAC flooding",
+                "Trunk negotiation and native VLAN exploitation",
+                "Port mirroring and SPAN session hijacking"
+              ]
+            },
+            {
+              "question": "Why are VLANs used on switches?",
+              "answer": "To separate different parts of a network so devices on one VLAN cannot communicate with another VLAN without a router",
+              "difficulty": 1,
+              "id": "4.2.1952",
+              "distractors": [
+                "To increase the total bandwidth available on a switch by creating multiple forwarding paths",
+                "To encrypt traffic between switch ports so that eavesdropping between segments is impossible",
+                "To reduce the number of physical switches needed by allowing multiple switches to act as one"
+              ]
+            },
+            {
+              "question": "What is switch spoofing?",
+              "answer": "An attacker pretends to be a switch to trigger trunk negotiation, gaining trunk access and the ability to send traffic to any VLAN on that port",
+              "difficulty": 2,
+              "id": "4.2.1953",
+              "distractors": [
+                "An attacker floods a switch's MAC address table until it fails open and broadcasts all traffic like a hub",
+                "An attacker sends gratuitous ARP replies to associate their MAC address with the default gateway's IP",
+                "An attacker connects a rogue switch to the network to intercept traffic between legitimate devices using STP manipulation"
+              ]
+            },
+            {
+              "question": "What switch feature does switch spoofing exploit?",
+              "answer": "Trunk autonegotiation — the switch autoconfigures an interface as a trunk when it detects another switch",
+              "difficulty": 2,
+              "id": "4.2.1954",
+              "distractors": [
+                "Spanning Tree Protocol — the switch automatically elects a root bridge when it detects BPDUs from another switch",
+                "Port mirroring — the switch copies traffic from one port to another when it detects monitoring requests",
+                "Dynamic ARP Inspection — the switch validates ARP packets when it detects untrusted sources on an interface"
+              ]
+            },
+            {
+              "question": "Why does gaining a trunk connection allow VLAN hopping?",
+              "answer": "A trunk carries traffic for multiple VLANs simultaneously, so an attacker with trunk access can send traffic to any VLAN configured on that port",
+              "difficulty": 2,
+              "id": "4.2.1955",
+              "distractors": [
+                "A trunk uses a higher bandwidth link, allowing the attacker to overwhelm other VLANs with traffic volume",
+                "A trunk exposes the switch management interface, letting the attacker modify VLAN assignments directly",
+                "A trunk disables port security on the interface, allowing unlimited MAC addresses from the attacker's device"
+              ]
+            },
+            {
+              "question": "Name three mitigations for switch spoofing.",
+              "answer": "Disable trunk autonegotiation, manually configure trunk interfaces, configure which specific VLANs are allowed on each trunk",
+              "difficulty": 2,
+              "id": "4.2.1956",
+              "distractors": [
+                "Enable DHCP snooping, configure dynamic ARP inspection, implement IP Source Guard on all ports",
+                "Enable BPDU guard on all ports, set root bridge priority manually, disable STP on edge ports",
+                "Enable storm control on trunk ports, limit broadcast traffic percentage, configure rate limiting per VLAN"
+              ]
+            },
+            {
+              "question": "What is double tagging?",
+              "answer": "A VLAN hopping attack where a frame is crafted with two 802.1Q VLAN tags to send traffic to a VLAN the attacker doesn't belong to",
+              "difficulty": 2,
+              "id": "4.2.1957",
+              "distractors": [
+                "An attack where spoofed ARP replies redirect traffic between two VLANs through the attacker's machine",
+                "An attack where a rogue DHCP server assigns addresses from a different VLAN's subnet to trick routing",
+                "An attack where multiple MAC addresses are flooded to overflow the switch CAM table and force hub behavior"
+              ]
+            },
+            {
+              "question": "What switch configuration does double tagging exploit?",
+              "answer": "The native VLAN configuration — the attacker must be on the same VLAN as the trunk's native VLAN",
+              "difficulty": 3,
+              "id": "4.2.1958",
+              "distractors": [
+                "The STP root bridge configuration — the attacker must be on the same switch as the root bridge",
+                "The DHCP relay configuration — the attacker must be on the same subnet as the DHCP server",
+                "The port channel configuration — the attacker must be connected to a link aggregation group member port"
+              ]
+            },
+            {
+              "question": "Is double tagging a one-way or two-way attack?",
+              "answer": "One-way only — no response can be received, making it useful for DoS but not normal communication",
+              "difficulty": 2,
+              "id": "4.2.1959",
+              "distractors": [
+                "Two-way — both request and response traffic can traverse VLANs using the double-tagged frames",
+                "Two-way only on the same switch, one-way if crossing multiple switches in the path",
+                "Bidirectional if the attacker also compromises the return path VLAN's trunk configuration"
+              ]
+            },
+            {
+              "question": "Describe the four steps of a double tagging attack.",
+              "answer": "1) Attacker creates frame with two tags (outer=native VLAN, inner=target VLAN), 2) First switch reads outer tag, removes it, forwards on native VLAN, 3) Frame arrives at second switch with only inn...",
+              "difficulty": 3,
+              "id": "4.2.1960",
+              "distractors": [
+                "1) Attacker floods MAC table, 2) Switch enters fail-open mode, 3) All traffic is broadcast, 4) Attacker captures frames from target VLAN",
+                "1) Attacker sends BPDU frames, 2) Becomes root bridge, 3) All traffic routes through attacker, 4) Attacker forwards to target VLAN",
+                "1) Attacker spoofs ARP for gateway, 2) Intercepts inter-VLAN traffic, 3) Modifies VLAN tags on frames, 4) Forwards to target VLAN"
+              ]
+            },
+            {
+              "question": "In a double tagging attack, what happens to the outer VLAN tag?",
+              "answer": "The first switch reads it, removes it, and forwards the frame onto the native VLAN",
+              "difficulty": 3,
+              "id": "4.2.1961",
+              "distractors": [
+                "The first switch encapsulates it inside a new frame with the target VLAN tag and forwards it across the trunk",
+                "The first switch drops it because unrecognized tags are discarded by default on access ports",
+                "The first switch rewrites it with the inner tag value and forwards the frame as a standard tagged trunk frame"
+              ]
+            },
+            {
+              "question": "In a double tagging attack, what does the second switch see?",
+              "answer": "A frame with only the inner VLAN tag remaining — it interprets it as a trunked frame for that VLAN and delivers accordingly",
+              "difficulty": 3,
+              "id": "4.2.1962",
+              "distractors": [
+                "A frame with both VLAN tags intact — it drops the frame because double-tagged frames violate 802.1Q standards",
+                "A frame with no VLAN tags — it places the frame on the native VLAN of the second trunk link",
+                "A frame with the outer tag only — it forwards the frame back to the first switch as untagged native traffic"
+              ]
+            },
+            {
+              "question": "What is the default native VLAN ID on most switches?",
+              "answer": "VLAN 1",
+              "difficulty": 1,
+              "id": "4.2.1963",
+              "distractors": [
+                "VLAN 0",
+                "VLAN 100",
+                "VLAN 4094"
+              ]
+            },
+            {
+              "question": "Name three mitigations for double tagging.",
+              "answer": "Don't place users on the native VLAN, change the native VLAN ID from default (VLAN 1) to another value, force tagging of the native VLAN for all trunk traffic",
+              "difficulty": 2,
+              "id": "4.2.1964",
+              "distractors": [
+                "Enable BPDU guard on all access ports, disable DTP on trunk ports, configure storm control thresholds",
+                "Enable DHCP snooping, configure dynamic ARP inspection on all VLANs, implement IP Source Guard",
+                "Disable CDP/LLDP on edge ports, enable port security with sticky MAC, configure private VLANs"
+              ]
+            },
+            {
+              "question": "Why must the attacker be on the native VLAN for double tagging to work?",
+              "answer": "The first switch strips the outer tag because it matches the native VLAN (native VLAN traffic is sent untagged on the trunk), leaving only the inner tag for the second switch to interpret",
+              "difficulty": 3,
+              "id": "4.2.1965",
+              "distractors": [
+                "The native VLAN has no encryption, so the attacker can read and modify the VLAN tags in transit",
+                "The native VLAN shares the same broadcast domain as the trunk management interface, giving direct access",
+                "The native VLAN bypasses ACL checks on the switch, allowing any tagged frame to pass without inspection"
+              ]
+            },
+            {
+              "question": "Why does changing the native VLAN ID mitigate double tagging?",
+              "answer": "If users aren't on the native VLAN, the first switch won't strip the outer tag as untagged native traffic, breaking the attack",
+              "difficulty": 3,
+              "id": "4.2.1966",
+              "distractors": [
+                "It forces all VLAN traffic through ACL inspection, blocking frames with multiple tags",
+                "It encrypts native VLAN traffic on the trunk, preventing the attacker from crafting valid tagged frames",
+                "It enables automatic double-tag detection on the switch ASIC, dropping any frame with two 802.1Q headers"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "title": "Device Security",
+          "concepts": [
+            {
+              "question": "Why are open port numbers a security concern?",
+              "answer": "Each open port is an entry point into a service running on the system — visible to others on the network",
+              "difficulty": 1,
+              "id": "4.3.1967",
+              "distractors": [
+                "Open ports consume excessive bandwidth even when idle, degrading overall network performance",
+                "Open ports allow attackers to modify the operating system kernel directly through the transport layer",
+                "Open ports broadcast their service type via multicast, revealing the entire network topology to attackers"
+              ]
+            },
+            {
+              "question": "What is the valid range of port numbers on a system?",
+              "answer": "0–65,535",
+              "difficulty": 1,
+              "id": "4.3.1968",
+              "distractors": [
+                "0–1,023",
+                "1–49,151",
+                "0–32,767"
+              ]
+            },
+            {
+              "question": "What should you do with a port for a service that is no longer in use?",
+              "answer": "Close the service and ensure the port is not externally accessible",
+              "difficulty": 1,
+              "id": "4.3.1969",
+              "distractors": [
+                "Change the port number to a non-standard value so scanners cannot identify the service",
+                "Add the port to a firewall allow list and monitor it with an IDS for suspicious activity",
+                "Redirect the port to a honeypot so attackers interact with a fake service instead"
+              ]
+            },
+            {
+              "question": "How can a firewall help with open ports?",
+              "answer": "It controls which devices are able to connect to open ports on your system",
+              "difficulty": 1,
+              "id": "4.3.1970",
+              "distractors": [
+                "It encrypts all traffic passing through open ports so intercepted data is unreadable",
+                "It automatically patches vulnerabilities on services listening on open ports",
+                "It hides open ports from network scanners by dropping probe packets silently"
+              ]
+            },
+            {
+              "question": "What tool can be used to scan a system for open ports?",
+              "answer": "Nmap — scans the system to show what port numbers are advertised to the network",
+              "difficulty": 2,
+              "id": "4.3.1971",
+              "distractors": [
+                "Wireshark — captures packets on the network to analyze which ports are transmitting data",
+                "netstat — displays active connections and their states on the local system only",
+                "Traceroute — maps the network path to identify which hops have open ports along the route"
+              ]
+            },
+            {
+              "question": "Why are default credentials a security risk?",
+              "answer": "They often provide full administrative access and are publicly known — anyone who knows them has complete control of the system",
+              "difficulty": 1,
+              "id": "4.3.1972",
+              "distractors": [
+                "They slow down system performance because default passwords use weaker encryption algorithms",
+                "They conflict with RADIUS authentication servers, causing login failures for legitimate users",
+                "They expire after 90 days, locking administrators out of the device if not changed in time"
+              ]
+            },
+            {
+              "question": "What types of devices commonly ship with default credentials?",
+              "answer": "Switches, routers, firewalls, and other networking devices",
+              "difficulty": 1,
+              "id": "4.3.1973",
+              "distractors": [
+                "Only consumer-grade wireless access points and home routers",
+                "Workstations and laptops running enterprise operating systems",
+                "Cloud-hosted virtual machines and containerized applications"
+              ]
+            },
+            {
+              "question": "What is port security on a switch?",
+              "answer": "A feature that prevents unauthorized devices from connecting to a switch interface, based on MAC address",
+              "difficulty": 2,
+              "id": "4.3.1974",
+              "distractors": [
+                "A feature that encrypts all traffic on a switch interface to prevent eavesdropping",
+                "A feature that limits the bandwidth available on a switch interface to prevent flooding attacks",
+                "A feature that blocks specific IP addresses from communicating through a switch interface"
+              ]
+            },
+            {
+              "question": "What are the configuration options for port security?",
+              "answer": "Set how many MAC addresses are allowed per interface, specify exact MAC addresses allowed, switch monitors and records MACs of connected devices",
+              "difficulty": 2,
+              "id": "4.3.1975",
+              "distractors": [
+                "Set a VLAN assignment per interface, specify allowed IP ranges, switch logs all blocked packets to syslog",
+                "Set bandwidth limits per interface, specify QoS priority levels, switch mirrors traffic to a monitoring port",
+                "Set encryption type per interface, specify certificate authorities allowed, switch validates TLS handshakes"
+              ]
+            },
+            {
+              "question": "What is the default action on many switches when port security detects an unexpected device?",
+              "answer": "Immediately disable the interface and send a notification to the network administrator",
+              "difficulty": 2,
+              "id": "4.3.1976",
+              "distractors": [
+                "Log the event silently and continue allowing traffic on the interface",
+                "Redirect the unknown device's traffic to a quarantine VLAN for inspection",
+                "Temporarily rate-limit the interface to 10% of normal speed for 60 seconds"
+              ]
+            },
+            {
+              "question": "Why should unused switch interfaces be disabled?",
+              "answer": "To prevent unauthorized devices from connecting — makes the network much more secure",
+              "difficulty": 1,
+              "id": "4.3.1977",
+              "distractors": [
+                "To reduce power consumption and extend the lifespan of switch hardware components",
+                "To free up VLAN assignments for interfaces that are actively being used",
+                "To prevent spanning tree recalculations caused by unused ports flapping up and down"
+              ]
+            },
+            {
+              "question": "What is the trade-off of disabling unused switch interfaces?",
+              "answer": "Requires additional administration to track which interfaces are enabled/disabled and enable them when needed",
+              "difficulty": 2,
+              "id": "4.3.1978",
+              "distractors": [
+                "Disabled interfaces consume more power than enabled ones in standby mode",
+                "Disabled interfaces lose their VLAN configuration and must be fully reconfigured when re-enabled",
+                "Disabled interfaces cannot be monitored by SNMP, creating visibility gaps in network management"
+              ]
+            },
+            {
+              "question": "What does NAC stand for?",
+              "answer": "Network Access Control",
+              "difficulty": 1,
+              "id": "4.3.1979",
+              "distractors": [
+                "Network Admission Control",
+                "Network Address Conversion",
+                "Network Authentication Certificate"
+              ]
+            },
+            {
+              "question": "What does NAC / 802.1X require before a device can communicate on the network?",
+              "answer": "Authentication — user must provide username and password before gaining access",
+              "difficulty": 2,
+              "id": "4.3.1980",
+              "distractors": [
+                "A valid digital certificate installed on the device's TPM chip",
+                "A pre-shared key configured on both the device and the switch port",
+                "Registration of the device's MAC address in the network inventory database"
+              ]
+            },
+            {
+              "question": "Does 802.1X apply to wired connections, wireless connections, or both?",
+              "answer": "Both wired and wireless connections",
+              "difficulty": 2,
+              "id": "4.3.1981",
+              "distractors": [
+                "Wired connections only — wireless uses WPA2/WPA3 instead",
+                "Wireless connections only — wired connections use port security instead",
+                "Only VPN connections — local wired and wireless connections use MAC filtering"
+              ]
+            },
+            {
+              "question": "What is MAC address filtering?",
+              "answer": "Limiting network access based on the hardware (MAC) address of devices",
+              "difficulty": 1,
+              "id": "4.3.1982",
+              "distractors": [
+                "Blocking network access based on the IP address assigned to a device by DHCP",
+                "Restricting network access based on the digital certificate installed on a device",
+                "Controlling network access based on the operating system version running on a device"
+              ]
+            },
+            {
+              "question": "Why is MAC address filtering considered security through obscurity?",
+              "answer": "MAC addresses can be administratively changed — an attacker can capture valid MACs from the network, wait for one to leave, then spoof that MAC to bypass the filter",
+              "difficulty": 3,
+              "id": "4.3.1983",
+              "distractors": [
+                "MAC filters can only handle 256 entries per switch, making them ineffective on large networks",
+                "MAC filtering relies on broadcast traffic that is easily blocked by VLANs, rendering it useless across subnets",
+                "MAC addresses are assigned sequentially by manufacturers, allowing attackers to predict valid addresses"
+              ]
+            },
+            {
+              "question": "What does \"security through obscurity\" mean?",
+              "answer": "If you know the method being used for security, it becomes very easy to circumvent it",
+              "difficulty": 2,
+              "id": "4.3.1984",
+              "distractors": [
+                "A defense-in-depth approach using multiple overlapping security controls at every layer",
+                "A principle stating that encryption alone is sufficient protection for sensitive data",
+                "A strategy that uses only open-source tools because their code is publicly auditable"
+              ]
+            },
+            {
+              "question": "What is a key management system?",
+              "answer": "Third-party software to manage authentication details, certificates, encryption keys, and SSH keys from a single console",
+              "difficulty": 2,
+              "id": "4.3.1985",
+              "distractors": [
+                "A hardware security module (HSM) that physically stores private keys in tamper-resistant hardware",
+                "A network monitoring tool that captures and analyzes encrypted traffic patterns for anomalies",
+                "A RADIUS server that handles all authentication requests for network devices and users"
+              ]
+            },
+            {
+              "question": "Name five capabilities of a key management system.",
+              "answer": "Create keys for specific services/providers, associate keys with users/services, track expiration dates, renew or revoke keys, monitor key usage and access",
+              "difficulty": 3,
+              "id": "4.3.1986",
+              "distractors": [
+                "Encrypt network traffic, assign IP addresses, manage VLAN memberships, monitor bandwidth usage, generate topology maps",
+                "Block malicious URLs, scan email attachments, quarantine infected hosts, update antivirus signatures, generate threat reports",
+                "Discover network devices, map physical topology, assign hostnames, configure DNS records, monitor uptime"
+              ]
+            },
+            {
+              "question": "What types of items does a key management system manage?",
+              "answer": "SSL certificates, SSH keys, license details, certificate authorities",
+              "difficulty": 2,
+              "id": "4.3.1987",
+              "distractors": [
+                "Firewall rules, ACL entries, VLAN assignments, routing tables",
+                "IP addresses, DNS records, DHCP leases, subnet masks",
+                "User passwords, security questions, biometric templates, PINs"
+              ]
+            },
+            {
+              "question": "What types of reports can a key management system generate?",
+              "answer": "SSH reports, landing server reports, private key reports",
+              "difficulty": 2,
+              "id": "4.3.1988",
+              "distractors": [
+                "Bandwidth utilization reports, latency reports, packet loss reports",
+                "Vulnerability scan reports, penetration test reports, compliance audit reports",
+                "User activity reports, login failure reports, account lockout reports"
+              ]
+            },
+            {
+              "question": "What is an Access Control List (ACL)?",
+              "answer": "A list of traffic that is allowed and traffic that is disallowed",
+              "difficulty": 1,
+              "id": "4.3.1989",
+              "distractors": [
+                "A protocol that encrypts traffic between two endpoints based on predefined security associations",
+                "A database of known vulnerabilities used to scan systems for security weaknesses",
+                "A log of all authentication attempts showing successful and failed logins on the network"
+              ]
+            },
+            {
+              "question": "Name five criteria that can be used in an ACL rule.",
+              "answer": "Source IP address, destination IP address, port number, time of day, application",
+              "difficulty": 2,
+              "id": "4.3.1990",
+              "distractors": [
+                "MAC address, VLAN ID, protocol version, TTL value, packet size",
+                "Username, device type, operating system, browser version, geographic location",
+                "Encryption algorithm, certificate issuer, key length, hash type, cipher suite"
+              ]
+            },
+            {
+              "question": "Where can ACLs be found?",
+              "answer": "Routers, firewalls, operating systems, and anything that needs to make access decisions",
+              "difficulty": 2,
+              "id": "4.3.1991",
+              "distractors": [
+                "Only on dedicated firewall appliances at the network perimeter",
+                "Only on Layer 3 switches that perform inter-VLAN routing",
+                "Only on proxy servers that inspect application-layer traffic"
+              ]
+            },
+            {
+              "question": "What is a firewall rule set in relation to an ACL?",
+              "answer": "A complex form of an ACL with components like rule name, source/destination zone, source/destination address, destination port, and username",
+              "difficulty": 2,
+              "id": "4.3.1992",
+              "distractors": [
+                "A simplified ACL that only uses source and destination IP addresses without port or protocol information",
+                "A logging mechanism that records all ACL matches for later forensic analysis",
+                "A dynamic ACL that automatically updates its rules based on real-time threat intelligence feeds"
+              ]
+            },
+            {
+              "question": "In what order are firewall rules processed?",
+              "answer": "Top-to-bottom — first match wins",
+              "difficulty": 1,
+              "id": "4.3.1993",
+              "distractors": [
+                "Bottom-to-top — last match wins",
+                "Based on rule priority number — lowest number has highest priority regardless of position",
+                "All rules are evaluated simultaneously and the most specific match is applied"
+              ]
+            },
+            {
+              "question": "Where should more specific firewall rules be placed?",
+              "answer": "At the top of the rule set, so they match first before reaching more general rules lower down",
+              "difficulty": 2,
+              "id": "4.3.1994",
+              "distractors": [
+                "At the bottom of the rule set, so general rules handle most traffic and specific rules catch exceptions",
+                "In a separate rule table that is evaluated independently from the main rule set",
+                "Anywhere in the rule set, since rule specificity automatically overrides position"
+              ]
+            },
+            {
+              "question": "What is an implicit deny in a firewall?",
+              "answer": "If traffic reaches the end of the rule set without matching any rule, it is automatically denied — no explicit deny rule is needed",
+              "difficulty": 2,
+              "id": "4.3.1995",
+              "distractors": [
+                "If traffic reaches the end of the rule set without matching, it is automatically allowed — an explicit allow-all exists by default",
+                "If traffic reaches the end of the rule set without matching, it is logged and held for manual administrator review",
+                "If traffic reaches the end of the rule set without matching, it is forwarded to an IDS for deep packet inspection"
+              ]
+            },
+            {
+              "question": "A firewall rule allows all IPs to connect to local port 22 over TCP. What service does this allow?",
+              "answer": "SSH (Secure Shell)",
+              "difficulty": 1,
+              "id": "4.3.1996",
+              "distractors": [
+                "SMTP (Simple Mail Transfer Protocol)",
+                "Telnet (unencrypted remote terminal access)",
+                "SFTP (SSH File Transfer Protocol)"
+              ]
+            },
+            {
+              "question": "A firewall rule allows all IPs to connect to local port 80 over TCP. What service does this allow?",
+              "answer": "HTTP (web traffic)",
+              "difficulty": 1,
+              "id": "4.3.1997",
+              "distractors": [
+                "DNS (Domain Name System)",
+                "SNMP (Simple Network Management Protocol)",
+                "POP3 (Post Office Protocol version 3)"
+              ]
+            },
+            {
+              "question": "A firewall rule allows all IPs to connect to local port 443 over TCP. What service does this allow?",
+              "answer": "HTTPS (encrypted web traffic)",
+              "difficulty": 1,
+              "id": "4.3.1998",
+              "distractors": [
+                "SMB (Server Message Block file sharing)",
+                "LDAPS (Lightweight Directory Access Protocol Secure)",
+                "IMAP over TLS (encrypted email retrieval)"
+              ]
+            },
+            {
+              "question": "A firewall rule allows all IPs to connect to local port 3389 over TCP. What service does this allow?",
+              "answer": "RDP (Microsoft Remote Desktop Protocol)",
+              "difficulty": 2,
+              "id": "4.3.1999",
+              "distractors": [
+                "MySQL (database server connections)",
+                "HTTPS (encrypted web traffic)",
+                "VNC (Virtual Network Computing remote desktop)"
+              ]
+            },
+            {
+              "question": "A firewall rule allows outbound connections to remote port 53 over UDP. What service does this allow?",
+              "answer": "DNS (Domain Name System) requests",
+              "difficulty": 1,
+              "id": "4.3.2000",
+              "distractors": [
+                "DHCP (Dynamic Host Configuration Protocol) requests",
+                "SNMP (Simple Network Management Protocol) traps",
+                "TFTP (Trivial File Transfer Protocol) transfers"
+              ]
+            },
+            {
+              "question": "A firewall rule allows outbound connections to remote port 123 over UDP. What service does this allow?",
+              "answer": "NTP (Network Time Protocol)",
+              "difficulty": 2,
+              "id": "4.3.2001",
+              "distractors": [
+                "SNMP (Simple Network Management Protocol)",
+                "Syslog (system logging protocol)",
+                "DHCP (Dynamic Host Configuration Protocol)"
+              ]
+            },
+            {
+              "question": "A firewall rule denies all ICMP traffic. What does this prevent?",
+              "answer": "Ping and other ICMP functions (Internet Control Message Protocol)",
+              "difficulty": 1,
+              "id": "4.3.2002",
+              "distractors": [
+                "NAT translation and port forwarding between internal and external networks",
+                "ARP resolution between IP addresses and MAC addresses on the local subnet",
+                "DNS name resolution queries to external recursive resolvers"
+              ]
+            },
+            {
+              "question": "What is URL filtering?",
+              "answer": "Filtering traffic based on specific URLs or categories of URLs (auction, hacking, travel, recreation, etc.) using Allow lists and Block lists",
+              "difficulty": 2,
+              "id": "4.3.2003",
+              "distractors": [
+                "Filtering traffic based on packet payload signatures to detect malware and exploits in transit",
+                "Filtering traffic based on source and destination IP addresses using prefix-based matching rules",
+                "Filtering traffic based on application layer protocols using deep packet inspection regardless of port"
+              ]
+            },
+            {
+              "question": "Why are URL categories easier to manage than individual URLs?",
+              "answer": "You can allow/block an entire category instead of listing hundreds or thousands of individual URLs",
+              "difficulty": 1,
+              "id": "4.3.2004",
+              "distractors": [
+                "Categories use AI to predict new malicious URLs before they appear in any blocklist database",
+                "Categories are updated in real-time by the firewall vendor, eliminating the need for local rule maintenance",
+                "Categories encrypt the URL filtering rules so users cannot discover which specific sites are blocked"
+              ]
+            },
+            {
+              "question": "Why is URL filtering often combined with firewall rules?",
+              "answer": "Users try to circumvent URL filtering — combining with firewall rules prevents circumvention",
+              "difficulty": 2,
+              "id": "4.3.2005",
+              "distractors": [
+                "URL filtering only inspects HTTP traffic, so firewall rules are needed to block HTTPS circumvention",
+                "URL filtering introduces latency, so firewall rules are needed to handle time-sensitive traffic",
+                "URL filtering cannot distinguish between user accounts, so firewall rules provide per-user enforcement"
+              ]
+            },
+            {
+              "question": "Where is URL filtering built in on modern networks?",
+              "answer": "Most next-generation firewalls have URL filtering built into the software",
+              "difficulty": 2,
+              "id": "4.3.2006",
+              "distractors": [
+                "A separate dedicated proxy server appliance upstream of the firewall",
+                "The DNS server, which resolves or blocks domain names before connections are established",
+                "The network switch, which filters URLs at Layer 2 before traffic reaches the firewall"
+              ]
+            },
+            {
+              "question": "Name four types of content filtering beyond URL filtering.",
+              "answer": "Filtering internal documents/financial details, preventing non-safe-for-work content, parental controls, antivirus/antimalware filtering",
+              "difficulty": 2,
+              "id": "4.3.2007",
+              "distractors": [
+                "Port scanning, vulnerability assessment, penetration testing, log correlation",
+                "Bandwidth shaping, QoS prioritization, traffic policing, connection rate limiting",
+                "VLAN segmentation, subnet isolation, MAC filtering, IP address blocking"
+              ]
+            },
+            {
+              "question": "What is a screened subnet?",
+              "answer": "A separate area of the network specifically designed for services made available to the public (web servers, email servers), keeping visitors away from internal services",
+              "difficulty": 2,
+              "id": "4.3.2008",
+              "distractors": [
+                "An internal network segment where all user workstations and printers are connected behind multiple firewalls",
+                "A honeypot network designed to attract and trap attackers away from both public and internal resources",
+                "A VPN tunnel endpoint that provides remote users with encrypted access to internal network resources"
+              ]
+            },
+            {
+              "question": "What types of servers are typically placed in a screened subnet?",
+              "answer": "Public web servers and public email servers",
+              "difficulty": 1,
+              "id": "4.3.2009",
+              "distractors": [
+                "Internal database servers and file servers containing sensitive data",
+                "Domain controllers and Active Directory servers for user authentication",
+                "Network management stations and SNMP monitoring servers"
+              ]
+            },
+            {
+              "question": "Can internal users still reach the internet when a screened subnet is in use?",
+              "answer": "Yes — the internal network remains isolated but internal users can still communicate out to the internet",
+              "difficulty": 1,
+              "id": "4.3.2010",
+              "distractors": [
+                "No — all internet traffic must pass through the screened subnet's public-facing servers",
+                "Only if a VPN tunnel is configured between the internal network and the screened subnet",
+                "Only through a separate physical internet connection not shared with the screened subnet"
+              ]
+            },
+            {
+              "question": "What are security zones in a firewall?",
+              "answer": "Broad labels used in firewall rules instead of IP address ranges — simplify security policies by referencing zone names",
+              "difficulty": 2,
+              "id": "4.3.2011",
+              "distractors": [
+                "Physical network segments separated by different switch hardware to isolate traffic at Layer 1",
+                "VLAN assignments that group ports by department regardless of physical switch location",
+                "QoS classifications that prioritize traffic types like voice, video, and data across the network"
+              ]
+            },
+            {
+              "question": "Name three examples of security zone pairs.",
+              "answer": "Trusted/Untrusted, Internal/External, Inside/Internet/Server/Databases/Screened subnet",
+              "difficulty": 2,
+              "id": "4.3.2012",
+              "distractors": [
+                "Encrypted/Unencrypted, Fast/Slow, Wired/Wireless",
+                "Admin/User, Read/Write, Allow/Deny",
+                "TCP/UDP, IPv4/IPv6, Unicast/Multicast"
+              ]
+            },
+            {
+              "question": "How do zone-based firewall rules simplify security policies?",
+              "answer": "Rules reference zone names instead of specific IP addresses or ports — e.g., \"trusted zone can communicate to untrusted zone\" with no additional details needed",
+              "difficulty": 2,
+              "id": "4.3.2013",
+              "distractors": [
+                "Rules automatically adjust based on traffic patterns — no manual updates needed when IPs change",
+                "Rules are encrypted so attackers cannot read the firewall configuration if the device is compromised",
+                "Rules are evaluated faster because zone names use less memory than IP address ranges in the TCAM"
+              ]
+            },
+            {
+              "question": "How do you get more granularity in a zone-based firewall?",
+              "answer": "Add more security zones — more zones equals more granularity in firewall rules",
+              "difficulty": 1,
+              "id": "4.3.2014",
+              "distractors": [
+                "Create more complex rules with multiple conditions per zone instead of adding zones",
+                "Enable deep packet inspection within each zone to inspect traffic at the application layer",
+                "Increase the firewall's processing power to handle more simultaneous rule evaluations"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Network Troubleshooting",
+      "weight": 19,
+      "objectives": [
+        {
+          "id": "5.1",
+          "title": "Network Troubleshooting Methodology",
+          "concepts": [
+            {
+              "question": "What are the 7 steps of the network troubleshooting methodology (in order)?",
+              "answer": "1) Identify the problem, 2) Establish a theory of probable cause, 3) Test the theory, 4) Establish a plan of action, 5) Implement the solution, 6) Verify full system functionality, 7) Document find...",
+              "difficulty": 3,
+              "id": "5.1.2015",
+              "distractors": [
+                "1) Document the problem, 2) Escalate to management, 3) Replace hardware, 4) Test connectivity, 5) Update firmware, 6) Notify users, 7) Close the ticket",
+                "1) Gather information, 2) Isolate the device, 3) Replace components, 4) Restore from backup, 5) Verify connectivity, 6) Update documentation, 7) Perform root cause analysis",
+                "1) Check physical connections, 2) Restart services, 3) Update drivers, 4) Reconfigure settings, 5) Replace hardware, 6) Test performance, 7) Notify stakeholders"
+              ]
+            },
+            {
+              "question": "What is the first step in the troubleshooting methodology?",
+              "answer": "Identify the problem",
+              "difficulty": 1,
+              "id": "5.1.2016",
+              "distractors": [
+                "Establish a theory of probable cause",
+                "Gather information and documentation about the network topology",
+                "Document the findings and report to management"
+              ]
+            },
+            {
+              "question": "Name four things you should do when identifying a network problem.",
+              "answer": "Attempt to duplicate the issue, talk to users, review statistics/metrics from routers and switches, determine what has changed",
+              "difficulty": 2,
+              "id": "5.1.2017",
+              "distractors": [
+                "Replace suspected hardware, restart all services, update firmware, escalate to the vendor",
+                "Check event logs, run antivirus scan, clear browser cache, reboot the affected system",
+                "Ping the default gateway, run traceroute, check DNS resolution, test with a different cable"
+              ]
+            },
+            {
+              "question": "Why should you attempt to duplicate a network problem?",
+              "answer": "If you can duplicate it, it's easier to find the root cause and ultimately resolve the issue",
+              "difficulty": 1,
+              "id": "5.1.2018",
+              "distractors": [
+                "Duplicating it proves the problem is not user error, which is required before escalating to Tier 2 support",
+                "Duplicating it generates additional log entries that can be sent to the vendor for warranty support",
+                "Duplicating it confirms the problem is intermittent, which narrows it down to a hardware failure"
+              ]
+            },
+            {
+              "question": "What question should you always ask when identifying a network problem?",
+              "answer": "What has changed since it last worked? (cables moved, system powered off, configuration changes)",
+              "difficulty": 2,
+              "id": "5.1.2019",
+              "distractors": [
+                "Who else is experiencing this problem on the network?",
+                "What is the make and model of the affected device?",
+                "When was the last firmware update applied to the network equipment?"
+              ]
+            },
+            {
+              "question": "Why might you build a lab when troubleshooting?",
+              "answer": "To attempt to duplicate the problem in a controlled environment, making it easier to find the root cause",
+              "difficulty": 1,
+              "id": "5.1.2020",
+              "distractors": [
+                "To test potential fixes without risking downtime on the production network",
+                "To train junior technicians on the problem before they encounter it in production",
+                "To generate documentation and screenshots for the change control board"
+              ]
+            },
+            {
+              "question": "What should you do if the scope of a problem is too large?",
+              "answer": "Break it into smaller pieces and take one component at a time to determine where the problem is really happening",
+              "difficulty": 1,
+              "id": "5.1.2021",
+              "distractors": [
+                "Escalate immediately to a senior engineer or vendor support for assistance",
+                "Replace all hardware in the affected path simultaneously to eliminate variables",
+                "Document the full scope and wait for a maintenance window to troubleshoot everything at once"
+              ]
+            },
+            {
+              "question": "When establishing a theory of probable cause, what should you start with?",
+              "answer": "Obvious problems and problems that can be solved very quickly (e.g., swap a cable)",
+              "difficulty": 1,
+              "id": "5.1.2022",
+              "distractors": [
+                "The most complex and unlikely scenarios, since those are typically the ones hardest to identify later",
+                "The most recently changed component, since changes are never the cause of immediate problems",
+                "The highest-cost components first, since expensive equipment fails more often than commodity hardware"
+              ]
+            },
+            {
+              "question": "What is the top-down troubleshooting approach?",
+              "answer": "Start at the application layer (Layer 7) and work down through the OSI model toward the physical layer — good for existing networks",
+              "difficulty": 2,
+              "id": "5.1.2023",
+              "distractors": [
+                "Start at the network layer (Layer 3) and work outward in both directions — good for routing problems",
+                "Start at the transport layer (Layer 4) and verify port connectivity before checking anything else",
+                "Start by checking the most recently changed component regardless of OSI layer — good for change-related issues"
+              ]
+            },
+            {
+              "question": "What is the bottom-up troubleshooting approach?",
+              "answer": "Start at the physical layer (Layer 1) and work up through the OSI model toward the application — good for new implementations",
+              "difficulty": 2,
+              "id": "5.1.2024",
+              "distractors": [
+                "Start at the transport layer (Layer 4) and work down to verify connectivity before checking applications",
+                "Start at the network layer (Layer 3) and verify IP addressing and routing before checking physical connections",
+                "Start by dividing the network in half and testing each segment to narrow down the problem location"
+              ]
+            },
+            {
+              "question": "How can you use elimination to narrow down a probable cause?",
+              "answer": "If the issue appears across different variables (e.g., multiple operating systems), you can eliminate that variable as the cause",
+              "difficulty": 2,
+              "id": "5.1.2025",
+              "distractors": [
+                "If the issue only occurs at specific times, you can eliminate hardware as the cause since hardware fails consistently",
+                "If the issue affects only one user, you can eliminate the network infrastructure and focus on that user's device only",
+                "If the issue persists after a reboot, you can eliminate all software causes and focus only on hardware replacement"
+              ]
+            },
+            {
+              "question": "What do you do if testing your theory does NOT fix the problem?",
+              "answer": "Go back to establishing a new theory of probable cause and repeat the process",
+              "difficulty": 1,
+              "id": "5.1.2026",
+              "distractors": [
+                "Escalate the problem to a higher support tier or the equipment vendor immediately",
+                "Document the failed theory and close the ticket as unresolvable pending further information",
+                "Implement the original fix anyway since it was the most likely cause based on initial analysis"
+              ]
+            },
+            {
+              "question": "Where should you test configuration changes before applying them to production?",
+              "answer": "In a lab environment",
+              "difficulty": 1,
+              "id": "5.1.2027",
+              "distractors": [
+                "On the production network during low-traffic hours",
+                "On the vendor's cloud staging server",
+                "On a secondary user workstation"
+              ]
+            },
+            {
+              "question": "What is change control in the context of troubleshooting?",
+              "answer": "A process that schedules and manages changes to the production network, often requiring a specific maintenance window",
+              "difficulty": 2,
+              "id": "5.1.2028",
+              "distractors": [
+                "A troubleshooting technique that documents each configuration change made during diagnosis for rollback purposes",
+                "A network monitoring system that tracks configuration drift and automatically reverts unauthorized changes",
+                "A backup procedure that creates snapshots of device configurations before any troubleshooting begins"
+              ]
+            },
+            {
+              "question": "What contingencies should a plan of action include?",
+              "answer": "Plan B (and Plan C) if the primary plan fails, plus a rollback process to revert to the previous state",
+              "difficulty": 2,
+              "id": "5.1.2029",
+              "distractors": [
+                "Only a communication plan to notify affected users about expected downtime during the maintenance window",
+                "Only a list of required tools and replacement parts needed to complete the repair efficiently",
+                "Only a timeline showing when each step will be completed and who is responsible for each task"
+              ]
+            },
+            {
+              "question": "Why is a rollback process important in a plan of action?",
+              "answer": "In case the implementation causes additional problems, you need a way to go back to the way things were before you started",
+              "difficulty": 1,
+              "id": "5.1.2030",
+              "distractors": [
+                "It provides documentation for compliance audits showing that proper procedures were followed",
+                "It allows the vendor to validate that the change was implemented correctly for warranty purposes",
+                "It gives management visibility into how long the troubleshooting process took from start to finish"
+              ]
+            },
+            {
+              "question": "In some organizations, who implements the fix vs. who determines what the fix should be?",
+              "answer": "The troubleshooting team determines what needs to be changed, and the operations team makes the actual change",
+              "difficulty": 2,
+              "id": "5.1.2031",
+              "distractors": [
+                "The same person always both diagnoses and implements the fix to maintain accountability",
+                "The vendor support team determines and implements all changes under their service contract",
+                "The end user implements the fix themselves based on instructions from the help desk technician"
+              ]
+            },
+            {
+              "question": "When is a fix truly confirmed as working?",
+              "answer": "When end users verify that the problem they saw before is now resolved — not just when the change is made",
+              "difficulty": 2,
+              "id": "5.1.2032",
+              "distractors": [
+                "When the network monitoring system shows all metrics have returned to their baseline thresholds",
+                "When the configuration change is committed and saved to the device's startup configuration",
+                "When the change control board approves the implementation report and signs off on the ticket"
+              ]
+            },
+            {
+              "question": "What should you discuss with users after verifying the fix works?",
+              "answer": "Ways to prevent the problem from occurring in the future (both workflow improvements and technology-based prevention)",
+              "difficulty": 2,
+              "id": "5.1.2033",
+              "distractors": [
+                "The estimated cost of the repair and whether it should be charged to their department's budget",
+                "The technical details of the root cause so they can troubleshoot similar issues independently",
+                "The vendor's recommended maintenance schedule for the affected hardware going forward"
+              ]
+            },
+            {
+              "question": "What should be documented at the end of the troubleshooting process?",
+              "answer": "The process followed and the specific change that resolved the issue",
+              "difficulty": 1,
+              "id": "5.1.2034",
+              "distractors": [
+                "Only the final resolution — the troubleshooting steps are considered internal and not shared",
+                "Only the time spent and parts used for billing and inventory tracking purposes",
+                "Only the initial problem report and which team was assigned to handle the issue"
+              ]
+            },
+            {
+              "question": "Where is troubleshooting documentation typically stored?",
+              "answer": "Help desk database or knowledge base",
+              "difficulty": 1,
+              "id": "5.1.2035",
+              "distractors": [
+                "The network administrator's personal notebook or email archive",
+                "The affected device's local configuration file as a comment or description field",
+                "The change control board's meeting minutes from the next scheduled review"
+              ]
+            },
+            {
+              "question": "Why is documentation important in the troubleshooting methodology?",
+              "answer": "If the same problem recurs in the future, you can refer back to see exactly what was done to resolve it",
+              "difficulty": 1,
+              "id": "5.1.2036",
+              "distractors": [
+                "It satisfies audit requirements and ensures the IT department passes compliance inspections",
+                "It allows managers to track how many hours each technician spends on troubleshooting",
+                "It provides legal protection in case users blame IT for causing the original problem"
+              ]
+            },
+            {
+              "question": "What step immediately follows \"Test the theory\" if the theory is confirmed?",
+              "answer": "Establish a plan of action (to implement the fix in production)",
+              "difficulty": 1,
+              "id": "5.1.2037",
+              "distractors": [
+                "Document the findings and report to management",
+                "Implement the solution immediately on all affected systems",
+                "Escalate the problem to a higher-level technician"
+              ]
+            },
+            {
+              "question": "Why can't you always implement a fix immediately after confirming it works in the lab?",
+              "answer": "Many production networks cannot be touched during business hours and require scheduling a change control window",
+              "difficulty": 2,
+              "id": "5.1.2038",
+              "distractors": [
+                "The fix must first be approved by the equipment vendor before deployment",
+                "Regulatory compliance requires a 30-day waiting period before network changes",
+                "All fixes require purchasing replacement hardware which takes time to ship"
+              ]
+            },
+            {
+              "question": "What two sources of information should you combine when identifying a problem?",
+              "answer": "User experiences/observations and statistics/metrics gathered from routers and switches",
+              "difficulty": 2,
+              "id": "5.1.2039",
+              "distractors": [
+                "Vendor documentation and firmware release notes from the manufacturer",
+                "Network topology diagrams and cable certification test results",
+                "Event logs from the SIEM and historical change management records"
+              ]
+            },
+            {
+              "question": "Why is it important to consider multiple symptoms rather than just one?",
+              "answer": "Multiple symptoms may be working together to cause the issue — focusing on a single symptom may miss the real problem",
+              "difficulty": 2,
+              "id": "5.1.2040",
+              "distractors": [
+                "Multiple symptoms prove the issue is hardware-related rather than software-related",
+                "Documenting all symptoms is required by change management policy before any fix can be applied",
+                "Each symptom requires a separate trouble ticket for proper tracking"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "title": "Cable Issues",
+          "concepts": [
+            {
+              "question": "What is the difference between multimode and single mode fiber?",
+              "answer": "Multimode uses multiple light paths (modes) through the fiber; single mode uses a single light path. Single mode has a much smaller core diameter.",
+              "difficulty": 1,
+              "id": "5.2.2041",
+              "distractors": [
+                "Multimode uses electrical signals while single mode uses laser light; single mode requires copper cabling",
+                "Multimode supports longer distances because it carries more light; single mode is limited to short-range connections",
+                "Multimode uses a single wavelength of light; single mode uses multiple wavelengths simultaneously for higher bandwidth"
+              ]
+            },
+            {
+              "question": "What are the three common fiber core sizes?",
+              "answer": "50 micron (multimode), 62.5 micron (multimode), and ~9 micron (single mode)",
+              "difficulty": 2,
+              "id": "5.2.2042",
+              "distractors": [
+                "10 micron (multimode), 25 micron (multimode), and 100 micron (single mode)",
+                "100 micron (multimode), 125 micron (multimode), and 200 micron (single mode)",
+                "8 micron (multimode), 50 micron (single mode), and 62.5 micron (single mode)"
+              ]
+            },
+            {
+              "question": "What is the total diameter (core + cladding) of all common fiber types?",
+              "answer": "125 microns — all three types feel identical in hand",
+              "difficulty": 2,
+              "id": "5.2.2043",
+              "distractors": [
+                "250 microns — single mode is slightly thinner than multimode",
+                "62.5 microns — matches the largest multimode core size",
+                "200 microns — multimode is thicker than single mode"
+              ]
+            },
+            {
+              "question": "What happens if you mix multimode and single mode fiber on a link?",
+              "answer": "Signal errors and difficulty communicating across that link",
+              "difficulty": 1,
+              "id": "5.2.2044",
+              "distractors": [
+                "The link operates normally but at half the rated speed",
+                "The transceiver automatically adjusts to the smaller core size",
+                "Only the single mode segment works; multimode sections are bypassed"
+              ]
+            },
+            {
+              "question": "How can you verify what type of fiber you have?",
+              "answer": "Check the writing on the outside of the fiber (type and size); color coding exists but cannot always be relied upon",
+              "difficulty": 2,
+              "id": "5.2.2045",
+              "distractors": [
+                "Shine a flashlight through the cable — multimode glows orange, single mode glows yellow",
+                "Measure the cable diameter with calipers — each type has a different outer diameter",
+                "Connect it to a switch and check the interface status for the detected fiber type"
+              ]
+            },
+            {
+              "question": "What organization standardizes copper cable construction and testing?",
+              "answer": "TIA (Telecommunications Industry Association)",
+              "difficulty": 1,
+              "id": "5.2.2046",
+              "distractors": [
+                "IEEE (Institute of Electrical and Electronics Engineers)",
+                "ANSI (American National Standards Institute)",
+                "FCC (Federal Communications Commission)"
+              ]
+            },
+            {
+              "question": "How does a cable earn a specific category rating?",
+              "answer": "It is manufactured to TIA standards and passes their qualification tests",
+              "difficulty": 1,
+              "id": "5.2.2047",
+              "distractors": [
+                "The installer certifies it after running a speed test on the completed link",
+                "The cable manufacturer self-certifies based on the materials used in production",
+                "An independent lab tests a random sample from each batch and assigns the rating"
+              ]
+            },
+            {
+              "question": "What is the minimum cable category and max distance for 1000BASE-T?",
+              "answer": "Category 5, 100 meters",
+              "difficulty": 2,
+              "id": "5.2.2048",
+              "distractors": [
+                "Category 6, 55 meters",
+                "Category 5e, 55 meters",
+                "Category 6A, 100 meters"
+              ]
+            },
+            {
+              "question": "What is the minimum cable category for 10GBASE-T with unshielded cable, and what is its max distance?",
+              "answer": "Category 6, 55 meters",
+              "difficulty": 2,
+              "id": "5.2.2049",
+              "distractors": [
+                "Category 5e, 100 meters",
+                "Category 6A, 100 meters",
+                "Category 7, 55 meters"
+              ]
+            },
+            {
+              "question": "What cable category supports 10GBASE-T at 100 meters?",
+              "answer": "Category 6A (augmented)",
+              "difficulty": 2,
+              "id": "5.2.2050",
+              "distractors": [
+                "Category 7 (shielded)",
+                "Category 6 (unshielded)",
+                "Category 5e (enhanced)"
+              ]
+            },
+            {
+              "question": "What cable category supports 40GBASE-T, and what is its max distance?",
+              "answer": "Category 8 (shielded only), 30 meters",
+              "difficulty": 3,
+              "id": "5.2.2051",
+              "distractors": [
+                "Category 6A (augmented), 55 meters",
+                "Category 7 (shielded), 100 meters",
+                "Category 6 (unshielded), 30 meters"
+              ]
+            },
+            {
+              "question": "What is the difference between bandwidth and throughput?",
+              "answer": "Bandwidth is the theoretical maximum data rate (size of the pipe); throughput is the actual data transferred in a time frame (water flowing through the pipe)",
+              "difficulty": 2,
+              "id": "5.2.2052",
+              "distractors": [
+                "Bandwidth is the actual speed measured on the network; throughput is the maximum speed listed on the device specification",
+                "Bandwidth measures upload speed only; throughput measures both upload and download combined",
+                "Bandwidth is measured at Layer 3; throughput is measured at Layer 1"
+              ]
+            },
+            {
+              "question": "What units are bandwidth and throughput measured in?",
+              "answer": "Both often measured in bits per second; throughput is sometimes also measured in bytes per second",
+              "difficulty": 1,
+              "id": "5.2.2053",
+              "distractors": [
+                "Bandwidth in hertz (Hz); throughput in bits per second",
+                "Bandwidth in megabytes per second; throughput in packets per second",
+                "Both are always measured in bytes per second; bits per second is only used for serial links"
+              ]
+            },
+            {
+              "question": "What does a cable tester do?",
+              "answer": "Validates installed cables by running tests similar to TIA category qualification; reports which category the cable matches",
+              "difficulty": 1,
+              "id": "5.2.2054",
+              "distractors": [
+                "Sends traffic between two endpoints and measures throughput to determine the link's effective speed",
+                "Tests the cable jacket for physical damage using infrared scanning",
+                "Verifies that the cable is properly grounded and measures impedance only"
+              ]
+            },
+            {
+              "question": "What happens if you use the wrong category of cable for a standard?",
+              "answer": "Errors on the link causing slowdown, often due to signal attenuation or signal loss; may see CRC errors",
+              "difficulty": 2,
+              "id": "5.2.2055",
+              "distractors": [
+                "The switch rejects the connection entirely and the port remains down",
+                "The cable works normally but generates excessive heat due to increased resistance",
+                "Auto-negotiation forces the link to a compatible lower speed with no errors"
+              ]
+            },
+            {
+              "question": "What does UTP stand for, and what does it look like?",
+              "answer": "Unshielded Twisted Pair — four pairs of wires with no shield, each pair twisted together",
+              "difficulty": 1,
+              "id": "5.2.2056",
+              "distractors": [
+                "Universal Twisted Pair — four pairs of wires each wrapped in individual foil shields",
+                "Unified Transmission Protocol — a single pair of wires used for half-duplex communication",
+                "Unshielded Terminated Pair — two pairs of wires with RJ11 connectors"
+              ]
+            },
+            {
+              "question": "What does STP stand for, and how does it differ from UTP?",
+              "answer": "Shielded Twisted Pair — has a shield around the entire cable and/or individual pairs, plus a grounding wire; more resistant to electrical interference",
+              "difficulty": 1,
+              "id": "5.2.2057",
+              "distractors": [
+                "Spanning Tree Protocol — prevents loops in switched networks by blocking redundant paths",
+                "Standard Twisted Pair — uses the same construction as UTP but with thicker gauge wire for longer distances",
+                "Structured Termination Panel — a patch panel design with built-in cable management"
+              ]
+            },
+            {
+              "question": "What is crosstalk (XT)?",
+              "answer": "Signal from one pair of wires leaking into another pair of wires in the same cable",
+              "difficulty": 1,
+              "id": "5.2.2058",
+              "distractors": [
+                "Electromagnetic interference from external power sources affecting the cable",
+                "Signal reflection caused by impedance mismatches at connectors",
+                "Signal degradation due to cable length exceeding the maximum specification"
+              ]
+            },
+            {
+              "question": "What is NEXT?",
+              "answer": "Near-End Crosstalk — measures how much signal leaks into other wires at the end closest to the testing device; usually the strongest signal point",
+              "difficulty": 2,
+              "id": "5.2.2059",
+              "distractors": [
+                "Network Extension Topology — a method of extending cable runs beyond 100 meters using repeaters",
+                "Near-End Crosstalk — measures signal leakage from external cables running parallel to the tested cable",
+                "Near-End Transmit — the power output level of the sending device at the local end"
+              ]
+            },
+            {
+              "question": "What is FEXT?",
+              "answer": "Far-End Crosstalk — measures crosstalk at the far end of the cable from the testing device",
+              "difficulty": 2,
+              "id": "5.2.2060",
+              "distractors": [
+                "Far-End Crosstalk — measures interference from adjacent cables at the remote end",
+                "Frame Extension — a method of increasing the maximum ethernet frame size beyond 1500 bytes",
+                "Fiber Extension Technology — allows fiber runs to exceed standard distance limits"
+              ]
+            },
+            {
+              "question": "What is alien crosstalk?",
+              "answer": "Interference transmitted from other nearby cables (not from within the same cable)",
+              "difficulty": 2,
+              "id": "5.2.2061",
+              "distractors": [
+                "Crosstalk between the transmit and receive pairs within a single twisted pair",
+                "Signal interference caused by wireless devices operating near the cable",
+                "Crosstalk that occurs only at cable connectors and patch panels, not in the cable run itself"
+              ]
+            },
+            {
+              "question": "What is ACR (Attenuation to Crosstalk Ratio)?",
+              "answer": "A comparison of signal loss (attenuation) versus near-end crosstalk; effectively a signal-to-noise ratio",
+              "difficulty": 2,
+              "id": "5.2.2062",
+              "distractors": [
+                "Automatic Cable Recognition — a feature that identifies cable type when connected to a switch",
+                "A measurement of total cable resistance expressed in ohms per meter",
+                "A ratio comparing transmitted power to received power to determine total signal loss"
+              ]
+            },
+            {
+              "question": "What does a 10:1 signal-to-noise ratio mean vs. a 1:1 ratio?",
+              "answer": "10:1 = signal is 10x stronger than noise (good); 1:1 = signal and noise are equal strength (bad)",
+              "difficulty": 2,
+              "id": "5.2.2063",
+              "distractors": [
+                "10:1 = noise is 10x stronger than signal (bad); 1:1 = signal and noise cancel each other (good)",
+                "10:1 = 10% packet loss (acceptable); 1:1 = 100% packet loss (total failure)",
+                "10:1 = ten devices sharing bandwidth; 1:1 = dedicated bandwidth per device"
+              ]
+            },
+            {
+              "question": "Name three ways to reduce crosstalk.",
+              "answer": "Re-terminate the cable, maintain as many twists as possible (untwist minimally), use Cat 6A cable (has spacer between pairs)",
+              "difficulty": 2,
+              "id": "5.2.2064",
+              "distractors": [
+                "Use shorter cables, increase signal power, add inline amplifiers",
+                "Replace all cables with fiber optic, use lower frequencies, reduce port speed",
+                "Install EMI filters, use plenum-rated cable, increase cable gauge"
+              ]
+            },
+            {
+              "question": "What is EMI?",
+              "answer": "Electromagnetic Interference — electrical interference that can affect signals in both UTP and STP cables",
+              "difficulty": 1,
+              "id": "5.2.2065",
+              "distractors": [
+                "Extended Media Interface — a connector type for fiber optic transceivers",
+                "Ethernet Management Interface — the protocol used to configure managed switches",
+                "Error Monitoring Indicator — a LED on network devices that shows link errors"
+              ]
+            },
+            {
+              "question": "What happens if there is a break in an STP cable's shield?",
+              "answer": "Electromagnetic interference can get into the wires at that point",
+              "difficulty": 2,
+              "id": "5.2.2066",
+              "distractors": [
+                "The cable automatically reduces speed to compensate for the break",
+                "The grounding wire carries data in place of the broken shield",
+                "Only the pairs closest to the break are affected; other pairs continue working normally"
+              ]
+            },
+            {
+              "question": "Name four sources of EMI to avoid when running cables.",
+              "answer": "Power cords, fluorescent lights, electrical systems/generators, fire prevention components",
+              "difficulty": 2,
+              "id": "5.2.2067",
+              "distractors": [
+                "Network switches, wireless access points, patch panels, cable trays",
+                "Desktop computers, monitors, keyboards, printers",
+                "HVAC ducts, plumbing pipes, concrete walls, wooden studs"
+              ]
+            },
+            {
+              "question": "Why should you avoid staples and limit plastic cable ties on network cables?",
+              "answer": "They can crimp the wires inside; use Velcro ties instead",
+              "difficulty": 1,
+              "id": "5.2.2068",
+              "distractors": [
+                "They create electromagnetic interference that disrupts the signal",
+                "They void the cable manufacturer's warranty and insurance coverage",
+                "They increase cable capacitance which slows down signal transmission"
+              ]
+            },
+            {
+              "question": "What is attenuation?",
+              "answer": "Loss of signal strength over distance; occurs in both copper and fiber optic connections",
+              "difficulty": 1,
+              "id": "5.2.2069",
+              "distractors": [
+                "Interference from external electromagnetic sources affecting signal quality",
+                "Signal reflection caused by improper cable termination",
+                "Delay in packet delivery caused by excessive network hops"
+              ]
+            },
+            {
+              "question": "Why do IEEE standards specify maximum cable distances?",
+              "answer": "Because of attenuation — signal strength weakens over distance, so there is a maximum length that still maintains acceptable signal quality",
+              "difficulty": 2,
+              "id": "5.2.2070",
+              "distractors": [
+                "To ensure cables fit within standard rack sizes and cable management systems",
+                "To prevent electromagnetic interference from exceeding FCC emission limits",
+                "To limit the number of connectors in a link which reduces potential failure points"
+              ]
+            },
+            {
+              "question": "What is proper pin-to-pin matching in a cable termination?",
+              "answer": "Pin 1 on one end connects to pin 1 on the other end, pin 2 to pin 2, pin 3 to pin 3, etc.",
+              "difficulty": 1,
+              "id": "5.2.2071",
+              "distractors": [
+                "Pins are crossed so that transmit on one end connects to receive on the other (T568A to T568B)",
+                "Only pins 1, 2, 3, and 6 need to connect; the other pins are optional",
+                "Each pin connects to the pin four positions away to maintain proper twist ratios"
+              ]
+            },
+            {
+              "question": "What can happen if pins are mismatched during cable termination?",
+              "answer": "Speed drops (e.g., expecting 1 Gbps but only getting 100 Mbps) or complete signal loss",
+              "difficulty": 2,
+              "id": "5.2.2072",
+              "distractors": [
+                "The cable works normally because Auto-MDIX corrects all pin errors automatically",
+                "The switch port LED blinks amber indicating a configuration error",
+                "The cable passes data but cannot deliver PoE power to connected devices"
+              ]
+            },
+            {
+              "question": "What are crossed pairs in a cable?",
+              "answer": "A wiring error where some pins connect to the wrong pins (e.g., pin 1 to pin 3, pin 3 to pin 1) — half crossed, half straight through",
+              "difficulty": 2,
+              "id": "5.2.2073",
+              "distractors": [
+                "A cable where all eight wires are reversed end-to-end (a full crossover cable)",
+                "A fault where two pairs are shorted together creating a single combined circuit",
+                "A cable with the pairs untwisted for more than one inch at the termination point"
+              ]
+            },
+            {
+              "question": "Where can crossed pairs occur?",
+              "answer": "At the RJ45 crimp or at the punchdown block — check every connection along the path",
+              "difficulty": 1,
+              "id": "5.2.2074",
+              "distractors": [
+                "Only inside manufactured patch cables — field-terminated cables cannot have this issue",
+                "At the switch backplane where internal wiring maps ports to the ASIC",
+                "Only at fiber-to-copper media converters where signal translation occurs"
+              ]
+            },
+            {
+              "question": "What is Auto-MDIX?",
+              "answer": "A capability where the ethernet chipset detects a cable cross and reverses it electronically, effectively turning it back into a straight-through cable",
+              "difficulty": 2,
+              "id": "5.2.2075",
+              "distractors": [
+                "A feature that automatically negotiates link speed and duplex settings between two devices",
+                "A protocol that detects cable faults and reroutes traffic to a backup link",
+                "A switch feature that automatically assigns VLANs based on the connected device type"
+              ]
+            },
+            {
+              "question": "Should you rely on Auto-MDIX to fix crossed cables?",
+              "answer": "No — it's not always enabled or supported on every chipset; best practice is to properly terminate cables",
+              "difficulty": 1,
+              "id": "5.2.2076",
+              "distractors": [
+                "Yes — all modern gigabit devices support Auto-MDIX and it handles all wiring errors",
+                "Yes — Auto-MDIX is required by IEEE 802.3 for all Ethernet speeds above 100 Mbps",
+                "Only for temporary connections — permanent links must use crossover cables instead"
+              ]
+            },
+            {
+              "question": "How can you easily detect crossed pairs in a cable?",
+              "answer": "Use a cable tester — it will clearly show which pins are crossed",
+              "difficulty": 1,
+              "id": "5.2.2077",
+              "distractors": [
+                "Check the link speed LED — crossed pairs always show amber instead of green",
+                "Run a ping test — crossed pairs cause exactly 50% packet loss",
+                "Use a loopback plug to test each pin individually from one end"
+              ]
+            },
+            {
+              "question": "What does minimum bend radius refer to?",
+              "answer": "The tightest bend you can make in a cable without causing damage; check cable documentation for the specification",
+              "difficulty": 2,
+              "id": "5.2.2078",
+              "distractors": [
+                "The maximum tension you can apply when pulling cable through conduit",
+                "The minimum distance between cable runs required to prevent crosstalk",
+                "The maximum number of bends allowed in a single cable run"
+              ]
+            },
+            {
+              "question": "Category 7 cable has what requirement that Category 6 does not?",
+              "answer": "Category 7 is shielded only (STP required)",
+              "difficulty": 2,
+              "id": "5.2.2079",
+              "distractors": [
+                "Category 7 requires all connections use GG45 connectors instead of RJ45",
+                "Category 7 supports frequencies up to 1200 MHz vs 250 MHz for Category 6",
+                "Category 7 must use solid-core conductors while Category 6 can use stranded"
+              ]
+            },
+            {
+              "question": "What do CRC errors on a link typically indicate?",
+              "answer": "Physical layer problems (cable issues causing data corruption)",
+              "difficulty": 2,
+              "id": "5.2.2080",
+              "distractors": [
+                "Application layer errors (software misconfiguration)",
+                "Network layer problems (routing loops or TTL expiration)",
+                "Transport layer issues (TCP window size mismatch)"
+              ]
+            },
+            {
+              "question": "What is Power over Ethernet (PoE)?",
+              "answer": "Provides power over the same wire used for data, simplifying installation by eliminating the need for a separate power cable",
+              "difficulty": 1,
+              "id": "5.2.2081",
+              "distractors": [
+                "A standard for powering network switches from a centralized UPS using dedicated power cables",
+                "A technology that increases Ethernet speed by using unused wire pairs for additional data channels",
+                "A protocol for monitoring power consumption of network devices via SNMP"
+              ]
+            },
+            {
+              "question": "What are three common devices that use PoE?",
+              "answer": "Telephones, access points, cameras",
+              "difficulty": 1,
+              "id": "5.2.2082",
+              "distractors": [
+                "Servers, storage arrays, UPS devices",
+                "Desktop computers, monitors, printers",
+                "Routers, firewalls, core switches"
+              ]
+            },
+            {
+              "question": "What is an endspan PoE power source?",
+              "answer": "Power built into the switch itself (a PoE switch)",
+              "difficulty": 2,
+              "id": "5.2.2083",
+              "distractors": [
+                "A separate PoE injector device placed at the end of the cable run near the powered device",
+                "A patch panel with built-in PoE injection for all connected ports",
+                "Power provided by the end device back to the switch (reverse PoE)"
+              ]
+            },
+            {
+              "question": "What is a midspan PoE power source?",
+              "answer": "A separate device (injector) between the switch and PoE device that injects power onto the wires",
+              "difficulty": 2,
+              "id": "5.2.2084",
+              "distractors": [
+                "A PoE switch with power injection built directly into its ports",
+                "A cable with power wires built into the jacket alongside the data pairs",
+                "A powered device that receives PoE and passes it through to the next device in a daisy chain"
+              ]
+            },
+            {
+              "question": "What is the DC power output and maximum current of PoE?",
+              "answer": "15.4 watts, 350 mA",
+              "difficulty": 3,
+              "id": "5.2.2085",
+              "distractors": [
+                "25.5 watts, 600 mA",
+                "30 watts, 500 mA",
+                "51 watts, 960 mA"
+              ]
+            },
+            {
+              "question": "What is the DC power output and maximum current of PoE+?",
+              "answer": "25.5 watts, 600 mA",
+              "difficulty": 3,
+              "id": "5.2.2086",
+              "distractors": [
+                "15.4 watts, 350 mA",
+                "51 watts, 600 mA",
+                "30 watts, 960 mA"
+              ]
+            },
+            {
+              "question": "What is the DC power output and maximum current of PoE++ Type 3?",
+              "answer": "51 watts, 600 mA",
+              "difficulty": 3,
+              "id": "5.2.2087",
+              "distractors": [
+                "25.5 watts, 350 mA",
+                "71.3 watts, 960 mA",
+                "90 watts, 600 mA"
+              ]
+            },
+            {
+              "question": "What is the DC power output and maximum current of PoE++ Type 4?",
+              "answer": "71.3 watts, 960 mA",
+              "difficulty": 3,
+              "id": "5.2.2088",
+              "distractors": [
+                "51 watts, 600 mA",
+                "90 watts, 1200 mA",
+                "25.5 watts, 960 mA"
+              ]
+            },
+            {
+              "question": "What typical devices use standard PoE (15.4W)?",
+              "answer": "Simple telephones, small access points",
+              "difficulty": 2,
+              "id": "5.2.2089",
+              "distractors": [
+                "PTZ cameras, video conferencing systems",
+                "Laptops, desktop thin clients",
+                "LED lighting panels, digital signage displays"
+              ]
+            },
+            {
+              "question": "What typical devices use PoE+ (25.5W)?",
+              "answer": "Larger telephones, cameras",
+              "difficulty": 2,
+              "id": "5.2.2090",
+              "distractors": [
+                "Simple telephones, small access points",
+                "Laptops, PTZ cameras",
+                "Network switches, small servers"
+              ]
+            },
+            {
+              "question": "What typical devices use PoE++ (51W or 71.3W)?",
+              "answer": "Laptops, PTZ cameras",
+              "difficulty": 2,
+              "id": "5.2.2091",
+              "distractors": [
+                "Simple telephones, basic access points",
+                "Standard fixed cameras, VoIP phones",
+                "Small network switches, wireless controllers"
+              ]
+            },
+            {
+              "question": "What additional Ethernet standards does PoE++ support?",
+              "answer": "2.5-gigabit, 5-gigabit, and 10-gigabit",
+              "difficulty": 2,
+              "id": "5.2.2092",
+              "distractors": [
+                "100 Mbps, 1 Gbps, and 10 Gbps only",
+                "1 Gbps only (same as PoE and PoE+)",
+                "40 Gbps and 100 Gbps"
+              ]
+            },
+            {
+              "question": "Can a PoE+ switch power a PoE++ device?",
+              "answer": "No — the switch and device must use compatible PoE standards",
+              "difficulty": 1,
+              "id": "5.2.2093",
+              "distractors": [
+                "Yes — PoE is backward compatible so any switch can power any PoE device at reduced speed",
+                "Yes — the device automatically reduces its power consumption to match the available supply",
+                "Only if the PoE++ device has a fallback mode that operates on lower power"
+              ]
+            },
+            {
+              "question": "Do all interfaces on a PoE switch necessarily support the same PoE standard?",
+              "answer": "No — some switches have all interfaces PoE-capable, while others have a mix of PoE, PoE+, and PoE++ ports",
+              "difficulty": 2,
+              "id": "5.2.2094",
+              "distractors": [
+                "Yes — all ports on a PoE switch always support the same PoE standard",
+                "Yes — PoE capability is determined by the switch's power supply, not individual ports",
+                "Only enterprise switches support mixed PoE ports; consumer switches are always uniform"
+              ]
+            },
+            {
+              "question": "What is a PoE power budget on a switch?",
+              "answer": "The maximum total PoE power the switch can provide (e.g., 200W or 720W). All connected devices' maximum power draw must be under this capacity.",
+              "difficulty": 2,
+              "id": "5.2.2095",
+              "distractors": [
+                "The maximum power a single PoE port can deliver to one device",
+                "The electrical cost in dollars per month to run all PoE devices on the switch",
+                "The maximum number of PoE devices that can be connected to the switch simultaneously"
+              ]
+            },
+            {
+              "question": "What do transceivers provide for Ethernet devices?",
+              "answer": "Modular connections for Ethernet devices",
+              "difficulty": 1,
+              "id": "5.2.2096",
+              "distractors": [
+                "Signal amplification for long-distance copper cable runs",
+                "Protocol conversion between different network standards (e.g., Token Ring to Ethernet)",
+                "Encryption of data at the physical layer before transmission"
+              ]
+            },
+            {
+              "question": "What must match between a fiber transceiver and the fiber it connects to?",
+              "answer": "The wavelength — marked on the transceiver (e.g., 850 nm or 1310 nm). All wavelengths must match throughout the entire link.",
+              "difficulty": 2,
+              "id": "5.2.2097",
+              "distractors": [
+                "The connector type — SC transceivers cannot use LC fiber cables and vice versa",
+                "The cable length — transceivers are rated for specific maximum distances only",
+                "The fiber core size — 50-micron transceivers cannot work with 62.5-micron fiber"
+              ]
+            },
+            {
+              "question": "What happens when transceivers are mismatched?",
+              "answer": "Signal loss, increasing error counters, loss of signal, or network slowdown",
+              "difficulty": 2,
+              "id": "5.2.2098",
+              "distractors": [
+                "The switch automatically adjusts to the slower transceiver's speed",
+                "The link operates normally but consumes more power than rated",
+                "The port remains up but traffic is encrypted improperly"
+              ]
+            },
+            {
+              "question": "Why are transceiver mismatches easy to make?",
+              "answer": "Transceivers look nearly identical — wavelength markings are very small. Once plugged into a switch, markings are no longer visible.",
+              "difficulty": 1,
+              "id": "5.2.2099",
+              "distractors": [
+                "Transceivers from different vendors use incompatible firmware that causes silent failures",
+                "Switch interfaces don't report transceiver type so there's no way to check without documentation",
+                "Different wavelengths use different colored LEDs that are only visible in complete darkness"
+              ]
+            },
+            {
+              "question": "How can you identify a transceiver's wavelength once it's plugged into a switch?",
+              "answer": "Check the switch specifications or physically remove the transceiver to read the label",
+              "difficulty": 2,
+              "id": "5.2.2100",
+              "distractors": [
+                "Use an optical power meter to measure the wavelength of light being transmitted",
+                "Check the switch's LED color — green indicates 850 nm and amber indicates 1310 nm",
+                "Run a show interfaces command which always displays the transceiver wavelength"
+              ]
+            },
+            {
+              "question": "What is a transceiver's sensitivity level?",
+              "answer": "The minimum signal it can receive and still interpret properly",
+              "difficulty": 2,
+              "id": "5.2.2101",
+              "distractors": [
+                "The maximum signal strength it can transmit without overloading the fiber",
+                "The range of wavelengths it can accept from different transceiver types",
+                "The maximum cable distance the transceiver supports before requiring a repeater"
+              ]
+            },
+            {
+              "question": "When is calculating a power budget especially important?",
+              "answer": "For long runs with many connections in the middle",
+              "difficulty": 1,
+              "id": "5.2.2102",
+              "distractors": [
+                "When using multimode fiber instead of single mode",
+                "Only when connecting devices from different manufacturers",
+                "When selecting which PoE standard to deploy on a switch"
+              ]
+            },
+            {
+              "question": "What unit is transmitted power measured in for a power budget calculation?",
+              "answer": "dBm (decibels per milliwatt)",
+              "difficulty": 2,
+              "id": "5.2.2103",
+              "distractors": [
+                "dB (decibels)",
+                "mW (milliwatts)",
+                "nm (nanometers)"
+              ]
+            },
+            {
+              "question": "What are the four steps to calculate a power budget?",
+              "answer": "1) Determine transmitted power (dBm), 2) Calculate signal loss from media distance and connectors/splices, 3) Subtract total signal loss from transmitted power = received power, 4) Compare received...",
+              "difficulty": 3,
+              "id": "5.2.2104",
+              "distractors": [
+                "1) Measure cable length, 2) Select transceiver type, 3) Test with optical meter, 4) Replace cable if needed",
+                "1) Check interface errors, 2) Swap transceivers, 3) Clean connectors, 4) Re-run cable",
+                "1) Count connectors, 2) Measure wavelength, 3) Calculate bandwidth, 4) Select cable category"
+              ]
+            },
+            {
+              "question": "What two factors contribute to signal loss in a power budget calculation?",
+              "answer": "Media distance (fiber length) and connectors/splices (each reduces signal)",
+              "difficulty": 2,
+              "id": "5.2.2105",
+              "distractors": [
+                "Transceiver age and ambient temperature",
+                "Wavelength mismatch and connector type incompatibility",
+                "Cable category rating and number of devices on the link"
+              ]
+            },
+            {
+              "question": "Why are sensitivity values negative numbers?",
+              "answer": "Because signal decreases through media",
+              "difficulty": 2,
+              "id": "5.2.2106",
+              "distractors": [
+                "Because they represent power below the 0 dBm reference point (1 milliwatt)",
+                "Negative values indicate the receiver is pulling signal rather than transmitting it",
+                "It is a convention to distinguish receive values from transmit values"
+              ]
+            },
+            {
+              "question": "How do you determine if received power is sufficient?",
+              "answer": "If received power ≥ sensitivity value → good signal. If received power < sensitivity value → insufficient signal.",
+              "difficulty": 2,
+              "id": "5.2.2107",
+              "distractors": [
+                "If received power equals exactly the sensitivity value, the link is optimal",
+                "Compare received power to transmitted power — if loss is under 50% the link is good",
+                "Received power must be at least double the sensitivity value for a reliable connection"
+              ]
+            },
+            {
+              "question": "A transceiver has a receiver sensitivity of -17 dBm. Is a received power of -14 dBm acceptable?",
+              "answer": "Yes — -14 dBm is higher than the -17 dBm sensitivity, so the signal is sufficient",
+              "difficulty": 2,
+              "id": "5.2.2108",
+              "distractors": [
+                "No — -14 dBm is too strong and will overload the receiver",
+                "No — the signal must exactly match the sensitivity for proper operation",
+                "Cannot determine without knowing the transmitted power level"
+              ]
+            },
+            {
+              "question": "A transceiver has a receiver sensitivity of -17 dBm. Is a received power of -20 dBm acceptable?",
+              "answer": "No — -20 dBm is lower than the -17 dBm sensitivity, so there is not enough signal",
+              "difficulty": 2,
+              "id": "5.2.2109",
+              "distractors": [
+                "Yes — -20 dBm is within the acceptable range of -17 dBm sensitivity",
+                "Yes — as long as the difference is less than 5 dBm the link will work",
+                "Cannot determine without knowing the cable length"
+              ]
+            },
+            {
+              "question": "Why do network administrators monitor interfaces on important devices?",
+              "answer": "To detect developing problems (bad cable, bad interface) and resolve them before they become outages; also to identify congestion or overutilization that may require network design changes",
+              "difficulty": 1,
+              "id": "5.2.2110",
+              "distractors": [
+                "To generate billing reports based on per-port bandwidth usage for chargebacks",
+                "To satisfy vendor support requirements that mandate continuous monitoring for warranty claims",
+                "To track which users are connected to each port for security auditing purposes only"
+              ]
+            },
+            {
+              "question": "What protocol do administrators use to automate interface monitoring?",
+              "answer": "SNMP (Simple Network Management Protocol)",
+              "difficulty": 1,
+              "id": "5.2.2111",
+              "distractors": [
+                "ICMP (Internet Control Message Protocol)",
+                "NetFlow (network traffic analysis protocol)",
+                "Syslog (system logging protocol)"
+              ]
+            },
+            {
+              "question": "What is MIB-II?",
+              "answer": "Management Information Base — a standard set of SNMP statistics common across many different devices",
+              "difficulty": 2,
+              "id": "5.2.2112",
+              "distractors": [
+                "Management Interface Bus — the physical connector used for out-of-band device management",
+                "A proprietary Cisco protocol for collecting switch performance statistics",
+                "Media Independent Bridge — a Layer 2 standard for connecting unlike network types"
+              ]
+            },
+            {
+              "question": "What is the purpose of proprietary MIBs?",
+              "answer": "To provide device-specific statistics (firewalls, switches) beyond the standard MIB-II set",
+              "difficulty": 2,
+              "id": "5.2.2113",
+              "distractors": [
+                "To replace MIB-II with faster more efficient data collection methods",
+                "To encrypt SNMP communications between the manager and agents",
+                "To allow third-party monitoring tools to manage devices without SNMP"
+              ]
+            },
+            {
+              "question": "What are the three key interface metrics to monitor?",
+              "answer": "Link status (up/down), utilization (throughput), and errors (CRC, runts, giants, drops)",
+              "difficulty": 1,
+              "id": "5.2.2114",
+              "distractors": [
+                "Bandwidth, latency, jitter",
+                "MAC address count, VLAN assignment, port security status",
+                "CPU usage, memory usage, temperature"
+              ]
+            },
+            {
+              "question": "What might a link status of \"down\" indicate?",
+              "answer": "Cable problem, interface issue, or device reboot",
+              "difficulty": 1,
+              "id": "5.2.2115",
+              "distractors": [
+                "VLAN mismatch, duplex mismatch, or speed mismatch",
+                "High CPU utilization on the switch causing port shutdown",
+                "Spanning tree blocking state or BPDU guard violation"
+              ]
+            },
+            {
+              "question": "What is the purpose of the Preamble and SFD in an ethernet frame?",
+              "answer": "They identify the beginning of an ethernet frame; everything after the SFD (Start Frame Delimiter) is the normal frame. They are not visible in packet captures.",
+              "difficulty": 2,
+              "id": "5.2.2116",
+              "distractors": [
+                "They contain the source and destination MAC addresses for Layer 2 switching",
+                "They carry error correction data used to verify frame integrity at the receiver",
+                "They establish link speed and duplex negotiation between connected devices"
+              ]
+            },
+            {
+              "question": "What are the six fields of an ethernet frame (in order)?",
+              "answer": "Preamble + SFD, Destination MAC, Source MAC, EtherType, Payload, Frame Check Sequence",
+              "difficulty": 3,
+              "id": "5.2.2117",
+              "distractors": [
+                "Version, Header Length, Total Length, TTL, Protocol, Source IP",
+                "Destination MAC, Source MAC, VLAN Tag, Length, Data, Padding",
+                "Sync, Control, Address, Protocol, Information, FCS"
+              ]
+            },
+            {
+              "question": "What is the purpose of the EtherType field?",
+              "answer": "Describes what type of data is in the payload",
+              "difficulty": 2,
+              "id": "5.2.2118",
+              "distractors": [
+                "Identifies the source and destination MAC addresses for switching decisions",
+                "Contains a checksum used to verify the integrity of the frame",
+                "Specifies the VLAN tag and priority level for the frame"
+              ]
+            },
+            {
+              "question": "What is the Frame Check Sequence (FCS)?",
+              "answer": "A CRC checksum at the end of an ethernet frame used to verify data integrity",
+              "difficulty": 2,
+              "id": "5.2.2119",
+              "distractors": [
+                "A sequence number added to each frame to ensure packets arrive in the correct order",
+                "A flow control mechanism that tells the sender to pause transmission when buffers are full",
+                "A preamble at the beginning of an ethernet frame used to synchronize clock timing between devices"
+              ]
+            },
+            {
+              "question": "How does CRC error detection work?",
+              "answer": "The Frame Check Sequence contains a checksum calculated at transmission. The receiving adapter recalculates the CRC and compares it to the FCS value. If they match, the frame received without corru...",
+              "difficulty": 2,
+              "id": "5.2.2120",
+              "distractors": [
+                "The sender transmits each frame twice. The receiver compares both copies and discards the frame if they differ.",
+                "The switch inspects the TTL field and drops frames that have been forwarded too many times, indicating a loop.",
+                "The receiver sends an acknowledgment for each frame. If no ACK is received within the timeout, the sender retransmits."
+              ]
+            },
+            {
+              "question": "What do CRC errors typically indicate?",
+              "answer": "Signal problems on the connection — possible cable or interface issue. CRC errors are often the first warning of developing problems.",
+              "difficulty": 1,
+              "id": "5.2.2121",
+              "distractors": [
+                "VLAN misconfigurations causing frames to be tagged incorrectly between switches",
+                "Duplex mismatch between the switch port and the connected device",
+                "Software bugs in the network driver causing malformed frames to be generated"
+              ]
+            },
+            {
+              "question": "What is a runt?",
+              "answer": "A frame received that is less than 64 bytes (the minimum ethernet frame size)",
+              "difficulty": 1,
+              "id": "5.2.2122",
+              "distractors": [
+                "A frame received that is larger than 1,518 bytes (the maximum ethernet frame size)",
+                "A frame with an invalid CRC value in the Frame Check Sequence",
+                "A frame that arrives out of order due to multipath routing"
+              ]
+            },
+            {
+              "question": "What is the minimum size of a valid ethernet frame?",
+              "answer": "64 bytes",
+              "difficulty": 1,
+              "id": "5.2.2123",
+              "distractors": [
+                "46 bytes",
+                "128 bytes",
+                "1,518 bytes"
+              ]
+            },
+            {
+              "question": "Why are runts rare on modern networks?",
+              "answer": "Most switch networks are full duplex. Runts were common on half-duplex networks during collisions.",
+              "difficulty": 2,
+              "id": "5.2.2124",
+              "distractors": [
+                "Modern NICs automatically pad frames to minimum size before transmission",
+                "Switches discard frames below minimum size before forwarding, so end devices never see them",
+                "Gigabit Ethernet increased the minimum frame size, making small frames valid"
+              ]
+            },
+            {
+              "question": "What is a giant?",
+              "answer": "A frame received that is larger than 1,518 bytes (the default maximum ethernet frame size), or larger than the configured maximum size for jumbo frames",
+              "difficulty": 1,
+              "id": "5.2.2125",
+              "distractors": [
+                "A frame received that is less than 64 bytes (the minimum ethernet frame size)",
+                "A frame with a corrupted FCS that fails CRC validation on the receiving interface",
+                "A broadcast frame that has been forwarded to every port on the switch including the source"
+              ]
+            },
+            {
+              "question": "What is the default maximum ethernet frame size?",
+              "answer": "1,518 bytes",
+              "difficulty": 1,
+              "id": "5.2.2126",
+              "distractors": [
+                "1,500 bytes",
+                "9,000 bytes",
+                "64 bytes"
+              ]
+            },
+            {
+              "question": "How do jumbo frames relate to giants?",
+              "answer": "Jumbo frames can exceed 1,518 bytes but have their own configured maximum. If a frame exceeds that configured maximum, it is still classified as a giant.",
+              "difficulty": 2,
+              "id": "5.2.2127",
+              "distractors": [
+                "Jumbo frames are always classified as giants because they exceed the standard ethernet maximum frame size",
+                "Jumbo frames eliminate giants entirely by removing the upper frame size limit on the interface",
+                "Giants and jumbo frames are the same thing — both terms describe frames larger than 1,518 bytes"
+              ]
+            },
+            {
+              "question": "What causes drops on a network interface?",
+              "answer": "Contention or buffering problems — no room in the buffer to hold the frame",
+              "difficulty": 1,
+              "id": "5.2.2128",
+              "distractors": [
+                "CRC errors causing the interface to reject frames that fail integrity checks",
+                "Spanning tree blocking the port to prevent switching loops",
+                "ACL rules on the interface denying traffic that does not match permit entries"
+              ]
+            },
+            {
+              "question": "What does an incrementing drop counter indicate?",
+              "answer": "Communication problems on the network",
+              "difficulty": 1,
+              "id": "5.2.2129",
+              "distractors": [
+                "Normal operation — all interfaces drop some frames during routine traffic",
+                "The interface is in error disabled state and needs to be re-enabled",
+                "A spanning tree topology change is in progress"
+              ]
+            },
+            {
+              "question": "What Cisco command displays interface error counters (runts, giants, CRCs)?",
+              "answer": "`show interface`",
+              "difficulty": 2,
+              "id": "5.2.2130",
+              "distractors": [
+                "`show running-config`",
+                "`show mac address-table`",
+                "`show ip route`"
+              ]
+            },
+            {
+              "question": "What does a slowly incrementing CRC error counter suggest?",
+              "answer": "A developing cable or interface problem",
+              "difficulty": 2,
+              "id": "5.2.2131",
+              "distractors": [
+                "Normal operation on a busy network segment",
+                "A duplex mismatch that requires immediate attention",
+                "A switching loop forming between redundant links"
+              ]
+            },
+            {
+              "question": "What is the error disabled state?",
+              "answer": "A state where the device has automatically disabled an interface without human intervention due to detected problems",
+              "difficulty": 1,
+              "id": "5.2.2132",
+              "distractors": [
+                "A state where an administrator has manually shut down an interface using the shutdown command",
+                "A state where the interface hardware has physically failed and needs replacement",
+                "A state where spanning tree has blocked the port to prevent a switching loop"
+              ]
+            },
+            {
+              "question": "What are four common triggers for error disabled state?",
+              "answer": "Interface flapping (link going up/down repeatedly, causing spanning tree issues), port security violation (unauthorized device), configuration problems, and increasing error counts",
+              "difficulty": 3,
+              "id": "5.2.2133",
+              "distractors": [
+                "Cable disconnection, power failure, firmware crash, and hardware malfunction",
+                "VLAN mismatch, duplex mismatch, speed mismatch, and MTU mismatch",
+                "High CPU utilization, memory exhaustion, routing table overflow, and ARP table overflow"
+              ]
+            },
+            {
+              "question": "What is interface flapping?",
+              "answer": "The link going up/down repeatedly, causing spanning tree issues",
+              "difficulty": 2,
+              "id": "5.2.2134",
+              "distractors": [
+                "A port rapidly changing between full-duplex and half-duplex modes",
+                "The interface alternating between different speed settings during autonegotiation",
+                "Traffic bursting above and below a configured threshold on the interface"
+              ]
+            },
+            {
+              "question": "What happens when a port security violation triggers error disabled?",
+              "answer": "An unauthorized device connected to a secured port causes the switch to put the interface into error disabled state",
+              "difficulty": 2,
+              "id": "5.2.2135",
+              "distractors": [
+                "The switch sends an SNMP trap to the management server but continues forwarding traffic on the port",
+                "The switch drops frames from the unauthorized MAC address but keeps the port active for authorized devices",
+                "The switch moves the unauthorized device to an isolated quarantine VLAN for remediation"
+              ]
+            },
+            {
+              "question": "Once an interface is error disabled, will it automatically recover?",
+              "answer": "No — you must log into the switch and administratively re-enable the interface. If the same problem recurs, it may return to error disabled state.",
+              "difficulty": 2,
+              "id": "5.2.2136",
+              "distractors": [
+                "Yes — the interface automatically recovers after a 5-minute timer expires",
+                "Yes — spanning tree will unblock the port once it determines the loop has been resolved",
+                "Yes — the switch periodically retests the port and re-enables it if the error condition clears"
+              ]
+            },
+            {
+              "question": "What is the difference between error disabled and administratively down?",
+              "answer": "Error disabled is automatic (device disabled it due to detected problems). Administratively down is intentional — an administrator manually disabled the interface.",
+              "difficulty": 2,
+              "id": "5.2.2137",
+              "distractors": [
+                "Error disabled means the cable is physically disconnected. Administratively down means the port is blocked by spanning tree.",
+                "Error disabled is a temporary state that auto-recovers. Administratively down requires manual intervention to restore.",
+                "Error disabled only affects Layer 2 traffic. Administratively down stops both Layer 2 and Layer 3 traffic."
+              ]
+            },
+            {
+              "question": "What is a suspended port status?",
+              "answer": "An error that occurs the moment an interface is enabled because it is connected to an incompatible configuration",
+              "difficulty": 2,
+              "id": "5.2.2138",
+              "distractors": [
+                "A port that has been temporarily paused by flow control to prevent buffer overflow",
+                "A port waiting for spanning tree to transition through listening and learning states",
+                "A port that has been placed into a quarantine VLAN due to a security violation"
+              ]
+            },
+            {
+              "question": "Give an example of what causes a suspended port status.",
+              "answer": "Configuring LACP on one switch but not the other — the interface immediately moves into a suspended state",
+              "difficulty": 2,
+              "id": "5.2.2139",
+              "distractors": [
+                "Connecting a device with the wrong cable type — the interface fails speed autonegotiation and suspends",
+                "Enabling spanning tree on a port that is already in forwarding state on the root bridge",
+                "Assigning a VLAN that does not exist in the VLAN database — the port enters suspended state"
+              ]
+            },
+            {
+              "question": "What is the difference between error disabled and suspended port status?",
+              "answer": "Error disabled occurs after the interface has been running and problems are detected. Suspended occurs immediately when the interface is enabled due to incompatible configuration.",
+              "difficulty": 3,
+              "id": "5.2.2140",
+              "distractors": [
+                "Error disabled is caused by physical layer faults. Suspended is caused by software-level ACL denials.",
+                "Error disabled requires a reboot to recover. Suspended recovers automatically after the configuration is fixed.",
+                "Error disabled blocks all VLANs on the port. Suspended only blocks the misconfigured VLAN."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "title": "Routing And Ip Issues",
+          "concepts": [
+            {
+              "question": "What is the purpose of a routing table?",
+              "answer": "To determine the best next hop when forwarding traffic through a router — builds a map of where data will be forwarded",
+              "difficulty": 1,
+              "id": "5.3.2141",
+              "distractors": [
+                "To store MAC addresses and their associated switch ports for Layer 2 forwarding decisions",
+                "To track active TCP and UDP sessions passing through the device for stateful inspection",
+                "To maintain a list of DNS records for resolving hostnames to IP addresses"
+              ]
+            },
+            {
+              "question": "What three types of entries can a routing table contain?",
+              "answer": "Default gateway configurations, static routes, and dynamically learned routes",
+              "difficulty": 1,
+              "id": "5.3.2142",
+              "distractors": [
+                "MAC addresses, ARP entries, and VLAN assignments",
+                "DNS records, DHCP leases, and NAT translations",
+                "Access control lists, port security entries, and firewall rules"
+              ]
+            },
+            {
+              "question": "What happens when a router has no route for a destination?",
+              "answer": "The router drops the traffic; it may send back an ICMP host unreachable message to the sender",
+              "difficulty": 2,
+              "id": "5.3.2143",
+              "distractors": [
+                "The router floods the packet out all interfaces, similar to an unknown unicast frame on a switch",
+                "The router buffers the packet indefinitely until a route to the destination is learned",
+                "The router encapsulates the packet in a broadcast frame and sends it to all connected networks"
+              ]
+            },
+            {
+              "question": "When troubleshooting routing problems, which routing tables should you check?",
+              "answer": "The routing table of every router along the path — must confirm routes in both directions (to the destination and back to the source)",
+              "difficulty": 2,
+              "id": "5.3.2144",
+              "distractors": [
+                "Only the routing table of the default gateway — it handles all forwarding decisions for the network",
+                "Only the routing tables of the source and destination routers — intermediate routers forward automatically",
+                "Only the routing table of the router closest to the destination — that is where packets are most likely dropped"
+              ]
+            },
+            {
+              "question": "What is helpful to compare routing tables against when troubleshooting?",
+              "answer": "A network map",
+              "difficulty": 1,
+              "id": "5.3.2145",
+              "distractors": [
+                "The ARP cache",
+                "The DHCP lease table",
+                "The spanning tree topology"
+              ]
+            },
+            {
+              "question": "What is the gateway of last resort?",
+              "answer": "A default route that summarizes all possible destinations into one entry, used when no other route in the routing table matches the destination",
+              "difficulty": 1,
+              "id": "5.3.2146",
+              "distractors": [
+                "A backup router that takes over forwarding when the primary gateway fails using HSRP or VRRP",
+                "The router with the highest bridge ID that becomes the root bridge for spanning tree",
+                "A secondary DNS server used when the primary server cannot resolve a hostname query"
+              ]
+            },
+            {
+              "question": "How is the gateway of last resort typically added?",
+              "answer": "As a static route configured by the administrator",
+              "difficulty": 2,
+              "id": "5.3.2147",
+              "distractors": [
+                "Automatically learned through OSPF or EIGRP route advertisements from neighboring routers",
+                "Assigned dynamically by the DHCP server along with the IP address and subnet mask",
+                "Discovered through ARP requests broadcast to all devices on the local subnet"
+              ]
+            },
+            {
+              "question": "What is the destination address for the gateway of last resort?",
+              "answer": "0.0.0.0/0 — encompasses every host on every network",
+              "difficulty": 2,
+              "id": "5.3.2148",
+              "distractors": [
+                "255.255.255.255/32 — the broadcast address for all networks",
+                "127.0.0.0/8 — the loopback address range used for local testing",
+                "169.254.0.0/16 — the link-local address range for automatic configuration"
+              ]
+            },
+            {
+              "question": "In a routing table, what does a directly connected route mean?",
+              "answer": "A network that is directly attached to one of the router's interfaces",
+              "difficulty": 1,
+              "id": "5.3.2149",
+              "distractors": [
+                "A route learned from a neighboring router via a dynamic routing protocol",
+                "A route manually configured by an administrator as a static entry",
+                "A route to the default gateway used when no other match exists"
+              ]
+            },
+            {
+              "question": "What happens when a DHCP address pool is exhausted?",
+              "answer": "Devices receive an APIPA address instead",
+              "difficulty": 1,
+              "id": "5.3.2150",
+              "distractors": [
+                "Devices receive the last available address and share it, causing duplicate IP conflicts",
+                "The DHCP server assigns addresses from a neighboring subnet's pool automatically",
+                "Devices fail to connect and display a limited connectivity error with no IP address assigned"
+              ]
+            },
+            {
+              "question": "What can a device do with an APIPA address?",
+              "answer": "Communicate with other devices on the local subnet only — APIPA is nonroutable and cannot communicate outside the local subnet",
+              "difficulty": 2,
+              "id": "5.3.2151",
+              "distractors": [
+                "Communicate with the default gateway to reach external networks using NAT translation",
+                "Access the internet through a fallback DNS resolution using link-local multicast",
+                "Nothing — the device cannot send or receive any network traffic with an APIPA address"
+              ]
+            },
+            {
+              "question": "What is IPAM?",
+              "answer": "IP Address Management — used to monitor and view available addresses, pools, and availability across DHCP servers",
+              "difficulty": 2,
+              "id": "5.3.2152",
+              "distractors": [
+                "Internet Protocol Access Method — a protocol for authenticating devices before granting network access",
+                "Integrated Port Authentication Mechanism — used to enforce 802.1X on switch ports",
+                "IP Application Mapping — a tool that associates running applications with their network ports and protocols"
+              ]
+            },
+            {
+              "question": "How can you reduce address pool exhaustion for networks with short-term users?",
+              "answer": "Decrease the DHCP lease time — frees up addresses faster and minimizes exhaustion",
+              "difficulty": 2,
+              "id": "5.3.2153",
+              "distractors": [
+                "Increase the DHCP lease time so devices hold addresses longer and reduce renewal traffic",
+                "Enable DHCP relay to forward requests to additional servers on other subnets",
+                "Configure NAT overload (PAT) so multiple devices share a single IP address from the pool"
+              ]
+            },
+            {
+              "question": "What three values might be incorrect when a device receives wrong IP configuration?",
+              "answer": "IP address, subnet mask, or default gateway",
+              "difficulty": 1,
+              "id": "5.3.2154",
+              "distractors": [
+                "MAC address, VLAN ID, or port speed",
+                "DNS server, WINS server, or NTP server",
+                "Hostname, domain name, or DHCP lease duration"
+              ]
+            },
+            {
+              "question": "How can you determine what IP configuration other devices on a subnet are using?",
+              "answer": "Perform a packet capture to see what other devices on the subnet are configured as, or check configuration of other devices already on the same network",
+              "difficulty": 2,
+              "id": "5.3.2155",
+              "distractors": [
+                "Run nslookup against the DNS server to resolve all hostnames on the subnet",
+                "Check the routing table on the default gateway to see which subnets are advertised",
+                "Use SNMP polling to query the DHCP server for all active lease assignments"
+              ]
+            },
+            {
+              "question": "What is the correct troubleshooting order using ping to verify IP configuration?",
+              "answer": "Ping local address → ping default gateway → ping an address beyond the gateway",
+              "difficulty": 2,
+              "id": "5.3.2156",
+              "distractors": [
+                "Ping DNS server → ping default gateway → ping local loopback address",
+                "Ping remote server → ping default gateway → ping local address",
+                "Ping broadcast address → ping default gateway → ping local address"
+              ]
+            },
+            {
+              "question": "What two tools can you use to map your position in the network and verify correct IP assignment?",
+              "answer": "ping and traceroute",
+              "difficulty": 1,
+              "id": "5.3.2157",
+              "distractors": [
+                "nslookup and dig",
+                "netstat and nmap",
+                "arp and ipconfig"
+              ]
+            },
+            {
+              "question": "What are three common causes of duplicate IP addresses?",
+              "answer": "1) Manually configured device using an address in a DHCP pool, 2) Multiple DHCP servers with overlapping pools, 3) Rogue device with DHCP enabled handing out unexpected addresses",
+              "difficulty": 3,
+              "id": "5.3.2158",
+              "distractors": [
+                "1) Expired DHCP leases not being reclaimed, 2) DNS round-robin load balancing, 3) NAT translation conflicts on the firewall",
+                "1) Spanning tree convergence issues, 2) ARP cache poisoning attacks, 3) Multicast group conflicts",
+                "1) Incorrect subnet masks creating overlapping networks, 2) VLAN hopping attacks, 3) Gratuitous ARP broadcasts"
+              ]
+            },
+            {
+              "question": "How did older operating systems handle duplicate IP addresses?",
+              "answer": "Two devices fight over priority based on the switch MAC address table",
+              "difficulty": 2,
+              "id": "5.3.2159",
+              "distractors": [
+                "The device that connected first keeps the address and the second device is forced to release it",
+                "Both devices are immediately disconnected from the network until the conflict is resolved",
+                "The DHCP server detects the conflict and assigns a new address to the second device automatically"
+              ]
+            },
+            {
+              "question": "How do modern operating systems handle duplicate IP addresses?",
+              "answer": "Duplicate IP is discovered when the device first connects to the network; prevented with an error message displayed on screen",
+              "difficulty": 2,
+              "id": "5.3.2160",
+              "distractors": [
+                "The switch detects the duplicate via ARP inspection and disables the port of the newer device",
+                "The DHCP server revokes the lease from the first device and reassigns it to the newer device",
+                "Both devices silently share the address using round-robin load balancing at the MAC layer"
+              ]
+            },
+            {
+              "question": "What should you do before statically configuring an IP address on a device?",
+              "answer": "Ping the IP address first — a response means it is already in use and configuring it would cause a conflict",
+              "difficulty": 2,
+              "id": "5.3.2161",
+              "distractors": [
+                "Check the DNS server to ensure no hostname is already mapped to that address",
+                "Verify the address is within the DHCP exclusion range by checking the server configuration",
+                "Run a port scan on the address to confirm no services are actively responding"
+              ]
+            },
+            {
+              "question": "How do you find the physical location of an unexpected device responding to a ping?",
+              "answer": "Check the ARP table to get its MAC address, then use the switch MAC address table to find which interface the device is plugged into",
+              "difficulty": 3,
+              "id": "5.3.2162",
+              "distractors": [
+                "Run traceroute to the device and count the hops to determine its physical distance from your location",
+                "Use DNS reverse lookup to find the hostname, then search the asset management database for its location",
+                "Check the DHCP lease table to find the device name and match it to a network jack in the wiring closet"
+              ]
+            },
+            {
+              "question": "How do you troubleshoot overlapping DHCP pools causing duplicate addresses?",
+              "answer": "Perform a packet capture to see exactly what the DHCP servers are offering",
+              "difficulty": 2,
+              "id": "5.3.2163",
+              "distractors": [
+                "Run ipconfig /release on all affected devices and let them re-request addresses from the correct server",
+                "Check the routing table to verify DHCP relay agents are forwarding to the correct server only",
+                "Disable all DHCP servers and re-enable them one at a time to isolate the conflicting pool"
+              ]
+            },
+            {
+              "question": "Why are switching loops so dangerous at Layer 2?",
+              "answer": "At the MAC address level, there is no mechanism for counting how many times a frame is seen (no TTL equivalent). Frames in a loop circle indefinitely until a connection is unplugged.",
+              "difficulty": 1,
+              "id": "5.3.2164",
+              "distractors": [
+                "Switching loops cause the spanning tree root bridge to reset, forcing all switches to re-elect a new root and dropping all traffic",
+                "Loops cause switches to overflow their VLAN databases, corrupting VLAN assignments across all ports",
+                "Loops inject corrupted frames into the network that pass CRC checks but contain invalid data payloads"
+              ]
+            },
+            {
+              "question": "Why do broadcasts and multicasts make switching loops worse?",
+              "answer": "A single broadcast/multicast frame is transmitted out every other interface on the switch, amplifying the looping traffic",
+              "difficulty": 2,
+              "id": "5.3.2165",
+              "distractors": [
+                "Broadcasts and multicasts have higher priority in switch queues, causing them to consume all available buffer space first",
+                "Broadcasts and multicasts bypass spanning tree port states, allowing them to traverse blocked ports",
+                "Broadcasts and multicasts force the switch to perform a routing table lookup, overloading the CPU"
+              ]
+            },
+            {
+              "question": "How is a switching loop accidentally created?",
+              "answer": "By adding a second connection between switches, creating a redundant path with no loop prevention",
+              "difficulty": 1,
+              "id": "5.3.2166",
+              "distractors": [
+                "By assigning the same VLAN to multiple trunk ports without pruning unused VLANs",
+                "By connecting a switch port back to another port on the same switch without enabling PortFast",
+                "By misconfiguring the root bridge priority so that two switches both claim root bridge status"
+              ]
+            },
+            {
+              "question": "What happens when a switching loop occurs?",
+              "answer": "Looping traffic quickly overwhelms both switches and brings the network to a halt",
+              "difficulty": 1,
+              "id": "5.3.2167",
+              "distractors": [
+                "The switches detect the loop and automatically disable redundant links using BPDU guard",
+                "Only broadcast traffic is affected; unicast frames continue forwarding normally",
+                "The switches increase their buffer size dynamically to handle the additional frame copies"
+              ]
+            },
+            {
+              "question": "What does IP have that Layer 2 switching does not for preventing loops?",
+              "answer": "IP has a TTL (Time to Live) field that prevents packets from circling indefinitely; there is nothing in the frame at Layer 2 to prevent loops",
+              "difficulty": 2,
+              "id": "5.3.2168",
+              "distractors": [
+                "IP has built-in loop detection that sends ICMP redirect messages to reroute traffic around loops",
+                "IP uses sequence numbers in each packet header to identify and discard duplicate frames",
+                "IP relies on checksum validation that corrupts after multiple hops, causing routers to drop looped packets"
+              ]
+            },
+            {
+              "question": "What is the purpose of Spanning Tree Protocol (STP)?",
+              "answer": "Prevents loops on the network",
+              "difficulty": 1,
+              "id": "5.3.2169",
+              "distractors": [
+                "Provides redundant paths between switches for load balancing traffic",
+                "Encrypts Layer 2 frames to prevent eavesdropping on the local network",
+                "Manages VLAN assignments across multiple switches in a domain"
+              ]
+            },
+            {
+              "question": "What are Bridge Protocol Data Units (BPDUs)?",
+              "answer": "MAC layer multicast frames sent between switches that contain configuration details and inform of topology changes",
+              "difficulty": 2,
+              "id": "5.3.2170",
+              "distractors": [
+                "Unicast frames sent from end devices to switches requesting VLAN assignment and port configuration",
+                "Layer 3 packets exchanged between routers to share routing table updates and convergence information",
+                "SNMP trap messages sent from switches to a management server reporting interface status changes"
+              ]
+            },
+            {
+              "question": "Which devices can see BPDU multicasts?",
+              "answer": "All switches on the local broadcast domain",
+              "difficulty": 1,
+              "id": "5.3.2171",
+              "distractors": [
+                "Only the root bridge and directly connected switches",
+                "All routers and switches across the entire network including remote sites",
+                "Only the designated port switches adjacent to the sending switch"
+              ]
+            },
+            {
+              "question": "How often are BPDUs sent by default?",
+              "answer": "Every 2 seconds (hello timer)",
+              "difficulty": 2,
+              "id": "5.3.2172",
+              "distractors": [
+                "Every 10 seconds (hello timer)",
+                "Every 30 seconds (forward delay timer)",
+                "Every 1 second (keepalive timer)"
+              ]
+            },
+            {
+              "question": "When does spanning tree consider a link to be down?",
+              "answer": "When three consecutive hellos are missed (6 seconds)",
+              "difficulty": 2,
+              "id": "5.3.2173",
+              "distractors": [
+                "When a single hello is missed (2 seconds)",
+                "After the max age timer expires (20 seconds)",
+                "When ten consecutive hellos are missed (20 seconds)"
+              ]
+            },
+            {
+              "question": "What happens after spanning tree detects a link is down?",
+              "answer": "Spanning tree redesigns the topology to prevent loops (unblocks alternate paths to restore connectivity)",
+              "difficulty": 2,
+              "id": "5.3.2174",
+              "distractors": [
+                "Spanning tree disables all redundant links and alerts the administrator to manually restore the path",
+                "Spanning tree immediately begins forwarding on all blocked ports without recalculating the topology",
+                "Spanning tree elects a new root bridge to replace the switch with the failed link"
+              ]
+            },
+            {
+              "question": "When is the root bridge elected?",
+              "answer": "When the network first starts; all bridges participate in the election",
+              "difficulty": 1,
+              "id": "5.3.2175",
+              "distractors": [
+                "Whenever a topology change occurs; only neighboring bridges participate in the re-election",
+                "Every 30 minutes as part of the scheduled spanning tree maintenance cycle",
+                "Only when an administrator manually triggers the election process with a configuration command"
+              ]
+            },
+            {
+              "question": "How is the root bridge determined?",
+              "answer": "The switch with the lowest bridge ID becomes root bridge",
+              "difficulty": 1,
+              "id": "5.3.2176",
+              "distractors": [
+                "The switch with the highest bridge ID becomes root bridge",
+                "The switch with the most active ports becomes root bridge",
+                "The switch that has been powered on the longest becomes root bridge"
+              ]
+            },
+            {
+              "question": "What is the valid range for manually setting a bridge ID?",
+              "answer": "0 to 61,440",
+              "difficulty": 3,
+              "id": "5.3.2177",
+              "distractors": [
+                "0 to 65,535",
+                "1 to 32,768",
+                "0 to 255"
+              ]
+            },
+            {
+              "question": "What is the tiebreaker if multiple switches have the same bridge ID?",
+              "answer": "The switch with the lowest MAC address becomes root bridge",
+              "difficulty": 2,
+              "id": "5.3.2178",
+              "distractors": [
+                "The switch with the highest port count becomes root bridge",
+                "The switch with the longest uptime becomes root bridge",
+                "The switch with the lowest IP address becomes root bridge"
+              ]
+            },
+            {
+              "question": "What is a root port?",
+              "answer": "The port on a non-root switch used to reach the root bridge",
+              "difficulty": 1,
+              "id": "5.3.2179",
+              "distractors": [
+                "A port on the root bridge that connects to other switches in the spanning tree",
+                "Any port that is actively forwarding traffic on the network",
+                "A port that has been blocked by spanning tree to prevent loops"
+              ]
+            },
+            {
+              "question": "What is a designated port?",
+              "answer": "An active port passing traffic",
+              "difficulty": 1,
+              "id": "5.3.2180",
+              "distractors": [
+                "A port blocked by spanning tree to prevent loops on a redundant link",
+                "The port on a non-root switch that provides the shortest path to the root bridge",
+                "A port assigned to a specific VLAN for access-layer device connections"
+              ]
+            },
+            {
+              "question": "What is a blocked port?",
+              "answer": "A port blocked by spanning tree to prevent loops",
+              "difficulty": 1,
+              "id": "5.3.2181",
+              "distractors": [
+                "A port administratively shut down by a network administrator",
+                "A port disabled due to a port security violation",
+                "A port that has no cable connected and shows a link-down status"
+              ]
+            },
+            {
+              "question": "What are the five STP port states?",
+              "answer": "Blocking, Listening, Learning, Forwarding, Disabled",
+              "difficulty": 3,
+              "id": "5.3.2182",
+              "distractors": [
+                "Down, Init, Converging, Active, Shutdown",
+                "Inactive, Negotiating, Synchronizing, Forwarding, Error",
+                "Closed, Half-Open, Open, Established, Terminated"
+              ]
+            },
+            {
+              "question": "What happens in the STP blocking state?",
+              "answer": "Not passing traffic; preventing loops",
+              "difficulty": 1,
+              "id": "5.3.2183",
+              "distractors": [
+                "Listening for BPDUs from other switches before making topology decisions",
+                "Populating the MAC address table by observing source addresses of incoming frames",
+                "Actively forwarding both user traffic and BPDUs to all connected devices"
+              ]
+            },
+            {
+              "question": "What happens in the STP listening state?",
+              "answer": "Listening for other switches on the broadcast domain before making changes",
+              "difficulty": 2,
+              "id": "5.3.2184",
+              "distractors": [
+                "Actively building the MAC address table by learning source addresses from incoming frames",
+                "Forwarding user traffic while simultaneously processing BPDUs from neighboring switches",
+                "Blocking all traffic including BPDUs to prevent any loop from forming"
+              ]
+            },
+            {
+              "question": "What happens in the STP learning state?",
+              "answer": "Adding information to the MAC address table",
+              "difficulty": 2,
+              "id": "5.3.2185",
+              "distractors": [
+                "Forwarding user traffic and passing frames between connected devices",
+                "Exchanging BPDUs to determine the root bridge and calculate path costs",
+                "Blocking all frames while waiting for the forward delay timer to expire"
+              ]
+            },
+            {
+              "question": "What happens in the STP forwarding state?",
+              "answer": "Actively passing traffic",
+              "difficulty": 1,
+              "id": "5.3.2186",
+              "distractors": [
+                "Learning MAC addresses but not yet forwarding user frames",
+                "Sending BPDUs only while blocking all user data traffic",
+                "Transitioning between blocked and active based on topology change notifications"
+              ]
+            },
+            {
+              "question": "What is the STP disabled state?",
+              "answer": "Administratively turned off by the network administrator",
+              "difficulty": 1,
+              "id": "5.3.2187",
+              "distractors": [
+                "A port that has been automatically blocked by spanning tree to prevent a loop",
+                "A port in error disabled state due to excessive CRC errors or port security violations",
+                "A port waiting for the forward delay timer before transitioning to forwarding"
+              ]
+            },
+            {
+              "question": "A device has an IP address but cannot communicate with others on the same network. What switching issue should you check?",
+              "answer": "VLAN misconfiguration — the interface may be assigned to the wrong VLAN",
+              "difficulty": 1,
+              "id": "5.3.2188",
+              "distractors": [
+                "Spanning tree has placed the port in blocking state, preventing all traffic",
+                "The switch MAC address table is full and cannot learn new entries",
+                "Duplex mismatch between the device and the switch port causing frame drops"
+              ]
+            },
+            {
+              "question": "What is an access port in terms of VLANs?",
+              "answer": "A switch port assigned a single VLAN ID",
+              "difficulty": 1,
+              "id": "5.3.2189",
+              "distractors": [
+                "A switch port that carries traffic for multiple VLANs using 802.1Q tagging",
+                "A switch port connected directly to a router for inter-VLAN routing",
+                "A switch port configured with port security to limit the number of MAC addresses"
+              ]
+            },
+            {
+              "question": "How do you resolve a VLAN assignment issue?",
+              "answer": "Change the VLAN ID on the interface, or move the device to an interface already configured for the correct VLAN",
+              "difficulty": 2,
+              "id": "5.3.2190",
+              "distractors": [
+                "Restart spanning tree on the switch to force all ports to renegotiate their VLAN memberships",
+                "Clear the MAC address table so the switch re-learns which VLAN each device belongs to",
+                "Reconfigure the trunk link between switches to allow the missing VLAN to pass through"
+              ]
+            },
+            {
+              "question": "Routing and VLAN configuration are correct, but packets are still being dropped. What should you check?",
+              "answer": "Access control lists (ACLs) on switches and routers — they may be blocking traffic on interfaces",
+              "difficulty": 2,
+              "id": "5.3.2191",
+              "distractors": [
+                "The DNS configuration — incorrect DNS settings prevent traffic from reaching the correct destination",
+                "The DHCP lease table — expired leases cause the device to lose its IP configuration",
+                "The spanning tree topology — a blocked port may be preventing traffic from reaching the destination"
+              ]
+            },
+            {
+              "question": "Why should more granular ACL rules be placed at the top of the list?",
+              "answer": "The ACL stops evaluating after finding a match, so granular rules at the top fire before broader controls lower down",
+              "difficulty": 2,
+              "id": "5.3.2192",
+              "distractors": [
+                "Rules at the top have higher priority numbers and override conflicting rules lower in the list",
+                "The router processes top rules using hardware acceleration but falls back to software for lower rules",
+                "Granular rules require more CPU to evaluate, so placing them first reduces overall processing time"
+              ]
+            },
+            {
+              "question": "Why should more common matches be placed at the top of an ACL?",
+              "answer": "For efficiency — the ACL stops evaluating after a match, so common matches at the top reduce processing",
+              "difficulty": 2,
+              "id": "5.3.2193",
+              "distractors": [
+                "Common rules at the top prevent buffer overflow by immediately forwarding high-volume traffic",
+                "The switch gives priority queuing to traffic matching top-of-list rules for QoS purposes",
+                "Rules near the bottom of long ACLs are ignored by the hardware TCAM due to memory limits"
+              ]
+            },
+            {
+              "question": "Why should you disable ACL functionality before making changes?",
+              "answer": "It is possible to make a change to an ACL that effectively removes your own access to the switch",
+              "difficulty": 2,
+              "id": "5.3.2194",
+              "distractors": [
+                "ACL changes require a reboot to take effect, and the switch is vulnerable during the restart",
+                "Modifying an active ACL causes all current sessions to be dropped and re-established",
+                "The switch cannot process traffic while ACL rules are being recompiled in the TCAM"
+              ]
+            },
+            {
+              "question": "What is the default behavior on many devices when you add an ACL to an interface?",
+              "answer": "Implicitly deny all traffic not specifically listed in the ACL",
+              "difficulty": 2,
+              "id": "5.3.2195",
+              "distractors": [
+                "Implicitly permit all traffic not specifically listed in the ACL",
+                "Log all traffic passing through the interface without blocking any of it",
+                "Rate-limit all traffic to 50% of the interface bandwidth until rules are applied"
+              ]
+            },
+            {
+              "question": "What happens if you add an empty ACL to an interface?",
+              "answer": "It effectively filters all communication through that device (implicit deny with no permit rules)",
+              "difficulty": 2,
+              "id": "5.3.2196",
+              "distractors": [
+                "Nothing changes — an empty ACL has no effect and all traffic passes normally",
+                "The interface enters error disabled state because it cannot process an empty rule set",
+                "All traffic is logged but still permitted through the interface for auditing purposes"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "title": "Performance Issues",
+          "concepts": [
+            {
+              "question": "What causes network congestion?",
+              "answer": "Multiple links sending more traffic than the destination link can handle (e.g., two 1-Gbps links sending to a single 1-Gbps destination)",
+              "difficulty": 1,
+              "id": "5.4.2197",
+              "distractors": [
+                "Incorrect VLAN configurations causing broadcast storms across all switch ports",
+                "Spanning tree convergence blocking ports and forcing traffic through a single link",
+                "Duplex mismatches between switches causing excessive frame retransmissions"
+              ]
+            },
+            {
+              "question": "What happens to excess packets during congestion?",
+              "answer": "They queue into a buffer, but buffers in switches/routers are relatively small — once the buffer fills, packets are discarded",
+              "difficulty": 2,
+              "id": "5.4.2198",
+              "distractors": [
+                "They are rerouted through alternate paths using ECMP load balancing to avoid the congested link",
+                "They are sent back to the source with an ICMP source quench message requesting slower transmission",
+                "They are compressed by the switch to reduce their size and fit more traffic through the link"
+              ]
+            },
+            {
+              "question": "What are the two ways to resolve network congestion?",
+              "answer": "Increase the size/speed of the network, or decrease the amount of traffic",
+              "difficulty": 1,
+              "id": "5.4.2199",
+              "distractors": [
+                "Enable QoS prioritization, or add more buffer memory to the switches",
+                "Implement spanning tree load balancing, or upgrade to full-duplex links",
+                "Add more VLANs to segment traffic, or enable jumbo frames to increase throughput"
+              ]
+            },
+            {
+              "question": "What does \"the network is slow\" usually indicate?",
+              "answer": "A bottleneck somewhere is causing a slowdown",
+              "difficulty": 1,
+              "id": "5.4.2200",
+              "distractors": [
+                "A switching loop is generating excessive broadcast traffic on the network",
+                "The DNS server is taking too long to resolve hostnames for client requests",
+                "The DHCP lease renewal process is consuming excessive bandwidth on the subnet"
+              ]
+            },
+            {
+              "question": "What are four potential sources of a bottleneck?",
+              "answer": "System bus speed, CPU speed in a switch or router, storage drive speed (HDD vs SSD), network link speeds across different locations",
+              "difficulty": 3,
+              "id": "5.4.2201",
+              "distractors": [
+                "VLAN misconfiguration, spanning tree convergence, ACL processing overhead, and ARP table overflow",
+                "DNS resolution time, DHCP server response time, NTP synchronization delay, and SNMP polling frequency",
+                "Cable length limitations, electromagnetic interference, connector oxidation, and ambient temperature"
+              ]
+            },
+            {
+              "question": "When looking at bandwidth across multiple links between two devices, which link is likely the bottleneck?",
+              "answer": "The slowest link — it holds up throughput for all other networks",
+              "difficulty": 2,
+              "id": "5.4.2202",
+              "distractors": [
+                "The fastest link — it creates congestion by overwhelming slower segments",
+                "The link with the highest error rate — corrupted frames reduce effective throughput",
+                "The link with the most hops — each router adds processing delay"
+              ]
+            },
+            {
+              "question": "Why are bottlenecks difficult to troubleshoot?",
+              "answer": "The problem may involve many different technologies; sometimes obvious, but often requires drilling into system details",
+              "difficulty": 1,
+              "id": "5.4.2203",
+              "distractors": [
+                "They always occur at the physical layer, making software tools useless for diagnosis",
+                "They only appear during peak usage hours and disappear before logs can capture them",
+                "They are caused by a single misconfigured device that is easy to identify with ping"
+              ]
+            },
+            {
+              "question": "What is bandwidth percentage?",
+              "answer": "A measure of how much a network is being used over a particular amount of time, presented as a percentage",
+              "difficulty": 1,
+              "id": "5.4.2204",
+              "distractors": [
+                "The maximum theoretical data rate of a network link measured in bits per second",
+                "The ratio of error-free packets to total packets transmitted, shown as a percentage",
+                "The percentage of available ports on a switch that are currently in use"
+              ]
+            },
+            {
+              "question": "What is throughput?",
+              "answer": "How much data was moved through the network during a time frame",
+              "difficulty": 1,
+              "id": "5.4.2205",
+              "distractors": [
+                "The maximum theoretical speed of a network interface",
+                "The number of packets per second a router can forward",
+                "The total available capacity of a network link before any traffic is applied"
+              ]
+            },
+            {
+              "question": "What is the difference between bandwidth percentage and throughput?",
+              "answer": "Bandwidth percentage shows how much of the network capacity is in use (as a percentage). Throughput shows how much actual data was moved in a time frame.",
+              "difficulty": 2,
+              "id": "5.4.2206",
+              "distractors": [
+                "Bandwidth percentage shows error rate as a ratio. Throughput shows maximum theoretical speed of the link.",
+                "Bandwidth percentage measures latency variation. Throughput measures total packets dropped per second.",
+                "Bandwidth percentage is only for wireless networks. Throughput is only measured on wired connections."
+              ]
+            },
+            {
+              "question": "What are three methods to monitor bandwidth statistics?",
+              "answer": "Gather directly from a switch, use SNMP, or use NetFlow",
+              "difficulty": 2,
+              "id": "5.4.2207",
+              "distractors": [
+                "Use ping, traceroute, or pathping",
+                "Check syslog, event viewer, or SNMP traps",
+                "Monitor via packet captures, port mirroring, or TAP devices"
+              ]
+            },
+            {
+              "question": "What is latency?",
+              "answer": "The delay between the request and the response",
+              "difficulty": 1,
+              "id": "5.4.2208",
+              "distractors": [
+                "The number of hops between source and destination",
+                "The variation in time between received frames",
+                "The percentage of packets lost during transmission"
+              ]
+            },
+            {
+              "question": "Will there always be some latency on a connection?",
+              "answer": "Yes — it takes time to move information between devices; some latency is always present",
+              "difficulty": 1,
+              "id": "5.4.2209",
+              "distractors": [
+                "No — modern fiber optic networks have eliminated latency entirely",
+                "Only on wireless networks — wired connections have zero latency",
+                "Only when packets cross different network segments or subnets"
+              ]
+            },
+            {
+              "question": "How should you ideally measure latency on a network?",
+              "answer": "Measure response times at every stop along the path, allowing delays to be broken down into smallest parts per segment",
+              "difficulty": 2,
+              "id": "5.4.2210",
+              "distractors": [
+                "Send a single ping from source to destination and divide the round-trip time by two",
+                "Use bandwidth monitoring tools to compare throughput against the theoretical maximum",
+                "Check interface error counters on routers to identify which link introduces the most delay"
+              ]
+            },
+            {
+              "question": "What granularity do packet captures provide for latency measurement?",
+              "answer": "Microsecond granularity — shows exactly how long a packet stayed in a device, traversed a network, and forwarded to the next segment",
+              "difficulty": 2,
+              "id": "5.4.2211",
+              "distractors": [
+                "Second-level granularity — shows total round-trip time between source and destination only",
+                "Millisecond granularity — shows average delay per hop using ICMP echo replies",
+                "Minute-level granularity — provides average throughput statistics over time intervals"
+              ]
+            },
+            {
+              "question": "What is packet loss (or discard)?",
+              "answer": "A packet with no errors is discarded for other reasons before reaching its destination",
+              "difficulty": 1,
+              "id": "5.4.2212",
+              "distractors": [
+                "A packet that arrives at its destination with CRC errors in the frame check sequence",
+                "A packet that is fragmented into smaller pieces due to MTU size mismatch",
+                "A packet that arrives out of order and must be reassembled by the receiving host"
+              ]
+            },
+            {
+              "question": "What are four causes of packet loss?",
+              "answer": "Network outage, contention (not enough bandwidth), bad wireless network, bad cable causing corruption",
+              "difficulty": 3,
+              "id": "5.4.2213",
+              "distractors": [
+                "DNS failure, DHCP exhaustion, ARP poisoning, and IP address conflict",
+                "MTU mismatch, TTL expiration, routing loop, and NAT table overflow",
+                "Duplex mismatch, VLAN misconfiguration, STP convergence, and port security violation"
+              ]
+            },
+            {
+              "question": "What happens when a bad cable corrupts data during transmission?",
+              "answer": "Corrupted data is identified at the other side, discarded, and must be re-sent — taking additional time and resources, causing significant application delays",
+              "difficulty": 2,
+              "id": "5.4.2214",
+              "distractors": [
+                "The switch automatically corrects the corrupted bits using forward error correction and delivers the packet",
+                "The router drops the packet silently and the application times out without any retry attempt",
+                "The corrupted packet is forwarded as-is and the application layer handles the error"
+              ]
+            },
+            {
+              "question": "What types of traffic are very sensitive to network delay?",
+              "answer": "VoIP calls and live video streams",
+              "difficulty": 1,
+              "id": "5.4.2215",
+              "distractors": [
+                "File transfers and email downloads",
+                "Web browsing and DNS lookups",
+                "Database replication and backup traffic"
+              ]
+            },
+            {
+              "question": "What happens when a packet is lost during real-time communication (VoIP/live video)?",
+              "answer": "It cannot be retransmitted — must be discarded and continue forward. Effects include clicking noise on phone calls or stutter on live video streams.",
+              "difficulty": 2,
+              "id": "5.4.2216",
+              "distractors": [
+                "TCP automatically retransmits the packet and the stream pauses until it arrives",
+                "The receiving buffer stores surrounding packets and interpolates the missing data perfectly",
+                "The session is terminated and must be re-established from the beginning"
+              ]
+            },
+            {
+              "question": "What is jitter?",
+              "answer": "The variation in time between received frames",
+              "difficulty": 1,
+              "id": "5.4.2217",
+              "distractors": [
+                "The total round-trip time for a packet to reach its destination and return",
+                "The percentage of packets that are dropped before reaching the destination",
+                "The maximum number of hops a packet can traverse before being discarded"
+              ]
+            },
+            {
+              "question": "What does low jitter look like?",
+              "answer": "Packets received at regular intervals with small, consistent delay between them",
+              "difficulty": 1,
+              "id": "5.4.2218",
+              "distractors": [
+                "All packets arriving simultaneously in large bursts with no spacing between them",
+                "Packets arriving with progressively increasing delay between each one",
+                "Random packet arrival times with no predictable pattern"
+              ]
+            },
+            {
+              "question": "What does high jitter look like?",
+              "answer": "Bursts of packets followed by long delays (e.g., three packets quickly, long gap, three more packets)",
+              "difficulty": 2,
+              "id": "5.4.2219",
+              "distractors": [
+                "Packets arriving at perfectly even intervals with identical spacing",
+                "A steady stream of packets with gradually increasing delay over time",
+                "Single packets arriving one at a time with consistent gaps between each"
+              ]
+            },
+            {
+              "question": "What are the effects of high jitter on real-time communication?",
+              "answer": "Problems hearing on phone calls and stutter during live video",
+              "difficulty": 1,
+              "id": "5.4.2220",
+              "distractors": [
+                "Increased file transfer speeds due to burst delivery of data",
+                "Higher bandwidth utilization and improved throughput measurements",
+                "Slower DNS resolution and increased web page load times"
+              ]
+            },
+            {
+              "question": "How should packets ideally arrive for VoIP and live video?",
+              "answer": "At regular, predictable intervals",
+              "difficulty": 1,
+              "id": "5.4.2221",
+              "distractors": [
+                "In large bursts to maximize bandwidth efficiency",
+                "As fast as possible regardless of timing consistency",
+                "With variable spacing to adapt to network congestion"
+              ]
+            },
+            {
+              "question": "Why is interference a significant problem on wireless networks?",
+              "answer": "Limited frequencies available, only one device can communicate at a time, and multiple wireless networks in the same area can create interference",
+              "difficulty": 1,
+              "id": "5.4.2222",
+              "distractors": [
+                "Wireless signals travel too fast for devices to process, causing buffer overflows at the receiver",
+                "Encryption overhead on wireless frames causes significant processing delays on all devices",
+                "Wireless networks require line-of-sight between devices, and any obstruction blocks all traffic"
+              ]
+            },
+            {
+              "question": "How do recent wireless standards handle interference?",
+              "answer": "They can automatically find the best frequencies and avoid those already in use by other devices; access points can detect interference and move to a better frequency",
+              "difficulty": 2,
+              "id": "5.4.2223",
+              "distractors": [
+                "They increase transmit power to overpower interfering signals from other devices",
+                "They use spread spectrum to transmit on all channels simultaneously, drowning out interference",
+                "They encrypt frames with stronger algorithms that are resistant to signal degradation"
+              ]
+            },
+            {
+              "question": "How many non-overlapping channels are available on 2.4 GHz in North America?",
+              "answer": "Three (channels 1, 6, and 11)",
+              "difficulty": 2,
+              "id": "5.4.2224",
+              "distractors": [
+                "Five (channels 1, 3, 6, 9, and 11)",
+                "Eleven (channels 1 through 11)",
+                "One (channel 6 only)"
+              ]
+            },
+            {
+              "question": "Why might 5 GHz be preferred over 2.4 GHz in a busy area?",
+              "answer": "5 GHz has many more frequencies available, giving a better chance of avoiding interference (2.4 GHz only has 3 non-overlapping channels in North America)",
+              "difficulty": 2,
+              "id": "5.4.2225",
+              "distractors": [
+                "5 GHz has longer range, so fewer access points are needed to cover the same area",
+                "5 GHz penetrates walls better, reducing dead spots caused by physical obstructions",
+                "5 GHz supports more simultaneous clients per access point due to wider channel bonding"
+              ]
+            },
+            {
+              "question": "What advantage does the 6 GHz band offer for wireless networks?",
+              "answer": "Many more frequencies available to avoid conflicts and interference",
+              "difficulty": 1,
+              "id": "5.4.2226",
+              "distractors": [
+                "Longer range than 2.4 GHz allowing coverage of larger areas with fewer access points",
+                "Better wall penetration than 5 GHz for improved indoor coverage",
+                "Backward compatibility with all older Wi-Fi devices and standards"
+              ]
+            },
+            {
+              "question": "Why should you disable legacy/low-speed wireless support on an access point?",
+              "answer": "Older standards slow down the entire network; best throughput comes from the most recent standards",
+              "difficulty": 2,
+              "id": "5.4.2227",
+              "distractors": [
+                "Older standards use too much power, draining PoE budgets and overheating access points",
+                "Legacy devices create security vulnerabilities by using outdated encryption protocols",
+                "Older devices generate excessive broadcast traffic that floods the wireless medium"
+              ]
+            },
+            {
+              "question": "What problem occurs if you configure a 2.4 GHz access point on channel 8?",
+              "answer": "It overlaps with both channel 6 and channel 11, reducing throughput for all devices on those channels",
+              "difficulty": 2,
+              "id": "5.4.2228",
+              "distractors": [
+                "It creates a hidden node problem where devices cannot hear each other's transmissions",
+                "It exceeds the maximum allowed transmit power for that frequency range",
+                "It disables WPA3 encryption because channel 8 only supports legacy security modes"
+              ]
+            },
+            {
+              "question": "What are the three non-overlapping channels to use on 2.4 GHz in the US?",
+              "answer": "Channels 1, 6, and 11",
+              "difficulty": 1,
+              "id": "5.4.2229",
+              "distractors": [
+                "Channels 1, 5, and 9",
+                "Channels 2, 7, and 12",
+                "Channels 1, 4, 8, and 11"
+              ]
+            },
+            {
+              "question": "Why should you consider enabling automatic channel selection?",
+              "answer": "So the access point can move to a more appropriate channel when available, avoiding conflicts with new access points that may have appeared",
+              "difficulty": 2,
+              "id": "5.4.2230",
+              "distractors": [
+                "So the access point can increase power output when interference is detected on any channel",
+                "So the access point can switch between 2.4 GHz and 5 GHz bands based on client demand",
+                "So the access point can disable broadcasting its SSID to avoid detection by neighboring networks"
+              ]
+            },
+            {
+              "question": "What is a common source of wireless interference?",
+              "answer": "Other access points — especially those with output power set to maximum while covering a small area",
+              "difficulty": 1,
+              "id": "5.4.2231",
+              "distractors": [
+                "Microwave ovens — they operate on the same 5 GHz frequency as modern Wi-Fi standards",
+                "Bluetooth devices — they use frequency hopping that blocks all Wi-Fi channels simultaneously",
+                "Fluorescent lighting — electrical noise from ballasts disrupts wireless signal propagation"
+              ]
+            },
+            {
+              "question": "How can you reduce interference from an access point that covers a small area?",
+              "answer": "Turn down the output power — still provides wireless access to nearby devices while limiting interference for other access points",
+              "difficulty": 2,
+              "id": "5.4.2232",
+              "distractors": [
+                "Change the SSID to a hidden network so neighboring devices cannot detect and connect to it",
+                "Switch from 2.4 GHz to 5 GHz to completely eliminate all interference possibilities",
+                "Enable MAC filtering so only authorized devices can associate with the access point"
+              ]
+            },
+            {
+              "question": "How can splitting a wireless network into smaller cells help?",
+              "answer": "Access points are separated from each other using different frequencies, still providing wireless access while reducing interference",
+              "difficulty": 2,
+              "id": "5.4.2233",
+              "distractors": [
+                "Each cell uses the same frequency but different SSIDs to separate traffic logically",
+                "Smaller cells increase power output per device, boosting signal strength for all clients",
+                "Cells overlap on the same channel so devices can seamlessly roam without reconnecting"
+              ]
+            },
+            {
+              "question": "What is attenuation on a wireless network?",
+              "answer": "The weakening of signal the farther you move from the access point",
+              "difficulty": 1,
+              "id": "5.4.2234",
+              "distractors": [
+                "Electromagnetic interference from other wireless devices operating on the same frequency",
+                "The reflection of wireless signals off surfaces causing multipath distortion",
+                "The absorption of wireless signals by walls and physical obstructions in the environment"
+              ]
+            },
+            {
+              "question": "How do administrators measure wireless attenuation?",
+              "answer": "Walk around the facility with a Wi-Fi analyzer to find where signal is best and worst",
+              "difficulty": 1,
+              "id": "5.4.2235",
+              "distractors": [
+                "Check the access point logs for signal-to-noise ratio statistics reported by connected clients",
+                "Use the ping command from various locations and compare round-trip times",
+                "Run a cable certifier on the Ethernet connection between the access point and switch"
+              ]
+            },
+            {
+              "question": "What are four solutions to improve wireless signal affected by attenuation?",
+              "answer": "1) Increase power output on the access point, 2) Add an external antenna or antenna with additional gain, 3) Limit cable length between access point and antenna, 4) Check cable for damage that coul...",
+              "difficulty": 3,
+              "id": "5.4.2236",
+              "distractors": [
+                "1) Change wireless channel, 2) Enable QoS, 3) Add a VLAN for wireless traffic, 4) Upgrade firmware on the access point",
+                "1) Reduce number of SSIDs, 2) Enable band steering, 3) Add MAC filtering, 4) Disable legacy clients",
+                "1) Move to 6 GHz band, 2) Enable MU-MIMO, 3) Reduce DTIM interval, 4) Add a wireless controller"
+              ]
+            },
+            {
+              "question": "How does an external antenna with additional gain improve wireless coverage?",
+              "answer": "Increases transmission distance with the same amount of power from the access point",
+              "difficulty": 2,
+              "id": "5.4.2237",
+              "distractors": [
+                "Focuses the signal into a narrower beam, reducing interference with neighboring access points",
+                "Encrypts the signal more efficiently, allowing faster throughput at the same distance",
+                "Adds a second radio chain for MIMO, doubling the available bandwidth"
+              ]
+            },
+            {
+              "question": "Why should you limit cable length between the access point and antenna?",
+              "answer": "Higher frequencies lose more signal in coax; shorter cable means less signal loss",
+              "difficulty": 2,
+              "id": "5.4.2238",
+              "distractors": [
+                "Higher frequencies require thicker coax cable which is more expensive and harder to install",
+                "Longer cables pick up more electromagnetic interference from nearby power lines",
+                "The cable acts as an antenna and radiates signal, causing interference with other networks"
+              ]
+            },
+            {
+              "question": "What is a wireless heat map?",
+              "answer": "A visual representation from a Wi-Fi analyzer showing signal strength — brighter/warmer colors indicate better signal, cooler colors indicate worse signal",
+              "difficulty": 1,
+              "id": "5.4.2239",
+              "distractors": [
+                "A network diagram showing physical placement of access points and their cable connections",
+                "A graph plotting wireless throughput over time for each connected client device",
+                "A table listing all SSIDs detected in the area with their channel and security settings"
+              ]
+            },
+            {
+              "question": "Why should you perform multiple site surveys throughout the year?",
+              "answer": "Wireless infrastructure changes over time — neighboring organizations add or modify their networks",
+              "difficulty": 2,
+              "id": "5.4.2240",
+              "distractors": [
+                "To verify that firmware updates have not changed the access point radio characteristics",
+                "To ensure client devices have not moved to different physical locations in the building",
+                "To confirm that cable runs between access points and switches have not degraded"
+              ]
+            },
+            {
+              "question": "Why check where neighboring organizations' access points are located?",
+              "answer": "To avoid placing your access points where they create interference; also to see what frequencies they use (may open an entire band like 6 GHz for you)",
+              "difficulty": 2,
+              "id": "5.4.2241",
+              "distractors": [
+                "To ensure your access points use the same SSID as neighboring organizations for seamless roaming",
+                "To determine if neighboring organizations are using unauthorized copies of your firmware",
+                "To verify that neighboring organizations have proper FCC licensing for their wireless equipment"
+              ]
+            },
+            {
+              "question": "What is a client disassociation attack?",
+              "answer": "A denial of service exploiting older unprotected 802.11 management frames to remove devices from the network",
+              "difficulty": 2,
+              "id": "5.4.2242",
+              "distractors": [
+                "An attack that floods the wireless channel with noise to prevent any communication",
+                "An attack that captures the WPA handshake to crack the wireless password offline",
+                "An attack that creates a fake access point to intercept client traffic (evil twin)"
+              ]
+            },
+            {
+              "question": "What are the symptoms of a client disassociation attack?",
+              "answer": "Device constantly disconnects and reconnects, or cannot connect to the network at all",
+              "difficulty": 2,
+              "id": "5.4.2243",
+              "distractors": [
+                "Extremely slow data transfer speeds but the device maintains its wireless connection",
+                "The access point reboots repeatedly and all connected clients lose connectivity simultaneously",
+                "Wireless clients connect successfully but cannot obtain an IP address from DHCP"
+              ]
+            },
+            {
+              "question": "How do you detect a client disassociation attack?",
+              "answer": "Capture frames using an 802.11 packet capture device to see disassociation frames in the traffic",
+              "difficulty": 2,
+              "id": "5.4.2244",
+              "distractors": [
+                "Check the access point logs for failed authentication attempts from unknown MAC addresses",
+                "Run a spectrum analyzer to look for RF jamming signals on the wireless frequency",
+                "Use ping to test connectivity and identify which access point is being targeted"
+              ]
+            },
+            {
+              "question": "How do you prevent client disassociation attacks?",
+              "answer": "Upgrade to the latest 802.11 standards which prevent this type of attack",
+              "difficulty": 2,
+              "id": "5.4.2245",
+              "distractors": [
+                "Enable MAC address filtering on all access points to block unauthorized devices",
+                "Reduce access point transmit power so attackers cannot reach the network from outside",
+                "Hide the SSID so attackers cannot identify which network to target"
+              ]
+            },
+            {
+              "question": "What allows devices to seamlessly roam between multiple access points?",
+              "answer": "All access points configured with the same SSID and exactly the same configuration (security features and other details)",
+              "difficulty": 1,
+              "id": "5.4.2246",
+              "distractors": [
+                "A wireless controller that uses CAPWAP tunnels to centralize all client traffic through one device",
+                "WPA3 Enterprise with 802.1X authentication that validates credentials across all access points",
+                "Mesh networking mode where each access point automatically discovers and connects to neighbors"
+              ]
+            },
+            {
+              "question": "What happens if a user roams to an access point that is not configured identically?",
+              "answer": "They are dropped from the network and must reconnect",
+              "difficulty": 2,
+              "id": "5.4.2247",
+              "distractors": [
+                "They experience slower speeds but maintain connectivity through the new access point",
+                "The access point rejects the connection and redirects them back to the original AP",
+                "Traffic is automatically tunneled back to the original access point via a GRE tunnel"
+              ]
+            },
+            {
+              "question": "What is required for seamless roaming across multiple access points?",
+              "answer": "Identical configuration across all access points — same SSID, security features, and configuration details",
+              "difficulty": 1,
+              "id": "5.4.2248",
+              "distractors": [
+                "A wireless controller that manages handoffs and maintains session state between access points",
+                "WPA3 fast transition (802.11r) enabled on all access points for pre-authentication",
+                "Overlapping coverage areas with at least 20% signal overlap between adjacent cells"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "title": "Basic Network Device Commands",
+          "concepts": [
+            {
+              "question": "Are command-line commands the same across different network equipment manufacturers?",
+              "answer": "Very similar but not exactly the same — syntax is close and output contains similar information across manufacturers",
+              "difficulty": 1,
+              "id": "5.5.2249",
+              "distractors": [
+                "Completely identical — all vendors follow the same CLI standard for interoperability",
+                "Completely different — each manufacturer uses unique syntax with no similarity",
+                "Only the same within the same product line — different models use different commands"
+              ]
+            },
+            {
+              "question": "What does the `show mac-address-table` command display?",
+              "answer": "All MAC addresses the switch has learned and which ports they were learned on",
+              "difficulty": 1,
+              "id": "5.5.2250",
+              "distractors": [
+                "All IP addresses assigned to switch interfaces and their associated subnet masks",
+                "The ARP cache showing IP-to-MAC address mappings learned by the switch",
+                "The spanning tree topology including root bridge, port roles, and path costs"
+              ]
+            },
+            {
+              "question": "How does a switch use the MAC address table?",
+              "answer": "References it to decide where to send traffic",
+              "difficulty": 1,
+              "id": "5.5.2251",
+              "distractors": [
+                "To determine which VLAN each frame belongs to based on the 802.1Q tag",
+                "To apply access control lists and filter traffic based on source MAC address",
+                "To calculate spanning tree path costs and elect the root bridge"
+              ]
+            },
+            {
+              "question": "What two troubleshooting scenarios is `show mac-address-table` useful for?",
+              "answer": "Determining why traffic is being sent out every interface, and whether the maximum number of entries has been reached",
+              "difficulty": 2,
+              "id": "5.5.2252",
+              "distractors": [
+                "Identifying which VLAN a device belongs to, and whether trunk ports are passing the correct VLANs",
+                "Checking interface speed and duplex settings, and verifying PoE power delivery status",
+                "Verifying spanning tree root bridge election, and confirming BPDU guard is enabled"
+              ]
+            },
+            {
+              "question": "What does the `show route` command display?",
+              "answer": "All routes inside the routing table",
+              "difficulty": 1,
+              "id": "5.5.2253",
+              "distractors": [
+                "All MAC addresses learned by the device and their associated interfaces",
+                "All active ARP entries with IP-to-MAC address mappings",
+                "All VLANs configured on the device and their assigned ports"
+              ]
+            },
+            {
+              "question": "How do you use `show route` to trace a path across multiple routers?",
+              "answer": "Find the route that applies to traffic, follow it out the specific interface, then repeat the process on the next router along the path",
+              "difficulty": 2,
+              "id": "5.5.2254",
+              "distractors": [
+                "Run traceroute from source to destination and compare the hops with the routing table output",
+                "Check the ARP table on each router to verify that next-hop MAC addresses are being learned",
+                "Use ping with increasing TTL values to test reachability of each router along the path"
+              ]
+            },
+            {
+              "question": "What three pieces of information does each route entry in the routing table show?",
+              "answer": "Destination network, next-hop address, and exit interface",
+              "difficulty": 2,
+              "id": "5.5.2255",
+              "distractors": [
+                "Source network, destination MAC address, and VLAN ID",
+                "Protocol type, administrative distance, and metric value",
+                "Route age, number of packets forwarded, and last update time"
+              ]
+            },
+            {
+              "question": "In a routing table, what do the abbreviations R and C mean?",
+              "answer": "R = RIP (learned via RIP protocol), C = connected/directly connected to the router",
+              "difficulty": 2,
+              "id": "5.5.2256",
+              "distractors": [
+                "R = route (static route), C = configured (manually configured interface)",
+                "R = RADIUS (authenticated route), C = cached (recently used route)",
+                "R = redundant (backup route), C = converged (route after STP convergence)"
+              ]
+            },
+            {
+              "question": "How do you determine which route applies to your traffic in a routing table?",
+              "answer": "Evaluate each route to find the most specific match for your traffic",
+              "difficulty": 2,
+              "id": "5.5.2257",
+              "distractors": [
+                "Select the route with the lowest metric value regardless of prefix length",
+                "Choose the first route that appears in the table from top to bottom",
+                "Use the route with the lowest administrative distance only"
+              ]
+            },
+            {
+              "question": "What does the `show interface` command display?",
+              "answer": "Status and statistics for a particular interface",
+              "difficulty": 1,
+              "id": "5.5.2258",
+              "distractors": [
+                "The routing table with all learned and configured routes",
+                "The ARP cache with IP-to-MAC address mappings",
+                "The VLAN database with port assignments for each VLAN"
+              ]
+            },
+            {
+              "question": "What interface status values can `show interface` display?",
+              "answer": "Up, down, connected, or administratively disabled",
+              "difficulty": 2,
+              "id": "5.5.2259",
+              "distractors": [
+                "Speed, duplex, MTU, and encapsulation type",
+                "MAC address, IP address, subnet mask, and default gateway",
+                "VLAN ID, trunk status, native VLAN, and allowed VLANs"
+              ]
+            },
+            {
+              "question": "What error information can `show interface` reveal?",
+              "answer": "CRC errors, dropped frames, and input/output errors",
+              "difficulty": 2,
+              "id": "5.5.2260",
+              "distractors": [
+                "VLAN assignments, trunk configurations, and native VLAN mismatches",
+                "Routing protocol neighbors, adjacency states, and hello timers",
+                "PoE power allocation, device classification, and wattage consumption"
+              ]
+            },
+            {
+              "question": "What performance information does `show interface` provide?",
+              "answer": "Total number of frames, total broadcasts, and input/output rates",
+              "difficulty": 2,
+              "id": "5.5.2261",
+              "distractors": [
+                "CPU utilization, memory usage, and process list for the device",
+                "ARP cache entries, aging timers, and incomplete resolutions",
+                "Access control list hit counts, denied packets, and permitted packets"
+              ]
+            },
+            {
+              "question": "What hardware configuration details does `show interface` show?",
+              "answer": "Duplex, speed (e.g., full duplex, 100 Mbps), media type (e.g., RJ45), MTU, and encapsulation types",
+              "difficulty": 3,
+              "id": "5.5.2262",
+              "distractors": [
+                "Routing protocol type, administrative distance, and metric for learned routes",
+                "VLAN membership, trunk mode, and spanning tree port state",
+                "PoE class, power consumption, and maximum wattage allocation"
+              ]
+            },
+            {
+              "question": "What does the `show config` command display?",
+              "answer": "The text-based configuration currently running inside a device",
+              "difficulty": 1,
+              "id": "5.5.2263",
+              "distractors": [
+                "The firmware version and hardware specifications of the device",
+                "Real-time CPU and memory utilization statistics",
+                "The log of all configuration changes made to the device"
+              ]
+            },
+            {
+              "question": "What is the command to view the currently active configuration on a Cisco device?",
+              "answer": "`show running-config`",
+              "difficulty": 2,
+              "id": "5.5.2264",
+              "distractors": [
+                "`show startup-config`",
+                "`show version`",
+                "`show tech-support`"
+              ]
+            },
+            {
+              "question": "Can `show config` also view stored configurations?",
+              "answer": "Yes — may also view configurations stored on the storage drive of the device",
+              "difficulty": 1,
+              "id": "5.5.2265",
+              "distractors": [
+                "No — only the active running configuration can be viewed with this command",
+                "Only on devices with redundant supervisors that maintain a backup config",
+                "Only if the configuration has been exported to a TFTP server first"
+              ]
+            },
+            {
+              "question": "Is configuration file format the same across manufacturers?",
+              "answer": "No — each manufacturer uses different syntax and format for configuration",
+              "difficulty": 1,
+              "id": "5.5.2266",
+              "distractors": [
+                "Yes — all manufacturers follow the same standardized configuration format for interoperability",
+                "Yes — they all use XML-based configuration files that follow a common schema",
+                "Only partially — Layer 2 commands are standardized but Layer 3 commands differ"
+              ]
+            },
+            {
+              "question": "What does the `show arp` command display on switches and routers?",
+              "answer": "The ARP cache — shows protocol, IP address, hardware/MAC address, and the interface used to identify that pair",
+              "difficulty": 2,
+              "id": "5.5.2267",
+              "distractors": [
+                "The routing table showing destination networks, next-hop addresses, and metrics",
+                "The MAC address table showing learned addresses and their associated switch ports",
+                "The NAT translation table showing inside/outside address mappings"
+              ]
+            },
+            {
+              "question": "When is the `show arp` command useful?",
+              "answer": "To determine if a switch or router sees a particular MAC address associated with an IP address",
+              "difficulty": 2,
+              "id": "5.5.2268",
+              "distractors": [
+                "To verify which routes a device has learned from its routing protocol neighbors",
+                "To check if an interface is configured with the correct IP address and subnet mask",
+                "To monitor real-time bandwidth utilization on each interface of the device"
+              ]
+            },
+            {
+              "question": "What does the `show vlan` command display?",
+              "answer": "All VLANs on the device and which interfaces are assigned to each VLAN",
+              "difficulty": 1,
+              "id": "5.5.2269",
+              "distractors": [
+                "All routes in the routing table and their associated metrics and next-hop addresses",
+                "All MAC addresses learned on each port with their aging timers",
+                "All active ARP entries with IP addresses and their corresponding MAC addresses"
+              ]
+            },
+            {
+              "question": "What specific VLAN information can `show vlan` provide?",
+              "answer": "Assigned VLAN IDs, default VLAN for the switch, interfaces in the default VLAN, and interfaces specifically assigned to a different VLAN",
+              "difficulty": 2,
+              "id": "5.5.2270",
+              "distractors": [
+                "Trunk port configurations, allowed VLAN lists, and native VLAN settings for each trunk",
+                "Spanning tree root bridge priority, port costs, and blocked/forwarding states",
+                "Interface speed, duplex settings, and error counters for each physical port"
+              ]
+            },
+            {
+              "question": "What does the `show power` command display?",
+              "answer": "PoE power usage for the switch — lists all interfaces, whether PoE is on or off for each, and how much power each device is using",
+              "difficulty": 2,
+              "id": "5.5.2271",
+              "distractors": [
+                "Total power consumption of the switch chassis including fans, CPU, and line cards",
+                "Power supply redundancy status showing active and standby power supply health",
+                "UPS battery levels and estimated runtime remaining for the connected devices"
+              ]
+            },
+            {
+              "question": "How does `show power` help with capacity planning?",
+              "answer": "Indicates if additional devices can be added by showing total supported wattage, current usage, and remaining power (e.g., 370W supported, 40W used, 330W remaining)",
+              "difficulty": 2,
+              "id": "5.5.2272",
+              "distractors": [
+                "Shows interface utilization percentages so you know when to upgrade link speeds",
+                "Displays VLAN membership counts to determine if VLAN capacity limits are approaching",
+                "Reports MAC address table size relative to maximum entries supported by the switch"
+              ]
+            },
+            {
+              "question": "What does the ping command tell you?",
+              "answer": "If a device on the network is reachable",
+              "difficulty": 1,
+              "id": "5.5.2273",
+              "distractors": [
+                "The route a packet takes to reach a destination, showing each hop along the way",
+                "The DNS resolution time and IP address associated with a hostname",
+                "The MAC address associated with a given IP address on the local network"
+              ]
+            },
+            {
+              "question": "What protocol does ping use?",
+              "answer": "ICMP (Internet Control Message Protocol)",
+              "difficulty": 1,
+              "id": "5.5.2274",
+              "distractors": [
+                "TCP (Transmission Control Protocol)",
+                "UDP (User Datagram Protocol)",
+                "ARP (Address Resolution Protocol)"
+              ]
+            },
+            {
+              "question": "What information does ping output show?",
+              "answer": "Bytes sent/received, sequence numbers, TTL, and round-trip time",
+              "difficulty": 2,
+              "id": "5.5.2275",
+              "distractors": [
+                "Source and destination MAC addresses, VLAN ID, and frame size",
+                "DNS resolution time, server IP address, and record type returned",
+                "Hop count, router IP addresses, and autonomous system numbers"
+              ]
+            },
+            {
+              "question": "What does ping show when a device is unreachable?",
+              "answer": "Timeout messages",
+              "difficulty": 1,
+              "id": "5.5.2276",
+              "distractors": [
+                "A destination host unreachable error from the last router in the path",
+                "The resolved IP address with a note that the port is closed",
+                "A TTL expired message from each hop along the route"
+              ]
+            },
+            {
+              "question": "How do you stop a continuous ping and get session statistics?",
+              "answer": "Ctrl+C",
+              "difficulty": 1,
+              "id": "5.5.2277",
+              "distractors": [
+                "Ctrl+Z",
+                "Ctrl+D",
+                "Esc"
+              ]
+            },
+            {
+              "question": "On what operating systems does ping work?",
+              "answer": "macOS, Linux, and Windows (works the same on all)",
+              "difficulty": 1,
+              "id": "5.5.2278",
+              "distractors": [
+                "Only Windows and macOS — Linux uses a different tool called netping",
+                "Only Linux and macOS — Windows requires installing a separate network utility",
+                "All operating systems, but Windows uses a different syntax and flag structure"
+              ]
+            },
+            {
+              "question": "What does traceroute do?",
+              "answer": "Traces the route between your device and the destination, mapping the entire path and showing every router between source and destination",
+              "difficulty": 1,
+              "id": "5.5.2279",
+              "distractors": [
+                "Tests connectivity to a single destination and measures round-trip time",
+                "Resolves a hostname to its IP address and displays DNS server information",
+                "Displays all active network connections and listening ports on the local device"
+              ]
+            },
+            {
+              "question": "What is the traceroute command name on Windows vs Linux/macOS?",
+              "answer": "`tracert` (Windows), `traceroute` (Linux/macOS)",
+              "difficulty": 1,
+              "id": "5.5.2280",
+              "distractors": [
+                "`tracepath` (Windows), `tracert` (Linux/macOS)",
+                "`pathping` (Windows), `mtr` (Linux/macOS)",
+                "`traceroute` (Windows), `tracert` (Linux/macOS)"
+              ]
+            },
+            {
+              "question": "What ICMP mechanism does traceroute use?",
+              "answer": "ICMP time to live exceeded error messages",
+              "difficulty": 2,
+              "id": "5.5.2281",
+              "distractors": [
+                "ICMP destination unreachable error messages",
+                "ICMP echo request and echo reply messages",
+                "ICMP redirect messages"
+              ]
+            },
+            {
+              "question": "How does traceroute work step by step?",
+              "answer": "1) Sends packet with TTL=1 — first router decreases TTL to 0 and sends back TTL exceeded with its IP. 2) Sends TTL=2 — second router reports. 3) Continues incrementing TTL until destination is reac...",
+              "difficulty": 3,
+              "id": "5.5.2282",
+              "distractors": [
+                "1) Sends ICMP echo requests to every known router. 2) Waits for all replies simultaneously. 3) Sorts results by response time to build the path map.",
+                "1) Queries DNS for all intermediate router addresses. 2) Sends pings to each one in sequence. 3) Measures round-trip time for each router.",
+                "1) Sends a packet with maximum TTL to destination. 2) Destination responds with the full path. 3) Displays all intermediate addresses from the response."
+              ]
+            },
+            {
+              "question": "How many times is each hop tested by default in traceroute?",
+              "answer": "Three times — output shows three response times per hop",
+              "difficulty": 2,
+              "id": "5.5.2283",
+              "distractors": [
+                "Once — output shows a single response time per hop",
+                "Five times — output shows five response times per hop",
+                "Ten times — output shows the average of ten measurements per hop"
+              ]
+            },
+            {
+              "question": "What does an asterisk in traceroute output indicate?",
+              "answer": "A filtered hop — a firewall or device is filtering ICMP messages so no response is returned",
+              "difficulty": 2,
+              "id": "5.5.2284",
+              "distractors": [
+                "A successful response — the hop replied within the timeout period",
+                "A DNS resolution failure — the router's hostname could not be resolved",
+                "A routing loop — the packet is cycling between two or more routers"
+              ]
+            },
+            {
+              "question": "Why is it useful to compare two traceroutes?",
+              "answer": "To find where a route is failing — compare a first traceroute with a second to see where a route may be missing or which router may be stopping the route",
+              "difficulty": 2,
+              "id": "5.5.2285",
+              "distractors": [
+                "To measure total bandwidth capacity between two endpoints",
+                "To determine the MTU size supported along the path",
+                "To verify DNS resolution is working correctly at each hop"
+              ]
+            },
+            {
+              "question": "What does Windows use to send traceroute packets?",
+              "answer": "ICMP echo requests; other OSes may allow changing the payload type",
+              "difficulty": 2,
+              "id": "5.5.2286",
+              "distractors": [
+                "UDP datagrams on incrementing ports; Windows does not support ICMP for traceroute",
+                "TCP SYN packets to port 443 at each hop",
+                "ARP requests sent to each router along the path"
+              ]
+            },
+            {
+              "question": "What do nslookup and dig do?",
+              "answer": "Query DNS servers and receive responses — can look up canonical names, IP addresses, cache timers, text records, and other DNS records",
+              "difficulty": 1,
+              "id": "5.5.2287",
+              "distractors": [
+                "Monitor real-time network traffic and display packet contents",
+                "Test connectivity to remote hosts using ICMP echo requests",
+                "Scan for open ports and running services on remote devices"
+              ]
+            },
+            {
+              "question": "On what operating systems is nslookup available?",
+              "answer": "Windows, Linux, and macOS",
+              "difficulty": 1,
+              "id": "5.5.2288",
+              "distractors": [
+                "Windows only; Linux and macOS use dig exclusively",
+                "Linux only; Windows and macOS require third-party packages",
+                "Windows and Linux only; macOS requires a Homebrew installation"
+              ]
+            },
+            {
+              "question": "What is the status of nslookup?",
+              "answer": "Deprecated — the goal is to use dig instead",
+              "difficulty": 2,
+              "id": "5.5.2289",
+              "distractors": [
+                "Actively maintained — receives regular updates and new features",
+                "Replaced by host command in all modern distributions",
+                "Removed from all operating systems starting in 2020"
+              ]
+            },
+            {
+              "question": "On what operating systems is dig included?",
+              "answer": "Linux and macOS; Windows requires an older bind package from isc.org (newer versions no longer include it)",
+              "difficulty": 2,
+              "id": "5.5.2290",
+              "distractors": [
+                "Windows and macOS; Linux requires a separate BIND package installation",
+                "All major operating systems include dig by default",
+                "Windows only; Linux and macOS use nslookup as the primary DNS tool"
+              ]
+            },
+            {
+              "question": "How do nslookup and dig compare in terms of results?",
+              "answer": "Same information, different output format",
+              "difficulty": 1,
+              "id": "5.5.2291",
+              "distractors": [
+                "dig provides more detailed information including DNSSEC validation that nslookup cannot show",
+                "nslookup queries recursive servers while dig only queries authoritative servers",
+                "dig supports IPv6 lookups while nslookup is limited to IPv4 only"
+              ]
+            },
+            {
+              "question": "What is tcpdump?",
+              "answer": "A command-line utility that captures packets — can view on screen or save to a file",
+              "difficulty": 1,
+              "id": "5.5.2292",
+              "distractors": [
+                "A GUI-based protocol analyzer with real-time traffic visualization",
+                "A DNS lookup utility that queries nameservers for record information",
+                "A network scanning tool that discovers open ports on remote systems"
+              ]
+            },
+            {
+              "question": "On what operating systems is tcpdump available?",
+              "answer": "Included with Linux and macOS; Windows alternative is WinDump",
+              "difficulty": 2,
+              "id": "5.5.2293",
+              "distractors": [
+                "Windows only; Linux and macOS use Wireshark for command-line captures",
+                "All operating systems include tcpdump by default",
+                "Linux only; macOS and Windows require third-party packet capture tools"
+              ]
+            },
+            {
+              "question": "What file format does tcpdump save captures in?",
+              "answer": "pcap (packet capture) format — readable by Wireshark and other utilities",
+              "difficulty": 2,
+              "id": "5.5.2294",
+              "distractors": [
+                "CSV (comma-separated values) format — readable by spreadsheet applications",
+                "NetFlow format — readable by flow analysis tools only",
+                "JSON format — readable by web browsers and log management systems"
+              ]
+            },
+            {
+              "question": "Can tcpdump filter packets or only capture everything?",
+              "answer": "Both — can capture all packets or apply filters",
+              "difficulty": 1,
+              "id": "5.5.2295",
+              "distractors": [
+                "Capture only — filtering requires a separate tool like Wireshark",
+                "Filter only — cannot capture raw packets to disk",
+                "Captures everything by default with no option to filter specific traffic"
+              ]
+            },
+            {
+              "question": "What is netstat?",
+              "answer": "Network statistics — shows active network connections to and from your machine",
+              "difficulty": 1,
+              "id": "5.5.2296",
+              "distractors": [
+                "Network speed test — measures bandwidth throughput between two endpoints",
+                "Network scanner — discovers hosts and open ports on a subnet",
+                "Network route display — shows the path packets take to a destination"
+              ]
+            },
+            {
+              "question": "What does `netstat -a` show?",
+              "answer": "All active connections (incoming and outgoing)",
+              "difficulty": 1,
+              "id": "5.5.2297",
+              "distractors": [
+                "All listening ports only (not established connections)",
+                "All network adapters and their IP configurations",
+                "All ARP cache entries and their associated MAC addresses"
+              ]
+            },
+            {
+              "question": "What does `netstat -b` show?",
+              "answer": "The Windows executable making each network connection",
+              "difficulty": 2,
+              "id": "5.5.2298",
+              "distractors": [
+                "The Linux process ID associated with each connection",
+                "The bandwidth usage per connection in bytes per second",
+                "The routing table and default gateway information"
+              ]
+            },
+            {
+              "question": "What does `netstat -n` show?",
+              "answer": "IP addresses only (no DNS name resolution)",
+              "difficulty": 2,
+              "id": "5.5.2299",
+              "distractors": [
+                "Only connections in ESTABLISHED state (no listening ports)",
+                "Network interface statistics (packets sent/received/errors)",
+                "Connections with full DNS resolution and hostname display"
+              ]
+            },
+            {
+              "question": "What information does netstat output include?",
+              "answer": "Protocol, local IP address and port, remote IP address and port, connection state (established, closing, waiting)",
+              "difficulty": 2,
+              "id": "5.5.2300",
+              "distractors": [
+                "Source MAC address, destination MAC address, frame size, and VLAN tag",
+                "Interface name, MTU size, packets sent, packets received, error count",
+                "DNS server, DHCP lease time, domain name, and search suffix"
+              ]
+            },
+            {
+              "question": "What command shows IP address configuration on Windows?",
+              "answer": "`ipconfig` — shows IPv6, IPv4 address, subnet mask, default gateway",
+              "difficulty": 1,
+              "id": "5.5.2301",
+              "distractors": [
+                "`ifconfig` — shows IPv6, IPv4 address, subnet mask, default gateway",
+                "`netstat -r` — shows IPv6, IPv4 address, subnet mask, default gateway",
+                "`ip addr` — shows IPv6, IPv4 address, subnet mask, default gateway"
+              ]
+            },
+            {
+              "question": "What additional information does `ipconfig /all` provide?",
+              "answer": "Device name, node type, MAC address, adapter card, DHCP details, DNS servers",
+              "difficulty": 2,
+              "id": "5.5.2302",
+              "distractors": [
+                "Routing table, ARP cache, and active TCP connections",
+                "Open ports, listening services, and firewall rule status",
+                "Network throughput statistics, packet loss percentage, and latency"
+              ]
+            },
+            {
+              "question": "What command shows IP address configuration on Linux/macOS?",
+              "answer": "`ifconfig` (specify adapter name, e.g., `ifconfig en0`) — shows MAC address, IPv6 address, IPv4 address, adapter configuration",
+              "difficulty": 1,
+              "id": "5.5.2303",
+              "distractors": [
+                "`ipconfig` (specify adapter name, e.g., `ipconfig en0`) — shows MAC address, IPv6 address, IPv4 address, adapter configuration",
+                "`netstat -i` (specify adapter name) — shows MAC address, IPv6 address, IPv4 address, adapter configuration",
+                "`ip link show` (specify adapter name) — shows MAC address, IPv6 address, IPv4 address, adapter configuration"
+              ]
+            },
+            {
+              "question": "What is the newer Linux command for viewing IP address configuration?",
+              "answer": "`ip address` — provides similar information to ifconfig",
+              "difficulty": 2,
+              "id": "5.5.2304",
+              "distractors": [
+                "`netplan` — provides similar information to ifconfig",
+                "`nmcli` — provides similar information to ifconfig",
+                "`ss` — provides similar information to ifconfig"
+              ]
+            },
+            {
+              "question": "What does `arp -a` display?",
+              "answer": "The local ARP cache — IP addresses and their associated MAC addresses on the local subnet",
+              "difficulty": 1,
+              "id": "5.5.2305",
+              "distractors": [
+                "The local routing table — destination networks and their next-hop gateways",
+                "The DNS resolver cache — domain names and their resolved IP addresses",
+                "The active TCP connections — source/destination ports and connection states"
+              ]
+            },
+            {
+              "question": "On what operating systems does `arp -a` work?",
+              "answer": "Linux, macOS, and Windows",
+              "difficulty": 1,
+              "id": "5.5.2306",
+              "distractors": [
+                "Linux and macOS only; Windows uses `Get-NetNeighbor` in PowerShell",
+                "Windows only; Linux uses `ip neigh` and macOS uses `ndp`",
+                "Linux only; Windows and macOS use different ARP commands"
+              ]
+            },
+            {
+              "question": "Why might an IP address not appear in the ARP cache?",
+              "answer": "You have not communicated with that device recently — only devices you've recently communicated with appear in the cache",
+              "difficulty": 2,
+              "id": "5.5.2307",
+              "distractors": [
+                "The device is on a different VLAN and ARP cannot cross VLAN boundaries",
+                "The device has a firewall blocking all ARP responses",
+                "The ARP cache only stores entries for devices with static IP addresses"
+              ]
+            },
+            {
+              "question": "How can you add a device to your ARP cache?",
+              "answer": "Ping the device — it will then appear in the ARP cache with its MAC address",
+              "difficulty": 1,
+              "id": "5.5.2308",
+              "distractors": [
+                "Send a gratuitous ARP broadcast to force all devices to update their caches",
+                "Use `arp -s` to manually create a static entry with the known MAC address",
+                "Restart the network adapter to refresh the entire ARP table"
+              ]
+            },
+            {
+              "question": "Why is the ARP cache useful for troubleshooting?",
+              "answer": "Allows looking up a device's MAC address to find it in a switch's MAC address table",
+              "difficulty": 2,
+              "id": "5.5.2309",
+              "distractors": [
+                "Shows real-time bandwidth usage per device on the local network",
+                "Identifies which ports are open or closed on remote devices",
+                "Displays the routing path packets take to reach a destination"
+              ]
+            },
+            {
+              "question": "What is a tone generator used for?",
+              "answer": "To find a single cable in a large bunch of cables — puts an analog tone on the wire",
+              "difficulty": 1,
+              "id": "5.5.2310",
+              "distractors": [
+                "To test the signal strength of a wireless connection at various locations",
+                "To measure the length of a cable run and verify it meets distance specifications",
+                "To certify that a cable meets Cat5e/Cat6 performance standards"
+              ]
+            },
+            {
+              "question": "What is an inductive probe?",
+              "answer": "A device that listens for the tone from a tone generator — only needs to get close to the cable (does not require direct contact)",
+              "difficulty": 1,
+              "id": "5.5.2311",
+              "distractors": [
+                "A device that measures cable length using time-domain reflectometry",
+                "A device that tests continuity by sending electrical current through each pin",
+                "A device that certifies cable performance against TIA/EIA standards"
+              ]
+            },
+            {
+              "question": "What are four ways to connect a tone generator to a cable?",
+              "answer": "Modular jack, coax connection, punchdown block, or alligator clips",
+              "difficulty": 3,
+              "id": "5.5.2312",
+              "distractors": [
+                "USB connector, fiber LC adapter, wireless Bluetooth, and serial port",
+                "RJ-45 crimp, fiber SC adapter, soldered connection, or magnetic clip",
+                "BNC connector, fiber ST adapter, DB-9 serial, or spring-loaded clip"
+              ]
+            },
+            {
+              "question": "What additional function do many tone generator/probe combos provide?",
+              "answer": "They also double as a cable tester",
+              "difficulty": 2,
+              "id": "5.5.2313",
+              "distractors": [
+                "They include a built-in fiber optic visual fault locator",
+                "They can measure cable length using time-domain reflectometry",
+                "They provide certification reports for Cat5e/Cat6 standards compliance"
+              ]
+            },
+            {
+              "question": "What does a cable tester do?",
+              "answer": "Checks continuity from one end of a cable to the other — verifies pin-to-pin connections (pin 1 to pin 1, pin 2 to pin 2, etc.)",
+              "difficulty": 1,
+              "id": "5.5.2314",
+              "distractors": [
+                "Measures signal attenuation and crosstalk to certify cable performance category",
+                "Identifies the physical location of a break in a cable using reflectometry",
+                "Tests network throughput by sending data packets through the cable"
+              ]
+            },
+            {
+              "question": "What three problems can a cable tester identify?",
+              "answer": "Pins that are not connected, shorts in the cable, and crossed wires (e.g., pin 1 connects to pin 3)",
+              "difficulty": 2,
+              "id": "5.5.2315",
+              "distractors": [
+                "Signal attenuation, electromagnetic interference, and cable category rating",
+                "Cable length, impedance mismatch, and connector quality",
+                "Bandwidth capacity, latency measurements, and packet loss rate"
+              ]
+            },
+            {
+              "question": "What are the limitations of a cable tester?",
+              "answer": "Simple continuity test only — does not show signal capacity or cable category",
+              "difficulty": 2,
+              "id": "5.5.2316",
+              "distractors": [
+                "Cannot test cables longer than 50 meters or verify proper termination",
+                "Cannot identify which specific pin has a short or open circuit",
+                "Cannot test fiber optic cables or coaxial cable connections"
+              ]
+            },
+            {
+              "question": "How does a cable tester indicate correct wiring?",
+              "answer": "Lights up pins 1 through 8 in order",
+              "difficulty": 1,
+              "id": "5.5.2317",
+              "distractors": [
+                "Displays a pass/fail reading on an LCD screen with cable length",
+                "Beeps once for each successfully connected pair",
+                "Shows a green or red LED indicating overall pass or fail status"
+              ]
+            },
+            {
+              "question": "What does a network tap do?",
+              "answer": "Intercepts network traffic and sends a copy to a protocol analyzer or packet capture device",
+              "difficulty": 1,
+              "id": "5.5.2318",
+              "distractors": [
+                "Blocks unauthorized traffic by inspecting packets at the application layer",
+                "Amplifies weak network signals to extend cable distance beyond specifications",
+                "Converts traffic between different media types such as copper to fiber"
+              ]
+            },
+            {
+              "question": "How is a physical tap installed?",
+              "answer": "Physically breaks the connection and inserts the tap in the middle — may require downtime to install",
+              "difficulty": 2,
+              "id": "5.5.2319",
+              "distractors": [
+                "Installed through software configuration on the switch — no physical changes required",
+                "Connects wirelessly to the network segment using a dedicated radio interface",
+                "Plugs into an available port on the switch like any other network device"
+              ]
+            },
+            {
+              "question": "What is a passive tap?",
+              "answer": "A network tap that is not powered; often used for optical fiber",
+              "difficulty": 2,
+              "id": "5.5.2320",
+              "distractors": [
+                "A network tap that filters traffic before forwarding to the analyzer",
+                "A network tap that requires power but adds no latency to the link",
+                "A network tap that only captures traffic in one direction at a time"
+              ]
+            },
+            {
+              "question": "What is an active tap?",
+              "answer": "A network tap that requires additional power to regenerate the signal",
+              "difficulty": 2,
+              "id": "5.5.2321",
+              "distractors": [
+                "A network tap that copies only specific VLANs to the monitor port",
+                "A network tap that operates without power using optical splitters",
+                "A network tap that captures packets and stores them in local memory"
+              ]
+            },
+            {
+              "question": "What connections does a network tap have?",
+              "answer": "In/out connections for the network link and separate monitor ports for the analyzer",
+              "difficulty": 2,
+              "id": "5.5.2322",
+              "distractors": [
+                "A single pass-through port that copies all traffic internally to a buffer",
+                "Two monitor ports only — one for inbound and one for outbound traffic",
+                "A management port for configuration and a single trunk port for all data"
+              ]
+            },
+            {
+              "question": "What is SPAN (Switched Port Analyzer)?",
+              "answer": "A function within the switch itself that copies data from any interface and sends it to a different interface where a protocol analyzer is connected",
+              "difficulty": 1,
+              "id": "5.5.2323",
+              "distractors": [
+                "A standalone hardware appliance that sits between two network segments to capture all traffic passing through",
+                "A protocol that encrypts mirrored traffic before sending it to a remote analyzer across the network",
+                "A firewall feature that logs all blocked packets and exports them in pcap format for analysis"
+              ]
+            },
+            {
+              "question": "What advantage does port mirroring/SPAN have over a physical tap?",
+              "answer": "No physical break in the connection is needed",
+              "difficulty": 1,
+              "id": "5.5.2324",
+              "distractors": [
+                "It can capture traffic from multiple VLANs simultaneously without trunk configuration",
+                "It provides higher bandwidth to the analyzer than a physical tap allows",
+                "It encrypts the captured traffic before sending it to the analyzer"
+              ]
+            },
+            {
+              "question": "What is the limitation of port mirroring/SPAN?",
+              "answer": "Limited bandwidth available — e.g., tapping a 2-Gbps link (1 Gbps each direction) but the mirror port only has 1 Gbps to the analyzer",
+              "difficulty": 2,
+              "id": "5.5.2325",
+              "distractors": [
+                "Cannot capture traffic from trunk ports or inter-VLAN routing",
+                "Adds significant latency to all traffic passing through the mirrored port",
+                "Only supports capturing Layer 2 frames, not Layer 3 packets"
+              ]
+            },
+            {
+              "question": "When should you use a physical tap instead of port mirroring?",
+              "answer": "For very large bandwidth uses where port mirroring cannot handle the total traffic",
+              "difficulty": 2,
+              "id": "5.5.2326",
+              "distractors": [
+                "When you need to capture encrypted traffic that port mirroring cannot decrypt",
+                "When the switch does not support any form of traffic monitoring",
+                "When you need to capture traffic from multiple switches in different locations"
+              ]
+            },
+            {
+              "question": "What do wireless survey tools provide?",
+              "answer": "Details about what is going over the air — signal coverage information and identification of potential interference (especially from other access points)",
+              "difficulty": 1,
+              "id": "5.5.2327",
+              "distractors": [
+                "Real-time bandwidth usage per device and application on the wireless network",
+                "Security vulnerabilities and unauthorized devices connected to access points",
+                "Historical logs of all wireless client associations and disconnections"
+              ]
+            },
+            {
+              "question": "Where might wireless survey tools be found?",
+              "answer": "Built into the OS or access point, or as a third-party tool",
+              "difficulty": 1,
+              "id": "5.5.2328",
+              "distractors": [
+                "Only available as dedicated hardware appliances from wireless vendors",
+                "Exclusively found in enterprise wireless controller software",
+                "Only available as paid commercial applications for Windows"
+              ]
+            },
+            {
+              "question": "What does a Wi-Fi analyzer show?",
+              "answer": "Channel strengths, channels in use, access points in the area, and potential sources of interference; sees all 802.11 information going through the air",
+              "difficulty": 2,
+              "id": "5.5.2329",
+              "distractors": [
+                "Only the SSID names and encryption types of nearby networks without signal details",
+                "Packet contents and payload data for all wireless frames in range",
+                "Connected client MAC addresses and their bandwidth consumption in real time"
+              ]
+            },
+            {
+              "question": "What might a Wi-Fi analyzer require for detailed information?",
+              "answer": "Specialized hardware",
+              "difficulty": 1,
+              "id": "5.5.2330",
+              "distractors": [
+                "Root or administrator access on the operating system",
+                "A direct wired connection to each access point being analyzed",
+                "An enterprise wireless controller license"
+              ]
+            },
+            {
+              "question": "What does a spectrum analyzer show?",
+              "answer": "An entire range of frequencies and every signal broadcast on those frequencies (802.11 or other sources) — can verify interference from third-party equipment or microwave ovens",
+              "difficulty": 2,
+              "id": "5.5.2331",
+              "distractors": [
+                "Only 802.11 wireless signals and their channel usage — cannot detect non-Wi-Fi interference sources",
+                "Network throughput and latency measurements between the client and access point",
+                "Only the signal strength of your currently connected access point"
+              ]
+            },
+            {
+              "question": "What does signal-to-noise ratio look like in a Wi-Fi analyzer?",
+              "answer": "Narrow ratio indicates weak signal relative to noise; wide separation indicates strong signal",
+              "difficulty": 2,
+              "id": "5.5.2332",
+              "distractors": [
+                "High dBm values indicate noise; low dBm values indicate strong signal",
+                "Green bars indicate strong signal; red bars indicate interference",
+                "Flat horizontal lines indicate good signal; jagged peaks indicate noise"
+              ]
+            },
+            {
+              "question": "What is a visual fault locator?",
+              "answer": "A light source specifically designed for optical fiber — used to identify breaks in fiber optics",
+              "difficulty": 1,
+              "id": "5.5.2333",
+              "distractors": [
+                "A power meter that measures optical signal strength in dBm at the receiver end",
+                "A device that measures fiber cable length using optical time-domain reflectometry",
+                "A tool that tests the bandwidth capacity of a fiber optic connection"
+              ]
+            },
+            {
+              "question": "How does a visual fault locator identify breaks?",
+              "answer": "Light leaks out from around a break, making it visible",
+              "difficulty": 1,
+              "id": "5.5.2334",
+              "distractors": [
+                "It measures the time for light to reflect back from a break point to calculate distance",
+                "It detects changes in signal attenuation levels that indicate damage",
+                "It sends a test pattern and compares the received pattern to identify errors"
+              ]
+            },
+            {
+              "question": "What conditions may be needed to see a visual fault locator's results?",
+              "answer": "May need to turn off room lights to see clearly",
+              "difficulty": 1,
+              "id": "5.5.2335",
+              "distractors": [
+                "Requires a calibrated optical power meter at the far end to measure loss",
+                "Must be used only with single-mode fiber, not multimode",
+                "Requires the fiber to be disconnected from all active equipment"
+              ]
+            },
+            {
+              "question": "When can a visual fault locator be used in the installation process?",
+              "answer": "Before installing a fiber patch into the network — can locate faults ahead of time",
+              "difficulty": 2,
+              "id": "5.5.2336",
+              "distractors": [
+                "Only after the fiber is installed and connected to active network equipment",
+                "Only when an OTDR test has already confirmed the presence of a fault",
+                "Only during scheduled maintenance windows when the link is already down"
+              ]
+            },
+            {
+              "question": "How would you describe a visual fault locator's technology level and effectiveness?",
+              "answer": "Low-tech but very effective at finding fiber problems",
+              "difficulty": 1,
+              "id": "5.5.2337",
+              "distractors": [
+                "High-tech and expensive, requiring specialized training to operate",
+                "Moderately effective but only works with single-mode fiber",
+                "Complex to use but provides precise distance measurements to the fault"
+              ]
+            },
+            {
+              "question": "What does a protocol analyzer do?",
+              "answer": "Captures frames on a wired or wireless network and presents results in human-readable format",
+              "difficulty": 1,
+              "id": "5.5.2338",
+              "distractors": [
+                "Generates synthetic network traffic to test bandwidth and throughput between two points",
+                "Scans a network for open ports and identifies running services on remote hosts",
+                "Monitors network device health via SNMP and generates alerts when thresholds are exceeded"
+              ]
+            },
+            {
+              "question": "Where might packet capture capability be built in?",
+              "answer": "The device itself — switch, router, or firewall may have a capture function built into the software",
+              "difficulty": 1,
+              "id": "5.5.2339",
+              "distractors": [
+                "Only in dedicated standalone hardware appliances designed for packet capture",
+                "Only in third-party software applications installed on a separate workstation",
+                "Only at the ISP level where traffic enters and exits the network"
+              ]
+            },
+            {
+              "question": "What is Wireshark used for?",
+              "answer": "A protocol analyzer that provides additional protocol decodes and details about entire conversations traversing the network; can view captures exported from devices",
+              "difficulty": 1,
+              "id": "5.5.2340",
+              "distractors": [
+                "A port scanner that identifies open ports and running services across a network",
+                "A bandwidth testing tool that measures throughput between two network endpoints",
+                "A network monitoring system that tracks device uptime and sends SNMP alerts"
+              ]
+            },
+            {
+              "question": "Why do some administrators capture all packets to disk?",
+              "answer": "For later analysis (big data analysis)",
+              "difficulty": 2,
+              "id": "5.5.2341",
+              "distractors": [
+                "To comply with data retention regulations that require real-time monitoring only",
+                "To reduce network latency by caching frequently accessed packets",
+                "To automatically block malicious traffic detected in the captured data"
+              ]
+            },
+            {
+              "question": "What is nmap?",
+              "answer": "Network Mapper — a port scanner that finds open port numbers, operating systems, and application versions",
+              "difficulty": 1,
+              "id": "5.5.2342",
+              "distractors": [
+                "Network Monitor — a bandwidth measurement tool that tests throughput between endpoints",
+                "Network Manager — a configuration tool that deploys settings to multiple devices",
+                "Network Mapper — a protocol analyzer that captures and decodes packet contents"
+              ]
+            },
+            {
+              "question": "What type of scan does nmap perform?",
+              "answer": "An active scan — sends queries to a device and examines the results",
+              "difficulty": 2,
+              "id": "5.5.2343",
+              "distractors": [
+                "A passive scan — listens to network traffic without sending any packets",
+                "A hybrid scan — combines packet capture with DNS lookups for identification",
+                "An offline scan — analyzes previously captured pcap files for open ports"
+              ]
+            },
+            {
+              "question": "What are four capabilities of nmap?",
+              "answer": "1) Discover open ports on a remote device, 2) Identify OS type and version without logging in, 3) Identify services running on open ports, 4) Scripting engine to extend functionality with custom sc...",
+              "difficulty": 3,
+              "id": "5.5.2344",
+              "distractors": [
+                "1) Monitor bandwidth usage, 2) Generate traffic reports, 3) Alert on threshold violations, 4) Integrate with SNMP management platforms",
+                "1) Capture packets for analysis, 2) Decode protocol headers, 3) Reassemble TCP streams, 4) Export conversations to file",
+                "1) Test cable continuity, 2) Measure signal strength, 3) Verify cable category, 4) Map physical cable routes"
+              ]
+            },
+            {
+              "question": "Can nmap scan more than one device at a time?",
+              "answer": "Yes — can scan a single device or an entire IP address range, building a map of IP addresses, operating systems, and services on the network",
+              "difficulty": 1,
+              "id": "5.5.2345",
+              "distractors": [
+                "No — nmap can only scan one IP address at a time and must be run separately for each target",
+                "Yes — but only within the same subnet; cannot scan across routed networks",
+                "No — scanning multiple devices requires using a wrapper script or third-party tool"
+              ]
+            },
+            {
+              "question": "Why is nmap useful for finding rogue devices?",
+              "answer": "It can perform Layer 2 scans on the same subnet, making it difficult for rogue devices to hide",
+              "difficulty": 2,
+              "id": "5.5.2346",
+              "distractors": [
+                "It uses passive monitoring to detect unauthorized DHCP responses on the network",
+                "It compares current device inventory against a baseline configuration database",
+                "It monitors switch port status changes and alerts when new devices connect"
+              ]
+            },
+            {
+              "question": "What should you do if nmap discovers unexpected open ports on a device?",
+              "answer": "Perform additional research to identify what services are running on those ports",
+              "difficulty": 1,
+              "id": "5.5.2347",
+              "distractors": [
+                "Immediately block the ports using the device's local firewall",
+                "Disconnect the device from the network to prevent potential exploitation",
+                "Report the device to the vendor for a firmware update"
+              ]
+            },
+            {
+              "question": "What port is SSH typically on?",
+              "answer": "Port 22",
+              "difficulty": 1,
+              "id": "5.5.2348",
+              "distractors": [
+                "Port 21",
+                "Port 23",
+                "Port 443"
+              ]
+            },
+            {
+              "question": "What port is HTTP typically on?",
+              "answer": "Port 80",
+              "difficulty": 1,
+              "id": "5.5.2349",
+              "distractors": [
+                "Port 443",
+                "Port 8080",
+                "Port 25"
+              ]
+            },
+            {
+              "question": "What port is HTTPS typically on?",
+              "answer": "Port 443",
+              "difficulty": 1,
+              "id": "5.5.2350",
+              "distractors": [
+                "Port 80",
+                "Port 8443",
+                "Port 993"
+              ]
+            },
+            {
+              "question": "What port is AFP (Apple Filing Protocol) typically on?",
+              "answer": "Port 548",
+              "difficulty": 3,
+              "id": "5.5.2351",
+              "distractors": [
+                "Port 445",
+                "Port 636",
+                "Port 389"
+              ]
+            },
+            {
+              "question": "What port is NFS typically on?",
+              "answer": "Port 2049",
+              "difficulty": 3,
+              "id": "5.5.2352",
+              "distractors": [
+                "Port 2048",
+                "Port 1433",
+                "Port 3389"
+              ]
+            },
+            {
+              "question": "Why are device discovery protocols useful?",
+              "answer": "Difficult to determine what devices are plugged into a switch, their VLANs, or IP addresses by looking at the front panel — discovery protocols gather this information automatically",
+              "difficulty": 1,
+              "id": "5.5.2353",
+              "distractors": [
+                "Provide real-time bandwidth monitoring and alert on congestion events",
+                "Automatically configure VLAN assignments based on connected device type",
+                "Generate topology maps by tracing physical cable connections between devices"
+              ]
+            },
+            {
+              "question": "What is CDP?",
+              "answer": "Cisco Discovery Protocol — a proprietary protocol that provides configuration information about Cisco devices without logging in",
+              "difficulty": 1,
+              "id": "5.5.2354",
+              "distractors": [
+                "Cisco Diagnostic Protocol — a tool for running hardware diagnostics on Cisco equipment remotely",
+                "Common Discovery Protocol — an open standard for identifying any vendor's network devices",
+                "Cisco Data Protocol — a proprietary protocol for transferring configuration backups between Cisco devices"
+              ]
+            },
+            {
+              "question": "What information does CDP provide?",
+              "answer": "IP addresses, port identification, software version, native VLAN, hardware-level interface configuration",
+              "difficulty": 3,
+              "id": "5.5.2355",
+              "distractors": [
+                "CPU utilization, memory usage, interface error counters, and temperature readings",
+                "Routing table entries, BGP neighbor status, OSPF area configuration, and ACL rules",
+                "Bandwidth utilization, packet loss rates, jitter measurements, and QoS policy status"
+              ]
+            },
+            {
+              "question": "What is LLDP?",
+              "answer": "Link Layer Discovery Protocol — a vendor-neutral discovery protocol supported by almost all switches",
+              "difficulty": 1,
+              "id": "5.5.2356",
+              "distractors": [
+                "Link Layer Detection Protocol — a Cisco proprietary protocol for detecting link failures",
+                "Logical Link Discovery Protocol — a protocol that maps Layer 3 addresses to physical ports",
+                "Local Link Diagnostic Protocol — a troubleshooting tool for verifying link-layer connectivity"
+              ]
+            },
+            {
+              "question": "What information does LLDP provide?",
+              "answer": "MAC address, interface identification, switch name, VLAN ID",
+              "difficulty": 2,
+              "id": "5.5.2357",
+              "distractors": [
+                "IP address, routing table, OS version, and CPU utilization",
+                "Bandwidth usage, error counters, duplex settings, and cable length",
+                "Firmware version, serial number, power consumption, and temperature"
+              ]
+            },
+            {
+              "question": "What is the key difference between CDP and LLDP?",
+              "answer": "CDP is proprietary to Cisco; LLDP is vendor-neutral and supported by almost all switches",
+              "difficulty": 1,
+              "id": "5.5.2358",
+              "distractors": [
+                "CDP operates at Layer 3 while LLDP operates at Layer 2",
+                "CDP provides more detailed information while LLDP only shows basic connectivity",
+                "CDP uses multicast while LLDP uses broadcast frames"
+              ]
+            },
+            {
+              "question": "Can CDP and LLDP run on the same device simultaneously?",
+              "answer": "Yes — both can run at the same time, and third-party applications can use them to present information in consolidated form",
+              "difficulty": 2,
+              "id": "5.5.2359",
+              "distractors": [
+                "No — only one discovery protocol can be active on an interface at a time",
+                "No — LLDP automatically disables when CDP is detected on the same network",
+                "Yes — but only on different interfaces; the same port cannot run both simultaneously"
+              ]
+            },
+            {
+              "question": "How do speed test sites work?",
+              "answer": "Send a lot of information over a link and measure how long it took, both in download and upload",
+              "difficulty": 1,
+              "id": "5.5.2360",
+              "distractors": [
+                "Continuously monitor bandwidth usage and alert when thresholds are exceeded",
+                "Test latency and jitter between two endpoints using synthetic packets",
+                "Verify that QoS policies are correctly prioritizing traffic classes"
+              ]
+            },
+            {
+              "question": "When are speed tests useful for troubleshooting?",
+              "answer": "Before and after network changes to compare speeds and determine if there's any difference",
+              "difficulty": 1,
+              "id": "5.5.2361",
+              "distractors": [
+                "Only during initial network installation to establish baseline performance metrics",
+                "Continuously in real-time to detect security intrusions on the network",
+                "Only when ISP reports an outage to verify service has been restored"
+              ]
+            },
+            {
+              "question": "Why should you measure speed at different times of day?",
+              "answer": "More bandwidth is available during off hours than during the middle of a workday",
+              "difficulty": 1,
+              "id": "5.5.2362",
+              "distractors": [
+                "Network equipment firmware updates are applied during off hours, temporarily boosting performance",
+                "ISPs throttle connections during peak hours based on traffic type",
+                "DNS resolution is faster at night because fewer queries compete for server resources"
+              ]
+            },
+            {
+              "question": "Why are not all speed test sites equal?",
+              "answer": "Sites farther away may give different values than closer ones, and some sites are constrained by their own bandwidth",
+              "difficulty": 2,
+              "id": "5.5.2363",
+              "distractors": [
+                "All speed test sites use the same methodology and produce identical results regardless of location",
+                "Sites using HTTPS are always more accurate than those using HTTP",
+                "Speed test accuracy depends only on your local network configuration, not the test server"
+              ]
+            },
+            {
+              "question": "Where do the most accurate speed test results often come from?",
+              "answer": "Your local ISP's speed test site",
+              "difficulty": 2,
+              "id": "5.5.2364",
+              "distractors": [
+                "A government-certified speed test site that uses standardized testing methodology",
+                "Any test site that uses multiple simultaneous TCP connections for measurement",
+                "The speed test site with the highest user rating and most geographic coverage"
+              ]
+            },
+            {
+              "question": "Name four third-party speed test sites.",
+              "answer": "Fast.com, SpeedOf.Me, speedtest.net, testmy.net",
+              "difficulty": 3,
+              "id": "5.5.2365",
+              "distractors": [
+                "Ookla, PingPlotter, iPerf, NetSpot",
+                "Bandwidth Place, DSLReports, WireShark, SolarWinds",
+                "SpeedSmart, Meter.net, Nmap, PRTG"
               ]
             }
           ]
@@ -18874,6 +26205,10 @@ const GAME_DATA = {
 
 const ABBREV_DATA = [
   {
+    "abbrev": "AAA",
+    "full": "Authentication, Authorization, and Accounting"
+  },
+  {
     "abbrev": "AC",
     "full": "Alternating Current"
   },
@@ -18882,12 +26217,28 @@ const ABBREV_DATA = [
     "full": "Access Control List"
   },
   {
+    "abbrev": "ACR",
+    "full": "Attenuation to Crosstalk Ratio"
+  },
+  {
+    "abbrev": "ARPANET",
+    "full": "Advanced Research Projects Agency Network"
+  },
+  {
     "abbrev": "AES",
     "full": "Advanced Encryption Standard"
   },
   {
     "abbrev": "AH",
     "full": "Authentication Header"
+  },
+  {
+    "abbrev": "AIC",
+    "full": "Availability, Integrity, Confidentiality (alternate CIA)"
+  },
+  {
+    "abbrev": "AFP",
+    "full": "Apple Filing Protocol"
   },
   {
     "abbrev": "AP",
@@ -18918,8 +26269,16 @@ const ABBREV_DATA = [
     "full": "Border Gateway Protocol"
   },
   {
+    "abbrev": "BYOD",
+    "full": "Bring Your Own Device"
+  },
+  {
     "abbrev": "BOOTP",
     "full": "Bootstrap Protocol"
+  },
+  {
+    "abbrev": "BPDU",
+    "full": "Bridge Protocol Data Unit"
   },
   {
     "abbrev": "BSSID",
@@ -18970,6 +26329,10 @@ const ABBREV_DATA = [
     "full": "Code-Division Multiple Access"
   },
   {
+    "abbrev": "CIA",
+    "full": "Confidentiality, Integrity, Availability (security triad)"
+  },
+  {
     "abbrev": "CIDR",
     "full": "Classless Inter-Domain Routing"
   },
@@ -18978,8 +26341,20 @@ const ABBREV_DATA = [
     "full": "Common Internet File System"
   },
   {
+    "abbrev": "DAP",
+    "full": "Directory Access Protocol"
+  },
+  {
+    "abbrev": "dBm",
+    "full": "Decibels per Milliwatt"
+  },
+  {
     "abbrev": "DC",
     "full": "Direct Current"
+  },
+  {
+    "abbrev": "DDoS",
+    "full": "Distributed Denial of Service"
   },
   {
     "abbrev": "DFS",
@@ -19010,6 +26385,10 @@ const ABBREV_DATA = [
     "full": "DNS over HTTPS"
   },
   {
+    "abbrev": "DoS",
+    "full": "Denial of Service"
+  },
+  {
     "abbrev": "DKIM",
     "full": "Domain Keys Identified Mail"
   },
@@ -19038,6 +26417,10 @@ const ABBREV_DATA = [
     "full": "Enhanced Interior Gateway Routing Protocol"
   },
   {
+    "abbrev": "EMI",
+    "full": "Electromagnetic Interference"
+  },
+  {
     "abbrev": "EOL",
     "full": "End of Life"
   },
@@ -19062,6 +26445,14 @@ const ABBREV_DATA = [
     "full": "Federal Communications Commission"
   },
   {
+    "abbrev": "FCS",
+    "full": "Frame Check Sequence"
+  },
+  {
+    "abbrev": "FEXT",
+    "full": "Far-End Crosstalk"
+  },
+  {
     "abbrev": "FQDN",
     "full": "Fully Qualified Domain Name"
   },
@@ -19076,6 +26467,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "FTP",
     "full": "File Transfer Protocol"
+  },
+  {
+    "abbrev": "GDPR",
+    "full": "General Data Protection Regulation"
   },
   {
     "abbrev": "GCMP",
@@ -19122,6 +26517,10 @@ const ABBREV_DATA = [
     "full": "Infrastructure as a Service"
   },
   {
+    "abbrev": "ISP",
+    "full": "Internet Service Provider"
+  },
+  {
     "abbrev": "IAM",
     "full": "Identity and Access Management"
   },
@@ -19142,6 +26541,10 @@ const ABBREV_DATA = [
     "full": "Intermediate Distribution Frame"
   },
   {
+    "abbrev": "ICS",
+    "full": "Industrial Control Systems"
+  },
+  {
     "abbrev": "ICMP",
     "full": "Internet Control Message Protocol"
   },
@@ -19152,6 +26555,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "IDS",
     "full": "Intrusion Detection System"
+  },
+  {
+    "abbrev": "IIoT",
+    "full": "Industrial Internet of Things"
   },
   {
     "abbrev": "IKE",
@@ -19238,6 +26645,14 @@ const ABBREV_DATA = [
     "full": "Main Distribution Frame"
   },
   {
+    "abbrev": "MDIX",
+    "full": "Medium Dependent Interface Crossover"
+  },
+  {
+    "abbrev": "MFA",
+    "full": "Multifactor Authentication"
+  },
+  {
     "abbrev": "MIB",
     "full": "Management Information Base"
   },
@@ -19270,6 +26685,10 @@ const ABBREV_DATA = [
     "full": "Mail Exchanger (DNS record)"
   },
   {
+    "abbrev": "NAC",
+    "full": "Network Access Control"
+  },
+  {
     "abbrev": "NAS",
     "full": "Network-Attached Storage"
   },
@@ -19278,12 +26697,24 @@ const ABBREV_DATA = [
     "full": "Network Address Translation"
   },
   {
+    "abbrev": "NFS",
+    "full": "Network File System"
+  },
+  {
     "abbrev": "NFV",
     "full": "Network Function Virtualization"
   },
   {
     "abbrev": "NGFW",
     "full": "Next-Generation Firewall"
+  },
+  {
+    "abbrev": "NEXT",
+    "full": "Near-End Crosstalk"
+  },
+  {
+    "abbrev": "NIC",
+    "full": "Network Interface Card"
   },
   {
     "abbrev": "NDP",
@@ -19310,6 +26741,14 @@ const ABBREV_DATA = [
     "full": "Open Systems Interconnection"
   },
   {
+    "abbrev": "OT",
+    "full": "Operational Technology"
+  },
+  {
+    "abbrev": "OUI",
+    "full": "Organizationally Unique Identifier"
+  },
+  {
     "abbrev": "OSPF",
     "full": "Open Shortest Path First"
   },
@@ -19326,12 +26765,24 @@ const ABBREV_DATA = [
     "full": "Port Address Translation"
   },
   {
+    "abbrev": "pcap",
+    "full": "Packet Capture (file format)"
+  },
+  {
     "abbrev": "PBX",
     "full": "Private Branch Exchange"
   },
   {
+    "abbrev": "PCI DSS",
+    "full": "Payment Card Industry Data Security Standard"
+  },
+  {
     "abbrev": "PDU",
     "full": "Power Distribution Unit"
+  },
+  {
+    "abbrev": "PII",
+    "full": "Personally Identifiable Information"
   },
   {
     "abbrev": "PKI",
@@ -19376,6 +26827,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "QoS",
     "full": "Quality of Service"
+  },
+  {
+    "abbrev": "RADIUS",
+    "full": "Remote Authentication Dial-In User Service"
   },
   {
     "abbrev": "RBAC",
@@ -19430,6 +26885,10 @@ const ABBREV_DATA = [
     "full": "Router Advertisement"
   },
   {
+    "abbrev": "ROM",
+    "full": "Read-Only Memory"
+  },
+  {
     "abbrev": "RPC",
     "full": "Remote Procedure Call"
   },
@@ -19446,12 +26905,24 @@ const ABBREV_DATA = [
     "full": "Software as a Service"
   },
   {
+    "abbrev": "SAML",
+    "full": "Security Assertion Markup Language"
+  },
+  {
     "abbrev": "SAN",
     "full": "Storage Area Network"
   },
   {
+    "abbrev": "SCADA",
+    "full": "Supervisory Control and Data Acquisition"
+  },
+  {
     "abbrev": "SC",
     "full": "Subscriber Connector (fiber)"
+  },
+  {
+    "abbrev": "SFD",
+    "full": "Start Frame Delimiter"
   },
   {
     "abbrev": "SFP",
@@ -19522,6 +26993,10 @@ const ABBREV_DATA = [
     "full": "Secure Shell"
   },
   {
+    "abbrev": "SSO",
+    "full": "Single Sign-On"
+  },
+  {
     "abbrev": "SVI",
     "full": "Switched Virtual Interface"
   },
@@ -19535,7 +27010,19 @@ const ABBREV_DATA = [
   },
   {
     "abbrev": "STP",
-    "full": "Spanning Tree Protocol"
+    "full": "Spanning Tree Protocol / Shielded Twisted Pair"
+  },
+  {
+    "abbrev": "TIA",
+    "full": "Telecommunications Industry Association"
+  },
+  {
+    "abbrev": "TACACS",
+    "full": "Terminal Access Control Access-Control System"
+  },
+  {
+    "abbrev": "TACACS+",
+    "full": "Terminal Access Control Access-Control System Plus"
   },
   {
     "abbrev": "TCP",
@@ -19554,6 +27041,10 @@ const ABBREV_DATA = [
     "full": "Transport Layer Security"
   },
   {
+    "abbrev": "TOTP",
+    "full": "Time-based One-Time Password"
+  },
+  {
     "abbrev": "TPC",
     "full": "Transmit Power Control"
   },
@@ -19570,8 +27061,24 @@ const ABBREV_DATA = [
     "full": "Uninterruptible Power Supply"
   },
   {
+    "abbrev": "UTP",
+    "full": "Unshielded Twisted Pair"
+  },
+  {
+    "abbrev": "URI",
+    "full": "Uniform Resource Identifier"
+  },
+  {
+    "abbrev": "URL",
+    "full": "Uniform Resource Locator"
+  },
+  {
     "abbrev": "UTM",
     "full": "Unified Threat Management"
+  },
+  {
+    "abbrev": "UUID",
+    "full": "Universally Unique Identifier"
   },
   {
     "abbrev": "VIP",
@@ -19620,6 +27127,10 @@ const ABBREV_DATA = [
   {
     "abbrev": "WLC",
     "full": "Wireless LAN Controller"
+  },
+  {
+    "abbrev": "XT",
+    "full": "Crosstalk"
   },
   {
     "abbrev": "XSS",
