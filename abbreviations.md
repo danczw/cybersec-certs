@@ -19,6 +19,7 @@
 | BGP          | Border Gateway Protocol                                      |
 | BYOD         | Bring Your Own Device                                        |
 | BOOTP        | Bootstrap Protocol                                           |
+| BPDU         | Bridge Protocol Data Unit                                    |
 | BSSID        | Basic Service Set Identifier                                 |
 | BNC          | Bayonet Neill-Concelman                                      |
 | CNAME        | Canonical Name (DNS record)                                  |
