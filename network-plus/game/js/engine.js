@@ -10,6 +10,7 @@ const Engine = (() => {
     { id: 2, name: 'Network Implementation', weight: 20 },
     { id: 3, name: 'Network Operations', weight: 19 },
     { id: 4, name: 'Network Security', weight: 19 },
+    { id: 5, name: 'Network Troubleshooting', weight: 19 },
   ];
 
   const DIFF_LABELS = { 1: 'easy', 2: 'medium', 3: 'hard' };

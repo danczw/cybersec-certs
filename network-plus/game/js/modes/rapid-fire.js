@@ -14,16 +14,15 @@ const RapidFire = (() => {
   function start(main) {
     container = main;
     sessionStats = { answered: 0, correct: 0, xpEarned: 0 };
-    if (!allConcepts) {
-      allConcepts = [];
-      for (const domain of GAME_DATA.domains) {
-        for (const obj of domain.objectives) {
-          for (const concept of obj.concepts) {
-            allConcepts.push({ ...concept, domainId: domain.id, objectiveId: obj.id });
-          }
+    allConcepts = [];
+    for (const domain of GAME_DATA.domains) {
+      for (const obj of domain.objectives) {
+        for (const concept of obj.concepts) {
+          allConcepts.push({ ...concept, domainId: domain.id, objectiveId: obj.id });
         }
       }
     }
+    allConcepts = UI.shuffleArray(allConcepts);
     showNext();
   }
 
