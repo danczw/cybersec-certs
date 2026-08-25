@@ -56,6 +56,9 @@ const App = (() => {
       case '#/port-sprint': loadMode(() => typeof PortSprint !== 'undefined' && PortSprint, 'js/modes/port-sprint.js'); break;
       case '#/route-selector': loadMode(() => typeof RouteSelector !== 'undefined' && RouteSelector, 'js/modes/route-selector.js'); break;
       case '#/cable-lab': loadMode(() => typeof CableLab !== 'undefined' && CableLab, 'js/modes/cable-lab.js'); break;
+      case '#/layer-drop': loadMode(() => typeof LayerDrop !== 'undefined' && LayerDrop, 'js/modes/layer-drop.js'); break;
+      case '#/attack-surface': loadMode(() => typeof AttackSurface !== 'undefined' && AttackSurface, 'js/modes/attack-surface.js'); break;
+      case '#/triage-sim': loadMode(() => typeof TriageSim !== 'undefined' && TriageSim, 'js/modes/triage-sim.js'); break;
       default: renderHome();
     }
   }
@@ -134,6 +137,33 @@ const App = (() => {
             <span class="mode-tag">DOMAIN 1.5</span>
             <span class="mode-tag">SCENARIOS</span>
             <span class="mode-tag">MATCHING</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/layer-drop'">
+          <h3>LAYER DROP</h3>
+          <p>Sort protocols, devices, and concepts to the correct OSI layer. Timer pressure increases as you go.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 1.1</span>
+            <span class="mode-tag">SPEED</span>
+            <span class="mode-tag">ARCADE</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/attack-surface'">
+          <h3>ATTACK SURFACE</h3>
+          <p>Identify attacks from network symptoms, then select the correct defense. Two-phase security challenge.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 4</span>
+            <span class="mode-tag">SCENARIOS</span>
+            <span class="mode-tag">TWO-PHASE</span>
+          </div>
+        </div>
+        <div class="mode-card" onclick="window.location.hash='#/triage-sim'">
+          <h3>TRIAGE SIM</h3>
+          <p>Troubleshoot network incidents step by step. Manage your diagnostic budget — wrong moves cost points.</p>
+          <div class="mode-meta">
+            <span class="mode-tag">DOMAIN 5</span>
+            <span class="mode-tag">DECISION TREE</span>
+            <span class="mode-tag">BUDGET</span>
           </div>
         </div>
       </div>

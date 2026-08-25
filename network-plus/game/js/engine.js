@@ -24,6 +24,7 @@ const Engine = (() => {
         2: { seen: 0, correct: 0 },
         3: { seen: 0, correct: 0 },
         4: { seen: 0, correct: 0 },
+        5: { seen: 0, correct: 0 },
       },
       concepts: {},
       sessions: []

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{TOPIC}} — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Page structure ─── */
+  .page {
+    width: 182mm;
+    min-height: 273mm;
+    padding: 0;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: avoid; }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 .header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 .header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 .header { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 .header { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* Accent colors per domain (used for borders, highlights) */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; }
+
+  /* ─── Content sections ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes (side by side) ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: auto;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { margin: 0; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body { background: #f0f0f5; padding: 10mm; }
+    .page {
+      background: #fff;
+      margin: 0 auto 10mm auto;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TEMPLATE USAGE:
+
+     1. Set class on .page to domain-1 through domain-5
+     2. Replace {{PLACEHOLDERS}} with content from your .md file
+     3. Use the component patterns below as building blocks
+
+     YAML frontmatter mapping:
+       domain  → header-meta "DOMAIN X.X"
+       topic   → header h1
+       objective → header-meta "OBJ X.X"
+     ═══════════════════════════════════════════════════════════════ -->
+
+<div class="page domain-1">
+
+  <!-- HEADER: always one per page -->
+  <div class="header">
+    <h1>{{TOPIC}}</h1>
+    <div class="header-meta">
+      <span>{{DOMAIN}}</span>
+      <span>OBJ {{OBJECTIVE}}</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <!-- CONTENT: use class="content" for 2-col, "content single-col" for 1-col -->
+  <div class="content">
+
+    <!-- ═══ SECTION HEADING ═══ -->
+    <h2>Section Title</h2>
+
+    <!-- ═══ BULLET POINTS (standard notes) ═══ -->
+    <h3>Subsection</h3>
+    <ul>
+      <li>First point — concise fact</li>
+      <li>Second point with <code>inline code</code> for commands/values</li>
+      <li>Third point with <span class="key-term">key term</span> highlighted</li>
+    </ul>
+
+    <!-- ═══ TABLE ═══ -->
+    <table>
+      <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
+      <tr><td>Data</td><td>Data</td><td>Data</td></tr>
+      <tr><td>Data</td><td>Data</td><td>Data</td></tr>
+    </table>
+
+    <!-- ═══ CALLOUT (from > [!NOTE] Supplementary blocks) ═══ -->
+    <div class="callout">
+      <div class="callout-title">Supplementary</div>
+      <p>Additional context or exam tip goes here. Connects the concept to real-world application.</p>
+    </div>
+
+    <!-- ═══ NUMBERED STEPS (for processes like DORA, ARP resolution) ═══ -->
+    <h3>Process Name</h3>
+    <ol class="steps">
+      <li>First step in the process</li>
+      <li>Second step — what happens next</li>
+      <li>Third step — resolution</li>
+      <li>Final step — result</li>
+    </ol>
+
+    <!-- ═══ MNEMONIC / MEMORY AID ═══ -->
+    <div class="mnemonic">Please Do Not Throw Sausage Pizza Away</div>
+
+    <!-- ═══ COMPARISON (for TCP vs UDP, etc.) ═══ -->
+    <div class="compare-grid">
+      <div class="compare-box">
+        <h4>TCP</h4>
+        <ul>
+          <li>Connection-oriented</li>
+          <li>Guaranteed delivery</li>
+          <li>Slower</li>
+        </ul>
+      </div>
+      <div class="compare-box">
+        <h4>UDP</h4>
+        <ul>
+          <li>Connectionless</li>
+          <li>Best-effort</li>
+          <li>Faster</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══ QUICK-REFERENCE STRIP (ports, commands, values) ═══ -->
+    <div class="quick-ref">
+      <div class="quick-ref-item"><strong>22</strong> SSH</div>
+      <div class="quick-ref-item"><strong>53</strong> DNS</div>
+      <div class="quick-ref-item"><strong>80</strong> HTTP</div>
+      <div class="quick-ref-item"><strong>443</strong> HTTPS</div>
+    </div>
+
+    <!-- ═══ CODE BLOCK (for CLI output, configs) ═══ -->
+    <pre>C:\> ping 192.168.1.1
+Reply from 192.168.1.1: bytes=32 time&lt;1ms TTL=64</pre>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Source: professormesser.com</span>
+    <span>Page 1</span>
+  </div>
+
+</div>
+
+</body>
+</html>
