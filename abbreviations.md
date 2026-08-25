@@ -10,6 +10,7 @@
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
 | AIC          | Availability, Integrity, Confidentiality (alternate CIA)     |
+| AFP          | Apple Filing Protocol                                        |
 | AP           | Access Point                                                 |
 | API          | Application Programming Interface                            |
 | APIPA        | Automatic Private IP Addressing                              |
@@ -79,6 +80,7 @@
 | HVAC         | Heating, Ventilating, and Air Conditioning                   |
 | HTTPS        | Hypertext Transfer Protocol Secure                           |
 | IaaS         | Infrastructure as a Service                                  |
+| ISP          | Internet Service Provider                                    |
 | IAM          | Identity and Access Management                               |
 | IEEE         | Institute of Electrical and Electronics Engineers            |
 | IETF         | Internet Engineering Task Force                              |
@@ -123,6 +125,7 @@
 | NAC          | Network Access Control                                       |
 | NAS          | Network-Attached Storage                                     |
 | NAT          | Network Address Translation                                  |
+| NFS          | Network File System                                          |
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
 | NEXT         | Near-End Crosstalk                                           |
