@@ -5,6 +5,7 @@
 | AAA          | Authentication, Authorization, and Accounting                |
 | AC           | Alternating Current                                          |
 | ACL          | Access Control List                                          |
+| ACR          | Attenuation to Crosstalk Ratio                               |
 | ARPANET      | Advanced Research Projects Agency Network                    |
 | AES          | Advanced Encryption Standard                                 |
 | AH           | Authentication Header                                        |
@@ -51,12 +52,14 @@
 | DRP          | Disaster Recovery Plan                                       |
 | DSL          | Digital Subscriber Line                                      |
 | EIGRP        | Enhanced Interior Gateway Routing Protocol                   |
+| EMI          | Electromagnetic Interference                                 |
 | EOL          | End of Life                                                  |
 | EOS          | End of Support                                               |
 | ESSID        | Extended Service Set Identifier                              |
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FCC          | Federal Communications Commission                            |
+| FEXT         | Far-End Crosstalk                                            |
 | FQDN         | Fully Qualified Domain Name                                  |
 | FHRP         | First Hop Redundancy Protocol                                |
 | FEP          | Fluorinated Ethylene Polymer                                 |
@@ -104,6 +107,7 @@
 | LTE-A        | Long-Term Evolution Advanced                                 |
 | MAC          | Media Access Control                                         |
 | MDF          | Main Distribution Frame                                      |
+| MDIX         | Medium Dependent Interface Crossover                         |
 | MFA          | Multifactor Authentication                                   |
 | MIB          | Management Information Base                                  |
 | MPO          | Multi-fiber Push On                                          |
@@ -118,6 +122,7 @@
 | NAT          | Network Address Translation                                  |
 | NFV          | Network Function Virtualization                              |
 | NGFW         | Next-Generation Firewall                                     |
+| NEXT         | Near-End Crosstalk                                           |
 | NIC          | Network Interface Card                                       |
 | NDP          | Neighbor Discovery Protocol                                  |
 | NS           | Name Server (DNS record)                                     |
@@ -190,7 +195,8 @@
 | SVI          | Switched Virtual Interface                                   |
 | SSL          | Secure Sockets Layer                                         |
 | ST           | Straight Tip (fiber connector)                               |
-| STP          | Spanning Tree Protocol                                       |
+| STP          | Spanning Tree Protocol / Shielded Twisted Pair               |
+| TIA          | Telecommunications Industry Association                      |
 | TACACS       | Terminal Access Control Access-Control System                |
 | TACACS+      | Terminal Access Control Access-Control System Plus           |
 | TCP          | Transmission Control Protocol                                |
@@ -202,6 +208,7 @@
 | TTL          | Time to Live                                                 |
 | UDP          | User Datagram Protocol                                       |
 | UPS          | Uninterruptible Power Supply                                 |
+| UTP          | Unshielded Twisted Pair                                      |
 | URI          | Uniform Resource Identifier                                  |
 | URL          | Uniform Resource Locator                                     |
 | UTM          | Unified Threat Management                                    |
@@ -218,4 +225,5 @@
 | WEP          | Wired Equivalent Privacy                                     |
 | WPA          | Wi-Fi Protected Access                                       |
 | WLC          | Wireless LAN Controller                                      |
+| XT           | Crosstalk                                                    |
 | XSS          | Cross-Site Scripting                                         |
