@@ -35,6 +35,7 @@
 | CIDR         | Classless Inter-Domain Routing                               |
 | CIFS         | Common Internet File System                                  |
 | DAP          | Directory Access Protocol                                    |
+| dBm          | Decibels per Milliwatt                                       |
 | DC           | Direct Current                                               |
 | DDoS         | Distributed Denial of Service                                |
 | DFS          | Dynamic Frequency Selection                                  |
