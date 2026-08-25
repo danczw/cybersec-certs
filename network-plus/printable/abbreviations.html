@@ -12,12 +12,12 @@
   h1 { font-size: 11pt; margin-bottom: 1mm; }
   .subtitle { font-size: 8pt; color: #555; margin-bottom: 3mm; }
   .page { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
-  .col { min-width: 0; }
-  table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
-  th, td { text-align: left; padding: 0.8mm 1.5mm; border-bottom: 0.3pt solid #ddd; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col { min-width: 0; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 7.5pt; table-layout: fixed; }
+  th, td { text-align: left; padding: 0.8mm 1.5mm; border-bottom: 0.3pt solid #ddd; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   th { background: #f0f0f0; font-weight: 600; border-bottom: 0.5pt solid #999; }
-  td:first-child { font-weight: 600; width: 13%; }
-  td:nth-child(2) { width: 55%; }
+  td:first-child { font-weight: 600; width: 15%; }
+  td:nth-child(2) { width: 53%; }
   td:nth-child(3) { width: 32%; font-size: 6.5pt; color: #666; }
   @media screen { .sheet { border: 1px solid #ccc; margin: 10mm auto; padding: 10mm; } }
 </style>
