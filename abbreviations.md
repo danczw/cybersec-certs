@@ -59,6 +59,7 @@
 | ESP          | Encapsulation Security Payload                               |
 | EUI          | Extended Unique Identifier                                   |
 | FCC          | Federal Communications Commission                            |
+| FCS          | Frame Check Sequence                                         |
 | FEXT         | Far-End Crosstalk                                            |
 | FQDN         | Fully Qualified Domain Name                                  |
 | FHRP         | First Hop Redundancy Protocol                                |
@@ -174,6 +175,7 @@
 | SAN          | Storage Area Network                                         |
 | SCADA        | Supervisory Control and Data Acquisition                     |
 | SC           | Subscriber Connector (fiber)                                 |
+| SFD          | Start Frame Delimiter                                        |
 | SFP          | Small Form-Factor Pluggable                                  |
 | SFP+         | Enhanced Small Form-Factor Pluggable                         |
 | SFTP         | Secure File Transfer Protocol                                |
