@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-26T07:15:19.383Z"
+    "generated": "2026-08-26T07:36:14.021Z"
   },
   "domains": [
     {
@@ -28571,934 +28571,1172 @@ const GAME_DATA = {
 const ABBREV_DATA = [
   {
     "abbrev": "AAA",
-    "full": "Authentication, Authorization, and Accounting"
+    "full": "Authentication, Authorization, and Accounting",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "AC",
-    "full": "Alternating Current"
+    "full": "Alternating Current",
+    "source": "2.4-power"
   },
   {
     "abbrev": "ACL",
-    "full": "Access Control List"
+    "full": "Access Control List",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "ACR",
-    "full": "Attenuation to Crosstalk Ratio"
+    "full": "Attenuation to Crosstalk Ratio",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "ARPANET",
-    "full": "Advanced Research Projects Agency Network"
+    "full": "Advanced Research Projects Agency Network",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "AES",
-    "full": "Advanced Encryption Standard"
+    "full": "Advanced Encryption Standard",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "AH",
-    "full": "Authentication Header"
+    "full": "Authentication Header",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "AIC",
-    "full": "Availability, Integrity, Confidentiality (alternate CIA)"
+    "full": "Availability, Integrity, Confidentiality (alternate CIA)",
+    "source": "4.1-security-technologies"
   },
   {
     "abbrev": "AFP",
-    "full": "Apple Filing Protocol"
+    "full": "Apple Filing Protocol",
+    "source": "5.5-software-tools"
   },
   {
     "abbrev": "AP",
-    "full": "Access Point"
+    "full": "Access Point",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "API",
-    "full": "Application Programming Interface"
+    "full": "Application Programming Interface",
+    "source": ""
   },
   {
     "abbrev": "APIPA",
-    "full": "Automatic Private IP Addressing"
+    "full": "Automatic Private IP Addressing",
+    "source": "1.7-ipv4-addressing"
   },
   {
     "abbrev": "ARP",
-    "full": "Address Resolution Protocol"
+    "full": "Address Resolution Protocol",
+    "source": "1.4-network-communication"
   },
   {
     "abbrev": "AS",
-    "full": "Autonomous System"
+    "full": "Autonomous System",
+    "source": "2.1-dynamic-routing"
   },
   {
     "abbrev": "ASIC",
-    "full": "Application-Specific Integrated Circuit"
+    "full": "Application-Specific Integrated Circuit",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "BGP",
-    "full": "Border Gateway Protocol"
+    "full": "Border Gateway Protocol",
+    "source": "2.1-dynamic-routing"
   },
   {
     "abbrev": "BYOD",
-    "full": "Bring Your Own Device"
+    "full": "Bring Your Own Device",
+    "source": "4.1-segmentation-enforcement"
   },
   {
     "abbrev": "BOOTP",
-    "full": "Bootstrap Protocol"
+    "full": "Bootstrap Protocol",
+    "source": "3.4-dhcp"
   },
   {
     "abbrev": "BPDU",
-    "full": "Bridge Protocol Data Unit"
+    "full": "Bridge Protocol Data Unit",
+    "source": "5.3-switching-issues"
   },
   {
     "abbrev": "BSSID",
-    "full": "Basic Service Set Identifier"
+    "full": "Basic Service Set Identifier",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "BNC",
-    "full": "Bayonet Neill-Concelman"
+    "full": "Bayonet Neill-Concelman",
+    "source": "1.5-copper-connectors"
   },
   {
     "abbrev": "CNAME",
-    "full": "Canonical Name (DNS record)"
+    "full": "Canonical Name (DNS record)",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "CRC",
-    "full": "Cyclic Redundancy Check"
+    "full": "Cyclic Redundancy Check",
+    "source": "3.2-snmp"
   },
   {
     "abbrev": "CDP",
-    "full": "Cisco Discovery Protocol"
+    "full": "Cisco Discovery Protocol",
+    "source": "3.2-network-solutions"
   },
   {
     "abbrev": "CDN",
-    "full": "Content Delivery Network"
+    "full": "Content Delivery Network",
+    "source": "1.2-networking-functions"
   },
   {
     "abbrev": "CBC-MAC",
-    "full": "Cipher Block Chaining Message Authentication Code"
+    "full": "Cipher Block Chaining Message Authentication Code",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "CA",
-    "full": "Certificate Authority"
+    "full": "Certificate Authority",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "CAPWAP",
-    "full": "Control and Provisioning of Wireless Access Points"
+    "full": "Control and Provisioning of Wireless Access Points",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "CCTV",
-    "full": "Closed Circuit Television"
+    "full": "Closed Circuit Television",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "CCMP",
-    "full": "Counter Mode with CBC-MAC Protocol"
+    "full": "Counter Mode with CBC-MAC Protocol",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "CDMA",
-    "full": "Code-Division Multiple Access"
+    "full": "Code-Division Multiple Access",
+    "source": "1.5-wireless-networking"
   },
   {
     "abbrev": "CIA",
-    "full": "Confidentiality, Integrity, Availability (security triad)"
+    "full": "Confidentiality, Integrity, Availability (security triad)",
+    "source": "4.1-security-technologies"
   },
   {
     "abbrev": "CIDR",
-    "full": "Classless Inter-Domain Routing"
+    "full": "Classless Inter-Domain Routing",
+    "source": "1.3-designing-the-cloud"
   },
   {
     "abbrev": "CIFS",
-    "full": "Common Internet File System"
+    "full": "Common Internet File System",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "DAP",
-    "full": "Directory Access Protocol"
+    "full": "Directory Access Protocol",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "dBm",
-    "full": "Decibels per Milliwatt"
+    "full": "Decibels per Milliwatt",
+    "source": "5.2-hardware-issues"
   },
   {
     "abbrev": "DC",
-    "full": "Direct Current"
+    "full": "Direct Current",
+    "source": "2.4-power"
   },
   {
     "abbrev": "DDoS",
-    "full": "Distributed Denial of Service"
+    "full": "Distributed Denial of Service",
+    "source": "4.2-denial-of-service"
   },
   {
     "abbrev": "DFS",
-    "full": "Dynamic Frequency Selection"
+    "full": "Dynamic Frequency Selection",
+    "source": "2.3-wireless-technologies"
   },
   {
     "abbrev": "DHCP",
-    "full": "Dynamic Host Configuration Protocol"
+    "full": "Dynamic Host Configuration Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "DLC",
-    "full": "Data Link Control"
+    "full": "Data Link Control",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "DNS",
-    "full": "Domain Name System"
+    "full": "Domain Name System",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "DNSSEC",
-    "full": "Domain Name Security Extensions"
+    "full": "Domain Name Security Extensions",
+    "source": "3.4-overview-of-dns"
   },
   {
     "abbrev": "DOCSIS",
-    "full": "Data Over Cable Service Interface Specification"
+    "full": "Data Over Cable Service Interface Specification",
+    "source": "1.5-copper-connectors"
   },
   {
     "abbrev": "DoH",
-    "full": "DNS over HTTPS"
+    "full": "DNS over HTTPS",
+    "source": "3.4-overview-of-dns"
   },
   {
     "abbrev": "DoS",
-    "full": "Denial of Service"
+    "full": "Denial of Service",
+    "source": "4.2-denial-of-service"
   },
   {
     "abbrev": "DKIM",
-    "full": "Domain Keys Identified Mail"
+    "full": "Domain Keys Identified Mail",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "DORA",
-    "full": "Discover, Offer, Request, Acknowledge (DHCP)"
+    "full": "Discover, Offer, Request, Acknowledge (DHCP)",
+    "source": "3.4-dhcp"
   },
   {
     "abbrev": "DoT",
-    "full": "DNS over TLS"
+    "full": "DNS over TLS",
+    "source": "3.4-overview-of-dns"
   },
   {
     "abbrev": "DAD",
-    "full": "Duplicate Address Detection"
+    "full": "Duplicate Address Detection",
+    "source": "3.4-ipv6-and-slaac"
   },
   {
     "abbrev": "DRP",
-    "full": "Disaster Recovery Plan"
+    "full": "Disaster Recovery Plan",
+    "source": "3.3-disaster-recovery"
   },
   {
     "abbrev": "DSL",
-    "full": "Digital Subscriber Line"
+    "full": "Digital Subscriber Line",
+    "source": "1.5-copper-connectors"
   },
   {
     "abbrev": "EIGRP",
-    "full": "Enhanced Interior Gateway Routing Protocol"
+    "full": "Enhanced Interior Gateway Routing Protocol",
+    "source": "2.1-dynamic-routing"
   },
   {
     "abbrev": "EMI",
-    "full": "Electromagnetic Interference"
+    "full": "Electromagnetic Interference",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "EOL",
-    "full": "End of Life"
+    "full": "End of Life",
+    "source": "3.1-life-cycle-management"
   },
   {
     "abbrev": "EOS",
-    "full": "End of Support"
+    "full": "End of Support",
+    "source": "3.1-life-cycle-management"
   },
   {
     "abbrev": "ESSID",
-    "full": "Extended Service Set Identifier"
+    "full": "Extended Service Set Identifier",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "ESP",
-    "full": "Encapsulation Security Payload"
+    "full": "Encapsulation Security Payload",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "EUI",
-    "full": "Extended Unique Identifier"
+    "full": "Extended Unique Identifier",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "FCC",
-    "full": "Federal Communications Commission"
+    "full": "Federal Communications Commission",
+    "source": "2.3-wireless-technologies"
   },
   {
     "abbrev": "FCS",
-    "full": "Frame Check Sequence"
+    "full": "Frame Check Sequence",
+    "source": "2.2-vlans-and-trunking"
   },
   {
     "abbrev": "FEXT",
-    "full": "Far-End Crosstalk"
+    "full": "Far-End Crosstalk",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "FQDN",
-    "full": "Fully Qualified Domain Name"
+    "full": "Fully Qualified Domain Name",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "FHRP",
-    "full": "First Hop Redundancy Protocol"
+    "full": "First Hop Redundancy Protocol",
+    "source": "2.1-routing-technologies"
   },
   {
     "abbrev": "FEP",
-    "full": "Fluorinated Ethylene Polymer"
+    "full": "Fluorinated Ethylene Polymer",
+    "source": "1.5-copper-cabling"
   },
   {
     "abbrev": "FTP",
-    "full": "File Transfer Protocol"
+    "full": "File Transfer Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "GDPR",
-    "full": "General Data Protection Regulation"
+    "full": "General Data Protection Regulation",
+    "source": "4.1-regulatory-compliance"
   },
   {
     "abbrev": "GCMP",
-    "full": "Galois Counter Mode Protocol"
+    "full": "Galois Counter Mode Protocol",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "GMAC",
-    "full": "Galois Message Authentication Code"
+    "full": "Galois Message Authentication Code",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "GRE",
-    "full": "Generic Routing Encapsulation"
+    "full": "Generic Routing Encapsulation",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "GPS",
-    "full": "Global Positioning System"
+    "full": "Global Positioning System",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "GSM",
-    "full": "Global System for Mobile Communications"
+    "full": "Global System for Mobile Communications",
+    "source": "1.5-wireless-networking"
   },
   {
     "abbrev": "HaaS",
-    "full": "Hardware as a Service"
+    "full": "Hardware as a Service",
+    "source": "1.3-cloud-models"
   },
   {
     "abbrev": "HTML",
-    "full": "Hypertext Markup Language"
+    "full": "Hypertext Markup Language",
+    "source": "3.5-vpns"
   },
   {
     "abbrev": "HTTP",
-    "full": "Hypertext Transfer Protocol"
+    "full": "Hypertext Transfer Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "HVAC",
-    "full": "Heating, Ventilating, and Air Conditioning"
+    "full": "Heating, Ventilating, and Air Conditioning",
+    "source": "2.4-environmental-factors"
   },
   {
     "abbrev": "HTTPS",
-    "full": "Hypertext Transfer Protocol Secure"
+    "full": "Hypertext Transfer Protocol Secure",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "IaaS",
-    "full": "Infrastructure as a Service"
+    "full": "Infrastructure as a Service",
+    "source": "1.3-cloud-models"
   },
   {
     "abbrev": "ISP",
-    "full": "Internet Service Provider"
+    "full": "Internet Service Provider",
+    "source": "5.5-software-tools"
   },
   {
     "abbrev": "IAM",
-    "full": "Identity and Access Management"
+    "full": "Identity and Access Management",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "IEEE",
-    "full": "Institute of Electrical and Electronics Engineers"
+    "full": "Institute of Electrical and Electronics Engineers",
+    "source": "1.5-wireless-networking"
   },
   {
     "abbrev": "IETF",
-    "full": "Internet Engineering Task Force"
+    "full": "Internet Engineering Task Force",
+    "source": ""
   },
   {
     "abbrev": "IBSS",
-    "full": "Independent Basic Service Set"
+    "full": "Independent Basic Service Set",
+    "source": "2.3-network-types"
   },
   {
     "abbrev": "IDF",
-    "full": "Intermediate Distribution Frame"
+    "full": "Intermediate Distribution Frame",
+    "source": "2.4-installing-networks"
   },
   {
     "abbrev": "ICS",
-    "full": "Industrial Control Systems"
+    "full": "Industrial Control Systems",
+    "source": "4.1-segmentation-enforcement"
   },
   {
     "abbrev": "ICMP",
-    "full": "Internet Control Message Protocol"
+    "full": "Internet Control Message Protocol",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "ICV",
-    "full": "Integrity Check Value"
+    "full": "Integrity Check Value",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "IDS",
-    "full": "Intrusion Detection System"
+    "full": "Intrusion Detection System",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "IIoT",
-    "full": "Industrial Internet of Things"
+    "full": "Industrial Internet of Things",
+    "source": "4.1-segmentation-enforcement"
   },
   {
     "abbrev": "IKE",
-    "full": "Internet Key Exchange"
+    "full": "Internet Key Exchange",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "IMAP",
-    "full": "Internet Message Access Protocol"
+    "full": "Internet Message Access Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "IoT",
-    "full": "Internet of Things"
+    "full": "Internet of Things",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "ITU",
-    "full": "International Telecommunications Union"
+    "full": "International Telecommunications Union",
+    "source": "2.3-wireless-technologies"
   },
   {
     "abbrev": "IP",
-    "full": "Internet Protocol"
+    "full": "Internet Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "ISL",
-    "full": "Inter-Switch Link"
+    "full": "Inter-Switch Link",
+    "source": "2.2-vlans-and-trunking"
   },
   {
     "abbrev": "IPAM",
-    "full": "IP Address Management"
+    "full": "IP Address Management",
+    "source": "3.1-network-documentation"
   },
   {
     "abbrev": "IPSec",
-    "full": "Internet Protocol Security"
+    "full": "Internet Protocol Security",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "IPS",
-    "full": "Intrusion Prevention System"
+    "full": "Intrusion Prevention System",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "ISAKMP",
-    "full": "Internet Security Association and Key Management Protocol"
+    "full": "Internet Security Association and Key Management Protocol",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "LACP",
-    "full": "Link Aggregation Control Protocol"
+    "full": "Link Aggregation Control Protocol",
+    "source": "2.2-interface-configurations"
   },
   {
     "abbrev": "LAG",
-    "full": "Link Aggregation Group"
+    "full": "Link Aggregation Group",
+    "source": "2.2-interface-configurations"
   },
   {
     "abbrev": "LAN",
-    "full": "Local Area Network"
+    "full": "Local Area Network",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "LDAP",
-    "full": "Lightweight Directory Access Protocol"
+    "full": "Lightweight Directory Access Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "LC",
-    "full": "Local Connector (fiber)"
+    "full": "Local Connector (fiber)",
+    "source": "1.5-fiber-connectors"
   },
   {
     "abbrev": "LED",
-    "full": "Light-Emitting Diode"
+    "full": "Light-Emitting Diode",
+    "source": "1.5-optical-fiber"
   },
   {
     "abbrev": "LLDP",
-    "full": "Link Layer Discovery Protocol"
+    "full": "Link Layer Discovery Protocol",
+    "source": "3.2-network-solutions"
   },
   {
     "abbrev": "LTE",
-    "full": "Long-Term Evolution"
+    "full": "Long-Term Evolution",
+    "source": "1.5-wireless-networking"
   },
   {
     "abbrev": "LTE-A",
-    "full": "Long-Term Evolution Advanced"
+    "full": "Long-Term Evolution Advanced",
+    "source": "1.5-wireless-networking"
   },
   {
     "abbrev": "MAC",
-    "full": "Media Access Control"
+    "full": "Media Access Control",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "MDF",
-    "full": "Main Distribution Frame"
+    "full": "Main Distribution Frame",
+    "source": "2.4-installing-networks"
   },
   {
     "abbrev": "MDIX",
-    "full": "Medium Dependent Interface Crossover"
+    "full": "Medium Dependent Interface Crossover",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "MFA",
-    "full": "Multifactor Authentication"
+    "full": "Multifactor Authentication",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "MIB",
-    "full": "Management Information Base"
+    "full": "Management Information Base",
+    "source": "3.2-snmp"
+  },
+  {
+    "abbrev": "MPLS",
+    "full": "Multiprotocol Label Switching",
+    "source": ""
   },
   {
     "abbrev": "MPO",
-    "full": "Multi-fiber Push On"
+    "full": "Multi-fiber Push On",
+    "source": "1.5-fiber-connectors"
   },
   {
     "abbrev": "MS-SQL",
-    "full": "Microsoft Structured Query Language"
+    "full": "Microsoft Structured Query Language",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "MTP",
-    "full": "Multi-fiber Termination Push-on (Corning brand for MPO)"
+    "full": "Multi-fiber Termination Push-on (Corning brand for MPO)",
+    "source": "1.5-fiber-connectors"
   },
   {
     "abbrev": "MTBF",
-    "full": "Mean Time Between Failures"
+    "full": "Mean Time Between Failures",
+    "source": "3.3-disaster-recovery"
   },
   {
     "abbrev": "MTTR",
-    "full": "Mean Time to Repair"
+    "full": "Mean Time to Repair",
+    "source": "3.3-disaster-recovery"
   },
   {
     "abbrev": "MTU",
-    "full": "Maximum Transmission Unit"
+    "full": "Maximum Transmission Unit",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "MX",
-    "full": "Mail Exchanger (DNS record)"
+    "full": "Mail Exchanger (DNS record)",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "NAC",
-    "full": "Network Access Control"
+    "full": "Network Access Control",
+    "source": "4.3-device-security"
   },
   {
     "abbrev": "NAS",
-    "full": "Network-Attached Storage"
+    "full": "Network-Attached Storage",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "NAT",
-    "full": "Network Address Translation"
+    "full": "Network Address Translation",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "NFS",
-    "full": "Network File System"
+    "full": "Network File System",
+    "source": "5.5-software-tools"
   },
   {
     "abbrev": "NFV",
-    "full": "Network Function Virtualization"
+    "full": "Network Function Virtualization",
+    "source": "1.3-designing-the-cloud"
   },
   {
     "abbrev": "NGFW",
-    "full": "Next-Generation Firewall"
+    "full": "Next-Generation Firewall",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "NEXT",
-    "full": "Near-End Crosstalk"
+    "full": "Near-End Crosstalk",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "NIC",
-    "full": "Network Interface Card"
+    "full": "Network Interface Card",
+    "source": "1.3-designing-the-cloud"
   },
   {
     "abbrev": "NDP",
-    "full": "Neighbor Discovery Protocol"
+    "full": "Neighbor Discovery Protocol",
+    "source": "3.4-ipv6-and-slaac"
   },
   {
     "abbrev": "NS",
-    "full": "Name Server (DNS record)"
+    "full": "Name Server (DNS record)",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "NTP",
-    "full": "Network Time Protocol"
+    "full": "Network Time Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "NTS",
-    "full": "Network Time Security"
+    "full": "Network Time Security",
+    "source": "3.4-time-protocols"
   },
   {
     "abbrev": "OID",
-    "full": "Object Identifier"
+    "full": "Object Identifier",
+    "source": "3.2-snmp"
   },
   {
     "abbrev": "OSI",
-    "full": "Open Systems Interconnection"
+    "full": "Open Systems Interconnection",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "OSPF",
-    "full": "Open Shortest Path First"
+    "full": "Open Shortest Path First",
+    "source": "2.1-dynamic-routing"
   },
   {
     "abbrev": "OT",
-    "full": "Operational Technology"
+    "full": "Operational Technology",
+    "source": "4.1-segmentation-enforcement"
   },
   {
     "abbrev": "OUI",
-    "full": "Organizationally Unique Identifier"
+    "full": "Organizationally Unique Identifier",
+    "source": "4.2-mac-flooding"
   },
   {
     "abbrev": "OWE",
-    "full": "Opportunistic Wireless Encryption"
+    "full": "Opportunistic Wireless Encryption",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "PaaS",
-    "full": "Platform as a Service"
+    "full": "Platform as a Service",
+    "source": "1.3-cloud-models"
   },
   {
     "abbrev": "PAT",
-    "full": "Port Address Translation"
+    "full": "Port Address Translation",
+    "source": "2.1-network-address-translation"
   },
   {
     "abbrev": "pcap",
-    "full": "Packet Capture (file format)"
+    "full": "Packet Capture (file format)",
+    "source": "5.5-command-line-tools"
   },
   {
     "abbrev": "PBX",
-    "full": "Private Branch Exchange"
+    "full": "Private Branch Exchange",
+    "source": ""
   },
   {
     "abbrev": "PCI DSS",
-    "full": "Payment Card Industry Data Security Standard"
+    "full": "Payment Card Industry Data Security Standard",
+    "source": "4.1-regulatory-compliance"
   },
   {
     "abbrev": "PDU",
-    "full": "Power Distribution Unit"
+    "full": "Power Distribution Unit",
+    "source": "2.4-power"
   },
   {
     "abbrev": "PII",
-    "full": "Personally Identifiable Information"
+    "full": "Personally Identifiable Information",
+    "source": "4.2-malware"
   },
   {
     "abbrev": "PKI",
-    "full": "Public Key Infrastructure"
+    "full": "Public Key Infrastructure",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "PSK",
-    "full": "Pre-Shared Key"
+    "full": "Pre-Shared Key",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "PTP",
-    "full": "Precision Time Protocol"
+    "full": "Precision Time Protocol",
+    "source": "3.4-time-protocols"
   },
   {
     "abbrev": "PTR",
-    "full": "Pointer (DNS record)"
+    "full": "Pointer (DNS record)",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "PoE",
-    "full": "Power over Ethernet"
+    "full": "Power over Ethernet",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "POP3",
-    "full": "Post Office Protocol v3"
+    "full": "Post Office Protocol v3",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "PPTP",
-    "full": "Point-to-Point Tunneling Protocol"
+    "full": "Point-to-Point Tunneling Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "PVC",
-    "full": "Polyvinyl Chloride"
+    "full": "Polyvinyl Chloride",
+    "source": "1.5-copper-cabling"
   },
   {
     "abbrev": "QSFP",
-    "full": "Quad Small Form-Factor Pluggable"
+    "full": "Quad Small Form-Factor Pluggable",
+    "source": "1.5-network-transceivers"
   },
   {
     "abbrev": "QSFP+",
-    "full": "Quad Enhanced Small Form-Factor Pluggable"
+    "full": "Quad Enhanced Small Form-Factor Pluggable",
+    "source": "1.5-network-transceivers"
   },
   {
     "abbrev": "QoS",
-    "full": "Quality of Service"
+    "full": "Quality of Service",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "RADIUS",
-    "full": "Remote Authentication Dial-In User Service"
+    "full": "Remote Authentication Dial-In User Service",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "RBAC",
-    "full": "Role-Based Access Control"
+    "full": "Role-Based Access Control",
+    "source": "4.1-security-concepts"
   },
   {
     "abbrev": "RDP",
-    "full": "Remote Desktop Protocol"
+    "full": "Remote Desktop Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "RFB",
-    "full": "Remote Frame Buffer"
+    "full": "Remote Frame Buffer",
+    "source": "3.5-remote-access"
   },
   {
     "abbrev": "RFC",
-    "full": "Request for Comments"
+    "full": "Request for Comments",
+    "source": "1.7-ipv4-addressing"
   },
   {
     "abbrev": "RF",
-    "full": "Radio Frequency"
+    "full": "Radio Frequency",
+    "source": ""
   },
   {
     "abbrev": "RFID",
-    "full": "Radio-Frequency Identification"
+    "full": "Radio-Frequency Identification",
+    "source": "3.1-network-documentation"
   },
   {
     "abbrev": "RIP",
-    "full": "Routing Information Protocol"
+    "full": "Routing Information Protocol",
+    "source": "2.1-routing-technologies"
   },
   {
     "abbrev": "RPO",
-    "full": "Recovery Point Objective"
+    "full": "Recovery Point Objective",
+    "source": "3.3-disaster-recovery"
   },
   {
     "abbrev": "RTO",
-    "full": "Recovery Time Objective"
+    "full": "Recovery Time Objective",
+    "source": "3.3-disaster-recovery"
   },
   {
     "abbrev": "RSTP",
-    "full": "Rapid Spanning Tree Protocol"
+    "full": "Rapid Spanning Tree Protocol",
+    "source": "2.2-spanning-tree-protocol"
   },
   {
     "abbrev": "RJ11",
-    "full": "Registered Jack type 11"
+    "full": "Registered Jack type 11",
+    "source": "1.5-copper-connectors"
   },
   {
     "abbrev": "RJ45",
-    "full": "Registered Jack type 45"
+    "full": "Registered Jack type 45",
+    "source": "1.5-copper-connectors"
   },
   {
     "abbrev": "RA",
-    "full": "Router Advertisement"
+    "full": "Router Advertisement",
+    "source": "3.4-ipv6-and-slaac"
   },
   {
     "abbrev": "ROM",
-    "full": "Read-Only Memory"
+    "full": "Read-Only Memory",
+    "source": "4.2-mac-flooding"
   },
   {
     "abbrev": "RPC",
-    "full": "Remote Procedure Call"
+    "full": "Remote Procedure Call",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "RS",
-    "full": "Router Solicitation"
+    "full": "Router Solicitation",
+    "source": "3.4-ipv6-and-slaac"
   },
   {
     "abbrev": "SA",
-    "full": "Security Association"
+    "full": "Security Association",
+    "source": "1.4-other-protocols"
   },
   {
     "abbrev": "SaaS",
-    "full": "Software as a Service"
+    "full": "Software as a Service",
+    "source": "1.3-cloud-models"
   },
   {
     "abbrev": "SAML",
-    "full": "Security Assertion Markup Language"
+    "full": "Security Assertion Markup Language",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "SAN",
-    "full": "Storage Area Network"
+    "full": "Storage Area Network",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "SCADA",
-    "full": "Supervisory Control and Data Acquisition"
+    "full": "Supervisory Control and Data Acquisition",
+    "source": "4.1-segmentation-enforcement"
   },
   {
     "abbrev": "SC",
-    "full": "Subscriber Connector (fiber)"
+    "full": "Subscriber Connector (fiber)",
+    "source": "1.5-fiber-connectors"
   },
   {
     "abbrev": "SFD",
-    "full": "Start Frame Delimiter"
+    "full": "Start Frame Delimiter",
+    "source": "2.2-vlans-and-trunking"
   },
   {
     "abbrev": "SFP",
-    "full": "Small Form-Factor Pluggable"
+    "full": "Small Form-Factor Pluggable",
+    "source": "1.5-network-transceivers"
   },
   {
     "abbrev": "SFP+",
-    "full": "Enhanced Small Form-Factor Pluggable"
+    "full": "Enhanced Small Form-Factor Pluggable",
+    "source": "1.5-network-transceivers"
   },
   {
     "abbrev": "SFTP",
-    "full": "Secure File Transfer Protocol"
+    "full": "Secure File Transfer Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SIEM",
-    "full": "Security Information and Event Management"
+    "full": "Security Information and Event Management",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SIP",
-    "full": "Session Initiation Protocol"
+    "full": "Session Initiation Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SLA",
-    "full": "Service Level Agreement"
+    "full": "Service Level Agreement",
+    "source": "3.1-network-documentation"
   },
   {
     "abbrev": "SLAAC",
-    "full": "Stateless Address Autoconfiguration"
+    "full": "Stateless Address Autoconfiguration",
+    "source": "3.4-ipv6-and-slaac"
   },
   {
     "abbrev": "SOA",
-    "full": "Start of Authority (DNS record)"
+    "full": "Start of Authority (DNS record)",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "SMB",
-    "full": "Server Message Block"
+    "full": "Server Message Block",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SMTP",
-    "full": "Simple Mail Transfer Protocol"
+    "full": "Simple Mail Transfer Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SNMP",
-    "full": "Simple Network Management Protocol"
+    "full": "Simple Network Management Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SPI",
-    "full": "Security Parameters Index"
+    "full": "Security Parameters Index",
+    "source": ""
   },
   {
     "abbrev": "SPAN",
-    "full": "Switched Port Analyzer"
+    "full": "Switched Port Analyzer",
+    "source": "3.2-logs-and-monitoring"
   },
   {
     "abbrev": "SPF",
-    "full": "Sender Policy Framework"
+    "full": "Sender Policy Framework",
+    "source": "3.4-dns-records"
   },
   {
     "abbrev": "SQL",
-    "full": "Structured Query Language"
+    "full": "Structured Query Language",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SSID",
-    "full": "Service Set Identifier"
+    "full": "Service Set Identifier",
+    "source": "2.3-wireless-networking"
   },
   {
     "abbrev": "SSH",
-    "full": "Secure Shell"
+    "full": "Secure Shell",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "SSO",
-    "full": "Single Sign-On"
+    "full": "Single Sign-On",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "SVI",
-    "full": "Switched Virtual Interface"
+    "full": "Switched Virtual Interface",
+    "source": "2.2-vlans-and-trunking"
   },
   {
     "abbrev": "SSL",
-    "full": "Secure Sockets Layer"
+    "full": "Secure Sockets Layer",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "ST",
-    "full": "Straight Tip (fiber connector)"
+    "full": "Straight Tip (fiber connector)",
+    "source": "1.5-fiber-connectors"
   },
   {
     "abbrev": "STP",
-    "full": "Spanning Tree Protocol / Shielded Twisted Pair"
+    "full": "Spanning Tree Protocol / Shielded Twisted Pair",
+    "source": "2.2-spanning-tree-protocol"
   },
   {
     "abbrev": "TIA",
-    "full": "Telecommunications Industry Association"
+    "full": "Telecommunications Industry Association",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "TACACS",
-    "full": "Terminal Access Control Access-Control System"
+    "full": "Terminal Access Control Access-Control System",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "TACACS+",
-    "full": "Terminal Access Control Access-Control System Plus"
+    "full": "Terminal Access Control Access-Control System Plus",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "TCP",
-    "full": "Transmission Control Protocol"
+    "full": "Transmission Control Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "TFTP",
-    "full": "Trivial File Transfer Protocol"
+    "full": "Trivial File Transfer Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "TLD",
-    "full": "Top Level Domain"
+    "full": "Top Level Domain",
+    "source": "3.4-overview-of-dns"
   },
   {
     "abbrev": "TLS",
-    "full": "Transport Layer Security"
+    "full": "Transport Layer Security",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "TOTP",
-    "full": "Time-based One-Time Password"
+    "full": "Time-based One-Time Password",
+    "source": "4.1-authentication"
   },
   {
     "abbrev": "TPC",
-    "full": "Transmit Power Control"
+    "full": "Transmit Power Control",
+    "source": "2.3-wireless-technologies"
   },
   {
     "abbrev": "TTL",
-    "full": "Time to Live"
+    "full": "Time to Live",
+    "source": "1.2-networking-functions"
   },
   {
     "abbrev": "UDP",
-    "full": "User Datagram Protocol"
+    "full": "User Datagram Protocol",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "UPS",
-    "full": "Uninterruptible Power Supply"
+    "full": "Uninterruptible Power Supply",
+    "source": "2.4-power"
   },
   {
     "abbrev": "UTP",
-    "full": "Unshielded Twisted Pair"
+    "full": "Unshielded Twisted Pair",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "URI",
-    "full": "Uniform Resource Identifier"
+    "full": "Uniform Resource Identifier",
+    "source": "4.3-security-rules"
   },
   {
     "abbrev": "URL",
-    "full": "Uniform Resource Locator"
+    "full": "Uniform Resource Locator",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "UTM",
-    "full": "Unified Threat Management"
+    "full": "Unified Threat Management",
+    "source": ""
   },
   {
     "abbrev": "UUID",
-    "full": "Universally Unique Identifier"
+    "full": "Universally Unique Identifier",
+    "source": ""
   },
   {
     "abbrev": "VIP",
-    "full": "Virtual IP Address"
+    "full": "Virtual IP Address",
+    "source": "1.7-ipv4-addressing"
   },
   {
     "abbrev": "VNIC",
-    "full": "Virtual Network Interface Card"
+    "full": "Virtual Network Interface Card",
+    "source": "1.3-designing-the-cloud"
   },
   {
     "abbrev": "VLAN",
-    "full": "Virtual Local Area Network"
+    "full": "Virtual Local Area Network",
+    "source": "2.2-vlans-and-trunking"
   },
   {
     "abbrev": "VLSM",
-    "full": "Variable-Length Subnet Mask"
+    "full": "Variable-Length Subnet Mask",
+    "source": "1.7-calculating-ipv4-subnets-and-hosts"
   },
   {
     "abbrev": "VPC",
-    "full": "Virtual Private Cloud"
+    "full": "Virtual Private Cloud",
+    "source": "1.3-designing-the-cloud"
   },
   {
     "abbrev": "VoIP",
-    "full": "Voice over Internet Protocol"
+    "full": "Voice over Internet Protocol",
+    "source": "1.4-common-ports"
   },
   {
     "abbrev": "VNC",
-    "full": "Virtual Network Computing"
+    "full": "Virtual Network Computing",
+    "source": "3.5-remote-access"
   },
   {
     "abbrev": "VPN",
-    "full": "Virtual Private Network"
+    "full": "Virtual Private Network",
+    "source": "1.1-osi-model"
   },
   {
     "abbrev": "WAN",
-    "full": "Wide Area Network"
+    "full": "Wide Area Network",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "WEP",
-    "full": "Wired Equivalent Privacy"
+    "full": "Wired Equivalent Privacy",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "WPA",
-    "full": "Wi-Fi Protected Access"
+    "full": "Wi-Fi Protected Access",
+    "source": "2.3-wireless-encryption"
   },
   {
     "abbrev": "WLC",
-    "full": "Wireless LAN Controller"
+    "full": "Wireless LAN Controller",
+    "source": "1.2-networking-devices"
   },
   {
     "abbrev": "XT",
-    "full": "Crosstalk"
+    "full": "Crosstalk",
+    "source": "5.2-cable-issues"
   },
   {
     "abbrev": "XSS",
-    "full": "Cross-Site Scripting"
+    "full": "Cross-Site Scripting",
+    "source": "1.2-networking-devices"
   }
 ];

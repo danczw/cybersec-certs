@@ -280,14 +280,17 @@ function parseAbbreviations() {
   }
   const content = fs.readFileSync(ABBREV_FILE, 'utf8');
   const entries = [];
-  const rowRe = /^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|/gm;
+  const rowRe = /^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|/gm;
   let match;
   while ((match = rowRe.exec(content)) !== null) {
     const abbrev = match[1].trim();
     const full = match[2].trim();
+    const rawSource = match[3].trim();
     if (abbrev === 'Abbreviation' || abbrev.startsWith('-')) continue;
     if (abbrev.length > 0 && full.length > 0) {
-      entries.push({ abbrev, full });
+      const sourceMatch = rawSource.match(/\[([^\]]+)\]/);
+      const source = sourceMatch ? sourceMatch[1] : '';
+      entries.push({ abbrev, full, source });
     }
   }
   return entries;
