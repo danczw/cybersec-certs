@@ -21,8 +21,6 @@
     #text(size: 7.5pt, fill: white.transparentize(10%))[
       #box(inset: (x: 1.5mm, y: 0.3mm), radius: 1.5mm, fill: white.transparentize(80%))[#domain]
       #h(2mm)
-      #box(inset: (x: 1.5mm, y: 0.3mm), radius: 1.5mm, fill: white.transparentize(80%))[OBJ #objective]
-      #h(2mm)
       #box(inset: (x: 1.5mm, y: 0.3mm), radius: 1.5mm, fill: white.transparentize(80%))[CompTIA Network+ N10-009]
     ]
   ]
