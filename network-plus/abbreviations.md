@@ -115,6 +115,7 @@
 | MDIX         | Medium Dependent Interface Crossover                         | [5.2-cable-issues](network-plus/notes/5-network-troubleshooting/5.2-cable-issues.md) |
 | MFA          | Multifactor Authentication                                   | [4.1-authentication](network-plus/notes/4-network-security/4.1-authentication.md) |
 | MIB          | Management Information Base                                  | [3.2-snmp](network-plus/notes/3-network-operations/3.2-snmp.md) |
+| MPLS         | Multiprotocol Label Switching                                |                                                                                           |
 | MPO          | Multi-fiber Push On                                          | [1.5-fiber-connectors](network-plus/notes/1-networking-concepts/1.5-fiber-connectors.md) |
 | MS-SQL       | Microsoft Structured Query Language                          | [1.4-common-ports](network-plus/notes/1-networking-concepts/1.4-common-ports.md) |
 | MTP          | Multi-fiber Termination Push-on (Corning brand for MPO)      | [1.5-fiber-connectors](network-plus/notes/1-networking-concepts/1.5-fiber-connectors.md) |
