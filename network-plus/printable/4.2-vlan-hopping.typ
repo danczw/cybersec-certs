@@ -43,27 +43,27 @@
 #sub-heading("Double Tagging Diagram")
 
 ```
-  Attacker            Switch 1          Trunk            Switch 2            Victim
-  (VLAN 10)              |        (VLANs 10 & 20)          |              (VLAN 20)
-      |                  |         Native VLAN: 10          |                  |
-      |                  |                                  |                  |
-      |--- Frame ------->|                                  |                  |
-      |                  |                                  |                  |
-      |   +----------+----------+----------+------+         |                  |
-      |   | Eth Hdr  | 802.1Q:  | 802.1Q:  | Data |         |                  |
-      |   |          | VLAN 10  | VLAN 20  |      |         |                  |
-      |   +----------+----------+----------+------+         |                  |
-      |                  |                                  |                  |
-      |                  |-- Strips VLAN 10 tag,     ------>|                  |
-      |                  |   forwards on native VLAN        |                  |
-      |                  |                                  |                  |
-      |                  |  +----------+----------+------+  |                  |
-      |                  |  | Eth Hdr  | 802.1Q:  | Data |  |                  |
-      |                  |  |          | VLAN 20  |      |  |                  |
-      |                  |  +----------+----------+------+  |                  |
-      |                  |                                  |                  |
-      |                  |                                  |--- Delivers ---->|
-      |                  |                                  |   to VLAN 20     |
+Attacker      Switch 1        Trunk         Switch 2      Victim
+(VLAN 10)        |      (VLANs 10 & 20)        |       (VLAN 20)
+    |            |       Native VLAN: 10        |            |
+    |            |                              |            |
+    |-- Frame -->|                              |            |
+    |            |                              |            |
+    | +--------+--------+--------+------+       |            |
+    | |Eth Hdr |802.1Q: |802.1Q: | Data |       |            |
+    | |        |VLAN 10 |VLAN 20 |      |       |            |
+    | +--------+--------+--------+------+       |            |
+    |            |                              |            |
+    |            |-- Strips VLAN 10 tag, ------>|            |
+    |            |   forwards on native VLAN    |            |
+    |            |                              |            |
+    |            | +--------+--------+------+   |            |
+    |            | |Eth Hdr |802.1Q: | Data |   |            |
+    |            | |        |VLAN 20 |      |   |            |
+    |            | +--------+--------+------+   |            |
+    |            |                              |            |
+    |            |                              |-- Deliver->|
+    |            |                              |  to VLAN 20|
 ```
 
 #sub-heading("How Double Tagging Works")

@@ -17,12 +17,12 @@
 
 
 ```
-R      10.10.30.0/24      [120/1]       via 10.10.50.2,  00:00:14,  Serial0/3/1
+R  10.10.30.0/24  [120/1]  via 10.10.50.2, 00:00:14, Serial0/3/1
 
-|      Subnet ID           |  Metric        Next Hop      Route       Outgoing
-|      with Prefix Length  |                              Timestamp   Interface
-|                          Administrative
-Route Code                 Distance
+|  Subnet ID       |  Metric   Next Hop      Route     Outgoing
+|  w/ Prefix Len   |                         Timer     Interface
+|                  Administrative
+Route Code         Distance
 ```
 
 - *Route code* — how the route was learned (C = directly connected, R = RIP, D = EIGRP, etc.)

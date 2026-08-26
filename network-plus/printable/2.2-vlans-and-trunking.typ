@@ -40,46 +40,19 @@ Solution: a trunk — a single physical connection that carries traffic for all 
 Normal ethernet frame:
 
 ```
-#block(breakable: false)[
-#table(
-  columns: 7,
-  stroke: none,
-  fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
-  table.header(
-    text(fill: white, weight: "bold")[Preamble],
-    text(fill: white, weight: "bold")[SFD],
-    text(fill: white, weight: "bold")[Destination MAC],
-    text(fill: white, weight: "bold")[Source MAC],
-    text(fill: white, weight: "bold")[Type],
-    text(fill: white, weight: "bold")[Payload],
-    text(fill: white, weight: "bold")[FCS],
-  ),
-)
-]
-
+┌──────────┬─────┬─────────┬─────────┬──────┬─────────┬─────┐
+│ Preamble │ SFD │ Dest    │ Source  │ Type │ Payload │ FCS │
+│          │     │ MAC     │ MAC     │      │         │     │
+└──────────┴─────┴─────────┴─────────┴──────┴─────────┴─────┘
 ```
 
 802.1Q tagged frame (VLAN tag inserted after Source MAC):
 
 ```
-#block(breakable: false)[
-#table(
-  columns: 8,
-  stroke: none,
-  fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
-  table.header(
-    text(fill: white, weight: "bold")[Preamble],
-    text(fill: white, weight: "bold")[SFD],
-    text(fill: white, weight: "bold")[Destination MAC],
-    text(fill: white, weight: "bold")[Source MAC],
-    text(fill: white, weight: "bold")[_VLAN_],
-    text(fill: white, weight: "bold")[Type],
-    text(fill: white, weight: "bold")[Payload],
-    text(fill: white, weight: "bold")[FCS],
-  ),
-)
-]
-
+┌──────────┬─────┬──────┬──────┬──────┬──────┬─────────┬─────┐
+│ Preamble │ SFD │ Dest │ Src  │ VLAN │ Type │ Payload │ FCS │
+│          │     │ MAC  │ MAC  │ Tag  │      │         │     │
+└──────────┴─────┴──────┴──────┴──────┴──────┴─────────┴─────┘
 ```
 
 - 12 bits long

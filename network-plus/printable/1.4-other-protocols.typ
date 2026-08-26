@@ -63,20 +63,22 @@
 *AH — IP Packet with Authentication (tunnel mode):*
 
 ```
-┌───────────────┬────────────┬─────────────────────┬──────────────────────────┐
-│ New IP Header │ AH Header  │ IP Header           │ Data                     │
-└───────────────┴────────────┴─────────────────────┴──────────────────────────┘
-├──────────────────────────── Authenticated ──────────────────────────────────┤
+┌──────────┬──────────┬──────────┬──────────┐
+│ New IP   │ AH       │ IP       │ Data     │
+│ Header   │ Header   │ Header   │          │
+└──────────┴──────────┴──────────┴──────────┘
+├──────────── Authenticated ────────────────┤
 ```
 
 *ESP — IPSec Datagram with ESP (tunnel mode):*
 
 ```
-┌───────────────┬────────────┬─────────────┬──────────┬─────────────┬─────────┐
-│ New IP Header │ ESP Header │ IP Header   │ Data     │ ESP Trailer │ ICV     │
-└───────────────┴────────────┴─────────────┴──────────┴─────────────┴─────────┘
-                             ├──── Encrypted ────────┤
-                ├──────────────── Authenticated ─────────────────────┤
+┌──────────┬──────────┬──────────┬──────┬─────────┬─────┐
+│ New IP   │ ESP      │ IP       │ Data │ ESP     │ ICV │
+│ Header   │ Header   │ Header   │      │ Trailer │     │
+└──────────┴──────────┴──────────┴──────┴─────────┴─────┘
+                      ├── Encrypted ────┤
+            ├──────────── Authenticated ─────────────────┤
 ```
 
 - ICV = Integrity Check Value (hash using MD5, SHA-1, or SHA-2)
@@ -109,10 +111,11 @@
 - Original IP header remains in the clear (destination visible to attackers)
 
 ```
-┌───────────┬────────────────┬───────────────────────┬───────────────┐
-│ IP Header │ IPSec Header   │ Data (encrypted)      │ IPSec Trailer │
-│ (clear)   │ (clear)        │                       │               │
-└───────────┴────────────────┴───────────────────────┴───────────────┘
+┌──────────┬──────────┬──────────────┬─────────┐
+│ IP       │ IPSec    │ Data         │ IPSec   │
+│ Header   │ Header   │ (encrypted)  │ Trailer │
+│ (clear)  │ (clear)  │              │         │
+└──────────┴──────────┴──────────────┴─────────┘
 ```
 
 *Tunnel Mode:*
@@ -121,10 +124,11 @@
 - Attacker cannot see original destination
 
 ```
-┌────────────┬────────────────┬──────────────────────────────────┬───────────────┐
-│ New IP Hdr │ IPSec Header   │ Orig IP Hdr + Data (encrypted)   │ IPSec Trailer │
-│ (clear)    │ (clear)        │                                  │               │
-└────────────┴────────────────┴──────────────────────────────────┴───────────────┘
+┌──────────┬──────────┬──────────────┬─────────┐
+│ New IP   │ IPSec    │ Orig IP Hdr  │ IPSec   │
+│ Header   │ Header   │ + Data       │ Trailer │
+│ (clear)  │ (clear)  │ (encrypted)  │         │
+└──────────┴──────────┴──────────────┴─────────┘
 ```
 
 - Most implementations use tunnel mode for highest security

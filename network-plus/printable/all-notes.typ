@@ -1,7 +1,7 @@
 // ─── Network+ Complete Printable Notes ───
 #import "template.typ": *
 
-#set page(paper: "a4", margin: (x: 14mm, top: 12mm, bottom: 16mm),
+#set page(paper: "a4", margin: (x: 10mm, top: 12mm, bottom: 16mm),
   footer: context {
     if counter(page).get().first() > 1 [
       #line(length: 100%, stroke: 0.3pt + luma(220))

@@ -283,7 +283,7 @@ function generateTypFile(notePath) {
 function generateAllNotes(basenames) {
   let typ = `// ─── Network+ Complete Printable Notes ───\n`;
   typ += `#import "template.typ": *\n\n`;
-  typ += `#set page(paper: "a4", margin: (x: 14mm, top: 12mm, bottom: 16mm),\n`;
+  typ += `#set page(paper: "a4", margin: (x: 10mm, top: 12mm, bottom: 16mm),\n`;
   typ += `  footer: context {\n`;
   typ += `    if counter(page).get().first() > 1 [\n`;
   typ += `      #line(length: 100%, stroke: 0.3pt + luma(220))\n`;

@@ -26,21 +26,21 @@
 #sub-heading("DNS Hierarchy Diagram")
 
 ```
-                          . (root)                     ← Root
-                             │
-            ┌────────┬───────┴───────┬────────┐
-            │        │               │        │
-          .com     .net            .edu      .org     ← Top-Level Domains (TLDs)
-            │
-     .professormesser                                 ← Second-Level Domain
-            │
-    ┌───────┼───────┬────────┬────────┐
-    │       │       │        │        │
-   www    live    mail     east     west              ← Subdomains / Hosts
-                             │        │
-                          ┌──┴──┐  ┌──┴──┐
-                          │     │  │     │
-                        trey  katie ethan judy        ← Hosts
+                     . (root)              ← Root
+                        │
+         ┌────────┬─────┴─────┬────────┐
+         │        │           │        │
+       .com     .net        .edu     .org  ← TLDs
+         │
+  .professormesser                         ← Second-Level
+         │
+  ┌──────┼──────┬──────┬──────┐
+  │      │      │      │      │
+ www   live   mail   east   west           ← Subdomains
+                       │      │
+                    ┌──┴──┐ ┌─┴──┐
+                    │     │ │    │
+                  trey katie ethan judy    ← Hosts
 ```
 
 #section-heading("DNS Infrastructure")
