@@ -48,26 +48,35 @@
 #section-heading("Calculation Examples")
 
 
-#sub-heading("10.1.1.0/24 (Class A, default /8)")
+#callout("Example")[
+  *10.1.1.0/24 (Class A, default /8)*
 
-- Subnet bits borrowed: 24 − 8 = 16
-- Host bits remaining: 32 − 24 = 8
-- Subnets: 2^16 = 65,536
-- Hosts per subnet: 2^8 − 2 = 254
+  - Subnet bits borrowed: 24 − 8 = 16
+  - Host bits remaining: 32 − 24 = 8
+  - Subnets: 2^16 = 65,536
+  - Hosts per subnet: 2^8 − 2 = 254
 
-#sub-heading("192.168.11.0/26 (Class C, default /24)")
+]
 
-- Subnet bits borrowed: 26 − 24 = 2
-- Host bits remaining: 32 − 26 = 6
-- Subnets: 2^2 = 4
-- Hosts per subnet: 2^6 − 2 = 62
+#callout("Example")[
+  *192.168.11.0/26 (Class C, default /24)*
 
-#sub-heading("172.16.55.0/21 (Class B, default /16)")
+  - Subnet bits borrowed: 26 − 24 = 2
+  - Host bits remaining: 32 − 26 = 6
+  - Subnets: 2^2 = 4
+  - Hosts per subnet: 2^6 − 2 = 62
 
-- Subnet bits borrowed: 21 − 16 = 5
-- Host bits remaining: 32 − 21 = 11
-- Subnets: 2^5 = 32
-- Hosts per subnet: 2^11 − 2 = 2,046
+]
+
+#callout("Example")[
+  *172.16.55.0/21 (Class B, default /16)*
+
+  - Subnet bits borrowed: 21 − 16 = 5
+  - Host bits remaining: 32 − 21 = 11
+  - Subnets: 2^5 = 32
+  - Hosts per subnet: 2^11 − 2 = 2,046
+]
+
 
 #section-heading("Powers of 2 Reference")
 

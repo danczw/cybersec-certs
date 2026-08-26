@@ -8,6 +8,8 @@
       #v(1mm)
       #text(size: 7pt, fill: luma(150))[#note-title.get()]
       #h(1fr)
+      #text(size: 7pt, fill: luma(150))[professormesser.com]
+      #h(1fr)
       #text(size: 9pt, fill: luma(120))[#counter(page).display()]
     ]
   },
@@ -35,6 +37,8 @@
   ]
   #v(10mm)
   #text(size: 10pt, fill: luma(120))[Based on Professor Messer video series]
+  #v(3mm)
+  #text(size: 9pt, fill: luma(150))[professormesser.com]
 ]
 
 #include "1.1-osi-model.typ"

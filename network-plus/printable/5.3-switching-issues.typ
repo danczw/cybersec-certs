@@ -45,32 +45,35 @@
 - *Designated port* — active port passing traffic
 - *Blocked port* — blocked by spanning tree to prevent loops
 
-#sub-heading("STP Topology Example")
+#callout("Example")[
+  *STP Topology*
 
-```
-Legend: [RP] Root Port   [DP] Designated Port   [BP] Blocked Port
+  ```
+  Legend: [RP] Root Port   [DP] Designated Port   [BP] Blocked Port
 
-            Bridge 1 (Root)
-           [DP]         [DP]
-             |            |
-         Network M    Network J
-             |            |
-           [RP]         [RP]
-          Bridge 6    Bridge 21
-       [DP]   [DP]  [BP]   [DP]
-         |      |     |       |
-    Network A  Network B  Network C
-         |                    |
-       [RP]                 [RP]
-      Bridge 5           Bridge 11
-         [DP]          [BP]
-           |             |
-           +--Network Y--+
-```
+              Bridge 1 (Root)
+             [DP]         [DP]
+               |            |
+           Network M    Network J
+               |            |
+             [RP]         [RP]
+            Bridge 6    Bridge 21
+         [DP]   [DP]  [BP]   [DP]
+           |      |     |       |
+      Network A  Network B  Network C
+           |                    |
+         [RP]                 [RP]
+        Bridge 5           Bridge 11
+           [DP]          [BP]
+             |             |
+             +--Network Y--+
+  ```
 
-- Bridge 1 is root (lowest bridge ID)
-- Blocked ports on Bridge 21 (toward Network B) and Bridge 11 (toward Network Y) prevent loops
-- If Bridge 6's link to Network M fails, spanning tree unblocks alternate paths to restore connectivity
+  - Bridge 1 is root (lowest bridge ID)
+  - Blocked ports on Bridge 21 (toward Network B) and Bridge 11 (toward Network Y) prevent loops
+  - If Bridge 6's link to Network M fails, spanning tree unblocks alternate paths to restore connectivity
+]
+
 
 #sub-heading("STP Port States")
 

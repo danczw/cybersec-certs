@@ -41,11 +41,14 @@
 - Doesn't require many resources from the attacker
 - Protocols used for amplification: NTP, DNS, ICMP
 
-#sub-heading("DNS Amplification Example")
+#callout("Example")[
+  *DNS Amplification*
 
-- Normal DNS query: small request, small response (IP address)
-- Amplified DNS query: request with ANY parameter returns much larger response (e.g., DNSSEC key information)
-- Example: 28-byte query → 1,300-byte response
+  - Normal DNS query: small request, small response (IP address)
+  - Amplified DNS query: request with ANY parameter returns much larger response (e.g., DNSSEC key information)
+  - 28-byte query → 1,300-byte response
+]
+
 
 #sub-heading("DNS Amplification Attack Flow")
 

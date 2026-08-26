@@ -17,21 +17,24 @@
 - Real-time information (session tables, routing tables) must also be maintained on secondary
 - Secondary has exactly the same configuration as primary so it can take over seamlessly
 
-#sub-heading("Example: Firewall Active-Passive")
+#callout("Example")[
+  *Firewall Active-Passive*
 
-```
-                    ┌──────────┐
-Internet ──────────►│ FW Active│──────► Router ──► Switch ──► Web Server
-                    └──────────┘
-                    ┌──────────┐
-                    │FW Passive│ (standby, monitoring active FW)
-                    └──────────┘
-```
+  ```
+                      ┌──────────┐
+  Internet ──────────►│ FW Active│──────► Router ──► Switch ──► Web Server
+                      └──────────┘
+                      ┌──────────┐
+                      │FW Passive│ (standby, monitoring active FW)
+                      └──────────┘
+  ```
 
-- Traffic passes through the active firewall
-- If active firewall fails (power supply, software crash), passive detects it is offline
-- Passive firewall promotes itself to active and becomes the primary device
-- Future communication uses the new active firewall
+  - Traffic passes through the active firewall
+  - If active firewall fails (power supply, software crash), passive detects it is offline
+  - Passive firewall promotes itself to active and becomes the primary device
+  - Future communication uses the new active firewall
+]
+
 
 #section-heading("Active-Active")
 
@@ -46,19 +49,22 @@ Internet ──────────►│ FW Active│──────► 
   - Expected normal traffic flow patterns
 - If one device fails, the remaining device continues handling all traffic — no failover process needed
 
-#sub-heading("Example: Firewall Active-Active")
+#callout("Example")[
+  *Firewall Active-Active*
 
-```
-                    ┌────────────┐
-                ┌──►│ FW Active 1│───┐
-Internet ───────┤   └────────────┘   ├──► Router ──► Switch ──► Web Server
-                └──►│ FW Active 2│───┘
-                    └────────────┘
-```
+  ```
+                      ┌────────────┐
+                  ┌──►│ FW Active 1│───┐
+  Internet ───────┤   └────────────┘   ├──► Router ──► Switch ──► Web Server
+                  └──►│ FW Active 2│───┘
+                      └────────────┘
+  ```
 
-- Traffic flows split across both firewalls
-- One flow may go through FW1, another through FW2
-- If one fails, remaining firewall handles all load
-- Traffic continues to flow normally
+  - Traffic flows split across both firewalls
+  - One flow may go through FW1, another through FW2
+  - If one fails, remaining firewall handles all load
+  - Traffic continues to flow normally
+
+]
 
 ]

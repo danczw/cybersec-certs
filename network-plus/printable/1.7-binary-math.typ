@@ -29,9 +29,8 @@
 + Where binary digit is 1 → take the chart number above it
 + Add all values together
 
-#sub-heading("Examples")
-
-#table(
+#callout("Example")[
+  #table(
   columns: 3,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -45,6 +44,8 @@
   [11111111],   [128+64+32+16+8+4+2+1],   [255],
 )
 
+]
+
 
 #section-heading("Decimal to Binary")
 
@@ -55,9 +56,10 @@
    - No → place 0, move to next column
 + Repeat for each column until all 8 bits are filled
 
-#sub-heading("Example: 154 Decimal")
+#callout("Example")[
+  *154 Decimal*
 
-#table(
+  #table(
   columns: 8,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -75,16 +77,18 @@
 )
 
 
-- 128 ≤ 154? Yes → 1 (running: 128)
-- 128+64=192 ≤ 154? No → 0
-- 128+32=160 ≤ 154? No → 0
-- 128+16=144 ≤ 154? Yes → 1 (running: 144)
-- 144+8=152 ≤ 154? Yes → 1 (running: 152)
-- 152+4=156 ≤ 154? No → 0
-- 152+2=154 ≤ 154? Yes → 1 (running: 154)
-- 154+1=155 ≤ 154? No → 0
+  - 128 ≤ 154? Yes → 1 (running: 128)
+  - 128+64=192 ≤ 154? No → 0
+  - 128+32=160 ≤ 154? No → 0
+  - 128+16=144 ≤ 154? Yes → 1 (running: 144)
+  - 144+8=152 ≤ 154? Yes → 1 (running: 152)
+  - 152+4=156 ≤ 154? No → 0
+  - 152+2=154 ≤ 154? Yes → 1 (running: 154)
+  - 154+1=155 ≤ 154? No → 0
 
-Result: 10011010
+  Result: 10011010
+]
+
 
 #section-heading("Bit Count and Possible Values")
 

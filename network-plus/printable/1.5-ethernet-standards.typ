@@ -17,9 +17,10 @@
 #section-heading("Standard Naming Convention")
 
 
-Example: `1000BASE-T`
+#callout("Example")[
+  `1000BASE-T`
 
-#table(
+  #table(
   columns: 2,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -31,6 +32,8 @@ Example: `1000BASE-T`
   [BASE],   [Baseband signaling (single frequency)],
   [T],   [Media type (T = twisted-pair, F/SX = fiber)],
 )
+
+]
 
 
 - Number prefix = speed (e.g., 10G = 10 Gbps)

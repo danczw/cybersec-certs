@@ -27,12 +27,15 @@
 - Destination is 0.0.0.0/0 — encompasses every host on every network
 - If nothing else matches in the routing table, the gateway of last resort is used
 
-#sub-heading("Routing Table Example")
+#callout("Example")[
+  *Routing Table*
 
-- Directly connected routes (e.g., 10.10.10.0/24, 10.10.40.0/24, 10.10.50.0/24)
-- Static routes (e.g., 10.10.20.0/24)
-- Dynamically learned routes via RIP (e.g., 10.10.30.0/24)
-- Gateway of last resort configured as a static route to 0.0.0.0/0 via a next-hop address
+  - Directly connected routes (e.g., 10.10.10.0/24, 10.10.40.0/24, 10.10.50.0/24)
+  - Static routes (e.g., 10.10.20.0/24)
+  - Dynamically learned routes via RIP (e.g., 10.10.30.0/24)
+  - Gateway of last resort configured as a static route to 0.0.0.0/0 via a next-hop address
+]
+
 
 #section-heading("Address Pool Exhaustion")
 

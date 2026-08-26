@@ -78,58 +78,68 @@ Pre-written ranges to quickly locate which block an IP falls into:
 - Mask = 0 → use 255
 - Mask = interesting → next block start − 1
 
-#section-heading("Example 1: 165.245.12.88/24")
+#callout("Example")[
+  *165.245.12.88/24*
 
+  - /24 → third octet → mask 255 → full mask: 255.255.255.0
+  - Subnet: 165.245.12.0 (octets 1–3 mask=255 copy down, octet 4 mask=0 use 0)
+  - Broadcast: 165.245.12.255 (octets 1–3 copy down, octet 4 mask=0 use 255)
+  - First IP: 165.245.12.1
+  - Last IP: 165.245.12.254
 
-- /24 → third octet → mask 255 → full mask: 255.255.255.0
-- Subnet: 165.245.12.0 (octets 1–3 mask=255 copy down, octet 4 mask=0 use 0)
-- Broadcast: 165.245.12.255 (octets 1–3 copy down, octet 4 mask=0 use 255)
-- First IP: 165.245.12.1
-- Last IP: 165.245.12.254
+]
 
-#section-heading("Example 2: 165.245.12.88/26")
+#callout("Example")[
+  *165.245.12.88/26*
 
+  - /26 → fourth octet → mask 192 → full mask: 255.255.255.192
+  - Addresses per subnet: 64
+  - IP octet 4 = 88 → falls in block 64–127
+  - Subnet: 165.245.12.64
+  - Broadcast: 165.245.12.127 (next block starts at 128, minus 1)
+  - First IP: 165.245.12.65
+  - Last IP: 165.245.12.126
 
-- /26 → fourth octet → mask 192 → full mask: 255.255.255.192
-- Addresses per subnet: 64
-- IP octet 4 = 88 → falls in block 64–127
-- Subnet: 165.245.12.64
-- Broadcast: 165.245.12.127 (next block starts at 128, minus 1)
-- First IP: 165.245.12.65
-- Last IP: 165.245.12.126
+]
 
-#section-heading("Example 3: 165.245.12.88/20")
+#callout("Example")[
+  *165.245.12.88/20*
 
+  - /20 → third octet → mask 240 → full mask: 255.255.240.0
+  - Addresses per subnet: 16
+  - IP octet 3 = 12 → falls in block 0–15
+  - Subnet: 165.245.0.0
+  - Broadcast: 165.245.15.255 (next block starts at 16, minus 1 = 15)
+  - First IP: 165.245.0.1
+  - Last IP: 165.245.15.254
 
-- /20 → third octet → mask 240 → full mask: 255.255.240.0
-- Addresses per subnet: 16
-- IP octet 3 = 12 → falls in block 0–15
-- Subnet: 165.245.0.0
-- Broadcast: 165.245.15.255 (next block starts at 16, minus 1 = 15)
-- First IP: 165.245.0.1
-- Last IP: 165.245.15.254
+]
 
-#section-heading("Example 4: 18.172.200.77/11")
+#callout("Example")[
+  *18.172.200.77/11*
 
+  - /11 → second octet → mask 224 → full mask: 255.224.0.0
+  - Addresses per subnet: 32
+  - IP octet 2 = 172 → falls in block 160–191
+  - Subnet: 18.160.0.0
+  - Broadcast: 18.191.255.255 (next block starts at 192, minus 1 = 191)
+  - First IP: 18.160.0.1
+  - Last IP: 18.191.255.254
 
-- /11 → second octet → mask 224 → full mask: 255.224.0.0
-- Addresses per subnet: 32
-- IP octet 2 = 172 → falls in block 160–191
-- Subnet: 18.160.0.0
-- Broadcast: 18.191.255.255 (next block starts at 192, minus 1 = 191)
-- First IP: 18.160.0.1
-- Last IP: 18.191.255.254
+]
 
-#section-heading("Example 5: 18.172.200.77/17")
+#callout("Example")[
+  *18.172.200.77/17*
 
+  - /17 → third octet → mask 128 → full mask: 255.255.128.0
+  - Addresses per subnet: 128
+  - IP octet 3 = 200 → falls in block 128–255
+  - Subnet: 18.172.128.0
+  - Broadcast: 18.172.255.255 (last address in block)
+  - First IP: 18.172.128.1
+  - Last IP: 18.172.255.254
+]
 
-- /17 → third octet → mask 128 → full mask: 255.255.128.0
-- Addresses per subnet: 128
-- IP octet 3 = 200 → falls in block 128–255
-- Subnet: 18.172.128.0
-- Broadcast: 18.172.255.255 (last address in block)
-- First IP: 18.172.128.1
-- Last IP: 18.172.255.254
 
 #section-heading("Exam Tips")
 

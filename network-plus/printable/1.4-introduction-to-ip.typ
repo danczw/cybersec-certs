@@ -113,9 +113,12 @@
 #section-heading("Practical Example")
 
 
-- Server 10.0.0.2 runs: web (TCP 80), VoIP (UDP 5004), email (TCP 143)
-- Client 10.0.0.1 uses random ephemeral source ports for each session
-- Response traffic reverses source/destination ports and IPs
-- All three applications communicate simultaneously via different port numbers
+#callout("Example")[
+  - Server 10.0.0.2 runs: web (TCP 80), VoIP (UDP 5004), email (TCP 143)
+  - Client 10.0.0.1 uses random ephemeral source ports for each session
+  - Response traffic reverses source/destination ports and IPs
+  - All three applications communicate simultaneously via different port numbers
+
+]
 
 ]

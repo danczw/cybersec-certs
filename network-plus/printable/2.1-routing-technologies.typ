@@ -38,13 +38,16 @@ Route Code                 Distance
 
 When multiple routes match a destination, the most specific prefix wins.
 
-Example — destination 192.168.1.6 with three matching routes:
+#callout("Example")[
+  Destination 192.168.1.6 with three matching routes:
 
-+ 192.168.0.0/16
-+ 192.168.1.0/24
-+ 192.168.1.6/32 ← most specific, chosen first
+  1. 192.168.0.0/16
+  2. 192.168.1.0/24
+  3. 192.168.1.6/32 ← most specific, chosen first
 
-/32 = single host; longer prefix = more specific = preferred.
+  /32 = single host; longer prefix = more specific = preferred.
+]
+
 
 #section-heading("Route Selection: Administrative Distance")
 
@@ -102,11 +105,12 @@ Solution: create a virtual IP address (VIP) shared between routers.
 Physical interface: ethernet1/1
 Subinterfaces: ethernet1/1.10, ethernet1/1.20, ethernet1/1.100
 
-#sub-heading("Example")
+#callout("Example")[
+  - Three VLANs (red, green, blue) on separate switch ports
+  - Single trunk cable between switch and router
+  - Router has subinterfaces g0/0.1, g0/0.2, g0/0.3
+  - Each subinterface assigned a different IP/subnet for its VLAN
 
-- Three VLANs (red, green, blue) on separate switch ports
-- Single trunk cable between switch and router
-- Router has subinterfaces g0/0.1, g0/0.2, g0/0.3
-- Each subinterface assigned a different IP/subnet for its VLAN
+]
 
 ]

@@ -93,10 +93,10 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 - If mask octet = 0 → write 255
 - If mask octet = interesting → subnet ID + magic number − 1
 
-#section-heading("Example 1: 165.245.77.14 / 255.255.240.0")
+#callout("Example")[
+  *165.245.77.14 / 255.255.240.0*
 
-
-#table(
+  #table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -114,19 +114,21 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 )
 
 
-- Interesting octet: 3 (mask = 240)
-- Magic number: 256 − 240 = 16
-- Ranges: 0–15, 16–31, 32–47, 48–63, *64–79*, 80–95...
-- IP octet 3 = 77 → falls in 64–79
-- Subnet ID: 165.245.64.0
-- Broadcast: 165.245.79.255
-- First host: 165.245.64.1
-- Last host: 165.245.79.254
+  - Interesting octet: 3 (mask = 240)
+  - Magic number: 256 − 240 = 16
+  - Ranges: 0–15, 16–31, 32–47, 48–63, *64–79*, 80–95...
+  - IP octet 3 = 77 → falls in 64–79
+  - Subnet ID: 165.245.64.0
+  - Broadcast: 165.245.79.255
+  - First host: 165.245.64.1
+  - Last host: 165.245.79.254
 
-#section-heading("Example 2: 10.180.122.244 / 255.248.0.0")
+]
 
+#callout("Example")[
+  *10.180.122.244 / 255.248.0.0*
 
-#table(
+  #table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -144,19 +146,21 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 )
 
 
-- Interesting octet: 2 (mask = 248)
-- Magic number: 256 − 248 = 8
-- Ranges: 0–7, 8–15, ... *176–183*, ...
-- IP octet 2 = 180 → falls in 176–183
-- Subnet ID: 10.176.0.0
-- Broadcast: 10.183.255.255
-- First host: 10.176.0.1
-- Last host: 10.183.255.254
+  - Interesting octet: 2 (mask = 248)
+  - Magic number: 256 − 248 = 8
+  - Ranges: 0–7, 8–15, ... *176–183*, ...
+  - IP octet 2 = 180 → falls in 176–183
+  - Subnet ID: 10.176.0.0
+  - Broadcast: 10.183.255.255
+  - First host: 10.176.0.1
+  - Last host: 10.183.255.254
 
-#section-heading("Example 3: 172.16.242.133/27")
+]
 
+#callout("Example")[
+  *172.16.242.133/27*
 
-#table(
+  #table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -174,13 +178,15 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 )
 
 
-- Interesting octet: 4 (mask = 224, /27)
-- Magic number: 256 − 224 = 32
-- Ranges: 0–31, 32–63, 64–95, 96–127, *128–159*, ...
-- IP octet 4 = 133 → falls in 128–159
-- Subnet ID: 172.16.242.128
-- Broadcast: 172.16.242.159
-- First host: 172.16.242.129
-- Last host: 172.16.242.158
+  - Interesting octet: 4 (mask = 224, /27)
+  - Magic number: 256 − 224 = 32
+  - Ranges: 0–31, 32–63, 64–95, 96–127, *128–159*, ...
+  - IP octet 4 = 133 → falls in 128–159
+  - Subnet ID: 172.16.242.128
+  - Broadcast: 172.16.242.159
+  - First host: 172.16.242.129
+  - Last host: 172.16.242.158
+
+]
 
 ]

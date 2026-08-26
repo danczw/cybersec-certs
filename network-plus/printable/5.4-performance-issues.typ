@@ -29,12 +29,15 @@
 - Sometimes obvious, often requires drilling into system details
 - The slowest link between two devices is likely the bottleneck holding up throughput for all other networks
 
-#sub-heading("Bottleneck Example")
+#callout("Example")[
+  *Bottleneck*
 
-- Web transaction response times around 1,500–1,750 ms (almost 2 seconds of delay)
-- Database was consuming most of the time
-- Configuration changes to the database server eliminated the bottleneck
-- Response times dropped to around 500 ms
+  - Web transaction response times around 1,500–1,750 ms (almost 2 seconds of delay)
+  - Database was consuming most of the time
+  - Configuration changes to the database server eliminated the bottleneck
+  - Response times dropped to around 500 ms
+]
+
 
 #section-heading("Bandwidth and Throughput")
 

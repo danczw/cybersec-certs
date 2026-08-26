@@ -59,13 +59,16 @@
 )
 
 
-#sub-heading("Lease Timeline Example (8-day lease)")
+#callout("Example")[
+  *Lease Timeline (8-day lease)*
 
-+ Day 0–4: Normal operation, no renewal needed
-+ Day 4 (T1): Renewal period begins — device contacts original DHCP server
-   - If successful: lease resets, timer restarts
-+ Day 7 (T2): Rebinding period — if original server unavailable, device contacts any DHCP server
-   - If successful: lease resets with new server
+  1. Day 0–4: Normal operation, no renewal needed
+  2. Day 4 (T1): Renewal period begins — device contacts original DHCP server
+     - If successful: lease resets, timer restarts
+  3. Day 7 (T2): Rebinding period — if original server unavailable, device contacts any DHCP server
+     - If successful: lease resets with new server
+]
+
 
 #section-heading("DHCP Options")
 

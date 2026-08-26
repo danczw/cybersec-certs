@@ -60,9 +60,10 @@ Translates both the IP address AND the port number — allows many devices to sh
 + Another device (e.g., 10.10.20.70:5782) gets the same public IP but a different port (94.1.1.1:1056)
 + Many internal devices share one public IP — differentiated by port number
 
-#sub-heading("NAT Table Example")
+#callout("Example")[
+  *NAT Table*
 
-#table(
+  #table(
   columns: 2,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -75,6 +76,8 @@ Translates both the IP address AND the port number — allows many devices to sh
 )
 
 
-Port numbers increment for each new session — same public IP, different port.
+  Port numbers increment for each new session — same public IP, different port.
+
+]
 
 ]

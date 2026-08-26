@@ -30,15 +30,18 @@
 - Builds a map of IP addresses, operating systems, and services on the network
 - Useful for finding rogue devices — can perform Layer 2 scans on the same subnet, making it difficult for rogue devices to hide
 
-#sub-heading("nmap Example")
+#callout("Example")[
+  *nmap scan of 10.1.10.222* — host up with open ports:
 
-- Scan of 10.1.10.222 found host up with open ports:
   - Port 22 — SSH
   - Port 80 — HTTP
   - Port 443 — HTTPS
   - Port 548 — AFP (Apple Filing Protocol)
   - Port 2049 — NFS
-- Unexpected open ports require additional research to identify running services
+
+  Unexpected open ports require additional research to identify running services.
+]
+
 
 #section-heading("Device Discovery (CDP and LLDP)")
 

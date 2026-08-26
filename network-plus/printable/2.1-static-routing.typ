@@ -45,23 +45,26 @@ Manually configuring routes in every router's routing table.
 #section-heading("Static Route Configuration Example")
 
 
-Network: three routers, each with local subnets
+#callout("Example")[
+  Network: three routers, each with local subnets
 
-- Router 1 directly connected: 10.10.10.0/24, 10.10.40.0/24, 10.10.50.0/24
-- Router 2 directly connected: 10.10.20.0/24 (Jack's network)
-- Router 3 directly connected: 10.10.30.0/24
+  - Router 1 directly connected: 10.10.10.0/24, 10.10.40.0/24, 10.10.50.0/24
+  - Router 2 directly connected: 10.10.20.0/24 (Jack's network)
+  - Router 3 directly connected: 10.10.30.0/24
 
-Router 1 has no knowledge of 10.10.20.0/24 or 10.10.30.0/24 without static routes.
+  Router 1 has no knowledge of 10.10.20.0/24 or 10.10.30.0/24 without static routes.
 
-#sub-heading("Adding Static Routes to Router 1")
+  *Adding Static Routes to Router 1*
 
-```
-ip route 10.10.20.0/24 10.10.40.2
-ip route 10.10.30.0/24 10.10.50.2
-```
+  ```
+  ip route 10.10.20.0/24 10.10.40.2
+  ip route 10.10.30.0/24 10.10.50.2
+  ```
 
-- 10.10.20.0/24 → next hop 10.10.40.2 (router 2)
-- 10.10.30.0/24 → next hop 10.10.50.2 (router 3)
+  - 10.10.20.0/24 → next hop 10.10.40.2 (router 2)
+  - 10.10.30.0/24 → next hop 10.10.50.2 (router 3)
+]
+
 
 #section-heading("Key Terms")
 

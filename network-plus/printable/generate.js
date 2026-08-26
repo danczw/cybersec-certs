@@ -56,8 +56,12 @@ function convertInline(text) {
   });
   // Escape all remaining asterisks
   text = text.replace(/\*/g, '\\*');
-  // Restore bold as Typst *bold*
-  text = text.replace(/%%BOLD(\d+)%%/g, (_, i) => `*${bolds[i]}*`);
+  // Restore bold as Typst *bold* (use #strong[] if content starts with / to avoid */ block comment)
+  text = text.replace(/%%BOLD(\d+)%%/g, (_, i) => {
+    const b = bolds[i];
+    if (b.startsWith('/')) return `#strong[${b}]`;
+    return `*${b}*`;
+  });
   // Links (strip, keep text)
   text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
   // Restore inline code
@@ -87,8 +91,8 @@ function convertTable(lines) {
   return out;
 }
 
-function convertCallout(lines) {
-  let out = '#callout("Supplementary")[\n';
+function convertCallout(lines, title) {
+  let out = `#callout("${title}")[\n`;
   let inTable = false;
   let tableLines = [];
 
@@ -168,15 +172,18 @@ function convertMarkdown(content, fm) {
     }
 
     // Callout block
-    if (line.match(/^>\s*\[!NOTE\]\s*Supplementary/i)) {
+    const calloutMatch = line.match(/^>\s*\[!NOTE\]\s*(Supplementary|Example)/i);
+    if (calloutMatch) {
+      const calloutTitle = calloutMatch[1];
       const calloutLines = [];
       i++;
       while (i < lines.length && (lines[i].startsWith('>') || lines[i].trim() === '')) {
         if (lines[i].trim() === '' && i + 1 < lines.length && !lines[i + 1].startsWith('>')) break;
+        if (lines[i].match(/^>\s*\[!NOTE\]/i)) break;
         calloutLines.push(lines[i]);
         i++;
       }
-      out += convertCallout(calloutLines) + '\n';
+      out += convertCallout(calloutLines, calloutTitle) + '\n';
       continue;
     }
 
@@ -267,6 +274,8 @@ function generateAllNotes(basenames) {
   typ += `      #v(1mm)\n`;
   typ += `      #text(size: 7pt, fill: luma(150))[#note-title.get()]\n`;
   typ += `      #h(1fr)\n`;
+  typ += `      #text(size: 7pt, fill: luma(150))[professormesser.com]\n`;
+  typ += `      #h(1fr)\n`;
   typ += `      #text(size: 9pt, fill: luma(120))[#counter(page).display()]\n`;
   typ += `    ]\n`;
   typ += `  },\n`;
@@ -295,6 +304,8 @@ function generateAllNotes(basenames) {
   typ += `  ]\n`;
   typ += `  #v(10mm)\n`;
   typ += `  #text(size: 10pt, fill: luma(120))[Based on Professor Messer video series]\n`;
+  typ += `  #v(3mm)\n`;
+  typ += `  #text(size: 9pt, fill: luma(150))[professormesser.com]\n`;
   typ += `]\n\n`;
 
   for (const name of basenames) {

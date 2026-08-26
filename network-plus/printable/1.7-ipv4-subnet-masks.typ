@@ -64,29 +64,44 @@
 #section-heading("Conversion Examples")
 
 
-#sub-heading("/12 = 255.240.0.0")
+#callout("Example")[
+  #strong[/12 = 255.240.0.0]
 
-- Binary: 11111111.11110000.00000000.00000000
-- Network bits: 12 | Host bits: 20
+  - Binary: 11111111.11110000.00000000.00000000
+  - Network bits: 12 | Host bits: 20
 
-#sub-heading("/16 = 255.255.0.0")
+]
 
-- Binary: 11111111.11111111.00000000.00000000
-- Network bits: 16 | Host bits: 16
+#callout("Example")[
+  #strong[/16 = 255.255.0.0]
 
-#sub-heading("/19 = 255.255.224.0")
+  - Binary: 11111111.11111111.00000000.00000000
+  - Network bits: 16 | Host bits: 16
 
-- Binary: 11111111.11111111.11100000.00000000
-- Network bits: 19 | Host bits: 13
+]
 
-#sub-heading("/20 = 255.255.240.0")
+#callout("Example")[
+  #strong[/19 = 255.255.224.0]
 
-- Binary: 11111111.11111111.11110000.00000000
-- Network bits: 20 | Host bits: 12
+  - Binary: 11111111.11111111.11100000.00000000
+  - Network bits: 19 | Host bits: 13
 
-#sub-heading("/26 = 255.255.255.192")
+]
 
-- Binary: 11111111.11111111.11111111.11000000
-- Network bits: 26 | Host bits: 6
+#callout("Example")[
+  #strong[/20 = 255.255.240.0]
+
+  - Binary: 11111111.11111111.11110000.00000000
+  - Network bits: 20 | Host bits: 12
+
+]
+
+#callout("Example")[
+  #strong[/26 = 255.255.255.192]
+
+  - Binary: 11111111.11111111.11111111.11000000
+  - Network bits: 26 | Host bits: 6
+
+]
 
 ]

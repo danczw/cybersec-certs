@@ -29,9 +29,10 @@
 - More general rules placed lower
 - *Implicit deny* — if no rule matches, traffic is automatically denied (no explicit rule needed)
 
-#sub-heading("Example Rule Set")
+#callout("Example")[
+  *Rule Set*
 
-#table(
+  #table(
   columns: 6,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -52,6 +53,8 @@
   [7],   [All],   [Any],   [Any],   [ICMP],   [Deny],
 )
 
+
+]
 
 #callout("Supplementary")[
   Rules 1–4 are *incoming* (allowing outside devices to connect to local services). Rules 5–6 are *outgoing* (allowing this server to make DNS/NTP requests). Rule 7 is *incoming* (denying inbound ICMP/ping).

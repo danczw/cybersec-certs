@@ -30,12 +30,15 @@
 - If channels are manually configured, verify they don't conflict with new access points that have appeared
 - Consider enabling automatic channel selection so the access point can move to a better channel when available
 
-#sub-heading("Channel Overlap Example (2.4 GHz)")
+#callout("Example")[
+  *Channel Overlap (2.4 GHz)*
 
-- Non-overlapping channels in the US: 1, 6, 11
-- Configuring an access point on channel 8 would overlap with both channel 6 and channel 11
-- None of the overlapping devices would have best throughput
-- Better to distribute frequencies so they don't interfere (use channels 1, 6, 11)
+  - Non-overlapping channels in the US: 1, 6, 11
+  - Configuring an access point on channel 8 would overlap with both channel 6 and channel 11
+  - None of the overlapping devices would have best throughput
+  - Better to distribute frequencies so they don't interfere (use channels 1, 6, 11)
+]
+
 
 #section-heading("Managing Interference")
 
