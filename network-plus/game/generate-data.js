@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const FLASH_DIR = path.join(__dirname, '..', 'flashcards');
-const ABBREV_FILE = path.join(__dirname, '..', '..', 'abbreviations.md');
+const ABBREV_FILE = path.join(__dirname, '..', 'abbreviations.md');
 const OVERRIDES_FILE = path.join(__dirname, 'distractor-overrides.json');
 const OUTPUT = path.join(__dirname, 'js', 'data.js');
 
