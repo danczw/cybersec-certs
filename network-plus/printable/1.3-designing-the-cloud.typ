@@ -22,8 +22,10 @@
 - Replaces physical routers, switches, firewalls with virtual versions
 - Same functionality as physical devices — visible from hypervisor
 
-  > [!NOTE] Supplementary
-  > Hypervisor: software that creates/runs VMs on physical hardware, allocating CPU, memory, storage, and networking to each VM.
+#callout("Supplementary")[
+  Hypervisor: software that creates/runs VMs on physical hardware, allocating CPU, memory, storage, and networking to each VM.
+]
+
 
 - Deploy new firewall, switch, or router config with a button click
 - Flexibility for designing network connectivity and connecting cloud infrastructures globally
@@ -69,32 +71,34 @@
 - Used when organizations use multiple cloud providers but need connectivity between them
 - Enables private subnet access without traversing the public internet
 
-  > [!NOTE] Supplementary
-  > ```
-  > ┌─── Cloud Provider A ────────────────────────────┐
-  > │                                                 │
-  > │  ┌─── VPC ────────────────────────────────────┐ │
-  > │  │                                            │ │
-  > │  │  ┌─ Public Subnet ─┐  ┌─ Private Subnet ─┐ │ │
-  > │  │  │ [Public App VM] │  │  [Private VM]    │ │ │ 
-  > │  │  └────────▲────────┘  └─────────▲────────┘ │ │
-  > │  └───────────┼─────────────────────┼──────────┘ │
-  > │   ┌──────────┴───────┐  ┌──────────┴─────────┐  │
-  > │   │ Internet Gateway │  │    VPC Endpoint    │  │
-  > │   └──────────▲───────┘  └──────────▲─────────┘  │
-  > └──────────────┼─────────────────────┼────────────┘
-  >                │                     │ (direct)
-  >           ┌────┴─────┐               │
-  >           │ Internet │               │
-  >           └────┬─────┘               │
-  > ┌──────────────┼─────────────────────┼───────────┐
-  > │              ▼                     ▼           │
-  > │         [        Cloud Storage       ]         │
-  > └─── Cloud Provider B ───────────────────────────┘
-  > ```
-  >
-  > Public subnet: internet → internet gateway → public app.
-  > Private subnet: VPC endpoint provides direct private connection, bypassing internet.
+#callout("Supplementary")[
+  ```
+  ┌─── Cloud Provider A ────────────────────────────┐
+  │                                                 │
+  │  ┌─── VPC ────────────────────────────────────┐ │
+  │  │                                            │ │
+  │  │  ┌─ Public Subnet ─┐  ┌─ Private Subnet ─┐ │ │
+  │  │  │ [Public App VM] │  │  [Private VM]    │ │ │
+  │  │  └────────▲────────┘  └─────────▲────────┘ │ │
+  │  └───────────┼─────────────────────┼──────────┘ │
+  │   ┌──────────┴───────┐  ┌──────────┴─────────┐  │
+  │   │ Internet Gateway │  │    VPC Endpoint    │  │
+  │   └──────────▲───────┘  └──────────▲─────────┘  │
+  └──────────────┼─────────────────────┼────────────┘
+                 │                     │ (direct)
+            ┌────┴─────┐               │
+            │ Internet │               │
+            └────┬─────┘               │
+  ┌──────────────┼─────────────────────┼───────────┐
+  │              ▼                     ▼           │
+  │         [        Cloud Storage       ]         │
+  └─── Cloud Provider B ───────────────────────────┘
+  ```
+
+  Public subnet: internet → internet gateway → public app.
+  Private subnet: VPC endpoint provides direct private connection, bypassing internet.
+]
+
 
 #section-heading("Network Security Lists")
 

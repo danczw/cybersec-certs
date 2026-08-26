@@ -51,7 +51,7 @@
 #let section-heading(title) = {
   v(5mm, weak: true)
   block(below: 2mm, sticky: true)[
-    #text(size: 10.5pt, weight: "bold", fill: heading-color)[• #title]
+    #text(size: 10.5pt, weight: "bold", fill: heading-color)[#title]
     #v(0.5mm)
     #line(length: 100%, stroke: 0.5pt + accent-light)
   ]

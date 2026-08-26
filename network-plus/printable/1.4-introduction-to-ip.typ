@@ -14,25 +14,27 @@
   - Ethernet Header → IP Header → TCP/UDP Header → Application Data → Ethernet Trailer
 - Analogy: network = road, IP = truck, TCP/UDP = boxes, application data = items in boxes
 
-  > [!NOTE] Supplementary
-  > ```
-  > Client                                                     Server
-  >
-  > ┌──────────┬────────────────────────────────────┬──────────┐
-  > │ Ethernet │         Ethernet Payload           │ Ethernet │
-  > │ Header   │                                    │ Trailer  │
-  > ├──────────┼─────┬──────────────────────────────┼──────────┤
-  > │ Ethernet │ IP  │         IP Payload           │ Ethernet │
-  > │ Header   │     │                              │ Trailer  │
-  > ├──────────┼─────┼─────┬────────────────────────┼──────────┤
-  > │ Ethernet │ IP  │ TCP │      TCP Payload       │ Ethernet │
-  > │ Header   │     │     │                        │ Trailer  │
-  > ├──────────┼─────┼─────┼────────────────────────┼──────────┤
-  > │ Ethernet │ IP  │ TCP │      HTTP data         │ Ethernet │
-  > │ Header   │     │     │                        │ Trailer  │
-  > └──────────┴─────┴─────┴────────────────────────┴──────────┘
-  > ```
-  > Each layer peels back to reveal the next level of encapsulation.
+#callout("Supplementary")[
+  ```
+  Client                                                     Server
+  
+  ┌──────────┬────────────────────────────────────┬──────────┐
+  │ Ethernet │         Ethernet Payload           │ Ethernet │
+  │ Header   │                                    │ Trailer  │
+  ├──────────┼─────┬──────────────────────────────┼──────────┤
+  │ Ethernet │ IP  │         IP Payload           │ Ethernet │
+  │ Header   │     │                              │ Trailer  │
+  ├──────────┼─────┼─────┬────────────────────────┼──────────┤
+  │ Ethernet │ IP  │ TCP │      TCP Payload       │ Ethernet │
+  │ Header   │     │     │                        │ Trailer  │
+  ├──────────┼─────┼─────┼────────────────────────┼──────────┤
+  │ Ethernet │ IP  │ TCP │      HTTP data         │ Ethernet │
+  │ Header   │     │     │                        │ Trailer  │
+  └──────────┴─────┴─────┴────────────────────────┴──────────┘
+  ```
+  Each layer peels back to reveal the next level of encapsulation.
+]
+
 
 #section-heading("TCP (Transmission Control Protocol)")
 
@@ -44,8 +46,10 @@
 - *Flow control* — receiver tells sender to speed up or slow down
 - *Error recovery* — can retransmit lost portions
 
-  > [!NOTE] Supplementary
-  > TCP establishes a "connection" (L4), not a "session" in the strict OSI sense. Sessions (L5) handle higher-level dialog management and checkpointing. The three-way handshake synchronizes sequence numbers at the transport layer.
+#callout("Supplementary")[
+  TCP establishes a "connection" (L4), not a "session" in the strict OSI sense. Sessions (L5) handle higher-level dialog management and checkpointing. The three-way handshake synchronizes sequence numbers at the transport layer.
+]
+
 
 #section-heading("UDP (User Datagram Protocol)")
 
@@ -85,8 +89,10 @@
 - TCP/UDP port number = which room (application) within the house
 - *Socket* = IP address + protocol (TCP/UDP) + port number
 
-  > [!NOTE] Supplementary
-  > A connection is uniquely identified by a *5-tuple*: source IP, source port, destination IP, destination port, and protocol. This is how a server handles thousands of clients on the same port — each connection differs by at least one element.
+#callout("Supplementary")[
+  A connection is uniquely identified by a *5-tuple*: source IP, source port, destination IP, destination port, and protocol. This is how a server handles thousands of clients on the same port — each connection differs by at least one element.
+]
+
 
 #section-heading("Port Numbers")
 

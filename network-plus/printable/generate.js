@@ -95,9 +95,25 @@ function convertCallout(lines, title) {
   let out = `#callout("${title}")[\n`;
   let inTable = false;
   let tableLines = [];
+  let inCode = false;
 
   for (const rawLine of lines) {
     const line = rawLine.replace(/^>\s?/, '');
+
+    if (line.trim().startsWith('```')) {
+      if (!inCode) {
+        inCode = true;
+        out += '  ```\n';
+      } else {
+        inCode = false;
+        out += '  ```\n';
+      }
+      continue;
+    }
+    if (inCode) {
+      out += `  ${line}\n`;
+      continue;
+    }
 
     if (line.startsWith('|') && line.endsWith('|')) {
       inTable = true;

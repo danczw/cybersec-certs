@@ -50,7 +50,7 @@
 
   ```
   Legend: [RP] Root Port   [DP] Designated Port   [BP] Blocked Port
-
+  
               Bridge 1 (Root)
              [DP]         [DP]
                |            |
