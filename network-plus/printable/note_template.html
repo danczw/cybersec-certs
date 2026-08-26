@@ -19,26 +19,24 @@
     background: #fff;
   }
 
-  /* ─── Page structure (A4: 210×297mm, margins: 12mm top/bottom, 14mm sides) ─── */
-  .page {
-    width: 182mm;
-    height: 273mm;
-    padding: 0;
-    overflow: hidden;
-    page-break-after: always;
-    position: relative;
-  }
-  .page:last-child { page-break-after: avoid; }
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
 
   /* ─── Header banner ─── */
   .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--header-bg);
     color: #fff;
     padding: 5mm 6mm;
     border-radius: 3mm;
     margin-bottom: 5mm;
     position: relative;
     overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
   }
   .header::after {
     content: '';
@@ -67,24 +65,10 @@
     padding: 0.5mm 2mm;
     border-radius: 2mm;
   }
-
-  /* ─── Domain color system ─── */
-  .domain-1 .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-  .domain-2 .header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-  .domain-3 .header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-  .domain-4 .header { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-  .domain-5 .header { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
   .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
   .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
 
-  /* Accent colors per domain (used for borders, highlights) */
-  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; }
-  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; }
-  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; }
-  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; }
-  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; }
-
-  /* ─── Content sections ─── */
+  /* ─── Content (two-column by default) ─── */
   .content {
     columns: 2;
     column-gap: 5mm;
@@ -94,6 +78,7 @@
     columns: 1;
   }
 
+  /* ─── Headings ─── */
   h2 {
     font-size: 10.5pt;
     font-weight: 700;
@@ -105,6 +90,10 @@
     column-span: all;
   }
   h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
 
   h3 {
     font-size: 9.5pt;
@@ -211,7 +200,7 @@
     letter-spacing: 0.3pt;
     margin-bottom: 1mm;
   }
-  .callout p, .callout ul {
+  .callout p, .callout ul, .callout table {
     font-size: 8.5pt;
   }
 
@@ -221,7 +210,7 @@
     font-weight: 600;
   }
 
-  /* ─── Comparison boxes (side by side) ─── */
+  /* ─── Comparison boxes ─── */
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -314,7 +303,7 @@
 
   /* ─── Footer ─── */
   .footer {
-    margin-top: auto;
+    margin-top: 5mm;
     padding-top: 3mm;
     border-top: 0.3pt solid #e0e0e0;
     font-size: 7pt;
@@ -326,43 +315,62 @@
   /* ─── Print overrides ─── */
   @media print {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .page { margin: 0; }
   }
 
   /* ─── Screen preview ─── */
   @media screen {
-    body { background: #f0f0f5; padding: 10mm; }
-    .page {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
       background: #fff;
-      width: 210mm;
-      height: 297mm;
       padding: 12mm 14mm;
-      margin: 0 auto 10mm auto;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       border-radius: 2mm;
-      overflow: hidden;
     }
   }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     TEMPLATE USAGE:
+<!--
+  TEMPLATE: Flowing CSS paged media layout.
+  Content flows naturally; browser handles page breaks at print time.
+  No fixed-height page containers — no cutoff, no manual pagination.
 
-     1. Set class on .page to domain-1 through domain-5
-     2. Replace {{PLACEHOLDERS}} with content from your .md file
-     3. Use the component patterns below as building blocks
+  Generate with: node generate.js <note.md> [output.html]
 
-     YAML frontmatter mapping:
-       domain  → header-meta "DOMAIN X.X"
-       topic   → header h1
-       objective → header-meta "OBJ X.X"
-     ═══════════════════════════════════════════════════════════════ -->
+  YAML frontmatter mapping:
+    domain    → domain-N class on .document
+    topic     → header h1
+    objective → header-meta "OBJ X.X"
+    source    → footer hostname
 
-<div class="page domain-1">
+  GENERATED COMPONENTS (produced by generate.js):
+    .header          — banner with title + meta
+    h2               — section heading (spans both columns)
+    .subsection      — wraps each h3 + its content (break-inside: avoid)
+    h3, h4           — subsection headings
+    ul               — bullet lists (from - items)
+    ol.steps         — numbered lists (from 1. items)
+    table            — data tables (from | pipes)
+    .callout         — from > [!NOTE] blocks
+    pre              — from ``` fenced code blocks
+    code             — inline `backticks`
+    strong, em       — from **bold** and *italic*
 
-  <!-- HEADER: always one per page -->
+  MANUAL-ONLY COMPONENTS (available in CSS, not auto-generated):
+    .mnemonic        — memory aid highlight box
+    .compare-grid    — side-by-side comparison boxes
+    .quick-ref       — dark strip with key values
+    .key-term        — inline highlighted term span
+-->
+
+<div class="document domain-1">
+
   <div class="header">
     <h1>{{TOPIC}}</h1>
     <div class="header-meta">
@@ -372,83 +380,51 @@
     </div>
   </div>
 
-  <!-- CONTENT: use class="content" for 2-col, "content single-col" for 1-col -->
   <div class="content">
 
-    <!-- ═══ SECTION HEADING ═══ -->
     <h2>Section Title</h2>
 
-    <!-- ═══ BULLET POINTS (standard notes) ═══ -->
-    <h3>Subsection</h3>
-    <ul>
-      <li>First point — concise fact</li>
-      <li>Second point with <code>inline code</code> for commands/values</li>
-      <li>Third point with <span class="key-term">key term</span> highlighted</li>
-    </ul>
+    <div class="subsection">
+      <h3>Subsection</h3>
+      <ul>
+        <li>First point — concise fact</li>
+        <li>Second point with <code>inline code</code> for commands/values</li>
+        <li>Third point with <strong>bold term</strong> explanation</li>
+      </ul>
 
-    <!-- ═══ TABLE ═══ -->
-    <table>
-      <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
-      <tr><td>Data</td><td>Data</td><td>Data</td></tr>
-      <tr><td>Data</td><td>Data</td><td>Data</td></tr>
-    </table>
+      <table>
+        <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
+        <tr><td>Data</td><td>Data</td><td>Data</td></tr>
+        <tr><td>Data</td><td>Data</td><td>Data</td></tr>
+      </table>
 
-    <!-- ═══ CALLOUT (from > [!NOTE] Supplementary blocks) ═══ -->
-    <div class="callout">
-      <div class="callout-title">Supplementary</div>
-      <p>Additional context or exam tip goes here. Connects the concept to real-world application.</p>
-    </div>
-
-    <!-- ═══ NUMBERED STEPS (for processes like DORA, ARP resolution) ═══ -->
-    <h3>Process Name</h3>
-    <ol class="steps">
-      <li>First step in the process</li>
-      <li>Second step — what happens next</li>
-      <li>Third step — resolution</li>
-      <li>Final step — result</li>
-    </ol>
-
-    <!-- ═══ MNEMONIC / MEMORY AID ═══ -->
-    <div class="mnemonic">Please Do Not Throw Sausage Pizza Away</div>
-
-    <!-- ═══ COMPARISON (for TCP vs UDP, etc.) ═══ -->
-    <div class="compare-grid">
-      <div class="compare-box">
-        <h4>TCP</h4>
-        <ul>
-          <li>Connection-oriented</li>
-          <li>Guaranteed delivery</li>
-          <li>Slower</li>
-        </ul>
-      </div>
-      <div class="compare-box">
-        <h4>UDP</h4>
-        <ul>
-          <li>Connectionless</li>
-          <li>Best-effort</li>
-          <li>Faster</li>
-        </ul>
+      <div class="callout">
+        <div class="callout-title">Supplementary</div>
+        <p><strong>Key term</strong> — definition or explanation.</p>
+        <table>
+          <tr><th>Header</th><th>Header</th></tr>
+          <tr><td>Cell</td><td>Cell</td></tr>
+        </table>
+        <p>Callouts can contain tables, lists, and multiple paragraphs.</p>
       </div>
     </div>
 
-    <!-- ═══ QUICK-REFERENCE STRIP (ports, commands, values) ═══ -->
-    <div class="quick-ref">
-      <div class="quick-ref-item"><strong>22</strong> SSH</div>
-      <div class="quick-ref-item"><strong>53</strong> DNS</div>
-      <div class="quick-ref-item"><strong>80</strong> HTTP</div>
-      <div class="quick-ref-item"><strong>443</strong> HTTPS</div>
-    </div>
+    <div class="subsection">
+      <h3>Process Name</h3>
+      <ol class="steps">
+        <li><strong>Step one</strong> — description</li>
+        <li><strong>Step two</strong> — description</li>
+        <li><strong>Step three</strong> — description</li>
+      </ol>
 
-    <!-- ═══ CODE BLOCK (for CLI output, configs) ═══ -->
-    <pre>C:\> ping 192.168.1.1
+      <pre>C:\&gt; ping 192.168.1.1
 Reply from 192.168.1.1: bytes=32 time&lt;1ms TTL=64</pre>
+    </div>
 
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <span>Source: professormesser.com</span>
-    <span>Page 1</span>
   </div>
 
 </div>
