@@ -46,6 +46,7 @@
 #section-heading("Cloud Responsibility Matrix")
 
 
+#block(breakable: false)[
 #table(
   columns: 5,
   stroke: none,
@@ -68,6 +69,7 @@
   [Physical Network],   [Provider],   [Provider],   [Provider],   [Customer],
   [Physical Datacenter],   [Provider],   [Provider],   [Provider],   [Customer],
 )
+]
 
 
 Key takeaway: the more "as a service" you use, the less responsibility you take on — but also less control.

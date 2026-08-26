@@ -45,6 +45,7 @@
 #section-heading("Wireless Security Modes")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -60,6 +61,7 @@
   [Personal (PSK)],   [Pre-shared key — everyone uses the same password],
   [Enterprise (802.1X)],   [Individual username/password; disabling account removes access],
 )
+]
 
 
 - PSK example: coffee shop posts the shared password for all customers
@@ -84,6 +86,7 @@
 
 #sub-heading("Directional Antenna Types")
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -95,6 +98,7 @@
   [Yagi],   [Very directional, high gain],
   [Parabolic],   [Focuses signals into a single feed horn; useful over long distances],
 )
+]
 
 
 #section-heading("Access Point Management")

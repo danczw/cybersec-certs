@@ -17,6 +17,7 @@
 #section-heading("Electrical Terms")
 
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -31,6 +32,7 @@
   [Voltage],   [V (volt)],   [Pressure of electricity flowing through a wire],   [Water pressure],
   [Watt],   [W],   [Power being used — calculated as volts × amps],   [Total water flow],
 )
+]
 
 
 - Example: 120V × 0.5A = 60W
@@ -62,6 +64,7 @@
 
 #sub-heading("UPS Types")
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -74,6 +77,7 @@
   [Line-Interactive],   [Compensates for brownouts by increasing power when voltage drops],
   [Online/Double-Conversion],   [Always runs from battery; losing power has no effect on systems],
 )
+]
 
 
 #sub-heading("UPS Features")

@@ -40,6 +40,7 @@ Solution: a trunk — a single physical connection that carries traffic for all 
 Normal ethernet frame:
 
 ```
+#block(breakable: false)[
 #table(
   columns: 7,
   stroke: none,
@@ -54,12 +55,14 @@ Normal ethernet frame:
     text(fill: white, weight: "bold")[FCS],
   ),
 )
+]
 
 ```
 
 802.1Q tagged frame (VLAN tag inserted after Source MAC):
 
 ```
+#block(breakable: false)[
 #table(
   columns: 8,
   stroke: none,
@@ -75,6 +78,7 @@ Normal ethernet frame:
     text(fill: white, weight: "bold")[FCS],
   ),
 )
+]
 
 ```
 

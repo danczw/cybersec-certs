@@ -12,6 +12,7 @@
 - IEEE 802.11 committee creates worldwide standards for wireless networking
 - Standards have marketing-friendly names:
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -24,6 +25,7 @@
   [802.11ax],   [Wi-Fi 6/6E],
   [802.11be],   [Wi-Fi 7],
 )
+]
 
 
 - Future major releases will increment the Wi-Fi number (Wi-Fi 8, 9, etc.)
@@ -44,6 +46,7 @@
 
 #sub-heading("Frequency Comparison")
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -57,6 +60,7 @@
   [5 GHz],   [Many more],   [20–160 MHz],
   [6 GHz],   [Even more],   [20–160 MHz],
 )
+]
 
 
 - More available channels = less conflict with nearby networks

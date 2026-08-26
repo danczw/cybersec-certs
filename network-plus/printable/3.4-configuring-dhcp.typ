@@ -45,6 +45,7 @@
 
 #sub-heading("Lease Renewal Timers")
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -57,6 +58,7 @@
   [T1],   [50% of lease time],   [Device attempts to renew with the original DHCP server],
   [T2],   [87.5% (7/8) of lease time],   [Device attempts to renew with any available DHCP server],
 )
+]
 
 
 #callout("Example")[

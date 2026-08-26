@@ -79,7 +79,7 @@ function convertTable(lines) {
   if (rows.length === 0) return '';
 
   const cols = rows[0].length;
-  let out = `#table(\n  columns: ${cols},\n  stroke: none,\n`;
+  let out = `#block(breakable: false)[\n#table(\n  columns: ${cols},\n  stroke: none,\n`;
   out += `  fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },\n`;
   out += `  table.header(\n`;
   out += rows[0].map(h => `    text(fill: white, weight: "bold")[${convertInline(h)}]`).join(',\n') + ',\n';
@@ -87,7 +87,7 @@ function convertTable(lines) {
   for (let i = 1; i < rows.length; i++) {
     out += rows[i].map(c => `  [${convertInline(c)}]`).join(', ') + ',\n';
   }
-  out += `)\n`;
+  out += `)\n]\n`;
   return out;
 }
 

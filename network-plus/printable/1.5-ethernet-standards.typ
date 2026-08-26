@@ -20,7 +20,8 @@
 #callout("Example")[
   `1000BASE-T`
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 2,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -32,6 +33,7 @@
   [BASE],   [Baseband signaling (single frequency)],
   [T],   [Media type (T = twisted-pair, F/SX = fiber)],
 )
+]
 
 ]
 
@@ -43,6 +45,7 @@
 #section-heading("Common Standards")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -56,6 +59,7 @@
   [10GBASE-T],   [10 Gbps],   [Twisted-pair copper],
   [1000BASE-SX],   [1 Gbps],   [Fiber optic (short wavelength)],
 )
+]
 
 
 #section-heading("Key Points")

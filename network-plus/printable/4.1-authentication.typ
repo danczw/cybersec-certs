@@ -52,6 +52,7 @@
 
 - Attributes provide hierarchical context for objects
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -69,6 +70,7 @@
   [C],   [Country],   [The country's 2-character ISO code (e.g., c=US or c=GB)],
   [DC],   [Domain Component],   [Components of the object's domain],
 )
+]
 
 
 - Example for a web server named WIDGETWEB:

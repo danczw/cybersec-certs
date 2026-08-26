@@ -64,6 +64,7 @@
 #section-heading("TCP vs UDP Summary")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -80,6 +81,7 @@
   [Flow control],   [Yes],   [No],
   [OSI layer],   [4 (Transport)],   [4 (Transport)],
 )
+]
 
 
 #section-heading("IP Addressing and Ports")

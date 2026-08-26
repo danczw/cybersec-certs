@@ -11,6 +11,7 @@
 
 Given 192.168.1.0/24, find optimal subnet mask for 40 devices per subnet:
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -26,6 +27,7 @@ Given 192.168.1.0/24, find optimal subnet mask for 40 devices per subnet:
   [255.255.255.192],   [/26],   [4],   [62],
   [255.255.255.224],   [/27],   [8],   [30],
 )
+]
 
 
 Answer: /26 — smallest mask that still supports 40+ hosts per subnet.
@@ -54,6 +56,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 #section-heading("CIDR-to-Interesting-Octet Reference")
 
 
+#block(breakable: false)[
 #table(
   columns: 9,
   stroke: none,
@@ -75,6 +78,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   [Magic number],   [128],   [64],   [32],   [16],   [8],   [4],   [2],   [1],
   [Subnet mask],   [128],   [192],   [224],   [240],   [248],   [252],   [254],   [255],
 )
+]
 
 
 /31 and /32 are not included — /31 leaves no room for hosts, /32 leaves 0 host bits.
@@ -96,7 +100,8 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 #callout("Example")[
   *165.245.77.14 / 255.255.240.0*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -112,6 +117,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   [3],   [240],   [77],   [64],   [79],
   [4],   [0],   [14],   [0],   [255],
 )
+]
 
 
   - Interesting octet: 3 (mask = 240)
@@ -128,7 +134,8 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 #callout("Example")[
   *10.180.122.244 / 255.248.0.0*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -144,6 +151,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   [3],   [0],   [122],   [0],   [255],
   [4],   [0],   [244],   [0],   [255],
 )
+]
 
 
   - Interesting octet: 2 (mask = 248)
@@ -160,7 +168,8 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 #callout("Example")[
   *172.16.242.133/27*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 5,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -176,6 +185,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   [3],   [255],   [242],   [242],   [242],
   [4],   [224],   [133],   [128],   [159],
 )
+]
 
 
   - Interesting octet: 4 (mask = 224, /27)

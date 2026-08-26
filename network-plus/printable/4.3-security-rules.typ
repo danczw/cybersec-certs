@@ -32,7 +32,8 @@
 #callout("Example")[
   *Rule Set*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 6,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -52,6 +53,7 @@
   [6],   [All],   [123 (NTP)],   [Any],   [UDP],   [Allow],
   [7],   [All],   [Any],   [Any],   [ICMP],   [Deny],
 )
+]
 
 
 ]

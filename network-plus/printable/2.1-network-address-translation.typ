@@ -18,6 +18,7 @@
 
 Not routable on the public internet; used internally in homes and businesses.
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -30,6 +31,7 @@ Not routable on the public internet; used internally in homes and businesses.
   [172.16.0.0 – 172.31.255.255],   [Mid-size networks],
   [192.168.0.0 – 192.168.255.255],   [Home networks],
 )
+]
 
 
 #section-heading("How NAT Works (Standard)")
@@ -63,7 +65,8 @@ Translates both the IP address AND the port number — allows many devices to sh
 #callout("Example")[
   *NAT Table*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 2,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -74,6 +77,7 @@ Translates both the IP address AND the port number — allows many devices to sh
   [10.10.20.50:3233],   [94.1.1.1:1055],
   [10.10.20.70:5782],   [94.1.1.1:1056],
 )
+]
 
 
   Port numbers increment for each new session — same public IP, different port.

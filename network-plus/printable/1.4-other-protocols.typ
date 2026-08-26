@@ -44,6 +44,7 @@
 
 #sub-heading("IPSec Protocols")
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -56,6 +57,7 @@
   [AH],   [Authentication Header],   [Integrity/authentication only, no encryption (data sent in clear with hashing)],
   [ESP],   [Encapsulation Security Payload],   [Encrypts data AND provides authentication],
 )
+]
 
 
 *AH — IP Packet with Authentication (tunnel mode):*
@@ -130,7 +132,8 @@
 #callout("Supplementary")[
   *IPSec Protocol × Mode Matrix* — any combination is valid:
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 3,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -142,6 +145,7 @@
   [*AH*],   [Authenticates payload + most of original IP header],   [Authenticates entire original packet (new IP header wraps it)],
   [*ESP*],   [Encrypts/authenticates payload only; original IP header exposed],   [Encrypts/authenticates entire original packet; new IP header wraps it],
 )
+]
 
 
   - *Mode* = what gets protected (transport = payload only, tunnel = entire original packet)

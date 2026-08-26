@@ -72,6 +72,7 @@
 #section-heading("Summary")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -84,8 +85,10 @@
   [Three-tier],   [Core, Distribution, Access],   [Large enterprise / campus],
   [Collapsed core],   [Core+Dist combined, Access],   [Smaller organizations],
 )
+]
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -98,6 +101,7 @@
   [East-West],   [Within data center],   [Lower — internal traffic],
   [North-South],   [Into/out of data center],   [Higher — external source],
 )
+]
 
 
 ]

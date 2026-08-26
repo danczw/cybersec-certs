@@ -28,6 +28,7 @@
 - Different categories support different signal types/speeds
 - IEEE ethernet standards specify minimum cable category:
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -44,6 +45,7 @@
   [10GBASE-T],   [Category 7 (shielded only)],   [100 meters],
   [40GBASE-T],   [Category 8 (shielded only)],   [30 meters],
 )
+]
 
 
 #section-heading("Bandwidth vs. Throughput")

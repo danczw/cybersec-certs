@@ -20,6 +20,7 @@
 
 #sub-heading("PoE Standards")
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -35,6 +36,7 @@
   [PoE++ Type 3],   [51 watts],   [600 mA],   [Laptops, PTZ cameras],
   [PoE++ Type 4],   [71.3 watts],   [960 mA],   [Laptops, PTZ cameras],
 )
+]
 
 
 - PoE++ supports additional Ethernet standards: 2.5-gigabit, 5-gigabit, and 10-gigabit

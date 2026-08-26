@@ -81,6 +81,7 @@
 #section-heading("Powers of 2 Reference")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -103,6 +104,7 @@
   [2^12],   [4,096],
   [2^16],   [65,536],
 )
+]
 
 
 ]

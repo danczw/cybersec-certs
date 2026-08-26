@@ -30,7 +30,8 @@
 + Add all values together
 
 #callout("Example")[
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 3,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -43,6 +44,7 @@
   [10000010],   [128 + 2],   [130],
   [11111111],   [128+64+32+16+8+4+2+1],   [255],
 )
+]
 
 ]
 
@@ -59,7 +61,8 @@
 #callout("Example")[
   *154 Decimal*
 
-  #table(
+  #block(breakable: false)[
+#table(
   columns: 8,
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
@@ -75,6 +78,7 @@
   ),
   [1],   [0],   [0],   [1],   [1],   [0],   [1],   [0],
 )
+]
 
 
   - 128 ≤ 154? Yes → 1 (running: 128)
@@ -96,6 +100,7 @@
 - With 8 bits, any value 0–255 can be represented
 - Total possible values = 2^n (where n = number of bits)
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -112,6 +117,7 @@
   [7],   [128],
   [8],   [256],
 )
+]
 
 
 ]

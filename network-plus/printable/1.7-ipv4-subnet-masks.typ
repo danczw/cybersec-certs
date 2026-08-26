@@ -40,6 +40,7 @@
 #section-heading("Binary-to-Decimal Subnet Octet Values")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -59,6 +60,7 @@
   [11111110],   [254],   [7],
   [11111111],   [255],   [8],
 )
+]
 
 
 #section-heading("Conversion Examples")

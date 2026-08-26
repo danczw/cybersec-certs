@@ -55,6 +55,7 @@
 #section-heading("Summary")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -70,6 +71,7 @@
   [Hybrid],   [Mix of multiple topologies],   [Enterprise],
   [Spine & Leaf],   [Two-tier non-interconnected switch layers],   [Data center],
 )
+]
 
 
 ]

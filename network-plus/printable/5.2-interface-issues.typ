@@ -34,6 +34,7 @@
 #section-heading("Ethernet Frame Structure")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -49,6 +50,7 @@
   [Payload],   [The actual data being transmitted],
   [Frame Check Sequence],   [CRC checksum to verify data integrity],
 )
+]
 
 
 #section-heading("CRC Errors")

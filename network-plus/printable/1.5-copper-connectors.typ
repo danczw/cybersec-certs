@@ -40,6 +40,7 @@
 #section-heading("Summary")
 
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -55,6 +56,7 @@
   [F-type],   [Single conductor],   [Cable modem (coax)],   [Threaded screw],
   [BNC],   [Single conductor],   [WAN / coax],   [Bayonet twist],
 )
+]
 
 
 ]

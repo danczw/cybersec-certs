@@ -52,6 +52,7 @@
 
 #sub-heading("Cable Jacket Types")
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -64,6 +65,7 @@
   [Standard],   [PVC (Polyvinyl Chloride)],   [Non-plenum],
   [Plenum-rated],   [FEP (Fluorinated Ethylene Polymer) or low-smoke PVC],   [Plenum areas],
 )
+]
 
 
 - Plenum-rated cable produces less smoke and fewer hazardous fumes in a fire

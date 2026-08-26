@@ -18,6 +18,7 @@
 #section-heading("Cable Structure")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -31,6 +32,7 @@
   [Buffer coating],   [Protective outer layer],
   [Ferrule],   [Protective cover at connector end],
 )
+]
 
 
 - Light source (LED or laser) on one end, receiver on the other

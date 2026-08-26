@@ -15,6 +15,7 @@
 
 #sub-heading("Generational Naming")
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -33,6 +34,7 @@
   [802.11ax],   [Wi-Fi 6 and 6E],   [2.4 GHz / 5 GHz / 6 GHz],   [574 Mbps – 9.6 Gbps],
   [802.11be],   [Wi-Fi 7],   [2.4 GHz / 5 GHz / 6 GHz],   [1.4–46.1 Gbps],
 )
+]
 
 
 - 802.11a/b/g rarely used today; generational names are informal for those
@@ -66,6 +68,7 @@
 
 #sub-heading("Latency")
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -77,6 +80,7 @@
   [Traditional satellite],   [~500 ms (250 up + 250 down)],
   [Starlink],   [~40 ms (goal: 20 ms)],
 )
+]
 
 
 #sub-heading("Limitations")

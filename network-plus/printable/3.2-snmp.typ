@@ -46,6 +46,7 @@
 #section-heading("SNMP Versions")
 
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -60,6 +61,7 @@
   [v2c],   [None],   [Yes],   [Community string],
   [v3],   [Yes],   [Yes],   [Username + password hash],
 )
+]
 
 
 #sub-heading("Version 1")

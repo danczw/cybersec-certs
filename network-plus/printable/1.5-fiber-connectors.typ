@@ -41,6 +41,7 @@
 #section-heading("Summary")
 
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -56,6 +57,7 @@
   [ST],   [Straight Tip],   [Bayonet (push-twist)],   [Ferrule, twist lock],
   [MPO],   [Multi-fiber Push On],   [Push-snap (like SC)],   [12 fibers in one connector],
 )
+]
 
 
 ]

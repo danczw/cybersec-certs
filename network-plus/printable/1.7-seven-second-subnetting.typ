@@ -16,6 +16,7 @@
 #section-heading("The Chart")
 
 
+#block(breakable: false)[
 #table(
   columns: 7,
   stroke: none,
@@ -38,6 +39,7 @@
   [/7],   [/15],   [/23],   [],   [128],   [2],   [254],
   [/8],   [/16],   [/24],   [],   [256],   [1],   [255],
 )
+]
 
 
 - Networks column: start at 2, double down

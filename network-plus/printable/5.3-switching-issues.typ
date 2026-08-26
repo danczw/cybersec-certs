@@ -77,6 +77,7 @@
 
 #sub-heading("STP Port States")
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -91,6 +92,7 @@
   [Forwarding],   [Actively passing traffic],
   [Disabled],   [Administratively turned off by the network administrator],
 )
+]
 
 
 #sub-heading("STP Topology Change")

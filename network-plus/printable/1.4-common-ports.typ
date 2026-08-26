@@ -145,6 +145,7 @@
 #section-heading("Quick Reference")
 
 
+#block(breakable: false)[
 #table(
   columns: 3,
   stroke: none,
@@ -172,6 +173,7 @@
   [RDP],   [3389],   [TCP],
   [SIP],   [5060, 5061],   [TCP],
 )
+]
 
 
 ]

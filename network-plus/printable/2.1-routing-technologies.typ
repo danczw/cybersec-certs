@@ -54,6 +54,7 @@ When multiple routes match a destination, the most specific prefix wins.
 
 Used to break ties when identical routes come from different sources. Lower = better.
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -68,6 +69,7 @@ Used to break ties when identical routes come from different sources. Lower = be
   [OSPF],   [110],
   [RIP],   [120],
 )
+]
 
 
 #section-heading("Route Selection: Routing Metrics")

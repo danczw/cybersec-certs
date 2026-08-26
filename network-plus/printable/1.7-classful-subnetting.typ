@@ -16,6 +16,7 @@
 #section-heading("IP Address Classes")
 
 
+#block(breakable: false)[
 #table(
   columns: 6,
   stroke: none,
@@ -34,6 +35,7 @@
   [D],   [224–239],   [1110],   [(multicast)],   [—],   [—],
   [E],   [240–255],   [1111],   [(reserved)],   [—],   [—],
 )
+]
 
 
 - Class D: multicast, not assigned to individual devices
@@ -69,6 +71,7 @@ Class C  11111111 . 11111111 . 11111111 . 00000000
 #section-heading("Four Important Subnet Values")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -82,6 +85,7 @@ Class C  11111111 . 11111111 . 11111111 . 00000000
   [Broadcast address],   [Set all host bits to 1],
   [Last usable host],   [Broadcast address − 1],
 )
+]
 
 
 #section-heading("Calculation Examples")

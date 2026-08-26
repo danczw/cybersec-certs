@@ -23,6 +23,7 @@
 #section-heading("Transceiver Types")
 
 
+#block(breakable: false)[
 #table(
   columns: 4,
   stroke: none,
@@ -38,6 +39,7 @@
   [QSFP],   [Quad Small Form-factor Pluggable],   [4 Gbps],   [4 × SFP],
   [QSFP+],   [Quad Enhanced Small Form-factor Pluggable],   [40 Gbps],   [4 × SFP+],
 )
+]
 
 
 #section-heading("Form Factors")

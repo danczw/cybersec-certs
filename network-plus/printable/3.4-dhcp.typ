@@ -58,6 +58,7 @@ Four steps to obtain an IP address automatically:
 #section-heading("DHCP Ports")
 
 
+#block(breakable: false)[
 #table(
   columns: 2,
   stroke: none,
@@ -69,6 +70,7 @@ Four steps to obtain an IP address automatically:
   [Client (source)],   [UDP 68],
   [Server (source)],   [UDP 67],
 )
+]
 
 
 #section-heading("DHCP Limitation: Broadcasts Don't Cross Routers")
