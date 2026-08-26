@@ -64,4 +64,6 @@
   note-domain.update(domain)
   note-objective.update(objective)
   pagebreak(weak: true)
+  note-header-bar(title, domain, objective)
+  v(4mm)
 }
