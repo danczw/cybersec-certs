@@ -176,11 +176,11 @@ function convertBody(md, opts = {}) {
       continue;
     }
 
-    // Unordered list
-    if (line.match(/^[-*]\s/)) {
+    // Indented sub-bullets appearing outside a list context
+    if (line.match(/^\s{2,}[-*]\s/)) {
       html += '<ul>\n';
-      while (i < lines.length && lines[i].match(/^[-*]\s/)) {
-        const item = lines[i].replace(/^[-*]\s+/, '');
+      while (i < lines.length && lines[i].match(/^\s{2,}[-*]\s/)) {
+        const item = lines[i].replace(/^\s+[-*]\s+/, '');
         html += `<li>${inlineMarkdown(item)}</li>\n`;
         i++;
       }
@@ -188,13 +188,47 @@ function convertBody(md, opts = {}) {
       continue;
     }
 
-    // Ordered list
+    // Unordered list (with nested sub-bullets)
+    if (line.match(/^[-*]\s/)) {
+      html += '<ul>\n';
+      while (i < lines.length && lines[i].match(/^(\s*)[-*]\s/)) {
+        const indent = lines[i].match(/^(\s*)/)[1].length;
+        if (indent >= 2) {
+          // Sub-bullet: open nested list, collect all at this indent
+          html += '<ul>\n';
+          while (i < lines.length && lines[i].match(/^\s{2,}[-*]\s/)) {
+            const item = lines[i].replace(/^\s+[-*]\s+/, '');
+            html += `<li>${inlineMarkdown(item)}</li>\n`;
+            i++;
+          }
+          html += '</ul>\n';
+        } else {
+          const item = lines[i].replace(/^[-*]\s+/, '');
+          html += `<li>${inlineMarkdown(item)}</li>\n`;
+          i++;
+        }
+      }
+      html += '</ul>\n';
+      continue;
+    }
+
+    // Ordered list (with nested sub-bullets)
     if (line.match(/^\d+\.\s/)) {
       html += '<ol class="steps">\n';
-      while (i < lines.length && lines[i].match(/^\d+\.\s/)) {
-        const item = lines[i].replace(/^\d+\.\s+/, '');
-        html += `<li>${inlineMarkdown(item)}</li>\n`;
-        i++;
+      while (i < lines.length && (lines[i].match(/^\d+\.\s/) || lines[i].match(/^\s{2,}[-*]\s/))) {
+        if (lines[i].match(/^\s{2,}[-*]\s/)) {
+          html += '<ul>\n';
+          while (i < lines.length && lines[i].match(/^\s{2,}[-*]\s/)) {
+            const item = lines[i].replace(/^\s+[-*]\s+/, '');
+            html += `<li>${inlineMarkdown(item)}</li>\n`;
+            i++;
+          }
+          html += '</ul>\n';
+        } else {
+          const item = lines[i].replace(/^\d+\.\s+/, '');
+          html += `<li>${inlineMarkdown(item)}</li>\n`;
+          i++;
+        }
       }
       html += '</ol>\n';
       continue;
