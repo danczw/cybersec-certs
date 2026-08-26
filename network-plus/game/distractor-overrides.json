@@ -7685,9 +7685,9 @@
     "windows/system32/dns/etc/hosts"
   ],
   "3.4.1538": [
-    "An XML configuration file with DNS record entries and TTL values",
-    "A binary database file compiled from zone records by the operating system",
-    "A JSON file containing hostname-to-IP mappings with optional priority weights"
+    "Unsolicited RAs use unicast while solicited RAs use multicast",
+    "Both types are sent to the same all-nodes multicast address",
+    "Unsolicited RAs are sent to the link-local address of the requesting host"
   ],
   "3.4.1539": [
     "It requires administrator/root privileges because it is owned by the system account",

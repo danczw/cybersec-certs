@@ -197,6 +197,7 @@ function buildData() {
 
       for (const card of cards) {
         domainAnswers.push(card.answer);
+        card.source = file.replace(/\.md$/, '');
         objectives[objId].concepts.push(card);
       }
     }

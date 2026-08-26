@@ -50,7 +50,7 @@ const RapidFire = (() => {
       <div class="question-header">
         <div class="question-meta">
           <span class="difficulty-badge ${diffLabel}">${diffLabel.toUpperCase()}</span>
-          <span class="domain-badge">D${concept.domainId} · ${concept.objectiveId}</span>
+          <span class="domain-badge">D${concept.domainId}${concept.source ? ` · ${UI.escapeHtml(concept.source)}` : ` · ${concept.objectiveId}`}</span>
         </div>
         <span class="question-number">#${sessionStats.answered + 1}</span>
       </div>
