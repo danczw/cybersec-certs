@@ -127,6 +127,7 @@ const Abbreviations = (() => {
         <div class="explanation-card">
           <h4>// ${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
           <p><strong>${UI.escapeHtml(target.abbrev)}</strong> = ${UI.escapeHtml(target.full)}</p>
+          ${target.source ? `<p class="source-ref">Source: ${UI.escapeHtml(target.source)}</p>` : ''}
         </div>
       `;
 
@@ -227,6 +228,7 @@ const Abbreviations = (() => {
         exp.innerHTML = `
           <h4>// ${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
           <p><strong>${UI.escapeHtml(target.abbrev)}</strong> = ${UI.escapeHtml(target.full)}</p>
+          ${target.source ? `<p class="source-ref">Source: ${UI.escapeHtml(target.source)}</p>` : ''}
         `;
         wrapper.querySelector('.question-card').appendChild(exp);
 

@@ -398,6 +398,13 @@ body {
   line-height: 1.5;
 }
 
+.explanation-card .source-ref {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+
 .next-btn {
   display: block;
   width: 100%;
