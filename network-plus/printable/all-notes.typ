@@ -6,7 +6,7 @@
     if counter(page).get().first() > 1 [
       #line(length: 100%, stroke: 0.3pt + luma(220))
       #v(1mm)
-      #text(size: 7pt, fill: luma(150))[Source: www.professormesser.com]
+      #text(size: 7pt, fill: luma(150))[#note-title.get()]
       #h(1fr)
       #text(size: 9pt, fill: luma(120))[#counter(page).display()]
     ]
