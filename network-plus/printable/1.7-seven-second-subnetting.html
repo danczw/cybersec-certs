@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Seven Second Subnetting — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* ─── Content (two-column by default) ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  /* ─── Headings ─── */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul, .callout table {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: 5mm;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="document domain-1">
+
+  <div class="header">
+    <h1>Seven Second Subnetting</h1>
+    <div class="header-meta">
+      <span>1.0 Networking Concepts</span>
+      <span>OBJ 1.7</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <div class="content">
+<h2>Overview</h2>
+<ul>
+<li>No math involved — all values predefined in a chart created at the start</li>
+<li>Only arithmetic: adding/subtracting 1 for first/last IP</li>
+<li>Same structure as magic number method but eliminates the 256 − mask calculation</li>
+</ul>
+<h2>The Chart</h2>
+<table>
+<tr><th>CIDR (octet 1)</th><th>CIDR (octet 2)</th><th>CIDR (octet 3)</th><th>CIDR (octet 4)</th><th>Networks</th><th>Addresses</th><th>Subnet Mask</th></tr>
+<tr><td>/1</td><td>/9</td><td>/17</td><td>/25</td><td>2</td><td>128</td><td>128</td></tr>
+<tr><td>/2</td><td>/10</td><td>/18</td><td>/26</td><td>4</td><td>64</td><td>192</td></tr>
+<tr><td>/3</td><td>/11</td><td>/19</td><td>/27</td><td>8</td><td>32</td><td>224</td></tr>
+<tr><td>/4</td><td>/12</td><td>/20</td><td>/28</td><td>16</td><td>16</td><td>240</td></tr>
+<tr><td>/5</td><td>/13</td><td>/21</td><td>/29</td><td>32</td><td>8</td><td>248</td></tr>
+<tr><td>/6</td><td>/14</td><td>/22</td><td>/30</td><td>64</td><td>4</td><td>252</td></tr>
+<tr><td>/7</td><td>/15</td><td>/23</td><td></td><td>128</td><td>2</td><td>254</td></tr>
+<tr><td>/8</td><td>/16</td><td>/24</td><td></td><td>256</td><td>1</td><td>255</td></tr>
+</table>
+<ul>
+<li>Networks column: start at 2, double down</li>
+<li>Addresses column: start at 128, halve down</li>
+</ul>
+<h2>Subnet Boundaries Chart (Optional)</h2>
+<p>Pre-written ranges to quickly locate which block an IP falls into:</p>
+<ul>
+<li>128 addresses: 0–127, 128–255</li>
+<li>64 addresses: 0–63, 64–127, 128–191, 192–255</li>
+<li>32 addresses: 0–31, 32–63, 64–95, 96–127, 128–159, 160–191, 192–223, 224–255</li>
+<li>16 addresses: 0–15, 16–31, 32–47, 48–63, 64–79, 80–95, 96–111, 112–127, 128–143, 144–159, 160–175, 176–191, 192–207, 208–223, 224–239, 240–255</li>
+<li>8 addresses: multiples of 8 (0, 8, 16, 24...)</li>
+<li>4 addresses: multiples of 4 (0, 4, 8, 12...)</li>
+</ul>
+<h2>Four-Step Process</h2>
+<ol class="steps">
+<li>Convert CIDR to decimal subnet mask (use chart)</li>
+<li>Determine subnet/network address</li>
+<li>Determine broadcast address</li>
+<li>Calculate first IP (subnet + 1) and last IP (broadcast − 1)</li>
+</ol>
+<h2>Rules</h2>
+<div class="subsection">
+<h3>Subnet Address</h3>
+<ul>
+<li>Mask = 255 → bring down the IP address octet</li>
+<li>Mask = 0 → bring down 0</li>
+<li>Mask = interesting → find which block the IP falls into, use start of that block</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Broadcast Address</h3>
+<ul>
+<li>Mask = 255 → bring down the address octet</li>
+<li>Mask = 0 → use 255</li>
+<li>Mask = interesting → next block start − 1</li>
+</ul>
+</div>
+<h2>Example 1: 165.245.12.88/24</h2>
+<ul>
+<li>/24 → third octet → mask 255 → full mask: 255.255.255.0</li>
+<li>Subnet: 165.245.12.0 (octets 1–3 mask=255 copy down, octet 4 mask=0 use 0)</li>
+<li>Broadcast: 165.245.12.255 (octets 1–3 copy down, octet 4 mask=0 use 255)</li>
+<li>First IP: 165.245.12.1</li>
+<li>Last IP: 165.245.12.254</li>
+</ul>
+<h2>Example 2: 165.245.12.88/26</h2>
+<ul>
+<li>/26 → fourth octet → mask 192 → full mask: 255.255.255.192</li>
+<li>Addresses per subnet: 64</li>
+<li>IP octet 4 = 88 → falls in block 64–127</li>
+<li>Subnet: 165.245.12.64</li>
+<li>Broadcast: 165.245.12.127 (next block starts at 128, minus 1)</li>
+<li>First IP: 165.245.12.65</li>
+<li>Last IP: 165.245.12.126</li>
+</ul>
+<h2>Example 3: 165.245.12.88/20</h2>
+<ul>
+<li>/20 → third octet → mask 240 → full mask: 255.255.240.0</li>
+<li>Addresses per subnet: 16</li>
+<li>IP octet 3 = 12 → falls in block 0–15</li>
+<li>Subnet: 165.245.0.0</li>
+<li>Broadcast: 165.245.15.255 (next block starts at 16, minus 1 = 15)</li>
+<li>First IP: 165.245.0.1</li>
+<li>Last IP: 165.245.15.254</li>
+</ul>
+<h2>Example 4: 18.172.200.77/11</h2>
+<ul>
+<li>/11 → second octet → mask 224 → full mask: 255.224.0.0</li>
+<li>Addresses per subnet: 32</li>
+<li>IP octet 2 = 172 → falls in block 160–191</li>
+<li>Subnet: 18.160.0.0</li>
+<li>Broadcast: 18.191.255.255 (next block starts at 192, minus 1 = 191)</li>
+<li>First IP: 18.160.0.1</li>
+<li>Last IP: 18.191.255.254</li>
+</ul>
+<h2>Example 5: 18.172.200.77/17</h2>
+<ul>
+<li>/17 → third octet → mask 128 → full mask: 255.255.128.0</li>
+<li>Addresses per subnet: 128</li>
+<li>IP octet 3 = 200 → falls in block 128–255</li>
+<li>Subnet: 18.172.128.0</li>
+<li>Broadcast: 18.172.255.255 (last address in block)</li>
+<li>First IP: 18.172.128.1</li>
+<li>Last IP: 18.172.255.254</li>
+</ul>
+<h2>Exam Tips</h2>
+<ul>
+<li>Write chart on dry erase board at testing center or type into notepad for online exam</li>
+<li>Bring your own fine tip dry erase pen (check with testing center first)</li>
+<li>Find the shortcut that works best for you — seven second, magic number, or other</li>
+</ul>
+
+  </div>
+
+  <div class="footer">
+    <span>Source: www.professormesser.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

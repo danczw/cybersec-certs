@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interface Issues — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* ─── Content (two-column by default) ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  /* ─── Headings ─── */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul, .callout table {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: 5mm;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="document domain-5">
+
+  <div class="header">
+    <h1>Interface Issues</h1>
+    <div class="header-meta">
+      <span>5.0 Network Troubleshooting</span>
+      <span>OBJ 5.2</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <div class="content">
+<h2>Interface Monitoring</h2>
+<ul>
+<li>Network administrators monitor interfaces on important devices to detect developing problems</li>
+<li>Allows resolution before an outage occurs</li>
+<li>Can warn of congestion or overutilization — may drive network design changes</li>
+<li>Operating systems provide interface performance feedback under network configurations</li>
+<li>Administrators automate monitoring using SNMP (Simple Network Management Protocol)</li>
+<li>Many devices support MIB-II (Management Information Base) — a standard set of SNMP statistics common across devices</li>
+<li>Proprietary MIBs available for device-specific statistics (firewalls, switches)</li>
+</ul>
+<h2>Key Interface Metrics</h2>
+<ul>
+<li><strong>Link status</strong></li>
+<ul>
+<li>Whether the link is up or down</li>
+<li>May indicate cable problem, interface issue, or device reboot</li>
+</ul>
+<li><strong>Utilization</strong></li>
+<ul>
+<li>Total throughput over the connection</li>
+<li>Ensure sufficient bandwidth for all services</li>
+<li>Run bandwidth tests to determine actual throughput capacity</li>
+</ul>
+<li><strong>Errors</strong></li>
+<ul>
+<li>CRC errors, runts, giants, drops</li>
+<li>Often points to cable or interface problems</li>
+</ul>
+</ul>
+<h2>Ethernet Frame Structure</h2>
+<table>
+<tr><th>Field</th><th>Purpose</th></tr>
+<tr><td>Preamble + SFD</td><td>Identifies beginning of frame (not visible in packet captures)</td></tr>
+<tr><td>Destination MAC</td><td>Where the frame should go (used by switches for forwarding)</td></tr>
+<tr><td>Source MAC</td><td>Device sending the frame</td></tr>
+<tr><td>EtherType</td><td>Describes what type of data is in the payload</td></tr>
+<tr><td>Payload</td><td>The actual data being transmitted</td></tr>
+<tr><td>Frame Check Sequence</td><td>CRC checksum to verify data integrity</td></tr>
+</table>
+<h2>CRC Errors</h2>
+<ul>
+<li>Frame Check Sequence contains a checksum calculated at transmission</li>
+<li>Receiving adapter recalculates CRC and compares to the FCS value</li>
+<li>If they match — frame received without corruption</li>
+<li>If mismatch — CRC error counter incremented</li>
+<li>First warning of signal problems on a connection</li>
+<li>Indicates possible cable or interface issue</li>
+</ul>
+<h2>Runts</h2>
+<ul>
+<li>Frame received that is less than 64 bytes (minimum ethernet frame size)</li>
+<li>Frames below 64 bytes are counted as errors</li>
+<li>Rare on modern full-duplex switch networks</li>
+<li>Common on half-duplex networks during collisions</li>
+</ul>
+<h2>Giants</h2>
+<ul>
+<li>Frame received larger than 1,518 bytes (default maximum ethernet frame size)</li>
+<li>Jumbo frames can exceed 1,518 bytes but have their own configured maximum</li>
+<li>If a frame exceeds the configured maximum size, it is classified as a giant</li>
+</ul>
+<h2>Drops</h2>
+<ul>
+<li>Frames lost due to contention or buffering problems</li>
+<li>No room in buffer to hold the frame</li>
+<li>Drop counter increments on the system</li>
+<li>Indicates communication problems on the network</li>
+</ul>
+<h2>Viewing Error Counters</h2>
+<ul>
+<li>Most devices/operating systems provide a way to view these counters</li>
+<li>Cisco example: <code>show interface</code> command displays runts, giants, CRCs, and other errors</li>
+<li>Slowly incrementing CRC errors may indicate developing cable/interface problem</li>
+</ul>
+<h2>Error Disabled State</h2>
+<ul>
+<li>Device automatically disables an interface without human intervention</li>
+<li>Common triggers:</li>
+<ul>
+<li><strong>Interface flapping</strong> — link going up/down repeatedly, causing spanning tree issues</li>
+<li><strong>Port security violation</strong> — unauthorized device connected to a secured port</li>
+<li><strong>Configuration problems</strong> — incompatible settings</li>
+<li><strong>Increasing error counts</strong> — too many errors detected</li>
+</ul>
+<li>Once error disabled, the interface stays off until manually re-enabled</li>
+<li>Must log into switch and administratively re-enable the interface</li>
+<li>If same problem recurs, interface may return to error disabled state</li>
+</ul>
+<h2>Administratively Down</h2>
+<ul>
+<li>An administrator intentionally disabled the interface</li>
+<li>Not automatic — deliberate action by a human</li>
+<li>Must log in and administratively enable to restore</li>
+</ul>
+<h2>Suspended Port Status</h2>
+<ul>
+<li>Error occurs the moment the interface is enabled</li>
+<li>Interface connected to an incompatible configuration</li>
+<li>Example: LACP configured on one switch but not the other — interface immediately suspends</li>
+</ul>
+
+  </div>
+
+  <div class="footer">
+    <span>Source: www.professormesser.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

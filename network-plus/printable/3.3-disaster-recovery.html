@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disaster Recovery — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* ─── Content (two-column by default) ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  /* ─── Headings ─── */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul, .callout table {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: 5mm;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="document domain-3">
+
+  <div class="header">
+    <h1>Disaster Recovery</h1>
+    <div class="header-meta">
+      <span>3.0 Network Operations</span>
+      <span>OBJ 3.3</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <div class="content">
+<h2>Disaster Recovery Plan (DRP)</h2>
+<ul>
+<li>Covers every aspect and detail of handling outages or significant problems affecting organizational goals</li>
+<li>Technologies involved in recovery:</li>
+<ul>
+<li>Backups</li>
+<li>Offsite data replication</li>
+<li>Cloud-based alternatives (recreate on-site servers in the cloud)</li>
+<li>Completely separate remote site</li>
+</ul>
+<li>Third-party services:</li>
+<ul>
+<li>Contract for a temporary facility to move operations to</li>
+<li>Recovery services that come in and manage the disaster recovery process</li>
+</ul>
+</ul>
+<h2>Recovery Metrics</h2>
+<div class="subsection">
+<h3>Recovery Time Objective (RTO)</h3>
+<ul>
+<li>Amount of time to get back up and running after an outage</li>
+<li>Goal: as close to zero as possible</li>
+<li>Measured from the outage to when normal service level is restored</li>
+<li>Example: web server fails, RTO = 1 hour to become available again</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Recovery Point Objective (RPO)</h3>
+<ul>
+<li>Amount of data (measured in time) lost when an outage occurs</li>
+<li>Goal: as close to zero as possible</li>
+<li>Represents the gap between the last data recovery point (backup/replication) and the outage</li>
+<li>Determined based on available resources and backup frequency</li>
+<li>Varies by data type:</li>
+<ul>
+<li>Banking transactions / patient info: very short RPO (&lt; 1 hour)</li>
+<li>Website updates / internal documents: longer RPO (1–2 hours)</li>
+</ul>
+</ul>
+</div>
+<div class="subsection">
+<h3>RTO vs RPO on a Timeline</h3>
+<pre>        Data                                            Service
+        recovery                                        back
+        point              Outage                       online
+          ✓                  ✗                            ✓
+Time ─────●──────────────────●────────────────────────────●──────►
+          |     Lost data    |          Downtime          |
+          |← RPO ───────────→|←─────────── RTO ──────────→|</pre>
+<ul>
+<li>Data recovery point (backup/replication) occurs</li>
+<li>Outage happens sometime after</li>
+<li><strong>RPO</strong> = time between the data recovery point and the outage (data lost)</li>
+<li><strong>RTO</strong> = time between the outage and services coming back online (downtime)</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Mean Time to Repair (MTTR)</h3>
+<ul>
+<li>Average time to resolve an issue (statistical, based on historical data)</li>
+<li>Example: average time to replace a failed router</li>
+</ul>
+<div class="callout">
+<div class="callout-title">Supplementary</div>
+<p>MTTR vs RTO: RTO is a forward-looking target (how long recovery <em>should</em> take). MTTR is a backward-looking average (how long repairs <em>actually</em> take across multiple incidents).</p>
+</div>
+</div>
+<div class="subsection">
+<h3>Mean Time Between Failures (MTBF)</h3>
+<ul>
+<li>Average time a device is expected to operate before failing</li>
+<li>Presented as a single time frame based on multiple criteria</li>
+<li>Example: firewall with MTBF of 20 years</li>
+<li>Helps plan how many backup units to purchase</li>
+</ul>
+</div>
+<h2>Site Resiliency</h2>
+<ul>
+<li>Process of moving operations from primary data center to a temporary facility and back</li>
+<li>Steps:</li>
+</ul>
+<p>  1. Prepare disaster-recovery site (power, hardware, data)</p>
+<p>  2. Move from primary location to backup facility when disaster occurs</p>
+<p>  3. Work from backup facility until problem is resolved (hours to months)</p>
+<p>  4. Move assets and data back to original location</p>
+<div class="subsection">
+<h3>Cold Site</h3>
+<ul>
+<li>Empty building with no equipment, no data, no people</li>
+<li>Must bring backup tapes/equipment and transport people</li>
+<li>Lot of work when disaster is called</li>
+<li>Least expensive option</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Hot Site</h3>
+<ul>
+<li>Exact replica of primary data center</li>
+<li>Same hardware (purchase additional units when buying for primary)</li>
+<li>Applications and data replicated/backed up continuously</li>
+<li>Can move in and be up and running relatively quickly</li>
+<li>No need to install hardware, applications, or recover from backups</li>
+<li>Most expensive option</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Warm Site</h3>
+<ul>
+<li>Between a cold site and a hot site</li>
+<li>Some level of infrastructure: power, racks, possibly some hardware</li>
+<li>Need to bring data and recover from backup tapes</li>
+<li>Different levels of service available — choose how much hardware/data to stage</li>
+</ul>
+</div>
+<h2>Disaster Recovery Testing</h2>
+<div class="subsection">
+<h3>Tabletop Exercise</h3>
+<ul>
+<li>Everyone sits around a conference table and steps through simulated disaster scenarios</li>
+<li>Describes what each person/department would do</li>
+<li>No physical movement of backups or equipment</li>
+<li>Verifies logistics are in place</li>
+<li>Takes about a day or two</li>
+<li>All key players participate</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Validation Tests</h3>
+<ul>
+<li>Full-blown disaster-recovery site test (once or multiple times per year)</li>
+<li>Follow a specific scenario (e.g., fire destroys building, geographic evacuation)</li>
+<li>Go through the same process as actual disaster recovery without moving production</li>
+<li>Document what worked and what needs to be fixed</li>
+<li>Allows ongoing improvements for efficiency</li>
+</ul>
+</div>
+
+  </div>
+
+  <div class="footer">
+    <span>Source: www.professormesser.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

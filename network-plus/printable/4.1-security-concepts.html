@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security Concepts — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* ─── Content (two-column by default) ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  /* ─── Headings ─── */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul, .callout table {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: 5mm;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="document domain-4">
+
+  <div class="header">
+    <h1>Security Concepts</h1>
+    <div class="header-meta">
+      <span>4.0 Network Security</span>
+      <span>OBJ 4.1</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <div class="content">
+<h2>States of Data</h2>
+<div class="subsection">
+<h3>Data in Transit (Data in-Motion)</h3>
+<ul>
+<li>Information transferred over a wired or wireless network</li>
+<li>Network infrastructure (switches, routers) designed to forward traffic, not protect it</li>
+<li>Security provided by other devices: firewalls, intrusion prevention systems</li>
+<ul>
+<li>Monitor traffic, decide to forward or block, inspect for malicious content</li>
+</ul>
+<li>Encryption for data in transit: TLS (Transport Layer Security) and IPsec (Internet Protocol Security)</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Data at Rest</h3>
+<ul>
+<li>Information saved to a hard drive, SSD, or any other storage device</li>
+<li>Encryption types:</li>
+<ul>
+<li>Full disk encryption (entire disk)</li>
+<li>Database encryption (single part or entire database)</li>
+<li>File/folder encryption (individual files or folders)</li>
+</ul>
+<li>Security policies applied via ACLs (Access Control Lists)</li>
+<ul>
+<li>Determine which users have access or no access to data</li>
+<li>System administrator or data owner controls permissions</li>
+<li>Usually part of the operating system</li>
+</ul>
+</ul>
+</div>
+<h2>PKI (Public Key Infrastructure)</h2>
+<ul>
+<li>Policies and control of all encryption keys and certificates</li>
+<li>Not a small undertaking — significant work to create, with ongoing changes and updates</li>
+<li>Organizations often begin PKI when adding encryption keys to web servers or signing certificates</li>
+<li>Becomes a requirement for maintaining and managing all security assets organization-wide</li>
+</ul>
+<h2>Digital Certificates and Trust</h2>
+<div class="subsection">
+<h3>Digital Certificates</h3>
+<ul>
+<li>Assign a level of trust to a user or device</li>
+<li>Binds a public key with a digital signature and details about the key holder (name, organization, etc.)</li>
+<li>Digitally signed by a central Certificate Authority (CA) to add trust</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Web of Trust</h3>
+<ul>
+<li>Distributed form of trust (alternative to centralized CA)</li>
+<li>If A trusts B and B trusts C, then A can also trust C</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Certificate Authority (CA)</h3>
+<ul>
+<li>Centralized authority that all certificates start from</li>
+<li>Anything signed by the CA can be trusted anywhere in the organization</li>
+<li>CA digitally signs certificates — anyone can examine who signed and determine trust</li>
+<li>Options:</li>
+<ul>
+<li>Internal CA: organization builds and self-signs its own certificates</li>
+<li>Third-party CA: independent authority (useful for internet-facing trust)</li>
+</ul>
+<li>Certificate process built into Windows Domain services; third-party options available for other OS</li>
+</ul>
+</div>
+<h2>IAM (Identity and Access Management)</h2>
+<ul>
+<li>Process of managing permissions and access to data</li>
+<li>Components:</li>
+<ul>
+<li>Access control: ensure users only access information needed for their job</li>
+<li>Authentication: verify the user is who they claim to be</li>
+<li>Authorization: grant appropriate permissions once authenticated</li>
+<li>Auditing: track and monitor who accessed data and when</li>
+</ul>
+</ul>
+<div class="subsection">
+<h3>Least Privilege</h3>
+<ul>
+<li>Users only have rights and permissions necessary for their job function — no additional access</li>
+<li>Reason administrator access is not assigned to every system</li>
+<li>Limits access to applications and data per job function</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Role-Based Access Control (RBAC)</h3>
+<ul>
+<li>Separate individuals into roles (e.g., shipping/receiving staff, manager, vice president)</li>
+<li>Administrator determines role definitions and associated permissions</li>
+<li>Users assigned to appropriate roles</li>
+<li>In Windows: implemented through groups — one group per role, users assigned to groups</li>
+</ul>
+</div>
+<h2>Geographic Restrictions</h2>
+<div class="subsection">
+<h3>Methods to Determine Location</h3>
+<ul>
+<li>IP address (not always accurate)</li>
+<li>GPS (Global Positioning System)</li>
+<li>Wireless network name / access point location</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Geofencing</h3>
+<ul>
+<li>Allows or disallows access to information based on physical location</li>
+<li>Example: sensitive data only viewable from within corporate headquarters building</li>
+<li>VPN users may get different permissions based on connection location</li>
+</ul>
+</div>
+<h2>Physical Security</h2>
+<div class="subsection">
+<h3>CCTV (Closed Circuit Television)</h3>
+<ul>
+<li>Cameras deployed around buildings/campus</li>
+<li>Modern features: motion detection, license plate reading, facial recognition</li>
+<li>All cameras networked to central storage for long-term retention</li>
+<li>Administrator can review any feed at any historical time frame</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Door Locks</h3>
+<ul>
+<li>Conventional lock: physical key, may include deadbolt</li>
+<li>Electronic reader: personal identification code (PIN)</li>
+<li>Token-based: RFID badge with electronic reader</li>
+<li>Biometric: hand print, fingerprint, retina scan</li>
+<li>Multi-factor: combining methods (e.g., badge + PIN)</li>
+</ul>
+</div>
+
+  </div>
+
+  <div class="footer">
+    <span>Source: www.professormesser.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

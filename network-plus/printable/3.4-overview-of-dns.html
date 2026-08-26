@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>An Overview of DNS — Network+ Notes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #fff;
+  }
+
+  /* ─── Domain color system ─── */
+  .domain-1 { --accent: #667eea; --accent-light: #e8ecff; --accent-bg: #f3f5ff; --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .domain-2 { --accent: #f5576c; --accent-light: #ffe4e8; --accent-bg: #fff5f7; --header-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .domain-3 { --accent: #4facfe; --accent-light: #dff1ff; --accent-bg: #f0f9ff; --header-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .domain-4 { --accent: #fa709a; --accent-light: #ffe4ec; --accent-bg: #fff5f8; --header-bg: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .domain-5 { --accent: #43b89c; --accent-light: #dcf5ef; --accent-bg: #f0faf7; --header-bg: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+
+  /* ─── Header banner ─── */
+  .header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    margin-bottom: 5mm;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(15deg);
+  }
+  .header h1 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    position: relative;
+  }
+  .header-meta {
+    font-size: 8pt;
+    opacity: 0.9;
+    display: flex;
+    gap: 4mm;
+  }
+  .header-meta span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5mm 2mm;
+    border-radius: 2mm;
+  }
+  .domain-4 .header, .domain-5 .header { color: #1a1a2e; }
+  .domain-4 .header-meta span, .domain-5 .header-meta span { background: rgba(0,0,0,0.1); }
+
+  /* ─── Content (two-column by default) ─── */
+  .content {
+    columns: 2;
+    column-gap: 5mm;
+    column-rule: 0.3pt solid #e0e0e0;
+  }
+  .content.single-col {
+    columns: 1;
+  }
+
+  /* ─── Headings ─── */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 3mm 0 1.5mm 0;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.5pt solid var(--accent-light);
+    break-after: avoid;
+    column-span: all;
+  }
+  h2:first-child { margin-top: 0; }
+
+  .subsection {
+    break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #2d2d44;
+    margin: 2.5mm 0 1mm 0;
+    break-after: avoid;
+  }
+
+  h4 {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #4a4a6a;
+    margin: 2mm 0 0.8mm 0;
+    break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 1.5mm;
+  }
+
+  /* ─── Lists ─── */
+  ul, ol {
+    margin: 1mm 0 2mm 4mm;
+    padding-left: 3mm;
+  }
+  li {
+    margin-bottom: 0.5mm;
+    break-inside: avoid;
+  }
+  li::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2mm 2mm;
+  }
+  th:first-child { border-radius: 1.5mm 0 0 0; }
+  th:last-child { border-radius: 0 1.5mm 0 0; }
+  td {
+    padding: 1mm 2mm;
+    border-bottom: 0.3pt solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: var(--accent-bg);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ─── Code ─── */
+  code {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    font-size: 8pt;
+    background: #f4f4f8;
+    padding: 0.3mm 1mm;
+    border-radius: 1mm;
+    color: #e53e3e;
+    border: 0.3pt solid #e8e8f0;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    padding: 2.5mm 3mm;
+    border-radius: 2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7.5pt;
+    line-height: 1.5;
+    margin: 2mm 0 3mm 0;
+    overflow: hidden;
+    break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* ─── Callout boxes ─── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 1mm solid var(--accent);
+    border-radius: 0 2mm 2mm 0;
+    padding: 2.5mm 3mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin-bottom: 1mm;
+  }
+  .callout p, .callout ul, .callout table {
+    font-size: 8.5pt;
+  }
+
+  /* ─── Key term highlights ─── */
+  .key-term {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-light) 60%);
+    font-weight: 600;
+  }
+
+  /* ─── Comparison boxes ─── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin: 2mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .compare-box {
+    border: 0.5pt solid var(--accent-light);
+    border-radius: 2mm;
+    padding: 2mm 2.5mm;
+    background: var(--accent-bg);
+  }
+  .compare-box h4 {
+    font-size: 8.5pt;
+    color: var(--accent);
+    margin: 0 0 1mm 0;
+    text-align: center;
+    border-bottom: 0.3pt solid var(--accent-light);
+    padding-bottom: 0.8mm;
+  }
+
+  /* ─── Mnemonic / memory aid ─── */
+  .mnemonic {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 0.5pt solid #f0d060;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin: 2mm 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .mnemonic::before {
+    content: '💡 ';
+  }
+
+  /* ─── Quick-reference strip ─── */
+  .quick-ref {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    padding: 2mm 3mm;
+    border-radius: 2mm;
+    margin: 2mm 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    break-inside: avoid;
+  }
+  .quick-ref-item {
+    background: rgba(255,255,255,0.1);
+    padding: 0.8mm 2mm;
+    border-radius: 1.5mm;
+    font-family: monospace;
+    font-size: 7.5pt;
+  }
+  .quick-ref-item strong {
+    color: #00ff88;
+  }
+
+  /* ─── Numbered steps ─── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 2mm 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 7mm;
+    margin-bottom: 1.5mm;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5mm;
+    height: 4.5mm;
+    background: var(--accent);
+    color: #fff;
+    font-size: 7pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5mm;
+    border-radius: 50%;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    margin-top: 5mm;
+    padding-top: 3mm;
+    border-top: 0.3pt solid #e0e0e0;
+    font-size: 7pt;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ─── Print overrides ─── */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ─── Screen preview ─── */
+  @media screen {
+    body {
+      background: #f0f0f5;
+      padding: 10mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+    .document {
+      background: #fff;
+      padding: 12mm 14mm;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 2mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="document domain-3">
+
+  <div class="header">
+    <h1>An Overview of DNS</h1>
+    <div class="header-meta">
+      <span>3.0 Network Operations</span>
+      <span>OBJ 3.4</span>
+      <span>CompTIA Network+ N10-009</span>
+    </div>
+  </div>
+
+  <div class="content">
+<h2>Purpose</h2>
+<ul>
+<li>Translates domain names (e.g., www.professormesser.com) into IP addresses</li>
+<li>A hierarchical database of names</li>
+</ul>
+<h2>DNS Hierarchy</h2>
+<ul>
+<li>Starts at the root (single dot <code>.</code>)</li>
+<li>Below the root: Top Level Domains (TLDs)</li>
+<ul>
+<li>Generic: .com, .org, .net, etc.</li>
+<li>Country codes: .us, .ca, .uk, etc.</li>
+</ul>
+<li>Below TLDs: domain names (e.g., professormesser)</li>
+<li>Full path from host to root = Fully Qualified Domain Name (FQDN)</li>
+<ul>
+<li>Example: www.professormesser.com</li>
+</ul>
+</ul>
+<div class="subsection">
+<h3>DNS Hierarchy Diagram</h3>
+<pre>                          . (root)                     ← Root
+                             │
+            ┌────────┬───────┴───────┬────────┐
+            │        │               │        │
+          .com     .net            .edu      .org     ← Top-Level Domains (TLDs)
+            │
+     .professormesser                                 ← Second-Level Domain
+            │
+    ┌───────┼───────┬────────┬────────┐
+    │       │       │        │        │
+   www    live    mail     east     west              ← Subdomains / Hosts
+                             │        │
+                          ┌──┴──┐  ┌──┴──┐
+                          │     │  │     │
+                        trey  katie ethan judy        ← Hosts</pre>
+</div>
+<h2>DNS Infrastructure</h2>
+<ul>
+<li>Root DNS servers: 13 server clusters, over 1,000 actual servers</li>
+<li>Root servers manage the TLDs</li>
+<li>Organizations can structure subdomains under their domain (e.g., east.professormesser.com, west.professormesser.com)</li>
+</ul>
+<h2>DNS Server Types</h2>
+<div class="subsection">
+<h3>Primary DNS Server</h3>
+<ul>
+<li>Contains all zone information for the DNS domain</li>
+<li>All configuration changes and updates happen here</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Secondary DNS Server</h3>
+<ul>
+<li>Receives zone information from the primary server (read-only)</li>
+<li>Provides redundancy — if primary is unavailable, secondary still resolves</li>
+<li>End users cannot tell which server answered their query</li>
+</ul>
+</div>
+<h2>Local Name Resolution (Hosts File)</h2>
+<ul>
+<li>Resolves names locally without querying a DNS server</li>
+<li>Use cases: testing servers, overriding incorrect DNS information</li>
+<li>File name: <code>hosts</code></li>
+<li>Windows location: <code>windows/system32/drivers/etc/hosts</code></li>
+<li>Simple text file mapping IP addresses to names</li>
+<li>Stored as read-only by default — must change permissions to edit</li>
+<li>Some applications ignore the hosts file and query DNS directly — check documentation</li>
+</ul>
+<h2>Forward and Reverse Lookups</h2>
+<div class="subsection">
+<h3>Forward Lookup</h3>
+<ul>
+<li>Provide a name → DNS returns an IP address</li>
+<li>Most common DNS operation</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Reverse Lookup (Reverse DNS)</h3>
+<ul>
+<li>Provide an IP address → DNS returns a name</li>
+<li>Must be separately configured on the DNS server</li>
+<li>The forward name and reverse name may differ</li>
+</ul>
+</div>
+<h2>Authoritative vs. Nonauthoritative</h2>
+<div class="subsection">
+<h3>Authoritative Server</h3>
+<ul>
+<li>The primary DNS server for a DNS zone</li>
+<li>The authority for all records in that domain</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>Nonauthoritative Server</h3>
+<ul>
+<li>A secondary server or caching server</li>
+<li>Returns cached information, not directly from the zone owner</li>
+<li>Cached information could be outdated if the authoritative server was recently changed</li>
+</ul>
+</div>
+<h2>Time to Live (TTL)</h2>
+<ul>
+<li>Configured on the authoritative DNS server</li>
+<li>Specifies how long (in seconds) a nonauthoritative server may cache a record</li>
+<li>After TTL expires, cached data is deleted and subsequent queries go to the authoritative server</li>
+<li>Example: TTL of 300 = information cached for a maximum of 5 minutes</li>
+</ul>
+<h2>Recursive DNS Queries</h2>
+<ul>
+<li>Process by which a local DNS server resolves a name on behalf of the client</li>
+<li>The client (resolver) only contacts its local DNS server</li>
+<li>Local DNS server does all the work behind the scenes</li>
+<li>Results are cached for subsequent requests</li>
+</ul>
+<div class="subsection">
+<h3>Recursive Query Process</h3>
+<ol class="steps">
+<li>Resolver sends query to local DNS server (e.g., www.professormesser.com)</li>
+<li>Local DNS server queries root server → root returns address of .com name server</li>
+<li>Local DNS server queries .com name server → returns address of professormesser.com name server</li>
+<li>Local DNS server queries professormesser.com name server → returns IP for www.professormesser.com</li>
+<li>Local DNS server returns answer to resolver and caches it</li>
+</ol>
+</div>
+<h2>DNS Security</h2>
+<div class="subsection">
+<h3>Problems with Traditional DNS</h3>
+<ul>
+<li>Traffic sent in the clear — anyone monitoring can see queried hostnames</li>
+<li>Responses are not authenticated — no way to verify responses are legitimate (could be spoofed)</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>DNSSEC (Domain Name Security Extensions)</h3>
+<ul>
+<li>Digitally signs DNS responses</li>
+<li>Verifies responses came from a trusted source</li>
+<li>Confirms data has not been modified in transit</li>
+<li>Requires additional configuration on the DNS server</li>
+<li>Does NOT encrypt traffic — queries are still visible</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>DNS over TLS (DoT)</h3>
+<ul>
+<li>Encrypts DNS traffic using TLS</li>
+<li>Uses TCP port 853</li>
+<li>Similar encryption to HTTPS web communication</li>
+</ul>
+</div>
+<div class="subsection">
+<h3>DNS over HTTPS (DoH)</h3>
+<ul>
+<li>Sends DNS queries over standard HTTPS</li>
+<li>Uses TCP port 443</li>
+<li>Traffic looks identical to normal encrypted web traffic in packet captures</li>
+<li>Some modern browsers use DoH by default</li>
+</ul>
+</div>
+
+  </div>
+
+  <div class="footer">
+    <span>Source: www.professormesser.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>
