@@ -42,7 +42,7 @@
     fill: bg,
     breakable: false,
   )[
-    #text(size: 7.5pt, weight: "bold", fill: col)[#icon #upper(title) #icon]
+    #text(size: 7.5pt, weight: "bold", fill: col)[#icon #upper(title) #if lower(title) != "example" [#icon]]
     #v(1mm)
     #text(size: 8.5pt)[#body]
   ]
