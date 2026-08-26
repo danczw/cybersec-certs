@@ -1,0 +1,90 @@
+#import "template.typ": *
+
+#start-note("5.4 — Wireless Issues", "5.0 Network Troubleshooting", "5.4")
+
+#columns(2, gutter: 5mm)[
+
+
+
+#section-heading("Wireless Interference")
+
+
+- Limited frequencies available for access points and clients
+- Only one device communicates at a time on a wireless network
+- Multiple wireless networks in the same area can create interference
+- Recent wireless standards can automatically find best frequencies and avoid those in use
+- Can also be manually configured
+- Access points can detect interference and move to a better frequency
+
+#sub-heading("Frequency Bands")
+
+- *2.4 GHz* — limited non-overlapping channels (3 in North America); may not be enough in busy areas
+- *5 GHz* — many more frequencies available; better chance of avoiding interference
+- *6 GHz* — newest band with many more frequencies to avoid conflicts
+
+#section-heading("Channel Management")
+
+
+- Disable legacy/low-speed support for best throughput — older standards slow down the entire network
+- If all devices support the most recent standard, disable legacy options in the access point
+- If channels are manually configured, verify they don't conflict with new access points that have appeared
+- Consider enabling automatic channel selection so the access point can move to a better channel when available
+
+#sub-heading("Channel Overlap Example (2.4 GHz)")
+
+- Non-overlapping channels in the US: 1, 6, 11
+- Configuring an access point on channel 8 would overlap with both channel 6 and channel 11
+- None of the overlapping devices would have best throughput
+- Better to distribute frequencies so they don't interfere (use channels 1, 6, 11)
+
+#section-heading("Managing Interference")
+
+
+- Interference often comes from other access points
+- If an access point covers a small area but output power is set to maximum, turn down the power
+- Limiting output power reduces interference for other access points in the area
+- Split the wireless network into smaller cells with access points separated from each other using different frequencies
+
+#section-heading("Attenuation")
+
+
+- Signal weakens the farther you move from the access point
+- Administrators measure attenuation with a Wi-Fi analyzer by walking around the facility
+- Solutions to improve signal:
+  - Increase power output on the access point (not all support this)
+  - Add an external antenna or antenna with additional gain — increases transmission distance with same power
+  - Limit cable length between access point and antenna (higher frequencies lose more signal in coax)
+  - Check cable for damage that could leak signal
+
+#section-heading("Site Surveys and Heat Maps")
+
+
+- Identify where users access the wireless network and measure signal at those locations
+- Check where neighboring organizations' access points are located to avoid interference
+- Check what frequencies neighbors use — may open an entire band (e.g., 6 GHz) for you
+- Perform multiple site surveys throughout the year — wireless infrastructure changes over time
+- *Heat map* — visual representation from a Wi-Fi analyzer showing signal strength
+  - Brighter/warmer colors = better signal
+  - Cooler colors = worse signal
+  - Shows where to add or change access point placement
+
+#section-heading("Client Disassociation Attack")
+
+
+- Denial of service exploiting older unprotected 802.11 management frames
+- Attacker can remove devices from the network
+- Symptoms: device constantly disconnects and reconnects, or cannot connect at all
+- Detection: capture frames using an 802.11 packet capture device to see disassociation frames
+- Allows finding and removing/disabling the attacking device
+- Prevention: upgrade to latest 802.11 standards which prevent this type of attack
+
+#section-heading("Roaming Misconfigurations")
+
+
+- Multiple access points configured with the same SSID create a large seamless wireless network
+- Devices move from access point to access point seamlessly as users roam
+- All access points must be configured exactly the same (security features, configuration details)
+- If a new access point does not have the same configuration, users are dropped and must reconnect
+- Seamless roaming requires identical configuration across all access points
+
+]
