@@ -4,6 +4,8 @@
 #let heading-color = rgb("#2d2d44")
 #let accent-light = rgb("#e8ecff")
 #let accent-bg = rgb("#f3f5ff")
+#let example-accent = rgb("#16a34a")
+#let example-bg = rgb("#f0fdf4")
 
 #let note-title = state("note-title", none)
 #let note-domain = state("note-domain", none)
@@ -27,15 +29,20 @@
 }
 
 #let callout(title, body) = {
+  let (col, bg, icon) = if lower(title) == "example" {
+    (example-accent, example-bg, "▶")
+  } else {
+    (accent, accent-bg, "✦")
+  }
   block(
     width: 100%,
     inset: (x: 3mm, y: 2.5mm),
     radius: (left: 0mm, right: 2mm),
-    stroke: (left: 1mm + accent),
-    fill: accent-bg,
+    stroke: (left: 1mm + col),
+    fill: bg,
     breakable: false,
   )[
-    #text(size: 7.5pt, weight: "bold", fill: accent)[#upper(title)]
+    #text(size: 7.5pt, weight: "bold", fill: col)[#icon #upper(title)]
     #v(1mm)
     #text(size: 8.5pt)[#body]
   ]
@@ -44,7 +51,7 @@
 #let section-heading(title) = {
   v(5mm)
   block(below: 2mm, sticky: true)[
-    #text(size: 10.5pt, weight: "bold", fill: heading-color)[#title]
+    #text(size: 10.5pt, weight: "bold", fill: heading-color)[• #title]
     #v(0.5mm)
     #line(length: 100%, stroke: 0.5pt + accent-light)
   ]
