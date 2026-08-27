@@ -21,6 +21,7 @@ Not routable on the public internet; used internally in homes and businesses.
 #block(breakable: false)[
 #table(
   columns: 2,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -68,6 +69,7 @@ Translates both the IP address AND the port number — allows many devices to sh
   #block(breakable: false)[
 #table(
   columns: 2,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(

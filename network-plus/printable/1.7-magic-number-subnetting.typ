@@ -14,6 +14,7 @@ Given 192.168.1.0/24, find optimal subnet mask for 40 devices per subnet:
 #block(breakable: false)[
 #table(
   columns: 4,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -59,6 +60,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
 #block(breakable: false)[
 #table(
   columns: 9,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -103,6 +105,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   #block(breakable: false)[
 #table(
   columns: 5,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -137,6 +140,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   #block(breakable: false)[
 #table(
   columns: 5,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -171,6 +175,7 @@ No binary-to-decimal conversions needed — uses simple subtraction and multiple
   #block(breakable: false)[
 #table(
   columns: 5,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(

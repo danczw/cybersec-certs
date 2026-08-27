@@ -6,13 +6,40 @@
 
 
 
+#block(breakable: false)[
+#table(
+  columns: 3,
+  inset: (x: 3pt, y: 2.5pt),
+  stroke: none,
+  fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
+  table.header(
+    text(fill: white, weight: "bold")[Device],
+    text(fill: white, weight: "bold")[OSI Layer],
+    text(fill: white, weight: "bold")[Primary Function],
+  ),
+  [Router],   [3],   [Routes between subnets],
+  [Switch],   [2],   [Forwards by MAC address],
+  [Firewall/NGFW],   [3, 4 & 7\*],   [Filters/controls traffic],
+  [IDS/IPS],   [3, 4 & 7\*],   [Detects/blocks attacks],
+  [Load Balancer],   [4 & 7\*],   [Distributes server traffic],
+  [Proxy],   [7\*],   [Intermediary for requests],
+  [NAS],   [—],   [File-level network storage],
+  [SAN],   [—],   [Block-level network storage],
+  [Access Point],   [2],   [Bridges wireless and wired],
+  [WLC],   [—],   [Centralized AP management],
+)
+]
+
+
+\*= inferred, not stated in source
+
 #section-heading("Router")
 
 
 - Routes data between IP subnets — same data center or across the world
 - OSI layer 3 (network layer) device — uses IP addresses to determine next hop
 - Layer 3 switch = switch with routing functionality built in (layer 2 switch + layer 3 router in one device)
-- Connects diverse network types: LAN to WAN, copper to fiber
+- Connects diverse network types: LAN/WAN, copper/fiber
 - May have many different interfaces for different connection types
 
 #section-heading("Switch")
@@ -40,10 +67,10 @@
 
 
 - IDS (Intrusion Detection System) — detects and alerts on inbound attacks
-- IPS (Intrusion Prevention System) — detects AND blocks attacks
+- IPS (Intrusion Prevention System) — detects and blocks
 - Looks for known attack types: OS exploits, application vulnerabilities, buffer overflows, XSS
 - Much of this functionality now integrated into NGFWs
-- IPS preferred in enterprise since IDS can only alert, not block
+- IPS preferred in enterprise — IDS only alerts
 
 #section-heading("Load Balancer")
 
@@ -53,9 +80,9 @@
 - Detects server failures, removes failed servers from rotation, maintains uptime
 - Optimization features:
   - TCP offload — speeds internal server communication
-  - SSL offload — handles encryption/decryption instead of servers
+  - SSL offload — handles encryption for servers
   - Caching — answers requests immediately without hitting backend servers
-  - QoS (Quality of Service) — prioritizes certain traffic/pages
+  - QoS (Quality of Service) — prioritizes certain traffic
   - Application-centric load balancing — routes specific pages to specific servers
 
 #section-heading("Proxy")
@@ -64,8 +91,8 @@
 - Sits between user and internet, makes requests on user's behalf
 - Receives responses, verifies no malicious content, forwards to user
 - Features:
-  - Caching — returns cached responses without hitting internet
-  - Access control — require authentication for internet access
+  - Caching — returns cached responses, skips internet
+  - Access control — authentication for internet access
   - URL filtering and content scanning
 - Types:
   - Explicit proxy — requires OS/application configuration

@@ -61,6 +61,7 @@ Four steps to obtain an IP address automatically:
 #block(breakable: false)[
 #table(
   columns: 2,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(

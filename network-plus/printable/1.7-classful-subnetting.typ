@@ -19,6 +19,7 @@
 #block(breakable: false)[
 #table(
   columns: 6,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
@@ -74,6 +75,7 @@ Class C  11111111 . 11111111 . 11111111 . 00000000
 #block(breakable: false)[
 #table(
   columns: 2,
+  inset: (x: 3pt, y: 2.5pt),
   stroke: none,
   fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },
   table.header(
