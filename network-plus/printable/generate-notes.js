@@ -269,7 +269,7 @@ function generateTypFile(notePath) {
   const title = `${objective} — ${topic}`;
   const body = convertMarkdown(content, fm);
 
-  let typ = `#import "template.typ": *\n\n`;
+  let typ = `#import "../template.typ": *\n\n`;
   typ += `#start-note("${title}", "${domain}", "${objective}")\n\n`;
   typ += `#columns(2, gutter: 5mm)[\n\n`;
   typ += body;
@@ -280,7 +280,7 @@ function generateTypFile(notePath) {
     typ = require(fixPath)(typ);
   }
 
-  const outPath = path.join(OUTPUT_DIR, `${basename}.typ`);
+  const outPath = path.join(OUTPUT_DIR, 'notes', `${basename}.typ`);
   fs.writeFileSync(outPath, typ);
   return basename;
 }
@@ -330,7 +330,7 @@ function generateAllNotes(basenames) {
   typ += `]\n\n`;
 
   for (const name of basenames) {
-    typ += `#include "${name}.typ"\n`;
+    typ += `#include "notes/${name}.typ"\n`;
   }
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'all-notes.typ'), typ);
