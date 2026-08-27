@@ -1,0 +1,72 @@
+#import "../template.typ": *
+
+#start-note("1.2 — Networking Functions", "1.0 Networking Concepts", "1.2")
+
+#columns(2, gutter: 5mm)[
+
+
+
+#section-heading("CDN (Content Delivery Network)")
+
+
+- Distributes data efficiently from central point to end users
+- Servers placed in geographical regions (North America, Asia, Europe, etc.)
+- Caches content at each location — users hit nearest server
+- Faster than routing all users to one central server
+- Used by YouTube, streaming sites, small and large websites alike
+
+#section-heading("VPN (Virtual Private Network)")
+
+
+- Connects to a remote network with all data encrypted
+- Secure communication even across inherently insecure networks (public internet)
+- *Concentrator / head-end device*
+  — Central connection point for all VPN users
+  - Purpose-built appliance for high-speed encryption/decryption in real time
+  - Supports hundreds or thousands of simultaneous users
+  - Often integrated into a next-generation firewall
+- Smaller networks can use software-based VPN concentrators
+- Client software: manufacturer-specific or built-in OS VPN clients (Windows, macOS, Linux)
+
+#section-heading("QoS (Quality of Service)")
+
+
+- Prioritizes certain applications over others on the network
+- Also called traffic shaping or packet shaping
+- Controls bandwidth usage and data rates per application
+- Example: real-time audio/video gets higher priority than file transfers
+- Configured on firewalls, routers, or switches
+- Devices may have pre-built application lists or allow custom entries
+
+#section-heading("TTL (Time to Live)")
+
+
+- Timer that limits how long a packet persists on network
+- Prevents infinite loops and stale data
+- When TTL reaches zero, the task/packet is dropped
+
+#sub-heading("TTL in IP (hop count)")
+
+- Each router decreases TTL by 1 when processing a packet
+- When TTL = 0, router discards the packet
+- Defaults: macOS/Linux = 64 hops, Windows = 128 hops
+- Typical internet path = 12–16 hops
+- Located in the IPv4 header (visible in packet captures)
+- Primary use: stops routing loops
+
+#sub-heading("Routing loops")
+
+- Router A thinks next hop is Router B, Router B thinks next hop is Router A
+- Packet bounces back and forth indefinitely without TTL
+- Traceroute shows loop: 10.1.10.1 → 10.2.10.2 → 10.1.10.1 → ...
+- Often caused by a single static route misconfiguration
+
+#sub-heading("TTL in DNS (seconds)")
+
+- Defines how long a DNS resolution is cached
+- Included in the DNS server response
+- Example: `dig www.professormesser.com` → TTL 300 = cache for 5 minutes
+- After TTL expires, client must re-query DNS
+- Allows administrators to ensure IP changes propagate within TTL window
+
+]

@@ -1,0 +1,81 @@
+#import "../template.typ": *
+
+#start-note("5.5 — Software Tools", "5.0 Network Troubleshooting", "5.5")
+
+#columns(2, gutter: 5mm)[
+
+
+
+#section-heading("Protocol Analyzers")
+
+
+- Captures frames on a wired or wireless network and presents results in human-readable format
+- Capture capability may be built into the device (switch, router, firewall)
+- Output can be viewed on the device or exported to a protocol analyzer like Wireshark
+- Wireshark provides additional protocol decodes and details about entire conversations
+- Some administrators capture all packets to disk for later analysis (big data analysis)
+- Useful for finding what part of network communication is performing poorly
+
+#section-heading("Port Scanners (nmap)")
+
+
+- nmap (Network Mapper) — finds open port numbers, operating systems, and application versions
+- Active scan — sends queries to a device and examines results
+- Capabilities:
+  - Discover open ports on a remote device
+  - Identify operating system type and version without logging in
+  - Identify services running on open ports
+  - Scripting engine to extend functionality with custom scripts
+- Can scan a single device or an entire IP address range
+- Builds a map of IP addresses, operating systems, and services on the network
+- Useful for finding rogue devices — can perform Layer 2 scans on the same subnet, making it difficult for rogue devices to hide
+
+#callout("Example")[
+  *nmap scan of 10.1.10.222* — host up with open ports:
+
+  - Port 22 — SSH
+  - Port 80 — HTTP
+  - Port 443 — HTTPS
+  - Port 548 — AFP (Apple Filing Protocol)
+  - Port 2049 — NFS
+
+  Unexpected open ports require additional research to identify running services.
+]
+
+
+#section-heading("Device Discovery (CDP and LLDP)")
+
+
+- Difficult to determine what devices are plugged into a switch, their VLANs, or IP addresses by looking at the front panel
+- Discovery protocols gather this information automatically
+
+#sub-heading("CDP (Cisco Discovery Protocol)")
+
+- Proprietary to Cisco devices
+- Provides configuration information without logging in to the device
+- Information includes: IP addresses, port identification, software version, native VLAN, hardware-level interface configuration
+
+#sub-heading("LLDP (Link Layer Discovery Protocol)")
+
+- Vendor-neutral protocol
+- Almost all switches support LLDP
+- Provides: MAC address, interface identification, switch name, VLAN ID
+
+#sub-heading("CDP and LLDP Together")
+
+- Both can run simultaneously on a device
+- Third-party applications and devices can use these protocols to present information in consolidated form
+
+#section-heading("Speed Test Sites")
+
+
+- Send a lot of information over a link and measure how long it took (download and upload)
+- Useful to measure before and after network changes to compare speeds
+- Measure at different times of day — more bandwidth available during off hours
+- Not all speed test sites are the same:
+  - Sites farther away may give different values than closer ones
+  - Some sites are constrained by their own bandwidth
+- Most accurate results often from your local ISP's speed test site
+- Third-party options: Fast.com, SpeedOf.Me, speedtest.net, testmy.net
+
+]
