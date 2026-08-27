@@ -36,7 +36,7 @@
   }
   block(
     width: 100%,
-    inset: (x: 3mm, y: 2.5mm),
+    inset: (x: 2.5mm, y: 2mm),
     radius: (left: 0mm, right: 2mm),
     stroke: (left: 1mm + col),
     fill: bg,
@@ -63,6 +63,8 @@
     #text(size: 9.5pt, weight: "semibold")[#title]
   ]
 }
+
+#show list.item: it => block(breakable: false)[#it]
 
 #let start-note(title, domain, objective) = {
   note-title.update(title)

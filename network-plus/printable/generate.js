@@ -56,10 +56,10 @@ function convertInline(text) {
   });
   // Escape all remaining asterisks
   text = text.replace(/\*/g, '\\*');
-  // Restore bold as Typst *bold* (use #strong[] if content starts with / to avoid */ block comment)
-  text = text.replace(/%%BOLD(\d+)%%/g, (_, i) => {
+  // Restore bold as Typst *bold* (use #strong[] when adjacent to word chars or content starts with /)
+  text = text.replace(/(\w)?%%BOLD(\d+)%%(\w)?/g, (_, before, i, after) => {
     const b = bolds[i];
-    if (b.startsWith('/')) return `#strong[${b}]`;
+    if (before || after || b.startsWith('/')) return `${before || ''}#strong[${b}]${after || ''}`;
     return `*${b}*`;
   });
   // Links (strip, keep text)
@@ -79,7 +79,7 @@ function convertTable(lines) {
   if (rows.length === 0) return '';
 
   const cols = rows[0].length;
-  let out = `#block(breakable: false)[\n#table(\n  columns: ${cols},\n  stroke: none,\n`;
+  let out = `#block(breakable: false)[\n#table(\n  columns: ${cols},\n  inset: (x: 3pt, y: 2.5pt),\n  stroke: none,\n`;
   out += `  fill: (_, row) => if row == 0 { accent } else if calc.even(row) { accent-bg } else { none },\n`;
   out += `  table.header(\n`;
   out += rows[0].map(h => `    text(fill: white, weight: "bold")[${convertInline(h)}]`).join(',\n') + ',\n';
@@ -275,6 +275,11 @@ function generateTypFile(notePath) {
   typ += body;
   typ += `]\n`;
 
+  const fixPath = path.join(OUTPUT_DIR, 'fixes', `${basename}.js`);
+  if (fs.existsSync(fixPath)) {
+    typ = require(fixPath)(typ);
+  }
+
   const outPath = path.join(OUTPUT_DIR, `${basename}.typ`);
   fs.writeFileSync(outPath, typ);
   return basename;
@@ -336,12 +341,6 @@ const notes = findNotes();
 const basenames = [];
 
 for (const note of notes) {
-  const basename = path.basename(note, '.md');
-  // Skip OSI model — already hand-crafted
-  if (basename === '1.1-osi-model') {
-    basenames.push(basename);
-    continue;
-  }
   const name = generateTypFile(note);
   basenames.push(name);
   console.log(`Generated: ${name}.typ`);
