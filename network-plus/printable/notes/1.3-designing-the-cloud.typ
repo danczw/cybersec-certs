@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("1.3 — Designing the Cloud", "1.0 Networking Concepts", "1.3")
 

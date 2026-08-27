@@ -1,5 +1,5 @@
 // ─── Network+ Complete Printable Notes ───
-#import "template.typ": *
+#import "notes-style.typ": *
 
 #set page(paper: "a4", margin: (x: 10mm, top: 12mm, bottom: 16mm),
   footer: context {

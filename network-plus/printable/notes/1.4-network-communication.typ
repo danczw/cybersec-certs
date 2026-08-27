@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("1.4 — Network Communication", "1.0 Networking Concepts", "1.4")
 

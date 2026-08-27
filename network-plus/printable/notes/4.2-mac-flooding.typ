@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("4.2 — MAC Flooding", "4.0 Network Security", "4.2")
 

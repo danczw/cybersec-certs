@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("3.3 — Disaster Recovery", "3.0 Network Operations", "3.3")
 

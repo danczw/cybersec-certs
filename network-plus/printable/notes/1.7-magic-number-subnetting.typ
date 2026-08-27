@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("1.7 — Magic Number Subnetting", "1.0 Networking Concepts", "1.7")
 

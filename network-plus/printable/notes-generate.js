@@ -269,13 +269,13 @@ function generateTypFile(notePath) {
   const title = `${objective} — ${topic}`;
   const body = convertMarkdown(content, fm);
 
-  let typ = `#import "../template.typ": *\n\n`;
+  let typ = `#import "../notes-style.typ": *\n\n`;
   typ += `#start-note("${title}", "${domain}", "${objective}")\n\n`;
   typ += `#columns(2, gutter: 5mm)[\n\n`;
   typ += body;
   typ += `]\n`;
 
-  const fixPath = path.join(OUTPUT_DIR, 'fixes', `${basename}.js`);
+  const fixPath = path.join(OUTPUT_DIR, 'notes-fixes', `${basename}.js`);
   if (fs.existsSync(fixPath)) {
     typ = require(fixPath)(typ);
   }
@@ -287,7 +287,7 @@ function generateTypFile(notePath) {
 
 function generateAllNotes(basenames) {
   let typ = `// ─── Network+ Complete Printable Notes ───\n`;
-  typ += `#import "template.typ": *\n\n`;
+  typ += `#import "notes-style.typ": *\n\n`;
   typ += `#set page(paper: "a4", margin: (x: 10mm, top: 12mm, bottom: 16mm),\n`;
   typ += `  footer: context {\n`;
   typ += `    if counter(page).get().first() > 1 [\n`;
@@ -333,7 +333,7 @@ function generateAllNotes(basenames) {
     typ += `#include "notes/${name}.typ"\n`;
   }
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, 'all-notes.typ'), typ);
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'notes-all.typ'), typ);
 }
 
 // Main
@@ -347,4 +347,4 @@ for (const note of notes) {
 }
 
 generateAllNotes(basenames);
-console.log(`\nGenerated all-notes.typ with ${basenames.length} includes`);
+console.log(`\nGenerated notes-all.typ with ${basenames.length} includes`);

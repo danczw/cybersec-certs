@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("1.1 — OSI Model", "1.0 Networking Concepts", "1.1")
 

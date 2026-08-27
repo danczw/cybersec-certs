@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("2.3 — Wireless Networking", "2.0 Network Implementation", "2.3")
 

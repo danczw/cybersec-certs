@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../notes-style.typ": *
 
 #start-note("5.4 — Wireless Issues", "5.0 Network Troubleshooting", "5.4")
 
