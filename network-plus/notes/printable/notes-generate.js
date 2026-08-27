@@ -2,13 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const NOTES_DIR = path.join(__dirname, '..', 'notes');
+const NOTES_DIR = path.join(__dirname, '..');
 const OUTPUT_DIR = __dirname;
 
 function findNotes() {
   const notes = [];
   const dirs = fs.readdirSync(NOTES_DIR).filter(d =>
-    fs.statSync(path.join(NOTES_DIR, d)).isDirectory() && d !== 'ai-generated'
+    fs.statSync(path.join(NOTES_DIR, d)).isDirectory() && d !== 'ai-generated' && d !== 'printable'
   );
   for (const dir of dirs) {
     const files = fs.readdirSync(path.join(NOTES_DIR, dir))
@@ -280,7 +280,7 @@ function generateTypFile(notePath) {
     typ = require(fixPath)(typ);
   }
 
-  const outPath = path.join(OUTPUT_DIR, 'notes', `${basename}.typ`);
+  const outPath = path.join(OUTPUT_DIR, 'generated', `${basename}.typ`);
   fs.writeFileSync(outPath, typ);
   return basename;
 }
@@ -330,7 +330,7 @@ function generateAllNotes(basenames) {
   typ += `]\n\n`;
 
   for (const name of basenames) {
-    typ += `#include "notes/${name}.typ"\n`;
+    typ += `#include "generated/${name}.typ"\n`;
   }
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'notes-all.typ'), typ);

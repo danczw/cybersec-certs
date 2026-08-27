@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const INPUT = path.join(__dirname, '..', 'abbreviations.md');
+const INPUT = path.join(__dirname, 'abbreviations.md');
 const OUTPUT = path.join(__dirname, 'abbr-all.typ');
 
 function parseTable(content) {
