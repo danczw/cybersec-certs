@@ -43,7 +43,7 @@
   the exam sets its traps.
 </p>
 
-<table>
+<table id="study-table">
   <thead>
     <tr><th>First octet</th><th>Then check</th><th>Verdict</th></tr>
   </thead>
@@ -83,6 +83,13 @@
   Same four labels on most questions, deliberately. You are not learning new facts here
   — you are making one lookup automatic, and that takes repetition against varied input.
   Say your answer out loud before you click; a silent guess does not build anything.
+</p>
+
+<p>
+  <strong>The table above is now collapsed.</strong> Leaving it on screen turned this
+  drill into a reading test the first time round — answering off the page scores as
+  "retained" when nothing was retrieved. Peeking is allowed and counted, so the score
+  arrives with the number of peeks attached and stays interpretable.
 </p>
 
 <div id="quiz"></div>
@@ -155,6 +162,7 @@ Quiz.mount('#quiz', {
   title: 'Lesson 0002 — Reading an IPv4 Address on Sight',
   storageKey: 'ipv4-0002',
   shuffle: false,
+  closedBook: '#study-table',
   domains: {
     d1: { label: 'Concepts',        weight: 23 },
     d2: { label: 'Implementation',  weight: 20 },
