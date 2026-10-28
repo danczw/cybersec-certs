@@ -103,21 +103,19 @@ Open `game/index.html` directly (no server required).
 
 - Spaced repetition scheduling (correct = double interval, wrong = reset)
 - XP / level / streak system with localStorage persistence
-- Domain mastery tracking
+- Domain mastery tracking, and question selection weighted by exam percentages
 - 2365 concepts across all 5 domains, generated from the flashcard decks
+- 234 abbreviations, generated from the canonical glossary
 
-Regenerate game data after editing flashcards:
+Regenerate game data after editing flashcards or the glossary:
 
 ```sh
 node game/generate-data.js
 ```
 
-### Known Issue
-
-Domain weights in `game/generate-data.js` are wrong for domains 4 and 5 — both
-are set to 19%, where the exam gives domain 4 **14%** and domain 5 **24%**. Any
-weighted domain-mastery figure the game reports is therefore skewed. Fix the
-table at `game/generate-data.js:14-18` and regenerate.
+Domain weights live in two places that must agree: `game/generate-data.js`
+(baked into `js/data.js`) and `game/js/engine.js` (drives Rapid Fire question
+selection).
 
 ## Status
 
