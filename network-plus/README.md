@@ -90,7 +90,7 @@ Open `game/index.html` directly (no server required).
 | Mode             | Domain | Description                                                                  |
 |------------------|--------|------------------------------------------------------------------------------|
 | Rapid Fire       | All    | Timed quiz across all domains; spaced repetition resurfaces weak concepts    |
-| Abbreviations    | All    | Acronym recall, tested in both directions (multiple choice and typed)        |
+| Abbreviations    | All    | Acronym recall both directions, with a recall-first delay before the options |
 | Layer Drop       | 1.1    | Sort protocols, devices and concepts onto the correct OSI layer, under timer |
 | Port Sprint      | 1.4    | Speed-typing recall of protocol ↔ port, with a streak combo multiplier       |
 | Cable Lab        | 1.5    | Match requirements to cable, connector and standard; escalates to scenarios  |
@@ -102,6 +102,9 @@ Open `game/index.html` directly (no server required).
 ### Features
 
 - Spaced repetition scheduling (correct = double interval, wrong = reset)
+- Recall-first gate in Abbreviations mode: options stay hidden for a few seconds
+  so each item is a free-recall attempt before it becomes a recognition task.
+  Selectable at 2s / 4s / 6s / off, and the choice persists
 - XP / level / streak system with localStorage persistence
 - Domain mastery tracking, and question selection weighted by exam percentages
 - 2365 concepts across all 5 domains, generated from the flashcard decks
