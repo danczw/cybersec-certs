@@ -250,9 +250,9 @@ const AttackSurface = (() => {
       const state = Engine.getState();
       state.player.totalXP += xp;
       state.player.level = Engine.getLevel(state.player.totalXP);
-      feedback.innerHTML = `<div class="explanation-card"><h4>// CORRECT +15 XP</h4><p>Threat identified. Now select the countermeasure.</p></div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>CORRECT +15 XP</h4><p>Threat identified. Now select the countermeasure.</p></div>`;
     } else {
-      feedback.innerHTML = `<div class="explanation-card"><h4>// INCORRECT</h4><p>The attack was <strong>${UI.escapeHtml(scenario.attack)}</strong>. Now select the countermeasure.</p></div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>INCORRECT</h4><p>The attack was <strong>${UI.escapeHtml(scenario.attack)}</strong>. Now select the countermeasure.</p></div>`;
     }
 
     UI.updateHeader();
@@ -346,20 +346,20 @@ const AttackSurface = (() => {
       state.player.streak++;
       if (state.player.streak > state.player.bestStreak) state.player.bestStreak = state.player.streak;
 
-      feedback.innerHTML = `<div class="explanation-card"><h4>// KILL CHAIN BROKEN +${15 + roundXP} XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>KILL CHAIN BROKEN +${15 + roundXP} XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
       const rect = div.querySelector('.question-card').getBoundingClientRect();
       UI.spawnParticles(rect.left + rect.width / 2, rect.top);
     } else if (neitherCorrect) {
       killChainStreak = 0;
       state.player.streak = 0;
-      feedback.innerHTML = `<div class="explanation-card"><h4>// ATTACK SUCCEEDED &mdash; 0 XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>ATTACK SUCCEEDED &mdash; 0 XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
     } else {
       killChainStreak = 0;
       sessionStats.xpEarned += roundXP;
       state.player.totalXP += roundXP;
       state.player.level = Engine.getLevel(state.player.totalXP);
       state.player.streak = 0;
-      feedback.innerHTML = `<div class="explanation-card"><h4>// PARTIAL CREDIT +${(phase1Correct ? 15 : 0) + roundXP} XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>PARTIAL CREDIT +${(phase1Correct ? 15 : 0) + roundXP} XP</h4><p>${UI.escapeHtml(scenario.explanation)}</p></div>`;
     }
 
     UI.updateHeader();

@@ -173,7 +173,7 @@ const Abbreviations = (() => {
       const feedback = document.getElementById('abbrev-type-feedback');
       feedback.innerHTML = `
         <div class="explanation-card">
-          <h4>// ${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
+          <h4>${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
           <p><strong>${UI.escapeHtml(target.abbrev)}</strong> = ${UI.escapeHtml(target.full)}</p>
           ${target.source ? `<p class="source-ref">Source: ${UI.escapeHtml(target.source)}</p>` : ''}
         </div>
@@ -286,7 +286,7 @@ const Abbreviations = (() => {
         const exp = document.createElement('div');
         exp.className = 'explanation-card';
         exp.innerHTML = `
-          <h4>// ${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
+          <h4>${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
           <p><strong>${UI.escapeHtml(target.abbrev)}</strong> = ${UI.escapeHtml(target.full)}</p>
           ${target.source ? `<p class="source-ref">Source: ${UI.escapeHtml(target.source)}</p>` : ''}
         `;

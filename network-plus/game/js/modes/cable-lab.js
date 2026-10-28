@@ -235,7 +235,7 @@ const CableLab = (() => {
 
     div.innerHTML = `
       <div class="route-problem">
-        <h3>// ${DIFFICULTIES[currentDifficulty - 1].name.toUpperCase()}</h3>
+        <h3>${DIFFICULTIES[currentDifficulty - 1].name.toUpperCase()}</h3>
         <div class="question-text">${UI.escapeHtml(prob.question)}</div>
         <div class="answers-list" id="cable-choices"></div>
         <div id="cable-feedback"></div>
@@ -263,7 +263,7 @@ const CableLab = (() => {
 
     div.innerHTML = `
       <div class="route-problem">
-        <h3>// SCENARIO</h3>
+        <h3>SCENARIO</h3>
         <div class="cable-scenario">${UI.escapeHtml(prob.scenario)}</div>
         <div class="question-text">${UI.escapeHtml(prob.question)}</div>
         <div class="answers-list" id="cable-choices"></div>
@@ -305,13 +305,13 @@ const CableLab = (() => {
       state.player.streak++;
       if (state.player.streak > state.player.bestStreak) state.player.bestStreak = state.player.streak;
 
-      feedback.innerHTML = `<div class="explanation-card"><h4>// CORRECT +${xp} XP</h4>${explanation ? `<p>${UI.escapeHtml(explanation)}</p>` : ''}</div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>CORRECT +${xp} XP</h4>${explanation ? `<p>${UI.escapeHtml(explanation)}</p>` : ''}</div>`;
       const rect = buttons[0].parentElement.getBoundingClientRect();
       UI.spawnParticles(rect.left + rect.width / 2, rect.top);
     } else {
       const state = Engine.getState();
       state.player.streak = 0;
-      feedback.innerHTML = `<div class="explanation-card"><h4>// INCORRECT</h4><p><strong>${UI.escapeHtml(correctAnswer)}</strong></p>${explanation ? `<p>${UI.escapeHtml(explanation)}</p>` : ''}</div>`;
+      feedback.innerHTML = `<div class="explanation-card"><h4>INCORRECT</h4><p><strong>${UI.escapeHtml(correctAnswer)}</strong></p>${explanation ? `<p>${UI.escapeHtml(explanation)}</p>` : ''}</div>`;
     }
 
     UI.updateHeader();

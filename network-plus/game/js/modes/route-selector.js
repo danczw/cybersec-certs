@@ -223,7 +223,7 @@ const RouteSelector = (() => {
 
     div.innerHTML = `
       <div class="route-problem">
-        <h3>// ${DIFFICULTIES[currentDifficulty - 1].name.toUpperCase()}</h3>
+        <h3>${DIFFICULTIES[currentDifficulty - 1].name.toUpperCase()}</h3>
         <div class="route-prompt">
           Destination: <code>${problem.destination}</code>
         </div>
@@ -319,7 +319,7 @@ const RouteSelector = (() => {
 
     div.innerHTML = `
       <div class="route-problem">
-        <h3>// LABEL THE ENTRY</h3>
+        <h3>LABEL THE ENTRY</h3>
         <div class="route-entry-display"><code>${UI.escapeHtml(entry)}</code></div>
         <div class="route-label-grid" id="label-grid"></div>
         <button class="subnet-submit" id="label-submit">CHECK</button>

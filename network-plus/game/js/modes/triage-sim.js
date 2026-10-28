@@ -644,7 +644,7 @@ const TriageSim = (() => {
         const exp = document.createElement('div');
         exp.className = 'explanation-card';
         exp.innerHTML = `
-          <h4>// ${correct ? 'GOOD CALL' : 'COSTLY MOVE'}${choice.cost > 0 ? ' (-' + choice.cost + ' budget)' : ''}</h4>
+          <h4>${correct ? 'GOOD CALL' : 'COSTLY MOVE'}${choice.cost > 0 ? ' (-' + choice.cost + ' budget)' : ''}</h4>
           <p>${UI.escapeHtml(choice.feedback)}</p>
         `;
         wrapper.querySelector('.question-card').appendChild(exp);
@@ -659,7 +659,7 @@ const TriageSim = (() => {
           const failDiv = document.createElement('div');
           failDiv.className = 'explanation-card';
           failDiv.innerHTML = `
-            <h4>// BUDGET EXHAUSTED</h4>
+            <h4>BUDGET EXHAUSTED</h4>
             <p>You ran out of diagnostic budget. The incident escalates to a senior engineer.</p>
             <p><strong>Root cause was:</strong> ${UI.escapeHtml(currentScenario.rootCause.choices.find(c => c.correct).text)}</p>
           `;
@@ -789,13 +789,13 @@ const TriageSim = (() => {
         exp.className = 'explanation-card';
         if (correct) {
           exp.innerHTML = `
-            <h4>// INCIDENT RESOLVED +${result.xp} XP</h4>
+            <h4>INCIDENT RESOLVED +${result.xp} XP</h4>
             <p>Correct! Budget remaining: ${budget}/${MAX_BUDGET}</p>
             <p><strong>${UI.escapeHtml(shuffledChoices.find(c => c.correct).text)}</strong></p>
           `;
         } else {
           exp.innerHTML = `
-            <h4>// INCORRECT DIAGNOSIS</h4>
+            <h4>INCORRECT DIAGNOSIS</h4>
             <p><strong>Root cause:</strong> ${UI.escapeHtml(shuffledChoices.find(c => c.correct).text)}</p>
           `;
         }

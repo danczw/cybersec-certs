@@ -1,46 +1,9 @@
 const App = (() => {
   const main = document.getElementById('main-content');
-  const canvas = document.getElementById('bg-canvas');
-  const ctx = canvas.getContext('2d');
-  let dots = [];
 
   function init() {
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
     window.addEventListener('hashchange', route);
-    startBgAnimation();
     route();
-  }
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    rebuildDots();
-  }
-
-  function rebuildDots() {
-    const gridSize = 40;
-    dots = [];
-    for (let x = 0; x < canvas.width; x += gridSize) {
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        dots.push({ x, y, baseAlpha: Math.random() * 0.3 });
-      }
-    }
-  }
-
-  function startBgAnimation() {
-    let tick = 0;
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      tick += 0.005;
-      for (const dot of dots) {
-        const wave = Math.sin(tick + dot.x * 0.01 + dot.y * 0.01) * 0.5 + 0.5;
-        ctx.fillStyle = `rgba(0, 255, 136, ${dot.baseAlpha * wave * 0.3})`;
-        ctx.fillRect(dot.x, dot.y, 1, 1);
-      }
-      requestAnimationFrame(draw);
-    }
-    draw();
   }
 
   function route() {

@@ -154,7 +154,7 @@ const SubnetArchitect = (() => {
 
     area.innerHTML = `
       <div class="subnet-problem">
-        <h3>// BINARY CONVERSION</h3>
+        <h3>BINARY CONVERSION</h3>
         <div class="subnet-prompt">${prompt}</div>
         <div class="subnet-inputs">
           <div class="subnet-field">
@@ -197,7 +197,7 @@ const SubnetArchitect = (() => {
 
     area.innerHTML = `
       <div class="subnet-problem">
-        <h3>// CIDR & MASKS</h3>
+        <h3>CIDR & MASKS</h3>
         <div class="subnet-prompt">${prompt}</div>
         <div class="subnet-inputs">
           <div class="subnet-field">
@@ -229,7 +229,7 @@ const SubnetArchitect = (() => {
 
     area.innerHTML = `
       <div class="subnet-problem">
-        <h3>// NETWORK CALCULATIONS</h3>
+        <h3>NETWORK CALCULATIONS</h3>
         <div class="subnet-prompt">Given the IP <code>${ip}/${cidr}</code>, calculate:</div>
         <div class="subnet-inputs">
           <div class="subnet-field">
@@ -286,7 +286,7 @@ const SubnetArchitect = (() => {
 
     area.innerHTML = `
       <div class="subnet-problem">
-        <h3>// VLSM DESIGN</h3>
+        <h3>VLSM DESIGN</h3>
         <div class="subnet-prompt">
           Given network <code>10.0.0.0/24</code>, assign subnets for:<br>
           ${sorted.map(s => `• ${s.dept}: ${s.hosts} hosts needed`).join('<br>')}
@@ -332,7 +332,7 @@ const SubnetArchitect = (() => {
 
     area.innerHTML = `
       <div class="subnet-problem">
-        <h3>// SAME SUBNET?</h3>
+        <h3>SAME SUBNET?</h3>
         <div class="subnet-prompt">
           Are these two hosts on the same subnet?<br><br>
           Host A: <code>${ip1}/${cidr}</code><br>
@@ -379,7 +379,7 @@ const SubnetArchitect = (() => {
         const net2 = getNetworkAddress(ip2, cidr);
         feedback.innerHTML = `
           <div class="explanation-card">
-            <h4>// ${correct ? 'CORRECT' : 'INCORRECT'} ${result.xp ? '+' + result.xp + ' XP' : ''}</h4>
+            <h4>${correct ? 'CORRECT' : 'INCORRECT'} ${result.xp ? '+' + result.xp + ' XP' : ''}</h4>
             <p>Subnet mask: ${mask}<br>
             Host A network: ${net1}<br>
             Host B network: ${net2}<br>

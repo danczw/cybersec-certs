@@ -98,7 +98,7 @@ const RapidFire = (() => {
         const exp = document.createElement('div');
         exp.className = 'explanation-card';
         exp.innerHTML = `
-          <h4>// ${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
+          <h4>${correct ? 'CORRECT' : 'INCORRECT'}${result.xp ? ' +' + result.xp + ' XP' : ''}</h4>
           <p><strong>${UI.escapeHtml(concept.answer)}</strong></p>
           ${concept.explanation ? `<p>${UI.escapeHtml(concept.explanation)}</p>` : ''}
         `;
