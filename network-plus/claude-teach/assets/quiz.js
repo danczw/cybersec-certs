@@ -269,6 +269,7 @@
     });
 
     this.renderLookups(box, r);
+    this.renderReport(box, r);
 
     var weak = Object.keys(r.byDomain)
       .filter(function (k) { return r.byDomain[k].total && r.byDomain[k].pct < 100; })
@@ -293,6 +294,70 @@
     box.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     if (typeof this.cfg.onComplete === 'function') this.cfg.onComplete(r);
+  };
+
+  /* A copy-pasteable report. Domain aggregates say a domain is weak; they do
+     not say which idea inside it failed, and that is what picking the next
+     lesson actually depends on. Each question carries a `tag` naming the
+     specific thing it tested, so the missed list is directly actionable. */
+  Quiz.prototype.renderReport = function (box, r) {
+    var self = this;
+    var missed = [];
+
+    this.questions.forEach(function (q, i) {
+      if (self.answers[i] !== q.answer) {
+        missed.push((i + 1) + ' ' + (q.tag || q.stem.slice(0, 40)));
+      }
+    });
+
+    var lines = [];
+    lines.push((this.cfg.title || 'Quiz') + ' — ' + r.correct + '/' + r.total + ' (' + r.pct + '%)');
+
+    Object.keys(r.byDomain).forEach(function (k) {
+      var d = r.byDomain[k];
+      if (d.total) lines.push('  ' + d.label + ': ' + d.right + '/' + d.total);
+    });
+
+    lines.push('Missed: ' + (missed.length ? missed.join(' | ') : 'none'));
+
+    if (global.Abbr) {
+      var t = global.Abbr.lookups();
+      lines.push('Lookups: ' + (t.length ? t.join(', ') : 'none'));
+    }
+
+    var sec = el('div', 'lookups');
+    sec.appendChild(el('h3', null, 'Paste this to your teacher'));
+    sec.appendChild(
+      el('p', null, 'The missed list names the specific idea each question tested, which is what the next lesson gets built from.')
+    );
+
+    var pre = el('pre', 'report');
+    pre.textContent = lines.join('\n');
+    sec.appendChild(pre);
+
+    var btn = el('button', 'q__opt', 'Copy to clipboard');
+    btn.type = 'button';
+    btn.style.width = 'auto';
+    btn.addEventListener('click', function () {
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy to clipboard'; }, 1600); };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(pre.textContent).then(done, function () { select(pre); });
+      } else {
+        select(pre);
+      }
+    });
+    sec.appendChild(btn);
+
+    box.appendChild(sec);
+
+    function select(node) {
+      var range = document.createRange();
+      range.selectNodeContents(node);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      btn.textContent = 'Selected — press Ctrl+C';
+    }
   };
 
   /* Acronyms the user had to expand. This is the second axis of the

@@ -408,6 +408,19 @@ td { padding: 0.5rem 0.8rem 0.5rem 0; border-bottom: 1px solid var(--rule); vert
   list-style: none;
 }
 
+.report {
+  margin: 0.8rem 0;
+  padding: 0.9rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
 .lookups__list li {
   font-family: var(--mono);
   font-size: 0.7rem;
