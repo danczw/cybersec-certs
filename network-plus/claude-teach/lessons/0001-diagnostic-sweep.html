@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 0001 — Diagnostic Sweep · Network+ N10-009</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">Lesson 0001 · Network+ N10-009</p>
+  <h1>Diagnostic Sweep</h1>
+  <p class="subtitle">Fifteen questions to find out where you actually stand.</p>
+  <div class="meta">
+    <span>~10 minutes</span>
+    <span>All five domains</span>
+    <span>Retrieval practice</span>
+  </div>
+</header>
+
+<p>
+  You have <strong>86 note files and 82 flashcard decks</strong> in this repo. Coverage
+  is not your problem. The open question is retention — and you cannot answer that by
+  re-reading notes, because re-reading produces
+  <em>fluency</em>: the warm feeling of recognising material you could not actually
+  reproduce under exam conditions.
+</p>
+
+<p class="sidenote">
+  This is the <strong>fluency/storage distinction</strong>. Fluency is in-the-moment
+  recognition; storage strength is durable retrieval. Re-reading inflates the first
+  and barely touches the second. Testing yourself builds the second directly — the
+  <em>testing effect</em>, one of the most replicated findings in learning science.
+  See <a href="https://pdf.retrievalpractice.org/RetrievalPracticeGuide.pdf">Agarwal
+  &amp; Roediger, <cite>How to Use Retrieval Practice to Improve Learning</cite></a>.
+</p>
+
+<p>
+  So: no studying first. Answer cold. A wrong answer here is worth more than a right
+  one — it marks exactly where your study time should go, and the act of guessing
+  wrong then seeing the correction encodes the fix better than reading it would have.
+</p>
+
+<div class="callout">
+  <span class="label">How this works</span>
+  <p>
+    One shot per question — once you click, the answer locks. Feedback appears
+    immediately, with the repo file the question came from so you can go read the
+    source. Your progress saves, so you can stop and come back.
+  </p>
+</div>
+
+<div class="callout callout--supplement">
+  <span class="label">Acronyms</span>
+  <p>
+    You mentioned you often have to look the acronyms up first. Every acronym in this
+    lesson is clickable — <strong>give yourself one beat to recall it, then click</strong>.
+    All 234 expansions come from
+    <a href="../../abbreviations/abbreviations.md">abbreviations.md</a>, and each one
+    links back to the note that introduced it.
+  </p>
+  <p>
+    Clicks are counted, and that count is the point. A decent score with many lookups
+    means the <em>vocabulary</em> is your bottleneck, which is a far cheaper problem to
+    fix than shaky concepts — so the result panel reports both numbers separately.
+    Don't ration the clicks to look good; an unlooked-up guess tells us nothing.
+  </p>
+</div>
+
+<h2>The sweep</h2>
+
+<p>
+  Questions are weighted roughly to the real exam: Networking Concepts 23%,
+  Implementation 20%, Operations 19%, Security 14%, Troubleshooting 24%.
+  Domains are <strong>interleaved rather than blocked</strong>, so you have to work out
+  which body of knowledge applies before you can answer — closer to the real exam, and
+  harder in the way that helps.
+</p>
+
+<div id="quiz"></div>
+
+<h2>Primary source</h2>
+
+<p>
+  Every question above traces to the Professor Messer N10-009 course, which is the
+  highest-quality free resource for this exam and the basis of every note in
+  <code>notes/</code>.
+</p>
+
+<div class="callout callout--source">
+  <span class="label">Go watch / read</span>
+  <p>
+    <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-training-course/">Professor
+    Messer's CompTIA Network+ N10-009 Training Course</a> — 87 videos, 12h 55m,
+    organised by exam objective. Free, no signup.
+  </p>
+  <p>
+    Pair it with the <a href="https://www.comptia.org/training/resources/exam-objectives">official
+    CompTIA exam objectives PDF</a>. The objectives document is the exam's actual
+    contract — anything not in it cannot be tested.
+  </p>
+</div>
+
+<h2>Optional drilling</h2>
+
+<p>
+  Between lessons, <a href="../../game/index.html">NetOps Command</a> (in
+  <code>game/</code>) runs spaced-repetition drills over 1455 concepts from the
+  domain 1–3 flashcards. Use it for maintenance reps, not for learning new material —
+  it reinforces what you already half-know.
+</p>
+
+<p>
+  It also has an <strong>Abbreviations mode</strong> that drills acronyms both ways
+  (multiple choice and typed recall). Given that acronyms are your stated bottleneck,
+  that mode is the single highest-leverage thing in this repo for you right now, and
+  typed recall is the harder, more useful half of it. Ten minutes there is worth an
+  hour of re-reading notes.
+</p>
+
+<div class="callout callout--ask">
+  <span class="label">Ask your teacher</span>
+  <p>
+    I am your tutor for this, not just a quiz generator. When the explanation on a
+    question does not land, say so and ask <em>why</em> — especially on anything you
+    got right by elimination rather than by knowing. Guessing correctly is a false
+    positive, and it is worth flagging.
+  </p>
+  <p>
+    Paste your domain breakdown back to me when you finish and I will build lesson
+    0002 against your weakest domain.
+  </p>
+</div>
+
+<nav class="lesson-nav">
+  <p class="eyebrow">Workspace</p>
+  <ul>
+    <li><a href="../MISSION.md">MISSION.md</a> — why you are doing this</li>
+    <li><a href="../../objectives.md">objectives.md</a> — the full N10-009 objective list</li>
+    <li><a href="../../resources.md">resources.md</a> — trusted sources and communities</li>
+    <li><a href="../../abbreviations/abbreviations.md">abbreviations.md</a> — the glossary (printable PDF alongside it)</li>
+    <li><a href="../reference/index.html">reference/</a> — quick-reference hub</li>
+  </ul>
+</nav>
+
+<script src="../assets/abbr-data.js"></script>
+<script src="../assets/abbr.js"></script>
+<script src="../assets/quiz.js"></script>
+<script>
+Quiz.mount('#quiz', {
+  storageKey: 'diag-0001',
+  shuffle: false,
+  domains: {
+    d1: { label: 'Concepts',        weight: 23 },
+    d2: { label: 'Implementation',  weight: 20 },
+    d3: { label: 'Operations',      weight: 19 },
+    d4: { label: 'Security',        weight: 14 },
+    d5: { label: 'Troubleshooting', weight: 24 }
+  },
+  questions: [
+    /* ---------------- Domain 1 — Networking Concepts (23%) ---------------- */
+    {
+      domain: 'd1',
+      stem: 'You plug a laptop into an office wall port and it comes up with the address 169.254.47.12. What happened?',
+      options: [
+        'No DHCP server responded',
+        'The gateway was misconfigured',
+        'A static address conflicted',
+        'Its subnet mask changed'
+      ],
+      answer: 0,
+      why: '169.254.x.x is the APIPA range. A host self-assigns a link-local address from it when no DHCP server answers, using ARP to confirm nothing else holds that address. The giveaway: an APIPA address means the DHCP conversation never completed — so it is a reachability problem between host and DHCP server, not an addressing mistake on the host.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd1',
+      stem: 'Which port does SFTP use?',
+      options: ['TCP 21', 'TCP 22', 'TCP 23', 'UDP 69'],
+      answer: 1,
+      why: 'SFTP rides on SSH, so it inherits SSH’s port: TCP 22. This is the point of the question — SFTP is not "FTP with encryption bolted on" (that is FTPS); it is a file transfer subsystem of SSH. TCP 21 is FTP control, TCP 23 is Telnet, UDP 69 is TFTP.',
+      source: 'flashcards/1-networking-concepts/1.4-common-ports.md'
+    },
+    {
+      domain: 'd1',
+      stem: 'What is the last address in the RFC 1918 range 172.16.0.0/12?',
+      options: ['172.16.255.255', '172.19.255.255', '172.31.255.255', '172.63.255.255'],
+      answer: 2,
+      why: 'A /12 leaves 20 host bits, so the block spans 172.16.0.0 through 172.31.255.255 — sixteen /16 networks. This is the private range people most often get wrong, because the mask does not land on an octet boundary. The other two are easier: 10.0.0.0/8 and 192.168.0.0/16.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+
+    /* ---------------- Domain 2 — Implementation (20%) ---------------- */
+    {
+      domain: 'd2',
+      stem: 'Your organisation has two internet links from different ISPs and needs routes to update dynamically across the public internet. Which protocol?',
+      options: ['OSPF', 'EIGRP', 'RIPv2', 'BGP'],
+      answer: 3,
+      why: 'BGP is the exterior gateway protocol — it routes between autonomous systems, which is exactly the "multiple ISP connections" case. OSPF and EIGRP are interior protocols: they operate inside a single AS you control. The exam tests this boundary constantly: inside your AS → OSPF/EIGRP, out to the world → BGP.',
+      source: 'flashcards/2-network-implementation/2.1-dynamic-routing.md'
+    },
+    {
+      domain: 'd2',
+      stem: 'How does OSPF decide which route is best?',
+      options: [
+        'fewest router hop count',
+        'lowest total link cost',
+        'highest available link bandwidth',
+        'shortest measured round trip'
+      ],
+      answer: 1,
+      why: 'OSPF is a link-state protocol: it assigns a cost to each link from throughput, link status and traversal time, then picks the lowest total cost path. Hop count is a distance-vector metric (RIP) — a route with more hops over fast links can easily beat a short slow one. When two OSPF paths tie on cost, it load balances across both.',
+      source: 'flashcards/2-network-implementation/2.1-dynamic-routing.md'
+    },
+    {
+      domain: 'd2',
+      stem: 'Which Spanning Tree Protocol port state clears existing tables and restarts the process?',
+      options: ['Blocking', 'Learning', 'Forwarding', 'Listening'],
+      answer: 3,
+      why: 'Listening clears the tables and restarts. The five states in order of a port coming up: Blocking (no traffic, loop prevented), Listening (reset tables), Learning (map the topology), Forwarding (traffic flows), Disabled (administratively off). STP (IEEE 802.1D) exists because Layer 2 frames have no TTL — nothing counts how many times a frame has been seen, so a loop runs forever and takes the switches down in seconds.',
+      source: 'flashcards/2-network-implementation/2.2-spanning-tree-protocol.md'
+    },
+
+    /* ---------------- Domain 3 — Operations (19%) ---------------- */
+    {
+      domain: 'd3',
+      stem: 'A switch is configured to alert the management station the moment its CRC error counter crosses a threshold. Which port carries that message?',
+      options: ['UDP 161', 'UDP 162', 'TCP 161', 'TCP 162'],
+      answer: 1,
+      why: 'That is an SNMP trap — device pushing to the management station — and traps use UDP 162. Polling goes the other direction (station querying device) on UDP 161. The reason traps exist: polling only finds a problem at the next interval, so anything time-sensitive needs the device to speak first. SNMP is UDP in both directions.',
+      source: 'flashcards/3-network-operations/3.2-snmp.md'
+    },
+    {
+      domain: 'd3',
+      stem: 'Recovery Point Objective (RPO) measures:',
+      options: [
+        'data loss, expressed as time',
+        'downtime length, expressed as time',
+        'repair average, expressed as time',
+        'failure interval, expressed as time'
+      ],
+      answer: 0,
+      why: 'RPO is how much data you can afford to lose, stated as a time window — the gap between your last good recovery point and the outage. It is set by backup frequency. RTO is the downtime target (outage → service restored), MTTR is the historical average repair time, MTBF is expected time before a device fails. The trap: all four are measured in time, only RPO is about data.',
+      source: 'flashcards/3-network-operations/3.3-disaster-recovery.md'
+    },
+    {
+      domain: 'd3',
+      stem: 'A recovery facility has power, racks and some hardware already in place, but you must still bring current data and restore from backups. This is:',
+      options: ['a hot site', 'a cold site', 'a cloud site', 'a warm site'],
+      answer: 3,
+      why: 'Warm site — infrastructure present, data absent. A hot site is a continuously replicated clone that comes up almost immediately; a cold site is an empty building where you supply everything. Cost and recovery speed both run cold → warm → hot, so the choice is a straight money-versus-RTO trade.',
+      source: 'flashcards/3-network-operations/3.3-disaster-recovery.md'
+    },
+
+    /* ---------------- Domain 4 — Security (14%) ---------------- */
+    {
+      domain: 'd4',
+      stem: 'In a switch spoofing attack, what does the attacker actually exploit?',
+      options: [
+        'trunk autonegotiation on the interface',
+        'native VLAN on the trunk',
+        'MAC table aging on switches',
+        'port security on access ports'
+      ],
+      answer: 0,
+      why: 'The attacker impersonates a switch so trunk autonegotiation fires and the port autoconfigures as a trunk. A trunk carries every allowed VLAN, so the attacker reaches VLANs they were never placed in — VLAN hopping without a router. Fix the cause, not the symptom: disable autonegotiation, configure trunks manually, and restrict which VLANs each trunk allows.',
+      source: 'flashcards/4-network-security/4.2-vlan-hopping.md'
+    },
+    {
+      domain: 'd4',
+      stem: 'A double tagging attack requires the attacker to sit on:',
+      options: [
+        'the switch’s highest numbered VLAN',
+        'the router’s directly connected VLAN',
+        'the trunk’s configured native VLAN',
+        'the server’s dedicated management VLAN'
+      ],
+      answer: 2,
+      why: 'Double tagging is the other VLAN hopping method: craft a frame with two 802.1Q tags. The first switch strips the outer tag (which matches the native VLAN, so it is untagged on the trunk) and forwards the frame with the inner tag still attached, landing it in the target VLAN. The attacker must therefore share the trunk’s native VLAN. It is one-way only — no reply can come back — which makes it a DoS tool rather than a path to interactive access.',
+      source: 'flashcards/4-network-security/4.2-vlan-hopping.md'
+    },
+
+    /* ---------------- Domain 5 — Troubleshooting (24%) ---------------- */
+    {
+      domain: 'd5',
+      stem: 'In CompTIA’s seven-step troubleshooting methodology, what is step four?',
+      options: [
+        'Test the theory',
+        'Establish a plan',
+        'Implement the solution',
+        'Verify full functionality'
+      ],
+      answer: 1,
+      why: 'The order: 1) identify the problem, 2) establish a theory of probable cause, 3) test the theory, 4) establish a plan of action, 5) implement the solution, 6) verify full system functionality, 7) document findings. Step 4 is the one people skip — they test a theory and start fixing. It exists because the plan is where change control and rollback live. Note also that failing step 3 sends you back to step 2, not forward.',
+      source: 'flashcards/5-network-troubleshooting/5.1-network-troubleshooting-methodology.md'
+    },
+    {
+      domain: 'd5',
+      stem: 'You are commissioning a brand new network installation and nothing works yet. Which troubleshooting approach fits best?',
+      options: [
+        'Bottom-up, starting at physical',
+        'Top-down, starting at application',
+        'Divide-and-conquer, starting at transport',
+        'Follow-the-path, starting at gateway'
+      ],
+      answer: 0,
+      why: 'New builds start bottom-up at Layer 1, because on an untested install the odds favour physical faults — wrong cable category, bad termination, TX/RX transposed, no PoE. Top-down suits an existing network that was working, where the physical layer has already proven itself and the change is likelier to be higher up.',
+      source: 'flashcards/5-network-troubleshooting/5.1-network-troubleshooting-methodology.md'
+    },
+    {
+      domain: 'd5',
+      stem: 'What is the maximum distance for 10GBASE-T over unshielded Category 6 cable?',
+      options: ['30 meters', '90 meters', '100 meters', '55 meters'],
+      answer: 3,
+      why: '55 meters. Cat 6 can carry 10 Gig, but only to 55 m unshielded — past that, attenuation and crosstalk produce CRC errors and the link degrades. Cat 6A ("augmented") restores the full 100 m by adding a spacer between pairs to cut crosstalk. For contrast: 1000BASE-T needs only Cat 5 at 100 m, and 40GBASE-T needs shielded Cat 8 and stops at 30 m.',
+      source: 'flashcards/5-network-troubleshooting/5.2-cable-issues.md'
+    },
+    {
+      domain: 'd5',
+      stem: 'Two 1-Gbps links both send sustained traffic toward a single 1-Gbps uplink. The uplink’s buffer fills. What happens next?',
+      options: [
+        'Frames are looped',
+        'Routes are withdrawn',
+        'Packets are discarded',
+        'Sessions are encrypted'
+      ],
+      answer: 2,
+      why: 'Congestion. Excess packets queue in the buffer, but switch and router buffers are small — once full, packets are dropped. There are only two real fixes: raise capacity, or reduce traffic. This is also why the slowest link in a path sets the ceiling for everything behind it; that link is the bottleneck regardless of how fast the rest is.',
+      source: 'flashcards/5-network-troubleshooting/5.4-performance-issues.md'
+    }
+  ]
+});
+
+// Runs after the quiz renders so question stems get chipped too. Options are
+// excluded by abbr.js on purpose — a chip on one option and not the others
+// would be a formatting tell.
+Abbr.init();
+</script>
+
+</body>
+</html>
