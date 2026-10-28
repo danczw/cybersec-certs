@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 0003 — Class, Translation, Delivery · Network+ N10-009</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">Lesson 0003 · Network+ N10-009</p>
+  <h1>Class, Translation, Delivery</h1>
+  <p class="subtitle">Three more things an address tells you. Closed book this time.</p>
+  <div class="meta">
+    <span>~9 minutes</span>
+    <span>Objectives 1.4, 1.7, 2.1</span>
+    <span>Closed book</span>
+  </div>
+</header>
+
+<p>
+  You scored <strong>9/12 on <a href="0002-reading-ipv4-addresses.html">lesson 0002</a></strong>
+  with the reference table visible. That makes the score a reading measure rather than a
+  retention one — which was a flaw in how I built that lesson, not in how you answered it.
+</p>
+
+<p>
+  The misses are the useful part, because they fall into a clean pattern: <strong>Class D,
+  the class boundaries, and NAT</strong>. All three were absent from the table on the page.
+  Everything the table covered, you got; everything it did not, you missed. So those three
+  are genuinely untaught, not forgotten, and they are what this lesson covers.
+</p>
+
+<p class="sidenote">
+  This lesson is <strong>closed book</strong>. The teaching section collapses when the drill
+  starts, and peeks are counted and reported with the score. Peeking is fine — a score with
+  its peek count attached still means something, whereas a score from an open page does not.
+</p>
+
+<h2>The idea</h2>
+
+<p>
+  An IPv4 address answers three separate questions, and 0002 only covered the first:
+  <strong>what family is it</strong> (done), <strong>what class is it</strong>,
+  <strong>will it need translating</strong>, and <strong>how will it be delivered</strong>.
+</p>
+
+<div id="study">
+
+<h3>Classes</h3>
+
+<p>
+  Classful addressing stopped driving subnet masks in <strong>1993</strong>. It is still
+  examinable, and still the starting point of every subnetting calculation.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Class</th><th>First octet</th><th>Leading bits</th><th>Default mask</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A</td><td>0–127</td><td><code>0</code></td><td>255.0.0.0</td></tr>
+    <tr><td>B</td><td>128–191</td><td><code>10</code></td><td>255.255.0.0</td></tr>
+    <tr><td>C</td><td>192–223</td><td><code>110</code></td><td>255.255.255.0</td></tr>
+    <tr><td>D</td><td>224–239</td><td><code>1110</code></td><td>— multicast</td></tr>
+    <tr><td>E</td><td>240–255</td><td><code>1111</code></td><td>— reserved</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Do not memorise five arbitrary numbers. Each boundary is where the next leading bit
+  switches on: 128 is <code>10000000</code>, 192 is <code>11000000</code>, 224 is
+  <code>11100000</code>, 240 is <code>11110000</code>. Recognising those four values is the
+  same skill as reading a subnet mask — which is why this pays forward into subnetting.
+</p>
+
+<h3>Translation</h3>
+
+<p>
+  Private addresses are not routable on the public internet, so a router has to translate
+  them. <strong>Standard NAT</strong> swaps one private address for one public address,
+  which means every internal host needs its own public address — solving nothing, given
+  IPv4's 4.29 billion addresses are exhausted against 20–30 billion connected devices.
+</p>
+
+<p>
+  <strong>NAT overload</strong>, also called <strong>PAT</strong> (Port Address
+  Translation), translates <em>both the address and the port</em>. Many hosts share one
+  public address, each session distinguished by its port number:
+  <code>10.10.20.50:3233 → 94.1.1.1:1055</code>, then
+  <code>10.10.20.70:5782 → 94.1.1.1:1056</code>. The NAT table stores that private
+  IP:port ↔ public IP:port mapping per session. This is what your home router does.
+</p>
+
+<h3>Delivery</h3>
+
+<table>
+  <thead>
+    <tr><th>Type</th><th>Shape</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Unicast</td><td>one-to-one</td><td>Web browsing, file transfer, email</td></tr>
+    <tr><td>Multicast</td><td>one-to-many-of-many</td><td>Streaming, stock feeds, routing updates</td></tr>
+    <tr><td>Anycast</td><td>one-to-one-of-many</td><td>Anycast DNS — nearest responder wins</td></tr>
+    <tr><td>Broadcast</td><td>one-to-all</td><td>ARP requests. Cannot cross a router</td></tr>
+  </tbody>
+</table>
+
+<p>
+  This is where Class D earns its place: <strong>224–239 is the multicast range</strong>,
+  and recipients must subscribe to the group. Multicast is why OSPF reaches its neighbours
+  at 224.0.0.5 instead of broadcasting. Anycast is the one people confuse with it — same
+  address on many machines, but traffic goes to exactly one of them, the closest by routing
+  metric.
+</p>
+
+</div>
+
+<h2>Twelve reps</h2>
+
+<p>
+  Interleaved on purpose: class questions sit next to translation, delivery, and a few
+  address-family items carried over from 0002. Mixing them forces you to work out which
+  body of knowledge applies before you can answer — harder than a block of one topic, and
+  that difficulty is the point.
+</p>
+
+<div id="quiz"></div>
+
+<h2>Reference</h2>
+
+<div class="callout callout--source">
+  <span class="label">Keep the sheet</span>
+  <p>
+    <a href="../reference/ipv4-address-families.html">IPv4 Address Families</a> already
+    carries the class table and the special-purpose ranges. Print that rather than
+    revisiting this lesson.
+  </p>
+</div>
+
+<div class="callout callout--source">
+  <span class="label">Primary sources</span>
+  <p>
+    Professor Messer, N10-009 —
+    <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-video/ipv4-addressing-n10-009/">IPv4
+    Addressing</a> and
+    <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-video/network-address-translation-n10-009/">Network
+    Address Translation</a>. These are the videos behind
+    <a href="../../notes/1-networking-concepts/1.7-classful-subnetting.md">1.7-classful-subnetting</a>
+    and
+    <a href="../../notes/2-network-implementation/2.1-network-address-translation.md">2.1-network-address-translation</a>.
+  </p>
+</div>
+
+<h2>Next</h2>
+
+<p>
+  If this comes back above ~85% with no peeks, the foundation is solid and lesson 0004 is
+  <strong>subnetting under time pressure</strong> — the magic-number and seven-second
+  methods already written up in <code>notes/</code>. The leading-bits table above is
+  deliberately the bridge into it.
+</p>
+
+<div class="callout callout--ask">
+  <span class="label">Ask your teacher</span>
+  <p>
+    Tell me your peek count honestly — a 60% closed book is better news than a 90% open
+    book, because only one of those tells us what to do next.
+  </p>
+  <p>
+    Paste the report block when you finish.
+  </p>
+</div>
+
+<nav class="lesson-nav">
+  <p class="eyebrow">Workspace</p>
+  <ul>
+    <li><a href="0002-reading-ipv4-addresses.html">Lesson 0002</a> — Reading an IPv4 Address on Sight</li>
+    <li><a href="0001-diagnostic-sweep.html">Lesson 0001</a> — Diagnostic Sweep</li>
+    <li><a href="../reference/ipv4-address-families.html">Reference</a> — IPv4 Address Families</li>
+    <li><a href="../reference/index.html">Reference hub</a></li>
+  </ul>
+</nav>
+
+<script src="../assets/abbr-data.js"></script>
+<script src="../assets/abbr.js"></script>
+<script src="../assets/quiz.js"></script>
+<script>
+Quiz.mount('#quiz', {
+  title: 'Lesson 0003 — Class, Translation, Delivery',
+  storageKey: 'class-nat-0003',
+  shuffle: false,
+  closedBook: '#study',
+  domains: {
+    d1: { label: 'Concepts',       weight: 23 },
+    d2: { label: 'Implementation', weight: 20 }
+  },
+  questions: [
+    {
+      domain: 'd1',
+      tag: 'class boundary 191',
+      stem: 'An address whose first octet is 191 belongs to which class?',
+      options: ['A', 'B', 'C', 'D'],
+      answer: 1,
+      why: 'Class B runs 128–191, so 191 is the last Class B value and 192 begins Class C. You missed this in 0002. The reason to know the boundary rather than guess it: 191 is 10111111 and 192 is 11000000 — the third leading bit turning on is what ends Class B.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: '172 outside /12',
+      stem: '172.32.0.1',
+      options: ['Private address', 'Loopback address', 'Public address', 'Link-local address'],
+      answer: 2,
+      why: 'Public. The private block is 172.16.0.0/12, which ends at 172.31.255.255 — so 172.32 is one past the edge and fully routable. Second appearance of this one; it should be instant by now.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd2',
+      tag: 'NAT overload = PAT',
+      stem: 'NAT overload is also known as:',
+      options: [
+        'Port Address Translation',
+        'Proxy Address Translation',
+        'Public Address Translation',
+        'Primary Address Translation'
+      ],
+      answer: 0,
+      why: 'Port Address Translation — PAT. The name is the mechanism: it translates the port as well as the address, which is exactly what lets many internal hosts share a single public address.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'Class C leading bits',
+      stem: 'Class C addresses begin with which leading bits?',
+      options: ['0', '10', '110', '1110'],
+      answer: 2,
+      why: '110. The pattern is one more leading 1 per class: A is 0, B is 10, C is 110, D is 1110, E is 1111. This is why the first octet boundaries land on 128, 192, 224 and 240 rather than round decimal numbers.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'multicast delivery',
+      stem: 'OSPF sends its routing updates to 224.0.0.5. Which delivery model is that?',
+      options: ['Unicast', 'Multicast', 'Anycast', 'Broadcast'],
+      answer: 1,
+      why: 'Multicast — one-to-many-of-many, delivered only to devices subscribed to the group. 224.0.0.5 sits in the Class D range (224–239), which is reserved for exactly this. Broadcast would hit every device on the subnet and cannot cross a router; multicast reaches only the routers that asked.',
+      source: 'flashcards/1-networking-concepts/1.4-network-communication.md'
+    },
+    {
+      domain: 'd2',
+      tag: 'why private needs NAT',
+      stem: 'Why can a host at 10.4.2.50 not communicate directly with a public web server?',
+      options: [
+        'Class A blocks are reserved',
+        'Loopback traffic never leaves hosts',
+        'Link-local scope ends at subnet',
+        'Private ranges are not routable'
+      ],
+      answer: 3,
+      why: 'RFC 1918 private ranges are not routable on the public internet — no ISP will carry them — so the router must translate the source to a public address first. Note that 10.x.x.x is also inside Class A numerically; being private is about RFC 1918, not about class.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'Class B default mask',
+      stem: 'What is the default subnet mask for a Class B address?',
+      options: ['255.0.0.0', '255.255.0.0', '255.255.255.0', '255.255.255.255'],
+      answer: 1,
+      why: '255.255.0.0 — 16 network bits and 16 host bits. The masks follow the classes directly: A is 255.0.0.0 (8/24), B is 255.255.0.0 (16/16), C is 255.255.255.0 (24/8).',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'loopback /8',
+      stem: '127.0.0.53',
+      options: ['Private address', 'Public address', 'Link-local address', 'Loopback address'],
+      answer: 3,
+      why: 'Loopback. The whole 127 block is loopback (127.0.0.1 through 127.255.255.254), not just 127.0.0.1 — this exact address is where systemd-resolved listens on many Linux boxes, which is a real-world case of the range mattering.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'anycast vs multicast',
+      stem: 'A DNS query reaches whichever of many servers sharing one address is nearest. Which delivery model is that?',
+      options: ['Unicast', 'Multicast', 'Anycast', 'Broadcast'],
+      answer: 2,
+      why: 'Anycast — one-to-one-of-many. Many machines advertise the same address and routing delivers to the closest by metric, so exactly one responds. Contrast multicast, where every subscriber gets a copy. Anycast DNS is the standard example.',
+      source: 'flashcards/1-networking-concepts/1.4-network-communication.md'
+    },
+    {
+      domain: 'd2',
+      tag: 'PAT mechanism',
+      stem: 'How does PAT let many internal hosts share one public address?',
+      options: [
+        'Each session gets a port',
+        'Each host gets a subnet',
+        'Each packet gets a label',
+        'Each router gets a table'
+      ],
+      answer: 0,
+      why: 'Each session is assigned its own port on the public side, and the NAT table stores the private IP:port to public IP:port mapping. Ports increment per new session — 94.1.1.1:1055, then :1056. Standard NAT cannot do this: it maps address to address, so it needs one public address per host.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'Class C range',
+      stem: 'Which first-octet range identifies a Class C address?',
+      options: ['128 through 191', '192 through 223', '224 through 239', '0 through 127'],
+      answer: 1,
+      why: '192–223. Note 224 does not start Class C’s successor arbitrarily — 224 is 11100000, the point where the fourth leading bit arrives and Class D begins.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: '192.167 not private',
+      stem: '192.167.1.1',
+      options: ['Public address', 'Private address', 'Loopback address', 'Link-local address'],
+      answer: 0,
+      why: 'Public. Only 192.168.0.0/16 is private — 192.167 is a different network entirely and routable. Second appearance of this trap too.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    }
+  ]
+});
+
+Abbr.init();
+</script>
+
+</body>
+</html>

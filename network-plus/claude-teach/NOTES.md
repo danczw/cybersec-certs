@@ -67,6 +67,14 @@ directory ever moves again.
 - **Quiz answer hygiene:** all options in a question carry the same word count
   and near-equal character count; correct-answer position is varied across
   questions. No formatting or length tells.
+- **Every fact-drilling lesson must set `closedBook`.** Teaching material and
+  retrieval practice cannot share a visible scroll — a table above a drill makes
+  the drill a reading test that reports as retention. `quiz.js` collapses the
+  named element and counts peeks. Lesson 0002 shipped without this and its 75%
+  turned out to be open-book. See [[0005-open-book-scores-are-not-retention]].
+- **Ask for the peek count** before interpreting any reported score, and say
+  plainly that a low closed-book score beats a high open-book one — otherwise
+  there is an incentive to peek quietly.
 - **Every question needs a `tag`.** A short name for the specific idea it tests.
   `quiz.js` builds the end-of-lesson report from these, and the report is the
   only item-level signal available for picking the next lesson — domain
