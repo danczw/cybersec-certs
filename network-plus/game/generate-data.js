@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const FLASH_DIR = path.join(__dirname, '..', 'flashcards');
-const ABBREV_FILE = path.join(__dirname, '..', 'abbreviations.md');
+const ABBREV_FILE = path.join(__dirname, '..', 'abbreviations', 'abbreviations.md');
 const OVERRIDES_FILE = path.join(__dirname, 'distractor-overrides.json');
 const OUTPUT = path.join(__dirname, 'js', 'data.js');
 
@@ -274,9 +274,11 @@ function buildData() {
 }
 
 function parseAbbreviations() {
+  // Fail loudly: a silent warning here previously let a stale path survive a
+  // directory move, and regeneration quietly emptied the Abbreviations mode.
   if (!fs.existsSync(ABBREV_FILE)) {
-    console.warn('abbreviations.md not found');
-    return [];
+    console.error(`FATAL: glossary not found at ${ABBREV_FILE}`);
+    process.exit(1);
   }
   const content = fs.readFileSync(ABBREV_FILE, 'utf8');
   const entries = [];
