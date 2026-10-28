@@ -61,9 +61,53 @@
     this.domains = cfg.domains || {};
     this.answers = new Array(this.questions.length).fill(null);
     this.answered = 0;
+    this.peeks = 0;
     this.render();
+    this.setupClosedBook();
     this.restore();
   }
+
+  /* Closed-book mode. A reference table sitting above a drill turns the drill
+     into a reading-comprehension test: you answer correctly off the page and
+     the score says "retained" when nothing was retrieved. So the teaching
+     material is collapsed once the drill begins.
+
+     Peeking is allowed and counted, not blocked. Same reasoning as the acronym
+     lookups: an honest count of what you needed is more useful than a rule you
+     work around, and a score with its peek count attached is interpretable
+     where a forbidden-but-circumvented one is not. */
+  Quiz.prototype.setupClosedBook = function () {
+    var sel = this.cfg.closedBook;
+    if (!sel) return;
+
+    var target = document.querySelector(sel);
+    if (!target) {
+      console.warn('Quiz: closedBook target not found: ' + sel);
+      return;
+    }
+
+    var self = this;
+    target.hidden = true;
+
+    var bar = el('div', 'closed-book');
+    var label = el('span', 'closed-book__label', 'Reference hidden — answer from memory');
+
+    var btn = el('button', 'closed-book__peek', 'Peek');
+    btn.type = 'button';
+    btn.addEventListener('click', function () {
+      var opening = target.hidden;
+      target.hidden = !opening;
+      btn.textContent = opening ? 'Hide again' : 'Peek';
+      if (opening) {
+        self.peeks++;
+        label.textContent = 'Peeked ' + self.peeks + (self.peeks === 1 ? ' time' : ' times');
+      }
+    });
+
+    bar.appendChild(label);
+    bar.appendChild(btn);
+    target.parentNode.insertBefore(bar, target);
+  };
 
   Quiz.prototype.render = function () {
     this.root.classList.add('quiz');
@@ -323,6 +367,10 @@
     if (global.Abbr) {
       var t = global.Abbr.lookups();
       lines.push('Lookups: ' + (t.length ? t.join(', ') : 'none'));
+    }
+
+    if (this.cfg.closedBook) {
+      lines.push('Peeks at reference: ' + this.peeks + (this.peeks === 0 ? ' (closed book)' : ''));
     }
 
     var sec = el('div', 'lookups');

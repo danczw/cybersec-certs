@@ -390,6 +390,48 @@ td { padding: 0.5rem 0.8rem 0.5rem 0; border-bottom: 1px solid var(--rule); vert
   list-style: none;
 }
 
+/* --- closed-book bar (see quiz.js) ------------------------------------- */
+
+.closed-book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.8rem 0;
+  padding: 0.7rem 1rem;
+  background: var(--paper-sunk);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+}
+
+.closed-book__label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.closed-book__peek {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35em 0.8em;
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.closed-book__peek:hover { border-color: var(--ink-faint); color: var(--ink); }
+
+@media print {
+  .closed-book { display: none; }
+}
+
 .report {
   margin: 0.8rem 0;
   padding: 0.9rem 1rem;
