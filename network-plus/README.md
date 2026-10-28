@@ -40,7 +40,7 @@ practice game, and an AI-tutored lesson track.
 | `practice/`      | Scenario and multiple-choice practice sets                 |
 | `abbreviations/` | Canonical glossary (234 entries) + Typst → A5 PDF pipeline |
 | `game/`          | NetOps Command — browser practice game, 9 modes            |
-| `claude-teach/`  | AI-tutored lesson track (see below)                        |
+| `claude-teach/`  | AI-tutored lesson track, plus the shared design tokens     |
 
 Notes use YAML frontmatter (`domain`, `topic`, `objective`, `source`).
 Content not from the original transcript is marked with a
@@ -63,7 +63,7 @@ retention and application instead of adding new material.
 | `lessons/*.html`        | Numbered lessons; open directly in a browser     |
 | `reference/`            | Quick-reference hub over the rest of the repo    |
 | `learning-records/*.md` | What has been established, and what it changes   |
-| `assets/`               | Shared stylesheet and reusable lesson components |
+| `assets/`               | Design tokens, stylesheet and lesson components  |
 
 Lessons auto-grade, cite the repo file each question came from, and report scores
 per exam domain. Acronyms are click-to-reveal chips compiled from
@@ -84,6 +84,11 @@ node claude-teach/assets/abbr-generate.js
 
 **NetOps Command** is a browser-based training game covering all 5 exam domains.
 Open `game/index.html` directly (no server required).
+
+It shares the lesson track's visual design: palette, type scale and elevation all
+come from `claude-teach/assets/tokens.css`, so the game and the lessons read as one
+course. Domain accent colours are consistent across both — mastery bars in the game
+use the same five colours as the lesson result meters.
 
 ### Game Modes
 
