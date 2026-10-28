@@ -5,11 +5,40 @@ const Abbreviations = (() => {
   let mode = 'both';
   let activeKeyHandler = null;
 
+  // Recall-first gate. Showing four options immediately only ever tests
+  // recognition — you can pick the right answer without being able to produce
+  // it. Hiding the options for a few seconds forces an attempt at free recall
+  // first, which is what actually builds durable retention.
+  const RECALL_KEY = 'netops_recall_delay';
+  const RECALL_OPTIONS = [0, 2, 4, 6];
+  let recallDelay = 4;
+  let recallTimer = null;
+
   function clearKeyHandler() {
     if (activeKeyHandler) {
       document.removeEventListener('keydown', activeKeyHandler);
       activeKeyHandler = null;
     }
+  }
+
+  function clearRecallTimer() {
+    if (recallTimer) {
+      clearInterval(recallTimer);
+      recallTimer = null;
+    }
+  }
+
+  function loadRecallDelay() {
+    try {
+      const v = parseInt(localStorage.getItem(RECALL_KEY), 10);
+      if (RECALL_OPTIONS.includes(v)) recallDelay = v;
+    } catch (e) { /* storage unavailable — keep the default */ }
+  }
+
+  function saveRecallDelay() {
+    try {
+      localStorage.setItem(RECALL_KEY, String(recallDelay));
+    } catch (e) { /* no-op */ }
   }
 
   function start(main) {
@@ -18,11 +47,13 @@ const Abbreviations = (() => {
     if (abbrevData.length === 0) {
       abbrevData = typeof ABBREV_DATA !== 'undefined' ? ABBREV_DATA : [];
     }
+    loadRecallDelay();
     showNext();
   }
 
   function showNext() {
     clearKeyHandler();
+    clearRecallTimer();
     container.innerHTML = '';
     if (abbrevData.length < 4) {
       container.innerHTML = '<p>Abbreviation data not loaded.</p>';
@@ -47,6 +78,23 @@ const Abbreviations = (() => {
       });
     });
     container.appendChild(modeBar);
+
+    const recallBar = document.createElement('div');
+    recallBar.className = 'subnet-difficulty-select recall-select';
+    recallBar.innerHTML = `
+      <span class="recall-label">THINK FIRST</span>
+      ${RECALL_OPTIONS.map(s => `
+        <button class="subnet-diff-btn ${recallDelay === s ? 'active' : ''}" data-delay="${s}">${s === 0 ? 'OFF' : s + 's'}</button>
+      `).join('')}
+    `;
+    recallBar.querySelectorAll('.subnet-diff-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        recallDelay = parseInt(btn.dataset.delay, 10);
+        saveRecallDelay();
+        showNext();
+      });
+    });
+    container.appendChild(recallBar);
 
     let direction;
     if (mode === 'both') {
@@ -170,6 +218,8 @@ const Abbreviations = (() => {
       choices = UI.shuffleArray([target.abbrev, ...distractors.map(d => d.abbrev)]);
     }
 
+    const gated = recallDelay > 0;
+
     const wrapper = document.createElement('div');
     wrapper.className = 'question-container';
     wrapper.style.animation = 'fadeIn 0.3s ease';
@@ -184,7 +234,17 @@ const Abbreviations = (() => {
       </div>
       <div class="question-card">
         <div class="question-text">${question}</div>
-        <div class="answers-list">
+        ${gated ? `
+          <div class="recall-gate">
+            <p class="recall-prompt">Answer it in your head first — say it out loud if you can.</p>
+            <div class="recall-bar"><div class="recall-bar-fill"></div></div>
+            <div class="recall-actions">
+              <button class="subnet-submit recall-reveal">GOT IT — SHOW OPTIONS</button>
+              <span class="recall-count">${recallDelay}</span>
+            </div>
+          </div>
+        ` : ''}
+        <div class="answers-list"${gated ? ' hidden' : ''}>
           ${choices.map(c => `<button class="answer-btn" data-answer="${UI.escapeHtml(c)}">${UI.escapeHtml(c)}</button>`).join('')}
         </div>
       </div>
@@ -248,6 +308,47 @@ const Abbreviations = (() => {
     });
 
     container.appendChild(wrapper);
+
+    if (gated) startRecallGate(wrapper);
+  }
+
+  /* Holds the options back for recallDelay seconds. Revealing early is allowed
+     and expected — the moment you have the answer there is nothing left to
+     gain from waiting, and forcing a full wait just trains impatience. */
+  function startRecallGate(wrapper) {
+    const gate = wrapper.querySelector('.recall-gate');
+    const fill = wrapper.querySelector('.recall-bar-fill');
+    const count = wrapper.querySelector('.recall-count');
+    const list = wrapper.querySelector('.answers-list');
+    const revealBtn = wrapper.querySelector('.recall-reveal');
+
+    const total = recallDelay * 10; // tenths of a second
+    let remaining = total;
+
+    function reveal() {
+      clearRecallTimer();
+      clearKeyHandler();
+      if (gate) gate.remove();
+      list.hidden = false;
+    }
+
+    fill.style.width = '0%';
+    recallTimer = setInterval(() => {
+      remaining--;
+      fill.style.width = ((total - remaining) / total * 100) + '%';
+      count.textContent = Math.max(0, Math.ceil(remaining / 10));
+      if (remaining <= 0) reveal();
+    }, 100);
+
+    revealBtn.addEventListener('click', reveal);
+
+    activeKeyHandler = (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        reveal();
+      }
+    };
+    document.addEventListener('keydown', activeKeyHandler);
   }
 
   return { start };
