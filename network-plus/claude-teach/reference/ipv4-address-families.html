@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference — IPv4 Address Families · Network+ N10-009</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">Reference · Objective 1.7</p>
+  <h1>IPv4 Address Families</h1>
+  <p class="subtitle">Everything needed to name an address on sight. Built for printing.</p>
+</header>
+
+<h2>The procedure</h2>
+
+<p>
+  Read the <strong>first octet</strong>. It resolves almost every address by itself.
+  Only two values — 172 and 192 — need a second look, and those two are where exam
+  questions live.
+</p>
+
+<table>
+  <thead>
+    <tr><th>First octet</th><th>Then</th><th>Verdict</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>10</code></td><td>nothing</td><td>Private. The whole /8.</td></tr>
+    <tr><td><code>127</code></td><td>nothing</td><td>Loopback. Never leaves the host.</td></tr>
+    <tr><td><code>169</code></td><td>second octet <code>254</code>?</td><td>Yes → link-local (APIPA). No → public.</td></tr>
+    <tr><td><code>172</code></td><td>second octet <strong>16–31</strong>?</td><td>Yes → private. No → public.</td></tr>
+    <tr><td><code>192</code></td><td>second octet <strong>168</strong>?</td><td>Yes → private. No → public.</td></tr>
+    <tr><td><code>224–239</code></td><td>nothing</td><td>Multicast (Class D).</td></tr>
+    <tr><td><code>240–255</code></td><td>nothing</td><td>Reserved (Class E). Never assigned.</td></tr>
+    <tr><td>anything else</td><td>nothing</td><td>Public.</td></tr>
+  </tbody>
+</table>
+
+<p class="sidenote">
+  <strong>The two traps.</strong> <code>172.32.0.1</code> is public — the private block
+  stops at 172.31. <code>192.167.1.1</code> is public — only 192.<strong>168</strong> is
+  private. Both look private at a glance, and that glance is what the exam is testing.
+</p>
+
+<h2>Private ranges (RFC 1918)</h2>
+
+<table>
+  <thead>
+    <tr><th>CIDR</th><th>Range</th><th>Mask</th><th>Host bits</th><th>Typical use</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>10.0.0.0/8</code></td>
+      <td>10.0.0.0 – 10.255.255.255</td>
+      <td>255.0.0.0</td>
+      <td>24 (16M+)</td>
+      <td>Large enterprise</td>
+    </tr>
+    <tr>
+      <td><code>172.16.0.0/12</code></td>
+      <td>172.16.0.0 – <strong>172.31.255.255</strong></td>
+      <td>255.240.0.0</td>
+      <td>20 (1M+)</td>
+      <td>Mid-size network</td>
+    </tr>
+    <tr>
+      <td><code>192.168.0.0/16</code></td>
+      <td>192.168.0.0 – 192.168.255.255</td>
+      <td>255.255.0.0</td>
+      <td>16 (65K+)</td>
+      <td>Home network</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  None of these route on the public internet; they need NAT to translate to a public
+  address first. The <code>/12</code> is the one worth memorising as a fact rather than
+  deriving: <strong>16 through 31</strong>, sixteen /16 networks.
+</p>
+
+<h2>Special-purpose addresses</h2>
+
+<table>
+  <thead>
+    <tr><th>Name</th><th>Range</th><th>Means</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Loopback</td>
+      <td>127.0.0.1 – 127.255.255.254</td>
+      <td>The local device itself. A successful ping proves the local IP stack works
+          and nothing else — not the cable, not the switch, not the gateway.</td>
+    </tr>
+    <tr>
+      <td>Link-local (APIPA)</td>
+      <td>169.254.0.1 – 169.254.255.254<br>
+          <em>assigned:</em> 169.254.1.0 – 169.254.254.255</td>
+      <td>No DHCP server answered. The host self-assigned, using ARP to check nothing
+          else holds the address. Local subnet only — cannot route anywhere.</td>
+    </tr>
+    <tr>
+      <td>Reserved (Class E)</td>
+      <td>240.0.0.1 – 254.255.255.254</td>
+      <td>Set aside for future use and testing. Never assigned to a device.</td>
+    </tr>
+    <tr>
+      <td>Virtual IP (VIP)</td>
+      <td>any</td>
+      <td>Not tied to a physical adapter — assigned to device internals such as VMs
+          and router interfaces.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Address classes</h2>
+
+<p>
+  Classful addressing stopped being used for subnet masking in <strong>1993</strong>.
+  It is still examinable, and still the starting point for every subnetting
+  calculation.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Class</th><th>First octet</th><th>Leading bits</th><th>Default mask</th><th>Network / host bits</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A</td><td>0–127</td><td><code>0</code></td><td>255.0.0.0</td><td>8 / 24</td></tr>
+    <tr><td>B</td><td>128–191</td><td><code>10</code></td><td>255.255.0.0</td><td>16 / 16</td></tr>
+    <tr><td>C</td><td>192–223</td><td><code>110</code></td><td>255.255.255.0</td><td>24 / 8</td></tr>
+    <tr><td>D</td><td>224–239</td><td><code>1110</code></td><td>— (multicast)</td><td>—</td></tr>
+    <tr><td>E</td><td>240–255</td><td><code>1111</code></td><td>— (reserved)</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<p class="sidenote">
+  The class boundaries are not arbitrary: each one is where the next leading bit flips
+  on. 128 is <code>10000000</code>, 192 is <code>11000000</code>, 224 is
+  <code>11100000</code>, 240 is <code>11110000</code>. Recognising those four binary
+  values is the same skill as reading a subnet mask.
+</p>
+
+<h2>What a host needs</h2>
+
+<p>
+  Three values to communicate beyond its own subnet: an <strong>IP address</strong>, a
+  <strong>subnet mask</strong>, and a <strong>default gateway</strong>. The gateway must
+  itself be an address on the local subnet. The mask is never transmitted — it is used
+  locally to decide what is on-subnet versus off-subnet, which is the decision that
+  determines whether traffic goes to the gateway at all.
+</p>
+
+<div class="callout callout--source">
+  <span class="label">Sources</span>
+  <p>
+    Compiled from this repo's notes, which derive from the Professor Messer N10-009
+    course:
+    <a href="../../notes/1-networking-concepts/1.7-ipv4-addressing.md">1.7-ipv4-addressing</a>,
+    <a href="../../notes/1-networking-concepts/1.7-classful-subnetting.md">1.7-classful-subnetting</a>,
+    <a href="../../notes/2-network-implementation/2.1-network-address-translation.md">2.1-network-address-translation</a>.
+    Acronyms: <a href="../../abbreviations/abbreviations.md">abbreviations.md</a>.
+  </p>
+</div>
+
+<nav class="lesson-nav">
+  <p class="eyebrow">Related</p>
+  <ul>
+    <li><a href="index.html">Reference hub</a></li>
+    <li><a href="../lessons/0002-reading-ipv4-addresses.html">Lesson 0002</a> — Reading an IPv4 Address on Sight</li>
+    <li><a href="../lessons/0001-diagnostic-sweep.html">Lesson 0001</a> — Diagnostic Sweep</li>
+  </ul>
+</nav>
+
+</body>
+</html>
