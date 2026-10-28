@@ -3,7 +3,7 @@ const GAME_DATA = {
   "meta": {
     "version": "1.0.0",
     "examCode": "N10-009",
-    "generated": "2026-08-26T07:36:14.021Z"
+    "generated": "2026-10-28T10:38:22.493Z"
   },
   "domains": [
     {
@@ -20178,7 +20178,7 @@ const GAME_DATA = {
     {
       "id": 4,
       "name": "Network Security",
-      "weight": 19,
+      "weight": 14,
       "objectives": [
         {
           "id": "4.1",
@@ -24319,7 +24319,7 @@ const GAME_DATA = {
     {
       "id": 5,
       "name": "Network Troubleshooting",
-      "weight": 19,
+      "weight": 24,
       "objectives": [
         {
           "id": "5.1",
