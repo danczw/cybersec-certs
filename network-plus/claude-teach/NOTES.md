@@ -67,6 +67,15 @@ directory ever moves again.
 - **Quiz answer hygiene:** all options in a question carry the same word count
   and near-equal character count; correct-answer position is varied across
   questions. No formatting or length tells.
+- **Every question needs a `tag`.** A short name for the specific idea it tests.
+  `quiz.js` builds the end-of-lesson report from these, and the report is the
+  only item-level signal available for picking the next lesson — domain
+  aggregates are too coarse. Lesson 0001 shipped without tags and the gap showed
+  immediately.
+- **Sequence by foundational dependency, not lowest score.** The 0001 diagnostic
+  came back flat across all five domains, which gives weak signal about what to
+  fix first. When the profile is flat, teach what the most other things depend
+  on. See [[0003-diagnostic-baseline-53-percent]].
 
 ## Open questions
 

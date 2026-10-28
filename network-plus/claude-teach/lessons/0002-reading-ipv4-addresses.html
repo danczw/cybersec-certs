@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 0002 — Reading an IPv4 Address on Sight · Network+ N10-009</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">Lesson 0002 · Network+ N10-009</p>
+  <h1>Reading an IPv4 Address on Sight</h1>
+  <p class="subtitle">One table, twelve reps. Name any address in under two seconds.</p>
+  <div class="meta">
+    <span>~8 minutes</span>
+    <span>Objective 1.7</span>
+    <span>Pays into domains 2 and 5</span>
+  </div>
+</header>
+
+<p>
+  You scored <strong>33% on Networking Concepts</strong> in
+  <a href="0001-diagnostic-sweep.html">the diagnostic</a> — your weakest domain, and all
+  three questions were IPv4 addressing or ports. You also expanded only one acronym
+  before answering, which rules out vocabulary as the cause. So the gap is conceptual,
+  and this is where it starts.
+</p>
+
+<p>
+  This is the highest-leverage thing you can fix right now, for a reason worth knowing:
+  address recognition is not really a domain 1 skill. It is the first move in nearly
+  every troubleshooting question on the exam — and troubleshooting is 24% of it, your
+  other weak area. A symptom like <em>"the host has 169.254.12.9"</em> has already told
+  you the answer, if you can read it.
+</p>
+
+<h2>The whole skill</h2>
+
+<p>
+  Read the <strong>first octet</strong>. It settles almost every address by itself. Only
+  <code>172</code> and <code>192</code> need a second glance — and that is exactly where
+  the exam sets its traps.
+</p>
+
+<table>
+  <thead>
+    <tr><th>First octet</th><th>Then check</th><th>Verdict</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>10</code></td><td>—</td><td>Private</td></tr>
+    <tr><td><code>127</code></td><td>—</td><td>Loopback</td></tr>
+    <tr><td><code>169</code></td><td>is second octet <code>254</code>?</td><td>Yes → link-local · No → public</td></tr>
+    <tr><td><code>172</code></td><td>is second octet <strong>16–31</strong>?</td><td>Yes → private · No → public</td></tr>
+    <tr><td><code>192</code></td><td>is second octet <strong>168</strong>?</td><td>Yes → private · No → public</td></tr>
+    <tr><td><code>224–239</code></td><td>—</td><td>Multicast</td></tr>
+    <tr><td><code>240–255</code></td><td>—</td><td>Reserved</td></tr>
+    <tr><td>anything else</td><td>—</td><td>Public</td></tr>
+  </tbody>
+</table>
+
+<p class="sidenote">
+  <strong>Why 16–31 and not 16–32.</strong> <code>172.16.0.0/12</code> leaves 20 host
+  bits, which is sixteen consecutive /16 networks: 172.16 through 172.31. The mask does
+  not land on an octet boundary, which is precisely why this one is worth memorising as
+  a flat fact instead of re-deriving it under time pressure.
+</p>
+
+<div class="callout callout--supplement">
+  <span class="label">The two traps</span>
+  <p>
+    <code>172.32.0.1</code> is <strong>public</strong> — the private block stops at
+    172.31. <code>192.167.1.1</code> is <strong>public</strong> — only
+    192.<strong>168</strong> is private. Both read as private at a glance, and that
+    glance is the thing being tested. You missed the /12 boundary question in the
+    diagnostic, so expect both of these below.
+  </p>
+</div>
+
+<h2>Twelve reps</h2>
+
+<p>
+  Same four labels on most questions, deliberately. You are not learning new facts here
+  — you are making one lookup automatic, and that takes repetition against varied input.
+  Say your answer out loud before you click; a silent guess does not build anything.
+</p>
+
+<div id="quiz"></div>
+
+<h2>Keep the sheet</h2>
+
+<div class="callout callout--source">
+  <span class="label">Reference</span>
+  <p>
+    <a href="../reference/ipv4-address-families.html">IPv4 Address Families</a> — the
+    full lookup sheet: all three RFC 1918 ranges with boundaries and masks, the
+    special-purpose addresses, and the class table. Built to print; it is the thing to
+    keep next to you, not this lesson.
+  </p>
+</div>
+
+<div class="callout callout--source">
+  <span class="label">Primary source</span>
+  <p>
+    <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-video/ipv4-addressing-n10-009/">Professor
+    Messer — IPv4 Addressing (N10-009)</a>. This is the video every note in
+    <a href="../../notes/1-networking-concepts/1.7-ipv4-addressing.md">1.7-ipv4-addressing</a>
+    came from. Nine minutes, free. Watch it if the table above felt like memorisation
+    rather than understanding.
+  </p>
+</div>
+
+<h2>Next</h2>
+
+<p>
+  Recognition is step one. The step that actually earns marks on the exam is
+  <strong>subnetting under time pressure</strong>, and this repo has seven note files on
+  it — including magic-number and seven-second methods. That is lesson 0003, once this
+  table is automatic.
+</p>
+
+<p>
+  Between now and then: <a href="../../game/index.html">NetOps Command</a> →
+  <strong>Subnet Architect</strong> for the binary and CIDR groundwork, and
+  <strong>Port Sprint</strong> for the other half of what you missed in domain 1.
+</p>
+
+<div class="callout callout--ask">
+  <span class="label">Ask your teacher</span>
+  <p>
+    Tell me if any of the twelve felt like a coin flip even when you got it right —
+    a lucky guess reads as mastery in the score and it is not. Worth flagging explicitly.
+  </p>
+  <p>
+    Paste the report block at the end of the quiz back to me. It names which specific
+    idea each missed question tested, which is what I build lesson 0003 from.
+  </p>
+</div>
+
+<nav class="lesson-nav">
+  <p class="eyebrow">Workspace</p>
+  <ul>
+    <li><a href="0001-diagnostic-sweep.html">Lesson 0001</a> — Diagnostic Sweep</li>
+    <li><a href="../reference/ipv4-address-families.html">Reference</a> — IPv4 Address Families</li>
+    <li><a href="../reference/index.html">Reference hub</a></li>
+    <li><a href="../MISSION.md">MISSION.md</a> — why you are doing this</li>
+  </ul>
+</nav>
+
+<script src="../assets/abbr-data.js"></script>
+<script src="../assets/abbr.js"></script>
+<script src="../assets/quiz.js"></script>
+<script>
+Quiz.mount('#quiz', {
+  title: 'Lesson 0002 — Reading an IPv4 Address on Sight',
+  storageKey: 'ipv4-0002',
+  shuffle: false,
+  domains: {
+    d1: { label: 'Concepts',        weight: 23 },
+    d2: { label: 'Implementation',  weight: 20 },
+    d5: { label: 'Troubleshooting', weight: 24 }
+  },
+  questions: [
+    {
+      domain: 'd1',
+      tag: '10/8 private',
+      stem: '10.4.2.50',
+      options: ['Public address', 'Private address', 'Loopback address', 'Link-local address'],
+      answer: 1,
+      why: 'First octet 10 — the entire 10.0.0.0/8 is private, no second check needed. 16 million addresses, which is why it is the range large enterprises pick.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: '172 inside /12',
+      stem: '172.20.5.1',
+      options: ['Loopback address', 'Link-local address', 'Public address', 'Private address'],
+      answer: 3,
+      why: 'Second octet 20 falls inside 16–31, so this is private. 172.16.0.0/12 covers 172.16 through 172.31.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: '172 outside /12 (trap)',
+      stem: '172.32.0.1',
+      options: ['Public address', 'Private address', 'Link-local address', 'Loopback address'],
+      answer: 0,
+      why: 'Second octet 32 is outside 16–31, so this is a public address despite starting with 172. The private block ends at 172.31.255.255. This is the single most commonly missed private-range boundary — and the one you missed in the diagnostic.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: '192.167 not private (trap)',
+      stem: '192.167.1.1',
+      options: ['Private address', 'Loopback address', 'Public address', 'Link-local address'],
+      answer: 2,
+      why: 'Only 192.168.0.0/16 is private. 192.167 is one off and fully routable on the public internet. The first octet alone is never enough when it is 192.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'loopback is a whole /8',
+      stem: '127.44.1.9',
+      options: ['Private address', 'Public address', 'Link-local address', 'Loopback address'],
+      answer: 3,
+      why: 'Loopback is not just 127.0.0.1 — it is 127.0.0.1 through 127.255.255.254, the whole 127 block. Any address starting with 127 refers to the local device.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'APIPA range',
+      stem: '169.254.88.3',
+      options: ['Link-local address', 'Private address', 'Public address', 'Loopback address'],
+      answer: 0,
+      why: 'Range 169.254.0.1 to 169.254.255.254 is APIPA — a link-local address the host assigned itself because no DHCP server answered. Note the second octet matters: 169.1.1.1 would be public.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'Class E reserved',
+      stem: '245.19.3.7',
+      options: ['Class D multicast', 'Class A loopback', 'Class E reserved', 'Class B public'],
+      answer: 2,
+      why: 'First octet 240–255 is Class E, reserved for future use and testing. The documented range is 240.0.0.1 through 254.255.255.254, and it is never assigned to a device — so seeing one in a config is itself the fault.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'Class D multicast',
+      stem: '224.0.0.5',
+      options: ['Class C private', 'Class D multicast', 'Class E reserved', 'Class A public'],
+      answer: 1,
+      why: 'First octet 224–239 is Class D, multicast. Worth recognising on sight because routing protocols live here — OSPF uses 224.0.0.5 specifically to find neighbours.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd1',
+      tag: 'class boundaries',
+      stem: 'An address whose first octet is 191 belongs to which class?',
+      options: ['A', 'B', 'C', 'D'],
+      answer: 1,
+      why: 'Class B is 128–191, so 191 is the last Class B value and 192 starts Class C. The boundaries are where the next leading bit flips on: 128 is 10000000, 192 is 11000000. Default Class B mask is 255.255.0.0 — 16 network bits, 16 host bits.',
+      source: 'flashcards/1-networking-concepts/1.7-classful-subnetting.md'
+    },
+    {
+      domain: 'd5',
+      tag: 'what loopback proves',
+      stem: 'A host pings 127.0.0.1 successfully but still cannot reach its default gateway. What has the successful ping actually proven?',
+      options: [
+        'The default gateway is reachable',
+        'The subnet mask is correct',
+        'The physical cabling is good',
+        'The local IP stack works'
+      ],
+      answer: 3,
+      why: 'A loopback ping never leaves the host, so it proves the local IP stack is functioning and nothing more — not the cable, not the switch, not the mask, not the gateway. It is a useful first step precisely because it eliminates one variable cheaply, which is the elimination tactic from the troubleshooting methodology.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd5',
+      tag: 'APIPA implies DHCP fault',
+      stem: 'A workstation shows 169.254.200.4 and cannot reach anything beyond its own subnet. What has to be fixed?',
+      options: [
+        'Reach the DHCP server',
+        'Correct the subnet mask',
+        'Change the default gateway',
+        'Assign a public address'
+      ],
+      answer: 0,
+      why: 'An APIPA address means the DHCP conversation never completed, so the fault is between host and DHCP server — a dead server, a blocked broadcast, or a severed path. Changing the host\'s own addressing treats the symptom. Note what APIPA does not give you: no default gateway at all, which is why nothing off-subnet works.',
+      source: 'flashcards/1-networking-concepts/1.7-ipv4-addressing.md'
+    },
+    {
+      domain: 'd2',
+      tag: 'private needs NAT',
+      stem: 'A device at 10.4.2.50 needs to reach a website on the public internet. What makes that possible?',
+      options: [
+        'ARP for the gateway MAC',
+        'SLAAC for an IPv6 address',
+        'NAT to a public address',
+        'DHCP for a longer lease'
+      ],
+      answer: 2,
+      why: 'Private addresses are not routable on the public internet, so the router must translate the private source to a public one via NAT — in practice PAT (NAT overload), which maps many internal hosts onto one public address using port numbers. This is the whole reason IPv4 survived its own address exhaustion.',
+      source: 'flashcards/2-network-implementation/2.1-network-address-translation.md'
+    }
+  ]
+});
+
+Abbr.init();
+</script>
+
+</body>
+</html>
