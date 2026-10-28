@@ -1,0 +1,66 @@
+/* ===========================================================================
+   tokens.css — the single source of truth for this workspace's design tokens.
+
+   Imported by:
+     - claude-teach/assets/lesson.css   (lessons and reference sheets)
+     - game/css/style.css               (NetOps Command)
+
+   Both surfaces are part of one course, so they share one palette and one type
+   scale. Change a value here and it changes everywhere; do not redeclare these
+   in a consuming stylesheet.
+
+   The palette is paper-and-ink: a warm off-white ground with near-black text,
+   chosen so lessons and reference sheets print legibly. Accents are muted and
+   assigned per exam domain, never decorative.
+   =========================================================================== */
+
+:root {
+  /* --- ground and ink ------------------------------------------------- */
+  --paper:      #fffcf7;  /* page background                              */
+  --paper-sunk: #f5f1e8;  /* callouts, inset panels, table banding        */
+  --paper-edge: #ece6d9;  /* pressed / hover state on paper               */
+
+  --ink:        #1a1a1a;  /* body text                                    */
+  --ink-soft:   #555555;  /* secondary text                               */
+  --ink-faint:  #8a8a8a;  /* labels, metadata                             */
+  --rule:       #d8d4cc;  /* hairlines and borders                        */
+
+  /* --- domain accents -------------------------------------------------
+     One per N10-009 exam domain. Used for badges, meters and per-domain
+     emphasis. Muted on purpose: they must coexist on one page without
+     competing with the text.                                             */
+  --d1: #2f6f8f;  /* 1 networking concepts    */
+  --d2: #4a7c59;  /* 2 implementation         */
+  --d3: #8a6d3b;  /* 3 operations             */
+  --d4: #8f4a4a;  /* 4 security               */
+  --d5: #5b4a7c;  /* 5 troubleshooting        */
+
+  /* --- semantic ------------------------------------------------------- */
+  --ok:   #2d6a4f;
+  --bad:  #9b2c2c;
+  --warn: #8a6d3b;
+
+  /* Pale washes for filled states. Separate from --lift below, because a
+     background tint and a drop shadow cannot be the same value. */
+  --ok-tint:   rgba(45, 106, 79, 0.10);
+  --ok-wash:   rgba(45, 106, 79, 0.05);
+  --bad-tint:  rgba(155, 44, 44, 0.10);
+  --bad-wash:  rgba(155, 44, 44, 0.05);
+  --warn-tint: rgba(138, 109, 59, 0.12);
+  --accent-tint: rgba(47, 111, 143, 0.10);
+  --accent-wash: rgba(47, 111, 143, 0.05);
+
+  /* --- elevation ------------------------------------------------------
+     Paper lifts off paper with a soft neutral shadow, never a colour glow. */
+  --lift:    0 1px 3px rgba(26, 26, 26, 0.07);
+  --lift-md: 0 3px 10px rgba(26, 26, 26, 0.09);
+  --lift-lg: 0 6px 22px rgba(26, 26, 26, 0.12);
+
+  /* --- type ----------------------------------------------------------- */
+  --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --mono:  "SF Mono", "Cascadia Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* --- geometry ------------------------------------------------------- */
+  --radius:    4px;
+  --radius-lg: 6px;
+}

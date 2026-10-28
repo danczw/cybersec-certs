@@ -5,27 +5,9 @@
    unless a second lesson would reuse them.
    =========================================================================== */
 
-:root {
-  --ink:        #1a1a1a;
-  --ink-soft:   #555;
-  --ink-faint:  #8a8a8a;
-  --rule:       #d8d4cc;
-  --paper:      #fffcf7;
-  --paper-sunk: #f5f1e8;
-
-  /* Domain accents. Used by the quiz component and domain badges. */
-  --d1: #2f6f8f;  /* networking concepts    */
-  --d2: #4a7c59;  /* implementation         */
-  --d3: #8a6d3b;  /* operations             */
-  --d4: #8f4a4a;  /* security               */
-  --d5: #5b4a7c;  /* troubleshooting        */
-
-  --ok:   #2d6a4f;
-  --bad:  #9b2c2c;
-
-  --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  --mono:  "SF Mono", "Cascadia Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-}
+/* Palette, type scale and elevation live in tokens.css, shared with the game
+   so both surfaces read as one course. Do not redeclare tokens here. */
+@import url('tokens.css');
 
 /* --- reset / base ------------------------------------------------------- */
 
