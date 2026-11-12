@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>0001 — OSI: seven layers, one clue each</title>
+<link rel="stylesheet" href="../assets/lesson.css"></head>
+<body><main>
+<div class="meta">Lesson 0001 · Objective 1.1 · Domain 1 Networking Concepts (23%)</div>
+<h1>OSI: seven layers, one clue each</h1>
+<p><b>Win:</b> given a symptom or a clue (MAC, IP, port, cable), name the layer in under 5 seconds. Troubleshooting (24%) and concepts questions both lean on this.</p>
+
+<h2>Learn: layer = clue</h2>
+<table>
+<tr><th>#</th><th>Layer</th><th>Clue</th><th>Unit</th></tr>
+<tr><td>7</td><td>Application</td><td>What you see: HTTP, DNS, POP3</td><td>Data</td></tr>
+<tr><td>6</td><td>Presentation</td><td>Encoding, SSL/TLS encryption</td><td>Data</td></tr>
+<tr><td>5</td><td>Session</td><td>Start/stop/restart conversations, tunneling</td><td>Data</td></tr>
+<tr><td>4</td><td>Transport</td><td>TCP/UDP, port numbers, segmentation</td><td>Segment / Datagram</td></tr>
+<tr><td>3</td><td>Network</td><td>IP addresses, routers, fragmentation</td><td>Packet</td></tr>
+<tr><td>2</td><td>Data Link</td><td>MAC addresses, switches</td><td>Frame</td></tr>
+<tr><td>1</td><td>Physical</td><td>Cable, fiber, wireless signal</td><td>Bits</td></tr>
+</table>
+<div class="callout">Mnemonic (bottom-up): <b>P</b>lease <b>D</b>o <b>N</b>ot <b>T</b>each <b>S</b>tudents <b>P</b>ointless <b>A</b>bbreviations.</div>
+<p>OSI is a common <em>language</em>, not the protocol suite in use; real traffic is TCP/IP, mapped onto these layers. <span class="cite">[<a href="../notes/1-networking-concepts/1.1-osi-model.md">notes/1.1-osi-model.md</a>]</span></p>
+
+<h2>Practice: name the layer</h2>
+<div id="quiz"></div>
+
+<h2>Next</h2>
+<ul>
+<li>Reference: <a href="../reference/osi-layers.html">OSI layers cheat sheet</a></li>
+<li><b>Primary source:</b> <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-video/understanding-the-osi-model-n10-009/">Professor Messer — Understanding the OSI Model</a> (short video)</li>
+<li>Re-quiz yourself on this in 2 days from memory, no table.</li>
+</ul>
+<p class="cite">Anything unclear? Ask your teacher (Claude) in the terminal — it can re-explain, give more questions, or quiz you on your misses.</p>
+</main>
+<script src="../assets/quiz.js"></script>
+<script>
+renderQuiz("quiz", [
+ {q:"Switches forward traffic by MAC address. Which layer?", a:["Layer 1 Physical","Layer 3 Network","Layer 2 Data Link","Layer 4 Transport"], correct:2, why:"MAC = hardware address = Data Link. Switches are the 'switching layer'.", src:"notes/1.1-osi-model.md"},
+ {q:"A router picks the next hop from the destination IP. Which layer?", a:["Layer 3 Network","Layer 2 Data Link","Layer 4 Transport","Layer 7 Applic."], correct:0, why:"IP addresses, subnet masks, routing = Network layer.", src:"notes/1.1-osi-model.md"},
+ {q:"A firewall rule blocks TCP port 443. Which layer sees ports?", a:["Layer 2 Data Link","Layer 3 Network","Layer 5 Session","Layer 4 Transport"], correct:3, why:"TCP/UDP port numbers identify Transport layer conversations.", src:"notes/1.1-osi-model.md"},
+ {q:"A damaged cable causes link loss. Which layer is at fault?", a:["Layer 2 Data Link","Layer 1 Physical","Layer 3 Network","Layer 7 Applic."], correct:1, why:"Bad cable, fiber or wireless interference = Physical.", src:"notes/1.1-osi-model.md"},
+ {q:"What is the data unit name at the Data Link layer?", a:["Packet","Segment","Frame","Bits"], correct:2, why:"L2 = frame; L3 = packet; L4 = segment/datagram; L1 = bits.", src:"notes/1.1-osi-model.md (supplementary)"},
+ {q:"SSL/TLS encryption is usually placed at which layer?", a:["Layer 6 Presentation","Layer 4 Transport","Layer 3 Network","Layer 2 Data Link"], correct:0, why:"Presentation handles encoding and application encryption/decryption. Messer notes it is often discussed with layer 7.", src:"notes/1.1-osi-model.md"}
+]);
+</script></body></html>
