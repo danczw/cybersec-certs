@@ -5,3 +5,4 @@
 - Previous teach workspace was removed (commit 3e59a9f); this one is a fresh start. User says brand new.
 - Quizzes: equal-length answers, vary correct position.
 - Workspace lives in `network-plus/`.
+- Every lesson with a quiz ends with a copyable text block of results (quiz.js builds it once all answered). User pastes it back to the teacher. Any non-quiz lesson must still end with a copy block of whatever the user should report.

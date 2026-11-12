@@ -24,3 +24,6 @@ tr:nth-child(even) td{background:var(--paper-sunk)}
 .q .why{margin:.6rem 0 0;font-size:.9rem;color:var(--ink-soft)}
 .score{font:600 1rem var(--mono);margin-top:1.5rem}
 @media print{body{font-size:12pt}.q button{border-color:#999}}
+.copy-note{color:var(--ink-faint)}
+textarea{width:100%;font:.8rem/1.4 var(--mono);background:var(--paper-sunk);color:var(--ink);border:1px solid var(--rule);border-radius:var(--radius);padding:.6rem;margin-top:.8rem}
+button.copy{font:.85rem var(--mono);padding:.3rem .8rem;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:var(--radius);cursor:pointer}
