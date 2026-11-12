@@ -1,6 +1,6 @@
 /* Palette, type scale and elevation come from the shared token file, so the
    game and the lessons read as one course rather than two products. */
-@import url('../../claude-teach/assets/tokens.css');
+@import url('tokens.css');
 
 /* The game's own variable names are kept and redefined in terms of the shared
    tokens. That leaves the ~260 var() references below untouched while the
