@@ -1,8 +1,6 @@
 # CompTIA Network+ N10-009 — Resources
 
-Curated, annotated, high-trust only. This file doubles as the `/teach` workspace's
-`RESOURCES.md` — see `NOTES.md` for the naming mapping. Lesson claims should cite
-something here rather than parametric guesswork.
+Curated, annotated, high-trust only.
 
 ## Knowledge
 
