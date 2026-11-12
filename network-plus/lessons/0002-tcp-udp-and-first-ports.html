@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>0002 — TCP vs UDP and first ports</title>
+<link rel="stylesheet" href="../assets/lesson.css"></head>
+<body><main>
+<div class="meta">Lesson 0002 · Objective 1.4 · Domain 1 Networking Concepts (23%)</div>
+<h1>TCP vs UDP and first ports</h1>
+<p><b>Win:</b> pick TCP or UDP for a job, and recall 9 port numbers from a protocol name. Builds on <a href="0001-osi-seven-layers.html">Lesson 0001</a>: ports live at L4.</p>
+
+<h2>Learn 1: TCP vs UDP</h2>
+<table>
+<tr><th></th><th>TCP</th><th>UDP</th></tr>
+<tr><td>Setup</td><td>Handshake first</td><td>None</td></tr>
+<tr><td>Delivery</td><td>Guaranteed, ordered</td><td>Best effort</td></tr>
+<tr><td>Speed</td><td>Slower</td><td>Faster</td></tr>
+<tr><td>Fits</td><td>Web, email, file transfer</td><td>Streaming, DNS, gaming</td></tr>
+<tr><td>L4 unit</td><td>Segment</td><td>Datagram</td></tr>
+</table>
+<div class="callout">TCP = registered letter with tracking. UDP = shouting across a room.</div>
+<p class="cite">[<a href="../notes/1-networking-concepts/1.1-osi-model.md">notes/1.1-osi-model.md</a>, supplementary box]</p>
+
+<h2>Learn 2: first nine ports</h2>
+<table>
+<tr><th>Protocol</th><th>Port</th><th>Hook</th></tr>
+<tr><td>FTP</td><td>TCP 20, 21</td><td>21 = control commands</td></tr>
+<tr><td>SSH / SFTP</td><td>TCP 22</td><td>Encrypted terminal</td></tr>
+<tr><td>Telnet</td><td>TCP 23</td><td>Clear text, replaced by SSH</td></tr>
+<tr><td>SMTP</td><td>TCP 25</td><td>Server-to-server mail</td></tr>
+<tr><td>DNS</td><td>UDP 53</td><td>Names to IPs (TCP 53 for large transfers)</td></tr>
+<tr><td>DHCP</td><td>UDP 67 server, 68 client</td><td>Automatic IP config</td></tr>
+<tr><td>HTTP</td><td>TCP 80</td><td>Unencrypted web</td></tr>
+<tr><td>HTTPS</td><td>TCP 443</td><td>Web over TLS</td></tr>
+</table>
+<p class="cite">[<a href="../notes/1-networking-concepts/1.4-common-ports.md">notes/1.4-common-ports.md</a>]</p>
+
+<h2>Practice (mixed with Lesson 0001 review)</h2>
+<div id="quiz"></div>
+
+<h2>Next</h2>
+<ul>
+<li>Reference: <a href="../reference/common-ports.html">Ports cheat sheet</a> · <a href="../reference/osi-layers.html">OSI cheat sheet</a></li>
+<li><b>Primary source:</b> <a href="https://www.professormesser.com/network-plus/n10-009/n10-009-video/common-ports-n10-009/">Professor Messer — Common Ports</a></li>
+<li>In 2 days, write the 9 ports from memory on paper, then check.</li>
+</ul>
+<p class="cite">Anything unclear? Ask your teacher (Claude) in the terminal.</p>
+</main>
+<script src="../assets/quiz.js"></script>
+<script>
+renderQuiz("quiz", [
+ {q:"Which layer identifies conversations by port number?", a:["Layer 3 Network","Layer 4 Transport","Layer 5 Session","Layer 2 Data Link"], correct:1, why:"Ports = Transport (L4). Review from Lesson 0001.", src:"notes/1.1-osi-model.md"},
+ {q:"Which protocol does a handshake and guarantees ordered delivery?", a:["UDP","ARP","IP","TCP"], correct:3, why:"TCP is connection-oriented and reliable; UDP is not.", src:"notes/1.1-osi-model.md"},
+ {q:"Which job suits UDP best, speed over guarantees?", a:["Video call stream","Bank file upload","Email delivery run","Web form submit"], correct:0, why:"Streaming tolerates a lost packet; retransmitting would add delay.", src:"notes/1.1-osi-model.md"},
+ {q:"Which port serves an encrypted remote terminal?", a:["TCP 23","TCP 21","TCP 22","TCP 25"], correct:2, why:"SSH = TCP 22 (SFTP also uses it). Telnet is 23, in the clear.", src:"notes/1.4-common-ports.md"},
+ {q:"Which port carries HTTPS web traffic?", a:["TCP 80","TCP 53","TCP 25","TCP 443"], correct:3, why:"HTTPS = TCP 443. HTTP is 80.", src:"notes/1.4-common-ports.md"},
+ {q:"Which protocol on TCP 23 sends logins in clear text?", a:["Telnet","SSH","SFTP","HTTPS"], correct:0, why:"Telnet is unencrypted, credentials included; SSH replaced it.", src:"notes/1.4-common-ports.md"},
+ {q:"A client asks for an IP. Which port does the DHCP server use?", a:["UDP 68","UDP 67","UDP 53","UDP 69"], correct:1, why:"DHCP server = UDP 67, client = UDP 68. (69 is TFTP.)", src:"notes/1.4-common-ports.md"},
+ {q:"Which transport and port do standard DNS queries use?", a:["TCP 53","UDP 69","UDP 53","TCP 25"], correct:2, why:"Standard queries = UDP 53; TCP 53 is for large transfers such as zone transfers.", src:"notes/1.4-common-ports.md"},
+ {q:"A site loads but its TLS certificate errors. Which layer?", a:["Layer 6 Presentation","Layer 3 Network","Layer 1 Physical","Layer 2 Data Link"], correct:0, why:"Connection works, so lower layers are fine; TLS encryption = Presentation (L6). Review from Lesson 0001.", src:"notes/1.1-osi-model.md"}
+]);
+</script></body></html>
